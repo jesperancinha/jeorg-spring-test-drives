@@ -1,62 +1,44 @@
-# java-test-drives
+# 2b2b Java 8
 
 ---
 
-This project is only about experimented Java based technologies.
+This submodule intends to explore Java8
 
-It will use a standar front end, Angular JS, but for the backend the idea is to try different technologies ranging from Oracle, to Hadoop, Puppet, Wildfly, Jetty, Maven, Spring and any IoT based in Java.
+## Current developments:
 
-## Contents:
+* base64
+* collection streams
+* concurrency stamped lock
+* function interfaces (...in development...)
+* lambdas
+* repeatable annotations
 
-1. **java-test-drives-common** - Just a bundle of common libraries
-2. **java-test-drives-hadoop** - Tests for big data access
-3. **java-test-drives-postgres** - Tests for postgres access
-4. **java-test-drivesvaadin-app** - Tests for archetype web-app for vaadin (temporarily removed)
-5. **java-test-drives-java-8** - Tests for the Java 8 API
-6. **java-test-drives-postgres** - Tests for PostgreSQL
-7. **java-test-drives-designpatterns** - Tests Design Patterns in java 8
-8. **java-test-drives-webapp** - Tests for Spring framework
-9. **java-test-drives-webapp-jee** - Tests for J2EE framework
+# Special project details
 
-## Hints and tricks
+## I. fileaccess
 
-### Migration from Hamcrest to AssertJ
+There is a unt test for this project. Run it and check the timestamps
 
-#### From equalTo() to isEqualTo()
-```text
-assertThat\(([0-9A-Za-z \(\)\. ã\ë"]*), equalTo\(([0-9A-Za-z .\(,\)\"_\\]*)\)\);
+## Troubleshooting
+
+* This experimental project still isn't working with java9 because of it's dependency with the java toolkit
+
+### Windows:
+
 ```
-to
-```text
-assertThat($1).isEqualTo($2);
+> fsutil behavior set DisableLastAccess 0
 ```
+## References
 
-#### From nullValue() to isNull()
-```text
-assertThat\(([0-9A-Za-z \(\)\. ã\ë"]*), nullValue\(([0-9A-Za-z .\(,\)\"_\\]*)\)\);
-```
-to
-```text
-assertThat($1).isNull();
-```
+*  [CircleCI Images](https://circleci.com/docs/2.0/circleci-images/)
 
-### Imports from Junit assertThat to AssertJ assertThart
+* http://www.tutorialspoint.com/java8/java8_lambda_expressions.htm
 
-```text
-import static org.assertj.core.api.Assertions.assertThat;
-```
-to
-```text
-import static org.assertj.core.api.Assertions.assertThat;
-```
+* http://www.tutorialspoint.com/java8/java8_functional_interfaces.htm
 
-## References:
+* http://jscience.org/api/org/jscience/physics/amount/Constants.html
 
-* http://www.fitnesse.org/FrontPage
-
-* https://cucumber.io/
-
-* http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm
+* https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 
 ## License
 
@@ -79,6 +61,9 @@ limitations under the License.
 ## About me
 
 -   [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=joaofilipesabinoesperancinha.nl&color=informational)](http://joaofilipesabinoesperancinha.nl)
+<a href="https://dev.to/jofisaes">
+  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="João Esperancinha's DEV Profile" height="30" width="30">
+</a>
 
 -   [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=jesperancinha&style=social)](https://github.com/jesperancinha)
 
