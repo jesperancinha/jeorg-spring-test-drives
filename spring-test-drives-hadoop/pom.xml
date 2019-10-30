@@ -8,14 +8,9 @@
         <artifactId>spring-test-drives</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>java-test-drives-hadoop</artifactId>
+    <artifactId>spring-test-drives-hadoop</artifactId>
     <packaging>jar</packaging>
-    <name>java-test-drives-hadoop</name>
-
-    <properties>
-        <maven-compiler-plugin.target>1.8</maven-compiler-plugin.target>
-        <maven-compiler-plugin.source>1.8</maven-compiler-plugin.source>
-    </properties>
+    <name>spring-test-drives-hadoop</name>
 
     <build>
         <plugins>
