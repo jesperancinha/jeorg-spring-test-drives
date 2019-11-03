@@ -1,7 +1,7 @@
 # Spring-test-drives
 
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives) 
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/spring-test-drives) 
+[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/spring-test-drives.svg)](#)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/manual/jofisaes/spring-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/spring-test-drives&amp;utm_campaign=Badge_Grade)
 [![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-spring-test-drives-master)
