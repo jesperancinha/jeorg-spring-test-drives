@@ -4,9 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by joaofilipesabinoesperancinha on 23-04-16.
- */
 public class Base64StringTest {
     private static final String THIS_IS_MY_TEST_STRING = "This is my test string";
     private static final String VGHPCY_BPCY_BTE_SB0_ZXN0_IHN0CMLU_ZW = "VGhpcyBpcyBteSB0ZXN0IHN0cmluZw==";

@@ -1,12 +1,12 @@
 package org.jesperancinha.b2b2springboot.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Created by joao on 24-5-16.

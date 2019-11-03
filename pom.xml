@@ -22,21 +22,56 @@
         <module>spring-test-drives-webapp</module>
     </modules>
     <properties>
+
+        <!-- External -->
+        <spring.version>5.2.0.RELEASE</spring.version>
         <lombok.version>1.18.10</lombok.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <jscience>4.3.1</jscience>
+        <commons.lang3>3.4</commons.lang3>
+        <guava.version>19.0</guava.version>
+        <jackson-databind.version>2.10.0.pr3</jackson-databind.version>
+        <args4j-maven-plugin.version>2.33</args4j-maven-plugin.version>
+
+        <!-- Cache -->
+        <ehcache.version>2.9.1</ehcache.version>
+        <ehcache-core.version>2.6.11</ehcache-core.version>
+
+        <!-- Databases -->
         <h2.version>1.4.191</h2.version>
-        <hamcrest-all.version>1.3</hamcrest-all.version>
-        <mockito.all>1.9.5</mockito.all>
+        <postgresql.version>9.1-901-1.jdbc4</postgresql.version>
+        <hibernate-entitymanager.version>5.1.0.Final</hibernate-entitymanager.version>
+        <spring-data.version>2.2.0.RELEASE</spring-data.version>
+
+        <!-- Camel -->
+        <camel-core.version>2.24.0</camel-core.version>
+        <camel-test.version>2.17.0</camel-test.version>
+
+        <!-- Logs -->
         <slf4j>1.7.21</slf4j>
+        <slf4j-api.version>1.7.13</slf4j-api.version>
         <logback>1.1.7</logback>
-        <b2b2common>1.0.0-SNAPSHOT</b2b2common>
+
+        <!-- Test -->
         <junit-jupiter.version>5.5.1</junit-jupiter.version>
         <assertj-core.version>3.13.2</assertj-core.version>
-        <spring.version>5.2.0.RELEASE</spring.version>
+        <mockito-core.version>3.1.0</mockito-core.version>
+        <mockito-all.version>2.28.2</mockito-all.version>
+        <spring-test.version>2.5</spring-test.version>
+        <hamcrest-all.version>1.3</hamcrest-all.version>
+
         <!-- Plugins -->
+        <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven-compiler-plugin.source>11</maven-compiler-plugin.source>
         <maven-compiler-plugin.target>11</maven-compiler-plugin.target>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
+        <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
+        <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
+        <maven-war-plugin.version>2.6</maven-war-plugin.version>
+
     </properties>
 
     <dependencyManagement>
@@ -52,21 +87,58 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+            <!-- http://mvnrepository.com/artifact/com.google.guava/guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
             <!-- Test dependencies -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
                 <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
                 <version>${assertj-core.version}</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
                 <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- Mockito -->
+            <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito-all.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${mockito-core.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito-core.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- Deprecated but still needed -->
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-all</artifactId>
+                <version>${hamcrest-all.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>

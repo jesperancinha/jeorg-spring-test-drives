@@ -27,7 +27,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Properties;
 

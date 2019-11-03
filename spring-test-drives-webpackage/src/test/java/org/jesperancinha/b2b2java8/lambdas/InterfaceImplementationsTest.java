@@ -4,9 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by joaofilipesabinoesperancinha on 05-04-16.
- */
 public class InterfaceImplementationsTest {
     @Test
     public void doubleAddition() throws Exception {

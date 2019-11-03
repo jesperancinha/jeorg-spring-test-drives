@@ -14,17 +14,6 @@
     <artifactId>spring-test-drives-webapp</artifactId>
     <packaging>war</packaging>
 
-    <properties>
-        <postgresql.version>9.1-901-1.jdbc4</postgresql.version>
-        <spring-test.version>2.5</spring-test.version>
-        <hibernate-entitymanager.version>5.1.0.Final</hibernate-entitymanager.version>
-        <spring-data-jpa.version>1.11.22.RELEASE</spring-data-jpa.version>
-        <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
-        <ehcache-core.version>2.6.11</ehcache-core.version>
-        <maven-war-plugin.version>2.6</maven-war-plugin.version>
-        <spring-data.version>2.2.0.RELEASE</spring-data.version>
-    </properties>
-
     <dependencies>
 
         <!-- Lombok -->
@@ -115,6 +104,22 @@
             <artifactId>spring-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -124,7 +129,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>${maven-compiler-plugin.source}</source>
                     <target>${maven-compiler-plugin.target}</target>

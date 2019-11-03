@@ -13,27 +13,6 @@
     <artifactId>spring-test-drives-webpackage</artifactId>
     <packaging>jar</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <assert.j.core.version>3.13.2</assert.j.core.version>
-        <jscience>4.3.1</jscience>
-        <mockito.version>1.9.5</mockito.version>
-        <ehcache.version>2.9.1</ehcache.version>
-        <commons.lang3>3.4</commons.lang3>
-        <guava.version>19.0</guava.version>
-        <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
-        <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
-        <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
-        <jackson-databind.version>2.10.0.pr3</jackson-databind.version>
-        <args4j-maven-plugin.version>2.33</args4j-maven-plugin.version>
-        <camel-core.version>2.24.0</camel-core.version>
-        <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
-        <slf4j-api.version>1.7.13</slf4j-api.version>
-        <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
-        <camel-test.version>2.17.0</camel-test.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
@@ -70,8 +49,9 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>${assert.j.core.version}</version>
+            <version>${assertj-core.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -92,7 +72,7 @@
             <version>${jscience}</version>
         </dependency>
 
-        <!-- Spring 4 -->
+        <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -109,13 +89,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
             <version>${spring.version}</version>
-        </dependency>
-
-        <!-- Mockito -->
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>${mockito.version}</version>
         </dependency>
 
         <!-- eHCache -->
@@ -143,7 +116,6 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -160,6 +132,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
