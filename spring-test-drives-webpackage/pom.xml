@@ -32,7 +32,6 @@
         <slf4j-api.version>1.7.13</slf4j-api.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
         <camel-test.version>2.17.0</camel-test.version>
-        <java-test-drives-commons.version>1.0.0-SNAPSHOT</java-test-drives-commons.version>
     </properties>
 
     <dependencies>
@@ -91,12 +90,6 @@
             <groupId>org.jscience</groupId>
             <artifactId>jscience</artifactId>
             <version>${jscience}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jesperancinha.jtd</groupId>
-            <artifactId>java-test-drives-commons</artifactId>
-            <version>${java-test-drives-commons.version}</version>
         </dependency>
 
         <!-- Spring 4 -->

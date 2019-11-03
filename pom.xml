@@ -41,12 +41,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Internal Dependencies -->
-            <dependency>
-                <groupId>org.jesperancinha.jtd</groupId>
-                <artifactId>java-test-drives-commons</artifactId>
-                <version>${b2b2common}</version>
-            </dependency>
             <!-- External Dependencies -->
             <dependency>
                 <groupId>com.h2database</groupId>

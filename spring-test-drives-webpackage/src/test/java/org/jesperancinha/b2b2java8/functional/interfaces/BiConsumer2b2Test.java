@@ -1,6 +1,6 @@
 package org.jesperancinha.b2b2java8.functional.interfaces;
 
-import org.jesperancinha.tests.logs.LoggerInfoTest;
+import org.jesperancinha.b2b2java8.commons.LoggerInfoTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.function.BiConsumer;
@@ -20,7 +20,7 @@ public class BiConsumer2b2Test extends LoggerInfoTest {
     }
 
     @Test
-    public void getBiConsumer1() throws Exception {
+    public void getBiConsumer1() {
         final BiConsumer2b2<Integer, Integer> biConsumer2b2 = new BiConsumer2b2<>();
         final BiConsumer<Integer, Integer> consumer1 = biConsumer2b2.getBiConsumer1();
         final BiConsumer<Integer, Integer> consumer2 = biConsumer2b2.getBiConsumer2();
@@ -40,7 +40,7 @@ public class BiConsumer2b2Test extends LoggerInfoTest {
     }
 
     @Test
-    public void getBiConsumer2() throws Exception {
+    public void getBiConsumer2() {
         final BiConsumer2b2<Integer, Integer> biConsumer2b2 = new BiConsumer2b2<>();
         final BiConsumer<Integer, Integer> consumer1 = biConsumer2b2.getBiConsumer1();
         final BiConsumer<Integer, Integer> consumer2 = biConsumer2b2.getBiConsumer2();
