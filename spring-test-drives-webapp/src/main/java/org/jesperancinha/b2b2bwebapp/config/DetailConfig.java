@@ -1,5 +1,6 @@
 package org.jesperancinha.b2b2bwebapp.config;
 
+import org.jesperancinha.b2b2bwebapp.repository.DetailRepository;
 import org.jesperancinha.b2b2bwebapp.service.DetailController;
 import org.jesperancinha.b2b2bwebapp.service.DetailService;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,6 +28,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Properties;
 
 /**
@@ -34,7 +36,7 @@ import java.util.Properties;
  */
 
 @Configuration
-@EnableJpaRepositories(basePackages = "com.steelzack.b2b2bwebapp")
+@EnableJpaRepositories(basePackages = "org.jesperancinha.b2b2bwebapp")
 @EnableTransactionManagement
 @EnableCaching
 @PropertySource({"classpath:config.properties", "classpath:db.properties"})
@@ -44,14 +46,14 @@ public class DetailConfig {
     @Bean
     CacheManager cacheManager() {
         SimpleCacheManager cacheManager = new SimpleCacheManager();
-        cacheManager.setCaches(Arrays.asList(new ConcurrentMapCache("detailCache")));
+        cacheManager.setCaches(Collections.singletonList(new ConcurrentMapCache("detailCache")));
         return cacheManager;
     }
 
 
     @Bean
-    public DetailService detailService() {
-        return new DetailService();
+    public DetailService detailService(DetailRepository detailRepository) {
+        return new DetailService(detailRepository);
     }
 
     @Bean
@@ -95,7 +97,7 @@ public class DetailConfig {
         vendorAdapter.setGenerateDdl(true);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("com.steelzack.b2b2bwebapp.model");
+        factory.setPackagesToScan("org.jesperancinha.b2b2bwebapp.model");
         factory.setDataSource(dataSource());
         final Properties connectionProperties = new Properties();
         connectionProperties.setProperty("hibernate.connection.autocommit", "true");

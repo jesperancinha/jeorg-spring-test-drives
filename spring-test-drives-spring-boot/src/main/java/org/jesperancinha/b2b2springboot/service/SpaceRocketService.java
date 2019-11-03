@@ -19,7 +19,7 @@ public class SpaceRocketService {
     }
 
     public void deleteRocket(final Integer id) {
-        spaceRocketRepository.delete(id);
+        spaceRocketRepository.deleteById(id);
     }
 
     public void addRocket(final SpaceRocket spaceRocket) {

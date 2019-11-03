@@ -1,6 +1,6 @@
 package org.jesperancinha.b2b2java8.fileaccess;
 
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
@@ -21,7 +21,7 @@ public class FileAccessTest {
     private static final String TEST_FILE_ACCESS_TXT = "/testFileAccess.txt";
     private static final String TEST_ABSOLUTE_PATH_FILE_ACCESS = "/tmp" + TEST_FILE_ACCESS_TXT;
 
-    @Before
+    @BeforeEach
     public void setUp() throws IOException {
         final InputStream inputStream = getClass().getResourceAsStream(TEST_FILE_ACCESS_TXT);
         final OutputStream outputStream = new FileOutputStream(TEST_ABSOLUTE_PATH_FILE_ACCESS);

@@ -5,9 +5,6 @@ import org.jesperancinha.b2b2java8.predicates.Something;
 
 import java.util.function.Predicate;
 
-/**
- * Created by joao on 13-5-16.
- */
 public class SomethingService implements SomeServiceInterface {
 
     @Override

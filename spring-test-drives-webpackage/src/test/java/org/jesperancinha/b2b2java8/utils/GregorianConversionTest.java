@@ -17,7 +17,7 @@ public class GregorianConversionTest {
         final GregorianConversion gregorianConversion = new GregorianConversion();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("y M d VV m s H");
         GregorianCalendar result = gregorianConversion.convertGregorianCalendar("2016 05 1 Europe/London 01 01 01", formatter);
-        assertThat(result.getTimeZone().getDisplayName()).isEqualTo("Greenwich Mean Time");
+        assertThat(result.getTimeZone().getDisplayName()).isIn("Greenwich Mean Time", "Mittlere Greenwich-Zeit");
         assertThat(result.toZonedDateTime().getYear()).isEqualTo(2016);
     }
 
@@ -25,7 +25,7 @@ public class GregorianConversionTest {
     public void convertGregorianCalendar() throws Exception {
         final GregorianConversion gregorianConversion = new GregorianConversion();
         GregorianCalendar result = gregorianConversion.convertGregorianCalendar("2016-05-11T01:15:40Z");
-        assertThat(result.getTimeZone().getDisplayName()).isEqualTo("Coordinated Universal Time");
+        assertThat(result.getTimeZone().getDisplayName()).isIn("Coordinated Universal Time", "Koordinierte Weltzeit");
         assertThat(result.toZonedDateTime().getYear()).isEqualTo(2016);
     }
 

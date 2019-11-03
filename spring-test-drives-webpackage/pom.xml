@@ -17,9 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <assert.j.core.version>3.13.2</assert.j.core.version>
-        <lombok>1.18.10</lombok>
         <jscience>4.3.1</jscience>
-        <spring.version>4.2.5.RELEASE</spring.version>
         <mockito.version>1.9.5</mockito.version>
         <ehcache.version>2.9.1</ehcache.version>
         <commons.lang3>3.4</commons.lang3>
@@ -33,6 +31,8 @@
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <slf4j-api.version>1.7.13</slf4j-api.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
+        <camel-test.version>2.17.0</camel-test.version>
+        <java-test-drives-commons.version>1.0.0-SNAPSHOT</java-test-drives-commons.version>
     </properties>
 
     <dependencies>
@@ -64,7 +64,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test</artifactId>
-            <version>2.17.0</version>
+            <version>${camel-test.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -83,7 +83,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok}</version>
+            <version>${lombok.version}</version>
         </dependency>
 
         <!-- JScience -->
@@ -96,7 +96,7 @@
         <dependency>
             <groupId>org.jesperancinha.jtd</groupId>
             <artifactId>java-test-drives-commons</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${java-test-drives-commons.version}</version>
         </dependency>
 
         <!-- Spring 4 -->
@@ -161,6 +161,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
         </dependency>
     </dependencies>
 

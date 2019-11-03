@@ -10,10 +10,6 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.runners.MockitoJUnitRunner;
 
-/**
- * Created by joao on 15-5-16.
- */
-@Disabled
 @ExtendWith(MockitoExtension.class)
 public class DetailControllerTest {
 

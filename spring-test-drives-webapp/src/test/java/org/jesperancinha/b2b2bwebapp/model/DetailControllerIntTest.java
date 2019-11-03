@@ -5,6 +5,7 @@ import org.jesperancinha.b2b2bwebapp.repository.DetailRepository;
 import org.jesperancinha.b2b2bwebapp.service.DetailController;
 import org.jesperancinha.b2b2bwebapp.service.DetailService;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by joao on 15-5-16.
- */
+@Disabled
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = DetailConfig.class, loader = AnnotationConfigContextLoader.class)
 public class DetailControllerIntTest {
@@ -27,13 +26,13 @@ public class DetailControllerIntTest {
     private static final String CITY_1 = "City1";
 
     @Autowired
-    DetailService detailService;
+    private DetailService detailService;
 
     @Autowired
-    DetailController detailController;
+    private DetailController detailController;
 
     @Autowired
-    DetailRepository detailRepository;
+    private DetailRepository detailRepository;
 
     @BeforeEach
     public void setUp() {
@@ -47,14 +46,14 @@ public class DetailControllerIntTest {
     }
 
     @Test
-    public void findDetailById() throws Exception {
+    public void findDetailById() {
         final Detail result = detailController.findDetailById(1);
         assertThat(result.getName()).isEqualTo(NAME_1);
         assertThat(result.getCity()).isNull();
 
         detailRepository.deleteAll();
 
-        DetailEntity checkForNone = detailRepository.findOne(1);
+        DetailEntity checkForNone = detailRepository.findById(1).orElseThrow();
         assertThat(checkForNone).isNull();
 
         final Detail resultCached = detailController.findDetailById(1);
@@ -63,14 +62,14 @@ public class DetailControllerIntTest {
 
         addOneElement();
 
-        DetailEntity result2 = detailRepository.findOne(1);
+        DetailEntity result2 = detailRepository.findById(1).orElseThrow();
         assertThat(result2.getName()).isEqualTo(NAME_1);
         assertThat(result2.getCity()).isNull();
 
         result2.setCity(CITY_1);
         assertThat(result2.getCity()).isEqualTo(CITY_1);
 
-        DetailEntity result3 = detailRepository.findOne(1);
+        DetailEntity result3 = detailRepository.findById(1).orElseThrow();
         assertThat(result3.getName()).isEqualTo(NAME_1);
         assertThat(result3.getCity()).isNull();
 

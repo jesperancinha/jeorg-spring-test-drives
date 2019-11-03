@@ -13,11 +13,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class DetailService {
 
-    @Autowired
-    DetailRepository detailRepository;
+    final DetailRepository detailRepository;
+
+    public DetailService(DetailRepository detailRepository) {
+        this.detailRepository = detailRepository;
+    }
 
     @Cacheable(value = "detailCache", key = "#id")
     public DetailEntity findBetailById(Integer id) {
-        return detailRepository.findOne(id);
+        return detailRepository.findById(id).orElseThrow();
     }
 }
