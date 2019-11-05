@@ -30,7 +30,6 @@
         <commons.lang3>3.4</commons.lang3>
         <guava.version>28.1-jre</guava.version>
         <jackson-databind.version>2.10.0</jackson-databind.version>
-        <args4j-maven-plugin.version>2.33</args4j-maven-plugin.version>
         <jaxb-api.version>2.2.11</jaxb-api.version>
 
         <!-- Cache -->
@@ -48,9 +47,7 @@
         <camel.version>3.0.0-M4</camel.version>
 
         <!-- Logs -->
-        <slf4j>1.7.21</slf4j>
-        <slf4j-api.version>1.7.13</slf4j-api.version>
-        <logback>1.1.7</logback>
+        <slf4j.version>1.7.28</slf4j.version>
         <log4j-api.version>2.5</log4j-api.version>
 
         <!-- Test -->
@@ -61,6 +58,7 @@
         <spring-test.version>2.5</spring-test.version>
 
         <!-- Plugins -->
+        <args4j-maven-plugin.version>2.33</args4j-maven-plugin.version>
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven-compiler-plugin.source>11</maven-compiler-plugin.source>
         <maven-compiler-plugin.target>11</maven-compiler-plugin.target>
@@ -163,12 +161,12 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${slf4j-api.version}</version>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
-                <version>${slf4j-api.version}</version>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
