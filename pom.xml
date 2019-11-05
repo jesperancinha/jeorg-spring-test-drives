@@ -24,7 +24,7 @@
     <properties>
 
         <!-- External -->
-        <spring.version>5.2.0.RELEASE</spring.version>
+        <spring.version>5.2.1.RELEASE</spring.version>
         <lombok.version>1.18.10</lombok.version>
         <jscience>4.3.1</jscience>
         <commons.lang3>3.4</commons.lang3>
@@ -54,20 +54,18 @@
         <junit-jupiter.version>5.5.1</junit-jupiter.version>
         <assertj-core.version>3.13.2</assertj-core.version>
         <mockito-core.version>3.1.0</mockito-core.version>
-        <mockito-all.version>2.28.2</mockito-all.version>
-        <spring-test.version>2.5</spring-test.version>
 
         <!-- Plugins -->
-        <args4j-maven-plugin.version>2.33</args4j-maven-plugin.version>
-        <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven-compiler-plugin.source>11</maven-compiler-plugin.source>
         <maven-compiler-plugin.target>11</maven-compiler-plugin.target>
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <args4j-maven-plugin.version>2.33</args4j-maven-plugin.version>
+        <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
-        <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
-        <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+        <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
-        <maven-war-plugin.version>3.0.0</maven-war-plugin.version>
+        <maven-war-plugin.version>3.2.3</maven-war-plugin.version>
 
         <tools.version>5.0</tools.version>
     </properties>
@@ -217,13 +215,6 @@
                 <scope>test</scope>
             </dependency>
             <!-- Mockito -->
-            <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-all</artifactId>
-                <version>${mockito-all.version}</version>
-                <scope>test</scope>
-            </dependency>
             <!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
             <dependency>
                 <groupId>org.mockito</groupId>
