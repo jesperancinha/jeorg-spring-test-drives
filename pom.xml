@@ -45,8 +45,7 @@
         <hibernate-core.version>5.4.7.Final</hibernate-core.version>
 
         <!-- Camel -->
-        <camel-core.version>2.24.0</camel-core.version>
-        <camel-test.version>2.17.0</camel-test.version>
+        <camel.version>3.0.0-M4</camel.version>
 
         <!-- Logs -->
         <slf4j>1.7.21</slf4j>
@@ -104,7 +103,13 @@
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-core</artifactId>
-                <version>${camel-core.version}</version>
+                <version>${camel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-spring</artifactId>
+                <version>${camel.version}</version>
             </dependency>
 
             <!-- Spring -->
@@ -238,7 +243,7 @@
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-test</artifactId>
-                <version>${camel-test.version}</version>
+                <version>${camel.version}</version>
                 <scope>test</scope>
             </dependency>
 

@@ -3,9 +3,6 @@ package org.jesperancinha.b2b2java8.base64;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-/**
- * Created by joaofilipesabinoesperancinha on 23-04-16.
- */
 public class Base64String {
     private final String stringToEncode;
 
