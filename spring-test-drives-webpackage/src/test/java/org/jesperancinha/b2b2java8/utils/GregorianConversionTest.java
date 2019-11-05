@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GregorianConversionTest {
 
     @Test
-    public void convertGregorianCalendarDateFormatter() throws Exception {
+    public void convertGregorianCalendarDateFormatter() {
         final GregorianConversion gregorianConversion = new GregorianConversion();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("y M d VV m s H");
         GregorianCalendar result = gregorianConversion.convertGregorianCalendar("2016 05 1 Europe/London 01 01 01", formatter);
@@ -22,7 +22,7 @@ public class GregorianConversionTest {
     }
 
     @Test
-    public void convertGregorianCalendar() throws Exception {
+    public void convertGregorianCalendar() {
         final GregorianConversion gregorianConversion = new GregorianConversion();
         GregorianCalendar result = gregorianConversion.convertGregorianCalendar("2016-05-11T01:15:40Z");
         assertThat(result.getTimeZone().getDisplayName()).isIn("Coordinated Universal Time", "Koordinierte Weltzeit");

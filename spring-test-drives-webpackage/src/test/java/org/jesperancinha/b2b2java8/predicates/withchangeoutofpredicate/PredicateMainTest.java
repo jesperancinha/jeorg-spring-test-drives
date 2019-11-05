@@ -1,6 +1,6 @@
 package org.jesperancinha.b2b2java8.predicates.withchangeoutofpredicate;
 
-import org.jesperancinha.b2b2java8.configuration.ApplicationOkTest;
+import org.jesperancinha.b2b2java8.configuration.ApplicationOkTestConfiguration;
 import org.jesperancinha.b2b2java8.predicates.Something;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = ApplicationOkTest.class)
+@ContextConfiguration(classes = ApplicationOkTestConfiguration.class)
 public class PredicateMainTest {
 
     private static final String NAME_1 = "Name1";
@@ -32,7 +32,7 @@ public class PredicateMainTest {
     private PredicateConfiguration predicateConfiguration;
 
     @Test
-    public void doThePredicateMethod() throws Exception {
+    public void doThePredicateMethod() {
         assertThat(predicateMain).isNotNull();
         assertThat(predicateConfiguration).isNotNull();
 

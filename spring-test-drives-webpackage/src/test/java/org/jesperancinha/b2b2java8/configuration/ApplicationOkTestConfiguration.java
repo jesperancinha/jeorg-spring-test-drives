@@ -5,15 +5,9 @@ import org.jesperancinha.b2b2java8.predicates.withchangeoutofpredicate.Predicate
 import org.jesperancinha.b2b2java8.predicates.withchangeoutofpredicate.SomethingService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-/**
- * Created by joao on 14-5-16.
- */
 @Configuration
-@ContextConfiguration(loader = AnnotationConfigContextLoader.class)
-public class ApplicationOkTest {
+public class ApplicationOkTestConfiguration {
 
     @Bean
     PredicateMain predicateMain() {

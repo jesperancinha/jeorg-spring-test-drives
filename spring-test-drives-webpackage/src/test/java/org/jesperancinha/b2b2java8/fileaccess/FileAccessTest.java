@@ -39,7 +39,7 @@ public class FileAccessTest {
     }
 
     @Test
-    public void readFile_JustRun() throws Exception {
+    public void readFile_JustRun() throws IOException, InterruptedException {
         final FileAccess fileAccess = new FileAccess();
 
         fileAccess.checkIfLastAccessChangesForVariable(TEST_ABSOLUTE_PATH_FILE_ACCESS);

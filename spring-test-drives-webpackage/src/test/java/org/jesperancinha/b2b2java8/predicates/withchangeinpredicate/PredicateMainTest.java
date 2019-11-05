@@ -22,7 +22,7 @@ public class PredicateMainTest {
     public static final String NAME_3 = "Name3";
 
     @Test
-    public void doThePredicateMethod() throws Exception {
+    public void doThePredicateMethod() {
 
         List<Something> somethings = Arrays.stream(new Something[]{
                 Something.builder().name(NAME_1).build(),

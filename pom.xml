@@ -193,6 +193,12 @@
                 <groupId>org.kohsuke.args4j</groupId>
                 <artifactId>args4j-maven-plugin</artifactId>
                 <version>${args4j-maven-plugin.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!-- Test dependencies -->
@@ -233,6 +239,12 @@
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-test</artifactId>
                 <version>${camel.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                    </exclusion>
+                </exclusions>
                 <scope>test</scope>
             </dependency>
 

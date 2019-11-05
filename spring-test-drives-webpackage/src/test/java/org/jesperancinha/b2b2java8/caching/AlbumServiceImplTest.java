@@ -1,7 +1,7 @@
 package org.jesperancinha.b2b2java8.caching;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jesperancinha.b2b2java8.configuration.ApplicationOkTest;
+import org.jesperancinha.b2b2java8.configuration.ApplicationOkTestConfiguration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.context.ApplicationContext;
@@ -15,11 +15,11 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  */
 @Slf4j
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = ApplicationOkTest.class)
+@ContextConfiguration(classes = ApplicationOkTestConfiguration.class)
 public class AlbumServiceImplTest {
 
     @Test
-    public void findByDirector() throws Exception {
+    public void findByDirector() {
 
         final ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
         final AlbumService albumService = (AlbumService) context.getBean("albumService");

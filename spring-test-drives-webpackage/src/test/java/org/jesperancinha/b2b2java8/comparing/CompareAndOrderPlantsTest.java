@@ -1,5 +1,6 @@
 package org.jesperancinha.b2b2java8.comparing;
 
+
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -7,10 +8,8 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by jesperancinha on 10-5-16.
- */
 public class CompareAndOrderPlantsTest {
+
     @Test
     public void sort() {
 

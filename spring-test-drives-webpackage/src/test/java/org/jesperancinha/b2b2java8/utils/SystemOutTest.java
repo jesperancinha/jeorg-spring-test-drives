@@ -14,7 +14,7 @@ public class SystemOutTest {
     public static final String THIS_IS_THE_SENTENCE_YOU_ARE_EXPECTING = "This is the sentence you are expecting!";
 
     @Test
-    public void testSystemOut() throws Exception {
+    public void testSystemOut() {
 
         final SystemOut systemOut = new SystemOut();
         final ByteArrayOutputStream printer = systemOut.testSystemOut();

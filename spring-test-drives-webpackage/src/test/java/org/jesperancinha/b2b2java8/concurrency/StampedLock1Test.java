@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
  */
 public class StampedLock1Test {
     @Test
-    public void runStampedLockExample1() throws Exception {
+    public void runStampedLockExample1() {
         final StampedLock1 stampedLock1 = new StampedLock1();
         stampedLock1.runStampedLockExample1();
     }

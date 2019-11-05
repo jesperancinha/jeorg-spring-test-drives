@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class RepeatableAnnotationTest {
     @Test
-    public void getAllFlowers() throws Exception {
+    public void getAllFlowers() {
         final RepeatableAnnotation repeatableAnnotation = new RepeatableAnnotation();
         final FlowerColor[] expected = Flower.class.getAnnotationsByType(FlowerColor.class);
         final FlowerColor[] result = repeatableAnnotation.getAllFlowers();

@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PersonManagerTest {
 
     @Test
-    public void getDefault() throws Exception {
+    public void getDefault() {
         final Stack<String> personNames = new Stack<>();
         personNames.push("PersonTwo");
         personNames.push("PersonOne");

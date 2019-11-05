@@ -6,54 +6,54 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class InterfaceImplementationsTest {
     @Test
-    public void doubleAddition() throws Exception {
+    public void doubleAddition() {
         final InterfaceImplementations interfaceImplementations = new InterfaceImplementations();
         assertThat(interfaceImplementations.doubleAddition(5, 10)).isEqualTo(30);
     }
 
     @Test
-    public void divisionAB() throws Exception {
+    public void divisionAB() {
         final InterfaceImplementations interfaceImplementations = new InterfaceImplementations();
         assertThat(interfaceImplementations.divisionAB(20, 10)).isEqualTo(2);
     }
 
     @Test
-    public void communicationService1() throws Exception {
+    public void communicationService1() {
 
     }
 
     @Test
-    public void communicationService2() throws Exception {
+    public void communicationService2() {
 
     }
 
     @Test
-    public void divisionAB1() throws Exception {
+    public void divisionAB1() {
 
     }
 
     @Test
-    public void multiplictionAB() throws Exception {
+    public void multiplictionAB() {
 
     }
 
     @Test
-    public void subtractionAB() throws Exception {
+    public void subtractionAB() {
 
     }
 
     @Test
-    public void additionABCD() throws Exception {
+    public void additionABCD() {
 
     }
 
     @Test
-    public void doubleAddition1() throws Exception {
+    public void doubleAddition1() {
 
     }
 
     @Test
-    public void additionAB() throws Exception {
+    public void additionAB() {
 
     }
 }

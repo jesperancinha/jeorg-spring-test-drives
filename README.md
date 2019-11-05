@@ -63,7 +63,7 @@ to
 assertThat($1).hasSize($2);
 ```
 
-### Imports from Junit assertThat to AssertJ assertThart
+#### Imports from Junit assertThat to AssertJ assertThart
 
 ```text
 import static org.junit.Assert.assertThat;
@@ -71,6 +71,15 @@ import static org.junit.Assert.assertThat;
 to
 ```text
 import static org.assertj.core.api.Assertions.assertThat;
+```
+### Check dependency tree
+
+Examople:
+
+> Question: Which libraries are using junit?
+
+```text
+mvn dependency:tree -Dverbose -Dincludes=junit
 ```
 
 ## References:

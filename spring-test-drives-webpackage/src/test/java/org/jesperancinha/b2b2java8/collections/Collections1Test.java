@@ -32,7 +32,7 @@ public class Collections1Test {
     }
 
     @Test
-    public void getStringsThatContain() throws Exception {
+    public void getStringsThatContain() {
         final Collections1 collections1 = new Collections1(testArrayOfStrings);
 
         List<String> result1 = collections1.getStringsThatContain("er");
@@ -43,7 +43,7 @@ public class Collections1Test {
     }
 
     @Test
-    public void mapToUppercaseOnlyFiletr() throws Exception {
+    public void mapToUppercaseOnlyFiletr() {
         final Collections1 collections1 = new Collections1(testArrayOfStrings);
 
         List<String> result1 = collections1.mapToUppercaseOnlyFiletr("er");

@@ -19,7 +19,7 @@ public class FindNewElementAndAddTest {
     private static final String STR_6 = "STR6";
 
     @Test
-    public void generateFirstRow() throws Exception {
+    public void generateFirstRow() {
 
         final String[] array1 = Arrays.asList(STR_1, STR_2, STR_3, STR_4, STR_5).toArray(new String[0]);
         final String[] array2 = Arrays.asList(STR_1, STR_2, STR_3, STR_4, STR_6).toArray(new String[0]);
