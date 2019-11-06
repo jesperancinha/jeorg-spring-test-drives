@@ -74,7 +74,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 ```
 ### Check dependency tree
 
-Examople:
+Example:
 
 > Question: Which libraries are using junit?
 

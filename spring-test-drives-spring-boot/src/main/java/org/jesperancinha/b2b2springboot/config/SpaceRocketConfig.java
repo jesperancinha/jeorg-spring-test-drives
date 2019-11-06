@@ -8,9 +8,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-/**
- * Created by jesperancinha on 24-5-16.
- */
 @ComponentScan(basePackageClasses = SpaceRocketService.class)
 @EntityScan(basePackageClasses = SpaceRocket.class)
 @EnableAutoConfiguration

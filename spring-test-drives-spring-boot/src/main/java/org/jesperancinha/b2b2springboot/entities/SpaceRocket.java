@@ -8,10 +8,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by joao on 24-5-16.
- */
-
 @Getter
 @Entity
 @Builder

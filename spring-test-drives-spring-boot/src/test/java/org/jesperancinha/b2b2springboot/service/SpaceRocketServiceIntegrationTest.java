@@ -19,9 +19,6 @@ import java.util.stream.StreamSupport;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by jesperancinha on 24-5-16.
- */
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = SpaceRocketConfig.class, loader = AnnotationConfigContextLoader.class)
 public class SpaceRocketServiceIntegrationTest {
