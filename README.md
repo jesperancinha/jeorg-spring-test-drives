@@ -82,6 +82,10 @@ Example:
 mvn dependency:tree -Dverbose -Dincludes=junit
 ```
 
+### Circel CI
+
+-   [Using Environment Variables](https://circleci.com/docs/2.0/env-vars/)
+
 ## References:
 
 * http://www.fitnesse.org/FrontPage
@@ -111,6 +115,8 @@ limitations under the License.
 ## About me
 
 -   [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=joaofilipesabinoesperancinha.nl&color=informational)](http://joaofilipesabinoesperancinha.nl)
+
+-   [![Generic badge](https://img.shields.io/static/v1.svg?label=DEV&message=Profile&color=informational)](https://dev.to/jofisaes)
 
 -   [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=jesperancinha&style=social)](https://github.com/jesperancinha)
 
