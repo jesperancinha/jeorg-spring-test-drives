@@ -60,8 +60,8 @@
         </dependency>
         <!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-ehcache</artifactId>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
         </dependency>
         <!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
@@ -70,8 +70,8 @@
         </dependency>
 
         <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache-core</artifactId>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
         </dependency>
 
         <dependency>
