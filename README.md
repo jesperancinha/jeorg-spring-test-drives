@@ -25,12 +25,11 @@ This project is intended as a study tool for the latest Spring version. To find 
 
 ## Contents:
 
-2. spring-test-drives-hadoop - Tests for big data access
-3. spring-test-drives-postgres - Tests for postgres access
-4. spring-test-drivesvaadin-app - Tests for archetype web-app for vaadin (temporarily removed)
-5. spring-test-drives-webpackage - Tests for the Java 8 API
-6. spring-test-drives-postgres - Tests for PostgreSQL
-8. spring-test-drives-webapp - Tests for Spring framework
+1. spring-test-drives-hadoop - Tests for big data access
+2. spring-test-drives-postgres - Tests for postgres access
+3. spring-test-drivesvaadin-app - Tests for archetype web-app for vaadin (temporarily removed)
+4. spring-test-drives-postgres - Tests for PostgreSQL
+5. spring-test-drives-webapp - Tests for Spring framework
 
 ## Hints and tricks
 
