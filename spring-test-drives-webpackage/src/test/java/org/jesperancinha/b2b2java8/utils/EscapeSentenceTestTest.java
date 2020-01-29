@@ -8,8 +8,8 @@ public class EscapeSentenceTestTest {
 
     @Test
     public void escapedSentence() {
-        assertThat(EscapeSentenceTest.escapedSentence("João")).isEqualTo("Jo\\u00E3o");
-        assertThat(EscapeSentenceTest.escapedSentence("Zoë")).isEqualTo("Zo\\u00EB");
+        assertThat(EscapeSentenceTest.escapedSentence("João")).isIn("Jo\\u00E3o", "Jo\\uFFFD\\uFFFDo");
+        assertThat(EscapeSentenceTest.escapedSentence("Zoë")).isIn("Zo\\u00EB", "Zo\\uFFFD\\uFFFD");
     }
 
 }
