@@ -18,7 +18,6 @@
         <module>spring-test-drives-hadoop</module>
         <module>spring-test-drives-postgres</module>
         <module>spring-test-drives-spring-boot</module>
-        <module>spring-test-drives-webpackage</module>
         <module>spring-test-drives-webapp</module>
     </modules>
     <properties>
