@@ -33,8 +33,8 @@
 
         <!-- Databases -->
         <h2.version>1.4.200</h2.version>
-        <postgresql.version>42.2.9</postgresql.version>
-        <hibernate-entitymanager.version>5.1.0.Final</hibernate-entitymanager.version>
+        <postgresql.version>42.2.13</postgresql.version>
+        <hibernate-entitymanager.version>5.3.18.Final</hibernate-entitymanager.version>
         <spring-data.version>2.2.4.RELEASE</spring-data.version>
         <hibernate-core.version>5.4.7.Final</hibernate-core.version>
 
