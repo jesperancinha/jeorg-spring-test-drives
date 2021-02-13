@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>org.jesperancinha.std</groupId>
-        <artifactId>spring-test-drives</artifactId>
+        <artifactId>spring-app-old</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>spring-test-drives-hadoop</artifactId>

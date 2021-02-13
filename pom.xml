@@ -15,10 +15,7 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>spring-test-drives-hadoop</module>
-        <module>spring-test-drives-postgres</module>
-        <module>spring-test-drives-spring-boot</module>
-        <module>spring-test-drives-webapp</module>
+        <module>spring-5</module>
     </modules>
     <properties>
 
