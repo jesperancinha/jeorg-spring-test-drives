@@ -1,4 +1,4 @@
-# 2b2bwebapp
+# spring-test-drives-webapp
 
 ## Configuration
 
@@ -8,9 +8,16 @@
 
 ## References:
 
-* http://docs.spring.io/spring-data/jpa/docs/1.3.0.RELEASE/reference/html/jpa.repositories.html
+### Online
 
-* http://www.developer.com/java/using-second-level-caching-in-a-jpa-application.html
+-   [2. JPA Repositories](http://docs.spring.io/spring-data/jpa/docs/1.3.0.RELEASE/reference/html/jpa.repositories.html)
+-   [Using Second Level Caching in a JPA Application](http://www.developer.com/java/using-second-level-caching-in-a-jpa-application.html)
+
+### Books
+
+-   Cosmina, L. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
+-   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
+-   Cosmina, L. Harrop, R. Schaefer, C. Ho, C. (October 2017)<i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools<i>. (Fifth Edition). Apress
 
 ## About me 👨🏽‍💻🚀
 

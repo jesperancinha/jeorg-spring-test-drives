@@ -1,4 +1,4 @@
-# Spring-test-drives
+# spring-5 - Spring 5
 
 [![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/spring-test-drives)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/spring-test-drives) 
@@ -18,13 +18,15 @@
 
 ---
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring")](https://spring.io/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png "Spring Webfllux")](https://spring.io/projects/spring-boot)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png "Spring Reactor")](https://spring.io/reactive)
 
 ## Description
 
-SPRING study project.
+SPRING 5 study project.
 
 This project is intended as a study tool for Spring version 5.
 
@@ -37,10 +39,7 @@ sdk use java 15.0.2.hs-adpt
 
 ## Contents:
 
-1. spring-test-drives-hadoop - Tests for big data access
-2. spring-test-drives-postgres - Tests for postgres access
-4. spring-test-drives-spring-boot - Tests for Spring boot
-5. spring-test-drives-webapp - Tests for Spring framework
+1. [spring-app-old](./spring-app-old) - 💾 Old applications present when this project started
 
 ## References:
 
@@ -50,6 +49,10 @@ sdk use java 15.0.2.hs-adpt
 -   [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
 
 ### Books
+
+-   Cosmina, L. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
+-   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
+-   Cosmina, L. Harrop, R. Schaefer, C. Ho, C. (October 2017)<i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools<i>. (Fifth Edition). Apress
 
 ## About me 👨🏽‍💻🚀
 

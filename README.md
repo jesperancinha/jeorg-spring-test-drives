@@ -18,29 +18,21 @@
 
 ---
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring")](https://spring.io/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png "Spring Webfllux")](https://spring.io/projects/spring-boot)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png "Spring Reactor")](https://spring.io/reactive)
 
 ## Description
 
 SPRING study project.
 
-This project is intended as a study tool for Spring version 5.
-
-I'm using JDK version 15.0.2.hs-adpt for all of these tests.
-
-```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
-```
+The purporse of this project is to keep up with the development of the Spring Framework
 
 ## Contents:
 
-1. spring-test-drives-hadoop - Tests for big data access
-2. spring-test-drives-postgres - Tests for postgres access
-4. spring-test-drives-spring-boot - Tests for Spring boot
-5. spring-test-drives-webapp - Tests for Spring framework
+1. [Spring 5](./spring-5)
 
 ## References:
 
@@ -50,6 +42,10 @@ sdk use java 15.0.2.hs-adpt
 -   [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
 
 ### Books
+
+-   Cosmina, L. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
+-   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
+-   Cosmina, L. Harrop, R. Schaefer, C. Ho, C. (October 2017)<i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools<i>. (Fifth Edition). Apress
 
 ## About me 👨🏽‍💻🚀
 
