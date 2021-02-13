@@ -1,4 +1,4 @@
-# spring-5 - Spring 5
+# spring-topic-container - Spring Topic - Container
 
 [![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/spring-test-drives)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/spring-test-drives) 
@@ -26,9 +26,7 @@
 
 ## Description
 
-SPRING 5 study project.
-
-This project is intended as a study tool for Spring version 5.
+SPRING 5 Container study module.
 
 I'm using JDK version 15.0.2.hs-adpt for all of these tests.
 
@@ -37,16 +35,11 @@ sdk install java 15.0.2.hs-adpt
 sdk use java 15.0.2.hs-adpt
 ```
 
-## Contents:
-
-1. [spring-app-old](./spring-app-old) - 💾 Old applications present when this project started
-2. [spring-topics](./spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
-
 ## References:
 
 ### Online
 
--   [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
+-   [1.1. Introduction to the Spring IoC Container and Bean](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/core.html#beans)
 -   [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
 -   [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
 -   [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
