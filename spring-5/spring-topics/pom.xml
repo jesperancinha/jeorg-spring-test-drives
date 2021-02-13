@@ -3,17 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-test-drives</artifactId>
+        <artifactId>spring-5</artifactId>
         <groupId>org.jesperancinha.std</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-5</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>spring-topics</artifactId>
     <modules>
-        <module>spring-app-old</module>
-        <module>spring-topics</module>
+        <module>spring-topic-container</module>
     </modules>
 
     <properties>
@@ -21,4 +19,5 @@
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
 
+    <packaging>pom</packaging>
 </project>

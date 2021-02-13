@@ -1,4 +1,4 @@
-# spring-5 - Spring 5
+# spring-topics - Spring Topics
 
 [![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/spring-test-drives)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/spring-test-drives) 
@@ -26,9 +26,27 @@
 
 ## Description
 
-SPRING 5 study project.
+SPRING 5 Topics study module.
+Each module has in its name, the topic we are going to explore in the Spring framework.
 
-This project is intended as a study tool for Spring version 5.
+|No | Topic | Module |
+|---|---|---|
+|1.|Configuration                        |        |
+|2.|Component-scanning                   |        |
+|3.|AOP (Aspect Oriented Programming)    |        |
+|4.|Data access and Transactions         |        |
+|5.|REST                                 |        |
+|6.|Auto-configuration                   |        |
+|7.|Spring Security                      |        |
+|8.|Actuator                             |        |
+|9.|Spring Boot                          |        |
+|10.|Spring Boot Testing                 |        |
+|11.|Container                           |[spring-topic-container](./spring-topic-container)    |
+|12.|JDBC (Java Data Base Connectivity)  |        |
+|13.|MVC (Model View Controller)         |        |
+|14.|Security                            |        |
+|15.|JPA (Java Persistence Architecture) |        |
+|16.|REST                                |        |
 
 I'm using JDK version 15.0.2.hs-adpt for all of these tests.
 
