@@ -1,0 +1,16 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "flower1" class = "org.jesperancinha.std.topic.container.beans.Flower">
+        <property name = "name" value = "Tulip"/>
+        <property name = "height" value = "1"/>
+    </bean>
+
+    <bean id = "flower2" class = "org.jesperancinha.std.topic.container.beans.Flower">
+        <property name = "name" value = "Rose"/>
+        <property name = "height" value = "2"/>
+    </bean>
+
+</beans>
