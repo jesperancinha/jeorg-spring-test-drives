@@ -30,17 +30,18 @@ SPRING 5 study project.
 
 This project is intended as a study tool for Spring version 5.
 
-I'm using JDK version 15.0.2.hs-adpt for all of these tests.
+I'm using JDK version 11.0.9.hs-adpt  for all of these tests.
 
 ```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
+sdk install java 11.0.9.hs-adpt
+sdk use 11.0.9.hs-adpt 
 ```
 
 ## Contents:
 
 1. [spring-app-old](./spring-app-old) - 💾 Old applications present when this project started
 2. [spring-topics](./spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
+2. [spring-flash](./spring-flash) - ⚡️ Fast track modules about Spring Boot 5
 
 ## References:
 
