@@ -1,7 +1,11 @@
 package org.jesperancinha.std.topic.container;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
 import org.jesperancinha.std.topic.container.beans.Bean;
+import org.jesperancinha.std.topic.container.beans.BeanOnlyRead;
+import org.jesperancinha.std.topic.container.beans.BeanWithContructor;
 import org.jesperancinha.std.topic.container.beans.Flower;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -14,7 +18,14 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
 public class ContainerLauncher {
-    public static void main(String[] args) {
+
+    private static String STATIC_KIDNEY_BEAN = "{\n" +
+            "  \"name\" : \"Kidney Bean\",\n" +
+            "  \"mainColor\" : \"red\",\n" +
+            "  \"scientificName\" : \"Phaseolus vulgaris\"\n" +
+            "}";
+
+    public static void main(String[] args) throws JsonProcessingException {
         BRIGHT_MAGENTA.printGenericTitleLn("Runtime Started");
 
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("./beans.xml");
@@ -47,5 +58,30 @@ public class ContainerLauncher {
         MAGENTA.printGenericLn("This is the scarletBean value %s:", scarletBean);
         MAGENTA.printGenericLn("This is the blackBean value %s:", blackBean);
         BRIGHT_MAGENTA.printGenericLn("(Note that no getters and setters are needed for this sort of instantiaion)");
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            String jsonString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(kidneyBean);
+        } catch (Exception e) {
+            ORANGE.printGenericLn("This is expected! Our Bean type is not ready to be serialized. The type doesn't have its get accessors-> %s", e.getMessage());
+        }
+        ConsolerizerGraphs.printUnicornsLn(100);
+        try {
+            final Bean kidneyBeanReadBack = objectMapper
+                    .readValue(STATIC_KIDNEY_BEAN, Bean.class);
+        } catch (Exception e) {
+            ORANGE.printGenericLn("This is expected! Our Bean type is not ready to be read. The constructor doesn't have its accessors-> %s", e.getMessage());
+        }
+
+        final BeanOnlyRead blackBeanRead = (BeanOnlyRead) context.getBean("blackBeanRead");
+        final String jsonString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(blackBeanRead);
+        MAGENTA.printGenericLn("Reading bean with just the getters, we can serialize it in a JSON form ->\n%s", jsonString);
+
+        final BeanWithContructor kidneyBeanReadBackRight = objectMapper
+                .readValue(STATIC_KIDNEY_BEAN, BeanWithContructor.class);
+        GREEN.printGenericLn("Starting from JSON\n%s", STATIC_KIDNEY_BEAN);
+        GREEN.printGenericLn("We just read this bean from JSON -> %s", kidneyBeanReadBackRight);
+
+        ConsolerizerGraphs.printUnicornsLn(100);
     }
 }
