@@ -13,4 +13,21 @@
         <property name = "height" value = "2"/>
     </bean>
 
+    <bean id="kidneyBean" class = "org.jesperancinha.std.topic.container.beans.Bean">
+        <constructor-arg name="name" value="Kidney Bean"/>
+        <constructor-arg name="scientificName" value="Phaseolus vulgaris"/>
+        <constructor-arg name="mainColor" value="red"/>
+    </bean>
+
+    <bean id="scarletBean" class="org.jesperancinha.std.topic.container.beans.Bean">
+        <constructor-arg index="0" value="Phaseolus coccineus"/>
+        <constructor-arg index="1" value="Scarlet Runner Bean"/>
+        <constructor-arg index="2" value="Purple"/>
+    </bean>
+
+    <bean id="blackBean" class="org.jesperancinha.std.topic.container.beans.Bean">
+        <constructor-arg type="java.lang.String" value="Phaseolus vulgaris"/>
+        <constructor-arg type="java.lang.String" value="Black Bean"/>
+        <constructor-arg type="java.lang.String" value="Black"/>
+    </bean>
 </beans>

@@ -1,9 +1,9 @@
 package org.jesperancinha.std.topic.container;
 
+import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.std.topic.container.beans.Bean;
 import org.jesperancinha.std.topic.container.beans.Flower;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,11 +13,9 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
-@SpringBootApplication
 public class ContainerLauncher {
     public static void main(String[] args) {
-        BRIGHT_MAGENTA.printGenericTitleLn("Service Started");
-        GREEN.printGenericTitleLn("Spring Boot");
+        BRIGHT_MAGENTA.printGenericTitleLn("Runtime Started");
 
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("./beans.xml");
         Flower flower1 = (Flower) beanFactory.getBean("flower1");
@@ -38,6 +36,16 @@ public class ContainerLauncher {
         MAGENTA.printGenericLn("Instance beanFactory is a %s", beanFactory.getClass().getCanonicalName());
         ORANGE.printGenericLn("This is because both are just interfaces for an instance of the Application context");
 
-        SpringApplication.run(ContainerLauncher.class, args);
+        ConsolerizerGraphs.printUnicornsLn(100);
+        GREEN.printGenericLn("Now that we have seen how beans  work with params, let's now see how they work with constructors");
+
+        final Bean kidneyBean = (Bean) context.getBean("kidneyBean");
+        final Bean scarletBean = (Bean) context.getBean("scarletBean");
+        final Bean blackBean = (Bean) context.getBean("blackBean");
+
+        MAGENTA.printGenericLn("This is the kidneyBean value %s:", kidneyBean);
+        MAGENTA.printGenericLn("This is the scarletBean value %s:", scarletBean);
+        MAGENTA.printGenericLn("This is the blackBean value %s:", blackBean);
+        BRIGHT_MAGENTA.printGenericLn("(Note that no getters and setters are needed for this sort of instantiaion)");
     }
 }

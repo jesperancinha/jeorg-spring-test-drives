@@ -37,6 +37,13 @@ sdk use java 15.0.2.hs-adpt
 
 ## References:
 
+### Context
+
+-   [Phaseolus coccineus](https://en.wikipedia.org/wiki/Phaseolus_coccineus)
+-   [Kidney bean](https://en.wikipedia.org/wiki/Kidney_bean)
+-   [Bean by Wikipedia](https://en.wikipedia.org/wiki/Bean)
+-   [Phaseolus vulgaris](https://en.wikipedia.org/wiki/Phaseolus_vulgaris)
+
 ### Online
 
 -   [1.1. Introduction to the Spring IoC Container and Bean](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/core.html#beans)
