@@ -1,12 +1,21 @@
 package org.jesperancinha.std.topic.container;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.jesperancinha.std.topic.container.converters.LimeBasket;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
-@SpringBootApplication
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+
 public class SpringFlash1Launcher {
-
     public static void main(String[] args) {
-        SpringApplication.run(SpringFlash1Launcher.class, args);
+        final GenericXmlApplicationContext genericXmlApplicationContext = new GenericXmlApplicationContext();
+
+        genericXmlApplicationContext.load("classpath:beans.xml");
+        genericXmlApplicationContext.refresh();
+
+        final LimeBasket limeBasket = (LimeBasket) genericXmlApplicationContext.getBean("limeBasket");
+
+        GREEN.printGenericTitleLn("We can create converters by using Registrars");
+        BRIGHT_BLUE.printGenericLn(limeBasket);
     }
 }
