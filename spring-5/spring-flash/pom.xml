@@ -12,6 +12,7 @@
     <artifactId>spring-flash</artifactId>
     <modules>
         <module>spring-flash-1</module>
+        <module>spring-flash-2</module>
     </modules>
 
     <properties>

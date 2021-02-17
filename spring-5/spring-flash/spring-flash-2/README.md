@@ -1,4 +1,4 @@
-# spring-topic-container - Spring Mastery 1
+# spring-flash-2 - Spring Flash 2
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
@@ -9,7 +9,9 @@
 
 ## Description
 
-French language in music
+Discovering Interceptors
+
+1. `MethodInterceptor`, `Interceptor`, `Advice`, `ProxyFaxtory`, `addAdvice`, `setTarget`
 
 ```bash
 sdk install java 15.0.2.hs-adpt
@@ -21,41 +23,11 @@ Topics covered:
 
 ### Context
 
+
 <div align="center">
       <a title="Celine Dion - On ne change pas" href="https://www.youtube.com/watch?v=3tOsUgwBgko">
      <img 
           src="https://img.youtube.com/vi/3tOsUgwBgko/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Ensemble - Sidaction - Sa raison d'être" href="https://www.youtube.com/watch?v=2KRvvRN8hMc">
-     <img 
-          src="https://img.youtube.com/vi/2KRvvRN8hMc/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="Sidaction - Sa raison d'être 2018 (Clip officiel)" href="https://www.youtube.com/watch?v=EZeUDEahOOg">
-     <img 
-          src="https://img.youtube.com/vi/EZeUDEahOOg/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Celine Dion - Dans Un Autre Monde (Live In Paris at the Stade de France 1999) HDTV 720p" href="https://www.youtube.com/watch?v=vBm3bPlOCks">
-     <img 
-          src="https://img.youtube.com/vi/vBm3bPlOCks/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="Kate Ryan - Ella Elle L'a" href="https://www.youtube.com/watch?v=Oqd9lzMP1V8">
-     <img 
-          src="https://img.youtube.com/vi/Oqd9lzMP1V8/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Kate Ryan - Voyage Voyage" href="https://www.youtube.com/watch?v=XT9IDo-vF5k">
-     <img 
-          src="https://img.youtube.com/vi/XT9IDo-vF5k/0.jpg" 
           style="width:10%;">
       </a>
 </div>

@@ -41,12 +41,15 @@ sdk use 11.0.9.hs-adpt
 
 1. [spring-app-old](./spring-app-old) - 💾 Old applications present when this project started
 2. [spring-topics](./spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
-2. [spring-flash](./spring-flash) - ⚡️ Fast track modules about Spring Boot 5
+3. [spring-flash](./spring-flash) - ⚡️ Fast track modules about Spring Boot 5
+    1. [spring-flash-1](./spring-flash/spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
+    2. [spring-flash-2](./spring-flash/spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
 
 ## References:
 
 ### Online
 
+-   [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
 -   [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
 -   [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
 -   [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
