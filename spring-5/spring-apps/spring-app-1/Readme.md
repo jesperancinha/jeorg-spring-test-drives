@@ -1,43 +1,27 @@
-# spring-flash-2 - Spring Flash 2
+# spring-app-1
 
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png "Spring Webfllux")](https://spring.io/projects/spring-boot)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png "Spring Reactor")](https://spring.io/reactive)
+## Introduction
 
-## Description
+Cruises are a kind of travelling type which involves stepping on a big boad and sail to attractive destinations.
+It is also a place where people find love (❤️), go with their loved ones, go in a family or go with their other half 🌓.
+It is place to meet new people, enjoy freedom (🏳️‍🌈), and there are different sub-types.
+Some oriented to family, some oriented to single life, others to bachelor life, etc.
+In this first app, we will make an application to manage all of this.
 
-Discovering Interceptors
-
-1. `MethodInterceptor`, `Interceptor`, `Advice`, `ProxyFaxtory`, `addAdvice`, `setTarget`
-
-```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
-```
 Topics covered:
+
+## Sketches
+
+1. First Sketch
+
+![alt text](./docs/sketch-1.JPG)
 
 ## References:
 
-### Context
-<div align="center">
-      <a title="Celine Dion - On ne change pas" href="https://www.youtube.com/watch?v=3tOsUgwBgko">
-     <img 
-          src="https://img.youtube.com/vi/3tOsUgwBgko/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
--   [1.1. Introduction to the Spring IoC Container and Bean](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/core.html#beans)
--   [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
 -   [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
 -   [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
--   [BeanFactory Example in Spring](https://www.onlinetutorialspoint.com/spring/beanfactory-example-in-spring.html)
--   [Spring ApplicationContext Container](https://www.tutorialspoint.com/spring/spring_applicationcontext_container.htm)
 
 ### Books
 

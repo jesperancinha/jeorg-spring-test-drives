@@ -12,8 +12,6 @@
 Discovering Property Converters
 
 1. `PropertyEditorRegistrar`, `registerCustomEditors`, `PropertyEditorSupport`, `CustomEditorConfigurer`
-
-
 ```bash
 sdk install java 15.0.2.hs-adpt
 sdk use java 15.0.2.hs-adpt
@@ -23,8 +21,6 @@ Topics covered:
 ## References:
 
 ### Context
-
-
 <div align="center">
       <a title="Celine Dion - On ne change pas" href="https://www.youtube.com/watch?v=3tOsUgwBgko">
      <img 
