@@ -44,6 +44,9 @@ sdk use 11.0.9.hs-adpt
 3. [spring-flash](./spring-flash) - ⚡️ Fast track modules about Spring Boot 5
     1. [spring-flash-1](./spring-flash/spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
     2. [spring-flash-2](./spring-flash/spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
+    3. [spring-flash-3](./spring-flash/spring-flash-3) - ⛴ JDBC with boats (coming soon...)
+4. [spring-apps](./spring-apps) - 💻 A set of applications for large topics
+    1. [spring-app-1](./spring-apps/spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 
 ## References:
 

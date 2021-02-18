@@ -9,11 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-flash</artifactId>
+    <artifactId>spring-apps</artifactId>
     <modules>
-        <module>spring-flash-1</module>
-        <module>spring-flash-2</module>
-        <module>spring-flash-3</module>
+        <module>spring-app-1</module>
     </modules>
 
     <properties>

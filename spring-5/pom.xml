@@ -16,6 +16,7 @@
         <module>spring-topics</module>
         <module>spring-mastery</module>
         <module>spring-flash</module>
+        <module>spring-apps</module>
     </modules>
 
     <properties>
