@@ -8,6 +8,8 @@ It is place to meet new people, enjoy freedom (🏳️‍🌈), and there are di
 Some oriented to family, some oriented to single life, others to bachelor life, etc.
 In this first app, we will make an application to manage all of this.
 
+We won't use the JPA repository magic. Instead, we'll use direct queries against the database.
+
 Topics covered:
 
 ## Sketches
@@ -28,6 +30,7 @@ Topics covered:
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
 -   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
 -   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools<i>. (Fifth Edition). Apress
+-   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Pack Publishing
 
 ## About me 👨🏽‍💻🚀
 

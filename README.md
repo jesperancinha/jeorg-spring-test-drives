@@ -32,7 +32,7 @@ The purporse of this project is to keep up with the development of the Spring Fr
 
 ## Contents:
 
-1. [Spring 5](./spring-5)
+1. [Spring 5](./spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
 
 ## References:
 
@@ -46,6 +46,7 @@ The purporse of this project is to keep up with the development of the Spring Fr
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
 -   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
 -   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools<i>. (Fifth Edition). Apress
+-   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Pack Publishing
 
 ## About me 👨🏽‍💻🚀
 
