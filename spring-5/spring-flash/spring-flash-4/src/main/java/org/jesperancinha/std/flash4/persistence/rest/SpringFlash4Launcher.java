@@ -1,6 +1,5 @@
-package org.jesperancinha.std.flash3.persistence.rest;
+package org.jesperancinha.std.flash4.persistence.rest;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
 import static org.springframework.boot.SpringApplication.run;
 
 @SpringBootApplication
@@ -26,7 +26,7 @@ public class SpringFlash4Launcher {
             @RequestHeader("currentTime")
             @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                     LocalDate localDate) {
-        ConsolerizerColor.BRIGHT_MAGENTA.printGenericTitleLn(localDate);
+        BRIGHT_MAGENTA.printGenericTitleLn(localDate);
     }
 
     @PostMapping(path = "/time",
@@ -36,6 +36,6 @@ public class SpringFlash4Launcher {
             @RequestHeader("currentTime")
             @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
                     LocalDateTime localDateTime) {
-        ConsolerizerColor.BRIGHT_MAGENTA.printGenericTitleLn(localDateTime);
+        BRIGHT_MAGENTA.printGenericTitleLn(localDateTime);
     }
 }
