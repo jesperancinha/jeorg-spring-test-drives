@@ -42,11 +42,11 @@ sdk use 11.0.9.hs-adpt
 1. [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
 2. [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
 3. [jeorg-spring-flash](./jeorg-spring-flash) - ⚡️ Fast track modules about Spring Boot 5
-    1. [jeorg-spring-flash-1](./jeorg-spring-flash/spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
-    2. [jeorg-spring-flash-2](./jeorg-spring-flash/spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
-    3. [jeorg-spring-flash-3](./jeorg-spring-flash/spring-flash-3) - ⛴ JDBC with boats (coming soon...)
+    1. [jeorg-spring-flash-1](./jeorg-spring-flash/jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
+    2. [jeorg-spring-flash-2](./jeorg-spring-flash/jeorg-spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
+    3. [jeorg-spring-flash-3](./jeorg-spring-flash/jeorg-spring-flash-3) - ⛴ JDBC with boats (coming soon...)
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
-    1. [jeorg-spring-app-1](./jeorg-spring-apps/spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
+    1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 
 ## References:
 
