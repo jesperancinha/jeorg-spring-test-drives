@@ -1,4 +1,4 @@
-# Spring-test-drives
+# spring-topics - Spring Topics
 
 [![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/spring-test-drives)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/spring-test-drives) 
@@ -26,18 +26,45 @@
 
 ## Description
 
-SPRING study project.
+SPRING 5 Topics study module.
+Each module has in its name, the topic we are going to explore in the Spring framework.
 
-The purporse of this project is to keep up with the development of the Spring Framework
+|No | Topic | Module |
+|---|---|---|
+|1.|Configuration                        |[jeorg-spring-topic-container](./jeorg-spring-topic-container)|
+|2.|Component-scanning                   |        |
+|3.|AOP (Aspect Oriented Programming)    |        |
+|4.|Data access and Transactions         |        |
+|5.|REST                                 |        |
+|6.|Auto-configuration                   |        |
+|7.|Spring Security                      |        |
+|8.|Actuator                             |        |
+|9.|Spring Boot                          |        |
+|10.|Spring Boot Testing                 |        |
+|11.|Container                           |[jeorg-spring-topic-container](./jeorg-spring-topic-container)|
+|12.|JDBC (Java Data Base Connectivity)  |        |
+|13.|MVC (Model View Controller)         |        |
+|14.|Security                            |        |
+|15.|JPA (Java Persistence Architecture) |        |
+|16.|REST                                |        |
+
+I'm using JDK version 15.0.2.hs-adpt for all of these tests.
+
+```bash
+sdk install java 15.0.2.hs-adpt
+sdk use java 15.0.2.hs-adpt
+```
 
 ## Contents:
 
-1. [Spring 5](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
+1. [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
+2. [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
 
 ## References:
 
 ### Online
 
+-   [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
 -   [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
 -   [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
 

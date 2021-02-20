@@ -11,11 +11,11 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jesperancinha.std</groupId>
-    <artifactId>spring-test-drives</artifactId>
+    <artifactId>jeorg-spring-test-drives</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>spring-5</module>
+        <module>jeorg-spring-5</module>
     </modules>
     <properties>
 
@@ -115,7 +115,7 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-commons</artifactId>
+                <artifactId>jeorg-spring-data-commons</artifactId>
                 <version>${spring-data.version}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
@@ -216,7 +216,7 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
+                <artifactId>jeorg-spring-test</artifactId>
                 <version>${spring.version}</version>
                 <scope>test</scope>
             </dependency>
