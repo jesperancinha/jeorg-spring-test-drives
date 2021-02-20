@@ -1,26 +1,18 @@
-# spring-flash-5
+# spring-flash-6
 
 ## Introduction
 
-Exploring how to make sequence generators
+Exploring how to use Spring Session
 
 Topics
 
-1. `@SequenceGenerator`
-
 ## Endpoints
 
-1. Save all potatoes!
-```bash
-curl -X POST  http://localhost:8081
-```
-
-2. Get all potatoes! Notice the start and the loop
-```bash
-curl http://localhost:8081
-```
-
 ## References
+
+### Online
+
+-   [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
 
 ### Books
 

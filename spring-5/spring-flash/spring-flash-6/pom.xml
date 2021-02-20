@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-flash-5</artifactId>
+    <artifactId>spring-flash-6</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
