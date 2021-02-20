@@ -8,6 +8,23 @@ Topics
 
 ## Endpoints
 
+Check running on 8081
+
+```bash
+lsof -i :8081
+```
+
+1. http://localhost:8081
+
+```bash
+curl http://localhost:8081
+```
+In order to test by keeping the session it's easier just to refresh the browser on the endpoint, but you can also use this curl command:
+
+```bash
+curl -c cookies.txt -b cookies.txt -v http://localhost:8081
+```
+
 ## References
 
 ### Online
