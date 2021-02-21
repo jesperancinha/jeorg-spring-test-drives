@@ -44,7 +44,11 @@ sdk use 11.0.9.hs-adpt
 3. [jeorg-spring-flash](./jeorg-spring-flash) - ⚡️ Fast track modules about Spring Boot 5
     1. [jeorg-spring-flash-1](./jeorg-spring-flash/jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
     2. [jeorg-spring-flash-2](./jeorg-spring-flash/jeorg-spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
-    3. [jeorg-spring-flash-3](./jeorg-spring-flash/jeorg-spring-flash-3) - ⛴ JDBC with boats (coming soon...)
+    3. [jeorg-spring-flash-3](./jeorg-spring-flash/jeorg-spring-flash-3) - ⛴ JDBC with boats
+    4. [jeorg-spring-flash-4](./jeorg-spring-flash/jeorg-spring-flash-4) - 🪄 Spring param converters
+    5. [jeorg-spring-flash-5](./jeorg-spring-flash/jeorg-spring-flash-5) - 🥔 Sequence generator with potatoes
+    6. [jeorg-spring-flash-6](./jeorg-spring-flash/jeorg-spring-flash-6) - 🧮 Keep the math in the Session
+    7. [jeorg-spring-flash-7](./jeorg-spring-flash/jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 
