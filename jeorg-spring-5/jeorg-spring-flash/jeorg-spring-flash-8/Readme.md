@@ -1,63 +1,43 @@
-# spring-flash-7
+# spring-flash-8
 
 ## Introduction
 
-Exploring Exception Handling in Spring
+Exploring JSP in Spring
 
 Topics
 
-1. `@ResponseStatus(HttpStatus.NOT_FOUND)`, `@ControllerAdvice`,`ModelAndView`, `ResponseEntity`, `@ExceptionHandler`
+1. `@Configuration`, `@EnableWebMvc`, `@ComponentScan`, `InternalResourceViewResolver`, `ViewResolver`
+2. `WebMvcConfigurer`, `@Controller`
 
 ## Endpoints
 
-Check running on 8081
+1. http://localhost:8081
+
+## How to run
 
 ```bash
-lsof -i :8081
+mvn clean spring-boot:run
 ```
 
-1. [http://localhost:8081/tulips](http://localhost:8081/tulips)
-2. [http://localhost:8081/tulips/ok](http://localhost:8081/tulips/ok)
-3. [http://localhost:8081/tulips/error](http://localhost:8081/tulips/error)
-4. [http://localhost:8081/flowers/carnation](http://localhost:8081/flowers/carnation)
-5. [http://localhost:8081/cars/kitt](http://localhost:8081/cars/kit)
-6. [http://localhost:8081/flowers/loca/carnation](http://localhost:8081/flowers/local/carnation)
-7. [http://localhost:8081/cars/local/kitt](http://localhost:8081/cars/local/kit)
-8. [http://localhost:8081/fourwheels/monster](http://localhost:8081/fourwheels/monster)
-9. [http://localhost:8081/pottery/amphor](http://localhost:8081/pottery/amphor)
-
-
-```bash
-curl http://localhost:8081/tulips
-curl http://localhost:8081/tulips/ok
-curl http://localhost:8081/tulips/error
-curl http://localhost:8081/flowers/carnation
-curl http://localhost:8081/cars/kitt
-curl http://localhost:8081/flowers/local/carnation
-curl http://localhost:8081/cars/local/kitt
-curl http://localhost:8081/cars/local/kitt
-curl http://localhost:8081/fourwheels/monster
-curl http://localhost:8081/pottery/amphor
-```
-In order to test by keeping the session it's easier just to refresh the browser on the endpoint, but you can also use this curl command:
-
-```bash
-curl -c cookies.txt -b cookies.txt -v http://localhost:8081
-```
+Or, using your IDE, configure your working directory.
 
 ## References
 
 ### Context
+
 <div align="center">
-      <a title="Knight Rider - Original Show Intro | NBC Classics" href="https://www.youtube.com/watch?v=oNyXYPhnUIs">
+      <a title="Mariah Carey - All I Want for Christmas Is You (Make My Wish Come True Edition)" href="https://www.youtube.com/watch?v=aAkMkVFwAoo">
      <img 
-          src="https://img.youtube.com/vi/oNyXYPhnUIs/0.jpg" 
+          src="https://img.youtube.com/vi/aAkMkVFwAoo/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
 ### Online
 
+-   [Spring Boot JSP View Resolver Example](https://howtodoinjava.com/spring-boot/spring-boot-jsp-view-example/)
+-   [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
+-   [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
 -   [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
 -   [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
 
