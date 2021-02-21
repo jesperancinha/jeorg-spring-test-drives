@@ -1,5 +1,27 @@
 # spring-flash
 
+## Introduction
+
+All of these modules are fast-track learning modules about Spring. Flash in this case comes from flash-back or memory.
+You can look at this as a collection of moments in time to learn spring.
+
+1. [jeorg-spring-flash-1](./jeorg-spring-flash-1)
+2. [jeorg-spring-flash-2](./jeorg-spring-flash-2)
+3. [jeorg-spring-flash-3](./jeorg-spring-flash-3)
+4. [jeorg-spring-flash-4](./jeorg-spring-flash-4)
+5. [jeorg-spring-flash-5](./jeorg-spring-flash-5)
+6. [jeorg-spring-flash-6](./jeorg-spring-flash-6)
+7. [jeorg-spring-flash-7](./jeorg-spring-flash-7)
+
+## References
+
+### Books
+
+-   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
+-   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
+-   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
+-   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Pack Publishing
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
