@@ -1,5 +1,6 @@
-package org.jesperancinha.std.flash10.error;
+package org.jesperancinha.std.flash11.form;
 
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,13 +11,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-
 @Configuration
 @EnableWebMvc
 @ComponentScan
-@Profile("prod")
-public class Flash10MvcConfig implements WebMvcConfigurer {
+public class Flash11MvcConfig implements WebMvcConfigurer {
 
     @Bean
     public ViewResolver getViewResolver() {
@@ -24,7 +22,7 @@ public class Flash10MvcConfig implements WebMvcConfigurer {
         internalResourceViewResolver.setViewClass(JstlView.class);
         internalResourceViewResolver.setPrefix("/WEB-INF/jsp/");
         internalResourceViewResolver.setSuffix(".jsp");
-        BLUE.printGenericLn("Initializing viewResolver -> %s", internalResourceViewResolver);
+        ConsolerizerColor.BLUE.printGenericLn("Initializing viewResolver -> %s", internalResourceViewResolver);
         return internalResourceViewResolver;
     }
 }

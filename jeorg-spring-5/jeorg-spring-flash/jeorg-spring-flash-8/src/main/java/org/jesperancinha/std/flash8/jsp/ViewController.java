@@ -10,7 +10,7 @@ import java.util.Map;
 public class ViewController {
 
     @RequestMapping("/")
-    public ModelAndView home(Map<String, Object> model) {
+    public ModelAndView mainPage(Map<String, Object> model) {
         model.put("notification", "All I want for christmas is you!");
         return new ModelAndView("index");
     }

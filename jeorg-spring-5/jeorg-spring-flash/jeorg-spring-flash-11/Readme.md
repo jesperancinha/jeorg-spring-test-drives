@@ -1,12 +1,12 @@
-# spring-flash-10
+# spring-flash-11
 
 ## Introduction
 
-Exploring the Error page
+Exploring the Form Parameters
 
 Topics
 
-1. `WebMvcConfigurerAdapter`, `@Profile`, `/error`, `SimpleMappingExceptionResolver`
+1. `Model`, `ModelAndView`, `commandName`, `modelAttribute`, `<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>`
 
 ## Endpoints
 
@@ -14,31 +14,28 @@ Topics
 
 ## How to run
 
-1. To check white label page
 ```bash
 mvn clean spring-boot:run
-```
-
-2. To check disabling white label page
-
-```bash
-mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
-```
-
-3. To check custom error page
-
-```bash
-mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
 ## References
 
 ### Context
 
-- [Heaven (DJ Sammy album)](https://en.wikipedia.org/wiki/Heaven_(DJ_Sammy_album))
+- [Talkin' 'bout a Revolution](https://en.wikipedia.org/wiki/Talkin%27_%27bout_a_Revolution)
+
+<div align="center">
+      <a title="Tracy Chapman - Talkin' About A Revolution" href="https://www.youtube.com/watch?v=Xv8FBjo1Y8I">
+     <img 
+          src="https://img.youtube.com/vi/Xv8FBjo1Y8I/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ### Online
 
+- [Spring form tag : ModelAttribute VS CommandName](http://mwakram.blogspot.com/2014/05/spring-form-tag-modelattribute-vs.html)
+- [Spring @RequestMapping Annotation Examples](https://howtodoinjava.com/spring-mvc/spring-mvc-requestmapping-annotation-examples/)
 - [Exception Handling in Spring MVC](https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc)
 - [Streaming Text Oriented Messaging Protocol](https://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol)
 - [Using STOMP JS](https://stomp-js.github.io/stomp-websocket/codo/extra/docs-src/Usage.md.html)
