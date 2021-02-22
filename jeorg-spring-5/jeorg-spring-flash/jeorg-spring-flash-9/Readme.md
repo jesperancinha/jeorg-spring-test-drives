@@ -1,75 +1,67 @@
-# spring-5 - Spring 5
+# spring-flash-8
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/spring-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/spring-test-drives) 
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/spring-test-drives.svg)](#)
+## Introduction
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/manual/jofisaes/spring-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/spring-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-spring-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/spring-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/spring-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/spring-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/spring-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/spring-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/wksvhmqaq0sd8505?svg=true)](https://ci.appveyor.com/project/jesperancinha/spring-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/spring-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/spring-test-drives)
+Exploring WebSockets and fallback to SockJS in Spring using the [STOMP protocol specification](https://www.javaguides.net/2019/06/spring-boot-websocket-stomp-sockjs-example.html).
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/spring-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/spring-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/spring-test-drives.svg)](#)
+Topics
 
----
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png "Spring Webfllux")](https://spring.io/projects/spring-boot)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png "Spring Reactor")](https://spring.io/reactive)
+1. `@EnableWebSocketMessageBroker`, `registerStompEndpoints`, `configureMessageBroker`, `@MessageMapping`, `@SendTo`
 
-## Description
+## Endpoints
 
-SPRING 5 study project.
+1. [http://localhost:8081/](http://localhost:8081/)
 
-This project is intended as a study tool for Spring version 5.
-
-I'm using JDK version 11.0.9.hs-adpt  for all of these tests.
+## How to run
 
 ```bash
-sdk install java 11.0.9.hs-adpt
-sdk use 11.0.9.hs-adpt 
+mvn clean spring-boot:run
 ```
 
-## Contents:
+## Dialogue usages:
 
-1. [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
-2. [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
-3. [jeorg-spring-flash](./jeorg-spring-flash) - ⚡️ Fast track modules about Spring Boot 5
-    1. [jeorg-spring-flash-1](./jeorg-spring-flash/jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
-    2. [jeorg-spring-flash-2](./jeorg-spring-flash/jeorg-spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
-    3. [jeorg-spring-flash-3](./jeorg-spring-flash/jeorg-spring-flash-3) - ⛴ JDBC with boats
-    4. [jeorg-spring-flash-4](./jeorg-spring-flash/jeorg-spring-flash-4) - 🪄 Spring param converters
-    5. [jeorg-spring-flash-5](./jeorg-spring-flash/jeorg-spring-flash-5) - 🥔 Sequence generator with potatoes
-    6. [jeorg-spring-flash-6](./jeorg-spring-flash/jeorg-spring-flash-6) - 🧮 Keep the math in the Session
-    7. [jeorg-spring-flash-7](./jeorg-spring-flash/jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
-    8. [jeorg-spring-flash-8](./jeorg-spring-flash/jeorg-spring-flash-8) - 🎄 Xmas message with simple JSP in Spring
-    9. [jeorg-spring-flash-9](./jeorg-spring-flash/jeorg-spring-flash-9) - 🤖 A very simple bot with SockJS support
-4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
-    1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
+1. Snap -> Rhythm is a dancer.
+2. We have instant soup at the office - Baby instant soup doesn't really grab me, today I need something more sub-sub-sub-substantial.
 
-## References:
+## References
+
+### Context
+
+- [Rhythm Is a Dancer](https://en.wikipedia.org/wiki/Rhythm_Is_a_Dancer)
+- [The Sidewinder Sleeps Tonite](https://en.wikipedia.org/wiki/The_Sidewinder_Sleeps_Tonite)
+
+<div align="center">
+      <a title="Snap! - Rhythm is a Dancer" href="https://www.youtube.com/watch?v=KkhGkRahU6g">
+     <img 
+          src="https://img.youtube.com/vi/KkhGkRahU6g/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="R.E.M. - The Sidewinder Sleeps Tonite" href="https://www.youtube.com/watch?v=mgiCechWNCo">
+     <img   
+          src="https://img.youtube.com/vi/mgiCechWNCo/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ### Online
 
--   [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
--   [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
--   [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
--   [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
--   [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
+- [Streaming Text Oriented Messaging Protocol](https://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol)
+- [Using STOMP JS](https://stomp-js.github.io/stomp-websocket/codo/extra/docs-src/Usage.md.html)
+- [Spring Boot WebSocket STOMP SockJS Example ](https://www.javaguides.net/2019/06/spring-boot-websocket-stomp-sockjs-example.html)
+- [STOMP Protocol Specification, Version 1.2](https://stomp.github.io/stomp-specification-1.2.html#Abstract)
+- [26. WebSocket Support](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html)
+- [Spring Boot JSP View Resolver Example](https://howtodoinjava.com/spring-boot/spring-boot-jsp-view-example/)
+- [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
+- [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
+- [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
+- [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
 
 ### Books
 
--   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
--   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
--   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
--   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
+- Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
+- Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
+- Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
+- Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 
 ## About me 👨🏽‍💻🚀
 

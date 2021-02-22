@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SockJS with STOMP</title>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/sockjs.js"></script>
+    <link href="/sockjs.css" rel="stylesheet">
+</head>
+<body>
+<h1>SockJS with STOMP</h1>
+<h2>Streaming Text Oriented Messaging Protocol</h2>
+
+<table border="1px">
+    <thead>
+    <tr>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <label for="btnConnect" class="sockJSText">SockJS connection:</label>
+        </td>
+        <td>
+            <button id="btnConnect" class="sockJSButton" type="submit">Connect</button>
+            <button id="btnDisconnect" class="sockJSButton" type="submit" disabled="disabled">Disconnect
+            </button>
+            <label for="btnConnect" id="lblConnect" class="sockJSOff">Status</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="textMessage" class="sockJSText">Send your message</label>
+        </td>
+        <td>
+            <input type="text" id="textMessage" class="sockJSInput" placeholder="Your message">
+            <button id="btnSendMessage" class="sockJSButton" type="submit">Send</button>
+        </td>
+    </tr>
+    </tbody>
+    <table id="console" border="1px">
+        <thead>
+        <tr>
+            <th style="text-align: center"><h2>Requests</h2></th>
+            <th style="text-align: center"><h2>Responses</h2></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td width="50%">
+                <div id="requests"></div>
+            </td>
+            <td>
+                <div id="messaging"></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</table>
+
+
+</body>
+</html>
