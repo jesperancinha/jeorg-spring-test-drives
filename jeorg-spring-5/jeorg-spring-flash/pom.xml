@@ -23,6 +23,7 @@
         <module>jeorg-spring-flash-10</module>
         <module>jeorg-spring-flash-11</module>
         <module>jeorg-spring-flash-12</module>
+        <module>jeorg-spring-flash-13</module>
     </modules>
 
     <properties>

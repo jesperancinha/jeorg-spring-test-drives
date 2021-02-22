@@ -13,8 +13,11 @@ You can look at this as a collection of moments in time to learn spring.
 6. [jeorg-spring-flash-6](./jeorg-spring-flash-6)
 7. [jeorg-spring-flash-7](./jeorg-spring-flash-7)
 8. [jeorg-spring-flash-8](./jeorg-spring-flash-8)
-8. [jeorg-spring-flash-9](./jeorg-spring-flash-9)
-8. [jeorg-spring-flash-10](./jeorg-spring-flash-10)
+9. [jeorg-spring-flash-9](./jeorg-spring-flash-9)
+10. [jeorg-spring-flash-10](./jeorg-spring-flash-10)
+11. [jeorg-spring-flash-11](./jeorg-spring-flash-11)
+12. [jeorg-spring-flash-12](./jeorg-spring-flash-12)
+13. [jeorg-spring-flash-13](./jeorg-spring-flash-13)
 
 ## References
 
