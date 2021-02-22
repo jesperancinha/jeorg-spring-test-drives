@@ -1,12 +1,12 @@
-# spring-flash-9
+# spring-flash-10
 
 ## Introduction
 
-Exploring WebSockets and fallback to SockJS in Spring using the [STOMP protocol specification](https://www.javaguides.net/2019/06/spring-boot-websocket-stomp-sockjs-example.html).
+Exploring the Error page
 
 Topics
 
-1. `@EnableWebSocketMessageBroker`, `registerStompEndpoints`, `configureMessageBroker`, `@MessageMapping`, `@SendTo`
+1. `WebMvcConfigurerAdapter`, `@Profile`, `/error`, `SimpleMappingExceptionResolver`
 
 ## Endpoints
 
@@ -14,37 +14,30 @@ Topics
 
 ## How to run
 
+1. To check white label page
 ```bash
 mvn clean spring-boot:run
 ```
 
-## Dialogue usages
+2. To check disabling white label page
 
-1. Snap -> Rhythm is a dancer.
-2. We have instant soup at the office - Baby instant soup doesn't really grab me, today I need something more sub-sub-sub-substantial.
+```bash
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
+```
+
+3. To check custom error page
+
+```bash
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
+```
 
 ## References
 
 ### Context
 
-- [Rhythm Is a Dancer](https://en.wikipedia.org/wiki/Rhythm_Is_a_Dancer)
-- [The Sidewinder Sleeps Tonite](https://en.wikipedia.org/wiki/The_Sidewinder_Sleeps_Tonite)
-
-<div align="center">
-      <a title="Snap! - Rhythm is a Dancer" href="https://www.youtube.com/watch?v=KkhGkRahU6g">
-     <img 
-          src="https://img.youtube.com/vi/KkhGkRahU6g/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="R.E.M. - The Sidewinder Sleeps Tonite" href="https://www.youtube.com/watch?v=mgiCechWNCo">
-     <img   
-          src="https://img.youtube.com/vi/mgiCechWNCo/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
+- [Exception Handling in Spring MVC](https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc)
 - [Streaming Text Oriented Messaging Protocol](https://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol)
 - [Using STOMP JS](https://stomp-js.github.io/stomp-websocket/codo/extra/docs-src/Usage.md.html)
 - [Spring Boot WebSocket STOMP SockJS Example ](https://www.javaguides.net/2019/06/spring-boot-websocket-stomp-sockjs-example.html)
