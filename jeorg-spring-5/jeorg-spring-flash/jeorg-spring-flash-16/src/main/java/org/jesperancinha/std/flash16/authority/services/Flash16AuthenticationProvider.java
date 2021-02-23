@@ -6,11 +6,10 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Flash16AuthenticationProvider implements AuthenticationProvider {
@@ -23,14 +22,13 @@ public class Flash16AuthenticationProvider implements AuthenticationProvider {
     public Authentication authenticate(Authentication authentication)
             throws AuthenticationException {
         final var username = authentication.getName();
-        final var password = authentication.getCredentials().toString().toString();
+        final var password = authentication.getCredentials().toString();
         final var flashLoginUser = FlashUser.FlashUserBuilder.flashUserBuilder().name(username).password(password).build();
         final var userOptional =
                 FLASH_USERS.stream()
                         .filter(flashLoginUser::equals)
                         .findAny();
-        List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
-        grantedAuthorities.add(
+        final var grantedAuthorities = List.of(
                 new SimpleGrantedAuthority(
                         userOptional.orElseThrow(() ->
                                 new BadCredentialsException(String.format("User %s cannot be authenticated!", username)))

@@ -1,39 +1,70 @@
-# spring-flash-11
+# spring-flash-17
 
 ## Introduction
 
-Exploring the Form Parameters
+Exploring UserDetailsManager in Spring
 
 Topics
 
-1. `Model`, `ModelAndView`, `commandName`, `modelAttribute`, `<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>`
+1. `UserDetailsManager`, `tomcat-embed-jasper`, `PasswordEncoder`, `HttpSecurity`, `AuthenticationManagerBuilder`
 
 ## Endpoints
 
-1. [http://localhost:8081/](http://localhost:8081/)
+1. [http://localhost:8081](http://localhost:8081/)
+
+```bash
+curl localhost:8081/
+```
 
 ## How to run
 
+1. Test running services
+
 ```bash
-mvn clean spring-boot:run
+lsof -i :8081
+```
+
+2. Run service
+```bash
+mvn clean install spring-boot:run
+```
+
+3. Create users
+   
+```bash
+curl http://localhost:8081/open/create/admin/admin/ADMIN
+curl http://localhost:8081/open/create/joao/joao/ADMIN
+curl http://localhost:8081/open/create/user/user/USER
+```
+
+4. Test with credentials
+    1. admin/admin -> User with role <b>ROLE_ADMIN</b> -> User can login and access the whole website
+    2. user/user -> User with role <b>ROLE_USER</b> -> User can login, but there are not authorizations available
+
+5. Important dependency
+
+```xml
+<dependency>
+   <groupId>org.apache.tomcat.embed</groupId>
+   <artifactId>tomcat-embed-jasper</artifactId>
+</dependency>
 ```
 
 ## References
 
-### Context
-
-- [Talkin' 'bout a Revolution](https://en.wikipedia.org/wiki/Talkin%27_%27bout_a_Revolution)
-
-<div align="center">
-      <a title="Tracy Chapman - Talkin' About A Revolution" href="https://www.youtube.com/watch?v=Xv8FBjo1Y8I">
-     <img 
-          src="https://img.youtube.com/vi/Xv8FBjo1Y8I/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
+- [Part 5: Integrating Spring Security with Spring Boot Web](https://spr.com/part-5-integrating-spring-security-with-spring-boot-web/)
+- [Spring Security – JdbcUserDetailsManager Example | JDBC Authentication and Authorization](https://www.javainterviewpoint.com/spring-security-jdbcuserdetailsmanager-example/)
+- [Spring Security - Understanding AuthenticationProvider and creating a custom one](https://www.logicbig.com/tutorials/spring-framework/spring-security/custom-authentication-provider.html)
+- [Creating a Custom Login Form](https://docs.spring.io/spring-security/site/docs/4.2.20.RELEASE/guides/html5/form-javaconfig.html#obtaining-the-sample-project)
+- [How to use Custom DAO class in Spring Security for authentication and authorization](http://www.javaroots.com/2013/03/how-to-use-custom-dao-classe-in-spring.html)
+- [Spring Boot with H2 Database](https://howtodoinjava.com/spring-boot2/h2-database-example/)
+- [Spring Security: Authentication and Authorization In-Depth](https://www.marcobehler.com/guides/spring-security)
+- [Spring Boot @ConfigurationProperties example](https://mkyong.com/spring-boot/spring-boot-configurationproperties-example/)
+- [Spring Boot custom HealthIndicator](https://blog.jayway.com/2014/07/22/spring-boot-custom-healthindicator/)
+- [Spring Boot HealthIndicator by Example](https://stackoverflow.com/questions/47935369/spring-boot-healthindicator-by-example)
+- [Spring Boot static resource processing](https://www.programmersought.com/article/2664508486/)
 - [Spring form tag : ModelAttribute VS CommandName](http://mwakram.blogspot.com/2014/05/spring-form-tag-modelattribute-vs.html)
 - [Spring @RequestMapping Annotation Examples](https://howtodoinjava.com/spring-mvc/spring-mvc-requestmapping-annotation-examples/)
 - [Exception Handling in Spring MVC](https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc)
