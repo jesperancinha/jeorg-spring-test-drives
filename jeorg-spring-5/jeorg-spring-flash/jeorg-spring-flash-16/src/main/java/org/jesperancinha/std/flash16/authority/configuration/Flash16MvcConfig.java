@@ -1,8 +1,6 @@
-package org.jesperancinha.std.flash11.form;
+package org.jesperancinha.std.flash16.authority.configuration;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -10,10 +8,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
+
 @Configuration
 @EnableWebMvc
-@ComponentScan
-public class Flash11MvcConfig implements WebMvcConfigurer {
+public class Flash16MvcConfig implements WebMvcConfigurer {
 
     @Bean
     public ViewResolver getViewResolver() {
@@ -21,7 +22,9 @@ public class Flash11MvcConfig implements WebMvcConfigurer {
         internalResourceViewResolver.setViewClass(JstlView.class);
         internalResourceViewResolver.setPrefix("/WEB-INF/jsp/");
         internalResourceViewResolver.setSuffix(".jsp");
-        ConsolerizerColor.BLUE.printGenericLn("Initializing viewResolver -> %s", internalResourceViewResolver);
+        BLUE.printGenericLn("Initializing viewResolver -> %s", internalResourceViewResolver);
+        printUnicornsLn(100);
+        BRIGHT_MAGENTA.printGenericLn("Remember that you need the jasper dependency for the JSP Mapping to work");
         return internalResourceViewResolver;
     }
 }
