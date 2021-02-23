@@ -1,39 +1,64 @@
-# spring-flash-11
+# spring-flash-18
 
 ## Introduction
 
-Exploring the Form Parameters
+Exploring @AfterThrowing in Spring AOP
 
 Topics
 
-1. `Model`, `ModelAndView`, `commandName`, `modelAttribute`, `<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>`
+1. `@Aspect`, `@AfterThrowing`, `execution`
 
 ## Endpoints
 
-1. [http://localhost:8081/](http://localhost:8081/)
+1. [http://localhost:8081](http://localhost:8081/)
+
+```bash
+curl localhost:8081/
+```
 
 ## How to run
 
+1. Test running services
+
 ```bash
-mvn clean spring-boot:run
+lsof -i :8081
+```
+
+2. Run service
+```bash
+mvn clean install spring-boot:run
 ```
 
 ## References
 
 ### Context
 
-- [Talkin' 'bout a Revolution](https://en.wikipedia.org/wiki/Talkin%27_%27bout_a_Revolution)
+-  [New Rules](https://en.wikipedia.org/wiki/New_Rules)
 
 <div align="center">
-      <a title="Tracy Chapman - Talkin' About A Revolution" href="https://www.youtube.com/watch?v=Xv8FBjo1Y8I">
+      <a title="Dua Lipa - New Rules" href="https://www.youtube.com/watch?v=k2qgadSvNyU">
      <img 
-          src="https://img.youtube.com/vi/Xv8FBjo1Y8I/0.jpg" 
+          src="https://img.youtube.com/vi/k2qgadSvNyU/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
+
 ### Online
 
+- [Spring aop aspectJ pointcut expression examples](https://howtodoinjava.com/spring-aop/aspectj-pointcut-expressions/)
+- [Spring Boot AOP After Throwing Advice](https://www.javatpoint.com/spring-boot-aop-after-throwing-advice#:~:text=After%20throwing%20is%20an%20advice,implement%20the%20after%20throwing%20advice.)
+- [Part 5: Integrating Spring Security with Spring Boot Web](https://spr.com/part-5-integrating-spring-security-with-spring-boot-web/)
+- [Spring Security – JdbcUserDetailsManager Example | JDBC Authentication and Authorization](https://www.javainterviewpoint.com/spring-security-jdbcuserdetailsmanager-example/)
+- [Spring Security - Understanding AuthenticationProvider and creating a custom one](https://www.logicbig.com/tutorials/spring-framework/spring-security/custom-authentication-provider.html)
+- [Creating a Custom Login Form](https://docs.spring.io/spring-security/site/docs/4.2.20.RELEASE/guides/html5/form-javaconfig.html#obtaining-the-sample-project)
+- [How to use Custom DAO class in Spring Security for authentication and authorization](http://www.javaroots.com/2013/03/how-to-use-custom-dao-classe-in-spring.html)
+- [Spring Boot with H2 Database](https://howtodoinjava.com/spring-boot2/h2-database-example/)
+- [Spring Security: Authentication and Authorization In-Depth](https://www.marcobehler.com/guides/spring-security)
+- [Spring Boot @ConfigurationProperties example](https://mkyong.com/spring-boot/spring-boot-configurationproperties-example/)
+- [Spring Boot custom HealthIndicator](https://blog.jayway.com/2014/07/22/spring-boot-custom-healthindicator/)
+- [Spring Boot HealthIndicator by Example](https://stackoverflow.com/questions/47935369/spring-boot-healthindicator-by-example)
+- [Spring Boot static resource processing](https://www.programmersought.com/article/2664508486/)
 - [Spring form tag : ModelAttribute VS CommandName](http://mwakram.blogspot.com/2014/05/spring-form-tag-modelattribute-vs.html)
 - [Spring @RequestMapping Annotation Examples](https://howtodoinjava.com/spring-mvc/spring-mvc-requestmapping-annotation-examples/)
 - [Exception Handling in Spring MVC](https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc)
