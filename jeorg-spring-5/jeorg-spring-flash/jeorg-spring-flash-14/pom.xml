@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jeorg-spring-flash-13</artifactId>
+    <artifactId>jeorg-spring-flash-14</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -21,6 +21,10 @@
             <groupId>org.jesperancinha.console</groupId>
             <artifactId>consolerizer</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
