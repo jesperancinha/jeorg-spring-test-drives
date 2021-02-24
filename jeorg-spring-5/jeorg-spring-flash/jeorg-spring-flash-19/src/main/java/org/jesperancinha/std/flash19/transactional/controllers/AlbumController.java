@@ -25,7 +25,7 @@ public class AlbumController {
     }
 
     @GetMapping("/list/all")
-    public List<Album> getAllAlbums(){
+    public List<Album> getAllAlbums() {
         return this.albumService.getAllAlbums();
     }
 
@@ -42,6 +42,7 @@ public class AlbumController {
         final var album = this.albumService.createAlbum(name, artist, publisher, year);
         GREEN.printGenericLn("Created album -> %s", album);
     }
+
     @PostMapping("/create/albumRollback")
     public void createAlbumRollBack(
             @RequestHeader

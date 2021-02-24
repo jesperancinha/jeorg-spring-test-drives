@@ -36,11 +36,11 @@ public class Flash14HealthIndicator extends AbstractHealthIndicator {
 
         if (path.toFile().exists()) {
             builder.up()
-                    .withDetail("lyric","You've got some kind of family there to turn to and that's more than I could ever give to you")
+                    .withDetail("lyric", "You've got some kind of family there to turn to and that's more than I could ever give to you")
                     .withDetail("spaceUsed", fileStore.getTotalSpace() - fileStore.getUnallocatedSpace());
         } else {
             builder.down()
-                    .withDetail("lyric","A chance for calm, A hope for freedom")
+                    .withDetail("lyric", "A chance for calm, A hope for freedom")
                     .withDetail("spaceUsed", fileStore.getTotalSpace() - fileStore.getUnallocatedSpace());
         }
     }

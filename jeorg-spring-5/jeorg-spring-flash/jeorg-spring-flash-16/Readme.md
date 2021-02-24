@@ -25,6 +25,7 @@ lsof -i :8081
 ```
 
 2. Run service
+
 ```bash
 mvn clean install spring-boot:run
 ```
@@ -36,9 +37,10 @@ mvn clean install spring-boot:run
 4. Important dependency
 
 ```xml
+
 <dependency>
-   <groupId>org.apache.tomcat.embed</groupId>
-   <artifactId>tomcat-embed-jasper</artifactId>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
 </dependency>
 ```
 

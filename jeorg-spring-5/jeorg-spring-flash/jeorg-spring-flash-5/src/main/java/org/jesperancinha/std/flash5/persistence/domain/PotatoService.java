@@ -10,11 +10,11 @@ public class PotatoService {
 
     private PotatoRepository potatoRepository;
 
-    public PotatoService(PotatoRepository potatoRepository){
+    public PotatoService(PotatoRepository potatoRepository) {
         this.potatoRepository = potatoRepository;
     }
 
-    public Potato createPotato(final Potato potato){
+    public Potato createPotato(final Potato potato) {
         return potatoRepository.save(potato);
     }
 

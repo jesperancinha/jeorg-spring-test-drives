@@ -25,6 +25,7 @@ lsof -i :8081
 ```
 
 2. Run service
+
 ```bash
 mvn clean install spring-boot:run
 ```

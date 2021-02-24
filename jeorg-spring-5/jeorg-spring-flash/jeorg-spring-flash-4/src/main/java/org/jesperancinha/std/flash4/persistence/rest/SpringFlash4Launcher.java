@@ -44,12 +44,13 @@ public class SpringFlash4Launcher {
 
     @PostMapping(
             path = "/dollars",
-    consumes = "application/text",
-    headers = "dollars")
+            consumes = "application/text",
+            headers = "dollars")
     public void thousandDollars(
             @RequestHeader("dollars")
-            @NumberFormat(style = NumberFormat.Style.NUMBER, pattern = "$###,###.###")
-            BigDecimal dollars){
+            @NumberFormat(style = NumberFormat.Style.NUMBER,
+                    pattern = "$###,###.###")
+                    BigDecimal dollars) {
         MAGENTA.printGenericTitleLn(dollars);
     }
 }

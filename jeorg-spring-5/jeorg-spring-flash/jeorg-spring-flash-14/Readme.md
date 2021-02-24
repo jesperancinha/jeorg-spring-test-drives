@@ -27,11 +27,13 @@ cp testfile.txt /tmp
 Run Spring Boot
 
 1. Running Health Checks the old way
+
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 ```
 
 2. Running Health Checks the new way
+
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
@@ -49,7 +51,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
           style="width:10%;">
       </a>
 </div>
-    
 
 ### Online
 

@@ -18,7 +18,9 @@ public class SpringFlash12Launcher {
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
-            public void addCorsMappings(@NonNull CorsRegistry registry) {
+            public void addCorsMappings(
+                    @NonNull
+                            CorsRegistry registry) {
                 registry.addMapping("/protected").allowedOrigins("http://jeorg-spring-flash-12:8081");
             }
         };

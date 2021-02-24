@@ -25,18 +25,19 @@ lsof -i :8081
 ```
 
 2.1. Run test service to check creation of users using GET request
+
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 ```
 
-
 2.2. Run production service to check creation of users using POST request
+
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
 3.1. Create users via GET requests
-   
+
 ```bash
 curl http://localhost:8081/open/create/admin/admin/ADMIN
 curl http://localhost:8081/open/create/joao/joao/ADMIN
@@ -44,12 +45,12 @@ curl http://localhost:8081/open/create/user/user/USER
 ```
 
 3.2. Create users via POST requests
+
 ```bash
 curl -X POST -H "name: admin" -H "password: admin" -H "role: ADMIN" http://localhost:8081/open/create 
 curl -X POST -H "name: joao" -H "password: joao" -H "role: ADMIN" http://localhost:8081/open/create 
 curl -X POST -H "name: user" -H "password: user" -H "role: ADMIN" http://localhost:8081/open/create 
 ```
-
 
 4. Test with credentials
     1. admin/admin -> User with role <b>ROLE_ADMIN</b> -> User can login and access the whole website
@@ -58,9 +59,10 @@ curl -X POST -H "name: user" -H "password: user" -H "role: ADMIN" http://localho
 5. Important dependency
 
 ```xml
+
 <dependency>
-   <groupId>org.apache.tomcat.embed</groupId>
-   <artifactId>tomcat-embed-jasper</artifactId>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
 </dependency>
 ```
 

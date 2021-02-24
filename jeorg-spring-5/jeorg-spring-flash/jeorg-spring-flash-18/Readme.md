@@ -25,6 +25,7 @@ lsof -i :8081
 ```
 
 2. Run service
+
 ```bash
 mvn clean install spring-boot:run
 ```
@@ -33,7 +34,7 @@ mvn clean install spring-boot:run
 
 ### Context
 
--  [New Rules](https://en.wikipedia.org/wiki/New_Rules)
+- [New Rules](https://en.wikipedia.org/wiki/New_Rules)
 
 <div align="center">
       <a title="Dua Lipa - New Rules" href="https://www.youtube.com/watch?v=k2qgadSvNyU">
@@ -42,7 +43,6 @@ mvn clean install spring-boot:run
           style="width:10%;">
       </a>
 </div>
-
 
 ### Online
 

@@ -60,7 +60,7 @@ public class ProductsExceptionHandler extends ResponseEntityExceptionHandler {
     public final ResponseEntity<ErrorFlower> handleFlowerExceptions(final FlowerNotAvailableException2 flowerNotAvailableException, final WebRequest webRequest) {
         RED.printGenericTitleLn("This will never be called! Local defined handlers have precedence");
         final String message = Arrays.stream(flowerNotAvailableException.getStackTrace()).distinct().map(StackTraceElement::toString).collect(Collectors.joining());
-        final ErrorFlower errorFlower = new ErrorFlower(message,HttpStatus.NOT_FOUND);
+        final ErrorFlower errorFlower = new ErrorFlower(message, HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(errorFlower, HttpStatus.NOT_FOUND);
     }
 }

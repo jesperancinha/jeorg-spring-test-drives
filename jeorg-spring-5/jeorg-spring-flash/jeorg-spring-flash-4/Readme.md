@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Exploring the 
+Exploring the
 
 org.springframework.format.annotation.DateTimeFormat
 
@@ -20,20 +20,22 @@ Topics
 ## Endpoints
 
 1. Date Example
+
 ```bash
 curl -X POST http://localhost:8081/ --header 'currentTime: 2014-11-01' --header 'Content-Type: application/text'
 ```
 
 2. Datetime Example
+
 ```bash
 curl -X POST http://localhost:8081/time --header 'currentTime: 2014-12-12 10:00:00' --header 'Content-Type: application/text'
 ```
 
 3. Number Example
+
 ```bash
 curl -X POST http://localhost:8081/dollars --header 'dollars: $1000000' --header 'Content-Type: application/text'
 ```
-
 
 ## About me 👨🏽‍💻🚀
 

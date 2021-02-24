@@ -45,31 +45,31 @@ public class FlashUser {
         return role;
     }
 
-    public static class FlashUserBuilder{
+    public static class FlashUserBuilder {
         private String name;
         private String password;
         private String role;
 
-        public static FlashUserBuilder flashUserBuilder(){
+        public static FlashUserBuilder flashUserBuilder() {
             return new FlashUserBuilder();
         }
 
-        public FlashUserBuilder name(String name){
+        public FlashUserBuilder name(String name) {
             this.name = name;
             return this;
         }
 
-        public FlashUserBuilder password(String password){
+        public FlashUserBuilder password(String password) {
             this.password = password;
             return this;
         }
 
-        public FlashUserBuilder role(String role){
+        public FlashUserBuilder role(String role) {
             this.role = role;
             return this;
         }
 
-        public FlashUser build(){
+        public FlashUser build() {
             final var flashUser = new FlashUser();
             flashUser.setName(name);
             flashUser.setPassword(password);

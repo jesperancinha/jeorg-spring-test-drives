@@ -11,7 +11,7 @@ public class PresentController {
 
     @MessageMapping("/request")
     @SendTo("/business/present")
-    public Present sendPresent(final Request request){
+    public Present sendPresent(final Request request) {
         return new Present(request);
     }
 }

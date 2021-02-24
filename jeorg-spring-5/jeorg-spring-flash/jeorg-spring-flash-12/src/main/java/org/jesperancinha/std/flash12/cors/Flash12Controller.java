@@ -17,6 +17,7 @@ public class Flash12Controller {
     public String sentenceAlways() {
         return "This should be blocked from the opposite url.";
     }
+
     @GetMapping("/protected")
     public String sentenceProtected() {
         return "When accessing from jeorg-spring-flash-12, there should be no blocking to visualizatin";

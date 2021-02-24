@@ -89,7 +89,8 @@ public class ProductController {
     }
 
     @GetMapping("/fourwheels/{fourwheels}")
-    public String getFourwheels(final @PathVariable("fourwheels") String fourwheels) {
+    public String getFourwheels(final @PathVariable("fourwheels")
+                                        String fourwheels) {
         GREEN.printGenericTitleLn("You are requesting 4 Wheels %s", fourwheels);
         throw new FourWheelNotAvailableException(fourwheels);
     }

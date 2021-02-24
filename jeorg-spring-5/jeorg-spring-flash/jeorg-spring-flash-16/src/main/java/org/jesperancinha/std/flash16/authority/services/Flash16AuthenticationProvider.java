@@ -9,7 +9,6 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class Flash16AuthenticationProvider implements AuthenticationProvider {

@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash9.socksjs.domain;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Request {

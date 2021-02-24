@@ -23,12 +23,12 @@ public class SpringFlash5Launcher {
         run(SpringFlash5Launcher.class, args);
     }
 
-    public SpringFlash5Launcher(final PotatoService potatoService){
+    public SpringFlash5Launcher(final PotatoService potatoService) {
         this.potatoService = potatoService;
     }
 
     @PostMapping("/")
-    public void createAllPotatoes(){
+    public void createAllPotatoes() {
         var potato1 = new Potato();
         potato1.setForm("Elephant");
         potato1.setLocalDateTime(LocalDateTime.now());
@@ -44,7 +44,7 @@ public class SpringFlash5Launcher {
     }
 
     @GetMapping("/")
-    public List<Potato> getAllPotatoes(){
+    public List<Potato> getAllPotatoes() {
         return potatoService.getAllPotatoes();
     }
 }

@@ -1,4 +1,4 @@
-# spring-flash-18
+# spring-flash-19
 
 ## Introduction
 
@@ -38,7 +38,7 @@ curl -X POST -H "name: This Time" -H "artist: Anna Domino" -H "publisher: Crépu
 curl -X DELETE http://localhost:8081/delete/album/1
 ```
 
-5. Listing  all albums
+5. Listing all albums
 
 ```bash
 curl http://localhost:8081/list/all
@@ -53,6 +53,7 @@ lsof -i :8081
 ```
 
 2. Run service
+
 ```bash
 mvn clean install spring-boot:run
 ```
@@ -61,7 +62,7 @@ mvn clean install spring-boot:run
 
 ### Context
 
--  [Anna Domino](https://en.wikipedia.org/wiki/Anna_Domino)
+- [Anna Domino](https://en.wikipedia.org/wiki/Anna_Domino)
 
 <div align="center">
       <a title="Anna Domino - Bonds Of Love" href="https://www.youtube.com/watch?v=sFOQxushaEo">
