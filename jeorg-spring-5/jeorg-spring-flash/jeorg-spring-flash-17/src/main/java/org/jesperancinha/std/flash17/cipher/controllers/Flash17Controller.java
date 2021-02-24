@@ -3,9 +3,11 @@ package org.jesperancinha.std.flash17.cipher.controllers;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Controller
@@ -21,6 +23,7 @@ public class Flash17Controller {
         model
                 .addAttribute("name", authentication.getName())
                 .addAttribute("roles", authentication.getAuthorities());
+        ORANGE.printGenericLn("And this is our model -> %s", model.toString());
         return new ModelAndView("userdata");
     }
 }

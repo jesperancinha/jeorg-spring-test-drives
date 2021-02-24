@@ -9,18 +9,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 
-@Profile("prod")
+@Profile("test")
 @Configuration
 @EnableWebSecurity
-public class Flash17ConfigurationAdapter extends WebSecurityConfigurerAdapter {
+public class Flash17CSRFConfigurationAdapter extends WebSecurityConfigurerAdapter {
 
     private JdbcUserDetailsManager jdbcUserDetailsManager;
     private PasswordEncoder passwordEncoder;
 
-    public Flash17ConfigurationAdapter(final JdbcUserDetailsManager jdbcUserDetailsManager, final PasswordEncoder passwordEncoder) {
+    public Flash17CSRFConfigurationAdapter(final JdbcUserDetailsManager jdbcUserDetailsManager, final PasswordEncoder passwordEncoder) {
         this.jdbcUserDetailsManager = jdbcUserDetailsManager;
         this.passwordEncoder = passwordEncoder;
     }
@@ -34,12 +33,8 @@ public class Flash17ConfigurationAdapter extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .formLogin()
-                .and().csrf().disable();
-        GREEN.printGenericLn("We disable CSRF given that it interferes with POST requests");
-        BLUE.printGenericLn("From: https://docs.spring.io/spring-security/site/docs/3.2.0.CI-SNAPSHOT/reference/html/csrf.html");
-        BLUE.printGenericLn("13.3 When to use CSRF protection\n" +
-                "When you use CSRF protection? Our recommendation is to use CSRF protection for any request that could be processed by a browser by normal users. If you are only creating a service that is used by non-browser clients, you will likely want to disable CSRF protection.");
+                .formLogin();
+
         GREEN.printGenericLn("Note that ADMIN in this case is a short statement for ROLE_ADMIN");
         GREEN.printGenericLn("When we assign our SimpleGrantedAuthority to our Authentication, we give it a role as parameter");
         GREEN.printGenericLn("The role is an extended name. In our case it will be ROLE_ADMIN");

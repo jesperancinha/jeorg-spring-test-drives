@@ -1,19 +1,47 @@
-# spring-flash-17
+# spring-flash-18
 
 ## Introduction
 
-Exploring UserDetailsManager in Spring
+Exploring @Transactional in Spring
 
 Topics
 
-1. `UserDetailsManager`, `tomcat-embed-jasper`, `PasswordEncoder`, `HttpSecurity`, `AuthenticationManagerBuilder`
+1. `@Override`, `@Transactional`, `propagation`, `Propagation.REQUIRES_NEW`, `rollbackFor`, `RuntimeException.class`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081/)
+1. [http://localhost:8081/list/all](http://localhost:8081/list/all)
 
 ```bash
-curl localhost:8081/
+curl http://localhost:8081/list/all
+```
+
+2. Posting albums
+
+```bash
+curl -X POST -H "name: East and West" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1984" http://localhost:8081/create/album
+curl -X POST -H "name: Anna Domino" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1986" http://localhost:8081/create/album
+curl -X POST -H "name: This Time" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1987" http://localhost:8081/create/album
+```
+
+3. Posting albums but rollbacking them
+
+```bash
+curl -X POST -H "name: East and West" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1984" http://localhost:8081/create/albumRollback
+curl -X POST -H "name: Anna Domino" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1986" http://localhost:8081/create/albumRollback
+curl -X POST -H "name: This Time" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1987" http://localhost:8081/create/albumRollback
+```
+
+4. Deleting albums
+
+```bash
+curl -X DELETE http://localhost:8081/delete/album/1
+```
+
+5. Listing  all albums
+
+```bash
+curl http://localhost:8081/list/all
 ```
 
 ## How to run
@@ -24,51 +52,30 @@ curl localhost:8081/
 lsof -i :8081
 ```
 
-2.1. Run test service to check creation of users using GET request
+2. Run service
 ```bash
-mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
-```
-
-
-2.2. Run production service to check creation of users using POST request
-```bash
-mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
-```
-
-3.1. Create users via GET requests
-   
-```bash
-curl http://localhost:8081/open/create/admin/admin/ADMIN
-curl http://localhost:8081/open/create/joao/joao/ADMIN
-curl http://localhost:8081/open/create/user/user/USER
-```
-
-3.2. Create users via POST requests
-```bash
-curl -X POST -H "name: admin" -H "password: admin" -H "role: ADMIN" http://localhost:8081/open/create 
-curl -X POST -H "name: joao" -H "password: joao" -H "role: ADMIN" http://localhost:8081/open/create 
-curl -X POST -H "name: user" -H "password: user" -H "role: ADMIN" http://localhost:8081/open/create 
-```
-
-
-4. Test with credentials
-    1. admin/admin -> User with role <b>ROLE_ADMIN</b> -> User can login and access the whole website
-    2. user/user -> User with role <b>ROLE_USER</b> -> User can login, but there are not authorizations available
-
-5. Important dependency
-
-```xml
-<dependency>
-   <groupId>org.apache.tomcat.embed</groupId>
-   <artifactId>tomcat-embed-jasper</artifactId>
-</dependency>
+mvn clean install spring-boot:run
 ```
 
 ## References
 
+### Context
+
+-  [Anna Domino](https://en.wikipedia.org/wiki/Anna_Domino)
+
+<div align="center">
+      <a title="Anna Domino - Bonds Of Love" href="https://www.youtube.com/watch?v=sFOQxushaEo">
+     <img 
+          src="https://img.youtube.com/vi/sFOQxushaEo/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 ### Online
 
-- [Spring Boot 2 REST POST with Headers](https://howtodoinjava.com/spring-boot2/rest/spring-boot2-rest-post-example/)
+- [How Does Spring @Transactional Really Work?](https://dzone.com/articles/how-does-spring-transactional)
+- [Spring aop aspectJ pointcut expression examples](https://howtodoinjava.com/spring-aop/aspectj-pointcut-expressions/)
+- [Spring Boot AOP After Throwing Advice](https://www.javatpoint.com/spring-boot-aop-after-throwing-advice#:~:text=After%20throwing%20is%20an%20advice,implement%20the%20after%20throwing%20advice.)
 - [Part 5: Integrating Spring Security with Spring Boot Web](https://spr.com/part-5-integrating-spring-security-with-spring-boot-web/)
 - [Spring Security – JdbcUserDetailsManager Example | JDBC Authentication and Authorization](https://www.javainterviewpoint.com/spring-security-jdbcuserdetailsmanager-example/)
 - [Spring Security - Understanding AuthenticationProvider and creating a custom one](https://www.logicbig.com/tutorials/spring-framework/spring-security/custom-authentication-provider.html)
