@@ -19,6 +19,11 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 13. [jeorg-spring-flash-13](./jeorg-spring-flash-13)
 14. [jeorg-spring-flash-14](./jeorg-spring-flash-14)
 15. [jeorg-spring-flash-15](./jeorg-spring-flash-15)
+16. [jeorg-spring-flash-16](./jeorg-spring-flash-16)
+17. [jeorg-spring-flash-17](./jeorg-spring-flash-17)
+18. [jeorg-spring-flash-18](./jeorg-spring-flash-18)
+19. [jeorg-spring-flash-19](./jeorg-spring-flash-19)
+20. [jeorg-spring-flash-20](./jeorg-spring-flash-20)
 
 ## References
 
