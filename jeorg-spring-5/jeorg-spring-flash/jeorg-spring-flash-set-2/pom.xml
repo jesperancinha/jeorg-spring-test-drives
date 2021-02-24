@@ -20,5 +20,6 @@
 
     <modules>
         <module>jeorg-spring-flash-2-1</module>
+        <module>jeorg-spring-flash-2-2</module>
     </modules>
 </project>
