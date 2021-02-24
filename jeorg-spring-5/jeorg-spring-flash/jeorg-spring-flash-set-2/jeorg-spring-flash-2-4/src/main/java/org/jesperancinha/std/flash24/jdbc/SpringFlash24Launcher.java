@@ -107,6 +107,6 @@ public class SpringFlash24Launcher implements CommandLineRunner {
                                 rs.getString("name"),
                                 rs.getString("venue"),
                                 rs.getString("local_date_time"))
-        ).forEach(concert -> MAGENTA.printGenericLn(concert.toString()))
+        ).forEach(concert -> MAGENTA.printGenericLn(concert.toString()));
     }
 }
