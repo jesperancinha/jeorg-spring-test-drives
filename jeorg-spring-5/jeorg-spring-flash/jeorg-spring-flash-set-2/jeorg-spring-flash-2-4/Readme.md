@@ -1,12 +1,12 @@
-# spring-flash-2-3
+# spring-flash-2-4
 
 ## Introduction
 
-Exploring Interceptors in Spring using XML
+Exploring JdbcTemplate in Spring
 
 Topics
 
-1. `mvc:interceptors`, `mvc:interceptor`, `mvc:mapping`, `mvc:exclude-mapping`
+1. `JdbcTemplate`, `DataAccessException`
 
 ## Endpoints
 
@@ -33,18 +33,20 @@ mvn clean install spring-boot:run
 
 ### Context
 
-- [Disco](https://en.wikipedia.org/wiki/Disco_(Kylie_Minogue_album))
+- [Róisín Murphy Concert List](https://www.songkick.com/artists/1168629-roisin-murphy)
 
 <div align="center">
-      <a title="Kylie Minogue - Fine Wine" href="https://www.youtube.com/watch?v=JtyCDOmgCic">
+      <a title="Róisín Murphy - Murphy's Law" href="https://www.youtube.com/watch?v=_Khh8NB-qBo">
      <img 
-          src="https://img.youtube.com/vi/JtyCDOmgCic/0.jpg" 
+          src="https://img.youtube.com/vi/_Khh8NB-qBo/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
+
 ### Online
 
+- [Accessing Relational Data using JDBC with Spring](https://spring.io/guides/gs/relational-data-access/)
 - [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)
 - [Custom Container Configuration in Spring Boot 2](https://www.javaprogramto.com/2020/04/spring-boot-embeddedservletcontainercustomizer-configurableembeddedservletcontainer.html)
 - [Spring 4 REST + CORS Integration using @CrossOrigin Annotation + XML + Filter Example](https://www.concretepage.com/spring-4/spring-4-rest-cors-integration-using-crossorigin-annotation-xml-filter-example)
