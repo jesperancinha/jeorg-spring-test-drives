@@ -39,7 +39,7 @@ public class SpringFlash24Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... strings) throws Exception {
+    public void run(String... strings) {
         jdbcTemplate.setExceptionTranslator(new AbstractFallbackSQLExceptionTranslator() {
             @Override
             protected DataAccessException doTranslate(String task, String sql, SQLException ex) {
@@ -52,10 +52,9 @@ public class SpringFlash24Launcher implements CommandLineRunner {
             BLUE.printGenericTitleLn("Exception Handling");
             RED.printExpectedException("We are able to handle this exception since we have crated an Exception Translator", exception);
         }
-        jdbcTemplate.execute("DROP TABLE concerts IF EXISTS");
-        jdbcTemplate.execute("CREATE TABLE concerts(" +
-                "id SERIAL, name VARCHAR(255), venue VARCHAR(255), local_date_time VARCHAR(255))");
-
+        jdbcTemplate.execute("drop table concerts if exists ");
+        jdbcTemplate.execute("create table concerts(" +
+                "id SERIAL, name varchar(255), venue varchar(255), local_date_time varchar(255))");
 
         MAGENTA.printGenericLn("from: https://www.songkick.com/artists/1168629-roisin-murphy");
 
@@ -64,20 +63,19 @@ public class SpringFlash24Launcher implements CommandLineRunner {
         List<Object[]> concerts = Arrays.asList(
                 concert1, concert2
         );
-        concerts.forEach(name -> MAGENTA.printGenericLn(String.format("Inserting customer record for %s %s", name[0], name[1])));
         GREEN.printGenericTitleLn("from: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete");
         ORANGE.printGenericLn("Performing a CRUD operation -> Create = INSERT");
-        jdbcTemplate.batchUpdate("INSERT INTO concerts(name, venue, local_date_time) VALUES (?,?,?)", concerts);
-        ORANGE.printGenericLn("Performing a CRUD operation -> Read = SELECT");
+        jdbcTemplate.batchUpdate("insert into concerts(name, venue, local_date_time) values (?,?,?)", concerts);
+        ORANGE.printGenericLn("Performing a CRUD operation -> Read = select");
         jdbcTemplate.query(
-                "SELECT id, name, venue, local_date_time FROM concerts",
+                "select id, name, venue, local_date_time from concerts",
                 (rs, rowNum) ->
                         new Concert(rs.getLong("id"),
                                 rs.getString("name"),
                                 rs.getString("venue"),
                                 rs.getString("local_date_time"))
         ).forEach(concert -> MAGENTA.printGenericLn(concert.toString()));
-        ORANGE.printGenericLn("Performing a CRUD operation -> Update = UPDATE");
+        ORANGE.printGenericLn("Performing a CRUD operation -> Update = update");
         final String[] newConcert1 = Arrays.copyOf(concert1, concert1.length + 1);
         final String[] newConcert2 = Arrays.copyOf(concert2, concert2.length + 1);
         newConcert1[1] = "unknown venue";
@@ -88,20 +86,23 @@ public class SpringFlash24Launcher implements CommandLineRunner {
                 newConcert1, newConcert2
         );
         jdbcTemplate.batchUpdate("UPDATE concerts set name = ?, venue = ?, local_date_time = ? WHERE id = ?", concerts2);
-        ORANGE.printGenericLn("Performing a CRUD operation -> Read = SELECT");
+        ORANGE.printGenericLn("Performing a CRUD operation -> Read = select");
         jdbcTemplate.query(
-                "SELECT id, name, venue, local_date_time FROM concerts",
-                (rs, rowNum) ->
-                        new Concert(rs.getLong("id"),
-                                rs.getString("name"),
-                                rs.getString("venue"),
-                                rs.getString("local_date_time"))
+                "select id, name, venue, local_date_time FROM concerts",
+                (rs, rowNum) -> {
+                    ORANGE.printGenericLn("This is row number %d", rowNum);
+                    return new Concert(rs.getLong("id"),
+                            rs.getString("name"),
+                            rs.getString("venue"),
+                            rs.getString("local_date_time"));
+
+                }
         ).forEach(concert -> MAGENTA.printGenericLn(concert.toString()));
-        ORANGE.printGenericLn("Performing a CRUD operation -> Delete = DELETE");
-        jdbcTemplate.update("DELETE from concerts where id = ?", 1);
-        ORANGE.printGenericLn("Performing a CRUD operation -> Read = SELECT");
+        ORANGE.printGenericLn("Performing a CRUD operation -> Delete = delete");
+        jdbcTemplate.update("delete from concerts where id = ?", 1);
+        ORANGE.printGenericLn("Performing a CRUD operation -> Read = select");
         jdbcTemplate.query(
-                "SELECT id, name, venue, local_date_time FROM concerts",
+                "select id, name, venue, local_date_time FROM concerts",
                 (rs, rowNum) ->
                         new Concert(rs.getLong("id"),
                                 rs.getString("name"),
