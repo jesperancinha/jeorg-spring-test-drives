@@ -1,21 +1,19 @@
-# spring-flash-2-7
+# spring-flash-2-8
 
 ## Introduction
 
-Maximizing management endpoints exposure in Spring
+Exploring the SecurityFilterChain in Spring
 
 Topics
 
-1. `management.endpoint.health.show-details`, `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`
+1. `CsrfFilter`, `SecurityFilterChain`, `logging.level.org.springframework.security.web.FilterChainProxy=DEBUG`
 
 ## Endpoints
 
 1. [http://localhost:8081](http://localhost:8081)
-2. [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
 
 ```bash
 curl http://localhost:8081
-curl http://localhost:8081/actuator/health
 ```
 
 ## How to run
@@ -26,28 +24,36 @@ curl http://localhost:8081/actuator/health
 lsof -i :8081
 ```
 
-2. Run service
+2.1 Run service with test profile. We'll see the CSRF Filter in the logs
+```bash
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
+```
+
+2.2 Run service with prod profile. We won't see the CSRF Filter in the logs
 
 ```bash
-mvn clean install spring-boot:run
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
 ## References
 
 ### Context
 
+- [PJ Harvey](https://en.wikipedia.org/wiki/PJ_Harvey)
 - [Nick Cave](https://en.wikipedia.org/wiki/Nick_Cave)
 
 <div align="center">
-      <a title="Nick Cave & The Bad Seeds - Into My Arms" href="https://www.youtube.com/watch?v=LnHoqHscTKE">
+      <a title="Nick Cave & The Bad Seeds - Henry Lee" href="https://www.youtube.com/watch?v=QzmMB8dTwGs">
      <img 
-          src="https://img.youtube.com/vi/LnHoqHscTKE/0.jpg" 
+          src="https://img.youtube.com/vi/QzmMB8dTwGs/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
 ### Online
 
+- [9.5. Security Filters](https://docs.spring.io/spring-security/site/docs/5.3.3.BUILD-SNAPSHOT/reference/html5/#servlet-security-filters)
+- [Spring Security Filters Chain](https://www.javadevjournal.com/spring-security/spring-security-filters/)
 - [Spring JDBC - ResultSetExtractor Interface](https://www.tutorialspoint.com/springjdbc/springjdbc_resultsetextractor.htm)
 - [Accessing Relational Data using JDBC with Spring](https://spring.io/guides/gs/relational-data-access/)
 - [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)
