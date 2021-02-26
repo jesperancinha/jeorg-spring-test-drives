@@ -27,5 +27,6 @@
         <module>jeorg-spring-flash-2-6</module>
         <module>jeorg-spring-flash-2-7</module>
         <module>jeorg-spring-flash-2-8</module>
+        <module>jeorg-spring-flash-2-9</module>
     </modules>
 </project>
