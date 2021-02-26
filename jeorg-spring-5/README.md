@@ -64,6 +64,17 @@ sdk use 11.0.9.hs-adpt
        19. [jeorg-spring-flash-19](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-19) - 🎫 Transaction
        20. [jeorg-spring-flash-20](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-20) - 🌏 CORS via XML
    2. [jeorg-spring-flash-set-2](./jeorg-spring-flash/jeorg-spring-flash-set-2) - ⚡️ Fast track modules about Spring Boot 5 - Set 2 with 20 modules (coming soon...)
+      1. [jeorg-spring-flash-2-1](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-1) - 🕺🏻 Embedded Containers
+      2. [jeorg-spring-flash-2-2](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-2) - 🍷 InterceptorRegistry
+      3. [jeorg-spring-flash-2-3](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-3) - 🥂 XML interceptors
+      4. [jeorg-spring-flash-2-4](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-4) - 🧑🏻‍⚖️ JdbcTemplate
+      5. [jeorg-spring-flash-2-5](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-5) - 🧮️ JPA Operators
+      6. [jeorg-spring-flash-2-6](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-6) - 🐚 RowMapper and ResultSetExtractor
+      7. [jeorg-spring-flash-2-7](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-7) - 🙅🏽‍♂️ management.endpoint
+      8. [jeorg-spring-flash-2-8](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-8) - 🦅 SecurityFilterChain
+      9. [jeorg-spring-flash-2-9](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-9) - 💍 EnableGlobalMethodSecurity, PreAuthorize and PostAuthorize
+      10. [jeorg-spring-flash-2-10](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-10) - 🪐 spring.factories
+   
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 

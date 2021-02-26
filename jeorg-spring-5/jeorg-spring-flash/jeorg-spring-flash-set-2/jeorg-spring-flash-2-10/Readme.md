@@ -1,32 +1,52 @@
-# jeorg-spring-flash-set-2
+# spring-flash-2-10
 
-## Contents
+## Introduction
 
-1. [jeorg-spring-flash-2-1](./jeorg-spring-flash-2-1)
-2. [jeorg-spring-flash-2-2](./jeorg-spring-flash-2-2)
-3. [jeorg-spring-flash-2-3](./jeorg-spring-flash-2-3)
-4. [jeorg-spring-flash-2-4](./jeorg-spring-flash-2-4)
-5. [jeorg-spring-flash-2-5](./jeorg-spring-flash-2-5)
-6. [jeorg-spring-flash-2-6](./jeorg-spring-flash-2-6)
-7. [jeorg-spring-flash-2-7](./jeorg-spring-flash-2-7)
-8. [jeorg-spring-flash-2-8](./jeorg-spring-flash-2-8)
-9. [jeorg-spring-flash-2-9](./jeorg-spring-flash-2-9)
-10. [jeorg-spring-flash-2-10](./jeorg-spring-flash-2-10)
-11. [jeorg-spring-flash-2-11](./jeorg-spring-flash-2-11)
-12. [jeorg-spring-flash-2-12](./jeorg-spring-flash-2-12)
-13. [jeorg-spring-flash-2-13](./jeorg-spring-flash-2-13)
-14. [jeorg-spring-flash-2-14](./jeorg-spring-flash-2-14)
-15. [jeorg-spring-flash-2-15](./jeorg-spring-flash-2-15)
-16. [jeorg-spring-flash-2-16](./jeorg-spring-flash-2-16)
-17. [jeorg-spring-flash-2-17](./jeorg-spring-flash-2-17)
-18. [jeorg-spring-flash-2-18](./jeorg-spring-flash-2-18)
-19. [jeorg-spring-flash-2-19](./jeorg-spring-flash-2-19)
-20. [jeorg-spring-flash-2-20](./jeorg-spring-flash-2-20)
+Exploring spring.factories in Spring
+
+Topics
+
+1. `spring.factories`, `@Configuration`, `@Bean`
+
+## Endpoints
+
+## How to run
+
+1. Test running services
+
+```bash
+lsof -i :8081
+```
+
+2 Run service with test profile. We'll see the CSRF Filter in the logs
+```bash
+mvn clean install spring-boot:run
+```
 
 ## References
 
+### Context
+
+- [The World Is Not Enough (song)](https://en.wikipedia.org/wiki/The_World_Is_Not_Enough_(song))
+
+<div align="center">
+      <a title="Shirley Manson - The World Is Not Enough" href="https://www.youtube.com/watch?v=VpK2Wn-1jMQ">
+     <img 
+          src="https://img.youtube.com/vi/VpK2Wn-1jMQ/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 ### Online
 
+- [SPRING BOOT AUTO CONFIGURATION](https://jaxlondon.com/blog/spring-boot-auto-configuration/)
+- [Custom Starter with Spring Boot](https://www.javadevjournal.com/spring-boot/spring-boot-custom-starter/)
+- [@PreAuthorize and @PostAuthorize in Spring Security](https://www.concretepage.com/spring/spring-security/preauthorize-postauthorize-in-spring-security)
+- [9.5. Security Filters](https://docs.spring.io/spring-security/site/docs/5.3.3.BUILD-SNAPSHOT/reference/html5/#servlet-security-filters)
+- [Spring Security Filters Chain](https://www.javadevjournal.com/spring-security/spring-security-filters/)
+- [Spring JDBC - ResultSetExtractor Interface](https://www.tutorialspoint.com/springjdbc/springjdbc_resultsetextractor.htm)
+- [Accessing Relational Data using JDBC with Spring](https://spring.io/guides/gs/relational-data-access/)
+- [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)
 - [Custom Container Configuration in Spring Boot 2](https://www.javaprogramto.com/2020/04/spring-boot-embeddedservletcontainercustomizer-configurableembeddedservletcontainer.html)
 - [Spring 4 REST + CORS Integration using @CrossOrigin Annotation + XML + Filter Example](https://www.concretepage.com/spring-4/spring-4-rest-cors-integration-using-crossorigin-annotation-xml-filter-example)
 - [How Does Spring @Transactional Really Work?](https://dzone.com/articles/how-does-spring-transactional)
