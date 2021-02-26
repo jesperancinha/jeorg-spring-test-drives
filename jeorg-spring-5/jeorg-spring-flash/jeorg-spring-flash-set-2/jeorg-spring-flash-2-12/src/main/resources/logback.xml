@@ -1,0 +1,10 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>SpringFlash212Launcher=> Just a little bit more =>%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</pattern>
+        </encoder>
+    </appender>=
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
