@@ -17,6 +17,18 @@ sudo ln -s /usr/lib/libssl.dylib /usr/local/opt/openssl/lib/libssl.1.0.0.dylib
 sudo ln -s /usr/lib/libcrypto.dylib /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib
 ```
 
+```bash
+sudo service mysql start.
+sudo /etc/init.d/mysql start.
+sudo systemctl start mysqld.
+mysqld
+```
+
+```sql
+create database db;
+create user 'sa'@'%' identified by 'sa';
+grant all on db.* to 'sa'@'%';
+```
 1. Test running services
 
 ```bash
@@ -42,6 +54,9 @@ curl -X POST http://localhost:8081/create --header "Content-Type: application/js
 
 ### Online
 
+- [Configuring Spring Boot for MariaDB](https://springframework.guru/configuring-spring-boot-for-mariadb/)
+- [Resetting the MySQL root password](https://www.a2hosting.com/kb/developer-corner/mysql/reset-mysql-root-password)
+- [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
 - [Spring Framework - Converter Examples](https://www.logicbig.com/how-to/code-snippets/jcode-spring-framework-converter.html)
 - [Spring transaction isolation level tutorial](https://www.byteslounge.com/tutorials/spring-transaction-isolation-tutorial)
 - [Transaction Isolation Levels (ODBC)](https://docs.microsoft.com/en-us/sql/odbc/reference/develop-app/transaction-isolation-levels?view=sql-server-ver15)

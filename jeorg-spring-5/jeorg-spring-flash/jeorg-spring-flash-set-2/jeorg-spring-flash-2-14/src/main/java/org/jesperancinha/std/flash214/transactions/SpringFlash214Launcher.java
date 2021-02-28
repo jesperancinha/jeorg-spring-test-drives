@@ -20,8 +20,8 @@ public class SpringFlash214Launcher implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        jdbcTemplate.execute("SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION LEVEL READ UNCOMMITTED");
-        jdbcTemplate.execute("SET LOCK_MODE 0");
+//        jdbcTemplate.execute("SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION LEVEL READ UNCOMMITTED");
+//        jdbcTemplate.execute("SET LOCK_MODE 0");
         jdbcTemplate.execute("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED");
     }
 }
