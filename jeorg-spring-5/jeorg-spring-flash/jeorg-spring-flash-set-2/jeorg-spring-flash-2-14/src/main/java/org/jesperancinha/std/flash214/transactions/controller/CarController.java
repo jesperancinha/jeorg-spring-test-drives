@@ -44,7 +44,7 @@ public class CarController {
     @PostMapping(path = "/create",
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public Car createCar(@RequestBody Car car) {
-        final ExecutorService executorService = Executors.newFixedThreadPool(2);
+        final ExecutorService executorService = Executors.newFixedThreadPool(10);
         final Callable<Car> taskCreateCar = () -> {
             try {
                 final Car car1 = carReadUncommittedDAO.createCar(car);
@@ -61,11 +61,17 @@ public class CarController {
                 RED.printThrowableAndExit(e);
             }
             final Car carById = carReadUncommittedDAO.getCarById(1L);
-
             final List<Car> allCars = carReadUncommittedDAO.getAllCars();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                RED.printThrowableAndExit(e);
+            }
             return carById;
         };
         executorService.submit(taskCreateCar);
+        executorService.submit(taskDirtyReadCar);
+        executorService.submit(taskDirtyReadCar);
         executorService.submit(taskDirtyReadCar);
         Car call1 = null;
         try {
@@ -83,7 +89,7 @@ public class CarController {
         GREEN.printGenericLn(call2);
         executorService.shutdown();
         try {
-            final boolean b = executorService.awaitTermination(10, TimeUnit.SECONDS);
+            final boolean b = executorService.awaitTermination(20, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
