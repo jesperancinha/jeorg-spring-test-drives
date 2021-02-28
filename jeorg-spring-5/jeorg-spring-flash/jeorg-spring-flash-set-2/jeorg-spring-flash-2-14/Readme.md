@@ -21,12 +21,24 @@ lsof -i :8081
 mvn clean install spring-boot:run
 ```
 
+3. Test cases
+
+```bash
+curl -X POST http://localhost:8081/create --header "Content-Type: application/json"  --data '{"model":"Phantom II", "brand":"Rolls-Royce", "year":"1929", "movieAppearances":["Indiana Jones And The Last Cruzade","The Sorcerer''s Apprentice"]}'
+```
+
 ## References
 
 ### Context
 
+- [Rolls-Royce Phantom II](https://en.wikipedia.org/wiki/Rolls-Royce_Phantom_II)
+
 ### Online
 
+- [Spring Framework - Converter Examples](https://www.logicbig.com/how-to/code-snippets/jcode-spring-framework-converter.html)
+- [Spring transaction isolation level tutorial](https://www.byteslounge.com/tutorials/spring-transaction-isolation-tutorial)
+- [Transaction Isolation Levels (ODBC)](https://docs.microsoft.com/en-us/sql/odbc/reference/develop-app/transaction-isolation-levels?view=sql-server-ver15)
+- [A beginner’s guide to Phantom Read anomaly](https://vladmihalcea.com/phantom-read/)
 - [Spring Boot @DataJpaTest tutorial](https://zetcode.com/springboot/datajpatest/)
 - [Spring boot log4j2.xml example](https://howtodoinjava.com/spring-boot2/logging/spring-boot-log4j2-config/)
 - [27. Logging](https://docs.spring.io/spring-boot/docs/2.1.18.RELEASE/reference/html/boot-features-logging.html)
