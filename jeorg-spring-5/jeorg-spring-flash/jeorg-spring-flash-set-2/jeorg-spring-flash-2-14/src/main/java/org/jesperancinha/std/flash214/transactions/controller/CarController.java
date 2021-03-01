@@ -206,6 +206,54 @@ public class CarController {
             RED.printThrowableAndExit(e);
         }
         return carRepeatableReadDAO.getCarById(1L);
-
+    }
+    @PostMapping(path = "/create/serializable",
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    public Car createCarSerializable(
+            @RequestBody
+                    Car car) {
+        jdbcTemplate.execute("DELETE FROM CAR;");
+        final ExecutorService executorService = Executors.newFixedThreadPool(2);
+        final Callable<Car> taskCreateCar = () -> {
+            List<Long> idsToRemove = new ArrayList<>();
+            for (int i = 0; i < 10; i++) {
+                final Car car1 = carSerializableDAO.createCar(car.clone());
+                idsToRemove.add(car1.getId());
+            }
+            for (int i = 0; i < 10; i++) {
+                carSerializableDAO.deleteCarById(idsToRemove.get(i));
+            }
+            carSerializableDAO.createCar(car.clone());
+            final Car car1 = carSerializableDAO.createCar(car.clone());
+            ORANGE.printGenericLn(car);
+            return car1;
+        };
+        final Callable<Car> taskDirtyReadCar = () -> {
+            final List<Car> allCars = carSerializableDAO.getAllCars();
+            return allCars.get(0);
+        };
+        executorService.submit(taskCreateCar);
+        executorService.submit(taskDirtyReadCar);
+        Car call1 = null;
+        try {
+            call1 = taskCreateCar.call();
+        } catch (Exception exception) {
+            RED.printThrowableAndExit(exception);
+        }
+        Car call2 = null;
+        try {
+            call2 = taskDirtyReadCar.call();
+        } catch (Exception exception) {
+            RED.printThrowableAndExit(exception);
+        }
+        GREEN.printGenericLn(call1);
+        GREEN.printGenericLn(call2);
+        executorService.shutdown();
+        try {
+            final boolean b = executorService.awaitTermination(20, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            RED.printThrowableAndExit(e);
+        }
+        return carSerializableDAO.getCarById(1L);
     }
 }
