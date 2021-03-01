@@ -15,7 +15,6 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Service
-@Transactional(isolation = Isolation.READ_COMMITTED)
 public class CarReadCommittedDAO implements CarDAO {
 
     private final CarRepository carRepository;

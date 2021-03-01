@@ -113,6 +113,7 @@ mvn clean install spring-boot:run
 ```bash
 curl -X POST http://localhost:8081/create/uncommitted --header "Content-Type: application/json"  --data '{"model":"Phantom II", "brand":"Rolls-Royce", "year":"1929", "movieAppearances":["Indiana Jones And The Last Cruzade","The Sorcerer''s Apprentice"]}'
 curl -X POST http://localhost:8081/create/committed --header "Content-Type: application/json"  --data '{"model":"Firebird Trans Am", "brand":"Pontiac", "year":"1982", "movieAppearances":["Knight Rider", "MCQ", "The Hunter"]}'
+curl -X POST http://localhost:8081/create/repeatable --header "Content-Type: application/json"  --data '{"model":"Firebird Trans Am", "brand":"Pontiac", "year":"1982", "movieAppearances":["Knight Rider", "MCQ", "The Hunter"]}'
 ```
 
 ## References

@@ -24,5 +24,6 @@ public class SpringFlash214Launcher implements CommandLineRunner {
 //        jdbcTemplate.execute("SET LOCK_MODE 0");
         jdbcTemplate.execute("SET GLOBAL TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;");
         jdbcTemplate.execute("SET SESSION tx_isolation='READ-UNCOMMITTED';");
+        jdbcTemplate.execute("DELETE FROM CAR;");
     }
 }

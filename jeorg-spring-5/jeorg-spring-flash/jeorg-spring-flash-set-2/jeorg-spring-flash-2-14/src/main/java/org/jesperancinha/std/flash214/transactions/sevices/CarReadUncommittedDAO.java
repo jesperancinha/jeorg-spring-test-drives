@@ -14,7 +14,6 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Service
-@Transactional
 public class CarReadUncommittedDAO implements CarDAO {
 
     private final CarRepository carRepository;
@@ -23,8 +22,6 @@ public class CarReadUncommittedDAO implements CarDAO {
         this.carRepository = carRepository;
     }
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.READ_UNCOMMITTED,
-            rollbackFor = RuntimeException.class)
     @Override
     public Car createCar(Car car) {
         final Car save = this.carRepository.save(car);
