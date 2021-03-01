@@ -10,25 +10,93 @@ Topics
 
 ## How to run
 
-```bash
-brew install OpenSSL
-brew upgrade openssl@1.1
-sudo ln -s /usr/lib/libssl.dylib /usr/local/opt/openssl/lib/libssl.1.0.0.dylib
-sudo ln -s /usr/lib/libcrypto.dylib /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib
-```
+### Setting up database (live installation)
+
+- MAC-OS installation
 
 ```bash
-sudo service mysql start.
-sudo /etc/init.d/mysql start.
-sudo systemctl start mysqld.
-mysqld
+brew install mariadb;
 ```
+
+- Database setup
 
 ```sql
-create database db;
-create user 'sa'@'%' identified by 'sa';
-grant all on db.* to 'sa'@'%';
+CREATE database db;
+SHOW DATABASES;
+CREATE USER sa@localhost IDENTIFIED BY 'sa';
+GRANT ALL PRIVILEGES ON *.* TO 'sa'@localhost IDENTIFIED BY 'sa';
+FLUSH PRIVILEGES;
+SHOW GRANTS for sa@localhost;
+SELECT @@GLOBAL.tx_isolation, @@tx_isolation;
+SET GLOBAL TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SET SESSION tx_isolation='READ-UNCOMMITTED';
+SELECT @@GLOBAL.tx_isolation, @@tx_isolation;
 ```
+
+#### Maria DB Socket issue:
+
+> ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2 "No such file or directory")
+
+```bash
+brew remove mysql
+brew remove mariadb
+brew cleanup
+sudo rm -rf /usr/local/var/mysql
+```
+
+A more extended solution: [Homebrew MariaDB/MySQL socket issues](https://laracasts.com/discuss/channels/servers/homebrew-mariadbmysql-socket-issues).
+
+- Configuration
+
+```sql
+SELECT * FROM INFORMATION_SCHEMA.GLOBAL_VARIABLES WHERE VARIABLE_VALUE LIKE '%\/%';
+SHOW GLOBAL VARIABLES LIKE 'PORT';
+```
+
+### Dirty Read Example
+
+Via spring annotations, it seems difficult to get dirty reads to work.
+
+1. After setting MariaDB on your machine, run spring with:
+
+```bash
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
+```
+
+2. Then run:
+
+```bash
+mysql
+```
+
+3. At the command mysql> prompt:
+
+Transaction 1:
+
+```sql
+START TRANSACTION;
+INSERT INTO car (id, model, brand, year, movie_appearances) VALUES (1,"Phantom II", "Rolls-royce", 1929,"Indiana Jones And The Last Cruzade");
+
+-- Run other transaction here
+
+ROLLBACK;
+COMMIT;
+```
+
+4. At another command mysql> prompt:
+
+
+Transaction 2:
+
+```sql
+SELECT * from car;
+```
+
+If you run rollback and then run the select again, you'll notice that you can always read.
+This is what dirty read is about. Reading all the transaction progress without performing a commit from another transaction.
+
+### Regular tests
+
 1. Test running services
 
 ```bash
@@ -54,6 +122,8 @@ curl -X POST http://localhost:8081/create --header "Content-Type: application/js
 
 ### Online
 
+- [Homebrew MariaDB/MySQL socket issues](https://laracasts.com/discuss/channels/servers/homebrew-mariadbmysql-socket-issues)
+- [Installing MariaDB Server on macOS Using Homebrew](https://mariadb.com/kb/en/installing-mariadb-on-macos-using-homebrew/)
 - [Configuring Spring Boot for MariaDB](https://springframework.guru/configuring-spring-boot-for-mariadb/)
 - [Resetting the MySQL root password](https://www.a2hosting.com/kb/developer-corner/mysql/reset-mysql-root-password)
 - [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)

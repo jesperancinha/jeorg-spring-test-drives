@@ -23,7 +23,7 @@ public class CarReadUncommittedDAO {
         this.carRepository = carRepository;
     }
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW,
+    @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.READ_UNCOMMITTED,
             rollbackFor = RuntimeException.class)
     public Car createCar(Car car) {
         final Car save = this.carRepository.save(car);
@@ -44,11 +44,6 @@ public class CarReadUncommittedDAO {
     @Transactional(propagation = Propagation.REQUIRES_NEW,
             isolation = Isolation.READ_UNCOMMITTED)
     public Car getCarById(Long id) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            RED.printThrowableAndExit(e);
-        }
         final Car car = carRepository.findById(id).orElse(null);
         YELLOW.printGenericLn("This is the car I get -> %s", car);
         return car;
