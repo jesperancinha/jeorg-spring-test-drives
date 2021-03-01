@@ -30,3 +30,7 @@ Snap.**
 
 # Cookies
 cookies.txt
+
+# Logs
+tmlog.lck
+tmlog8.log

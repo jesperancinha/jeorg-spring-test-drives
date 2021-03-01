@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface AwardDao {
 
-
     void createTables();
 
     Award create(String artist, String award, LocalDateTime awardDateTime);
