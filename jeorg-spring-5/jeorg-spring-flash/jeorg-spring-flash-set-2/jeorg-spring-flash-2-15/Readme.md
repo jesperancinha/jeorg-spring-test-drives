@@ -1,97 +1,78 @@
-# spring-5 - Spring 5
+# spring-flash-2-15
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/spring-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/spring-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/spring-test-drives.svg)](#)
+## Introduction
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/manual/jofisaes/spring-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/spring-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-spring-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/spring-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/spring-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/spring-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/spring-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/spring-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/wksvhmqaq0sd8505?svg=true)](https://ci.appveyor.com/project/jesperancinha/spring-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/spring-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/spring-test-drives)
+Exploring the BeanPostProcessor in Spring
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/spring-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/spring-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/spring-test-drives.svg)](#)
+Topics
 
----
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png "Spring Webfllux")](https://spring.io/projects/spring-boot)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png "Spring Reactor")](https://spring.io/reactive)
+1. `BeanPostProcessor`, `postProcessAfterInitialization`, `postProcessBeforeInitialization`
 
-## Description
+## Endpoints
 
-SPRING 5 study project.
+1. [http://localhost:8081](http://localhost:8081)
 
-This project is intended as a study tool for Spring version 5.
+## References
 
-I'm using JDK version 11.0.9.hs-adpt for all of these tests.
+### Context
 
-```bash
-sdk install java 11.0.9.hs-adpt
-sdk use 11.0.9.hs-adpt 
-```
-
-## Contents:
-
-1. [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
-2. [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
-3. [jeorg-spring-flash](./jeorg-spring-flash) - ⚡️ Fast track modules about Spring Boot 5
-   1. [jeorg-spring-flash-set-1](./jeorg-spring-flash/jeorg-spring-flash-set-1) - ⚡️ Fast track modules about Spring Boot 5 - Set 1 with 20 modules
-       1. [jeorg-spring-flash-1](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
-       2. [jeorg-spring-flash-2](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
-       3. [jeorg-spring-flash-3](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-3) - ⛴ JDBC with boats
-       4. [jeorg-spring-flash-4](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-4) - 🪄 Spring param converters
-       5. [jeorg-spring-flash-5](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-5) - 🥔 Sequence generator with potatoes
-       6. [jeorg-spring-flash-6](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-6) - 🧮 Keep the math in the Session
-       7. [jeorg-spring-flash-7](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
-       8. [jeorg-spring-flash-8](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-8) - 🎄 Xmas message with simple JSP in Spring
-       9. [jeorg-spring-flash-9](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-9) - 🤖 A very simple bot with SockJS support
-       10. [jeorg-spring-flash-10](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-10) - 🛑 Error messages
-       11. [jeorg-spring-flash-11](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-11) - 👔 Form parameters
-       12. [jeorg-spring-flash-12](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-12) - 🔑 CORS explained via annotations
-       13. [jeorg-spring-flash-13](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-13) - 🗄 GZipping Static Resources
-       14. [jeorg-spring-flash-14](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-14) - 🏠 Health Indicators
-       15. [jeorg-spring-flash-15](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-15) - 🧑‍🎤 Type safe configuration
-       16. [jeorg-spring-flash-16](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-16) - 🚨 Authentication
-       17. [jeorg-spring-flash-17](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-17) - 🧞‍♂️ User details manager
-       18. [jeorg-spring-flash-18](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-18) - ✂️ AOP Throwables
-       19. [jeorg-spring-flash-19](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-19) - 🎫 Transaction
-       20. [jeorg-spring-flash-20](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-20) - 🌏 CORS via XML
-   2. [jeorg-spring-flash-set-2](./jeorg-spring-flash/jeorg-spring-flash-set-2) - ⚡️ Fast track modules about Spring Boot 5 - Set 2 with 20 modules (coming soon...)
-      1. [jeorg-spring-flash-2-1](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-1) - 🕺🏻 Embedded Containers
-      2. [jeorg-spring-flash-2-2](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-2) - 🍷 InterceptorRegistry
-      3. [jeorg-spring-flash-2-3](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-3) - 🥂 XML interceptors
-      4. [jeorg-spring-flash-2-4](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-4) - 🧑🏻‍⚖️ JdbcTemplate
-      5. [jeorg-spring-flash-2-5](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-5) - 🧮️ JPA Operators
-      6. [jeorg-spring-flash-2-6](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-6) - 🐚 RowMapper and ResultSetExtractor
-      7. [jeorg-spring-flash-2-7](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-7) - 🙅🏽‍♂️ management.endpoint
-      8. [jeorg-spring-flash-2-8](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-8) - 🦅 SecurityFilterChain
-      9. [jeorg-spring-flash-2-9](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-9) - 💍 EnableGlobalMethodSecurity, PreAuthorize and PostAuthorize
-      10. [jeorg-spring-flash-2-10](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-10) - 🪐 spring.factories
-      11. [jeorg-spring-flash-2-11](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-11) - 🍢 Logging with Log4j2
-      12. [jeorg-spring-flash-2-12](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-12) - 🍡 Logging with LogBack
-      13. [jeorg-spring-flash-2-13](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-13) - 🧁 Database JPA respositories
-      14. [jeorg-spring-flash-2-14](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-14) - 🚖 🏎 Database transactions
-      14. [jeorg-spring-flash-2-15](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-15) - 🧀 BeanPostProcessor
-   
-4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
-    1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
-
-## References:
+- [Camembert](https://en.wikipedia.org/wiki/Camembert)
+- [Brie](https://en.wikipedia.org/wiki/Brie)
+- [São Jorge](https://en.wikipedia.org/wiki/S%C3%A3o_Jorge_cheese)
 
 ### Online
 
-- [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
-- [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
-- [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
-- [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
-- [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
+- [Spring - Bean Post Processors](https://www.tutorialspoint.com/spring/spring_bean_post_processors.htm)
+- [Homebrew MariaDB/MySQL socket issues](https://laracasts.com/discuss/channels/servers/homebrew-mariadbmysql-socket-issues)
+- [Installing MariaDB Server on macOS Using Homebrew](https://mariadb.com/kb/en/installing-mariadb-on-macos-using-homebrew/)
+- [Configuring Spring Boot for MariaDB](https://springframework.guru/configuring-spring-boot-for-mariadb/)
+- [Resetting the MySQL root password](https://www.a2hosting.com/kb/developer-corner/mysql/reset-mysql-root-password)
+- [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+- [Spring Framework - Converter Examples](https://www.logicbig.com/how-to/code-snippets/jcode-spring-framework-converter.html)
+- [Spring transaction isolation level tutorial](https://www.byteslounge.com/tutorials/spring-transaction-isolation-tutorial)
+- [Transaction Isolation Levels (ODBC)](https://docs.microsoft.com/en-us/sql/odbc/reference/develop-app/transaction-isolation-levels?view=sql-server-ver15)
+- [A beginner’s guide to Phantom Read anomaly](https://vladmihalcea.com/phantom-read/)
+- [Spring Boot @DataJpaTest tutorial](https://zetcode.com/springboot/datajpatest/)
+- [Spring boot log4j2.xml example](https://howtodoinjava.com/spring-boot2/logging/spring-boot-log4j2-config/)
+- [27. Logging](https://docs.spring.io/spring-boot/docs/2.1.18.RELEASE/reference/html/boot-features-logging.html)
+- [Chapter 3: Logback configuration](http://logback.qos.ch/manual/configuration.html)
+- [SPRING BOOT AUTO CONFIGURATION](https://jaxlondon.com/blog/spring-boot-auto-configuration/)
+- [Custom Starter with Spring Boot](https://www.javadevjournal.com/spring-boot/spring-boot-custom-starter/)
+- [@PreAuthorize and @PostAuthorize in Spring Security](https://www.concretepage.com/spring/spring-security/preauthorize-postauthorize-in-spring-security)
+- [9.5. Security Filters](https://docs.spring.io/spring-security/site/docs/5.3.3.BUILD-SNAPSHOT/reference/html5/#servlet-security-filters)
+- [Spring Security Filters Chain](https://www.javadevjournal.com/spring-security/spring-security-filters/)
+- [Spring JDBC - ResultSetExtractor Interface](https://www.tutorialspoint.com/springjdbc/springjdbc_resultsetextractor.htm)
+- [Accessing Relational Data using JDBC with Spring](https://spring.io/guides/gs/relational-data-access/)
+- [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)
+- [Custom Container Configuration in Spring Boot 2](https://www.javaprogramto.com/2020/04/spring-boot-embeddedservletcontainercustomizer-configurableembeddedservletcontainer.html)
+- [Spring 4 REST + CORS Integration using @CrossOrigin Annotation + XML + Filter Example](https://www.concretepage.com/spring-4/spring-4-rest-cors-integration-using-crossorigin-annotation-xml-filter-example)
+- [How Does Spring @Transactional Really Work?](https://dzone.com/articles/how-does-spring-transactional)
+- [Spring aop aspectJ pointcut expression examples](https://howtodoinjava.com/spring-aop/aspectj-pointcut-expressions/)
+- [Spring Boot AOP After Throwing Advice](https://www.javatpoint.com/spring-boot-aop-after-throwing-advice#:~:text=After%20throwing%20is%20an%20advice,implement%20the%20after%20throwing%20advice.)
+- [Part 5: Integrating Spring Security with Spring Boot Web](https://spr.com/part-5-integrating-spring-security-with-spring-boot-web/)
+- [Spring Security – JdbcUserDetailsManager Example | JDBC Authentication and Authorization](https://www.javainterviewpoint.com/spring-security-jdbcuserdetailsmanager-example/)
+- [Spring Security - Understanding AuthenticationProvider and creating a custom one](https://www.logicbig.com/tutorials/spring-framework/spring-security/custom-authentication-provider.html)
+- [Creating a Custom Login Form](https://docs.spring.io/spring-security/site/docs/4.2.20.RELEASE/guides/html5/form-javaconfig.html#obtaining-the-sample-project)
+- [How to use Custom DAO class in Spring Security for authentication and authorization](http://www.javaroots.com/2013/03/how-to-use-custom-dao-classe-in-spring.html)
+- [Spring Boot with H2 Database](https://howtodoinjava.com/spring-boot2/h2-database-example/)
+- [Spring Security: Authentication and Authorization In-Depth](https://www.marcobehler.com/guides/spring-security)
+- [Spring Boot @ConfigurationProperties example](https://mkyong.com/spring-boot/spring-boot-configurationproperties-example/)
+- [Spring Boot custom HealthIndicator](https://blog.jayway.com/2014/07/22/spring-boot-custom-healthindicator/)
+- [Spring Boot HealthIndicator by Example](https://stackoverflow.com/questions/47935369/spring-boot-healthindicator-by-example)
+- [Spring Boot static resource processing](https://www.programmersought.com/article/2664508486/)
+- [Spring form tag : ModelAttribute VS CommandName](http://mwakram.blogspot.com/2014/05/spring-form-tag-modelattribute-vs.html)
+- [Spring @RequestMapping Annotation Examples](https://howtodoinjava.com/spring-mvc/spring-mvc-requestmapping-annotation-examples/)
+- [Exception Handling in Spring MVC](https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc)
+- [Streaming Text Oriented Messaging Protocol](https://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol)
+- [Using STOMP JS](https://stomp-js.github.io/stomp-websocket/codo/extra/docs-src/Usage.md.html)
+- [Spring Boot WebSocket STOMP SockJS Example](https://www.javaguides.net/2019/06/spring-boot-websocket-stomp-sockjs-example.html)
+- [STOMP Protocol Specification, Version 1.2](https://stomp.github.io/stomp-specification-1.2.html#Abstract)
+- [26. WebSocket Support](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html)
+- [Spring Boot JSP View Resolver Example](https://howtodoinjava.com/spring-boot/spring-boot-jsp-view-example/)
+- [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
+- [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
+- [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
+- [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
 
 ### Books
 

@@ -33,5 +33,6 @@
         <module>jeorg-spring-flash-2-12</module>
         <module>jeorg-spring-flash-2-13</module>
         <module>jeorg-spring-flash-2-14</module>
+        <module>jeorg-spring-flash-2-15</module>
     </modules>
 </project>
