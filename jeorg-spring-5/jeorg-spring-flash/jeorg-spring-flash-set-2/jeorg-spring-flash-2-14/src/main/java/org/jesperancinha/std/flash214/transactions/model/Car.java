@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 @Entity
 @Table
-public class Car {
+public class Car{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -79,5 +79,14 @@ public class Car {
                 ", year=" + year +
                 ", movieAppearances=" + Arrays.toString(movieAppearances) +
                 '}';
+    }
+
+    public Car clone(){
+        final Car car = new Car();
+        car.setModel(this.model);
+        car.setBrand(this.brand);
+        car.setYear(this.year);
+        car.setMovieAppearances(this.movieAppearances);
+        return car;
     }
 }

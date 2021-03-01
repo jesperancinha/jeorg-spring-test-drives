@@ -111,7 +111,8 @@ mvn clean install spring-boot:run
 3. Test cases
 
 ```bash
-curl -X POST http://localhost:8081/create --header "Content-Type: application/json"  --data '{"model":"Phantom II", "brand":"Rolls-Royce", "year":"1929", "movieAppearances":["Indiana Jones And The Last Cruzade","The Sorcerer''s Apprentice"]}'
+curl -X POST http://localhost:8081/create/uncommitted --header "Content-Type: application/json"  --data '{"model":"Phantom II", "brand":"Rolls-Royce", "year":"1929", "movieAppearances":["Indiana Jones And The Last Cruzade","The Sorcerer''s Apprentice"]}'
+curl -X POST http://localhost:8081/create/committed --header "Content-Type: application/json"  --data '{"model":"Firebird Trans Am", "brand":"Pontiac", "year":"1982", "movieAppearances":["Knight Rider", "MCQ", "The Hunter"]}'
 ```
 
 ## References
@@ -119,6 +120,34 @@ curl -X POST http://localhost:8081/create --header "Content-Type: application/js
 ### Context
 
 - [Rolls-Royce Phantom II](https://en.wikipedia.org/wiki/Rolls-Royce_Phantom_II)
+- [Pontiac Firebird Trans Am](https://en.wikipedia.org/wiki/Pontiac_Firebird#Third_generation_(1982%E2%80%931992))
+
+<div align="center">
+      <a title="Knight Rider - Original Show Intro | NBC Classics" href="https://www.youtube.com/watch?v=oNyXYPhnUIs">
+     <img 
+          src="https://img.youtube.com/vi/oNyXYPhnUIs/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Indiana Jones and the Last Crusade" href="https://www.youtube.com/watch?v=N3q_PubAERk">
+     <img 
+          src="https://img.youtube.com/vi/N3q_PubAERk/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a title="The Hunter" href="https://www.youtube.com/watch?v=ma-xYpr-C-o">
+     <img 
+          src="https://img.youtube.com/vi/ma-xYpr-C-o/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="MCQ" href="https://www.youtube.com/watch?v=qsda4nKkB6A">
+     <img 
+          src="https://img.youtube.com/vi/qsda4nKkB6A/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 
 ### Online
 

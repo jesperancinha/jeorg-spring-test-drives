@@ -15,7 +15,7 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Service
 @Transactional
-public class CarReadUncommittedDAO {
+public class CarReadUncommittedDAO implements CarDAO {
 
     private final CarRepository carRepository;
 
@@ -25,6 +25,7 @@ public class CarReadUncommittedDAO {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.READ_UNCOMMITTED,
             rollbackFor = RuntimeException.class)
+    @Override
     public Car createCar(Car car) {
         final Car save = this.carRepository.save(car);
         try {
@@ -43,12 +44,14 @@ public class CarReadUncommittedDAO {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW,
             isolation = Isolation.READ_UNCOMMITTED)
+    @Override
     public Car getCarById(Long id) {
         final Car car = carRepository.findById(id).orElse(null);
         YELLOW.printGenericLn("This is the car I get -> %s", car);
         return car;
     }
 
+    @Override
     public List<Car> getAllCars() {
         try {
             Thread.sleep(1000);
@@ -58,5 +61,11 @@ public class CarReadUncommittedDAO {
         final List<Car> all = carRepository.findAll();
         YELLOW.printGenericLn("These are all cars -> %s", all);
         return all;
+    }
+
+    @Override
+    public boolean deleteCarById(Long id){
+        carRepository.deleteById(id);
+        return true;
     }
 }
