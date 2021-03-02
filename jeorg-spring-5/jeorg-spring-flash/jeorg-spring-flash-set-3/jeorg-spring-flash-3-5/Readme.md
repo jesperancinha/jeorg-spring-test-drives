@@ -1,48 +1,32 @@
-# spring-flash-3-4
+# spring-flash-3-5
 
 ## Introduction
 
 Exploring AnnotationConfigWebApplicationContext to load annotated resources in Spring
-(The old fashioned way)
+
+Please look on exercise in [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2), on other ways to use Advices.
 
 Topics:
 
-1. `AnnotationConfigWebApplicationContext`
-
-## Installation
-
-This project runs Spring 5 on Jetty and not Spring-Boot
-
-To make it run, please run with Jetty:
-
-```bash
-mvn clean install jetty:run
-```
-
-## Endpoints
-
-1. [http://localhost:8080/jeorg-spring-flash-3-4/carpenters/](http://localhost:8080/jeorg-spring-flash-3-4/carpenters)
-
-```bash
-curl http://localhost:8080/jeorg-spring-flash-3-4/carpenters
-```
+1. `MethodBeforeAdvice`, `ProxyFactory`, `setTarget`, `addAdvice`
 
 ## References
 
 ### Context
 
-- [The Carpenters](https://en.wikipedia.org/wiki/The_Carpenters)
+- [The NeverEnding Story](https://en.wikipedia.org/wiki/The_NeverEnding_Story_(film))
 
 <div align="center">
-      <a title="Top Of The World" href="https://www.youtube.com/watch?v=dewlH6HSDzk">
+      <a title="The NeverEnding Story (1984) Official Trailer - Childhood Fantasy Movie HD" href="https://www.youtube.com/watch?v=UeFni9dOv7c">
      <img 
-          src="https://img.youtube.com/vi/dewlH6HSDzk/0.jpg" 
+          src="https://img.youtube.com/vi/UeFni9dOv7c/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
 ### Online
 
+- [Secure Your Method Using AOP](https://dzone.com/articles/secure-your-method-using-aop)
 - [tbeauvais/example-spring-mvc-app](https://github.com/tbeauvais/example-spring-mvc-app)
 - [Spring InitializingBean and DisposableBean example](https://mkyong.com/spring/spring-initializingbean-and-disposablebean-example/)
 - [Spring @MatrixVariable at specific position in a URL](https://roytuts.com/spring-matrixvariable-at-specific-position-in-a-url/)
