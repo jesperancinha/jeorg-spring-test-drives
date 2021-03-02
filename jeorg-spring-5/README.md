@@ -78,7 +78,12 @@ sdk use 11.0.9.hs-adpt
       12. [jeorg-spring-flash-2-12](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-12) - 🍡 Logging with LogBack
       13. [jeorg-spring-flash-2-13](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-13) - 🧁 Database JPA respositories
       14. [jeorg-spring-flash-2-14](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-14) - 🚖 🏎 Database transactions
-      14. [jeorg-spring-flash-2-15](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-15) - 🧀 BeanPostProcessor
+      15. [jeorg-spring-flash-2-15](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-15) - 🧀 BeanPostProcessor
+      16. [jeorg-spring-flash-2-16](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-16) - 👩🏻‍🌾 PlatformTransactionManager
+      17. [jeorg-spring-flash-2-17](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-17) - 🔮 JtaTransactionManager
+      18. [jeorg-spring-flash-2-18](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-18) - 👥 Profile
+      19. [jeorg-spring-flash-2-19](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-19) - 🍃 Bean
+      20. [jeorg-spring-flash-2-20](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-20) - 7️⃣ PathVariable, MatrixVariable, RequestHeader, RequestParam
    
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
