@@ -1,39 +1,30 @@
-# spring-flash-2-20
+# spring-flash-3-1
 
 ## Introduction
 
-Exploring REST params in Spring
+Exploring Bean Initialization in Spring
 
 Topics:
 
-1. `@PathVariable`, `@MatrixVariable`, `@RequestHeader`, `@RequestParam`
-
-## Endpoints
-
-In this exercise we will see different params and also test a bit of history regarding the 7 capital sins described in christian studies throughout history.
-
-```bash
-curl -X POST "http://localhost:8081/matrix/wow;sin1=Lust;sin2=Gluttony;sin3=Greed;sin4=Sloth;sin5=Wrath;sin6=Envy;sin7=Pride"
-curl -X POST -H "sin5: Wrath" -H "sin6: Envy" -H "sin7: Pride" "http://localhost:8081/request/Lust/Gluttony?sin3=Greed&sin4=Sloth"
-```
+1. `destroy`, `afterPropertiesSet`, `DisposableBean`, `InitializingBean`
 
 ## References
 
 ### Context
 
-- [Seven deadly sins](https://en.wikipedia.org/wiki/Seven_deadly_sins)
-- [Seven (1995 film)](https://en.wikipedia.org/wiki/Seven_(1995_film))
+- [Richard Thompson](https://en.wikipedia.org/wiki/Richard_Thompson_(musician))
 
 <div align="center">
-      <a title="Se7en (1995) Official Trailer - Brad Pitt, Morgan Freeman Movie HD" href="https://www.youtube.com/watch?v=znmZoVkCjpI">
+      <a title="Read About Love" href="https://www.youtube.com/watch?v=XYiZY3qC8IQ">
      <img 
-          src="https://img.youtube.com/vi/znmZoVkCjpI/0.jpg" 
+          src="https://img.youtube.com/vi/XYiZY3qC8IQ/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
 ### Online
 
+- [Spring InitializingBean and DisposableBean example](https://mkyong.com/spring/spring-initializingbean-and-disposablebean-example/)
 - [Spring @MatrixVariable at specific position in a URL](https://roytuts.com/spring-matrixvariable-at-specific-position-in-a-url/)
 - [Atomikos — multi db transaction system](https://medium.com/swlh/atomikos-multi-db-transaction-system-c16168df22e5)
 - [Spring JTA multiple resource transactions in Tomcat with Atomikos example](https://www.byteslounge.com/tutorials/spring-jta-multiple-resource-transactions-in-tomcat-with-atomikos-example)

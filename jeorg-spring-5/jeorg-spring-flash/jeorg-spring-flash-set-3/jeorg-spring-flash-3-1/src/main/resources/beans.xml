@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="book" class="org.jesperancinha.std.flash31.bean.initialization.domain.Book">
+        <property name="cover" value="plane"/>
+        <property name="title" value="About Love"/>
+        <property name="author" value="A doctor with a german name"/>
+    </bean>
+
+    <bean id="bookService" class="org.jesperancinha.std.flash31.bean.initialization.domain.BookService">
+        <property name="book" ref="book"/>
+    </bean>
+</beans>
