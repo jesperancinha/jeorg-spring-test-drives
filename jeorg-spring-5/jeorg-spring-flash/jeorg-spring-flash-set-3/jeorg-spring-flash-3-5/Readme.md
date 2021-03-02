@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Exploring AnnotationConfigWebApplicationContext to load annotated resources in Spring
+Exploring MethodBeforeAdvice and ProxyFactory to protect methods in Spring
 
 Please look on exercise in [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2), on other ways to use Advices.
 

@@ -89,6 +89,7 @@ sdk use 11.0.9.hs-adpt
       2. [jeorg-spring-flash-3-2](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-2) - ⏰ RowCallbackHandler
       3. [jeorg-spring-flash-3-3](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-3) - 🧠 @Transactional Exception Handling
       4. [jeorg-spring-flash-3-4](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-4) - 🪵 AnnotationConfigWebApplicationContext
+      5. [jeorg-spring-flash-3-5](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-5) - 🗿 AnnotationConfigWebApplicationContext
 
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
