@@ -36,8 +36,11 @@ public class SpringFlash31Launcher {
         ConfigurableApplicationContext context =
                 new ClassPathXmlApplicationContext("beans.xml");
         final var bookService = (BookService) context.getBean("bookService");
+        final var bookService2 = (BookService) context.getBean("bookService2");
         CYAN.printGenericTitleLn("This is the %s instance", bookService.getClass());
         BLUE.printGenericLn("The instance has these contents %s", bookService);
+        CYAN.printGenericTitleLn("This is the %s instance", bookService2.getClass());
+        BLUE.printGenericLn("The instance 2 has these contents %s", bookService2);
         context.close();
     }
 }

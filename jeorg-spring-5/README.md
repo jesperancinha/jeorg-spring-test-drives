@@ -84,6 +84,7 @@ sdk use 11.0.9.hs-adpt
       18. [jeorg-spring-flash-2-18](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-18) - 👥 Profile
       19. [jeorg-spring-flash-2-19](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-19) - 🍃 Bean
       20. [jeorg-spring-flash-2-20](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-20) - 7️⃣ PathVariable, MatrixVariable, RequestHeader, RequestParam
+   3. [jeorg-spring-flash-set-3](./jeorg-spring-flash/jeorg-spring-flash-set-3) - ⚡️ Fast track modules about Spring Boot 5 - Set 3 with 20 modules (coming soon...)
    
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
