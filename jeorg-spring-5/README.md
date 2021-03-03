@@ -92,6 +92,7 @@ sdk use 11.0.9.hs-adpt
       5. [jeorg-spring-flash-3-5](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-5) - 🗿 AnnotationConfigWebApplicationContext
       6. [jeorg-spring-flash-3-6](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-6) - 🍅 CGLib
       7. [jeorg-spring-flash-3-7](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-7) - 🎸 @Aspect, @Before, @After, @Around
+      8. [jeorg-spring-flash-3-8](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-8) - 🤵🏻‍♂️ @ModelAttribute
 
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
