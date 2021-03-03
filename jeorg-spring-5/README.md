@@ -37,6 +37,19 @@ sdk install java 11.0.9.hs-adpt
 sdk use 11.0.9.hs-adpt 
 ```
 
+Many of the modules are using JSP's.
+For this you need to have your running path right.
+If you run spring boot from the command line, you should not see any issue:
+
+```bash
+mvn clean install spring-boot:run
+```
+
+On the other hand, if running through an IDE, the root path must be specified.
+In IntelliJ as an example:
+
+![alt img](./docs/workingdirectory.png)
+
 ## Contents:
 
 1. [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
@@ -95,6 +108,7 @@ sdk use 11.0.9.hs-adpt
       8. [jeorg-spring-flash-3-8](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-8) - 🤵🏻‍♂️ @ModelAttribute
       9. [jeorg-spring-flash-3-9](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-9) - 🍃️ Enhancer and private methods in CGLib
       10. [jeorg-spring-flash-3-10](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-10) - 🎸 Serialize and Deserialize with @JsonComponent
+      11. [jeorg-spring-flash-3-11](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-11) - 📟 mvcMatcher and antMatcher
 
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
