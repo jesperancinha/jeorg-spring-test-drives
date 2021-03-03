@@ -1,4 +1,4 @@
-package org.jesperancinha.std.flash38.cglib.enhancer;
+package org.jesperancinha.std.flash39.cglib.enhancer;
 
 public class Bean {
     private String message;

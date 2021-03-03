@@ -1,4 +1,4 @@
-package org.jesperancinha.std.flash38.cglib.enhancer;
+package org.jesperancinha.std.flash39.cglib.enhancer;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.console.consolerizer.ConsolerizerColor;

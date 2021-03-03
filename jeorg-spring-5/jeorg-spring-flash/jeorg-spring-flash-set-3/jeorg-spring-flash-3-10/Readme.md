@@ -1,24 +1,38 @@
-# spring-flash-3-9
+# spring-flash-3-10
 
 ## Introduction
 
-Exploring the CGLib in Spring
+Exploring the @JsonComponent in Spring
 
-1. [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2),
-2. [jeorg-spring-flash-3-5](../jeorg-spring-flash-3-5)
-3. [jeorg-spring-flash-3-6](../jeorg-spring-flash-3-6)
+Topics:
 
----
-1. `private`, `Enhancer`, `create`, `invoke`
+1. `Serialize`, `Deserialize`
 
+## Endpoint
+
+```bash
+curl -X POST -H 'Content-Type: application/json' http://localhost:8081/ --data '{"brand":"Fender","model":"75TH Anni Com Strat MN 2BB","value":"2400","currency":"EUR"}'
+```
 ## References
 
 ### Context
 
-- [Bean](https://en.wikipedia.org/wiki/Bean)
+<div align="center">
+      <a title="The Fender Stratocaster: A Short History" href="https://www.youtube.com/watch?v=mWFw23PLr-Y">
+     <img 
+          src="https://img.youtube.com/vi/mWFw23PLr-Y/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="HISTORY of Charvel / Jackson Guitars! Enjoy these PRE-FMIC Charvels from my personal collection!" href="https://www.youtube.com/watch?v=733ioo1hGmM">
+     <img 
+          src="https://img.youtube.com/vi/733ioo1hGmM/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ### Online
 
+- [Spring boot custom JSON Serialize – Deserialize Example](http://www.dailycodebuffer.com/spring-boot-custom-json-serialize-deserialize-example/)
 - [Spring @ModelAttribute Annotation Example](https://examples.javacodegeeks.com/enterprise-java/spring/spring-modelattribute-annotation-example/)
 - [Spring AOP AspectJ @Around Annotation Example](https://howtodoinjava.com/spring-aop/aspectj-around-annotation-example/)
 - [Spring AOP Tutorial](https://howtodoinjava.com/spring-aop-tutorial/)
