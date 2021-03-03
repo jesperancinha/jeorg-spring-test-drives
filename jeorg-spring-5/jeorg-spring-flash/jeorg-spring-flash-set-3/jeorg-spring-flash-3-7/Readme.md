@@ -1,28 +1,38 @@
-# spring-flash-3-6
+# spring-flash-3-7
 
 ## Introduction
 
-Exploring CGLib to create instance proxies in Spring
+Exploring AOP in Spring
 
-Please take a look at exercises:
+1. `@Aspect`, `@After`, `@Before`, `@Around`
 
-1. [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2), 
-2. [jeorg-spring-flash-3-5](../jeorg-spring-flash-3-5)
+## Endpoints
 
-on practical proxy examples.
+1. [http://localhost:8081](http://localhost:8081)
 
-Topics:
-
-1. `Enhancer`, `FixedValue`, `InvocationHandler`
+```bash
+curl -X POST -H 'Content-Type: application/json' http://localhost:8081 --data '{"artist":"Madonna", "show":"Sticky & Sweet Tour in 2008", "localDateTime":"2008-12-04T18:00:00.000000000"}' 
+curl -X POST -H 'Content-Type: application/json' http://localhost:8081/no-around --data '{"artist":"Madonna", "show":"Sticky & Sweet Tour in 2008", "localDateTime":"2008-12-04T18:00:00.000000000"}' 
+```
 
 ## References
 
 ### Context
 
-- [Tomato](https://en.wikipedia.org/wiki/Tomato)
+- [Miles Away (Madonna song)](https://en.wikipedia.org/wiki/Miles_Away_(Madonna_song))
+
+<div align="center">
+      <a title="Madonna - Miles Away (Live from the Sticky & Sweet Tour)" href="https://www.youtube.com/watch?v=ahaGFxOTx6A">
+     <img 
+          src="https://img.youtube.com/vi/ahaGFxOTx6A/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ### Online
 
+- [Spring AOP AspectJ @Around Annotation Example](https://howtodoinjava.com/spring-aop/aspectj-around-annotation-example/)
+- [Spring AOP Tutorial](https://howtodoinjava.com/spring-aop-tutorial/)
 - [CGLib: The Missing Manual](https://dzone.com/articles/cglib-missing-manual)
 - [Secure Your Method Using AOP](https://dzone.com/articles/secure-your-method-using-aop)
 - [tbeauvais/example-spring-mvc-app](https://github.com/tbeauvais/example-spring-mvc-app)
