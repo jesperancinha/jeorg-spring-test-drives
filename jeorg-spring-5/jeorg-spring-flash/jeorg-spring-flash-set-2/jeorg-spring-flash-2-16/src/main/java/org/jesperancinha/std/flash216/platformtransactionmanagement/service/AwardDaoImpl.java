@@ -26,7 +26,7 @@ public class AwardDaoImpl implements AwardDao {
     @Override
     public void createTables() {
         jdbcTemplate.execute("CREATE TABLE AWARDS(\n" +
-                "   ID   INT NOT NULL AUTO_INCREMENT,\n" +
+                "   ID INT NOT NULL AUTO_INCREMENT,\n" +
                 "   ARTIST VARCHAR(255) NOT NULL,\n" +
                 "   AWARD VARCHAR(255) NOT NULL,\n" +
                 "   AWARD_DATE TIMESTAMP NOT NULL,\n" +

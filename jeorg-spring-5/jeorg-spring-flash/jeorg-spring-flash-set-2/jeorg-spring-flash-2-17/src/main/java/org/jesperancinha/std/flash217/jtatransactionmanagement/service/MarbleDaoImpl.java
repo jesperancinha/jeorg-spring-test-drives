@@ -29,7 +29,7 @@ public class MarbleDaoImpl implements MarbleDao {
     @Override
     public void createTables() {
         jdbcTemplate.execute("CREATE TABLE MARBLES(\n" +
-                "   ID   INT NOT NULL AUTO_INCREMENT,\n" +
+                "   ID INT NOT NULL AUTO_INCREMENT,\n" +
                 "   NAME VARCHAR(255) NOT NULL,\n" +
                 "   COLOR VARCHAR(255) NOT NULL,\n" +
                 "   PRIMARY KEY (ID)\n" +
