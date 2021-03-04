@@ -115,6 +115,7 @@ In IntelliJ as an example:
       15. [jeorg-spring-flash-3-15](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-15) - 🏈 @Autowired and required
       16. [jeorg-spring-flash-3-16](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-16) - 💪 @RequestParam and required
       17. [jeorg-spring-flash-3-17](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-17) - 🏞 @Profile on methods
+      18. [jeorg-spring-flash-3-18](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-18) - 👑 BeanPostProcessor
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 
