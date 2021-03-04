@@ -110,6 +110,7 @@ In IntelliJ as an example:
       10. [jeorg-spring-flash-3-10](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-10) - 🎸 Serialize and Deserialize with @JsonComponent
       11. [jeorg-spring-flash-3-11](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-11) - 📟 mvcMatcher and antMatcher
       12. [jeorg-spring-flash-3-12](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-12) - 🎩 queryForList and queryForObject
+      13. [jeorg-spring-flash-3-13](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-13) - ❤️ BeanNameUrlHandlerMapping
 
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
