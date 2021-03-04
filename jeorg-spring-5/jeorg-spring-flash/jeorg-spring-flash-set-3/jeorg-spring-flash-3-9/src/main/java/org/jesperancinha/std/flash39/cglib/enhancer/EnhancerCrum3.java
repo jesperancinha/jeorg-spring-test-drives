@@ -1,7 +1,6 @@
 package org.jesperancinha.std.flash39.cglib.enhancer;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.InvocationHandler;
 
@@ -14,7 +13,7 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUni
 public class EnhancerCrum3 {
     public static void main(String[] args) {
 
-        Consolerizer.maxLineCharsGlobal= 200;
+        Consolerizer.maxLineCharsGlobal = 200;
         final var bean = new Bean();
         bean.setMessage("I'm a bean!");
 

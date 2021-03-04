@@ -24,6 +24,7 @@
         <module>jeorg-spring-flash-3-11</module>
         <module>jeorg-spring-flash-3-12</module>
         <module>jeorg-spring-flash-3-13</module>
+        <module>jeorg-spring-flash-3-14</module>
     </modules>
 
     <properties>
