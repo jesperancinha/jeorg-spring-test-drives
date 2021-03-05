@@ -10,9 +10,9 @@
     </user-service>
 
     <http auto-config="true">
-        <intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-        <intercept-url pattern="/" access="hasRole('ROLE_USER')"/>
-        <intercept-url pattern="/origin" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY" method="GET"/>
+        <intercept-url pattern="/" access="hasRole('ROLE_USER')" method="GET"/>
+        <intercept-url pattern="/origin" access="hasRole('ROLE_ADMIN')" method="GET"/>
     </http>
 
 </b:beans>
