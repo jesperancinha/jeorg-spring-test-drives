@@ -56,68 +56,8 @@ In IntelliJ as an example:
 2. [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
 3. [jeorg-spring-flash](./jeorg-spring-flash) - ⚡️ Fast track modules about Spring Boot 5
    1. [jeorg-spring-flash-set-1](./jeorg-spring-flash/jeorg-spring-flash-set-1) - ⚡️ Fast track modules about Spring Boot 5 - Set 1 with 20 modules
-       1. [jeorg-spring-flash-1](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
-       2. [jeorg-spring-flash-2](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
-       3. [jeorg-spring-flash-3](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-3) - ⛴ JDBC with boats
-       4. [jeorg-spring-flash-4](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-4) - 🪄 Spring param converters
-       5. [jeorg-spring-flash-5](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-5) - 🥔 Sequence generator with potatoes
-       6. [jeorg-spring-flash-6](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-6) - 🧮 Keep the math in the Session
-       7. [jeorg-spring-flash-7](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
-       8. [jeorg-spring-flash-8](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-8) - 🎄 Xmas message with simple JSP in Spring
-       9. [jeorg-spring-flash-9](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-9) - 🤖 A very simple bot with SockJS support
-       10. [jeorg-spring-flash-10](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-10) - 🛑 Error messages
-       11. [jeorg-spring-flash-11](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-11) - 👔 Form parameters
-       12. [jeorg-spring-flash-12](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-12) - 🔑 CORS explained via annotations
-       13. [jeorg-spring-flash-13](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-13) - 🗄 GZipping Static Resources
-       14. [jeorg-spring-flash-14](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-14) - 🏠 Health Indicators
-       15. [jeorg-spring-flash-15](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-15) - 🧑‍🎤 Type safe configuration
-       16. [jeorg-spring-flash-16](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-16) - 🚨 Authentication
-       17. [jeorg-spring-flash-17](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-17) - 🧞‍♂️ User details manager
-       18. [jeorg-spring-flash-18](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-18) - ✂️ AOP Throwables
-       19. [jeorg-spring-flash-19](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-19) - 🎫 Transaction
-       20. [jeorg-spring-flash-20](./jeorg-spring-flash/jeorg-spring-flash-set-1/jeorg-spring-flash-20) - 🌏 CORS via XML
    2. [jeorg-spring-flash-set-2](./jeorg-spring-flash/jeorg-spring-flash-set-2) - ⚡️ Fast track modules about Spring Boot 5 - Set 2 with 20 modules
-      1. [jeorg-spring-flash-2-1](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-1) - 🕺🏻 Embedded Containers
-      2. [jeorg-spring-flash-2-2](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-2) - 🍷 InterceptorRegistry
-      3. [jeorg-spring-flash-2-3](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-3) - 🥂 XML interceptors
-      4. [jeorg-spring-flash-2-4](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-4) - 🧑🏻‍⚖️ JdbcTemplate
-      5. [jeorg-spring-flash-2-5](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-5) - 🧮️ JPA Operators
-      6. [jeorg-spring-flash-2-6](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-6) - 🐚 RowMapper and ResultSetExtractor
-      7. [jeorg-spring-flash-2-7](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-7) - 🙅🏽‍♂️ management.endpoint
-      8. [jeorg-spring-flash-2-8](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-8) - 🦅 SecurityFilterChain
-      9. [jeorg-spring-flash-2-9](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-9) - 💍 EnableGlobalMethodSecurity, PreAuthorize and PostAuthorize
-      10. [jeorg-spring-flash-2-10](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-10) - 🪐 spring.factories
-      11. [jeorg-spring-flash-2-11](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-11) - 🍢 Logging with Log4j2
-      12. [jeorg-spring-flash-2-12](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-12) - 🍡 Logging with LogBack
-      13. [jeorg-spring-flash-2-13](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-13) - 🧁 Database JPA respositories
-      14. [jeorg-spring-flash-2-14](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-14) - 🚖 🏎 Database transactions
-      15. [jeorg-spring-flash-2-15](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-15) - 🧀 BeanPostProcessor
-      16. [jeorg-spring-flash-2-16](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-16) - 👩🏻‍🌾 PlatformTransactionManager
-      17. [jeorg-spring-flash-2-17](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-17) - 🔮 JtaTransactionManager
-      18. [jeorg-spring-flash-2-18](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-18) - 👥 Profile
-      19. [jeorg-spring-flash-2-19](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-19) - 🍃 Bean
-      20. [jeorg-spring-flash-2-20](./jeorg-spring-flash/jeorg-spring-flash-set-2/jeorg-spring-flash-2-20) - 7️⃣ PathVariable, MatrixVariable, RequestHeader, RequestParam
    3. [jeorg-spring-flash-set-3](./jeorg-spring-flash/jeorg-spring-flash-set-3) - ⚡️ Fast track modules about Spring Boot 5 - Set 3 with 20 modules (coming soon...)
-      1. [jeorg-spring-flash-3-1](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-1) - 📖 DisposableBean and InitializingBean
-      2. [jeorg-spring-flash-3-2](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-2) - ⏰ RowCallbackHandler
-      3. [jeorg-spring-flash-3-3](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-3) - 🧠 @Transactional Exception Handling
-      4. [jeorg-spring-flash-3-4](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-4) - 🪵 AnnotationConfigWebApplicationContext
-      5. [jeorg-spring-flash-3-5](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-5) - 🗿 AnnotationConfigWebApplicationContext
-      6. [jeorg-spring-flash-3-6](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-6) - 🍅 CGLib
-      7. [jeorg-spring-flash-3-7](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-7) - 🎸 @Aspect, @Before, @After, @Around
-      8. [jeorg-spring-flash-3-8](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-8) - 🤵🏻‍♂️ @ModelAttribute
-      9. [jeorg-spring-flash-3-9](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-9) - 🍃️ Enhancer and private methods in CGLib
-      10. [jeorg-spring-flash-3-10](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-10) - 🎸 Serialize and Deserialize with @JsonComponent
-      11. [jeorg-spring-flash-3-11](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-11) - 📟 mvcMatcher and antMatcher
-      12. [jeorg-spring-flash-3-12](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-12) - 🎩 queryForList and queryForObject
-      13. [jeorg-spring-flash-3-13](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-13) - ❤️ BeanNameUrlHandlerMapping
-      14. [jeorg-spring-flash-3-14](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-14) - 🍃️ Proxy and newProxyInstance
-      15. [jeorg-spring-flash-3-15](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-15) - 🏈 @Autowired and required
-      16. [jeorg-spring-flash-3-16](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-16) - 💪 @RequestParam and required
-      17. [jeorg-spring-flash-3-17](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-17) - 🏞 @Profile on methods
-      18. [jeorg-spring-flash-3-18](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-18) - 👑 BeanPostProcessor
-      19. [jeorg-spring-flash-3-19](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-19) - 🌾 static @Bean
-      20. [jeorg-spring-flash-3-20](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-20) - 🦢 @Required and RequiredAnnotationBeanPostProcessor
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 
