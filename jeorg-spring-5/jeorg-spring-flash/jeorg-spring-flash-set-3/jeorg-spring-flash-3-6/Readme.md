@@ -91,6 +91,7 @@ Topics:
 - Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
 - Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 - Kurniawan, B. Deck, P. (January 2015). <i>Servlet, JSP & Spring MVC</i>. (First Edition). Brainy Software
+- Long, J. (2020). <i>Reactive Spring</i>. (First Edition). Josh Long
 
 ## About me 👨🏽‍💻🚀
 

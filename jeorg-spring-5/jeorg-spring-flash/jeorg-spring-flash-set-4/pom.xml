@@ -12,6 +12,7 @@
     <artifactId>jeorg-spring-flash-set-4</artifactId>
     <modules>
         <module>jeorg-spring-flash-4-1</module>
+        <module>jeorg-spring-flash-4-2</module>
     </modules>
 
     <properties>
