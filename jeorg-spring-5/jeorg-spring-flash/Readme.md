@@ -7,6 +7,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 1. [jeorg-spring-flash-set-1](./jeorg-spring-flash-set-1) - Set 1 of 20 Flash modules
 2. [jeorg-spring-flash-set-2](./jeorg-spring-flash-set-2) - Set 2 of 20 Flash modules
 3. [jeorg-spring-flash-set-3](./jeorg-spring-flash-set-3) - Set 3 of 20 Flash modules
+4. [jeorg-spring-flash-set-4](./jeorg-spring-flash-set-4) - Set 3 of 20 Flash modules
 
 ## References
 
