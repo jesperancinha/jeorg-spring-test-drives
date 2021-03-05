@@ -117,6 +117,7 @@ In IntelliJ as an example:
       17. [jeorg-spring-flash-3-17](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-17) - 🏞 @Profile on methods
       18. [jeorg-spring-flash-3-18](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-18) - 👑 BeanPostProcessor
       19. [jeorg-spring-flash-3-19](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-19) - 🌾 static @Bean
+      20. [jeorg-spring-flash-3-20](./jeorg-spring-flash/jeorg-spring-flash-set-3/jeorg-spring-flash-3-20) - 🦢 @Required and RequiredAnnotationBeanPostProcessor
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
     1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 

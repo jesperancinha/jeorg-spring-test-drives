@@ -1,10 +1,10 @@
-# spring-flash-3-19
+# spring-flash-3-20
 
 ## Introduction
 
-Exploring static @Bean injection in Spring
+Exploring @Required in Spring
 
-1. `static`, `@Bean`
+1. `@Required`, `RequiredAnnotationBeanPostProcessor`
 
 ## Endpoints
 
@@ -16,26 +16,34 @@ Exploring static @Bean injection in Spring
 lsof -i :8081
 ```
 
+1. Run a working version when the `@Required` fields are given 
+
 ```bash
 mvn clean install spring-boot:run
+```
+
+2. Run a non-working version when the `@Required` fields are not given
+```bash
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=incomplete
 ```
 
 ## References
 
 ### Context
 
-- [The Isley Brothers](https://en.wikipedia.org/wiki/The_Isley_Brothers)
+- [People Help the People](https://nl.wikipedia.org/wiki/People_Help_the_People)
 
 <div align="center">
-      <a title="The Isley Brothers - Harvest for the World" href="https://www.youtube.com/watch?v=dUxiKQXxGR8">
+      <a title="Birdy - People Help The People" href="https://www.youtube.com/watch?v=OmLNs6zQIHo">
      <img 
-          src="https://img.youtube.com/vi/dUxiKQXxGR8/0.jpg" 
+          src="https://img.youtube.com/vi/OmLNs6zQIHo/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
 ### Online
 
+- [Spring @Required Annotation](https://www.tutorialspoint.com/spring/spring_required_annotation.htm)
 - [Spring - Bean Post Processors](https://www.tutorialspoint.com/spring/spring_bean_post_processors.htm)
 - [JDK Dynamic Proxies](https://www.byteslounge.com/tutorials/jdk-dynamic-proxies)
 - [Spring MVC - Bean Name Url Handler Mapping Example](https://www.tutorialspoint.com/springmvc/springmvc_beannameurlhandlermapping.htm)
