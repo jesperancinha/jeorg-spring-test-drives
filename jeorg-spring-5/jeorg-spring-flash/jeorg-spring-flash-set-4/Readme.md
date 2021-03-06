@@ -5,6 +5,7 @@
 1. [jeorg-spring-flash-4-1](./jeorg-spring-flash-4-1) - 🏜 @Scope and prototype
 2. [jeorg-spring-flash-4-2](./jeorg-spring-flash-4-2) - ❎ `<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>`
 3. [jeorg-spring-flash-4-3](./jeorg-spring-flash-4-3) - 🛡 intercept-url, pattern, access
+4. [jeorg-spring-flash-4-4](./jeorg-spring-flash-4-4) - 📟 HandlerMapping
 
 ## References
 
