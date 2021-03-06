@@ -33,6 +33,7 @@ The purporse of this project is to keep up with the development of the Spring Fr
 ## Contents:
 
 1. [Spring 5](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
+2. [Spring Kotlin 5](./jeorg-spring-kotlin-5) - Test drives for the Spring 5 Frawework in Kotlin (Bare minimum focus given to Spring Boot)
 
 ## References:
 

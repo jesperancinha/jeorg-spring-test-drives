@@ -1,10 +1,10 @@
-# spring-flash-4-4
+# spring-flash-4-5
 
 ## Introduction
 
-Exploring the HandlerMapping in Spring
+Exploring the ContextLoaderListener in Spring
 
-1. `HandlerMapping`
+1. `ContextLoaderListener`
 
 ## Endpoints
 
@@ -37,8 +37,21 @@ mvn clean install spring-boot:run
 
 ### Context
 
+- [Enjoy the Silence](https://en.wikipedia.org/wiki/Enjoy_the_Silence)
+
+<div align="center">
+      <a title="Depeche Mode - Enjoy The Silence" href="https://www.youtube.com/watch?v=aGSKrC7dGcY">
+     <img 
+          src="https://img.youtube.com/vi/aGSKrC7dGcY/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+
 ### Online
 
+- [What is the use of ContextLoaderListener in Spring MVC Framework?](https://www.java67.com/2019/05/contextloaderlistener-in-spring-mvc-10.html)
+- [ContextLoaderListener vs DispatcherServlet](https://howtodoinjava.com/spring-mvc/contextloaderlistener-vs-dispatcherservlet/)
 - [Spring MVC - Understanding HandlerMapping](https://www.logicbig.com/tutorials/spring-framework/spring-web-mvc/handler-mapping.html)
 - [Simple Spring Security Webapp](https://www.springbyexample.org/examples/simple-spring-security-webapp-spring-config.html)
 - [Hello Spring Security Xml Config](https://docs.spring.io/spring-security/site/docs/4.2.20.RELEASE/guides/html5/helloworld-xml.html)
