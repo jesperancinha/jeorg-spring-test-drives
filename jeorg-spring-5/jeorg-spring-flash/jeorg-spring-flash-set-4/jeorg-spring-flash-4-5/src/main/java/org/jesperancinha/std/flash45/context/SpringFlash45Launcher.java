@@ -6,11 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -29,15 +28,23 @@ public class SpringFlash45Launcher extends SpringBootServletInitializer implemen
                 .blue("This is the reason why we switch to ServletContextInitializer in this example.")
                 .toConsoleLn();
         WebApplicationContext context = getContext();
+        final ContextLoaderListener contextLoaderListener = new ContextLoaderListener(context);
+        ConsolerizerComposer.out(" ")
+                .magenta("We don't use this")
+                .blue("So instead of using")
+                .orange("servletContext.addListener(contextLoaderListener);")
+                .blue("we just print the result -> %s", contextLoaderListener.toString())
+                .toConsoleLn();
+//        servletContext.addListener(contextLoaderListener);
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("DispatcherServlet", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/app");
     }
 
     private AnnotationConfigWebApplicationContext getContext() {
-        ConsolerizerColor.BLUE.printGenericTitleLn("AppInitializer on %s", LocalDateTime.now());
+        ConsolerizerColor.BLUE.printGenericTitleLn("AnnotationConfigWebApplicationContext on %s", LocalDateTime.now());
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.setConfigLocation(" org.jesperancinha.std.flash45.context.config");
+        context.setConfigLocation(" org.jesperancinha.std.flash45.context");
         return context;
     }
 
