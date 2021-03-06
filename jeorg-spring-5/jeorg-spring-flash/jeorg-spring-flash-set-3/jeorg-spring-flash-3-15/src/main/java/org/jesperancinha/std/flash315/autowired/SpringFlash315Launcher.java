@@ -6,7 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_BLUE;
 
 @SpringBootApplication
 public class SpringFlash315Launcher implements CommandLineRunner {

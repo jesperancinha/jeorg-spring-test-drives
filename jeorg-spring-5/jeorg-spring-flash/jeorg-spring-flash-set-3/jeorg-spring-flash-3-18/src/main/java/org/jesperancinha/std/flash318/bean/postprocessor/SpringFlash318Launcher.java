@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash318.bean.postprocessor;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.std.flash318.bean.postprocessor.domain.Recording;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

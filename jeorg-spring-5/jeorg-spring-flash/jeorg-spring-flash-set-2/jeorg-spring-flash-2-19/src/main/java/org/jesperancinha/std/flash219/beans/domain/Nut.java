@@ -1,9 +1,9 @@
 package org.jesperancinha.std.flash219.beans.domain;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BROWN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BROWN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 public class Nut {
 

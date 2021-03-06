@@ -11,8 +11,8 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 import static org.springframework.boot.SpringApplication.run;
 
 @SpringBootApplication

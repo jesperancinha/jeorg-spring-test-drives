@@ -20,8 +20,8 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 
 @RestController
 public class ProductController {

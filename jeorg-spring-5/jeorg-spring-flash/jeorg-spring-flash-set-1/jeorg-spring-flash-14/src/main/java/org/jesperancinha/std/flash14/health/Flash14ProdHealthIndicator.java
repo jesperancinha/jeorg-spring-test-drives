@@ -12,7 +12,7 @@ import java.nio.file.FileStore;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @Component
 @Profile("prod")

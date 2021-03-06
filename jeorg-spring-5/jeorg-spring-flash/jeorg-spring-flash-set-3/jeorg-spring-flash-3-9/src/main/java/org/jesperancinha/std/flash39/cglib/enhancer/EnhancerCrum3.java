@@ -1,14 +1,14 @@
 package org.jesperancinha.std.flash39.cglib.enhancer;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.InvocationHandler;
 
 import java.lang.reflect.Method;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.CYAN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.CYAN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printUnicornsLn;
 
 public class EnhancerCrum3 {
     public static void main(String[] args) {

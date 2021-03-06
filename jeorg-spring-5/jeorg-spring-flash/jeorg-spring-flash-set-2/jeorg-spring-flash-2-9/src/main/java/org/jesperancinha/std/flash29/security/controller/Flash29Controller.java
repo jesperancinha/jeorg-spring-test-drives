@@ -19,9 +19,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Controller
 public class Flash29Controller {

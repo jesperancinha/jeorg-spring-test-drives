@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Aspect
 @Component

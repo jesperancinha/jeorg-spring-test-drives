@@ -1,15 +1,15 @@
 package org.jesperancinha.std.flash41.scope.prototype.domain;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 
 @Component
 @Scope("prototype")

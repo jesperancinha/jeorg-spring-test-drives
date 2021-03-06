@@ -5,8 +5,8 @@ import org.springframework.cglib.proxy.InvocationHandler;
 
 import java.lang.reflect.Method;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.CYAN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.CYAN;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printUnicornsLn;
 
 public class EnhancerCrum2 {
     public static void main(String[] args) {

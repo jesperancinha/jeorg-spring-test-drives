@@ -1,7 +1,7 @@
 package org.jesperancinha.std.flash31.bean.initialization;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.std.flash31.bean.initialization.domain.BookService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,10 +20,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.CYAN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.CYAN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @SpringBootApplication

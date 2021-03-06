@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash26.jdbc.handlers;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.std.flash26.jdbc.handlers.model.Shell;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,11 +17,11 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @SpringBootApplication
 public class SpringFlash26Launcher implements CommandLineRunner {

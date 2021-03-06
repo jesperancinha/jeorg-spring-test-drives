@@ -2,7 +2,7 @@ package org.jesperancinha.std.topic.container;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.jesperancinha.std.topic.container.beans.Bean;
 import org.jesperancinha.std.topic.container.beans.BeanOnlyRead;
 import org.jesperancinha.std.topic.container.beans.BeanWithContructor;
@@ -11,11 +11,11 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 public class ContainerLauncher {
 

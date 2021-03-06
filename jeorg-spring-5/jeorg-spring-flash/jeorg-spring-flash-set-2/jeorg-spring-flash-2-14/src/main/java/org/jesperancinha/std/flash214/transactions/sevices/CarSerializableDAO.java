@@ -1,7 +1,7 @@
 package org.jesperancinha.std.flash214.transactions.sevices;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.jesperancinha.std.flash214.transactions.model.Car;
 import org.jesperancinha.std.flash214.transactions.repository.CarRepository;
 import org.springframework.stereotype.Service;
@@ -11,9 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Service
 public class CarSerializableDAO implements CarDAO {

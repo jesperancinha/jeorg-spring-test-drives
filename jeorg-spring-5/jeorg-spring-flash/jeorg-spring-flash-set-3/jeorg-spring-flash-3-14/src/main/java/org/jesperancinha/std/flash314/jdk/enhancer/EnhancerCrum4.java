@@ -1,13 +1,13 @@
 package org.jesperancinha.std.flash314.jdk.enhancer;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.CYAN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.CYAN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printUnicornsLn;
 
 public class EnhancerCrum4 {
     public static void main(String[] args) {

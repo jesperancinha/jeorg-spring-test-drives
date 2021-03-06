@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Controller
 public class Flash17Controller {

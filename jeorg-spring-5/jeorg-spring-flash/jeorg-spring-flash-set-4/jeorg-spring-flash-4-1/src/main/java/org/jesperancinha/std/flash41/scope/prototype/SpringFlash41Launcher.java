@@ -3,7 +3,7 @@ package org.jesperancinha.std.flash41.scope.prototype;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 @SpringBootApplication
 public class SpringFlash41Launcher {

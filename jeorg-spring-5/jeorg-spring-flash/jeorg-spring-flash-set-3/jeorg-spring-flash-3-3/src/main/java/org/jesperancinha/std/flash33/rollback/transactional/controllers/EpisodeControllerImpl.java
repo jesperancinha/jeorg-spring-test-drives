@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController

@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 @RestController
 @Profile("test")

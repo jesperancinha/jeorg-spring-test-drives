@@ -16,8 +16,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.CYAN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.CYAN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @ControllerAdvice
 public class ProductsExceptionHandler extends ResponseEntityExceptionHandler {

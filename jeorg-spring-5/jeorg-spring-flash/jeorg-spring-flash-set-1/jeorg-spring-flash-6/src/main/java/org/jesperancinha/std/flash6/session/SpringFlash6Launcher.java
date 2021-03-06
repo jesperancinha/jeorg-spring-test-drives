@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_CYAN;
 import static org.springframework.boot.SpringApplication.run;
 
 @RestController

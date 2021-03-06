@@ -17,11 +17,11 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @SpringBootApplication
 @RestController

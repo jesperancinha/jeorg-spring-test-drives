@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash11.form;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -3,8 +3,8 @@ package org.jesperancinha.std.flash36.cglib.enhancer;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.FixedValue;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.CYAN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.CYAN;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printUnicornsLn;
 
 public class EnhancerCrum {
     public static void main(String[] args) {

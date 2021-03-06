@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash310.jsoncomponent.controller;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.std.flash310.jsoncomponent.dto.Guitar;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 
 @RestController
 public class GuitarController {

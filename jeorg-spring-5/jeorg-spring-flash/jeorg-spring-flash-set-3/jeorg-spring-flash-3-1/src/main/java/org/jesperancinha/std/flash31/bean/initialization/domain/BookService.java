@@ -1,12 +1,12 @@
 package org.jesperancinha.std.flash31.bean.initialization.domain;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printRainbowFlag;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printRainbowFlag;
 
 public class BookService implements DisposableBean, InitializingBean {
 

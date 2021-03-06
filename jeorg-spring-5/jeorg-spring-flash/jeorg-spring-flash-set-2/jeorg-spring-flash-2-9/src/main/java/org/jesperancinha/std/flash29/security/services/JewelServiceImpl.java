@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 @Service
 public class JewelServiceImpl implements JewelService {

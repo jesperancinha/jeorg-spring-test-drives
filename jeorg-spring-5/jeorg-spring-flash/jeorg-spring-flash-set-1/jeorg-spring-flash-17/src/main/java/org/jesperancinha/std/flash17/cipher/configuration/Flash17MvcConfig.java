@@ -14,9 +14,9 @@ import org.springframework.web.servlet.view.JstlView;
 
 import javax.sql.DataSource;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printUnicornsLn;
 
 @Configuration
 @EnableWebMvc

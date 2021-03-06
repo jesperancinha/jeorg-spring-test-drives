@@ -2,8 +2,8 @@ package org.jesperancinha.std.flash.aop;
 
 import org.springframework.aop.framework.ProxyFactory;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 public class SpringFlash2Launcher {
     public static void main(String[] args) {

@@ -3,13 +3,13 @@ package org.jesperancinha.std.flash18.aop.afterthrowing.aspect;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.springframework.stereotype.Component;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Aspect
 @Component

@@ -4,7 +4,7 @@ import org.jesperancinha.std.flash219.beans.domain.Nut;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 @Configuration
 public class NutsConfiguration {

@@ -9,7 +9,7 @@ import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
 import java.util.Properties;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_GREEN;
 
 @Configuration
 @EnableWebMvc

@@ -1,7 +1,7 @@
 package org.jesperancinha.std.flash11.form;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash32.rowcallbackhandler;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

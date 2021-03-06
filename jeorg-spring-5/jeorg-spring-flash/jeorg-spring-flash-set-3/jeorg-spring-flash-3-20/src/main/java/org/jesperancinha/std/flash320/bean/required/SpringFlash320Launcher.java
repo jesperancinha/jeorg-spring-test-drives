@@ -1,7 +1,7 @@
 package org.jesperancinha.std.flash320.bean.required;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.std.flash320.bean.required.domain.People;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.BeanDefinitionStoreException;
@@ -13,10 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @SpringBootApplication
 public class SpringFlash320Launcher implements CommandLineRunner {

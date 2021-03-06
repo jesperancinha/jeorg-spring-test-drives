@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash210.factory.configurations;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.springframework.context.annotation.Bean;
 
 public class TheUniverseConfiguration {

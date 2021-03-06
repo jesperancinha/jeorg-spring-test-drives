@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash19.transactional.services;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.std.flash19.transactional.domain.Album;
 import org.jesperancinha.std.flash19.transactional.domain.AlbumRepository;
 import org.springframework.stereotype.Service;

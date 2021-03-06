@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash218.profiles.configurations;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 

@@ -14,8 +14,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @SpringBootApplication

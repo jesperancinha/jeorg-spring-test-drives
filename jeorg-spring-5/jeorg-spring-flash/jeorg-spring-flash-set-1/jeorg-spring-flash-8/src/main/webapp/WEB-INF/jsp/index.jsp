@@ -1,4 +1,4 @@
-<%@ page import="org.jesperancinha.console.consolerizer.ConsolerizerGraphs" %>
+<%@ page import="org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs" %>
 <!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html lang="en">

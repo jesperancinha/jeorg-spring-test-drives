@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash.aop;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_RED;
 
 public class Vase {
 

@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash210.factory;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.std.flash210.factory.configurations.Material;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

@@ -13,10 +13,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @SpringBootApplication
 public class SpringFlash312Launcher implements CommandLineRunner {

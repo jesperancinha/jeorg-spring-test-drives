@@ -3,8 +3,8 @@ package org.jesperancinha.std.flash.aop;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 public class VaseAdvice implements MethodInterceptor {
     @Override

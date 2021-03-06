@@ -1,7 +1,7 @@
 package org.jesperancinha.std.flash15.configuration;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;

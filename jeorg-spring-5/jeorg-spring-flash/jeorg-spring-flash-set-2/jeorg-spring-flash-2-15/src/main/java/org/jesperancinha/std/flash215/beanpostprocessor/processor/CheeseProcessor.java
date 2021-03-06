@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash215.beanpostprocessor.processor;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.std.flash215.beanpostprocessor.bean.Cheese;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @Component
 public class CheeseProcessor implements BeanPostProcessor {
