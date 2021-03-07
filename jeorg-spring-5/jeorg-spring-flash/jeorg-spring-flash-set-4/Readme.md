@@ -8,6 +8,7 @@
 4. [jeorg-spring-flash-4-4](./jeorg-spring-flash-4-4) - 📟 HandlerMapping
 5. [jeorg-spring-flash-4-5](./jeorg-spring-flash-4-5) - 🤫 ContextLoaderListener
 6. [jeorg-spring-flash-4-6](./jeorg-spring-flash-4-6) - 🐈 🐕 @RequestParam
+7. [jeorg-spring-flash-4-7](./jeorg-spring-flash-4-7) - 🌹💐🌷 ResultSetExtractor
 
 ## References
 

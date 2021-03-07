@@ -28,7 +28,7 @@ public class SpringFlash32Launcher implements CommandLineRunner {
     @Override
     public void run(String... args) {
         jdbcTemplate.execute("CREATE TABLE WHEN(\n" +
-                "   ID   INT NOT NULL AUTO_INCREMENT,\n" +
+                "   ID INT NOT NULL AUTO_INCREMENT,\n" +
                 "   ARTIST VARCHAR(255) NOT NULL,\n" +
                 "   WHEN VARCHAR(255) NOT NULL,\n" +
                 "   PRIMARY KEY (ID)\n" +
