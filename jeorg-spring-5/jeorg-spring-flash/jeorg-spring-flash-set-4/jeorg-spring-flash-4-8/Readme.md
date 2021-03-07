@@ -43,7 +43,7 @@ curl -X POST -H 'username: admin' -H 'password: admin' http://localhost:8081/ope
 
 3. Authenticate with OAUTH local
 ```bash
-curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=admin&password=admin&client_id=flash48-client&client_secret=flash48&scope=read&redirect_uri=http://localhost:8080/oauth" http://localhost:8080/flash48/oauth/token
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=admin&password=admin&client_id=flash48-client&client_secret=flash48&scope=read&redirect_uri=http://localhost:8081/oauth" http://localhost:8081/flash48/oauth/token
 curl -H "Authorization: Bearer TOKEN" http://localhost:8080/concerts
 ```
 

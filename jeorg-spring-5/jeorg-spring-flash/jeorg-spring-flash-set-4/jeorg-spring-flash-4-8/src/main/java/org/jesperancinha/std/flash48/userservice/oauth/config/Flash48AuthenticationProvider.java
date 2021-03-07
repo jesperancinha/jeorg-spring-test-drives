@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;
+import java.util.Objects;
 import java.util.Optional;
 
 @Component
@@ -39,10 +40,9 @@ public class Flash48AuthenticationProvider implements AuthenticationProvider {
                 .isEmpty()) {
             return null;
         }
-        final Optional<User> appUser = this.userRepository.findById(authentication.getName());
+        final var user = this.userRepository.findUserByName(authentication.getName());
 
-        if (appUser.isPresent()) {
-            final User user = appUser.get();
+        if (Objects.nonNull(user)) {
             final String providedUser = authentication.getName();
             final String providedUserPassword = (String) authentication.getCredentials();
             if (providedUser.equalsIgnoreCase(user.getName()) && passwordEncoder.matches(providedUserPassword, user.getPassword())) {
