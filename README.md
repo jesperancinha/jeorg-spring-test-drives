@@ -1,20 +1,20 @@
 # Spring-test-drives
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/spring-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/spring-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/spring-test-drives.svg)](#)
+[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/jeorg-spring-5-test-drives)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)
+[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/manual/jofisaes/spring-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/spring-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-spring-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/spring-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/spring-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/spring-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/spring-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/spring-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/wksvhmqaq0sd8505?svg=true)](https://ci.appveyor.com/project/jesperancinha/spring-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/spring-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/spring-test-drives)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/manual/jofisaes/jeorg-spring-5-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/jeorg-spring-5-test-drives&amp;utm_campaign=Badge_Grade)
+[![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-jeorg-spring-5-test-drives-master)
+[![CircleCI](https://circleci.com/gh/jesperancinha/jeorg-spring-5-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/jeorg-spring-5-test-drives)
+[![Build Status](https://travis-ci.org/jesperancinha/jeorg-spring-5-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/jeorg-spring-5-test-drives)
+[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/jeorg-spring-5-test-drives?branch=master)](https://bettercodehub.com/)
+[![Build status](https://ci.appveyor.com/api/projects/status/wksvhmqaq0sd8505?svg=true)](https://ci.appveyor.com/project/jesperancinha/jeorg-spring-5-test-drives)
+[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/jeorg-spring-5-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/jeorg-spring-5-test-drives)
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/spring-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/spring-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/spring-test-drives.svg)](#)
+[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
 
 ---
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
