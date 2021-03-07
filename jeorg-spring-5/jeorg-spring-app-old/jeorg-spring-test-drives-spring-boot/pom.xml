@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jeorg-spring-test-drives-spring-boot</artifactId>
+    <artifactId>jeorg-spring-5-test-drives-spring-boot</artifactId>
 
     <dependencies>
         <!-- Lombok -->
