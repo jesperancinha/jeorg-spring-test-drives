@@ -35,6 +35,19 @@ The purporse of this project is to keep up with the development of the Spring Fr
 1. [Spring 5](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
 2. [Spring Kotlin 5](./jeorg-spring-kotlin-5) - Test drives for the Spring 5 Frawework in Kotlin (Bare minimum focus given to Spring Boot)
 
+## Build
+
+Note that if you want to build this project from the root, you need to use one of the JDK 11 or upper versions.
+
+<i>See [Hints&Tricks](https://github.com/jesperancinha/project-signer/blob/master/project-signer-templates/Hints%26Tricks.md) document for more details</i>
+
+## Install JDK 11 using [SDK-MAN](https://sdkman.io/)
+
+```bash
+sdk install java 11.0.9.hs-adpt
+sdk use java 11.0.9.hs-adpt
+```
+
 ## References:
 
 ### Online
