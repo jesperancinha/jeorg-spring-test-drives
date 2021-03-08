@@ -16,6 +16,12 @@ Topics covered:
 1. `@ResponseBody`, `@RequestMapping`, `@RequestParam`
 2. `AuthenticationProvider`, `AuthorizationServerConfigurerAdapter`, `WebSecurityConfigurerAdapter`, `ResourceServerConfigurerAdapter`, `TokenStore`
 3. `@DataJpaTest`, `@ExtendWith(SpringExtension.class)`
+4. `InMemoryAuditEventRepository`, `AbstractAuditListener`, `management.endpoints.web.exposure.include=*`
+
+## Endpoints
+
+1. http://localhost:8081/actuator
+
 
 ## References:
 
