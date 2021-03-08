@@ -1,6 +1,6 @@
-package org.jesperancinha.std.flash48.userservice.oauth.config;
+package org.jesperancinha.std.flash49.actuator.oauth.config;
 
-import org.jesperancinha.std.flash48.userservice.oauth.service.Flash48UserDetailsService;
+import org.jesperancinha.std.flash49.actuator.oauth.service.Flash49UserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,17 +15,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true,
         securedEnabled = true)
-public class Flash48OAuth2WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
+public class Flash49OAuth2WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
     private final AuthenticationProvider authenticationProvider;
 
-    private final Flash48UserDetailsService flash48UserDetailsService;
+    private final Flash49UserDetailsService flash49UserDetailsService;
 
     private final PasswordEncoder passwordEncoder;
 
-    public Flash48OAuth2WebSecurityConfigurer(AuthenticationProvider authenticationProvider, Flash48UserDetailsService flash48UserDetailsService, PasswordEncoder passwordEncoder) {
+    public Flash49OAuth2WebSecurityConfigurer(AuthenticationProvider authenticationProvider, Flash49UserDetailsService flash49UserDetailsService, PasswordEncoder passwordEncoder) {
         this.authenticationProvider = authenticationProvider;
-        this.flash48UserDetailsService = flash48UserDetailsService;
+        this.flash49UserDetailsService = flash49UserDetailsService;
         this.passwordEncoder = passwordEncoder;
     }
 
@@ -37,7 +37,7 @@ public class Flash48OAuth2WebSecurityConfigurer extends WebSecurityConfigurerAda
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(flash48UserDetailsService)
+        auth.userDetailsService(flash49UserDetailsService)
                 .passwordEncoder(passwordEncoder)
                 .and()
                 .authenticationProvider(authenticationProvider)

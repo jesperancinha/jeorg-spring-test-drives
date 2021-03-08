@@ -19,6 +19,7 @@
         <module>jeorg-spring-flash-4-6</module>
         <module>jeorg-spring-flash-4-7</module>
         <module>jeorg-spring-flash-4-8</module>
+        <module>jeorg-spring-flash-4-9</module>
     </modules>
 
     <properties>
