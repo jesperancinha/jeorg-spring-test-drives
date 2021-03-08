@@ -13,9 +13,14 @@ French language in music
 
 Topics covered:
 
+1. `@ResponseBody`, `@RequestMapping`, `@RequestParam`
+
 ## References:
 
 ### Context
+
+- [Céline Dion](https://en.wikipedia.org/wiki/Celine_Dion)
+- [Kate Ryan](https://en.wikipedia.org/wiki/Kate_Ryan)
 
 <div align="center">
       <a title="Celine Dion - On ne change pas" href="https://www.youtube.com/watch?v=3tOsUgwBgko">
