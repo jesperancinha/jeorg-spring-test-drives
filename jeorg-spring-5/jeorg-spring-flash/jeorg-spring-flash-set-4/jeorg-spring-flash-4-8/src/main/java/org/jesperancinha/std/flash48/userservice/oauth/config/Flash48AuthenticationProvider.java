@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash48.userservice.oauth.config;
 
-import org.jesperancinha.std.flash48.userservice.oauth.domain.User;
 import org.jesperancinha.std.flash48.userservice.oauth.repository.UserRepository;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.Objects;
-import java.util.Optional;
 
 @Component
 @Primary

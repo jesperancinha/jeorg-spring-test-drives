@@ -43,11 +43,26 @@ curl -X POST -H 'username: admin' -H 'password: admin' http://localhost:8081/ope
 
 3. Authenticate with OAUTH local
 ```bash
-curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=admin&password=admin&client_id=flash48-client&client_secret=flash48&scope=read&redirect_uri=http://localhost:8081/oauth" http://localhost:8081/flash48/oauth/token
-curl -H "Authorization: Bearer TOKEN" http://localhost:8080/concerts
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=admin&password=admin&client_id=flash48-client&client_secret=flash48&scope=read&redirect_uri=http://localhost:8081/oauth" http://localhost:8081/oauth/token
+curl -H "Authorization: Bearer TOKEN" http://localhost:8081/concerts
 ```
 
 ## References
+
+### Context
+
+<div align="center">
+      <a title="Madonna - Holiday (Live Aid 1985)" href="https://www.youtube.com/watch?v=7jC9SWuKHpc">
+     <img 
+          src="https://img.youtube.com/vi/7jC9SWuKHpc/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Queen - Radio Ga Ga (Live Aid 1985)" href="https://www.youtube.com/watch?v=o-0ygW-B_gI">
+     <img 
+          src="https://img.youtube.com/vi/o-0ygW-B_gI/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ### Online
 

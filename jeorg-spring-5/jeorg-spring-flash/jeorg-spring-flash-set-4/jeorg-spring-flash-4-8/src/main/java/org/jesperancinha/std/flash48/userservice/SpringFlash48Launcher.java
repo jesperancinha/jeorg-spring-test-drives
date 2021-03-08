@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 @RestController
@@ -55,5 +57,13 @@ public class SpringFlash48Launcher {
         user.setRole("ROLE_ADMIN");
         user.setDate(new Timestamp(LocalDateTime.now().toInstant(ZoneOffset.UTC).getNano()));
         userRepository.save(user);
+    }
+
+    @GetMapping("/concerts")
+    List<String> allConcerts(){
+        return Arrays.asList(
+                "Madonna - Holiday (Live Aid 1985)",
+                "Queen - Radio Ga Ga (Live Aid 1985)"
+        );
     }
 }
