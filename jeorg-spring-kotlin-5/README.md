@@ -26,41 +26,10 @@
 
 ## Description
 
-SPRING 5 study project.
+SPRING 5 study project in Kotlin
 
-This project is intended as a study tool for Spring version 5.
-
-I'm using JDK version 11.0.9.hs-adpt for all of these tests.
-
-```bash
-sdk install java 11.0.9.hs-adpt
-sdk use 11.0.9.hs-adpt 
-```
-
-Many of the modules are using JSP's.
-For this you need to have your running path right.
-If you run spring boot from the command line, you should not see any issue:
-
-```bash
-mvn clean install spring-boot:run
-```
-
-On the other hand, if running through an IDE, the root path must be specified.
-In IntelliJ as an example:
-
-![alt img](./docs/workingdirectory.png)
 
 ## Contents:
-
-1. [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
-2. [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
-3. [jeorg-spring-flash](./jeorg-spring-flash) - ⚡️ Fast track modules about Spring Boot 5
-   1. [jeorg-spring-flash-set-1](./jeorg-spring-flash/jeorg-spring-flash-set-1) - ⚡️ Fast track modules about Spring Boot 5 - Set 1 with 20 modules
-   2. [jeorg-spring-flash-set-2](./jeorg-spring-flash/jeorg-spring-flash-set-2) - ⚡️ Fast track modules about Spring Boot 5 - Set 2 with 20 modules
-   3. [jeorg-spring-flash-set-3](./jeorg-spring-flash/jeorg-spring-flash-set-3) - ⚡️ Fast track modules about Spring Boot 5 - Set 3 with 20 modules
-   4. [jeorg-spring-flash-set-4](./jeorg-spring-flash/jeorg-spring-flash-set-4) - ⚡️ Fast track modules about Spring Boot 5 - Set 4 with 20 modules (coming soon...)
-4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
-    1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 
 ## References:
 
