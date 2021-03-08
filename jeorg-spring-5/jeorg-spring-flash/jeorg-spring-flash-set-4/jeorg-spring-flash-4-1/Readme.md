@@ -1,4 +1,4 @@
-# spring-flash-4-1
+# jeorg-spring-flash-4-1
 
 ## Introduction
 
