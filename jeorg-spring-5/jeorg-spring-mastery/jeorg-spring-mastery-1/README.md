@@ -14,6 +14,8 @@ French language in music
 Topics covered:
 
 1. `@ResponseBody`, `@RequestMapping`, `@RequestParam`
+2. `AuthenticationProvider`, `AuthorizationServerConfigurerAdapter`, `WebSecurityConfigurerAdapter`, `ResourceServerConfigurerAdapter`, `TokenStore`
+3. `@DataJpaTest`, `@ExtendWith(SpringExtension.class)`
 
 ## References:
 
