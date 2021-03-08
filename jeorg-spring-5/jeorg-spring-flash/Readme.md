@@ -5,6 +5,28 @@
 All of these modules are fast-track learning modules about Spring. Flash in this case comes from flash-back or memory. You can look at this as a collection of moments in time to learn spring.
 
 1. [jeorg-spring-flash-set-1](./jeorg-spring-flash-set-1) - Set 1 of 20 Flash modules
+
+`PropertyEditorRegistrar`, `registerCustomEditors`, `PropertyEditorSupport`, `CustomEditorConfigurer`,
+`MethodInterceptor`, `Interceptor`, `Advice`, `ProxyFaxtory`, `addAdvice`, `setTarget`,
+`org.springframework.format.annotation.DateTimeFormat`, `org.springframework.format.annotation.NumberFormat`,
+`@SequenceGenerator`,
+`HttpSession`,
+`@ResponseStatus(HttpStatus.NOT_FOUND)`, `@ControllerAdvice`,`ModelAndView`, `ResponseEntity`, `@ExceptionHandler`,
+`@Configuration`, `@EnableWebMvc`, `@ComponentScan`, `InternalResourceViewResolver`, `ViewResolver`,
+`WebMvcConfigurer`, `@Controller`,
+`@EnableWebSocketMessageBroker`, `registerStompEndpoints`, `configureMessageBroker`, `@MessageMapping`, `@SendTo`,
+`WebMvcConfigurerAdapter`, `@Profile`, `/error`, `SimpleMappingExceptionResolver`,
+`Model`, `ModelAndView`, `commandName`, `modelAttribute`, `<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>`,
+`@CORS`, `origins`, `WebMvcConfigurer`, `CorsRegistry`,
+`GzipResourceResolver`,
+`HealthIndicator`, `AbstractHealthIndicator`, `health`, `doHealthCheck`,
+`ConfigurationProperties`, `@Component`, `@PropertySource`,
+`WebSecurityConfigurerAdapter`, `tomcat-embed-jasper`, `Authentication`, `SimpleGrantedAuthority`, `UsernamePasswordAuthenticationToken`,
+`UserDetailsManager`, `tomcat-embed-jasper`, `PasswordEncoder`, `HttpSecurity`, `AuthenticationManagerBuilder`,
+`@Aspect`, `@AfterThrowing`, `execution`,
+`@Override`, `@Transactional`, `propagation`, `Propagation.REQUIRES_NEW`, `rollbackFor`, `RuntimeException.class`,
+`mvc:annotation-driven`, `mvc:cors`, `mvc:mapping`
+
 2. [jeorg-spring-flash-set-2](./jeorg-spring-flash-set-2) - Set 2 of 20 Flash modules
 3. [jeorg-spring-flash-set-3](./jeorg-spring-flash-set-3) - Set 3 of 20 Flash modules
 4. [jeorg-spring-flash-set-4](./jeorg-spring-flash-set-4) - Set 3 of 20 Flash modules
