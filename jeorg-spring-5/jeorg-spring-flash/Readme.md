@@ -28,6 +28,28 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `mvc:annotation-driven`, `mvc:cors`, `mvc:mapping`
 
 2. [jeorg-spring-flash-set-2](./jeorg-spring-flash-set-2) - Set 2 of 20 Flash modules
+
+`WebServerFactoryCustomizer`, `ConfigurableServletWebServerFactory`,
+`WebMvcConfigurer`, `InterceptorRegistry`, `addInterceptors`,
+`mvc:interceptors`, `mvc:interceptor`, `mvc:mapping`, `mvc:exclude-mapping`,
+`JdbcTemplate`, `DataAccessException`,
+`First`, `By`, `Like`, `Top`, `Distinct`, `Contains`, `LessThan`, `GreaterThan`, `Between`,
+`RowMapper`, `ResultSetExtractor`,
+`management.endpoint.health.show-details`, `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`,
+`CsrfFilter`, `SecurityFilterChain`, `logging.level.org.springframework.security.web.FilterChainProxy=DEBUG`,
+`@EnableGlobalMethodSecurity`, `@PreAuthorize`, `@PostAuthorize`, `returnObject`, `SpEL`,
+`spring.factories`, `@Configuration`, `@Bean`,
+`log4j2.xml`,
+`logback.xml`,
+`@DataJpaTest`, `SpringRunner`, `@Autowired`,
+`Isolation.READ_UNCOMMITTED`, `Isolation.READ_COMMITTED`, `Isolation.REPEATABLE_READ`, `Isolation.SERIALIZABLE`,
+`BeanPostProcessor`, `postProcessAfterInitialization`, `postProcessBeforeInitialization`,
+`PlatformTransactionManager`,
+`JtaTransactionManager`,
+`@Profile`,
+`@Bean`, `destroyMethod`, `initMethod`,
+`@PathVariable`, `@MatrixVariable`, `@RequestHeader`, `@RequestParam`,
+
 3. [jeorg-spring-flash-set-3](./jeorg-spring-flash-set-3) - Set 3 of 20 Flash modules
 4. [jeorg-spring-flash-set-4](./jeorg-spring-flash-set-4) - Set 3 of 20 Flash modules
 
