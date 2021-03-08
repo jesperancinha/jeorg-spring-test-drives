@@ -75,6 +75,16 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 
 4. [jeorg-spring-flash-set-4](./jeorg-spring-flash-set-4) - Set 3 of 20 Flash modules
 
+`@Scope`, `prototype`,
+`<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>`,
+`intercept-url`, `pattern`, `access`,
+`HandlerMapping`,
+`ContextLoaderListener`,
+`@RequestParam`,
+`ResultSetExtractor`,
+`UserDetails`,
+`AbstractAuditListener`, `AbstractAuthenticationAuditListener`
+
 ## References
 
 ### Books
