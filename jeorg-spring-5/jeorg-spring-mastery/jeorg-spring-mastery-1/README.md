@@ -17,16 +17,21 @@ Topics covered:
 2. `AuthenticationProvider`, `AuthorizationServerConfigurerAdapter`, `WebSecurityConfigurerAdapter`, `ResourceServerConfigurerAdapter`, `TokenStore`
 3. `@DataJpaTest`, `@ExtendWith(SpringExtension.class)`
 4. `InMemoryAuditEventRepository`, `AbstractAuditListener`, `management.endpoints.web.exposure.include=*`
+5. `@EnableConfigurationProperties`, `@ConfigurationProperties(prefix = "mastery1")`, `@PropertySource("classpath:extras.properties")`
 
 ## Endpoints
 
-1. http://localhost:8081/actuator
-
-
+1. [http://localhost:8081/actuator](http://localhost:8081/actuator)
+2. [http://localhost:8081/member/search?param=Celine](http://localhost:8081/member/search?param=Celine)
+3. [http://localhost:8081/member](http://localhost:8081/member)
+   
 ## References:
 
 ### Context
 
+- [Ensemble (album caritatif)](https://fr.wikipedia.org/wiki/Ensemble_(album_caritatif))
+- [Sidaction. "Sa Raison d’être" fête ses 20 ans et s'offre un coup de jeune](https://www.ouest-france.fr/culture/musiques/sidaction-sa-raison-d-etre-fete-ses-20-ans-et-s-offre-un-coup-de-jeune-5640465)
+- [SA RAISON D'ÊTRE, 2018](https://www.sidaction.org/actualites/sa-raison-detre-2018-690)
 - [Céline Dion](https://en.wikipedia.org/wiki/Celine_Dion)
 - [Kate Ryan](https://en.wikipedia.org/wiki/Kate_Ryan)
 

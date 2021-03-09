@@ -1,6 +1,7 @@
 package org.jesperancinha.std.mastery1.french.music;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.jesperancinha.std.mastery1.french.music.configuration.Mastery1Configuration;
 import org.jesperancinha.std.mastery1.french.music.domain.Member;
 import org.jesperancinha.std.mastery1.french.music.repository.MemberRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -14,8 +15,11 @@ public class Mastery1FrenchMusicLauncher implements CommandLineRunner {
 
     private final MemberRepository memberRepository;
 
-    public Mastery1FrenchMusicLauncher(MemberRepository memberRepository) {
+    private final Mastery1Configuration mastery1Configuration;
+
+    public Mastery1FrenchMusicLauncher(MemberRepository memberRepository, Mastery1Configuration mastery1Configuration) {
         this.memberRepository = memberRepository;
+        this.mastery1Configuration = mastery1Configuration;
     }
 
     public static void main(String[] args) {
