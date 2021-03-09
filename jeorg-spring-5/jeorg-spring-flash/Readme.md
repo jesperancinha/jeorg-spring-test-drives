@@ -83,7 +83,8 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@RequestParam`,
 `ResultSetExtractor`,
 `UserDetails`,
-`AbstractAuditListener`, `AbstractAuthenticationAuditListener`
+`AbstractAuditListener`, `AbstractAuthenticationAuditListener`,
+`org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder`, `authentication-manager`, `authentication-provider`, `password-encoder`
 
 ## References
 

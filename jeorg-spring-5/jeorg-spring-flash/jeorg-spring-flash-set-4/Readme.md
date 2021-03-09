@@ -10,6 +10,8 @@
 6. [jeorg-spring-flash-4-6](./jeorg-spring-flash-4-6) - 🐈 🐕 @RequestParam
 7. [jeorg-spring-flash-4-7](./jeorg-spring-flash-4-7) - 🌹💐🌷 ResultSetExtractor
 8. [jeorg-spring-flash-4-8](./jeorg-spring-flash-4-8) - 🎻 UserDetails in OAuth
+9. [jeorg-spring-flash-4-9](./jeorg-spring-flash-4-9) - 🧠 Monitoring
+10. [jeorg-spring-flash-4-10](./jeorg-spring-flash-4-10) - 👩‍🦳 Security with XML
 
 ## References
 

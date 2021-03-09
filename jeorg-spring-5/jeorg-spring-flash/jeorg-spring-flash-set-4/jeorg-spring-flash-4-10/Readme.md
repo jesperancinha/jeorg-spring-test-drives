@@ -2,9 +2,10 @@
 
 ## Introduction
 
-Exploring the '' in Spring with OAuth
+Exploring the Spring Security with XML in Spring with OAuth
 
-1. 
+1. `org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder`, `authentication-manager`, `authentication-provider`, `password-encoder`
+
 ## Endpoints
 
 1. [http://localhost:8081](http://localhost:8081)
@@ -14,7 +15,7 @@ Exploring the '' in Spring with OAuth
 If you run spring boot from the command line, you should not see any issue:
 
 ```bash
-mvn clean install spring-boot:run
+mvn clean install spring-boot:run 
 ```
 
 On the other hand, if running through an IDE, the root path must be specified.
@@ -28,19 +29,42 @@ In IntelliJ as an example:
 lsof -i :8081
 ```
 
-
-1.
+1. Run Spring Boot SpringFlash410Launcher
 
 ```bash
 mvn clean install spring-boot:run
+```
+
+1.1. [http://localhost:8081/login](http://localhost:8081/login)
+
+1.2. Try with users `admin`/`admin` and `user`/`user`
+
+2. See how encoding works with SpringFlash410Encoder
+
+```bash
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=encoder
 ```
 
 ## References
 
 ### Context
 
+<div align="center">
+      <a title="Ava Max - My Head & My Heart" href="https://www.youtube.com/watch?v=w8mBplMtwJ8">
+     <img 
+          src="https://img.youtube.com/vi/w8mBplMtwJ8/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Ava Max - My Head & My Heart (Bimini Bon Boulash Performance Video)" href="https://www.youtube.com/watch?v=7kfe2tdb0go">
+     <img 
+          src="https://img.youtube.com/vi/7kfe2tdb0go/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 ### Online
 
+- [Spring Security password hashing example](https://mkyong.com/spring-security/spring-security-password-hashing-example/)
 - [Spring Security: Auditing Spring Data Entities](https://blog.jdriven.com/2019/10/spring-security-auditing-spring-data-entities/)
 - [Spring Boot and Security Events with Actuator](https://blog.codeleak.pl/2017/03/spring-boot-and-security-events-with-actuator.html)
 - [Spring Boot Actuator](https://www.educba.com/spring-boot-actuator/)

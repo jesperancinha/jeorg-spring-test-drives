@@ -122,6 +122,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ### Online
 
+- [Spring Security Password Encoding](https://www.concretepage.com/spring-5/spring-security-password-encoding)
 - [How does a JPA Proxy work and how to unproxy it with Hibernate](https://vladmihalcea.com/how-does-a-jpa-proxy-work-and-how-to-unproxy-it-with-hibernate/)
 - [Spring - Using TransactionTemplate](https://www.logicbig.com/tutorials/spring-framework/spring-data-access-with-jdbc/transaction-template.html)
 - [Spring Security: Auditing Spring Data Entities](https://blog.jdriven.com/2019/10/spring-security-auditing-spring-data-entities/)
