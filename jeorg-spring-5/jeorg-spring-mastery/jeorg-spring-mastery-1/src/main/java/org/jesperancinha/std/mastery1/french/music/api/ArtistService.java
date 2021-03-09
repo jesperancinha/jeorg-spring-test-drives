@@ -8,4 +8,6 @@ public interface ArtistService {
     List<Artist> getAllArtists();
 
     List<Artist> getArtistsLike(String param);
+
+    void deleteArtistById(Long id);
 }

@@ -29,6 +29,7 @@ public class Mastery1Configuration {
 
     @PostConstruct
     public void afterConfig() {
+        resetAll();
         members.forEach(member -> {
             final Member member1 = new Member();
             member1.setName(member);
@@ -39,6 +40,10 @@ public class Mastery1Configuration {
                     .magenta("for you!!")
                     .toConsoleLn();
         });
+    }
+
+    private void resetAll() {
+        memberRepository.deleteAll();
     }
 
     public String getGroup() {

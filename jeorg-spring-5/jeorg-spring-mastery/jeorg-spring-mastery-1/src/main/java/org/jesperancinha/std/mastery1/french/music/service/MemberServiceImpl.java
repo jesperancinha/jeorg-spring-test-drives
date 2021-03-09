@@ -4,6 +4,9 @@ import org.jesperancinha.std.mastery1.french.music.api.MemberService;
 import org.jesperancinha.std.mastery1.french.music.domain.Member;
 import org.jesperancinha.std.mastery1.french.music.repository.MemberRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,5 +27,18 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public List<Member> getAllMembers() {
         return memberRepository.findAll();
+    }
+
+
+    @Override
+    @Transactional(
+            propagation = Propagation.REQUIRES_NEW,
+            isolation = Isolation.SERIALIZABLE,
+            rollbackFor = RuntimeException.class,
+            rollbackForClassName = "RuntimeException",
+            noRollbackForClassName = "Error",
+            noRollbackFor = Error.class)
+    public void deleteMemberById(Long id) {
+        memberRepository.deleteById(id);
     }
 }

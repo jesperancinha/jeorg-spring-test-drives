@@ -18,6 +18,7 @@ Topics covered:
 3. `@DataJpaTest`, `@ExtendWith(SpringExtension.class)`
 4. `InMemoryAuditEventRepository`, `AbstractAuditListener`, `management.endpoints.web.exposure.include=*`
 5. `@EnableConfigurationProperties`, `@ConfigurationProperties(prefix = "mastery1")`, `@PropertySource("classpath:extras.properties")`
+6. `propagation = Propagation.REQUIRES_NEW`, `isolation = Isolation.SERIALIZABLE`, `rollbackFor = RuntimeException.class`, `rollbackForClassName = "RuntimeException"`, `noRollbackForClassName = "Error"`, `noRollbackFor = Error.class`
 
 ## Endpoints
 
@@ -25,6 +26,14 @@ Topics covered:
 2. [http://localhost:8081/member/search?param=Celine](http://localhost:8081/member/search?param=Celine)
 3. [http://localhost:8081/member](http://localhost:8081/member)
    
+## Command line requests
+
+```bash
+curl -X DELETE http://localhost:8081/member/delete/1
+curl http://localhost:8081/actuator
+curl http://localhost:8081/member
+```
+
 ## References:
 
 ### Context
@@ -233,3 +242,6 @@ Topics covered:
 [![Oracle Certified Associate, Java SE 8 Programmer](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/oracle-certified-associate-java-se-8-programmer-100.png "Oracle Certified Associate, Java SE 8 Programmer")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
 [![Oracle Certified Associate, Java SE 7 Programmer](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/oracle-certified-associate-java-se-7-programmer-100.png "Oracle Certified Associate, Java SE 7 Programmer")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
 [![Oracle Certified Junior Associate](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/oracle-certified-foundations-associate-java-100.png "Oracle Certified Foundations Associate")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
+
+
+

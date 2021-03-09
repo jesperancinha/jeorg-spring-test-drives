@@ -8,4 +8,6 @@ public interface MemberService {
     List<Member> getMembersLike(String param);
 
     List<Member> getAllMembers();
+
+    void deleteMemberById(Long id);
 }

@@ -2,6 +2,8 @@ package org.jesperancinha.std.mastery1.french.music.controller;
 
 import org.jesperancinha.std.mastery1.french.music.api.MemberService;
 import org.jesperancinha.std.mastery1.french.music.domain.Member;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -31,5 +33,14 @@ public class MemberController {
             @RequestParam
             final String param) {
         return memberService.getMembersLike(param);
+    }
+
+    @RequestMapping("/delete/{id}")
+    public @ResponseBody
+    ResponseEntity<Object> deleteMemberById(
+            @PathVariable
+            final Long id) {
+        memberService.deleteMemberById(id);
+        return ResponseEntity.ok().build();
     }
 }
