@@ -22,6 +22,7 @@ Topics covered:
 7. `@Qualifier`, `@DataJpaTest`
 8. `@Query("select m from Member m where m.joinDate is not null")`
 9. `TransactionTemplate`, `PlatformTransactionManager`, `TransactionStatus`
+10. `@Transactional`, `JDK proxies`, `EntityManager`, `getReference`
 
 ## Endpoints
 
@@ -121,6 +122,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ### Online
 
+- [How does a JPA Proxy work and how to unproxy it with Hibernate](https://vladmihalcea.com/how-does-a-jpa-proxy-work-and-how-to-unproxy-it-with-hibernate/)
 - [Spring - Using TransactionTemplate](https://www.logicbig.com/tutorials/spring-framework/spring-data-access-with-jdbc/transaction-template.html)
 - [Spring Security: Auditing Spring Data Entities](https://blog.jdriven.com/2019/10/spring-security-auditing-spring-data-entities/)
 - [Spring Boot and Security Events with Actuator](https://blog.codeleak.pl/2017/03/spring-boot-and-security-events-with-actuator.html)

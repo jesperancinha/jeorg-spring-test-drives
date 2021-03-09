@@ -2,6 +2,7 @@ package org.jesperancinha.std.mastery1.french.music.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,9 +22,10 @@ public class Artist {
     @Column
     private String name;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
     private List<Member> memberList;
 
+    @Column
     private LocalDate foundationDate;
 
     public Long getId() {
@@ -56,5 +58,15 @@ public class Artist {
 
     public void setFoundationDate(LocalDate foundationDate) {
         this.foundationDate = foundationDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Artist{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", memberList=" + memberList +
+                ", foundationDate=" + foundationDate +
+                '}';
     }
 }
