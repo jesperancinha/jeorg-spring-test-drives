@@ -1,6 +1,6 @@
 package org.jesperancinha.std.mastery1.french.music.repository;
 
-import org.jesperancinha.std.mastery1.french.music.configuration.Mastery11Configuration;
+import org.jesperancinha.std.mastery1.french.music.configuration.Mastery1Configuration;
 import org.jesperancinha.std.mastery1.french.music.domain.Member;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,6 +15,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.timeout;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
 
@@ -23,13 +24,17 @@ import static org.mockito.Mockito.verifyNoInteractions;
 class MemberRepositoryTest {
 
     @MockBean
-    private Mastery11Configuration mastery11Configuration;
+    private Mastery1Configuration mastery1Configuration;
 
     @Autowired
     private MemberRepository memberRepository;
 
+    @Autowired
+    private ArtistRepository artistRepository;
+
     @BeforeEach
     public void setUp() {
+        artistRepository.deleteAll();
         memberRepository.deleteAll();
         final Member member = new Member();
         member.setName("Celine Dion");
@@ -39,10 +44,10 @@ class MemberRepositoryTest {
 
     @Test
     void testGetOne_whenFindOne_thenMatch() {
-        final Member member = memberRepository.getOne(3L);
+        final Member member = memberRepository.getOne(1L);
         assertThat(member).isNotNull();
         assertThat(member.getName()).isEqualTo("Celine Dion");
-        assertThat(member.getId()).isGreaterThanOrEqualTo(3L);
+        assertThat(member.getId()).isGreaterThanOrEqualTo(1L);
     }
 
     @Test
@@ -55,13 +60,12 @@ class MemberRepositoryTest {
         final LocalDate joinDate = member.getJoinDate();
         assertThat(joinDate).isNotNull();
         assertThat(joinDate.getYear()).isEqualTo(1981);
-        assertThat(member.getId()).isGreaterThanOrEqualTo(3L);
+        assertThat(member.getId()).isGreaterThanOrEqualTo(1L);
     }
 
-
     @AfterEach
-    public void tearDown(){
-        verifyNoInteractions(mastery11Configuration);
+    public void tearDown() {
+        verify(mastery1Configuration, timeout(1)).makeAllTest();
     }
 
 }

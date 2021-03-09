@@ -52,4 +52,9 @@ public class Mastery12Configuration implements Mastery1Configuration {
     public void setMembers(List<String> members) {
         this.members = members;
     }
+
+    @Override
+    public void makeAllTest() {
+
+    }
 }
