@@ -21,13 +21,15 @@ Topics covered:
 6. `propagation = Propagation.REQUIRES_NEW`, `isolation = Isolation.SERIALIZABLE`, `rollbackFor = RuntimeException.class`, `rollbackForClassName = "RuntimeException"`, `noRollbackForClassName = "Error"`, `noRollbackFor = Error.class`
 7. `@Qualifier`, `@DataJpaTest`
 8. `@Query("select m from Member m where m.joinDate is not null")`
+9. `TransactionTemplate`, `PlatformTransactionManager`, `TransactionStatus`
 
 ## Endpoints
 
 1. [http://localhost:8081/actuator](http://localhost:8081/actuator)
 2. [http://localhost:8081/member/search?param=Celine](http://localhost:8081/member/search?param=Celine)
 3. [http://localhost:8081/member](http://localhost:8081/member)
-   
+4. [http://localhost:8081/member/nonnull/](http://localhost:8081/member/nonnull/)
+
 ## Command line reque   sts
 
 ```bash
@@ -36,6 +38,8 @@ curl http://localhost:8081/actuator
 curl http://localhost:8081/member
 curl http://localhost:8081/member/search?param=Celine
 curl http://localhost:8081/member/nonnull/
+curl -X POST -H 'Content-Type: application/json' http://localhost:8081/member/create --data '{"name":"Françoise Hardy","joinDate":"1960-01-01"}'
+curl -X POST -H 'Content-Type: application/json' http://localhost:8081/member/create/rollback --data '{"name":"Françoise Hardy","joinDate":"1960-01-01"}'
 ```
 
 ## How to run
@@ -56,6 +60,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ### Context
 
+- [Françoise Hardy](https://en.wikipedia.org/wiki/Fran%C3%A7oise_Hardy)
 - [Ensemble (album caritatif)](https://fr.wikipedia.org/wiki/Ensemble_(album_caritatif))
 - [Sidaction. "Sa Raison d’être" fête ses 20 ans et s'offre un coup de jeune](https://www.ouest-france.fr/culture/musiques/sidaction-sa-raison-d-etre-fete-ses-20-ans-et-s-offre-un-coup-de-jeune-5640465)
 - [SA RAISON D'ÊTRE, 2018](https://www.sidaction.org/actualites/sa-raison-detre-2018-690)
@@ -116,6 +121,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ### Online
 
+- [Spring - Using TransactionTemplate](https://www.logicbig.com/tutorials/spring-framework/spring-data-access-with-jdbc/transaction-template.html)
 - [Spring Security: Auditing Spring Data Entities](https://blog.jdriven.com/2019/10/spring-security-auditing-spring-data-entities/)
 - [Spring Boot and Security Events with Actuator](https://blog.codeleak.pl/2017/03/spring-boot-and-security-events-with-actuator.html)
 - [Spring Boot Actuator](https://www.educba.com/spring-boot-actuator/)

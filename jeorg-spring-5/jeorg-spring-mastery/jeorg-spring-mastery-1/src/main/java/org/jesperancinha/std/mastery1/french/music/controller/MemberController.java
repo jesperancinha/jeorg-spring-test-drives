@@ -1,9 +1,13 @@
 package org.jesperancinha.std.mastery1.french.music.controller;
 
 import org.jesperancinha.std.mastery1.french.music.api.MemberService;
+import org.jesperancinha.std.mastery1.french.music.dao.MemberBean;
+import org.jesperancinha.std.mastery1.french.music.dao.MemberDao;
 import org.jesperancinha.std.mastery1.french.music.domain.Member;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,8 +21,11 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    public MemberController(MemberService memberService) {
+    private final MemberBean memberBean;
+
+    public MemberController(MemberService memberService, MemberDao memberBean, MemberBean memberDao1) {
         this.memberService = memberService;
+        this.memberBean = memberDao1;
     }
 
     @RequestMapping
@@ -48,5 +55,14 @@ public class MemberController {
             final Long id) {
         memberService.deleteMemberById(id);
         return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/create/rollback")
+    public void createMemberRollback(@RequestBody final Member member){
+        memberBean.persistMemberRollback(member);
+    }
+    @PostMapping("/create")
+    public void createMember(@RequestBody final Member member){
+        memberBean.persistMember(member);
     }
 }

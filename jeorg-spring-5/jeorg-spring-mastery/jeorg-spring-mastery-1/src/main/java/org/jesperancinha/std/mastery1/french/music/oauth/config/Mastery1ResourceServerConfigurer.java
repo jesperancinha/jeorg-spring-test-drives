@@ -51,7 +51,10 @@ public class Mastery1ResourceServerConfigurer extends ResourceServerConfigurerAd
                 .authenticated()
                 .and()
                 .exceptionHandling()
-                .accessDeniedHandler(new OAuth2AccessDeniedHandler());
+                .accessDeniedHandler(new OAuth2AccessDeniedHandler())
+                .and()
+                .csrf()
+                .disable();
     }
 
 }
