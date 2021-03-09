@@ -41,4 +41,9 @@ public class MemberServiceImpl implements MemberService {
     public void deleteMemberById(Long id) {
         memberRepository.deleteById(id);
     }
+
+    @Override
+    public List<Member> getAllDateNonNullMembers() {
+        return memberRepository.getAllDateNonNullMembers();
+    }
 }

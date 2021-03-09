@@ -20,6 +20,7 @@ Topics covered:
 5. `@EnableConfigurationProperties`, `@ConfigurationProperties(prefix = "mastery1")`, `@PropertySource("classpath:extras.properties")`
 6. `propagation = Propagation.REQUIRES_NEW`, `isolation = Isolation.SERIALIZABLE`, `rollbackFor = RuntimeException.class`, `rollbackForClassName = "RuntimeException"`, `noRollbackForClassName = "Error"`, `noRollbackFor = Error.class`
 7. `@Qualifier`, `@DataJpaTest`
+8. `@Query("select m from Member m where m.joinDate is not null")`
 
 ## Endpoints
 
@@ -34,6 +35,7 @@ curl -X DELETE http://localhost:8081/member/delete/1
 curl http://localhost:8081/actuator
 curl http://localhost:8081/member
 curl http://localhost:8081/member/search?param=Celine
+curl http://localhost:8081/member/nonnull/
 ```
 
 ## How to run

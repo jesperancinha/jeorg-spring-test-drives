@@ -35,6 +35,12 @@ public class MemberController {
         return memberService.getMembersLike(param);
     }
 
+    @RequestMapping("/nonnull")
+    public @ResponseBody
+    List<Member> getNonNullArtists() {
+        return memberService.getAllDateNonNullMembers();
+    }
+
     @RequestMapping("/delete/{id}")
     public @ResponseBody
     ResponseEntity<Object> deleteMemberById(
