@@ -19,6 +19,7 @@ Topics covered:
 4. `InMemoryAuditEventRepository`, `AbstractAuditListener`, `management.endpoints.web.exposure.include=*`
 5. `@EnableConfigurationProperties`, `@ConfigurationProperties(prefix = "mastery1")`, `@PropertySource("classpath:extras.properties")`
 6. `propagation = Propagation.REQUIRES_NEW`, `isolation = Isolation.SERIALIZABLE`, `rollbackFor = RuntimeException.class`, `rollbackForClassName = "RuntimeException"`, `noRollbackForClassName = "Error"`, `noRollbackFor = Error.class`
+7. `@Qualifier`, `@DataJpaTest`
 
 ## Endpoints
 
@@ -26,12 +27,27 @@ Topics covered:
 2. [http://localhost:8081/member/search?param=Celine](http://localhost:8081/member/search?param=Celine)
 3. [http://localhost:8081/member](http://localhost:8081/member)
    
-## Command line requests
+## Command line reque   sts
 
 ```bash
 curl -X DELETE http://localhost:8081/member/delete/1
 curl http://localhost:8081/actuator
 curl http://localhost:8081/member
+curl http://localhost:8081/member/search?param=Celine
+```
+
+## How to run
+
+1. Running with the default profile
+
+```bash
+mvn clean install spring-boot:run
+```
+
+2. Running with the prod profile
+
+```bash
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
 ## References:

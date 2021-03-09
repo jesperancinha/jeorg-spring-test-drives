@@ -1,21 +1,29 @@
 package org.jesperancinha.std.mastery1.french.music.repository;
 
+import org.jesperancinha.std.mastery1.french.music.configuration.Mastery11Configuration;
 import org.jesperancinha.std.mastery1.french.music.domain.Member;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoInteractions;
 
-@ExtendWith(SpringExtension.class)
 @DataJpaTest
+@ExtendWith(SpringExtension.class)
 class MemberRepositoryTest {
+
+    @MockBean
+    private Mastery11Configuration mastery11Configuration;
 
     @Autowired
     private MemberRepository memberRepository;
@@ -49,4 +57,11 @@ class MemberRepositoryTest {
         assertThat(joinDate.getYear()).isEqualTo(1981);
         assertThat(member.getId()).isGreaterThanOrEqualTo(3L);
     }
+
+
+    @AfterEach
+    public void tearDown(){
+        verifyNoInteractions(mastery11Configuration);
+    }
+
 }
