@@ -15,9 +15,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.timeout;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoInteractions;
 
 @DataJpaTest
 @ExtendWith(SpringExtension.class)
@@ -65,7 +62,6 @@ class MemberRepositoryTest {
 
     @AfterEach
     public void tearDown() {
-        verify(mastery1Configuration, timeout(1)).makeAllTest();
     }
 
 }
