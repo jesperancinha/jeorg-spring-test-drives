@@ -87,7 +87,8 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder`, `authentication-manager`, `authentication-provider`, `password-encoder`,
 `@RepositoryDefinition`,
 `@Component`, `ApplicationContext`,
-`SpringBootContextLoader`, `CacheAwareContextLoaderDelegate`, `BootstrapContext`, `SpringBootTestContextBootstrapper`, `MergedContextConfiguration`, `AssertableApplicationContext`
+`SpringBootContextLoader`, `CacheAwareContextLoaderDelegate`, `BootstrapContext`, `SpringBootTestContextBootstrapper`, `MergedContextConfiguration`, `AssertableApplicationContext`,
+`@SpringBootApplication`, `@Target`, `@Retention`, `@Documented`, `@Inherited`, `@SpringBootConfiguration`, `@EnableAutoConfiguration`, `@ComponentScan`, `@ConfigurationProperties`
 
 
 ## References
