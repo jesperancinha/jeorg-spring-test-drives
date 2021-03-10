@@ -89,8 +89,8 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@Component`, `ApplicationContext`,
 `SpringBootContextLoader`, `CacheAwareContextLoaderDelegate`, `BootstrapContext`, `SpringBootTestContextBootstrapper`, `MergedContextConfiguration`, `AssertableApplicationContext`,
 `@SpringBootApplication`, `@Target`, `@Retention`, `@Documented`, `@Inherited`, `@SpringBootConfiguration`, `@EnableAutoConfiguration`, `@ComponentScan`, `@ConfigurationProperties`,
-`AbstractHttpMessageConverter`, `HttpMessageConverter`
-
+`AbstractHttpMessageConverter`, `HttpMessageConverter`,
+`@ExtendWith(SpringExtension.class)`, `@AutoConfigureMockMvc`, `@WebMvcTest(VampireController.class)`, `@ContextConfiguration(classes = VampireController.class)`
 
 ## References
 
