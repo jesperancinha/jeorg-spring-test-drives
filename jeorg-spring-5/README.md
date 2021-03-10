@@ -30,6 +30,22 @@ SPRING 5 study project.
 
 This project is intended as a study tool for Spring version 5.
 
+## Contents
+
+1. [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
+2. [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
+3. [jeorg-spring-flash](./jeorg-spring-flash) - ⚡️ Fast track modules about Spring Boot 5
+   1. [jeorg-spring-flash-set-1](./jeorg-spring-flash/jeorg-spring-flash-set-1) - ⚡️ Fast track modules about Spring Boot 5 - Set 1 with 20 modules
+   2. [jeorg-spring-flash-set-2](./jeorg-spring-flash/jeorg-spring-flash-set-2) - ⚡️ Fast track modules about Spring Boot 5 - Set 2 with 20 modules
+   3. [jeorg-spring-flash-set-3](./jeorg-spring-flash/jeorg-spring-flash-set-3) - ⚡️ Fast track modules about Spring Boot 5 - Set 3 with 20 modules
+   4. [jeorg-spring-flash-set-4](./jeorg-spring-flash/jeorg-spring-flash-set-4) - ⚡️ Fast track modules about Spring Boot 5 - Set 4 with 20 modules
+4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
+   1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
+5. [jeorg-spring-mastery](./jeorg-spring-mastery) - ⚔️ Mastery modules - Each module is a combination of different concepts of the Spring framework
+   1. [jeorg-spring-mastery-1](./jeorg-spring-mastery/jeorg-spring-mastery-1) - 🇫🇷 French Language in Music
+   2. [jeorg-spring-mastery-2](./jeorg-spring-mastery/jeorg-spring-mastery-2) - 🇵🇹 Portuguese Language in Music
+
+## Installation Notes
 I'm using JDK version 11.0.9.hs-adpt for all of these tests.
 
 ```bash
@@ -50,30 +66,7 @@ In IntelliJ as an example:
 
 ![alt img](./docs/workingdirectory.png)
 
-## Contents:
-
-1. [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
-2. [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
-3. [jeorg-spring-flash](./jeorg-spring-flash) - ⚡️ Fast track modules about Spring Boot 5
-   1. [jeorg-spring-flash-set-1](./jeorg-spring-flash/jeorg-spring-flash-set-1) - ⚡️ Fast track modules about Spring Boot 5 - Set 1 with 20 modules
-   2. [jeorg-spring-flash-set-2](./jeorg-spring-flash/jeorg-spring-flash-set-2) - ⚡️ Fast track modules about Spring Boot 5 - Set 2 with 20 modules
-   3. [jeorg-spring-flash-set-3](./jeorg-spring-flash/jeorg-spring-flash-set-3) - ⚡️ Fast track modules about Spring Boot 5 - Set 3 with 20 modules
-   4. [jeorg-spring-flash-set-4](./jeorg-spring-flash/jeorg-spring-flash-set-4) - ⚡️ Fast track modules about Spring Boot 5 - Set 4 with 20 modules
-4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
-    1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
-5. [jeorg-spring-mastery](./jeorg-spring-mastery) - ⚔️ Mastery modules - Each module is a combination of different concepts of the Spring framework
-   1. [jeorg-spring-mastery-1](./jeorg-spring-mastery/jeorg-spring-mastery-1) - 🇫🇷 French Language in Music
-   2. [jeorg-spring-mastery-2](./jeorg-spring-mastery/jeorg-spring-mastery-2) - 🇵🇹 Portuguese Language in Music
-
-## References:
-
-### Online
-
-- [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
-- [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
-- [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
-- [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
-- [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
+## References]
 
 ### Books
 
@@ -83,6 +76,14 @@ In IntelliJ as an example:
 - Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 - Kurniawan, B. Deck, P. (January 2015). <i>Servlet, JSP & Spring MVC</i>. (First Edition). Brainy Software
 - Long, J. (2020). <i>Reactive Spring</i>. (First Edition). Josh Long
+
+### Online
+
+- [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
+- [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
+- [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
+- [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
+- [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
 
 ## About me 👨🏽‍💻🚀
 
