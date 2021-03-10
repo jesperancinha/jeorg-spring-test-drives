@@ -13,6 +13,7 @@ Portugues language in music 🇵🇹
 
 Topics covered:
 
+1. `application.properties`, `H2 database`
 
 ## Endpoints
 
@@ -35,6 +36,8 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ## References:
 
 ### Context
+
+- [EMI](https://en.wikipedia.org/wiki/EMI)
 
 <div align="center">
       <a title="António Variações última atuação em televisão." href="https://www.youtube.com/watch?v=6YkR1WRsXZo">
