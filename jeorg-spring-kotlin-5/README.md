@@ -35,6 +35,7 @@ SPRING 5 study project in Kotlin
 
 ### Online
 
+- [Automatic Rollback of Transactions in Spring Tests](https://relentlesscoding.com/posts/automatic-rollback-of-transactions-in-spring-tests/)
 - [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
 - [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
 - [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)

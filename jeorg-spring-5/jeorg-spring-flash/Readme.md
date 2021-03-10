@@ -93,7 +93,8 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@ExtendWith(SpringExtension.class)`, `@AutoConfigureMockMvc`, `@WebMvcTest(VampireController.class)`, `@ContextConfiguration(classes = VampireController.class)`,
 `management.server.port`, `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `server.port`,
 `@ControllerAdvice`, `@ExceptionHandler`, `ResponseEntityExceptionHandler`,
-`TestApplicationContext`, `ApplicationContext`, `WebApplicationContext`
+`TestApplicationContext`, `ApplicationContext`, `WebApplicationContext`,
+`@Rollback`, `@Commit`
 
 ## References
 
