@@ -28,19 +28,9 @@
 
 SPRING 5 study project in Kotlin
 
-
 ## Contents:
 
 ## References:
-
-### Online
-
-- [Automatic Rollback of Transactions in Spring Tests](https://relentlesscoding.com/posts/automatic-rollback-of-transactions-in-spring-tests/)
-- [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
-- [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
-- [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
-- [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
-- [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
 
 ### Books
 
@@ -51,6 +41,16 @@ SPRING 5 study project in Kotlin
 - Kurniawan, B. Deck, P. (January 2015). <i>Servlet, JSP & Spring MVC</i>. (First Edition). Brainy Software
 - Long, J. (2020). <i>Reactive Spring</i>. (First Edition). Josh Long
 - Vasic, M. (21st May 2018). <i>Building Applications with Spring 5 and Kotlin</i>. (First Edition). Packt Publishing
+
+### Online
+
+- [Maven for Kotlin](https://kotlinlang.org/docs/maven.html#attributes-specific-for-jvm)
+- [Automatic Rollback of Transactions in Spring Tests](https://relentlesscoding.com/posts/automatic-rollback-of-transactions-in-spring-tests/)
+- [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
+- [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
+- [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
+- [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
+- [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
 
 ## About me 👨🏽‍💻🚀
 

@@ -3,16 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>jeorg-spring-5-test-drives</artifactId>
+        <artifactId>jeorg-spring-kotlin-5</artifactId>
         <groupId>org.jesperancinha.std</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jeorg-spring-kotlin-5</artifactId>
-    <modules>
-        <module>jeorg-spring-kotlin-mastery</module>
-    </modules>
+    <artifactId>jeorg-spring-kotlin-mastery</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -20,4 +17,8 @@
     </properties>
 
     <packaging>pom</packaging>
+
+    <modules>
+        <module>jeorg-spring-kotlin-mastery-1</module>
+    </modules>
 </project>
