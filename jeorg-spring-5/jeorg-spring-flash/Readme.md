@@ -88,7 +88,8 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@RepositoryDefinition`,
 `@Component`, `ApplicationContext`,
 `SpringBootContextLoader`, `CacheAwareContextLoaderDelegate`, `BootstrapContext`, `SpringBootTestContextBootstrapper`, `MergedContextConfiguration`, `AssertableApplicationContext`,
-`@SpringBootApplication`, `@Target`, `@Retention`, `@Documented`, `@Inherited`, `@SpringBootConfiguration`, `@EnableAutoConfiguration`, `@ComponentScan`, `@ConfigurationProperties`
+`@SpringBootApplication`, `@Target`, `@Retention`, `@Documented`, `@Inherited`, `@SpringBootConfiguration`, `@EnableAutoConfiguration`, `@ComponentScan`, `@ConfigurationProperties`,
+`AbstractHttpMessageConverter`, `HttpMessageConverter`
 
 
 ## References
