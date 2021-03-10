@@ -91,7 +91,8 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@SpringBootApplication`, `@Target`, `@Retention`, `@Documented`, `@Inherited`, `@SpringBootConfiguration`, `@EnableAutoConfiguration`, `@ComponentScan`, `@ConfigurationProperties`,
 `AbstractHttpMessageConverter`, `HttpMessageConverter`,
 `@ExtendWith(SpringExtension.class)`, `@AutoConfigureMockMvc`, `@WebMvcTest(VampireController.class)`, `@ContextConfiguration(classes = VampireController.class)`,
-`management.server.port`, `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `server.port`
+`management.server.port`, `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `server.port`,
+`@ControllerAdvice`, `@ExceptionHandler`, `ResponseEntityExceptionHandler`
 
 ## References
 
