@@ -66,7 +66,7 @@ In IntelliJ as an example:
 
 ![alt img](./docs/workingdirectory.png)
 
-## References]
+## References
 
 ### Books
 

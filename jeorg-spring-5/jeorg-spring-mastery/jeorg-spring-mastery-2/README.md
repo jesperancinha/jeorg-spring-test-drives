@@ -1,4 +1,4 @@
-# jeorg-spring-mastery-1 - Spring Mastery 1
+# jeorg-spring-mastery-2 - Spring Mastery 2
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
@@ -9,39 +9,14 @@
 
 ## Description
 
-French language in music
+Portugues language in music 🇵🇹
 
 Topics covered:
 
-1. `@ResponseBody`, `@RequestMapping`, `@RequestParam`
-2. `AuthenticationProvider`, `AuthorizationServerConfigurerAdapter`, `WebSecurityConfigurerAdapter`, `ResourceServerConfigurerAdapter`, `TokenStore`
-3. `@DataJpaTest`, `@ExtendWith(SpringExtension.class)`
-4. `InMemoryAuditEventRepository`, `AbstractAuditListener`, `management.endpoints.web.exposure.include=*`
-5. `@EnableConfigurationProperties`, `@ConfigurationProperties(prefix = "mastery1")`, `@PropertySource("classpath:extras.properties")`
-6. `propagation = Propagation.REQUIRES_NEW`, `isolation = Isolation.SERIALIZABLE`, `rollbackFor = RuntimeException.class`, `rollbackForClassName = "RuntimeException"`, `noRollbackForClassName = "Error"`, `noRollbackFor = Error.class`
-7. `@Qualifier`, `@DataJpaTest`
-8. `@Query("select m from Member m where m.joinDate is not null")`
-9. `TransactionTemplate`, `PlatformTransactionManager`, `TransactionStatus`
-10. `@Transactional`, `JDK proxies`, `EntityManager`, `getReference`
 
 ## Endpoints
 
-1. [http://localhost:8081/actuator](http://localhost:8081/actuator)
-2. [http://localhost:8081/member/search?param=Celine](http://localhost:8081/member/search?param=Celine)
-3. [http://localhost:8081/member](http://localhost:8081/member)
-4. [http://localhost:8081/member/nonnull/](http://localhost:8081/member/nonnull/)
-
 ## Command line requests
-
-```bash
-curl -X DELETE http://localhost:8081/member/delete/1
-curl http://localhost:8081/actuator
-curl http://localhost:8081/member
-curl http://localhost:8081/member/search?param=Celine
-curl http://localhost:8081/member/nonnull/
-curl -X POST -H 'Content-Type: application/json' http://localhost:8081/member/create --data '{"name":"Françoise Hardy","joinDate":"1960-01-01"}'
-curl -X POST -H 'Content-Type: application/json' http://localhost:8081/member/create/rollback --data '{"name":"Françoise Hardy","joinDate":"1960-01-01"}'
-```
 
 ## How to run
 
@@ -61,61 +36,63 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ### Context
 
-- [Françoise Hardy](https://en.wikipedia.org/wiki/Fran%C3%A7oise_Hardy)
-- [Ensemble (album caritatif)](https://fr.wikipedia.org/wiki/Ensemble_(album_caritatif))
-- [Sidaction. "Sa Raison d’être" fête ses 20 ans et s'offre un coup de jeune](https://www.ouest-france.fr/culture/musiques/sidaction-sa-raison-d-etre-fete-ses-20-ans-et-s-offre-un-coup-de-jeune-5640465)
-- [SA RAISON D'ÊTRE, 2018](https://www.sidaction.org/actualites/sa-raison-detre-2018-690)
-- [Céline Dion](https://en.wikipedia.org/wiki/Celine_Dion)
-- [Kate Ryan](https://en.wikipedia.org/wiki/Kate_Ryan)
-
 <div align="center">
-      <a title="Celine Dion - On ne change pas" href="https://www.youtube.com/watch?v=3tOsUgwBgko">
+      <a title="António Variações última atuação em televisão." href="https://www.youtube.com/watch?v=6YkR1WRsXZo">
      <img 
-          src="https://img.youtube.com/vi/3tOsUgwBgko/0.jpg" 
+          src="https://img.youtube.com/vi/6YkR1WRsXZo/0.jpg" 
           style="width:10%;">
       </a>
-      <a title="Ensemble - Sidaction - Sa raison d'être" href="https://www.youtube.com/watch?v=2KRvvRN8hMc">
+      <a title="António Variações - O corpo é que paga" href="https://www.youtube.com/watch?v=h7CyAKyE-FM">
      <img 
-          src="https://img.youtube.com/vi/2KRvvRN8hMc/0.jpg" 
+          src="https://img.youtube.com/vi/h7CyAKyE-FM/0.jpg" 
           style="width:10%;">
       </a>
 </div>
-
 <div align="center">
-      <a title="Sidaction - Sa raison d'être 2018 (Clip officiel)" href="https://www.youtube.com/watch?v=EZeUDEahOOg">
+      <a title="António Variações | Povo que lavas no rio" href="https://www.youtube.com/watch?v=Sxjasfl2Y_w">
      <img 
-          src="https://img.youtube.com/vi/EZeUDEahOOg/0.jpg" 
+          src="https://img.youtube.com/vi/Sxjasfl2Y_w/0.jpg" 
           style="width:10%;">
       </a>
-      <a title="Celine Dion - Dans Un Autre Monde (Live In Paris at the Stade de France 1999) HDTV 720p" href="https://www.youtube.com/watch?v=vBm3bPlOCks">
+      <a title="Eurovision Portugal 1981 - Carlos Paião - Play Back" href="https://www.youtube.com/watch?v=GhXf9ZO06U0">
      <img 
-          src="https://img.youtube.com/vi/vBm3bPlOCks/0.jpg" 
+          src="https://img.youtube.com/vi/GhXf9ZO06U0/0.jpg" 
           style="width:10%;">
       </a>
 </div>
-
 <div align="center">
-      <a title="Kate Ryan - Ella Elle L'a" href="https://www.youtube.com/watch?v=Oqd9lzMP1V8">
+      <a title="Taxi - Cairo" href="https://www.youtube.com/watch?v=JCaD2qQXG8I">
      <img 
-          src="https://img.youtube.com/vi/Oqd9lzMP1V8/0.jpg" 
+          src="https://img.youtube.com/vi/JCaD2qQXG8I/0.jpg" 
           style="width:10%;">
       </a>
-      <a title="Kate Ryan - Voyage Voyage" href="https://www.youtube.com/watch?v=XT9IDo-vF5k">
+      <a title="Táxi - Chiclete" href="https://www.youtube.com/watch?v=qc0ZwEDGq6U">
      <img 
-          src="https://img.youtube.com/vi/XT9IDo-vF5k/0.jpg" 
+          src="https://img.youtube.com/vi/qc0ZwEDGq6U/0.jpg" 
           style="width:10%;">
       </a>
 </div>
-
 <div align="center">
-      <a title="Francoise Hardy - Tous Les Garcons" href="https://www.youtube.com/watch?v=_V-b8QIYOpM">
+      <a title="Pedro Abrunhosa & Os Bandemónio - Tudo O Que Eu Te Dou" href="https://www.youtube.com/watch?v=CN-esU1WCw0">
      <img 
-          src="https://img.youtube.com/vi/_V-b8QIYOpM/0.jpg" 
+          src="https://img.youtube.com/vi/CN-esU1WCw0/0.jpg" 
           style="width:10%;">
       </a>
-      <a title="Keen'v - Je garde le sourire" href="https://www.youtube.com/watch?v=n0OhBErtT-c">
+      <a title="Xutos e Pontapés - Contentores" href="https://www.youtube.com/watch?v=ImeAInvGrY4">
      <img 
-          src="https://img.youtube.com/vi/n0OhBErtT-c/0.jpg" 
+          src="https://img.youtube.com/vi/ImeAInvGrY4/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a title="Sétima Legião - SETE MARES - 7 SEAS" href="https://www.youtube.com/watch?v=NmlDjghuTsw">
+     <img 
+          src="https://img.youtube.com/vi/NmlDjghuTsw/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="SÉTIMA LEGIÃO - Por quem não esqueci" href="https://www.youtube.com/watch?v=BHsKYG-Cs60">
+     <img 
+          src="https://img.youtube.com/vi/BHsKYG-Cs60/0.jpg" 
           style="width:10%;">
       </a>
 </div>
