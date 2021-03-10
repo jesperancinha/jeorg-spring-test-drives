@@ -8,16 +8,23 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.context.ApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.web.FilterChainProxy;
 
+import javax.servlet.FilterChain;
 import java.time.LocalDate;
 import java.util.List;
 
 @SpringBootApplication
 @EnableJpaRepositories
+@EnableWebSecurity
 public class Mastery2PortugueseMusicLauncher implements CommandLineRunner {
 
     private final PublisherRepository publisherRepository;
+
+    private final ApplicationContext applicationContext;
 
     @Value("${management.server.port}")
     private Long actuatorPort;
@@ -25,9 +32,9 @@ public class Mastery2PortugueseMusicLauncher implements CommandLineRunner {
     @LocalServerPort
     private Long serverPort;
 
-
-    public Mastery2PortugueseMusicLauncher(PublisherRepository publisherRepository) {
+    public Mastery2PortugueseMusicLauncher(PublisherRepository publisherRepository, ApplicationContext applicationContext) {
         this.publisherRepository = publisherRepository;
+        this.applicationContext = applicationContext;
     }
 
     public static void main(String[] args) {
@@ -69,6 +76,13 @@ public class Mastery2PortugueseMusicLauncher implements CommandLineRunner {
                 .orange(serverPort)
                 .newLine()
                 .magenta("The server port can be shared with the actuator.")
+                .toConsoleLn();
+
+        FilterChainProxy springSecurityFilterChain = applicationContext.getBean("springSecurityFilterChain", FilterChainProxy.class);
+
+        ConsolerizerComposer.out(" ")
+                .green(springSecurityFilterChain)
+                .orange(springSecurityFilterChain.getFilterChains())
                 .toConsoleLn();
     }
 }

@@ -15,6 +15,7 @@ Topics covered:
 
 1. `application.properties`, `H2 database`
 2. `@LocalServerPort`, `@Value`
+3. `FilterChainProxy`, `springSecurityFilterChain`
 
 ## Endpoints
 
@@ -35,6 +36,13 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
 ## References:
+
+### Books
+
+-   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
+-   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
+-   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
+-   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 
 ### Context
 
@@ -103,6 +111,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ### Online
 
+- [Spring Security - Understanding Spring Security Configuration and components](https://www.logicbig.com/tutorials/spring-framework/spring-security/spring-security-components-and-configuration.html)
 - [Spring Security Password Encoding](https://www.concretepage.com/spring-5/spring-security-password-encoding)
 - [How does a JPA Proxy work and how to unproxy it with Hibernate](https://vladmihalcea.com/how-does-a-jpa-proxy-work-and-how-to-unproxy-it-with-hibernate/)
 - [Spring - Using TransactionTemplate](https://www.logicbig.com/tutorials/spring-framework/spring-data-access-with-jdbc/transaction-template.html)
@@ -188,13 +197,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 - [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
 - [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
 - [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
-
-### Books
-
--   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
--   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
--   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
--   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 
 ## About me 👨🏽‍💻🚀
 
