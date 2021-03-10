@@ -9,11 +9,12 @@
 
 ## Description
 
-Portugues language in music 🇵🇹
+Portuguese language in music 🇵🇹
 
 Topics covered:
 
 1. `application.properties`, `H2 database`
+2. `@LocalServerPort`, `@Value`
 
 ## Endpoints
 
