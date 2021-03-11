@@ -16,6 +16,7 @@ Topics covered:
 1. `application.properties`, `H2 database`
 2. `@LocalServerPort`, `@Value`
 3. `FilterChainProxy`, `springSecurityFilterChain`
+4. `@WithMockUser(username = "admin", password = "admin", roles = "ADMIN", value = "admin")`
 
 ## Endpoints
 

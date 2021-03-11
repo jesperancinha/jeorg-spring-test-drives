@@ -10,16 +10,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.FilterChainProxy;
 
-import javax.servlet.FilterChain;
 import java.time.LocalDate;
 import java.util.List;
 
 @SpringBootApplication
 @EnableJpaRepositories
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class Mastery2PortugueseMusicLauncher implements CommandLineRunner {
 
     private final PublisherRepository publisherRepository;
