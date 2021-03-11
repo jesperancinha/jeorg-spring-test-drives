@@ -14,6 +14,7 @@ import org.springframework.security.authentication.AuthenticationCredentialsNotF
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.SqlConfig;
 import org.springframework.test.context.jdbc.SqlGroup;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
@@ -57,7 +58,9 @@ class ArtistServiceImplTest {
     @SqlGroup(
             {
                     @Sql(scripts = "classpath:artists.sql"),
-                    @Sql(scripts = "classpath:cleanup.sql", executionPhase = AFTER_TEST_METHOD),
+                    @Sql(scripts = "classpath:cleanup.sql",
+                            executionPhase = AFTER_TEST_METHOD,
+                            config = @SqlConfig(transactionMode = SqlConfig.TransactionMode.ISOLATED)),
             }
     )
     void testListArtistsWithSQL_whenListAll_thenGetAList() {
