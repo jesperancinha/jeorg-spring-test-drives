@@ -13,10 +13,13 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.SqlGroup;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.AFTER_TEST_METHOD;
 
 @Transactional
 @SpringBootTest
@@ -51,6 +54,26 @@ class ArtistServiceImplTest {
     }
 
     @Test
+    @SqlGroup(
+            {
+                    @Sql(scripts = "classpath:artists.sql"),
+                    @Sql(scripts = "classpath:cleanup.sql", executionPhase = AFTER_TEST_METHOD),
+            }
+    )
+    void testListArtistsWithSQL_whenListAll_thenGetAList() {
+        final var artists = artistService.listArtists();
+
+        assertThat(artists).hasSize(2);
+        final var actual = artists.get(0);
+        assertThat(actual.getName()).isEqualTo("António Variações");
+        assertThat(actual.getNationality()).isEqualTo("Portuguese");
+        final var actual2 = artists.get(1);
+        assertThat(actual2.getName()).isEqualTo("Rádio Macau");
+        assertThat(actual2.getNationality()).isEqualTo("Portuguese");
+
+    }
+
+    @Test
     void testGetArtistByNameUnauthenticated_whenGetArtist_thenFail() {
 
         Assertions.assertThrows(AuthenticationCredentialsNotFoundException.class
@@ -65,7 +88,10 @@ class ArtistServiceImplTest {
     }
 
     @Test
-    @WithMockUser(username = "admin", password = "admin", roles = "ADMIN", value = "admin")
+    @WithMockUser(username = "admin",
+            password = "admin",
+            roles = "ADMIN",
+            value = "admin")
     void testGetArtistByName_whenGetArtist_thenGetArtist() {
         final var actual = artistService.getArtistByName("António");
 

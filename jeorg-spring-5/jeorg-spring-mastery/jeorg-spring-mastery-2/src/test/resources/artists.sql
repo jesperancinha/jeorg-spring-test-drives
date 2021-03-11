@@ -1,0 +1,1 @@
+insert into artist(id, name, nationality)values(10, 'Rádio Macau', 'Portuguese');
