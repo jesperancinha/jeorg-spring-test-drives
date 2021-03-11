@@ -1,32 +1,33 @@
-# jeorg-spring-flash-set-3
+# jeorg-spring-flash-set-5
 
 ## Contents
 
-1. [jeorg-spring-flash-3-1](./jeorg-spring-flash-3-1) - 📖 DisposableBean and InitializingBean
-2. [jeorg-spring-flash-3-2](./jeorg-spring-flash-3-2) - ⏰ RowCallbackHandler
-3. [jeorg-spring-flash-3-3](./jeorg-spring-flash-3-3) - 🧠 @Transactional Exception Handling
-4. [jeorg-spring-flash-3-4](./jeorg-spring-flash-3-4) - 🪵 AnnotationConfigWebApplicationContext
-5. [jeorg-spring-flash-3-5](./jeorg-spring-flash-3-5) - 🗿 AnnotationConfigWebApplicationContext
-6. [jeorg-spring-flash-3-6](./jeorg-spring-flash-3-6) - 🍅 CGLib
-7. [jeorg-spring-flash-3-7](./jeorg-spring-flash-3-7) - 🎸 @Aspect, @Before, @After, @Around
-8. [jeorg-spring-flash-3-8](./jeorg-spring-flash-3-8) - 🤵🏻‍♂️ @ModelAttribute
-9. [jeorg-spring-flash-3-9](./jeorg-spring-flash-3-9) - 🍃️ Enhancer and private methods in CGLib
-10. [jeorg-spring-flash-3-10](./jeorg-spring-flash-3-10) - 🎸 Serialize and Deserialize with @JsonComponent
-11. [jeorg-spring-flash-3-11](./jeorg-spring-flash-3-11) - 📟 mvcMatcher and antMatcher
-12. [jeorg-spring-flash-3-12](./jeorg-spring-flash-3-12) - 🎩 queryForList and queryForObject
-13. [jeorg-spring-flash-3-13](./jeorg-spring-flash-3-13) - ❤️ BeanNameUrlHandlerMapping
-14. [jeorg-spring-flash-3-14](./jeorg-spring-flash-3-14) - 🍃️ Proxy and newProxyInstance
-15. [jeorg-spring-flash-3-15](./jeorg-spring-flash-3-15) - 🏈 @Autowired and required
-16. [jeorg-spring-flash-3-16](./jeorg-spring-flash-3-16) - 💪 @RequestParam and required
-17. [jeorg-spring-flash-3-17](./jeorg-spring-flash-3-17) - 🏞 @Profile on methods
-18. [jeorg-spring-flash-3-18](./jeorg-spring-flash-3-18) - 👑 BeanPostProcessor
-19. [jeorg-spring-flash-3-19](./jeorg-spring-flash-3-19) - 🌾 static @Bean
-20. [jeorg-spring-flash-3-20](./jeorg-spring-flash-3-20) - 🦢 @Required and RequiredAnnotationBeanPostProcessor
+1. [jeorg-spring-flash-5-1](./jeorg-spring-flash-5-1) - 👖 @Component, @Controller, @Indexed, @Repository, @Service
+2. [jeorg-spring-flash-5-2](./jeorg-spring-flash-5-2)
+3. [jeorg-spring-flash-5-3](./jeorg-spring-flash-5-3)
+4. [jeorg-spring-flash-5-4](./jeorg-spring-flash-5-4)
+5. [jeorg-spring-flash-5-5](./jeorg-spring-flash-5-5)
+6. [jeorg-spring-flash-5-6](./jeorg-spring-flash-5-6)
+7. [jeorg-spring-flash-5-7](./jeorg-spring-flash-5-7)
+8. [jeorg-spring-flash-5-8](./jeorg-spring-flash-5-8)
+9. [jeorg-spring-flash-5-9](./jeorg-spring-flash-5-9)
+10. [jeorg-spring-flash-5-10](./jeorg-spring-flash-5-10)
+11. [jeorg-spring-flash-5-11](./jeorg-spring-flash-5-11)
+12. [jeorg-spring-flash-5-12](./jeorg-spring-flash-5-12)
+13. [jeorg-spring-flash-5-13](./jeorg-spring-flash-5-13)
+14. [jeorg-spring-flash-5-14](./jeorg-spring-flash-5-14)
+15. [jeorg-spring-flash-5-15](./jeorg-spring-flash-5-15)
+16. [jeorg-spring-flash-5-16](./jeorg-spring-flash-5-16)
+17. [jeorg-spring-flash-5-17](./jeorg-spring-flash-5-17)
+18. [jeorg-spring-flash-5-18](./jeorg-spring-flash-5-18)
+19. [jeorg-spring-flash-5-19](./jeorg-spring-flash-5-19)
+20. [jeorg-spring-flash-5-20](./jeorg-spring-flash-5-20)
 
 ## References
 
 ### Online
 
+- [Spring Boot Starters](https://www.javatpoint.com/spring-boot-starters)
 - [Custom Container Configuration in Spring Boot 2](https://www.javaprogramto.com/2020/04/spring-boot-embeddedservletcontainercustomizer-configurableembeddedservletcontainer.html)
 - [Spring 4 REST + CORS Integration using @CrossOrigin Annotation + XML + Filter Example](https://www.concretepage.com/spring-4/spring-4-rest-cors-integration-using-crossorigin-annotation-xml-filter-example)
 - [How Does Spring @Transactional Really Work?](https://dzone.com/articles/how-does-spring-transactional)

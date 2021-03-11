@@ -73,7 +73,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `static`, `@Bean`,
 `@Required`, `RequiredAnnotationBeanPostProcessor`
 
-4. [jeorg-spring-flash-set-4](./jeorg-spring-flash-set-4) - Set 3 of 20 Flash modules
+4. [jeorg-spring-flash-set-4](./jeorg-spring-flash-set-4) - Set 4 of 20 Flash modules
 
 `@Scope`, `prototype`,
 `<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>`,
@@ -95,6 +95,10 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@ControllerAdvice`, `@ExceptionHandler`, `ResponseEntityExceptionHandler`,
 `TestApplicationContext`, `ApplicationContext`, `WebApplicationContext`,
 `@Rollback`, `@Commit`
+
+5. [jeorg-spring-flash-set-5](./jeorg-spring-flash-set-5) - Set 5 of 20 Flash modules (coming soon...)
+
+`@Component`, `@Controller`, `@Indexed`, `@Repository`, `@Service`
 
 ## References
 

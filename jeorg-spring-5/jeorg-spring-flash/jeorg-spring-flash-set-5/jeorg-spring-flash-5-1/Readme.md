@@ -1,32 +1,87 @@
-# jeorg-spring-flash-set-3
+# jeorg-spring-flash-5-1
 
-## Contents
+## Introduction
 
-1. [jeorg-spring-flash-3-1](./jeorg-spring-flash-3-1) - 📖 DisposableBean and InitializingBean
-2. [jeorg-spring-flash-3-2](./jeorg-spring-flash-3-2) - ⏰ RowCallbackHandler
-3. [jeorg-spring-flash-3-3](./jeorg-spring-flash-3-3) - 🧠 @Transactional Exception Handling
-4. [jeorg-spring-flash-3-4](./jeorg-spring-flash-3-4) - 🪵 AnnotationConfigWebApplicationContext
-5. [jeorg-spring-flash-3-5](./jeorg-spring-flash-3-5) - 🗿 AnnotationConfigWebApplicationContext
-6. [jeorg-spring-flash-3-6](./jeorg-spring-flash-3-6) - 🍅 CGLib
-7. [jeorg-spring-flash-3-7](./jeorg-spring-flash-3-7) - 🎸 @Aspect, @Before, @After, @Around
-8. [jeorg-spring-flash-3-8](./jeorg-spring-flash-3-8) - 🤵🏻‍♂️ @ModelAttribute
-9. [jeorg-spring-flash-3-9](./jeorg-spring-flash-3-9) - 🍃️ Enhancer and private methods in CGLib
-10. [jeorg-spring-flash-3-10](./jeorg-spring-flash-3-10) - 🎸 Serialize and Deserialize with @JsonComponent
-11. [jeorg-spring-flash-3-11](./jeorg-spring-flash-3-11) - 📟 mvcMatcher and antMatcher
-12. [jeorg-spring-flash-3-12](./jeorg-spring-flash-3-12) - 🎩 queryForList and queryForObject
-13. [jeorg-spring-flash-3-13](./jeorg-spring-flash-3-13) - ❤️ BeanNameUrlHandlerMapping
-14. [jeorg-spring-flash-3-14](./jeorg-spring-flash-3-14) - 🍃️ Proxy and newProxyInstance
-15. [jeorg-spring-flash-3-15](./jeorg-spring-flash-3-15) - 🏈 @Autowired and required
-16. [jeorg-spring-flash-3-16](./jeorg-spring-flash-3-16) - 💪 @RequestParam and required
-17. [jeorg-spring-flash-3-17](./jeorg-spring-flash-3-17) - 🏞 @Profile on methods
-18. [jeorg-spring-flash-3-18](./jeorg-spring-flash-3-18) - 👑 BeanPostProcessor
-19. [jeorg-spring-flash-3-19](./jeorg-spring-flash-3-19) - 🌾 static @Bean
-20. [jeorg-spring-flash-3-20](./jeorg-spring-flash-3-20) - 🦢 @Required and RequiredAnnotationBeanPostProcessor
+Exploring stereotypes in Spring
+
+1. `@Component`, `@Controller`, `@Indexed`, `@Repository`, `@Service`
+
+## Endpoints
+
+1. [http://localhost:8081](http://localhost:8081)
+
+## Testing
+
+```bash
+lsof -i :8081
+```
+
+1. Run the service
+
+```bash
+mvn clean install spring-boot:run
+```
 
 ## References
 
+### Context
+
+- [Stereotypes - Lyrics](https://genius.com/Blur-stereotypes-lyrics)
+- [Blur - Stereotypes](https://en.wikipedia.org/wiki/Stereotypes_(song))
+
+<div align="center">
+      <a title="Blur - Stereotypes" href="https://www.youtube.com/watch?v=JHH7krBwc0Q">
+     <img 
+          src="https://img.youtube.com/vi/JHH7krBwc0Q/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 ### Online
 
+- [MongoDB Indexes With Spring Data](https://dzone.com/articles/mongodb-indexes-with-spring-data)
+- [Spring Prototype scope bean](https://zetcode.com/spring/prototypescope/)
+- [Spring - Initialization and destruction lifecycle callbacks](https://www.logicbig.com/tutorials/spring-framework/spring-core/lifecycle-callbacks.html)
+- [Spring @Required Annotation](https://www.tutorialspoint.com/spring/spring_required_annotation.htm)
+- [Spring - Bean Post Processors](https://www.tutorialspoint.com/spring/spring_bean_post_processors.htm)
+- [JDK Dynamic Proxies](https://www.byteslounge.com/tutorials/jdk-dynamic-proxies)
+- [Spring MVC - Bean Name Url Handler Mapping Example](https://www.tutorialspoint.com/springmvc/springmvc_beannameurlhandlermapping.htm)
+- [Spring Security – Securing URLs By HTTP Method](https://www.naturalprogrammer.com/blog/16385/spring-security-urls-http-method)
+- [Spring boot custom JSON Serialize – Deserialize Example](http://www.dailycodebuffer.com/spring-boot-custom-json-serialize-deserialize-example/)
+- [Spring @ModelAttribute Annotation Example](https://examples.javacodegeeks.com/enterprise-java/spring/spring-modelattribute-annotation-example/)
+- [Spring AOP AspectJ @Around Annotation Example](https://howtodoinjava.com/spring-aop/aspectj-around-annotation-example/)
+- [Spring AOP Tutorial](https://howtodoinjava.com/spring-aop-tutorial/)
+- [CGLib: The Missing Manual](https://dzone.com/articles/cglib-missing-manual)
+- [Secure Your Method Using AOP](https://dzone.com/articles/secure-your-method-using-aop)
+- [tbeauvais/example-spring-mvc-app](https://github.com/tbeauvais/example-spring-mvc-app)
+- [Spring InitializingBean and DisposableBean example](https://mkyong.com/spring/spring-initializingbean-and-disposablebean-example/)
+- [Spring @MatrixVariable at specific position in a URL](https://roytuts.com/spring-matrixvariable-at-specific-position-in-a-url/)
+- [Atomikos — multi db transaction system](https://medium.com/swlh/atomikos-multi-db-transaction-system-c16168df22e5)
+- [Spring JTA multiple resource transactions in Tomcat with Atomikos example](https://www.byteslounge.com/tutorials/spring-jta-multiple-resource-transactions-in-tomcat-with-atomikos-example)
+- [Configuring Spring and JTA without full Java EE](https://spring.io/blog/2011/08/15/configuring-spring-and-jta-without-full-java-ee)
+- [Programmatic Transaction Management](https://www.tutorialspoint.com/spring/programmatic_management.htm)
+- [Spring - Bean Post Processors](https://www.tutorialspoint.com/spring/spring_bean_post_processors.htm)
+- [Homebrew MariaDB/MySQL socket issues](https://laracasts.com/discuss/channels/servers/homebrew-mariadbmysql-socket-issues)
+- [Installing MariaDB Server on macOS Using Homebrew](https://mariadb.com/kb/en/installing-mariadb-on-macos-using-homebrew/)
+- [Configuring Spring Boot for MariaDB](https://springframework.guru/configuring-spring-boot-for-mariadb/)
+- [Resetting the MySQL root password](https://www.a2hosting.com/kb/developer-corner/mysql/reset-mysql-root-password)
+- [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+- [Spring Framework - Converter Examples](https://www.logicbig.com/how-to/code-snippets/jcode-spring-framework-converter.html)
+- [Spring transaction isolation level tutorial](https://www.byteslounge.com/tutorials/spring-transaction-isolation-tutorial)
+- [Transaction Isolation Levels (ODBC)](https://docs.microsoft.com/en-us/sql/odbc/reference/develop-app/transaction-isolation-levels?view=sql-server-ver15)
+- [A beginner’s guide to Phantom Read anomaly](https://vladmihalcea.com/phantom-read/)
+- [Spring Boot @DataJpaTest tutorial](https://zetcode.com/springboot/datajpatest/)
+- [Spring boot log4j2.xml example](https://howtodoinjava.com/spring-boot2/logging/spring-boot-log4j2-config/)
+- [27. Logging](https://docs.spring.io/spring-boot/docs/2.1.18.RELEASE/reference/html/boot-features-logging.html)
+- [Chapter 3: Logback configuration](http://logback.qos.ch/manual/configuration.html)
+- [SPRING BOOT AUTO CONFIGURATION](https://jaxlondon.com/blog/spring-boot-auto-configuration/)
+- [Custom Starter with Spring Boot](https://www.javadevjournal.com/spring-boot/spring-boot-custom-starter/)
+- [@PreAuthorize and @PostAuthorize in Spring Security](https://www.concretepage.com/spring/spring-security/preauthorize-postauthorize-in-spring-security)
+- [9.5. Security Filters](https://docs.spring.io/spring-security/site/docs/5.3.3.BUILD-SNAPSHOT/reference/html5/#servlet-security-filters)
+- [Spring Security Filters Chain](https://www.javadevjournal.com/spring-security/spring-security-filters/)
+- [Spring JDBC - ResultSetExtractor Interface](https://www.tutorialspoint.com/springjdbc/springjdbc_resultsetextractor.htm)
+- [Accessing Relational Data using JDBC with Spring](https://spring.io/guides/gs/relational-data-access/)
+- [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)
 - [Custom Container Configuration in Spring Boot 2](https://www.javaprogramto.com/2020/04/spring-boot-embeddedservletcontainercustomizer-configurableembeddedservletcontainer.html)
 - [Spring 4 REST + CORS Integration using @CrossOrigin Annotation + XML + Filter Example](https://www.concretepage.com/spring-4/spring-4-rest-cors-integration-using-crossorigin-annotation-xml-filter-example)
 - [How Does Spring @Transactional Really Work?](https://dzone.com/articles/how-does-spring-transactional)
