@@ -99,7 +99,8 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 5. [jeorg-spring-flash-set-5](./jeorg-spring-flash-set-5) - Set 5 of 20 Flash modules (coming soon...)
 
 `@Component`, `@Controller`, `@Indexed`, `@Repository`, `@Service`,
-`DelegatingFilterProxyRegistrationBean`, `DelegatingFilterProxy`
+`DelegatingFilterProxyRegistrationBean`, `DelegatingFilterProxy`,
+`@SpringBootApplication`
 
 ## References
 
