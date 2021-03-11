@@ -100,7 +100,8 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 
 `@Component`, `@Controller`, `@Indexed`, `@Repository`, `@Service`,
 `DelegatingFilterProxyRegistrationBean`, `DelegatingFilterProxy`,
-`@SpringBootApplication`
+`@SpringBootApplication`,
+`@Bean`
 
 ## References
 
