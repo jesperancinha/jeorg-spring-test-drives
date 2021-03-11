@@ -50,8 +50,6 @@ sdk use java 11.0.9.hs-adpt
 
 ## References:
 
-### Online
-
 ### Books
 
 - Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
@@ -60,6 +58,8 @@ sdk use java 11.0.9.hs-adpt
 - Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 - Kurniawan, B. Deck, P. (January 2015). <i>Servlet, JSP & Spring MVC</i>. (First Edition). Brainy Software
 - Long, J. (2020). <i>Reactive Spring</i>. (First Edition). Josh Long
+
+### Online
 
 - [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
 - [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
