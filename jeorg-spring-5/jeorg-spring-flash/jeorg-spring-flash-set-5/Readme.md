@@ -3,7 +3,7 @@
 ## Contents
 
 1. [jeorg-spring-flash-5-1](./jeorg-spring-flash-5-1) - 👖 @Component, @Controller, @Indexed, @Repository, @Service
-2. [jeorg-spring-flash-5-2](./jeorg-spring-flash-5-2)
+2. [jeorg-spring-flash-5-2](./jeorg-spring-flash-5-2) - 👩‍💼 DelegatingFilterProxyRegistrationBean, DelegatingFilterProxy
 3. [jeorg-spring-flash-5-3](./jeorg-spring-flash-5-3)
 4. [jeorg-spring-flash-5-4](./jeorg-spring-flash-5-4)
 5. [jeorg-spring-flash-5-5](./jeorg-spring-flash-5-5)
