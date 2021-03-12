@@ -1,22 +1,5 @@
-# jeorg-spring-kotlin-5 - Spring 5 Kotlin
+# jeorg-spring-kotlin-mastery
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/jeorg-spring-5-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
-
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/gh/jesperancinha/jeorg-spring-5-test-drives/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/jeorg-spring-5-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-jeorg-spring-5-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/jeorg-spring-5-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/jeorg-spring-5-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/jeorg-spring-5-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/jeorg-spring-5-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/jeorg-spring-5-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/wksvhmqaq0sd8505?svg=true)](https://ci.appveyor.com/project/jesperancinha/jeorg-spring-5-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/jeorg-spring-5-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/jeorg-spring-5-test-drives)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
-
----
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)
@@ -26,11 +9,13 @@
 
 ## Description
 
-SPRING 5 study project in Kotlin 4
+Mastery modules for Spring 5 Kotlin 4
+
+This project is intended as a study tool for Spring version 5 in Kotlin
 
 ## Contents
 
-1. [jeorg-spring-kotlin-mastery](./jeorg-spring-kotlin-mastery) - Mastery modules
+1. [jeorg-spring-kotlin-mastery-1](./jeorg-spring-kotlin-mastery-1)
 
 ## References
 
@@ -42,12 +27,9 @@ SPRING 5 study project in Kotlin 4
 - Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 - Kurniawan, B. Deck, P. (January 2015). <i>Servlet, JSP & Spring MVC</i>. (First Edition). Brainy Software
 - Long, J. (2020). <i>Reactive Spring</i>. (First Edition). Josh Long
-- Vasic, M. (21st May 2018). <i>Building Applications with Spring 5 and Kotlin</i>. (First Edition). Packt Publishing
 
 ### Online
 
-- [Maven for Kotlin](https://kotlinlang.org/docs/maven.html#attributes-specific-for-jvm)
-- [Automatic Rollback of Transactions in Spring Tests](https://relentlesscoding.com/posts/automatic-rollback-of-transactions-in-spring-tests/)
 - [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
 - [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
 - [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)

@@ -1,4 +1,4 @@
-# jeorg-spring-mastery-1 - Spring Mastery 1
+# jeorg-spring-kotlin-mastery-1 - Spring Mastery Kotlin 1
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
@@ -9,53 +9,17 @@
 
 ## Description
 
-French language in music
+Spring Mastery Kotlin 1
 
 Topics covered:
 
-1. `@ResponseBody`, `@RequestMapping`, `@RequestParam`
-2. `AuthenticationProvider`, `AuthorizationServerConfigurerAdapter`, `WebSecurityConfigurerAdapter`, `ResourceServerConfigurerAdapter`, `TokenStore`
-3. `@DataJpaTest`, `@ExtendWith(SpringExtension.class)`
-4. `InMemoryAuditEventRepository`, `AbstractAuditListener`, `management.endpoints.web.exposure.include=*`
-5. `@EnableConfigurationProperties`, `@ConfigurationProperties(prefix = "mastery1")`, `@PropertySource("classpath:extras.properties")`
-6. `propagation = Propagation.REQUIRES_NEW`, `isolation = Isolation.SERIALIZABLE`, `rollbackFor = RuntimeException.class`, `rollbackForClassName = "RuntimeException"`, `noRollbackForClassName = "Error"`, `noRollbackFor = Error.class`
-7. `@Qualifier`, `@DataJpaTest`
-8. `@Query("select m from Member m where m.joinDate is not null")`
-9. `TransactionTemplate`, `PlatformTransactionManager`, `TransactionStatus`
-10. `@Transactional`, `JDK proxies`, `EntityManager`, `getReference`
+1. 
 
 ## Endpoints
 
-1. [http://localhost:8081/actuator](http://localhost:8081/actuator)
-2. [http://localhost:8081/member/search?param=Celine](http://localhost:8081/member/search?param=Celine)
-3. [http://localhost:8081/member](http://localhost:8081/member)
-4. [http://localhost:8081/member/nonnull/](http://localhost:8081/member/nonnull/)
-
 ## Command line requests
 
-```bash
-curl -X DELETE http://localhost:8081/member/delete/1
-curl http://localhost:8081/actuator
-curl http://localhost:8081/member
-curl http://localhost:8081/member/search?param=Celine
-curl http://localhost:8081/member/nonnull/
-curl -X POST -H 'Content-Type: application/json' http://localhost:8081/member/create --data '{"name":"Françoise Hardy","joinDate":"1960-01-01"}'
-curl -X POST -H 'Content-Type: application/json' http://localhost:8081/member/create/rollback --data '{"name":"Françoise Hardy","joinDate":"1960-01-01"}'
-```
-
 ## How to run
-
-1. Running with the default profile
-
-```bash
-mvn clean install spring-boot:run
-```
-
-2. Running with the prod profile
-
-```bash
-mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
-```
 
 ## References
 
