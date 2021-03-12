@@ -13,7 +13,7 @@ Spring Mastery Kotlin 1
 
 Topics covered:
 
-1. 
+1. `@RestController`, `@GetMapping`, `@RequestMapping`
 
 ## Endpoints
 
