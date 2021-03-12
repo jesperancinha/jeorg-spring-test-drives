@@ -14,10 +14,14 @@ Spring Mastery Kotlin 1
 Topics covered:
 
 1. `@RestController`, `@GetMapping`, `@RequestMapping`
+2. `listOf`
 
 ## Endpoints
 
 ## Command line requests
+
+1. [http://localhost:8080/movies/thesoundofmusic](http://localhost:8080/movies/thesoundofmusic)
+2. [http://localhost:8080/movies/list](http://localhost:8080/movies/list)
 
 ## How to run
 
