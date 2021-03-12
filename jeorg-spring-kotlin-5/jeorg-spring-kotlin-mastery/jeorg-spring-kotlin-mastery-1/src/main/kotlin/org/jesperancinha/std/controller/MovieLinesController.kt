@@ -1,5 +1,7 @@
 package org.jesperancinha.std.controller
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title
 import org.jesperancinha.std.model.Film
 import org.jesperancinha.std.model.FilmGenre
 import org.springframework.http.MediaType
@@ -19,6 +21,11 @@ class MovieLinesController {
 
     @GetMapping(path = ["list"], produces = [MediaType.APPLICATION_JSON_VALUE])
     fun allFilms(): List<Film> {
+        ConsolerizerComposer.outSpace()
+            .ln()
+            .black()
+            .bgYellow(title("Method list"))
+            .toConsoleLn()
         return listOf(
             Film(
                 id = UUID.randomUUID().toString(),

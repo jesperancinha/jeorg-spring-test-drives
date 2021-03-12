@@ -15,6 +15,8 @@ Topics covered:
 
 1. `@RestController`, `@GetMapping`, `@RequestMapping`
 2. `listOf`
+3. `logging.level`
+4. `management.endpoint.health.enabled=true` `management.endpoint.httptrace.enabled=true` `management.endpoint.info.enabled=true` `management.endpoint.metrics.enabled=true`
 
 ## Endpoints
 
@@ -22,6 +24,9 @@ Topics covered:
 
 1. [http://localhost:8080/movies/thesoundofmusic](http://localhost:8080/movies/thesoundofmusic)
 2. [http://localhost:8080/movies/list](http://localhost:8080/movies/list)
+3. [http://localhost:8081/actuator](http://localhost:8081/actuator)
+4. [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
+5. [http://localhost:8081/actuator/info](http://localhost:8081/actuator/info)
 
 ## How to run
 
