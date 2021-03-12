@@ -1,7 +1,5 @@
 package org.jesperancinha.std.flash318.bean.postprocessor.domain;
 
-import java.time.LocalDateTime;
-
 public class Recording {
     private String title;
 
@@ -19,7 +17,7 @@ public class Recording {
         this.title = title;
         this.studio = studio;
         this.address = address;
-        this.years= years;
+        this.years = years;
     }
 
     public String getTitle() {

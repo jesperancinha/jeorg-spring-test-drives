@@ -38,12 +38,13 @@ This project is intended as a study tool for Spring version 5.
    1. [jeorg-spring-flash-set-1](./jeorg-spring-flash/jeorg-spring-flash-set-1) - ⚡️ Fast track modules about Spring Boot 5 - Set 1 with 20 modules
    2. [jeorg-spring-flash-set-2](./jeorg-spring-flash/jeorg-spring-flash-set-2) - ⚡️ Fast track modules about Spring Boot 5 - Set 2 with 20 modules
    3. [jeorg-spring-flash-set-3](./jeorg-spring-flash/jeorg-spring-flash-set-3) - ⚡️ Fast track modules about Spring Boot 5 - Set 3 with 20 modules
-   4. [jeorg-spring-flash-set-4](./jeorg-spring-flash/jeorg-spring-flash-set-4) - ⚡️ Fast track modules about Spring Boot 5 - Set 4 with 20 modules
+   4. [jeorg-spring-flash-set-4](./jeorg-spring-flash/jeorg-spring-flash-set-4) - ⚡️ Fast track modules about Spring Boot 5 - Set 4 with 4 modules
 4. [jeorg-spring-apps](./jeorg-spring-apps) - 💻 A set of applications for large topics
    1. [jeorg-spring-app-1](./jeorg-spring-apps/jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
 5. [jeorg-spring-mastery](./jeorg-spring-mastery) - ⚔️ Mastery modules - Each module is a combination of different concepts of the Spring framework
    1. [jeorg-spring-mastery-1](./jeorg-spring-mastery/jeorg-spring-mastery-1) - 🇫🇷 French Language in Music
    2. [jeorg-spring-mastery-2](./jeorg-spring-mastery/jeorg-spring-mastery-2) - 🇵🇹 Portuguese Language in Music
+6. [jeorg-spring-action](./jeorg-spring-action) - 🥋 Action Modules - Detailed studies separated by topics with the goal to disambiguate nuances and complicated concepts of the Spring Framework
 
 ## Installation Notes
 I'm using JDK version 11.0.9.hs-adpt for all of these tests.
