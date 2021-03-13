@@ -11,15 +11,17 @@ class FilmChronologyFactory: BeanFactoryPostProcessor {
         ConsolerizerComposer.outSpace()
             .ln()
             .black()
+            .autoWrite()
+            .file("/tmp/jeorg-spring-kotlin-mastery-1.txt")
             .bgOrange("1. postProcessBeanFactory")
             .red(ConsolerizerComposer.title("This is phase BeanFactoryPostProcessor"))
             .blue("This is bean %s", beanFactory)
-            .toConsoleLn();
         for ( beanName in beanFactory.getBeanDefinitionNames()) {
             ConsolerizerComposer.outSpace()
                 .ln()
+                .autoWrite()
+                .file("/tmp/jeorg-spring-kotlin-mastery-1.txt")
                 .brightBlue("Found bean %s", beanName)
-                .toConsoleLn();
         }
     }
 }

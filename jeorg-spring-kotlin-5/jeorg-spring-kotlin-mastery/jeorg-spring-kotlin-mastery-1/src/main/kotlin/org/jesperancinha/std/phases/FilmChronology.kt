@@ -1,6 +1,7 @@
 package org.jesperancinha.std.phases
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title
 import org.springframework.beans.BeansException
 import org.springframework.beans.factory.config.BeanPostProcessor
 import org.springframework.stereotype.Component
@@ -11,11 +12,12 @@ class FilmChronology : BeanPostProcessor {
     override fun postProcessAfterInitialization(bean: Any, beanName: String): Any? {
         ConsolerizerComposer.outSpace()
             .ln()
+            .autoWrite()
+            .file("/tmp/jeorg-spring-kotlin-mastery-1.txt")
             .black()
-            .bgOrange("1. postProcessAfterInitialization")
-            .red(ConsolerizerComposer.title("This is phase postProcessAfterInitialization"))
+            .bgOrange("3. postProcessAfterInitialization")
+            .red(title("This is phase postProcessAfterInitialization"))
             .blue("This is bean %s", beanName)
-            .toConsoleLn();
         return bean
     }
 
@@ -23,11 +25,12 @@ class FilmChronology : BeanPostProcessor {
     override fun postProcessBeforeInitialization(bean: Any, beanName: String): Any? {
         ConsolerizerComposer.outSpace()
             .ln()
+            .autoWrite()
+            .file("/tmp/jeorg-spring-kotlin-mastery-1.txt")
             .black()
             .bgOrange("2. postProcessBeforeInitialization")
-            .red(ConsolerizerComposer.title("This is phase postProcessBeforeInitialization"))
+            .red(title("This is phase postProcessBeforeInitialization"))
             .blue("This is bean %s", beanName)
-            .toConsoleLn();
         return bean
     }
 }
