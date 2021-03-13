@@ -18,6 +18,7 @@ Topics covered:
 3. `logging.level`
 4. `management.endpoint.health.enabled=true` `management.endpoint.httptrace.enabled=true` `management.endpoint.info.enabled=true` `management.endpoint.metrics.enabled=true`
 5. `BeanPostProcessor`
+6. `BeanFactoryPostProcessor`
 
 ## Endpoints
 
