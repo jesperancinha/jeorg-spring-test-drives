@@ -17,6 +17,7 @@ Topics covered:
 2. `listOf`
 3. `logging.level`
 4. `management.endpoint.health.enabled=true` `management.endpoint.httptrace.enabled=true` `management.endpoint.info.enabled=true` `management.endpoint.metrics.enabled=true`
+5. `BeanPostProcessor`
 
 ## Endpoints
 
@@ -32,69 +33,19 @@ Topics covered:
 
 ## References
 
+### Books
+
+-   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
+-   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
+-   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
+-   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
+
+
 ### Context
-
-- [Françoise Hardy](https://en.wikipedia.org/wiki/Fran%C3%A7oise_Hardy)
-- [Ensemble (album caritatif)](https://fr.wikipedia.org/wiki/Ensemble_(album_caritatif))
-- [Sidaction. "Sa Raison d’être" fête ses 20 ans et s'offre un coup de jeune](https://www.ouest-france.fr/culture/musiques/sidaction-sa-raison-d-etre-fete-ses-20-ans-et-s-offre-un-coup-de-jeune-5640465)
-- [SA RAISON D'ÊTRE, 2018](https://www.sidaction.org/actualites/sa-raison-detre-2018-690)
-- [Céline Dion](https://en.wikipedia.org/wiki/Celine_Dion)
-- [Kate Ryan](https://en.wikipedia.org/wiki/Kate_Ryan)
-
-<div align="center">
-      <a title="Celine Dion - On ne change pas" href="https://www.youtube.com/watch?v=3tOsUgwBgko">
-     <img 
-          src="https://img.youtube.com/vi/3tOsUgwBgko/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Ensemble - Sidaction - Sa raison d'être" href="https://www.youtube.com/watch?v=2KRvvRN8hMc">
-     <img 
-          src="https://img.youtube.com/vi/2KRvvRN8hMc/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="Sidaction - Sa raison d'être 2018 (Clip officiel)" href="https://www.youtube.com/watch?v=EZeUDEahOOg">
-     <img 
-          src="https://img.youtube.com/vi/EZeUDEahOOg/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Celine Dion - Dans Un Autre Monde (Live In Paris at the Stade de France 1999) HDTV 720p" href="https://www.youtube.com/watch?v=vBm3bPlOCks">
-     <img 
-          src="https://img.youtube.com/vi/vBm3bPlOCks/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="Kate Ryan - Ella Elle L'a" href="https://www.youtube.com/watch?v=Oqd9lzMP1V8">
-     <img 
-          src="https://img.youtube.com/vi/Oqd9lzMP1V8/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Kate Ryan - Voyage Voyage" href="https://www.youtube.com/watch?v=XT9IDo-vF5k">
-     <img 
-          src="https://img.youtube.com/vi/XT9IDo-vF5k/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="Francoise Hardy - Tous Les Garcons" href="https://www.youtube.com/watch?v=_V-b8QIYOpM">
-     <img 
-          src="https://img.youtube.com/vi/_V-b8QIYOpM/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Keen'v - Je garde le sourire" href="https://www.youtube.com/watch?v=n0OhBErtT-c">
-     <img 
-          src="https://img.youtube.com/vi/n0OhBErtT-c/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
 
 ### Online
 
+- [Spring BeanPostProcessor Example](https://howtodoinjava.com/spring-core/spring-bean-post-processors/)
 - [Spring Security Password Encoding](https://www.concretepage.com/spring-5/spring-security-password-encoding)
 - [How does a JPA Proxy work and how to unproxy it with Hibernate](https://vladmihalcea.com/how-does-a-jpa-proxy-work-and-how-to-unproxy-it-with-hibernate/)
 - [Spring - Using TransactionTemplate](https://www.logicbig.com/tutorials/spring-framework/spring-data-access-with-jdbc/transaction-template.html)
@@ -180,13 +131,6 @@ Topics covered:
 - [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
 - [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
 - [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
-
-### Books
-
--   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
--   Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
--   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
--   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 
 ## About me 👨🏽‍💻🚀
 
