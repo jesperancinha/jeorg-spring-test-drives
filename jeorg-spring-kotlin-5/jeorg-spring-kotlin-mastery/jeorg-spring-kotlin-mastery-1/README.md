@@ -30,7 +30,6 @@ Topics covered:
 4. [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
 5. [http://localhost:8081/actuator/info](http://localhost:8081/actuator/info)
 
-
 ## Profiles
 
 1. test
@@ -51,11 +50,21 @@ Topics covered:
 -   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
 -   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 
-
 ### Context
+
+- [The Sound of Music (film)](https://en.wikipedia.org/wiki/The_Sound_of_Music_(film))
+
+<div align="center">
+      <a title="The Sound Of Music" href="https://www.youtube.com/watch?v=LhIfV67Fnc8">
+     <img 
+          src="https://img.youtube.com/vi/LhIfV67Fnc8/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ### Online
 
+- [3. Data Access with JDBC](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#jdbc)
 - [Spring BeanPostProcessor Example](https://howtodoinjava.com/spring-core/spring-bean-post-processors/)
 - [Spring Security Password Encoding](https://www.concretepage.com/spring-5/spring-security-password-encoding)
 - [How does a JPA Proxy work and how to unproxy it with Hibernate](https://vladmihalcea.com/how-does-a-jpa-proxy-work-and-how-to-unproxy-it-with-hibernate/)
