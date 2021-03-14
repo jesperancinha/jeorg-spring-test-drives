@@ -30,6 +30,16 @@ Topics covered:
 4. [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
 5. [http://localhost:8081/actuator/info](http://localhost:8081/actuator/info)
 
+
+## Profiles
+
+1. test
+    1. Almost all logs deactivated. Here the focus is to look at the Consolerizer logs
+2. prod
+    1. All logs from `org.jesperancinha` are on TRACE level
+3. default
+    1. All in TRACE log level
+
 ## How to run
 
 ## References

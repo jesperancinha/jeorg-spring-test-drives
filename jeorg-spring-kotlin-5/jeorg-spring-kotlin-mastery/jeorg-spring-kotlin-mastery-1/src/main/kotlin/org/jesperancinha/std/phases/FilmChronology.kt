@@ -22,7 +22,7 @@ class FilmChronology : BeanPostProcessor {
             .file("/tmp/jeorg-spring-kotlin-mastery-1.txt")
             .black()
             .bgOrange("3. postProcessAfterInitialization")
-            .red(title("This is phase postProcessAfterInitialization"))
+            .red(title("This is phase postProcessAfterInitialization of BeanPostProcessor"))
             .blue("This is bean %s", beanName)
         return bean
     }
@@ -32,14 +32,15 @@ class FilmChronology : BeanPostProcessor {
         ConsolerizerComposer.outSpace()
             .ln()
             .autoWrite()
-            .yellow("As you can see the bean is created and it is initialized -> %s", healthEnabled)
+            .black()
+            .bgYellow("As you can see the bean is created and it is initialized -> %s", healthEnabled)
         ConsolerizerComposer.outSpace()
             .ln()
             .autoWrite()
             .file("/tmp/jeorg-spring-kotlin-mastery-1.txt")
             .black()
             .bgOrange("2. postProcessBeforeInitialization")
-            .red(title("This is phase postProcessBeforeInitialization"))
+            .red(title("This is phase postProcessBeforeInitialization of BeanPostProcessor"))
             .blue("This is bean %s", beanName)
         return bean
     }
