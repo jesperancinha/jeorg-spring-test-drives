@@ -62,6 +62,10 @@ Topics covered:
       </a>
 </div>
 
+- https://kb.objectrocket.com/postgresql/how-to-import-a-json-file-into-postgresql-database-cluster-1437
+- https://stackoverflow.com/questions/39224382/how-can-i-import-a-json-file-into-postgresql
+- https://stackoverflow.com/questions/58623291/how-to-restore-database-from-dump-or-sql-file-in-docker-using-volume
+
 ### Online
 
 - [3. Data Access with JDBC](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#jdbc)
