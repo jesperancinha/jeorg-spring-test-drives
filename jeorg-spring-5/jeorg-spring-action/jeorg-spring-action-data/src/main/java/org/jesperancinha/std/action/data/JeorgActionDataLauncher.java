@@ -8,6 +8,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,6 +16,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.CYAN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 
 @SpringBootApplication
@@ -156,6 +160,32 @@ public class JeorgActionDataLauncher implements CommandLineRunner {
                 .green("We are still able to get results")
                 .yellow(execute4)
                 .green("And this is because a new connection has been opened")
+                .reset();
+
+
+        final AbstractFallbackSQLExceptionTranslator exceptionTranslator = new AbstractFallbackSQLExceptionTranslator() {
+            @Override
+            protected DataAccessException doTranslate(String task, String sql, SQLException ex) {
+                return new DataAccessException(String.format("Task: %s, Sql: %s, Exception: %s", task, sql, ex.getMessage())) {
+                };
+            }
+        };
+        jdbcTemplate.setExceptionTranslator(exceptionTranslator);
+        try {
+            jdbcTemplate.execute("select * from non_parasites");
+        } catch (final DataAccessException exception) {
+            CYAN.printGenericTitleLn("Exception Handling");
+            RED.printExpectedException("We are able to handle this exception since we have crated an Exception Translator", exception);
+        }
+        ConsolerizerComposer
+                .outSpace()
+                .cyan(title("8. Processing and handling exceptions. Spring determines all of this"))
+                .green("We can very easily handle exceptions in Spring")
+                .yellow("Spring can process and handle exceptions for you")
+                .green("We just did that by using an exception translator")
+                .yellow(exceptionTranslator)
+                .green("Although we define how the handling is being done, the handling itself and the processing of exceptions is done by Spring")
+                .yellow("Spring is ready to process all transactions into a DataAccessException")
                 .reset();
     }
 }
