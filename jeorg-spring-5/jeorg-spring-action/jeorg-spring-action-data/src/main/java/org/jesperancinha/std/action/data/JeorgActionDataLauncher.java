@@ -99,22 +99,35 @@ public class JeorgActionDataLauncher implements CommandLineRunner {
 
 
         final var query3 = "select * from parasites";
-        final List<String> allParasites = jdbcTemplate.query(query3, new RowMapper<String>() {
+        final RowMapper<String> rowMapper = new RowMapper<>() {
             @Override
             public String mapRow(ResultSet rs, int rowNum) throws SQLException {
                 return rs.getString("name").concat("" + rs.getLong("quantity"));
             }
-        });
+        };
+        final List<String> allParasites = jdbcTemplate.query(query3, rowMapper);
         ConsolerizerComposer
                 .outSpace()
                 .cyan(title("5. Setting up iterative loops. Spring sets up the iterative loops for you!"))
-                .green("Spring setus up iterative loops for you")
+                .green("Spring sets up iterative loops for you")
                 .yellow("When we use a %s", jdbcTemplate)
                 .none()
                 .green("we can use a").blue("query")
                 .newLine()
                 .yellow("This way when we create").blue(query3)
                 .newLine()
-                .green("We can finally get a list of results").blue(allParasites);
+                .green("We can finally get a list of results").blue(allParasites)
+                .newLine()
+                .reset();
+
+        ConsolerizerComposer
+                .outSpace()
+                .cyan(title("6. Perform work on each iteration. You determine the work to be done on every iteration"))
+                .none()
+                .green("Although Spring sets up the iterators for you,").red("you are the one responsible to determine the iteration work")
+                .newLine()
+                .yellow("And this is why we use a RowMapper as an example ->").orange(rowMapper)
+                .newLine()
+                .reset();
     }
 }
