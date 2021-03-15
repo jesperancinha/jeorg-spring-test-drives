@@ -7,10 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
+import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 
@@ -73,7 +76,8 @@ public class JeorgActionDataLauncher implements CommandLineRunner {
             @Override
             public String doInPreparedStatement(PreparedStatement ps) throws SQLException, DataAccessException {
                 ps.setString(1, "Ophiocordyceps");
-                ps.setLong(1, 1000);
+                ps.setLong(2, 1000);
+                ps.execute();
                 return "Ok";
             }
         };
@@ -92,5 +96,25 @@ public class JeorgActionDataLauncher implements CommandLineRunner {
                 .yellow("and Spring does that for us by means of a PreparedStatement")
                 .green("We access the PreparedStatement via the callback %s", preparedStatementCallback)
                 .yellow("And this is the result %s", execute);
+
+
+        final var query3 = "select * from parasites";
+        final List<String> allParasites = jdbcTemplate.query(query3, new RowMapper<String>() {
+            @Override
+            public String mapRow(ResultSet rs, int rowNum) throws SQLException {
+                return rs.getString("name").concat("" + rs.getLong("quantity"));
+            }
+        });
+        ConsolerizerComposer
+                .outSpace()
+                .cyan(title("5. Setting up iterative loops. Spring sets up the iterative loops for you!"))
+                .green("Spring setus up iterative loops for you")
+                .yellow("When we use a %s", jdbcTemplate)
+                .none()
+                .green("we can use a").blue("query")
+                .newLine()
+                .yellow("This way when we create").blue(query3)
+                .newLine()
+                .green("We can finally get a list of results").blue(allParasites);
     }
 }
