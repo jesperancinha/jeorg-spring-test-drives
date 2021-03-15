@@ -4,6 +4,17 @@
 
 Topics:
 
+1. `JdbcTemplate`
+2. `DataSource`
+3. `Connection`
+4. `execute`
+5. `PreparedStatementCallback`
+6. `doInPreparedStatement`
+7. `RowMapper`
+8. `setExceptionTranslator`
+9. `DataAccessException`
+10. `AbstractFallbackSQLExceptionTranslator`
+
 ## References
 
 ### Context
