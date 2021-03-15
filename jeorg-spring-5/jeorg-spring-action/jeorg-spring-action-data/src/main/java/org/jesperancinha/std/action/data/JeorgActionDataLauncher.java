@@ -4,11 +4,13 @@ import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.PreparedStatementCallback;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 
@@ -63,8 +65,32 @@ public class JeorgActionDataLauncher implements CommandLineRunner {
                 .yellow("The %s solely executes it", jdbcTemplate)
                 .green("This is of course done seamlessly by Spring")
                 .yellow("You create the \"%s\"\nwhich then gets executed by the %s\nby means of the %s\nwhich uses a %s\nto do it"
-                        , query, jdbcTemplate, dataSource,connection);
+                        , query, jdbcTemplate, dataSource, connection);
 
 
+        final String query2 = "insert into parasites(name, quantity)values(?,?)";
+        final PreparedStatementCallback<String> preparedStatementCallback = new PreparedStatementCallback<>() {
+            @Override
+            public String doInPreparedStatement(PreparedStatement ps) throws SQLException, DataAccessException {
+                ps.setString(1, "Ophiocordyceps");
+                ps.setLong(1, 1000);
+                return "Ok";
+            }
+        };
+        final String execute = jdbcTemplate.execute(query2, preparedStatementCallback);
+        ConsolerizerComposer
+                .outSpace()
+                .cyan(title("4. Preparing and executing SQL statements. Spring prepares and executes them!"))
+                .green("Statements need to be defined by us, but Spring prepares them and executes them!")
+                .yellow("When we define a %s", jdbcTemplate)
+                .green("We can then execute the query")
+                .yellow("In the inner workings of the execution, our query %s"
+                        , query2)
+                .green("gets executed by the %s", jdbcTemplate)
+                .yellow("which prepares the statement before hand")
+                .green("We do define how to prepare it, but preparation means optimizing the query before execution")
+                .yellow("and Spring does that for us by means of a PreparedStatement")
+                .green("We access the PreparedStatement via the callback %s", preparedStatementCallback)
+                .yellow("And this is the result %s", execute);
     }
 }
