@@ -129,5 +129,33 @@ public class JeorgActionDataLauncher implements CommandLineRunner {
                 .yellow("And this is why we use a RowMapper as an example ->").orange(rowMapper)
                 .newLine()
                 .reset();
+
+        final Connection connection2 = dataSource.getConnection();
+        connection2.close();
+        final String query4 = "insert into parasites(name, quantity)values(?,?)";
+        final PreparedStatementCallback<String> preparedStatementCallback2 = new PreparedStatementCallback<>() {
+            @Override
+            public String doInPreparedStatement(PreparedStatement ps) throws SQLException, DataAccessException {
+                ps.setString(1, "Emerald cockroach wasp");
+                ps.setLong(2, 2000);
+                ps.execute();
+                return "Ok";
+            }
+        };
+        final String execute4 = jdbcTemplate.execute(query4, preparedStatementCallback2);
+
+        ConsolerizerComposer
+                .outSpace()
+                .cyan(title("7. Closing connections, the statement and the result set. Spring determines all of this"))
+                .green("However you can determine this")
+                .yellow("We have closed our connection")
+                .green("and so, its closed status must be")
+                .yellow(connection2.isClosed())
+                .green("While this is true, if we attempt to run another query via the template")
+                .yellow(query4)
+                .green("We are still able to get results")
+                .yellow(execute4)
+                .green("And this is because a new connection has been opened")
+                .reset();
     }
 }
