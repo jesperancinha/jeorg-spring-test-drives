@@ -29,7 +29,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 or
 
 ```bash
-mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
+mvn clean install spring-boot:run
 ```
 
 1.2 Acceptance @Secured
@@ -116,8 +116,8 @@ curl -v --cookie-jar cookies.txt -d username=king -d password=admin -L http://lo
 curl -v -sL -b cookies.txt http://localhost:8081/thrones/1
 curl -v --cookie-jar cookies.txt -d username=queen -d password=admin -L http://localhost:8081/login
 curl -v -sL -b cookies.txt http://localhost:8081/thrones/2
-
 ```
+
 ## References
 
 ### Context

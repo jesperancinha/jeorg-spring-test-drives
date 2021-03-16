@@ -105,6 +105,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `Spring HATEOS`, `Hypermedia As The Engine Of Application State`, `EnableHypermediaSupport`, `RepresentationModel`
 `JdbcTemplate`, `Good practices`, `update`, `execute`, `delete`
 `@EnableGlobalMethodSecurity`, `jsr250Enabled`, `securedEnabled`, `prePostEnabled`
+`@ConditionalOnEnabledHealthIndicator`, `@ConditionalOnProperty`, `@ConditionalOnNotWebApplication`, `@ConditionalOnBean`, `@ConditionalOnMissingClass`, `@ConditionalOnInitializedRestarter`, `@ConditionalOnResource`, `@ConditionalOnManagementPort`, `@ConditionalOnClass`, `@ConditionalOnMissingBean`, `@ConditionalOnRepositoryType`, `@ConditionalOnWebApplication`, `@ConditionalOnEnabledInfoContributor`, `@ConditionalOnExpression`, `@ConditionalOnEnabledResourceChain`, `@ConditionalOnJava`, `@ConditionalOnCloudPlatform`, `@ConditionalOnEnabledEndpoint`, `@ConditionalOnJndi`, `@ConditionalOnSingleCandidate`
 
 ## References
 
