@@ -47,4 +47,12 @@ public class Seed implements InitializingBean {
                 .bgGreen(this)
                 .reset();
     }
+
+    @Override
+    public String toString() {
+        return "Seed{" +
+                "seedState=" + seedState +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

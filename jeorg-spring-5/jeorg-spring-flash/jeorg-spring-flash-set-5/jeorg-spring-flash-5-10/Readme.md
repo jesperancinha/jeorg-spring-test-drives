@@ -6,7 +6,7 @@
 
 Exploring Bean Initializing phases in Spring
 
-1. `postProcessBeforeInitialization`, `@PostConstruct`, `afterPropertiesSet`, `postProcessAfterInitialization`
+1. `postProcessBeforeInitialization`, `@PostConstruct`, `afterPropertiesSet`, `postProcessAfterInitialization`, `DefaultListableBeanFactory`
 
 ## Endpoints
 

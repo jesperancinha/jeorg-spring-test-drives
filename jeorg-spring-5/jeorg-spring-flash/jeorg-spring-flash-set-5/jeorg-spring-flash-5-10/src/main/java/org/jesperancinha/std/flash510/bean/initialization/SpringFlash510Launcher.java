@@ -1,15 +1,24 @@
 package org.jesperancinha.std.flash510.bean.initialization;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 @SpringBootApplication
 public class SpringFlash510Launcher implements CommandLineRunner {
 
+    private final ApplicationContext applicationContext;
+
     public static AtomicInteger atomicInteger = new AtomicInteger(1);
+
+    public SpringFlash510Launcher(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(SpringFlash510Launcher.class, args);
@@ -17,5 +26,9 @@ public class SpringFlash510Launcher implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        DefaultListableBeanFactory bf = new DefaultListableBeanFactory(applicationContext);
+        final Object blackBean = bf.getBean("blackBean");
+        ConsolerizerComposer.outSpace()
+                .yellow("We have gotten the %s by using the DefaultListableBeanFactory", blackBean);
     }
 }
