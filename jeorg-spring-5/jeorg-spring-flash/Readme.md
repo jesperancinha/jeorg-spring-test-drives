@@ -107,6 +107,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@EnableGlobalMethodSecurity`, `jsr250Enabled`, `securedEnabled`, `prePostEnabled`
 `@ConditionalOnEnabledHealthIndicator`, `@ConditionalOnProperty`, `@ConditionalOnNotWebApplication`, `@ConditionalOnBean`, `@ConditionalOnMissingClass`, `@ConditionalOnInitializedRestarter`, `@ConditionalOnResource`, `@ConditionalOnManagementPort`, `@ConditionalOnClass`, `@ConditionalOnMissingBean`, `@ConditionalOnRepositoryType`, `@ConditionalOnWebApplication`, `@ConditionalOnEnabledInfoContributor`, `@ConditionalOnExpression`, `@ConditionalOnEnabledResourceChain`, `@ConditionalOnJava`, `@ConditionalOnCloudPlatform`, `@ConditionalOnEnabledEndpoint`, `@ConditionalOnJndi`, `@ConditionalOnSingleCandidate`
 `execution`, `@annotation`, `@Around`, `@Before`, `@After`
+`postProcessBeforeInitialization`, `@PostConstruct`, `afterPropertiesSet`, `postProcessAfterInitialization`
 
 ## References
 
