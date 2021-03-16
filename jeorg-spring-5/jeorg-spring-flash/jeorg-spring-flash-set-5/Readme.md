@@ -10,6 +10,7 @@
 6. [jeorg-spring-flash-5-6](./jeorg-spring-flash-5-6) - 📚 JdbcTemplate - Good practices
 7. [jeorg-spring-flash-5-7](./jeorg-spring-flash-5-7) - 💂 @EnableGlobalMethodSecurity - All modes
 8. [jeorg-spring-flash-5-8](./jeorg-spring-flash-5-8) - 🕺🏻 All Conditionals in Spring - Most of them at least
+9. [jeorg-spring-flash-5-9](./jeorg-spring-flash-5-9) - 👨‍🍳 @Aspect, @Before, @After and @Around
 
 ## References
 
