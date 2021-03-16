@@ -102,6 +102,9 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `DelegatingFilterProxyRegistrationBean`, `DelegatingFilterProxy`,
 `@SpringBootApplication`,
 `@Bean`
+`Spring HATEOS`, `Hypermedia As The Engine Of Application State`, `EnableHypermediaSupport`, `RepresentationModel`
+`JdbcTemplate`, `Good practices`, `update`, `execute`, `delete`
+`@EnableGlobalMethodSecurity`, `jsr250Enabled`, `securedEnabled`, `prePostEnabled`
 
 ## References
 
