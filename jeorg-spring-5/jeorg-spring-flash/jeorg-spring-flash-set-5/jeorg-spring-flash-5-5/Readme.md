@@ -1,5 +1,7 @@
 # jeorg-spring-flash-5-5
 
+[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/jeorg-spring-5-test-drives/tree/master/jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-5/jeorg-spring-flash-5-5)
+
 ## Introduction
 
 Exploring Spring HATEOAS - Hypermedia As The Engine Of Application State
@@ -45,6 +47,7 @@ mvn clean install spring-boot:run
 
 ### Online
 
+- [Spring HATEOAS](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-hateoas)
 - [MongoDB Indexes With Spring Data](https://dzone.com/articles/mongodb-indexes-with-spring-data)
 - [Spring Prototype scope bean](https://zetcode.com/spring/prototypescope/)
 - [Spring - Initialization and destruction lifecycle callbacks](https://www.logicbig.com/tutorials/spring-framework/spring-core/lifecycle-callbacks.html)
