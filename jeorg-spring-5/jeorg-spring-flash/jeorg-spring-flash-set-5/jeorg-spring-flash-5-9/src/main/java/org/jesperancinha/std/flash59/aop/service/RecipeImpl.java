@@ -1,7 +1,6 @@
 package org.jesperancinha.std.flash59.aop.service;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
-import org.jesperancinha.std.flash59.aop.annotation.Diet;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -9,7 +8,7 @@ import java.util.List;
 
 @Service
 public class RecipeImpl implements Recipe {
-    private List<String> ingredients;
+    private final List<String> ingredients;
 
     public RecipeImpl() {
         ingredients = Arrays.asList("6 Eggs", "100g Flower", "1L Milk");
