@@ -12,6 +12,7 @@
 8. [jeorg-spring-flash-5-8](./jeorg-spring-flash-5-8) - 🕺🏻 All Conditionals in Spring - Most of them at least
 9. [jeorg-spring-flash-5-9](./jeorg-spring-flash-5-9) - 👨‍🍳 @Aspect, @Before, @After and @Around
 10. [jeorg-spring-flash-5-10](./jeorg-spring-flash-5-10) - 🌿 postProcessBeforeInitialization, @PostConstruct, afterPropertiesSet and postProcessAfterInitialization
+11. [jeorg-spring-flash-5-11](./jeorg-spring-flash-5-11) - 📈 Actuator endpoints
 
 ## References
 
