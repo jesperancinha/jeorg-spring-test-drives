@@ -12,13 +12,13 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="org.jesperancinha.std.flash20.cors"/>
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
     <mvc:cors>
         <mvc:mapping path="/protected"
                      allowed-origins="http://jeorg-spring-flash-20:8081"
                      allowed-methods="POST, GET, PUT, OPTIONS, DELETE"
                      allowed-headers="X-Auth-Token, Content-Type"
                      allow-credentials="false"
-                     max-age="4800" />
+                     max-age="4800"/>
     </mvc:cors>
 </beans>
