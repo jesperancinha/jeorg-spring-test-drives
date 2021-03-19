@@ -1,24 +1,14 @@
-# jeorg-spring-action
+# jeorg-spring-action-aop
 
 ## Introduction
 
-Welcome to action modules.
+Topics:
 
-The goal of this module set is to disambiguate potential nuances and complicated topics surrounding the Spring architecture:
-
-1. AOP - [jeorg-spring-action-aop](./jeorg-spring-action-aop)
-2. MVC - [jeorg-spring-action-mvn](./jeorg-spring-action-mvn)
-3. Security - [jeorg-spring-action-security](./jeorg-spring-action)
-4. JPA - Spring - Data - [jeorg-spring-action-data](./jeorg-spring-action-data)
-
-`JdbcTemplate` `DataSource` `Connection` `execute` `PreparedStatementCallback` `doInPreparedStatement` `RowMapper` `setExceptionTranslator` `DataAccessException` `AbstractFallbackSQLExceptionTranslator`
-
-5. Boot - Intro - [jeorg-spring-action-boot](./jeorg-spring-action-boot)
-6. AutoConfig - [jeorg-spring-action-auto-config](./jeorg-spring-action-auto-config)
-7. Actuator - [jeorg-spring-action-actuator](./jeorg-spring-action-actuator)
-8. Testing - [jeorg-spring-action-testing](./jeorg-spring-action-testing)
+1.
 
 ## References
+
+### Context
 
 ### Books
 
@@ -31,6 +21,9 @@ The goal of this module set is to disambiguate potential nuances and complicated
 
 ### Online
 
+- [Pointcut expressions in Spring AOP](https://jstobigdata.com/spring/pointcut-expressions-in-spring-aop/)
+- [3. Data Access with JDBC](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#jdbc)
+- [Example of PreparedStatement in Spring JdbcTemplate](https://www.javatpoint.com/example-of-PreparedStatement-in-Spring-JdbcTemplate)
 - [MongoDB Indexes With Spring Data](https://dzone.com/articles/mongodb-indexes-with-spring-data)
 - [Spring Prototype scope bean](https://zetcode.com/spring/prototypescope/)
 - [Spring - Initialization and destruction lifecycle callbacks](https://www.logicbig.com/tutorials/spring-framework/spring-core/lifecycle-callbacks.html)
@@ -103,6 +96,7 @@ The goal of this module set is to disambiguate potential nuances and complicated
 - [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
 - [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
 - [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
+
 
 ## About me 👨🏽‍💻🚀
 

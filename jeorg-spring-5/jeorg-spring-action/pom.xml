@@ -12,6 +12,7 @@
     <artifactId>jeorg-spring-action</artifactId>
     <modules>
         <module>jeorg-spring-action-data</module>
+        <module>jeorg-spring-action-aop</module>
     </modules>
 
     <properties>
