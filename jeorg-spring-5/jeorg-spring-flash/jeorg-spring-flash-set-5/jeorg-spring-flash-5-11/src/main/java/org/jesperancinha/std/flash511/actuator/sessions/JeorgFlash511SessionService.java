@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentSkipListMap;
 
 @Service
-public class SessionService {
+public class JeorgFlash511SessionService {
 
     private final Map<String, HttpSession> httpSessionMap = new ConcurrentSkipListMap<>();
 

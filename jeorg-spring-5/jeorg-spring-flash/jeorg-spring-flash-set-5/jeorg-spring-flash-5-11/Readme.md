@@ -7,6 +7,7 @@
 Exploring Production Ready Metrics in Spring
 
 1. `actuator`, `sessions`, `beans`, `caches`, `health`, `info`, `conditions`, `shutdown`, `configprops`, `env`, `loggers`, `headdump`, `threaddump`, `metrics`, `scheduledtasks`, `mappings`
+2. `@TestConfiguration`, `@SpringBootTest`, `@Import`
 
 ## Endpoints
 

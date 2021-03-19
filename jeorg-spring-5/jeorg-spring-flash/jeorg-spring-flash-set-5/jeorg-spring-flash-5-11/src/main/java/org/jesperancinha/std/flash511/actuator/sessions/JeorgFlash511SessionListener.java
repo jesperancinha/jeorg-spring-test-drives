@@ -8,19 +8,19 @@ import javax.servlet.http.HttpSessionListener;
 @Component
 public class JeorgFlash511SessionListener implements HttpSessionListener {
 
-    private final SessionService sessionService;
+    private final JeorgFlash511SessionService jeorgFlash511SessionService;
 
-    public JeorgFlash511SessionListener(SessionService sessionService) {
-        this.sessionService = sessionService;
+    public JeorgFlash511SessionListener(JeorgFlash511SessionService jeorgFlash511SessionService) {
+        this.jeorgFlash511SessionService = jeorgFlash511SessionService;
     }
 
     @Override
     public void sessionCreated(HttpSessionEvent se) {
-        sessionService.addSession(se.getSession());
+        jeorgFlash511SessionService.addSession(se.getSession());
     }
 
     @Override
     public void sessionDestroyed(HttpSessionEvent se) {
-        sessionService.removeSession(se.getSession());
+        jeorgFlash511SessionService.removeSession(se.getSession());
     }
 }

@@ -1,0 +1,40 @@
+package org.jesperancinha.std.flash511.actuator.sessions;
+
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class JeorgFlash511SessionListenerTest {
+
+    @Autowired(required = false)
+    private String pepper;
+
+    @Test
+    void testSessionCreated_whenInjected_thenNoPeppers() {
+        ConsolerizerComposer.outSpace()
+                .unicorns(100)
+                .black()
+                .bgBlue("We don't get peppers if the configuration class isn't annotated with @TestConfiguration or if this class is either not @Import-ed nor is it annotated as an internal static non-private class")
+                .green(pepper)
+                .reset();
+        assertThat(pepper).isNull();
+    }
+
+    @Test
+    void testSessionDestroyed_whenInjected_thenNoPeppers() {
+        ConsolerizerComposer.outSpace()
+                .unicorns(100)
+                .black()
+                .bgBlue("We don't get peppers if the configuration class isn't annotated with @TestConfiguration or if this class is either not @Import-ed nor is it annotated as an internal static non-private class")
+                .green(pepper)
+                .reset();
+        assertThat(pepper).isNull();
+    }
+}
