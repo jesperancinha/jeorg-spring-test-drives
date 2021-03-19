@@ -109,6 +109,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `execution`, `@annotation`, `@Around`, `@Before`, `@After`
 `postProcessBeforeInitialization`, `@PostConstruct`, `afterPropertiesSet`, `postProcessAfterInitialization`
 `actuator`, `sessions`, `beans`, `caches`, `health`, `info`, `conditions`, `shutdown`, `configprops`, `env`, `loggers`, `headdump`, `threaddump`, `metrics`, `scheduledtasks`, `mappings`
+`CommandLineRunner`, `ApplicationRunner`
 
 ## References
 
