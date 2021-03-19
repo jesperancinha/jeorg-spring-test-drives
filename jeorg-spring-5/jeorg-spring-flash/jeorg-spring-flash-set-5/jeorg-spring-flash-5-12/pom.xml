@@ -14,6 +14,9 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <start-class>org.jesperancinha.std.flash512.runner.SpringFlash512CommandLineLauncher</start-class>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -168,19 +171,38 @@
         </resources>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
+                    <encoding>utf-8</encoding>
                     <source>${maven-compiler-plugin.source}</source>
                     <target>${maven-compiler-plugin.target}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>application</id>
+            <properties>
+                <start-class>org.jesperancinha.std.flash512.runner.SpringFlash512ApplicationLauncher</start-class>
+            </properties>
+        </profile>
+        <profile>
+            <id>command</id>
+            <properties>
+                <start-class>org.jesperancinha.std.flash512.runner.SpringFlash512CommandLineLauncher</start-class>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
