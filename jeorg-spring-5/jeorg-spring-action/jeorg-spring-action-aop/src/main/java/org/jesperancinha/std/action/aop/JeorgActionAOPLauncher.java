@@ -23,5 +23,6 @@ public class JeorgActionAOPLauncher implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         bonitoCatcher.catchByHand();
         bonitoCatcher.catchByHandExtra();
+        bonitoCatcher.catchWithClaws();
     }
 }

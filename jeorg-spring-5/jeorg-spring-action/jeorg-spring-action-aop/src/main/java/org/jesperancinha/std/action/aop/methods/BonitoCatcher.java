@@ -34,7 +34,7 @@ public class BonitoCatcher implements SeaFoodCatcher<Bonito> {
     @Override
     public Bonito catchWithClaws() {
         ConsolerizerComposer.outSpace()
-                .brightGreen(" You just caught a Bonito with your fine claws")
+                .brightGreen("You just caught a Bonito with your fine claws")
                 .reset();
         return new Bonito();
     }

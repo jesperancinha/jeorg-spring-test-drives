@@ -7,7 +7,7 @@
 Topics:
 
 1. `@Aspect`, `perthis`, `@Scope`, `prototype`, `@Before`
-
+2. `@Pointcut`, `@Before`
 
 ## Notes
 
