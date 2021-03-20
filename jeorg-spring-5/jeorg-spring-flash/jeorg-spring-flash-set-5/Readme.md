@@ -14,7 +14,8 @@
 10. [jeorg-spring-flash-5-10](./jeorg-spring-flash-5-10) - 🌿 postProcessBeforeInitialization, @PostConstruct, afterPropertiesSet and postProcessAfterInitialization
 11. [jeorg-spring-flash-5-11](./jeorg-spring-flash-5-11) - 📈 Actuator endpoints
 12. [jeorg-spring-flash-5-12](./jeorg-spring-flash-5-12) - 💍 CommandLineRunner, ApplicationRunner
-13. [jeorg-spring-flash-5-12](./jeorg-spring-flash-5-12) - 🍌 RestTemplate
+13. [jeorg-spring-flash-5-13](./jeorg-spring-flash-5-13) - 🍌 RestTemplate
+14. [jeorg-spring-flash-5-14](./jeorg-spring-flash-5-14) - 🪴 @SpringBootApplication
 
 ## References
 
