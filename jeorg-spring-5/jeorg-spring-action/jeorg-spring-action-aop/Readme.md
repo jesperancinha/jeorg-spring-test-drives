@@ -6,7 +6,17 @@
 
 Topics:
 
-1.
+1. `@Aspect`, `perthis`, `@Scope`, `prototype`, `@Before`
+
+
+## Notes
+
+There are a least 4 scope types for @Aspect:
+
+1. `singleton`
+2. `perthis`
+3. `pertarget`
+4. `pertypewithin`
 
 ## References
 
@@ -23,6 +33,7 @@ Topics:
 
 ### Online
 
+- [Class AspectMetadata](http://api.iotinfra.net/spring/3.2.9/javadoc-api/org/springframework/aop/aspectj/annotation/AspectMetadata.html)
 - [Pointcut expressions in Spring AOP](https://jstobigdata.com/spring/pointcut-expressions-in-spring-aop/)
 - [3. Data Access with JDBC](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#jdbc)
 - [Example of PreparedStatement in Spring JdbcTemplate](https://www.javatpoint.com/example-of-PreparedStatement-in-Spring-JdbcTemplate)
