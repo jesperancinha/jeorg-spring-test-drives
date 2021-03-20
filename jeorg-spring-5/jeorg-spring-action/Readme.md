@@ -10,6 +10,7 @@ The goal of this module set is to disambiguate potential nuances and complicated
 
 `@Aspect`, `perthis`, `@Scope`, `prototype`, `@Before`
 `@Pointcut`, `@Before`
+`!`, `||`, `&&`
 
 2. MVC - [jeorg-spring-action-mvn](./jeorg-spring-action-mvn)
 3. Security - [jeorg-spring-action-security](./jeorg-spring-action)

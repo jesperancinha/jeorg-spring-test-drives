@@ -8,9 +8,11 @@ Topics:
 
 1. `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`, `management.endpoint.integrationgraph.enabled`
 
-## References
+## Endpoints
 
-### Context
+1. [http://localhost:8081/management](http://localhost:8081/management)
+
+## References
 
 ### Books
 
