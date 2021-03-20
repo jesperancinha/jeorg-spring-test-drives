@@ -113,6 +113,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@TestConfiguration`, `@SpringBootTest`, `@Import`
 `RestTemplate`, `postForLocation`, `postForEntity`, `postForObject`
 `@SpringBootApplication`, `scanBasePackages`
+`JSONAssert`, `org.skyscreamer`
 
 ## References
 

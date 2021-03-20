@@ -7,6 +7,7 @@
 Exploring RestTemplate in Spring
 
 1. `RestTemplate`, `postForLocation`, `postForEntity`, `postForObject`
+2. `JSONAssert`, `org.skyscreamer`
 
 ## Endpoints
 
