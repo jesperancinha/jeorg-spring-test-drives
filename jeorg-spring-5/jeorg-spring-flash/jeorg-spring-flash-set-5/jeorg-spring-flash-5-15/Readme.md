@@ -1,12 +1,12 @@
-# jeorg-spring-flash-5-14
+# jeorg-spring-flash-5-15
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/jeorg-spring-5-test-drives/tree/master/jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-5/jeorg-spring-flash-5-14)
+[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/jeorg-spring-5-test-drives/tree/master/jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-5/jeorg-spring-flash-5-15)
 
 ## Introduction
 
-Exploring @SpringBootApplication in Spring
+Exploring spring.factories in Spring
 
-1. `@SpringBootApplication`, `scanBasePackages`
+1. `spring.factories`
 
 ## Endpoints
 
@@ -36,6 +36,7 @@ mvn clean install spring-boot:run
 
 ### Online
 
+- [Spring Boot Factories](https://github.com/spring-projects/spring-boot/blob/v2.4.4/spring-boot-project/spring-boot-autoconfigure/src/main/resources/META-INF/spring.factories)
 - [Spring Boot: ApplicationRunner and CommandLineRunner](https://dzone.com/articles/spring-boot-applicationrunner-and-commandlinerunne)
 - [Spring Boot Actuator - WEB APPLICATION VULNERABILITIES](https://www.acunetix.com/vulnerabilities/web/spring-boot-actuator/)
 - [Spring Boot: Sessions actuator endpoint](https://moelholm.com/blog/2016/08/22/spring-boot-sessions-actuator-endpoint)

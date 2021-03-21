@@ -19,7 +19,7 @@ Exploring RestTemplate in Spring
 lsof -i :8081
 ```
 
-1. Run the service with the SpringFlash512CommandLineLauncher
+1. Run the service
 
 ```bash
 mvn clean install spring-boot:run
