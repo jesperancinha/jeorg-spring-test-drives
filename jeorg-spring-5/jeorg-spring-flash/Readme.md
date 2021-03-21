@@ -72,6 +72,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `postProcessBeforeInitialization`, `postProcessAfterInitialization`, `BeanPostProcessor`,
 `static`, `@Bean`,
 `@Required`, `RequiredAnnotationBeanPostProcessor`
+`FileSystemXmlApplicationContext`, `ClassPathXmlApplicationContext`
 
 4. [jeorg-spring-flash-set-4](./jeorg-spring-flash-set-4) - Set 4 of 20 Flash modules
 
