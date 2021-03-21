@@ -1,30 +1,16 @@
-# jeorg-spring-action
+# jeorg-spring-action-mvc
+
+[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/jeorg-spring-5-test-drives/tree/master/jeorg-spring-5/jeorg-spring-action/jeorg-spring-action-mvc)
 
 ## Introduction
 
-Welcome to action modules.
+Topics:
 
-The goal of this module set is to disambiguate potential nuances and complicated topics surrounding the Spring architecture:
+1.
 
-1. AOP - [jeorg-spring-action-aop](./jeorg-spring-action-aop)
+## Endpoints
 
-`@Aspect`, `perthis`, `@Scope`, `prototype`, `@Before`
-`@Pointcut`, `@Before`
-`!`, `||`, `&&`
-
-2. MVC - [jeorg-spring-action-mvc](./jeorg-spring-action-mvc)
-3. Security - [jeorg-spring-action-security](./jeorg-spring-action)
-4. JPA - Spring - Data - [jeorg-spring-action-data](./jeorg-spring-action-data)
-
-`JdbcTemplate` `DataSource` `Connection` `execute` `PreparedStatementCallback` `doInPreparedStatement` `RowMapper` `setExceptionTranslator` `DataAccessException` `AbstractFallbackSQLExceptionTranslator`
-
-5. Boot - Intro - [jeorg-spring-action-boot](./jeorg-spring-action-boot)
-6. AutoConfig - [jeorg-spring-action-auto-config](./jeorg-spring-action-auto-config)
-7. Actuator - [jeorg-spring-action-actuator](./jeorg-spring-action-actuator)
-
-`management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`, `management.endpoint.integrationgraph.enabled`
-
-8. Testing - [jeorg-spring-action-testing](./jeorg-spring-action-testing)
+1. 
 
 ## References
 
@@ -39,6 +25,11 @@ The goal of this module set is to disambiguate potential nuances and complicated
 
 ### Online
 
+- [Spring Actuator Production Ready Features](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html)
+- [Class AspectMetadata](http://api.iotinfra.net/spring/3.2.9/javadoc-api/org/springframework/aop/aspectj/annotation/AspectMetadata.html)
+- [Pointcut expressions in Spring AOP](https://jstobigdata.com/spring/pointcut-expressions-in-spring-aop/)
+- [3. Data Access with JDBC](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#jdbc)
+- [Example of PreparedStatement in Spring JdbcTemplate](https://www.javatpoint.com/example-of-PreparedStatement-in-Spring-JdbcTemplate)
 - [MongoDB Indexes With Spring Data](https://dzone.com/articles/mongodb-indexes-with-spring-data)
 - [Spring Prototype scope bean](https://zetcode.com/spring/prototypescope/)
 - [Spring - Initialization and destruction lifecycle callbacks](https://www.logicbig.com/tutorials/spring-framework/spring-core/lifecycle-callbacks.html)
@@ -111,6 +102,7 @@ The goal of this module set is to disambiguate potential nuances and complicated
 - [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
 - [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
 - [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
+
 
 ## About me 👨🏽‍💻🚀
 
