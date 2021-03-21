@@ -18,6 +18,7 @@ Topics covered:
 3. `FilterChainProxy`, `springSecurityFilterChain`
 4. `@WithMockUser(username = "admin", password = "admin", roles = "ADMIN", value = "admin")`
 5. `import org.springframework.test.context.jdbc.Sql`, `import org.springframework.test.context.jdbc.SqlGroup`
+6. `DatabasePopulator`
 
 ## Endpoints
 
