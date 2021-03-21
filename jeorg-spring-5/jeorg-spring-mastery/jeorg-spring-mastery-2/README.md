@@ -19,6 +19,7 @@ Topics covered:
 4. `@WithMockUser(username = "admin", password = "admin", roles = "ADMIN", value = "admin")`
 5. `import org.springframework.test.context.jdbc.Sql`, `import org.springframework.test.context.jdbc.SqlGroup`
 6. `DatabasePopulator`
+7. `populate`
 
 ## Endpoints
 
@@ -115,6 +116,11 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
       <a title="Rádio Macau - Amanhã é sempre longe demais" href="https://www.youtube.com/watch?v=734ywSpCrc0">
      <img 
           src="https://img.youtube.com/vi/734ywSpCrc0/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="MLER IFE DADA - Zuvi Zeva Novi" href="https://www.youtube.com/watch?v=vKLlEOO33ko">
+     <img 
+          src="https://img.youtube.com/vi/vKLlEOO33ko/0.jpg" 
           style="width:10%;">
       </a>
 </div>

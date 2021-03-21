@@ -10,10 +10,10 @@ import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 public class TestDatabaseConfiguration {
     @Bean
     public DatabasePopulator databasePopulator() {
-        final ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
-        populator.setContinueOnError(false);
-        populator.addScript(new ClassPathResource("artists_batch1.sql"));
-        return populator;
+        final ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
+        resourceDatabasePopulator.setContinueOnError(false);
+        resourceDatabasePopulator.addScript(new ClassPathResource("artists_batch1.sql"));
+        return resourceDatabasePopulator;
     }
 }
 
