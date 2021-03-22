@@ -115,6 +115,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `RestTemplate`, `postForLocation`, `postForEntity`, `postForObject`
 `@SpringBootApplication`, `scanBasePackages`
 `JSONAssert`, `org.skyscreamer`
+`ApplicationContext`, `SpringApplication.exit(applicationContext, () -> 0)`, `applicationContext.registerShutdownHook()`, `applicationContext.close()`
 
 ## References
 
