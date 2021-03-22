@@ -1,18 +1,29 @@
 package org.jesperancinha.std.flash25.jpa.operators;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash25.jpa.operators.domain.Bean;
 import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
+import org.jesperancinha.std.flash25.jpa.operators.service.BeanService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import javax.inject.Named;
+
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 
 @SpringBootApplication
 public class SpringFlash25Launcher implements CommandLineRunner {
 
     private final BeanRepository beanRepository;
 
-    public SpringFlash25Launcher(BeanRepository beanRepository) {
+    private final BeanService beanService;
+
+    public SpringFlash25Launcher(BeanRepository beanRepository,
+                                 @Named("that-other-bean-service")
+                                         BeanService beanService) {
         this.beanRepository = beanRepository;
+        this.beanService = beanService;
     }
 
     public static void main(String[] args) {
@@ -41,6 +52,12 @@ public class SpringFlash25Launcher implements CommandLineRunner {
         beanRepository.save(bean8);
         beanRepository.save(bean9);
         beanRepository.save(bean10);
+
+        ConsolerizerComposer.outSpace()
+                .black()
+                .bgRed(title("@Named beans explained"))
+                .bgCyan("We just started bean %s",beanService)
+                .reset();
     }
 
     private Bean makeBean(String name, Long kilos) {

@@ -2,6 +2,7 @@ package org.jesperancinha.std.flash25.jpa.operators.controller;
 
 import org.jesperancinha.std.flash25.jpa.operators.domain.Bean;
 import org.jesperancinha.std.flash25.jpa.operators.service.BeanService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,9 @@ public class BeanController {
 
     private final BeanService beanService;
 
-    public BeanController(BeanService beanService) {
+    public BeanController(
+            @Qualifier("normal")
+            final BeanService beanService) {
         this.beanService = beanService;
     }
 
@@ -40,6 +43,7 @@ public class BeanController {
             final String name) {
         return beanService.getByName(name);
     }
+
     @GetMapping(path = "/bean/not/weighed",
             produces = APPLICATION_JSON_VALUE)
     public List<Bean> getBeansNotWeighed() {

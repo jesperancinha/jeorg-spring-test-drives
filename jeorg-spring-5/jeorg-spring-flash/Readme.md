@@ -50,6 +50,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@Bean`, `destroyMethod`, `initMethod`,
 `@PathVariable`, `@MatrixVariable`, `@RequestHeader`, `@RequestParam`
 `By`, `Is`, `Null`
+`@Service("normal")`, `@Named("that-other-bean-service")`
 
 3. [jeorg-spring-flash-set-3](./jeorg-spring-flash-set-3) - Set 3 of 20 Flash modules
 

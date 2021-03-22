@@ -2,16 +2,16 @@ package org.jesperancinha.std.flash25.jpa.operators.service;
 
 import org.jesperancinha.std.flash25.jpa.operators.domain.Bean;
 import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
-import org.springframework.stereotype.Service;
 
+import javax.inject.Named;
 import java.util.List;
 
-@Service("normal")
-public class BeanServiceImpl implements BeanService {
+@Named("that-other-bean-service")
+public class BeanNamedServiceImpl implements BeanService {
 
     private BeanRepository beanRepository;
 
-    public BeanServiceImpl(final BeanRepository beanRepository) {
+    public BeanNamedServiceImpl(final BeanRepository beanRepository) {
         this.beanRepository = beanRepository;
     }
 
