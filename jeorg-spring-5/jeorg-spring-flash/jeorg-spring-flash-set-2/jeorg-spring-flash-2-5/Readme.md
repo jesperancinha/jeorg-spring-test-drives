@@ -7,6 +7,7 @@ Exploring JPA repository operators in Spring
 Topics
 
 1. `First`, `By`, `Like`, `Top`, `Distinct`, `Contains`, `LessThan`, `GreaterThan`, `Between`
+2. `By`, `Is`, `Null`
 
 ## Endpoints
 
@@ -20,6 +21,8 @@ Topics
 8. [http://localhost:8081/runner](http://localhost:8081/runner)
 9. [http://localhost:8081/first/30](http://localhost:8081/first/30)
 10. [http://localhost:8081/contains/ack](http://localhost:8081/contains/ack)
+11. [http://localhost:8081/bean/Aduki](http://localhost:8081/bean/Aduki)
+12. [http://localhost:8081/bean/not/weighed](http://localhost:8081/bean/not/weighed)
 
 ```bash
 curl http://localhost:8081

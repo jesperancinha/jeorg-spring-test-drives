@@ -25,4 +25,8 @@ public interface BeanService {
     Bean findTopByKiloOrderByName(Long kilos);
 
     List<Bean> findByNameContains(String word);
+
+    Bean getByName(String name);
+
+    List<Bean> getNotWeighed();
 }

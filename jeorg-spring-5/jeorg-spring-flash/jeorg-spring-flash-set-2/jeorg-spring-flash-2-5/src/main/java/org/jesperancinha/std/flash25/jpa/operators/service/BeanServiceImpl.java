@@ -64,4 +64,14 @@ public class BeanServiceImpl implements BeanService {
     public List<Bean> findByNameContains(String word) {
         return this.beanRepository.findByNameContains(word);
     }
+
+    @Override
+    public Bean getByName(String name) {
+        return this.beanRepository.findByNameIs(name);
+    }
+
+    @Override
+    public List<Bean> getNotWeighed() {
+        return this.beanRepository.findByKilosNull();
+    }
 }

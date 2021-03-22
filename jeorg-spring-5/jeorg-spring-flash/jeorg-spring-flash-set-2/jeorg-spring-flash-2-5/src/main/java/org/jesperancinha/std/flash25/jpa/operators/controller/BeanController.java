@@ -33,6 +33,19 @@ public class BeanController {
         return beanService.getById(id);
     }
 
+    @GetMapping(path = "/bean/{name}",
+            produces = APPLICATION_JSON_VALUE)
+    public Bean getBeanByNae(
+            @PathVariable
+            final String name) {
+        return beanService.getByName(name);
+    }
+    @GetMapping(path = "/bean/not/weighed",
+            produces = APPLICATION_JSON_VALUE)
+    public List<Bean> getBeansNotWeighed() {
+        return beanService.getNotWeighed();
+    }
+
     @GetMapping(path = "/high50",
             produces = APPLICATION_JSON_VALUE)
     public List<Bean> getBeansHigherThan50() {

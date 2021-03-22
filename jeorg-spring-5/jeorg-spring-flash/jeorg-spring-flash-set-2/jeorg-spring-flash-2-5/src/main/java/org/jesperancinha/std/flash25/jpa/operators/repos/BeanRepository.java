@@ -20,4 +20,7 @@ public interface BeanRepository extends JpaRepository<Bean, Long> {
 
     List<Bean> findByKilosBetween(final Long kilos1, final Long kilos2);
 
+    Bean findByNameIs(final String name);
+
+    List<Bean> findByKilosNull();
 }

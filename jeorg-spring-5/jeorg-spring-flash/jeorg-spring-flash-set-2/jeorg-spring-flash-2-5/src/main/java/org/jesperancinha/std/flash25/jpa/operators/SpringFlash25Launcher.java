@@ -29,6 +29,8 @@ public class SpringFlash25Launcher implements CommandLineRunner {
         final Bean bean6 = makeBean("Black-Eyed Pea", 30L);
         final Bean bean7 = makeBean("Brown", 15L);
         final Bean bean8 = makeBean("Lima", 55L);
+        final Bean bean9 = makeBean("White", null);
+        final Bean bean10 = makeBean("Black", null);
         beanRepository.save(bean1);
         beanRepository.save(bean2);
         beanRepository.save(bean3);
@@ -37,6 +39,8 @@ public class SpringFlash25Launcher implements CommandLineRunner {
         beanRepository.save(bean6);
         beanRepository.save(bean7);
         beanRepository.save(bean8);
+        beanRepository.save(bean9);
+        beanRepository.save(bean10);
     }
 
     private Bean makeBean(String name, Long kilos) {
