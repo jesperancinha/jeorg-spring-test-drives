@@ -47,13 +47,11 @@ Note that if you want to build this project from the root, you need to use one o
 sdk install java 11.0.9.hs-adpt
 sdk use java 11.0.9.hs-adpt
 ```
-## Mermaid
+## Sequence Diagram
 
 ```mermaid
 
 sequenceDiagram
-
-
     participant USER
     participant SPRING
     participant Spring Professional
@@ -67,10 +65,11 @@ sequenceDiagram
     loop Keep updated
          Spring Professional->>SPRING: User studies again
     end
-     
-   
     end
 ```
+
+<i>Note: You need a Mermaid plugin extension</i> i.e. [mermaid-plugin](https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil/related)
+
 ## References:
 
 ### Books
