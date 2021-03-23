@@ -1,5 +1,7 @@
-package org.jesperancinha.std.action.aop.methods;
+package org.jesperancinha.std.action.aop.methods.cod;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.jesperancinha.std.action.aop.methods.SeaFoodCatcher;
 import org.jesperancinha.std.action.aop.model.Cod;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,11 @@ public class CodCatcher implements SeaFoodCatcher<Cod> {
 
     @Override
     public Cod catchByHand() {
-        return null;
+        ConsolerizerComposer.outSpace()
+                .cyan()
+                .bgBlue("Catched a Cod Fish by hand")
+                .reset();
+        return new Cod();
     }
 
     @Override

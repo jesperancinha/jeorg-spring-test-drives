@@ -1,6 +1,7 @@
 package org.jesperancinha.std.action.aop;
 
 import org.jesperancinha.std.action.aop.methods.BonitoCatcher;
+import org.jesperancinha.std.action.aop.methods.cod.CodCatcher;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,9 +11,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JeorgActionAOPLauncher implements ApplicationRunner {
 
     private final BonitoCatcher bonitoCatcher;
+    private final CodCatcher codCatcher;
 
-    public JeorgActionAOPLauncher(BonitoCatcher bonitoCatcher) {
+    public JeorgActionAOPLauncher(BonitoCatcher bonitoCatcher,
+                                  CodCatcher codCatcher) {
         this.bonitoCatcher = bonitoCatcher;
+        this.codCatcher = codCatcher;
     }
 
     public static void main(String[] args) {
@@ -24,5 +28,6 @@ public class JeorgActionAOPLauncher implements ApplicationRunner {
         bonitoCatcher.catchByHand();
         bonitoCatcher.catchByHandExtra();
         bonitoCatcher.catchWithClaws();
+        codCatcher.catchByHand();
     }
 }
