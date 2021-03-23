@@ -9,6 +9,7 @@ Topics
 1. `First`, `By`, `Like`, `Top`, `Distinct`, `Contains`, `LessThan`, `GreaterThan`, `Between`
 2. `By`, `Is`, `Null`
 3. `@Service("normal")`, `@Named("that-other-bean-service")`
+4. `@TestPropertySource`
 
 ## Endpoints
 
@@ -60,6 +61,7 @@ mvn clean install spring-boot:run
 
 ### Online
 
+- [Spring Testing - @TestPropertySource Example](https://www.logicbig.com/tutorials/spring-framework/spring-core/test-property-source-annotation.html)
 - [Accessing Relational Data using JDBC with Spring](https://spring.io/guides/gs/relational-data-access/)
 - [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)
 - [Custom Container Configuration in Spring Boot 2](https://www.javaprogramto.com/2020/04/spring-boot-embeddedservletcontainercustomizer-configurableembeddedservletcontainer.html)

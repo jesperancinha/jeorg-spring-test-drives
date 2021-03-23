@@ -2,12 +2,16 @@ package org.jesperancinha.std.flash25.jpa.operators.service;
 
 import org.jesperancinha.std.flash25.jpa.operators.domain.Bean;
 import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service("normal")
 public class BeanServiceImpl implements BeanService {
+
+    @Value("${org.jesperancinha.std.flash25.jpa.operators.slogan}")
+    private String slogan;
 
     private BeanRepository beanRepository;
 
@@ -73,5 +77,9 @@ public class BeanServiceImpl implements BeanService {
     @Override
     public List<Bean> getNotWeighed() {
         return this.beanRepository.findByKilosNull();
+    }
+
+    public String getSlogan() {
+        return slogan;
     }
 }

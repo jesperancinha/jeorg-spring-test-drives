@@ -74,4 +74,9 @@ public class BeanNamedServiceImpl implements BeanService {
     public List<Bean> getNotWeighed() {
         return this.beanRepository.findByKilosNull();
     }
+
+    @Override
+    public String getSlogan() {
+        return null;
+    }
 }
