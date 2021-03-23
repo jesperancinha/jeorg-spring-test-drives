@@ -9,7 +9,7 @@ Topics
 1. `First`, `By`, `Like`, `Top`, `Distinct`, `Contains`, `LessThan`, `GreaterThan`, `Between`
 2. `By`, `Is`, `Null`
 3. `@Service("normal")`, `@Named("that-other-bean-service")`
-4. `@TestPropertySource`
+4. `@TestPropertySource`, `@PropertySource`
 
 ## Endpoints
 

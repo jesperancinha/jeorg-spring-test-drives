@@ -7,23 +7,30 @@ import org.jesperancinha.std.flash25.jpa.operators.service.BeanService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 
 import javax.inject.Named;
 
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.quote;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 
 @SpringBootApplication
+@PropertySource("classpath:production.beans.properties")
 public class SpringFlash25Launcher implements CommandLineRunner {
 
     private final BeanRepository beanRepository;
 
     private final BeanService beanService;
 
+    private final Environment environment;
+
     public SpringFlash25Launcher(BeanRepository beanRepository,
                                  @Named("that-other-bean-service")
-                                         BeanService beanService) {
+                                         BeanService beanService, Environment environment) {
         this.beanRepository = beanRepository;
         this.beanService = beanService;
+        this.environment = environment;
     }
 
     public static void main(String[] args) {
@@ -58,6 +65,17 @@ public class SpringFlash25Launcher implements CommandLineRunner {
                 .bgRed(title("@Named beans explained"))
                 .bgCyan("We just started bean %s",beanService)
                 .reset();
+
+        final String property = environment.getProperty("org.jesperancinha.std.flash25.jpa.operators.beanlove");
+
+        ConsolerizerComposer.outSpace()
+                .black()
+                .bgCyan(title("Because we love beans"))
+                .bgGreen("we can also take our message from an external production.beans.properties file")
+                .black()
+                .bgCyan(quote(property))
+                .reset();
+
     }
 
     private Bean makeBean(String name, Long kilos) {
