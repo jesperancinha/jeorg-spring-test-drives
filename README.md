@@ -47,7 +47,30 @@ Note that if you want to build this project from the root, you need to use one o
 sdk install java 11.0.9.hs-adpt
 sdk use java 11.0.9.hs-adpt
 ```
+## Mermaid
 
+```mermaid
+
+sequenceDiagram
+
+
+    participant USER
+    participant SPRING
+    participant Spring Professional
+    
+    rect rgb(1,130,25)
+    
+    USER->>SPRING: User studies spring
+    
+    SPRING->>Spring Professional: User becomes
+ 
+    loop Keep updated
+         Spring Professional->>SPRING: User studies again
+    end
+     
+   
+    end
+```
 ## References:
 
 ### Books
