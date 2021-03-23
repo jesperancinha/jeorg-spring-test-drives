@@ -31,17 +31,14 @@ class BeanServiceImplPreTest {
     void tesGetSlogan_whenCalled_getProductionSlogan() {
         final var slogan = beanService.getSlogan();
         assertThat(slogan).isEqualTo("This is just a slogan");
-
-        ExpressionParser parser = new SpelExpressionParser();
-
-        StandardEvaluationContext evaluationContext = new StandardEvaluationContext();
-
-        Map<String, Object> map = new HashMap<String, Object>();
+        final var parser = new SpelExpressionParser();
+        final var evaluationContext = new StandardEvaluationContext();
+        final var map = new HashMap<String, Object>();
         map.put("slogan", slogan);
         evaluationContext.setVariables(map);
-
-        Expression exp = parser.parseExpression("#slogan");
+        final var exp = parser.parseExpression("#slogan");
         String message = (String) exp.getValue(evaluationContext);
         assertThat(message).isEqualTo("This is just a slogan");
     }
+
 }

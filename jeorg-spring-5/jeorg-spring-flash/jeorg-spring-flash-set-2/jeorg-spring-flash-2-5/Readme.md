@@ -11,6 +11,7 @@ Topics
 3. `@Service("normal")`, `@Named("that-other-bean-service")`
 4. `@TestPropertySource`, `@PropertySource`
 5. `ExpressionParser`, `SpelExpressionParser`, `parseExpression`
+6. `SpringBootTest.WebEnvironment.MOCK`. `SpringBootTest.WebEnvironment.NONE`, `SpringBootTest.WebEnvironment.RANDOM_PORT`, `SpringBootTest.WebEnvironment.DEFINED_PORT`
 
 ## Endpoints
 
@@ -62,6 +63,7 @@ mvn clean install spring-boot:run
 
 ### Online
 
+- [SpringBootTest webEnvironment](https://zhaoyichun.blogspot.com/2018/12/springboottest-webenvironment.html?m=1)
 - [Spring Testing - @TestPropertySource Example](https://www.logicbig.com/tutorials/spring-framework/spring-core/test-property-source-annotation.html)
 - [Accessing Relational Data using JDBC with Spring](https://spring.io/guides/gs/relational-data-access/)
 - [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)
