@@ -23,4 +23,10 @@ public interface BeanRepository extends JpaRepository<Bean, Long> {
     Bean findByNameIs(final String name);
 
     List<Bean> findByKilosNull();
+
+    Long countBeansByNameIgnoreCase(String name);
+
+    List<Bean> findByNameNot(String name);
+
+    void deleteById(Long id);
 }

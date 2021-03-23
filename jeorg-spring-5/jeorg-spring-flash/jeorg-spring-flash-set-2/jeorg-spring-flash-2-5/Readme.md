@@ -12,6 +12,7 @@ Topics
 4. `@TestPropertySource`, `@PropertySource`
 5. `ExpressionParser`, `SpelExpressionParser`, `parseExpression`
 6. `SpringBootTest.WebEnvironment.MOCK`. `SpringBootTest.WebEnvironment.NONE`, `SpringBootTest.WebEnvironment.RANDOM_PORT`, `SpringBootTest.WebEnvironment.DEFINED_PORT`
+7. `IgnoreCase`, `findBy<>Not`, `deleteBy<>` 
 
 ## Endpoints
 
@@ -27,6 +28,10 @@ Topics
 10. [http://localhost:8081/contains/ack](http://localhost:8081/contains/ack)
 11. [http://localhost:8081/bean/Aduki](http://localhost:8081/bean/Aduki)
 12. [http://localhost:8081/bean/not/weighed](http://localhost:8081/bean/not/weighed)
+13. [http://localhost:8081/bean/case/Aduki](http://localhost:8081/bean/case/Aduki)
+14. [http://localhost:8081/bean/case/ADuki](http://localhost:8081/bean/case/ADuki)
+15. [http://localhost:8081/bean/case/AdUkI](http://localhost:8081/bean/case/AdUkI)
+16. [http://localhost:8081/bean/not/Aduki](http://localhost:8081/bean/not/Aduki)
 
 ```bash
 curl http://localhost:8081
@@ -39,6 +44,8 @@ curl http://localhost:8081/between/40/50
 curl http://localhost:8081/runner
 curl http://localhost:8081/first/30
 curl http://localhost:8081/contains/ack
+curl -X DELETE http://localhost:8081/bean/1
+
 ```
 
 ## How to run

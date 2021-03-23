@@ -28,8 +28,14 @@ public interface BeanService {
 
     Bean getByName(String name);
 
+    Long countBeansByNameIgnoreCase(String name);
+
     List<Bean> getNotWeighed();
 
     String getSlogan();
+
+    List<Bean> getByNameNot(String name);
+
+    void deleteById(Long id);
 }
 

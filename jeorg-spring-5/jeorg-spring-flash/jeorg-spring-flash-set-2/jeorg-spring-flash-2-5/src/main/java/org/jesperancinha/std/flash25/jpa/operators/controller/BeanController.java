@@ -3,6 +3,7 @@ package org.jesperancinha.std.flash25.jpa.operators.controller;
 import org.jesperancinha.std.flash25.jpa.operators.domain.Bean;
 import org.jesperancinha.std.flash25.jpa.operators.service.BeanService;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,10 +39,34 @@ public class BeanController {
 
     @GetMapping(path = "/bean/{name}",
             produces = APPLICATION_JSON_VALUE)
-    public Bean getBeanByNae(
+    public Bean getBeanByName(
             @PathVariable
             final String name) {
         return beanService.getByName(name);
+    }
+
+    @GetMapping(path = "/bean/not/{name}",
+            produces = APPLICATION_JSON_VALUE)
+    public List<Bean> getBeanByNameNot(
+            @PathVariable
+            final String name) {
+        return beanService.getByNameNot(name);
+    }
+
+    @DeleteMapping(path = "/bean/{id}",
+            produces = APPLICATION_JSON_VALUE)
+    public void deleteById(
+            @PathVariable
+            final Long id) {
+        beanService.deleteById(id);
+    }
+
+    @GetMapping(path = "/bean/case/{name}",
+            produces = APPLICATION_JSON_VALUE)
+    public Long countBeansByNameIgnoringCase(
+            @PathVariable
+            final String name) {
+        return beanService.countBeansByNameIgnoreCase(name);
     }
 
     @GetMapping(path = "/bean/not/weighed",

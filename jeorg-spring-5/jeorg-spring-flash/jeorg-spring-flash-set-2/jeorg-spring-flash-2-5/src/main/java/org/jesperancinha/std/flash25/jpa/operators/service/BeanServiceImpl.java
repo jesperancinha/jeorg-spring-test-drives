@@ -75,11 +75,26 @@ public class BeanServiceImpl implements BeanService {
     }
 
     @Override
+    public Long countBeansByNameIgnoreCase(String name) {
+        return this.beanRepository.countBeansByNameIgnoreCase(name);
+    }
+
+    @Override
     public List<Bean> getNotWeighed() {
         return this.beanRepository.findByKilosNull();
     }
 
     public String getSlogan() {
         return slogan;
+    }
+
+    @Override
+    public List<Bean> getByNameNot(String name) {
+        return this.beanRepository.findByNameNot(name);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        this.beanRepository.deleteById(id);
     }
 }

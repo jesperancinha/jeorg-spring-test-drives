@@ -71,6 +71,11 @@ public class BeanNamedServiceImpl implements BeanService {
     }
 
     @Override
+    public Long countBeansByNameIgnoreCase(String name) {
+        return null;
+    }
+
+    @Override
     public List<Bean> getNotWeighed() {
         return this.beanRepository.findByKilosNull();
     }
@@ -78,5 +83,15 @@ public class BeanNamedServiceImpl implements BeanService {
     @Override
     public String getSlogan() {
         return null;
+    }
+
+    @Override
+    public List<Bean> getByNameNot(String name) {
+        return null;
+    }
+
+    @Override
+    public void deleteById(Long id) {
+
     }
 }
