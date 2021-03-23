@@ -13,6 +13,7 @@ Topics
 5. `ExpressionParser`, `SpelExpressionParser`, `parseExpression`
 6. `SpringBootTest.WebEnvironment.MOCK`. `SpringBootTest.WebEnvironment.NONE`, `SpringBootTest.WebEnvironment.RANDOM_PORT`, `SpringBootTest.WebEnvironment.DEFINED_PORT`
 7. `IgnoreCase`, `findBy<>Not`, `deleteBy<>` 
+8. `@ConfigurationProperties`
 
 ## Endpoints
 

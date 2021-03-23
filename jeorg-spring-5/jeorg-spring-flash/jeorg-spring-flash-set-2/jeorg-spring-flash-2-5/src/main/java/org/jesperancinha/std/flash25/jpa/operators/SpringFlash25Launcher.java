@@ -1,6 +1,7 @@
 package org.jesperancinha.std.flash25.jpa.operators;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.jesperancinha.std.flash25.jpa.operators.configuration.BeanDataBaseProperties;
 import org.jesperancinha.std.flash25.jpa.operators.domain.Bean;
 import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
 import org.jesperancinha.std.flash25.jpa.operators.service.BeanService;
@@ -25,12 +26,17 @@ public class SpringFlash25Launcher implements CommandLineRunner {
 
     private final Environment environment;
 
+    private final BeanDataBaseProperties beanDataBaseProperties;
+
     public SpringFlash25Launcher(BeanRepository beanRepository,
                                  @Named("that-other-bean-service")
-                                         BeanService beanService, Environment environment) {
+                                         BeanService beanService,
+                                 Environment environment,
+                                 BeanDataBaseProperties beanDataBaseProperties) {
         this.beanRepository = beanRepository;
         this.beanService = beanService;
         this.environment = environment;
+        this.beanDataBaseProperties = beanDataBaseProperties;
     }
 
     public static void main(String[] args) {
@@ -63,7 +69,7 @@ public class SpringFlash25Launcher implements CommandLineRunner {
         ConsolerizerComposer.outSpace()
                 .black()
                 .bgRed(title("@Named beans explained"))
-                .bgCyan("We just started bean %s",beanService)
+                .bgCyan("We just started bean %s", beanService)
                 .reset();
 
         final String property = environment.getProperty("org.jesperancinha.std.flash25.jpa.operators.beanlove");
@@ -76,6 +82,14 @@ public class SpringFlash25Launcher implements CommandLineRunner {
                 .bgCyan(quote(property))
                 .reset();
 
+        ConsolerizerComposer.outSpace()
+                .yellow("Username")
+                .yellow(beanDataBaseProperties.getUsername())
+                .yellow("Password")
+                .yellow(beanDataBaseProperties.getPassword())
+                .yellow("Driver")
+                .yellow(beanDataBaseProperties.getDriverClassName())
+                .reset();
     }
 
     private Bean makeBean(String name, Long kilos) {
