@@ -10,6 +10,7 @@ Topics
 2. `By`, `Is`, `Null`
 3. `@Service("normal")`, `@Named("that-other-bean-service")`
 4. `@TestPropertySource`, `@PropertySource`
+5. `ExpressionParser`, `SpelExpressionParser`, `parseExpression`
 
 ## Endpoints
 

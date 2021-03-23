@@ -5,9 +5,16 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -22,6 +29,19 @@ class BeanServiceImplPreTest {
 
     @Test
     void tesGetSlogan_whenCalled_getProductionSlogan() {
-       assertThat(beanService.getSlogan()).isEqualTo("This is just a slogan");
+        final var slogan = beanService.getSlogan();
+        assertThat(slogan).isEqualTo("This is just a slogan");
+
+        ExpressionParser parser = new SpelExpressionParser();
+
+        StandardEvaluationContext evaluationContext = new StandardEvaluationContext();
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("slogan", slogan);
+        evaluationContext.setVariables(map);
+
+        Expression exp = parser.parseExpression("#slogan");
+        String message = (String) exp.getValue(evaluationContext);
+        assertThat(message).isEqualTo("This is just a slogan");
     }
 }

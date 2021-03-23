@@ -52,6 +52,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `By`, `Is`, `Null`
 `@Service("normal")`, `@Named("that-other-bean-service")`
 `@TestPropertySource`, `@PropertySource`
+`ExpressionParser`, `SpelExpressionParser`, `parseExpression`
 
 3. [jeorg-spring-flash-set-3](./jeorg-spring-flash-set-3) - Set 3 of 20 Flash modules
 
