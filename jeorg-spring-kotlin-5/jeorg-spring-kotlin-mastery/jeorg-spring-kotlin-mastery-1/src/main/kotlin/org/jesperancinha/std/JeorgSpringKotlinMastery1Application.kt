@@ -19,10 +19,10 @@ class JeorgSpringKotlinMastery1Application : CommandLineRunner {
 }
 
 fun main(args: Array<String>) {
-	val file = File("/tmp/jeorg-spring-kotlin-mastery-1.txt")
-	if (file.exists()) {
-		file.delete();
-	}
+    val file = File("/tmp/jeorg-spring-kotlin-mastery-1.txt")
+    if (file.exists()) {
+        file.delete();
+    }
     ConsolerizerComposer.out(" ")
         .ln()
         .brightMagenta("Welcome to Kotlin!")

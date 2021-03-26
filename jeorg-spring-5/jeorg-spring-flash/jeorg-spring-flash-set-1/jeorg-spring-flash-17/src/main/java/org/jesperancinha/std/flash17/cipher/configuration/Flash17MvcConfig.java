@@ -54,6 +54,4 @@ public class Flash17MvcConfig implements WebMvcConfigurer {
     public JdbcUserDetailsManager jdbcUserDetailsManager() {
         return new JdbcUserDetailsManager(datasource);
     }
-
-
 }
