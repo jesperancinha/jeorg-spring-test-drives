@@ -124,6 +124,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `@SpringBootApplication`, `scanBasePackages`
 `JSONAssert`, `org.skyscreamer`
 `ApplicationContext`, `SpringApplication.exit(applicationContext, () -> 0)`, `applicationContext.registerShutdownHook()`, `applicationContext.close()`
+`GenericApplicationContext`, `XmlBeanDefinitionReader`, `GroovyBeanDefinitionReader`, `PropertiesBeanDefinitionReader`
 
 ## References
 

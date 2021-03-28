@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jeorg-spring-flash-5-16</artifactId>
+    <artifactId>jeorg-spring-flash-5-17</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -129,6 +129,12 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy -->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy</artifactId>
+            <version>3.0.7</version>
         </dependency>
 
         <dependency>
