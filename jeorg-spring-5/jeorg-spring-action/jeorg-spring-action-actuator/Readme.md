@@ -6,7 +6,8 @@
 
 Topics:
 
-1. `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`, `management.endpoint.integrationgraph.enabled`
+1. `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`
+   , `management.endpoint.integrationgraph.enabled`
 2. `info`, `health`, `defaults`
 
 ## Endpoints
@@ -26,8 +27,6 @@ mvn clean install spring-boot:run
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 ```
-
-
 
 ## References
 
@@ -119,7 +118,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 - [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
 - [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
 - [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
-
 
 ## About me 👨🏽‍💻🚀
 
