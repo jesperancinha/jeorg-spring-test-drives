@@ -12,6 +12,7 @@
     <artifactId>jeorg-spring-apps</artifactId>
     <modules>
         <module>jeorg-spring-app-1</module>
+        <module>jeorg-spring-app-2</module>
     </modules>
 
     <properties>
