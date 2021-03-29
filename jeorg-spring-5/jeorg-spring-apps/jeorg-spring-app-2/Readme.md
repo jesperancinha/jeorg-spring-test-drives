@@ -4,7 +4,7 @@
 
 ## Introduction
 
-ScrapbookingDotCom is a fictitious company where scrapbooks are written, made and in some cases sold!
+ScrapbookingForCatsAndCoffeeOwnersDotCom is a fictitious company where scrapbooks are written, made and in some cases sold!
 
 Some scrapbooks tell stories. 📝
 
@@ -15,6 +15,8 @@ Some scrapbooks are about pets. 🐈
 Some scrapbooks talk about personal frustrations. 😩
 
 Some scrapbooks talk about happy life. 🥳
+
+Some scrapbooks talk about coffee. ☕️
 
 The goal of this application is to illustrate three fundamental principles of software development:
 
