@@ -1,6 +1,10 @@
 package org.jesperancinha.std.app2.scrap;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.jesperancinha.std.app2.scrap.dto.ScrapbookDto;
+import org.jesperancinha.std.app2.scrap.model.ScrapbookType;
+import org.jesperancinha.std.app2.scrap.service.ScrapbookService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,12 +14,26 @@ import static org.jesperancinha.console.consolerizer.console.ConsolerizerCompose
 
 @SpringBootApplication
 public class ScrapbookingForCatsAndCoffeeOwnersDotCom implements ApplicationRunner {
+
+    private final ScrapbookService scrapbookService;
+
+    public ScrapbookingForCatsAndCoffeeOwnersDotCom(
+            @Qualifier("scrapbookClosedService")
+                    ScrapbookService scrapbookService) {
+        this.scrapbookService = scrapbookService;
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(ScrapbookingForCatsAndCoffeeOwnersDotCom.class, args);
     }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        final ScrapbookDto scrapbook = new ScrapbookDto();
+        scrapbook.setName("Kittens are the best!");
+        scrapbook.setScrapbookType(ScrapbookType.CATS);
+        scrapbook.setPages(222);
+        scrapbookService.createScrapbook(scrapbook);
         ConsolerizerComposer.outSpace()
                 .green(title("I. Codebase"))
                 .blue("If you look at this whole repo, you will see many apps")

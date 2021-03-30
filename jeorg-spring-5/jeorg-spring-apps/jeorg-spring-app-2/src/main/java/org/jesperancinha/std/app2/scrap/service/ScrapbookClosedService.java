@@ -3,18 +3,16 @@ package org.jesperancinha.std.app2.scrap.service;
 import org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter;
 import org.jesperancinha.std.app2.scrap.dto.ScrapbookDto;
 import org.jesperancinha.std.app2.scrap.repository.ScrapbookRepository;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbook;
 import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapBookDto;
+import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbook;
 
-@Service("scrapbookClosedService")
 public class ScrapbookClosedService implements ScrapbookService {
 
-    private final ScrapbookRepository scrapbookRepository;
+    protected final ScrapbookRepository scrapbookRepository;
 
     public ScrapbookClosedService(ScrapbookRepository scrapbookRepository) {
         this.scrapbookRepository = scrapbookRepository;

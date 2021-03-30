@@ -1,9 +1,11 @@
 package org.jesperancinha.std.app2.scrap.controller;
 
 import org.jesperancinha.std.app2.scrap.dto.ScrapbookDto;
+import org.jesperancinha.std.app2.scrap.service.ScrapbookEnhancedClosedService;
 import org.jesperancinha.std.app2.scrap.service.ScrapbookService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,5 +54,11 @@ public class ScrapbookController {
     @GetMapping(produces = APPLICATION_JSON_VALUE)
     public List<ScrapbookDto> getAllScrapBooks() {
         return this.serviceList.get((int) (this.serviceList.size() * Math.random())).getAllScrapBooks();
+    }
+
+    @GetMapping(path = "{name}",
+            produces = APPLICATION_JSON_VALUE)
+    public List<ScrapbookDto> getScrapbookByName(@PathVariable String name) {
+        return ((ScrapbookEnhancedClosedService) this.scrapbookService3).getScrapbooksByName(name);
     }
 }
