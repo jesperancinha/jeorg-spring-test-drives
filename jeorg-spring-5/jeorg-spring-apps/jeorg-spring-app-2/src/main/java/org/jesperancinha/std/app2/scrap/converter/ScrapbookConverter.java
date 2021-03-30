@@ -1,13 +1,22 @@
 package org.jesperancinha.std.app2.scrap.converter;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.app2.scrap.dto.ScrapbookDto;
 import org.jesperancinha.std.app2.scrap.model.Scrapbook;
 
 import java.util.Objects;
 
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
+
 public class ScrapbookConverter {
 
     public static ScrapbookDto toScrapBookDto(final Scrapbook scrapBook) {
+        ConsolerizerComposer
+                .outSpace()
+                .green(title("Single responsibility principle - method toScrapBookDto"))
+                .blue("The goal of class %s is to perform conversions.", ScrapbookConverter.class.getCanonicalName())
+                .blue("This is the first principle of S.O.L.I.D")
+                .reset();
         if (Objects.isNull(scrapBook)) {
             return null;
         }
@@ -20,6 +29,12 @@ public class ScrapbookConverter {
     }
 
     public static Scrapbook toScrapbook(final ScrapbookDto scrapBookDto) {
+        ConsolerizerComposer
+                .outSpace()
+                .green(title("Single responsibility principle - method toScrapbook"))
+                .blue("The goal of class %s is to perform conversions.", ScrapbookConverter.class.getCanonicalName())
+                .blue("This is the first principle of S.O.L.I.D")
+                .reset();
         final Scrapbook scrapbook = new Scrapbook();
         scrapbook.setId(scrapBookDto.getId());
         scrapbook.setName(scrapBookDto.getName());
