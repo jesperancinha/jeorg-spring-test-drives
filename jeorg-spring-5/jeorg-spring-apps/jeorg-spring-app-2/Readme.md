@@ -10,7 +10,7 @@ Some scrapbooks tell stories. 📝
 
 Some scrapbooks talk about travelling. ✈️
 
-Some scrapbooks are about pets. 🐈
+Some scrapbooks are about cats. 🐈
 
 Some scrapbooks talk about personal frustrations. 😩
 
@@ -23,6 +23,14 @@ The goal of this application is to illustrate three fundamental principles of so
 1. [SOLID](https://en.wikipedia.org/wiki/SOLID) - (S)ingle responsibility, (O)pen Close, (L)iskov-substitution, (I)nterface segregation, (D)ependency inversion.
 2. [ACID](https://en.wikipedia.org/wiki/ACID) - (A)tomicity, (C)onsistency, (I)solation, (D)urability
 3. [12 Factor application](https://12factor.net/) - Codebase, Dependencies, Config, Backing Services, Build/release/run, Processes, Port Binding, Concurrency, Disposability, Dev/Prod parity, Logs, Admin/Management 
+
+## Request
+
+```bash
+curl -X POST 'http://localhost:8081/api/create' -H 'Content-type: application/json' --data '{ "name": "cats", "scrapbookType":"CATS", "pages":"100"}'
+
+curl http://localhost:8081/api
+```
 
 ## References:
 

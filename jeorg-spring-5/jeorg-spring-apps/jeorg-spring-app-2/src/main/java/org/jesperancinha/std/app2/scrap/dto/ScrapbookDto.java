@@ -1,25 +1,27 @@
-package org.jesperancinha.std.app2.scrap.model;
+package org.jesperancinha.std.app2.scrap.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.jesperancinha.std.app2.scrap.model.Scrapbook;
+import org.jesperancinha.std.app2.scrap.model.ScrapbookType;
 
-import static javax.persistence.GenerationType.AUTO;
-
-@Entity
-@Table
-public class Scrapbook {
-
-    @Id
-    @GeneratedValue(strategy = AUTO)
-    private Long id;
+public class ScrapbookDto {
 
     private String name;
 
     private ScrapbookType scrapbookType;
 
     private Integer pages;
+
+    private Long id;
+
+    public ScrapbookDto(){
+
+    }
+
+    public ScrapbookDto(final Scrapbook scrapbook){
+        this.name = scrapbook.getName();
+        this.scrapbookType = scrapbook.getScrapbookType();
+        this.pages = scrapbook.getPages();
+    }
 
     public Long getId() {
         return id;
@@ -55,11 +57,11 @@ public class Scrapbook {
 
     @Override
     public String toString() {
-        return "Scrapbook{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "ScrapbookDto{" +
+                "name='" + name + '\'' +
                 ", scrapbookType=" + scrapbookType +
                 ", pages=" + pages +
+                ", id=" + id +
                 '}';
     }
 }
