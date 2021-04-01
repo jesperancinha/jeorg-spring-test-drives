@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapBookDto;
 import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbook;
+import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbookBadReservations;
 
 @Service("scrapBookOpenService")
 public class ScrapbookOpenService implements ScrapbookService {
@@ -30,6 +31,17 @@ public class ScrapbookOpenService implements ScrapbookService {
                 .yellow(scrapbook)
                 .reset();
         return toScrapBookDto(this.scrapbookRepository.save(toScrapbook(scrapbook)));
+    }
+
+    @Override
+    public ScrapbookDto createScrapbookBadReservations(ScrapbookDto scrapbook) {
+        ConsolerizerComposer.outSpace()
+                .blue("You are in the ScrapbookOpenService")
+                .blue("This means that the logs are all visible")
+                .yellow("You are now creating book")
+                .yellow(scrapbook)
+                .reset();
+        return toScrapBookDto(this.scrapbookRepository.save(toScrapbookBadReservations(scrapbook)));
     }
 
     @Override

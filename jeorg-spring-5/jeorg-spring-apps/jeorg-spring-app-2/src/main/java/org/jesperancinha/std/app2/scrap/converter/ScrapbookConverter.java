@@ -3,6 +3,7 @@ package org.jesperancinha.std.app2.scrap.converter;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.app2.scrap.dto.ScrapbookDto;
 import org.jesperancinha.std.app2.scrap.model.Scrapbook;
+import org.jesperancinha.std.app2.scrap.model.ScrapbookBadreservations;
 
 import java.util.Objects;
 
@@ -36,6 +37,22 @@ public class ScrapbookConverter {
                 .blue("This is the first principle of S.O.L.I.D")
                 .reset();
         final Scrapbook scrapbook = new Scrapbook();
+        scrapbook.setId(scrapBookDto.getId());
+        scrapbook.setName(scrapBookDto.getName());
+        scrapbook.setScrapbookType(scrapBookDto.getScrapbookType());
+        scrapbook.setPages(scrapBookDto.getPages());
+        return scrapbook;
+    }
+    public static Scrapbook toScrapbookBadReservations(final ScrapbookDto scrapBookDto) {
+        ConsolerizerComposer
+                .outSpace()
+                .green(title("Liskov Substitution Principle - method toScrapbookBadReservations"))
+                .blue("The goal of class %s is to perform conversions.", ScrapbookConverter.class.getCanonicalName())
+                .blue("This is the first principle of Liskov substitution")
+                .blue("We will save a subclass of Scrapbook called ScrapbookBadreservations")
+                .blue("It is a subclass, which means that it will not interfere with the functionalities who use its upper class")
+                .reset();
+        final Scrapbook scrapbook = new ScrapbookBadreservations();
         scrapbook.setId(scrapBookDto.getId());
         scrapbook.setName(scrapBookDto.getName());
         scrapbook.setScrapbookType(scrapBookDto.getScrapbookType());

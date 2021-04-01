@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapBookDto;
 import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbook;
+import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbookBadReservations;
 
 public class ScrapbookClosedService implements ScrapbookService {
 
@@ -21,6 +22,11 @@ public class ScrapbookClosedService implements ScrapbookService {
     @Override
     public ScrapbookDto createScrapbook(ScrapbookDto scrapbook) {
         return toScrapBookDto(this.scrapbookRepository.save(toScrapbook(scrapbook)));
+    }
+
+    @Override
+    public ScrapbookDto createScrapbookBadReservations(ScrapbookDto scrapbook) {
+        return toScrapBookDto(this.scrapbookRepository.save(toScrapbookBadReservations(scrapbook)));
     }
 
     @Override

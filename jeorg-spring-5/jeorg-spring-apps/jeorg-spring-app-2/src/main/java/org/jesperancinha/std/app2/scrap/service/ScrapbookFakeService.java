@@ -11,6 +11,7 @@ import java.util.List;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapBookDto;
 import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbook;
+import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbookBadReservations;
 
 @Service("scrapbookFakeService")
 public class ScrapbookFakeService implements ScrapbookService {
@@ -28,6 +29,17 @@ public class ScrapbookFakeService implements ScrapbookService {
         ConsolerizerComposer.outSpace()
                 .blue(title("We create fake Scrapbook with id %d and don't put it through to any persistence backup system", scrapbook.getId()))
                 .yellow(scrapBookDto)
+                .reset();
+        return toScrapBookDto(scrapbook);
+    }
+
+    @Override
+    public ScrapbookDto createScrapbookBadReservations(ScrapbookDto scrapbookDto) {
+        final Scrapbook scrapbook = toScrapbookBadReservations(scrapbookDto);
+        scrapbook.setId((long) (Math.random() * 1000L));
+        ConsolerizerComposer.outSpace()
+                .blue(title("We create fake ScrapbookBadreservations with id %d and don't put it through to any persistence backup system", scrapbook.getId()))
+                .yellow(scrapbookDto)
                 .reset();
         return toScrapBookDto(scrapbook);
     }

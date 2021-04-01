@@ -28,6 +28,7 @@ The goal of this application is to illustrate three fundamental principles of so
 
 ```bash
 curl -X POST 'http://localhost:8081/api/create' -H 'Content-type: application/json' --data '{ "name": "cats", "scrapbookType":"CATS", "pages":"100"}'
+curl -X POST 'http://localhost:8081/api/create/bad' -H 'Content-type: application/json' --data '{ "name": "cats", "scrapbookType":"CATS", "pages":"100"}'
 
 curl http://localhost:8081/api/cats
 curl http://localhost:8081/api/%5Ba-zA-Z%20%21%5D

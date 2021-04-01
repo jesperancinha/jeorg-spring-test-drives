@@ -8,6 +8,8 @@ public interface  ScrapbookService {
 
     ScrapbookDto createScrapbook(final ScrapbookDto scrapbook);
 
+    ScrapbookDto createScrapbookBadReservations(final ScrapbookDto scrapbook);
+
     ScrapbookDto getBookById(final Long id);
 
     ScrapbookDto updateScrapbook(ScrapbookDto scrapbook);

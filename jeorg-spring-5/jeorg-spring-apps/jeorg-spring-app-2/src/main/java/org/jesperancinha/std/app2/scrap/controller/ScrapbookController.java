@@ -50,6 +50,14 @@ public class ScrapbookController {
 
         return this.serviceList.get((int) (this.serviceList.size() * Math.random())).createScrapbook(scrapBookDto);
     }
+    @PostMapping(value = "create/bad",
+            consumes = APPLICATION_JSON_VALUE,
+            produces = APPLICATION_JSON_VALUE)
+    public ScrapbookDto createScrapBookBadReservations(
+            @RequestBody
+            final ScrapbookDto scrapBookDto) {
+        return this.serviceList.get((int) (this.serviceList.size() * Math.random())).createScrapbookBadReservations(scrapBookDto);
+    }
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
     public List<ScrapbookDto> getAllScrapBooks() {
