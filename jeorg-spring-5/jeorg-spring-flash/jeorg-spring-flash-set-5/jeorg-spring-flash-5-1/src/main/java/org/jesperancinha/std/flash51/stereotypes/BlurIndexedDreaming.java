@@ -5,7 +5,7 @@ import org.springframework.stereotype.Indexed;
 
 @Indexed
 public class BlurIndexedDreaming {
-    BlurIndexedDreaming(){
+    BlurIndexedDreaming() {
         ConsolerizerComposer.out(" ")
                 .yellow("And then you start dreaming")
                 .blue("This is Blur")
