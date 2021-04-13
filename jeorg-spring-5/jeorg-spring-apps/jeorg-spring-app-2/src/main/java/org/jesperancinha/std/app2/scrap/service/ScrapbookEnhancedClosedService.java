@@ -20,7 +20,7 @@ public class ScrapbookEnhancedClosedService extends ScrapbookClosedService {
     public List<ScrapbookDto> getScrapbooksByName(String name) {
         ConsolerizerComposer
                 .outSpace()
-                .green(title("Open/Closed Principle"))
+                .green(title("Open/Closed Principle (SOLID)"))
                 .blue("getBookByName is a method not available via the interface. This entity does not change its function")
                 .reset();
         return this.scrapbookRepository.findScrapbookByNameRegex(name).stream().map(ScrapbookConverter::toScrapBookDto).collect(Collectors.toList());

@@ -1,5 +1,6 @@
 package org.jesperancinha.std.app2.scrap.controller;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.app2.scrap.dto.ScrapbookDto;
 import org.jesperancinha.std.app2.scrap.service.ScrapbookEnhancedClosedService;
 import org.jesperancinha.std.app2.scrap.service.ScrapbookService;
@@ -14,14 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping("api")
 public class ScrapbookController {
 
-    private final ScrapbookService scrapbookService1;
-    private final ScrapbookService scrapbookService2;
     private final ScrapbookService scrapbookService3;
 
     private final List<ScrapbookService> serviceList = new ArrayList<>();
@@ -33,8 +33,12 @@ public class ScrapbookController {
                     ScrapbookService scrapbookService2,
             @Qualifier("scrapbookClosedService")
                     ScrapbookService scrapbookService3) {
-        this.scrapbookService1 = scrapbookService1;
-        this.scrapbookService2 = scrapbookService2;
+        ConsolerizerComposer
+                .outSpace()
+                .green(title("Dependency Injection (Inversion Of Control) Principle - (SOLID)"))
+                .blue("The services we are injecting are being done so via stereotyping java classes.")
+                .blue("This way, beans are created, which can be injected in other beans/configurations.")
+                .reset();
         this.scrapbookService3 = scrapbookService3;
         serviceList.add(scrapbookService1);
         serviceList.add(scrapbookService2);
@@ -50,6 +54,7 @@ public class ScrapbookController {
 
         return this.serviceList.get((int) (this.serviceList.size() * Math.random())).createScrapbook(scrapBookDto);
     }
+
     @PostMapping(value = "create/bad",
             consumes = APPLICATION_JSON_VALUE,
             produces = APPLICATION_JSON_VALUE)
@@ -66,7 +71,9 @@ public class ScrapbookController {
 
     @GetMapping(path = "{name}",
             produces = APPLICATION_JSON_VALUE)
-    public List<ScrapbookDto> getScrapbookByName(@PathVariable String name) {
+    public List<ScrapbookDto> getScrapbookByName(
+            @PathVariable
+                    String name) {
         return ((ScrapbookEnhancedClosedService) this.scrapbookService3).getScrapbooksByName(name);
     }
 }
