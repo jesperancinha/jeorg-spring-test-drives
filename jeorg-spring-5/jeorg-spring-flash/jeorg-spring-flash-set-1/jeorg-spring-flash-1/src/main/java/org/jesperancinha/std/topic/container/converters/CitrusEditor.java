@@ -2,7 +2,7 @@ package org.jesperancinha.std.topic.container.converters;
 
 import java.beans.PropertyEditorSupport;
 
-public class CirtrusEditor extends PropertyEditorSupport {
+public class CitrusEditor extends PropertyEditorSupport {
 
     @Override
     public void setAsText(String text) throws IllegalArgumentException {

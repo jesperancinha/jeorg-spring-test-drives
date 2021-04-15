@@ -6,6 +6,6 @@ import org.springframework.beans.PropertyEditorRegistry;
 public class CitrusRegistrar implements PropertyEditorRegistrar {
     @Override
     public void registerCustomEditors(PropertyEditorRegistry propertyEditorRegistry) {
-        propertyEditorRegistry.registerCustomEditor(Citrus.class, new CirtrusEditor());
+        propertyEditorRegistry.registerCustomEditor(Citrus.class, new CitrusEditor());
     }
 }

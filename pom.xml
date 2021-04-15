@@ -45,11 +45,15 @@
         <log4j-api.version>2.5</log4j-api.version>
 
         <!-- Test -->
-        <junit-jupiter.version>5.5.1</junit-jupiter.version>
+        <junit-jupiter.version>5.7.1</junit-jupiter.version>
         <assertj-core.version>3.13.2</assertj-core.version>
         <mockito-core.version>3.1.0</mockito-core.version>
 
         <!-- Plugins -->
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven-compiler-plugin.source>11</maven-compiler-plugin.source>
         <maven-compiler-plugin.target>11</maven-compiler-plugin.target>
         <args4j-maven-plugin.version>2.33</args4j-maven-plugin.version>
@@ -84,13 +88,11 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-            <!-- http://mvnrepository.com/artifact/com.google.guava/guava -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
             <dependency>
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
