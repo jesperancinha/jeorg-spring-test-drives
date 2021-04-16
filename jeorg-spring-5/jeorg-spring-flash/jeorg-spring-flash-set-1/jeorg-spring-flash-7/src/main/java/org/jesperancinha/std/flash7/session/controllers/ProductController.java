@@ -26,7 +26,7 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MA
 @RestController
 public class ProductController {
 
-    @GetMapping(path = "/tulips",
+    @GetMapping(path = "tulips",
             produces = "application/json")
     public String getTulips() {
         GREEN.printGenericTitleLn("You are still reaching this endpoint -> getTulips");
