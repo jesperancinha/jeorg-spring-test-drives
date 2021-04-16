@@ -8,6 +8,7 @@ import org.springframework.test.web.servlet.MvcResult;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(controllers = ProductController.class)
 class ProductControllerTest {
@@ -18,6 +19,7 @@ class ProductControllerTest {
     @Test
     void testGetTulips_whenCalled_getResponse() throws Exception {
         final MvcResult tulips = mockMvc.perform(get("/tulips"))
+                .andExpect(status().isOk())
                 .andReturn();
         final var contentAsString = tulips.getResponse().getContentAsString();
 
@@ -26,7 +28,14 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetTulipsOk_whenCalled_getResponse() {
+    void testGetTulipsOk_whenCalled_getResponse() throws Exception {
+        final MvcResult tulips = mockMvc.perform(get("/tulips/ok"))
+                .andExpect(status().isOk())
+                .andReturn();
+        final var contentAsString = tulips.getResponse().getContentAsString();
+        final var errorMessage = tulips.getResponse().getErrorMessage();
+        assertThat(contentAsString).isEmpty();
+        assertThat(errorMessage).isEqualTo("This is an error, but it's ok");
     }
 
     @Test
