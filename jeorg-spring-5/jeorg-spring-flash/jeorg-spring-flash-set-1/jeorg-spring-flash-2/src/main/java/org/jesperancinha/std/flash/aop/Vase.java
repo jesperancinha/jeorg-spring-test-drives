@@ -1,11 +1,13 @@
 package org.jesperancinha.std.flash.aop;
 
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_RED;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 
 public class Vase {
 
     public Plant seed(final Seed seed) {
-        BRIGHT_RED.printGenericTitleLn("Seeds %s are in the vase!", seed.getName());
+        ConsolerizerComposer.outSpace()
+                .brightRed("Seeds %s are in the vase!", seed.getName())
+                .reset();
         return new Plant(seed.getName() + " plant");
     }
 }
