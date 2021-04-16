@@ -1,0 +1,36 @@
+package org.jesperancinha.std.flash5.persistence.domain;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Optional;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+@DataJpaTest
+@MockBean(PotatoService.class)
+class PotatoRepositoryTest {
+
+    @Autowired
+    private PotatoRepository potatoRepository;
+
+    @Test
+    @Transactional
+    public void testSave_whenNewPotato_thenGetItBack() {
+        final var potato = new Potato();
+        final Potato potatoSave = potatoRepository.save(potato);
+
+        assertThat(potatoSave).isNotNull();
+        assertThat(potatoSave.getId()).isNotNull();
+        final Long id = potatoSave.getId();
+
+        final Optional<Potato> optato2 = potatoRepository.findById(id);
+
+        assertThat(optato2.isPresent()).isTrue();
+        assertThat(optato2.get().getId()).isEqualTo(id);
+    }
+
+}
