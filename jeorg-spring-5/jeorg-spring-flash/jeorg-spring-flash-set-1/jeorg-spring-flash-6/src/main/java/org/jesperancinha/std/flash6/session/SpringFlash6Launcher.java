@@ -25,6 +25,15 @@ public class SpringFlash6Launcher {
     public String showSessionDetails(HttpServletRequest httpServletRequest) {
         BRIGHT_CYAN.printGenericTitleLn("Getting the session via the HttpServletRequest");
         final HttpSession session = httpServletRequest.getSession();
+        List<Integer> numberList = generateList(session);
+        BRIGHT_BLUE.printGenericLn(numberList);
+        BRIGHT_BLUE.printGenericLn(session);
+        BRIGHT_BLUE.printGenericLn(session.getAttributeNames());
+        session.getAttributeNames().asIterator().forEachRemaining(BRIGHT_CYAN::printGenericLn);
+        return numberList.toString();
+    }
+
+    List<Integer> generateList(HttpSession session) {
         List<Integer> numberList = (List<Integer>) session.getAttribute("numberList");
         if (Objects.isNull(numberList)) {
             final ArrayList<Integer> numbers = new ArrayList<>();
@@ -34,10 +43,6 @@ public class SpringFlash6Launcher {
         } else {
             numberList.add((int) (Math.random() * 1000));
         }
-        BRIGHT_BLUE.printGenericLn(numberList);
-        BRIGHT_BLUE.printGenericLn(session);
-        BRIGHT_BLUE.printGenericLn(session.getAttributeNames());
-        session.getAttributeNames().asIterator().forEachRemaining(BRIGHT_CYAN::printGenericLn);
-        return numberList.toString();
+        return numberList;
     }
 }
