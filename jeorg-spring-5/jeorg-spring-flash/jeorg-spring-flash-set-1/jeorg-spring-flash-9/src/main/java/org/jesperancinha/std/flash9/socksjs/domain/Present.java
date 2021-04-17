@@ -1,6 +1,10 @@
 package org.jesperancinha.std.flash9.socksjs.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Present {
     private final String message;
@@ -10,11 +14,21 @@ public class Present {
 
     private final String[] HELLOS = new String[]{"Hi there!", "Oh Hello!", "Hi!", "Hi! How are you?"};
 
-    public Present(Request request) {
-        this.message = request.getMessage();
-        this.localDateTime = request.getLocalDateTime();
-        this.systemDateTime = LocalDateTime.now();
-        this.response = calculateResponse("" + request.getMessage());
+    @JsonCreator
+    public Present(
+            @JsonProperty("request")
+                    Request request) {
+        if (Objects.nonNull(request)) {
+            this.message = request.getMessage();
+            this.localDateTime = request.getLocalDateTime();
+            this.systemDateTime = LocalDateTime.now();
+            this.response = calculateResponse("" + request.getMessage());
+        } else {
+            this.message = null;
+            this.localDateTime = null;
+            this.systemDateTime = null;
+            this.response = null;
+        }
     }
 
     private String calculateResponse(String message) {

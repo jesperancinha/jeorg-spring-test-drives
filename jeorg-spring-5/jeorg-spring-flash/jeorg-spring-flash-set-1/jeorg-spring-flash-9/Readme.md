@@ -45,6 +45,7 @@ mvn clean spring-boot:run
 
 ### Online
 
+- [Write Integration Tests For Your Spring WebSocket Endpoints](https://rieckpil.de/write-integration-tests-for-your-spring-websocket-endpoints/)
 - [Streaming Text Oriented Messaging Protocol](https://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol)
 - [Using STOMP JS](https://stomp-js.github.io/stomp-websocket/codo/extra/docs-src/Usage.md.html)
 - [Spring Boot WebSocket STOMP SockJS Example](https://www.javaguides.net/2019/06/spring-boot-websocket-stomp-sockjs-example.html)
