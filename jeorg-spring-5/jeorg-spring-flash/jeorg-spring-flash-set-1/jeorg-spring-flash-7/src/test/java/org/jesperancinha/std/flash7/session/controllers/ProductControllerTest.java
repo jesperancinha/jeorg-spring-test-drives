@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jesperancinha.std.flash7.session.handlers.ErrorCar;
 import org.jesperancinha.std.flash7.session.handlers.ErrorFlower;
 import org.jesperancinha.std.flash7.session.handlers.MixErrorMessage;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.MockitoAnnotations.initMocks;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -24,9 +26,15 @@ class ProductControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @BeforeEach
+    public void setUp() {
+        initMocks(mockMvc);
+    }
+
     @Test
     void testGetTulips_whenCalled_getResponse() throws Exception {
-        final MvcResult tulips = mockMvc.perform(get("/tulips"))
+        final MvcResult tulips = mockMvc
+                .perform(get("/tulips"))
                 .andExpect(status().isOk())
                 .andReturn();
         final var contentAsString = tulips.getResponse().getContentAsString();
@@ -132,7 +140,7 @@ class ProductControllerTest {
 
     @Test
     void testGetPottery_whenCalled_getResponse() throws Exception {
-        final ObjectMapper objectMapper= new ObjectMapper();
+        final ObjectMapper objectMapper = new ObjectMapper();
         final MvcResult pottery = mockMvc.perform(get("/pottery/amphora"))
                 .andExpect(status().isNotFound())
                 .andReturn();
@@ -146,7 +154,7 @@ class ProductControllerTest {
 
     @Test
     void testGetFourWheels_whenCalled_getResponse() throws Exception {
-        final ObjectMapper objectMapper= new ObjectMapper();
+        final ObjectMapper objectMapper = new ObjectMapper();
         final MvcResult fourWheels = mockMvc.perform(get("/fourwheels/rover"))
                 .andExpect(status().isNotFound())
                 .andReturn();
