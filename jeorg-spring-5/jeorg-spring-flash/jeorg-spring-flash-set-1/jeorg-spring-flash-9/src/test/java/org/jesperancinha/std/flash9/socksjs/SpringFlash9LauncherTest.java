@@ -50,7 +50,7 @@ class SpringFlash9LauncherTest {
 
         JavaTimeModule module = new JavaTimeModule();
         LocalDateTimeDeserializer localDateTimeDeserializer = new
-                LocalDateTimeDeserializer(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSS"));
+                LocalDateTimeDeserializer(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'.'SSSSSS"));
         module.addDeserializer(LocalDateTime.class, localDateTimeDeserializer);
         objectMapper = Jackson2ObjectMapperBuilder.json()
                 .modules(module)
