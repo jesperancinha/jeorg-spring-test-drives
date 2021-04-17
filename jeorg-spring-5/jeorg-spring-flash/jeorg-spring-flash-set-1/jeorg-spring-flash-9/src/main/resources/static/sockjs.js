@@ -9,6 +9,9 @@ startConnection = () => {
         sockJSStompClient.subscribe('/business/present', function (message) {
             displayMessages(JSON.parse(message.body));
         });
+        sockJSStompClient.subscribe('/business/notification', function (message) {
+           console.log(message)
+        });
     });
 }
 

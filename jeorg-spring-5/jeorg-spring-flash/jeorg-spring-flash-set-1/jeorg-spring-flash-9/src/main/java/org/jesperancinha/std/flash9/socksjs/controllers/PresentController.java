@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 public class PresentController {
 
     @MessageMapping("/request")
-    @SendTo("/business/present")
+    @SendTo({"/business/present", "/business/notification"})
     public Present sendPresent(final Request request) {
         return new Present(request);
     }

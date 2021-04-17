@@ -19,7 +19,7 @@ public class Present {
 
     private String calculateResponse(String message) {
         if (message.toLowerCase().contains("snap")) {
-            return "Rythm is a dancer!";
+            return "Rhythm is a dancer!";
         }
         if (message.toLowerCase().contains("soup")) {
             return "Baby instant soup doesn't really grab me, today I need something more sub-sub-sub-substantial";
