@@ -1,7 +1,6 @@
 package org.jesperancinha.std.flash11.form;
 
 import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
-import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,9 +24,8 @@ public class Flash11Controller {
     @RequestMapping("/req")
     public @ResponseBody
     String handleRequest(Model model, Music music) {
-        StringBuilder sb = new StringBuilder();
+        final var sb = new StringBuilder();
         sb.append("You did it!\n");
-        sb.append(ConsolerizerGraphs.getUnicorns(10));
         sb.append("\n");
         sb.append(ConsolerizerColor.GREEN.getPBEscapedText(model));
         sb.append(ConsolerizerColor.GREEN.getPBEscapedText(music));

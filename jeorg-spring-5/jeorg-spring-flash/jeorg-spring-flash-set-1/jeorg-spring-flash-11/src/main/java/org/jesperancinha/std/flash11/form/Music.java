@@ -1,5 +1,7 @@
 package org.jesperancinha.std.flash11.form;
 
+import java.util.Objects;
+
 public class Music {
 
     private String artist;
@@ -27,5 +29,18 @@ public class Music {
                 "artist='" + artist + '\'' +
                 ", song='" + song + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Music)) return false;
+        Music music = (Music) o;
+        return getArtist().equals(music.getArtist()) && getSong().equals(music.getSong());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getArtist(), getSong());
     }
 }
