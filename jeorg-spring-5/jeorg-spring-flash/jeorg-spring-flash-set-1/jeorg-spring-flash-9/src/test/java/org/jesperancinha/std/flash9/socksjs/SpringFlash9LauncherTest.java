@@ -48,8 +48,8 @@ class SpringFlash9LauncherTest {
                 List.of(new WebSocketTransport(new StandardWebSocketClient()))));
         webSocketStompClient.setMessageConverter(new MappingJackson2MessageConverter());
 
-        JavaTimeModule module = new JavaTimeModule();
-        LocalDateTimeDeserializer localDateTimeDeserializer = new
+        final var module = new JavaTimeModule();
+        final var localDateTimeDeserializer = new
                 LocalDateTimeDeserializer(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'.'SSSSSS"));
         module.addDeserializer(LocalDateTime.class, localDateTimeDeserializer);
         objectMapper = Jackson2ObjectMapperBuilder.json()
