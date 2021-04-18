@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash11.form;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
@@ -46,7 +45,7 @@ class Flash11ControllerTest {
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
                         .content(EntityUtils.toString(new UrlEncodedFormEntity(Arrays.asList(
                                 new BasicNameValuePair("artist", music.getArtist()),
-                                new BasicNameValuePair("song",  music.getSong())
+                                new BasicNameValuePair("song", music.getSong())
                         )))))
                 .andExpect(status().isOk())
                 .andExpect(content().string("You did it!\n" +

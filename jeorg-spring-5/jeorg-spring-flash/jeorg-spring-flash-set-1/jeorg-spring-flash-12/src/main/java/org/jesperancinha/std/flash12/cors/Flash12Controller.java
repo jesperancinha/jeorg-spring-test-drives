@@ -10,7 +10,7 @@ public class Flash12Controller {
     @GetMapping("/cors")
     @CrossOrigin(origins = "http://jeorg-spring-flash-12:8081")
     public String sentence() {
-        return "When accessing from jeorg-spring-flash-12, there should be no blocking to visualizatin";
+        return "When accessing from jeorg-spring-flash-12, there should be no blocking to visualization";
     }
 
     @GetMapping("/always")
@@ -20,7 +20,7 @@ public class Flash12Controller {
 
     @GetMapping("/protected")
     public String sentenceProtected() {
-        return "When accessing from jeorg-spring-flash-12, there should be no blocking to visualizatin";
+        return "When accessing from jeorg-spring-flash-12, there should be no blocking to visualization";
     }
 
 
