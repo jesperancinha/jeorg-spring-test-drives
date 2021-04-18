@@ -31,7 +31,7 @@ public class Flash14HealthIndicator extends AbstractHealthIndicator {
 
     @Override
     protected void doHealthCheck(Health.Builder builder) throws Exception {
-        final Path path = Path.of(this.path, this.file);
+        final var path = Path.of(this.path, this.file);
         FileStore fileStore = Files.getFileStore(Path.of(this.path));
 
         if (path.toFile().exists()) {

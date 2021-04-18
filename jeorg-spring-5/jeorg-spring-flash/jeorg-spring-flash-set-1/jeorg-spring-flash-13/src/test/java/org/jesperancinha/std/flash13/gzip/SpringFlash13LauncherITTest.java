@@ -32,7 +32,7 @@ class SpringFlash13LauncherITTest {
         var response = restTemplate.exchange(
                 String.format("http://localhost:%s/flash13.styles.css.gz", port), HttpMethod.GET,
                 request, String.class);
-        final String directZipValueString = response.getBody();
+        final String directGZipValueString = response.getBody();
 
         final var headers2 = new HttpHeaders();
         headers2.set("Accept-Encoding", "gzip,deflate");
@@ -40,16 +40,16 @@ class SpringFlash13LauncherITTest {
         var response2 = restTemplate.exchange(
                 String.format("http://localhost:%s/flash13.styles.css", port), HttpMethod.GET,
                 request2, String.class);
-        final String zipValueString = response2.getBody();
+        final String gzipValueString = response2.getBody();
 
         ConsolerizerComposer.outSpace()
-                .green(directZipValueString)
+                .green(directGZipValueString)
                 .reset();
         ConsolerizerComposer.outSpace()
-                .green(zipValueString)
+                .green(gzipValueString)
                 .reset();
 
-        assertThat(directZipValueString).isEqualTo(zipValueString);
+        assertThat(directGZipValueString).isEqualTo(gzipValueString);
     }
 
 }
