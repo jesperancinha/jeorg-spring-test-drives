@@ -12,22 +12,38 @@ import java.util.List;
 @Service
 public class AlbumServiceImpl implements AlbumService {
 
-    private AlbumRepository albumRepository;
+    private final AlbumRepository albumRepository;
 
     public AlbumServiceImpl(AlbumRepository albumRepository) {
         this.albumRepository = albumRepository;
     }
 
+    /**
+     * Creates the album
+     * @param album {@link Album}
+     * @return The created album {@link Album}
+     */
     private Album createAlbum(Album album) {
         return albumRepository.save(album);
     }
 
+    /**
+     * Removes an album by its Id
+     * @param id {@link Long}
+     * @return True if album has been deleted
+     */
     @Override
     public boolean deleteAlbumByIdI(Long id) {
         albumRepository.deleteById(id);
         return true;
     }
 
+
+    /**
+     * Updates the album that has already been created
+     * @param album {@link Album}
+     * @return Updated album {@link Album}
+     */
     @Override
     public Album updateAlbum(Album album) {
         return albumRepository.save(album);
