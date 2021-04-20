@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash18.aop.afterthrowing;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash18.aop.afterthrowing.service.impl.LyricsService;
 import org.jesperancinha.std.flash18.aop.afterthrowing.service.impl.LyricsServiceImpl;
 import org.springframework.boot.SpringApplication;
@@ -14,29 +15,33 @@ public class SpringFlash18Launcher {
         ConfigurableApplicationContext ac = SpringApplication.run(SpringFlash18Launcher.class, args);
         LyricsService lyricsService = ac.getBean("lyricsServiceImpl", LyricsServiceImpl.class);
         try {
-            lyricsService.enumerateLyric1();
-        } finally {
             try {
-                lyricsService.resultLyric1();
+                lyricsService.enumerateLyric1();
             } finally {
                 try {
-                    lyricsService.enumerateLyric2();
+                    lyricsService.resultLyric1();
                 } finally {
                     try {
-                        lyricsService.resultLyric2();
+                        lyricsService.enumerateLyric2();
                     } finally {
                         try {
-                            lyricsService.enumerateLyric3();
+                            lyricsService.resultLyric2();
                         } finally {
                             try {
-                                lyricsService.resultLyric3();
+                                lyricsService.enumerateLyric3();
                             } finally {
-                                lyricsService.resultLyric4();
+                                try {
+                                    lyricsService.resultLyric3();
+                                } finally {
+                                    lyricsService.resultLyric4();
+                                }
                             }
                         }
                     }
                 }
             }
+        } catch (Exception e) {
+            ConsolerizerComposer.outSpace().red(e).reset();
         }
     }
 }

@@ -2,6 +2,9 @@ package org.jesperancinha.std.flash18.aop.afterthrowing.service.impl;
 
 import org.springframework.stereotype.Service;
 
+/**
+ * Service used as a source for the tested {@link org.aspectj.lang.annotation.Aspect} of this module.
+ */
 @Service
 public class LyricsServiceImpl implements LyricsService {
 
