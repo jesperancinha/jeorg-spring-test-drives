@@ -55,7 +55,7 @@ class ArtistServiceImplDbPopulatorTest {
         assertThat(actual.getName()).isEqualTo("UHF");
         assertThat(actual.getNationality()).isEqualTo("Portuguese");
         final var actual2 = artists.get(1);
-        assertThat(actual2.getName()).isEqualTo("Rádio Macau");
+        assertThat(actual2.getName()).isEqualTo("Radio Macau");
         assertThat(actual2.getNationality()).isEqualTo("Portuguese");
         final var actual3 = artists.get(2);
         assertThat(actual3.getName()).isEqualTo("Humanos");

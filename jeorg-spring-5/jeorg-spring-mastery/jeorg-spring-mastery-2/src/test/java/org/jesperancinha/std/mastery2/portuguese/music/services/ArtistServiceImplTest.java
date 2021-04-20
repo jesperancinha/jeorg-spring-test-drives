@@ -71,7 +71,7 @@ class ArtistServiceImplTest {
         assertThat(actual.getName()).isEqualTo("António Variações");
         assertThat(actual.getNationality()).isEqualTo("Portuguese");
         final var actual2 = artists.get(1);
-        assertThat(actual2.getName()).isEqualTo("Rádio Macau");
+        assertThat(actual2.getName()).isEqualTo("Radio Macau");
         assertThat(actual2.getNationality()).isEqualTo("Portuguese");
 
     }

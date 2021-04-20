@@ -113,7 +113,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
       </a>
 </div>
 <div align="center">
-      <a title="Rádio Macau - Amanhã é sempre longe demais" href="https://www.youtube.com/watch?v=734ywSpCrc0">
+      <a title="Radio Macau - Amanhã é sempre longe demais" href="https://www.youtube.com/watch?v=734ywSpCrc0">
      <img 
           src="https://img.youtube.com/vi/734ywSpCrc0/0.jpg" 
           style="width:10%;">
