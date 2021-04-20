@@ -17,7 +17,6 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class AlbumControllerUnitTest {
 
-
     @Mock
     private AlbumRepository albumRepository;
 
