@@ -17,7 +17,7 @@
         <mvc:interceptor>
             <mvc:mapping path="/"/>
             <mvc:exclude-mapping path="/open"/>
-            <bean class="org.jesperancinha.std.flash23.xml.interceptors.FeelingLoveInterceptor"/>
+            <bean class="org.jesperancinha.std.flash23.xml.interceptors.interceptors.FeelingLoveInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 </beans>
