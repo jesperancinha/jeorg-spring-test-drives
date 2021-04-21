@@ -2,6 +2,7 @@ package org.jesperancinha.std.flash19.transactional.controllers;
 
 import org.jesperancinha.std.flash19.transactional.domain.Album;
 import org.jesperancinha.std.flash19.transactional.domain.AlbumRepository;
+import org.jesperancinha.std.flash19.transactional.dto.AlbumDto;
 import org.jesperancinha.std.flash19.transactional.services.AlbumServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -29,9 +30,9 @@ class AlbumControllerUnitTest {
             final List<Album> albums) {
         when(albumRepository.findAll()).thenReturn(albums);
 
-        final List<Album> allAlbums = albumService.getAllAlbums();
+        final List<AlbumDto> allAlbums = albumService.getAllAlbums();
 
-        assertThat(allAlbums).isSameAs(albums);
+        assertThat(allAlbums).hasSize(albums.size());
     }
 
     @Test

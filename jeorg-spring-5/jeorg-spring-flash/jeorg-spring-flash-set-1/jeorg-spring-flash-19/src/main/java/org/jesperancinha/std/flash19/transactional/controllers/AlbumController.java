@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash19.transactional.controllers;
 
-import org.jesperancinha.std.flash19.transactional.domain.Album;
+import org.jesperancinha.std.flash19.transactional.dto.AlbumDto;
 import org.jesperancinha.std.flash19.transactional.services.AlbumService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,14 +18,14 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GR
 @RestController
 public class AlbumController {
 
-    private AlbumService albumService;
+    private final AlbumService albumService;
 
     public AlbumController(final AlbumService albumService) {
         this.albumService = albumService;
     }
 
     @GetMapping("/list/all")
-    public List<Album> getAllAlbums() {
+    public List<AlbumDto> getAllAlbums() {
         return this.albumService.getAllAlbums();
     }
 
@@ -60,7 +60,7 @@ public class AlbumController {
     @PutMapping("/update/album")
     public void updateAlbum(
             @RequestBody
-            final Album incomingAlbum) {
+            final AlbumDto incomingAlbum) {
         final var album = this.albumService.updateAlbum(incomingAlbum);
         GREEN.printGenericLn("Created album -> %s", album);
     }
