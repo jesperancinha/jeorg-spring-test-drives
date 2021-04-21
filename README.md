@@ -42,7 +42,7 @@ The reason being is that they take time, and adding these concerns per module ca
 These modules dot not pertain to show good practices, code styles or javadocs necessarily.
 These three remain a concern, but they are not the focus of this repo.
 It is also true that I will do my best to improve every single module as part of my Spring Framework journey, so these concepts will show up more often.
-What important to take away from this repo it to understand how the Spring Framework works. 
+What's important to take away from this repo it to understand how the Spring Framework works. 
 If you understand all of this, then please continue with your studies. Thank you! 🙏
 
 João Esperancinha, 2021/04/21
