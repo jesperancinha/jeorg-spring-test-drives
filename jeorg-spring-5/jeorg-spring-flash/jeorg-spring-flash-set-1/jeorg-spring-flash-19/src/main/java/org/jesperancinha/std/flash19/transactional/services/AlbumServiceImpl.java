@@ -2,7 +2,7 @@ package org.jesperancinha.std.flash19.transactional.services;
 
 import org.jesperancinha.std.flash19.transactional.converters.AlbumConverter;
 import org.jesperancinha.std.flash19.transactional.domain.Album;
-import org.jesperancinha.std.flash19.transactional.domain.AlbumRepository;
+import org.jesperancinha.std.flash19.transactional.repos.AlbumRepository;
 import org.jesperancinha.std.flash19.transactional.dto.AlbumDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
