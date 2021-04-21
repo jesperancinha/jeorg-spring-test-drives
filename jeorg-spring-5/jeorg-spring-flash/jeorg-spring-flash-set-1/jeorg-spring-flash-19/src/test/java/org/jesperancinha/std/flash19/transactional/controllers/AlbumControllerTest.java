@@ -58,7 +58,7 @@ class AlbumControllerTest {
                         .header("artist", "Kylie Minogue")
                         .header("publisher", "EMI")
                         .header("year", 2012)));
-        
+
         assertThat(albumService.getLastTry()).isNull();
     }
 

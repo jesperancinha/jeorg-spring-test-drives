@@ -1,12 +1,10 @@
 package org.jesperancinha.std.flash19.transactional.services;
 
-import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.std.flash19.transactional.converters.AlbumConverter;
 import org.jesperancinha.std.flash19.transactional.domain.Album;
 import org.jesperancinha.std.flash19.transactional.domain.AlbumRepository;
 import org.jesperancinha.std.flash19.transactional.dto.AlbumDto;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -21,12 +19,14 @@ public class AlbumServiceImpl implements AlbumService {
     private final AlbumRepository albumRepository;
 
     private Album lastTry;
+
     public AlbumServiceImpl(AlbumRepository albumRepository) {
         this.albumRepository = albumRepository;
     }
 
     /**
      * Creates the album
+     *
      * @param album {@link Album}
      * @return The created album {@link Album}
      */
@@ -36,6 +36,7 @@ public class AlbumServiceImpl implements AlbumService {
 
     /**
      * Removes an album by its Id
+     *
      * @param id {@link Long}
      * @return True if album has been deleted
      */
@@ -48,6 +49,7 @@ public class AlbumServiceImpl implements AlbumService {
 
     /**
      * Updates the album that has already been created
+     *
      * @param album {@link Album}
      * @return Updated album {@link Album}
      */
