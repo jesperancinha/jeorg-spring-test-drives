@@ -43,7 +43,7 @@ class AlbumControllerTest {
     }
 
     @Test
-    void testCreateAlbumRollBack_whenCallCreateAlbum_thenCreateAndRollback() throws Exception {
+    void testCreateAlbumRollBack_whenCallCreateAlbum_thenCreateAndRollback() {
         final var inputAlbum = new AlbumDto();
         inputAlbum.setName("The Abbey Road Sessions");
         inputAlbum.setArtist("Kylie Minogue");

@@ -6,6 +6,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.jesperancinha.std.flash19.transactional.domain.Album;
 import org.jesperancinha.std.flash19.transactional.repos.AlbumRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,17 +17,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Flash19FindByAlbumSteps {
 
-    private final AlbumRepository albumRepository;
+    @Autowired
+    private AlbumRepository albumRepository;
 
     private List<Album> albums;
     private List<Album> searchResult;
 
-    public Flash19FindByAlbumSteps(AlbumRepository albumRepository) {
-        this.albumRepository = albumRepository;
-    }
-
     @Given("^a lists of artists$")
     public void setup() {
+        albumRepository.deleteAll();
         albums = new ArrayList<>();
     }
 
