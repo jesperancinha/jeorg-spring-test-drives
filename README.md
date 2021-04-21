@@ -35,6 +35,16 @@ The purporse of this project is to keep up with the development of the Spring Fr
 1. [Spring 5](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
 2. [Spring Kotlin 5](./jeorg-spring-kotlin-5) - Test drives for the Spring 5 Frawework in Kotlin (Bare minimum focus given to Spring Boot)
 
+VERY IMPORTANT NOTE: It is important to take note that none of the examples presented are thought to become production versions of any sort of product.
+The goal of this project is purely to demonstrate and provide examples of different Aspects of the Spring Framework.
+Concepts related to immutability/mutability, SOLID, ACID, 12 Factor App, Reactive Manifesto and others are present, but they are not followed in every single example module.
+The reason being is that they take time, and adding these concerns per module removes the specific goal of each module.
+It is also true that I will do my best to improve every single module as part of my Spring Framework journey, so these concepts will show up more often.
+Important thing is to understand how the Spring Framework works. These modules dot not pertain to show good practices, code styles or javadocs.
+If you understand all of this, then please continue with your studies. Thank you! 🙏
+
+João Esperancinha, 2021/04/21
+
 ## Build
 
 Note that if you want to build this project from the root, you need to use one of the JDK 11 or upper versions.
