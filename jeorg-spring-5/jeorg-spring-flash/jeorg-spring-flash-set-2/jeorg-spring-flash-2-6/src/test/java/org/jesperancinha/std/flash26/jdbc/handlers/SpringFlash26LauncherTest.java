@@ -8,6 +8,7 @@ import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.jdbc.UncategorizedSQLException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
@@ -15,6 +16,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -33,7 +35,8 @@ class SpringFlash26LauncherTest {
 
     @Captor
     private ArgumentCaptor<RowMapper<Shell>> rowMapperArgumentCaptor;
-   @Captor
+
+    @Captor
     private ArgumentCaptor<ResultSetExtractor<String>> resultSetExtractorArgumentCaptor;
 
     @BeforeEach
@@ -89,15 +92,30 @@ class SpringFlash26LauncherTest {
     }
 
     @Test
-    void insertData() {
+    void testInsertData_whenInserting2Rows_thenCallBatchUpdateFor2Records() {
         final var data = Arrays.asList(
                 new Object[]{"Berbigão", "Cerastoderma edule", "white"},
                 new Object[]{"Conquilha", "Donax trunculus", "blue"}
         );
-        springFlash26Launcher.insertData(data);
+
+        final int[] ints = springFlash26Launcher.insertData(data);
+
+        for (int i : ints) {
+            assertThat(ints[i]).isEqualTo(1);
+        }
+        verify(jdbcTemplate, times(1)).batchUpdate("insert into shells(name, scientificName, predominentColor) values (?,?,?)", data);
     }
 
     @Test
-    void testNoResultQueryOnResultSetExtractor() {
+    void testNoResultQueryOnResultSetExtractor_whenMakingQueryWithNoResults_thenThrowException() {
+        assertThrows(UncategorizedSQLException.class,
+                () -> springFlash26Launcher.testNoResultQueryOnResultSetExtractor());
+
+        verify(jdbcTemplate, times(1)).query(stringArgumentCaptor.capture(), resultSetExtractorArgumentCaptor.capture());
+        final var query = stringArgumentCaptor.getValue();
+        assertThat(query).isNotNull();
+        assertThat(query).isEqualTo("create table shells(id serial, name varchar(255), scientificName varchar(255), predominentColor varchar(255))");
+        final var resultSetExtractorArgumentCaptorValue = resultSetExtractorArgumentCaptor.getValue();
+        assertThat(resultSetExtractorArgumentCaptorValue).isNotNull();
     }
 }
