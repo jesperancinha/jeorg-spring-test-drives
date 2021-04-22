@@ -40,6 +40,7 @@ The goal of this project is purely to demonstrate and provide examples of differ
 Concepts related to immutability/mutability, SOLID, ACID, 12 Factor App, Reactive Manifesto and others are present, but they are not followed in every single example module.
 The reason being is that they take time, and adding these concerns per module can potentially lead away from the specific goal of each module.
 These modules dot not pertain to show good practices, code styles or javadocs necessarily.
+When it comes to using Lombok, you'll find its usage more often, but it won't be used everywhere given that in some cases it may hide some important concepts.
 These three remain a concern, but they are not the focus of this repo.
 It is also true that I will do my best to improve every single module as part of my Spring Framework journey, so these concepts will show up more often.
 What's important to take away from this repo it to understand how the Spring Framework works. 

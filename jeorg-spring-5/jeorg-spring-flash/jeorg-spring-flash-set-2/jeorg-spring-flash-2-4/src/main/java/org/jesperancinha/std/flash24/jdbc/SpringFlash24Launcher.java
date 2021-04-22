@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash24.jdbc;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash24.jdbc.template.Concert;
 import org.jesperancinha.std.flash24.jdbc.template.CustomDataAccessException;
 import org.springframework.boot.CommandLineRunner;
@@ -15,6 +16,7 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
@@ -25,7 +27,7 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RE
 @SpringBootApplication
 @RestController
 public class SpringFlash24Launcher implements CommandLineRunner {
-    final JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     public SpringFlash24Launcher(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -37,19 +39,25 @@ public class SpringFlash24Launcher implements CommandLineRunner {
 
     @Override
     public void run(String... strings) {
-        testException();
+        try {
+            testException();
+        } catch (DataAccessException dataAccessException){
+            ConsolerizerComposer.outSpace()
+                    .yellow(dataAccessException.getMessage())
+                    .reset();
+        }
         initializeDatabase();
 
-        List<Object[]> concerts = getData1();
+        final var concerts = getData1();
 
         textCRUDCreate(concerts);
         testCRUDRead();
 
-        List<Object[]> concerts2 = getData2(concerts);
+        final var concerts2 = getData2(concerts);
 
         testCRUDUpdate(concerts2);
         testCRUDRead2();
-        testCRUDDelete();
+        testCRUDDelete(1);
         testCRUDRead();
     }
 
@@ -59,7 +67,7 @@ public class SpringFlash24Launcher implements CommandLineRunner {
      *
      * @return A list of an array of data, which defines each {@link Concert} being updated into the database.
      */
-    private List<Object[]> getData2(List<Object[]> concerts) {
+    final List<Object[]> getData2(List<Object[]> concerts) {
         ORANGE.printGenericLn("Performing a CRUD operation -> Update = update");
         final Object[] concert1 = concerts.get(0);
         final Object[] concert2 = concerts.get(1);
@@ -91,22 +99,24 @@ public class SpringFlash24Launcher implements CommandLineRunner {
     /**
      * Delete CRUD operation. Removes the element with id = 1 from the database
      *
+     * @param id
      * @return The number of rows deleted. In this case, it should always be 1
      */
-    private int testCRUDDelete() {
+    final int testCRUDDelete(int id) {
         ORANGE.printGenericLn("Performing a CRUD operation -> Delete = delete");
-        final int update = jdbcTemplate.update("delete from concerts where id = ?", 1);
-        return update;
+        return jdbcTemplate.update("delete from concerts where id = ?", id);
     }
 
     /**
      * Reads the data from the database using a {@link org.springframework.jdbc.core.RowMapper}
      * <p>
      * In this case, it also returns as an output, the row number associated with the query result
+     *
+     * @return
      */
-    private void testCRUDRead2() {
-        jdbcTemplate.query(
-                "select id, name, venue, local_date_time FROM concerts",
+    final List<Concert> testCRUDRead2() {
+        return jdbcTemplate.query(
+                "select id, name, venue, local_date_time from concerts",
                 (rs, rowNum) -> {
                     ORANGE.printGenericLn("This is row number %d", rowNum);
                     return new Concert(rs.getLong("id"),
@@ -115,34 +125,42 @@ public class SpringFlash24Launcher implements CommandLineRunner {
                             rs.getString("local_date_time"));
 
                 }
-        ).forEach(concert -> MAGENTA.printGenericLn(concert.toString()));
+        ).stream()
+                .peek(concert -> MAGENTA.printGenericLn(concert.toString()))
+                .collect(Collectors.toList());
     }
 
     /**
      * Performs the CRUD update, using as input parameter a {@link List} of arrays containing all the concerts to be updated.
      *
      * @param concerts2
+     * @return
      */
-    private void testCRUDUpdate(List<Object[]> concerts2) {
-        jdbcTemplate.batchUpdate("UPDATE concerts set name = ?, venue = ?, local_date_time = ? WHERE id = ?", concerts2);
+    int[] testCRUDUpdate(List<Object[]> concerts2) {
+        final int[] ints = jdbcTemplate.batchUpdate("UPDATE concerts set name = ?, venue = ?, local_date_time = ? WHERE id = ?", concerts2);
         ORANGE.printGenericLn("Performing a CRUD operation -> Read = select");
+        return ints;
     }
 
     /**
      * Reads the {@link Concert} data with a  {@link org.springframework.jdbc.core.RowMapper}
      * <p>
      * A row mapper can return a {@link List} of concerts. Each {@link Concert}, is parsed in a lambda mapper.
+     *
+     * @return
      */
-    private void testCRUDRead() {
+    List<Concert> testCRUDRead() {
         ORANGE.printGenericLn("Performing a CRUD operation -> Read = select");
-        jdbcTemplate.query(
+        return jdbcTemplate.query(
                 "select id, name, venue, local_date_time from concerts",
                 (rs, rowNum) ->
                         new Concert(rs.getLong("id"),
                                 rs.getString("name"),
                                 rs.getString("venue"),
                                 rs.getString("local_date_time"))
-        ).forEach(concert -> MAGENTA.printGenericLn(concert.toString()));
+        ).stream()
+                .peek(concert -> MAGENTA.printGenericLn(concert.toString()))
+                .collect(Collectors.toList());
     }
 
 
@@ -150,11 +168,12 @@ public class SpringFlash24Launcher implements CommandLineRunner {
      * Creates the concert data
      *
      * @param concerts A list of object arrays ready for the {@link JdbcTemplate#batchUpdate(String...)} method
+     * @return
      */
-    void textCRUDCreate(List<Object[]> concerts) {
+    int[] textCRUDCreate(List<Object[]> concerts) {
         GREEN.printGenericTitleLn("from: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete");
         ORANGE.printGenericLn("Performing a CRUD operation -> Create = INSERT");
-        jdbcTemplate.batchUpdate("insert into concerts(name, venue, local_date_time) values (?,?,?)", concerts);
+       return jdbcTemplate.batchUpdate("insert into concerts(name, venue, local_date_time) values (?,?,?)", concerts);
     }
 
     /**
@@ -185,6 +204,7 @@ public class SpringFlash24Launcher implements CommandLineRunner {
         } catch (final DataAccessException exception) {
             BLUE.printGenericTitleLn("Exception Handling");
             RED.printExpectedException("We are able to handle this exception since we have crated an Exception Translator", exception);
+            throw exception;
         }
     }
 }

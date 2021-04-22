@@ -1,5 +1,8 @@
 package org.jesperancinha.std.flash24.jdbc.template;
 
+/**
+ * Class representing concerts
+ */
 public class Concert {
     private long id;
     private String name;
