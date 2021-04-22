@@ -64,7 +64,7 @@ public class SpringFlash26Launcher implements CommandLineRunner {
                 .reset();
     }
 
-    private List<Shell> testRowMapper() {
+     List<Shell> testRowMapper() {
         return jdbcTemplate.query("select name, scientificName, predominentColor from shells"
                 , (rs, rowNum) -> {
                     GREEN.printGenericLn("The shell best known as %s, has a scientific name of %s and is mostly found with color %s",
@@ -74,7 +74,7 @@ public class SpringFlash26Launcher implements CommandLineRunner {
                 });
     }
 
-    private String testResultSetExtractor() {
+     String testResultSetExtractor() {
         return jdbcTemplate.query("select name, scientificName, predominentColor from shells"
                 , rs -> {
                     while (rs.next()) {
@@ -85,17 +85,17 @@ public class SpringFlash26Launcher implements CommandLineRunner {
                 });
     }
 
-    private void insertData(List<Object[]> data) {
+     void insertData(List<Object[]> data) {
         jdbcTemplate.batchUpdate("insert into shells(name, scientificName, predominentColor) values (?,?,?)",
                 data);
     }
 
-    private void initializeDatabase() {
+     void initializeDatabase() {
         jdbcTemplate.execute("drop table shells if exists");
         jdbcTemplate.execute("create table shells(id serial, name varchar(255), scientificName varchar(255), predominentColor varchar(255))");
     }
 
-    private void testNoResultQueryOnResultSetExtractor() {
+     void testNoResultQueryOnResultSetExtractor() {
         try {
             jdbcTemplate.query("create table shells(id serial, name varchar(255), scientificName varchar(255), predominentColor varchar(255))"
                     , new ResultSetExtractor<String>() {
