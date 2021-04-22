@@ -15,8 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @MockBean(BeanRepository.class)
-@TestPropertySource("classpath:beans.properties")
-@Disabled
+@TestPropertySource("classpath:beans-fixed.properties")
 class BeanServiceImplDefinedPortSpringBootTest {
 
     @Autowired
@@ -30,7 +29,7 @@ class BeanServiceImplDefinedPortSpringBootTest {
 
     @Test
     void tesGetSlogan_whenCalled_getProductionSlogan() {
-        assertThat(beanService.getSlogan()).isEqualTo("This is just a slogan");
+        assertThat(beanService.getSlogan()).isEqualTo("This is just a fixed slogan");
         assertThat(dataSourceUrl).isEqualTo("jdbc:h2:file:~/flash25db");
 
         ConsolerizerComposer
