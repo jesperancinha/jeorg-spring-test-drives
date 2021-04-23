@@ -25,11 +25,11 @@ public class JewelServiceImpl implements JewelService {
      * @return
      */
     public JewelDto createJewel(Jewel jewel) {
-        final Jewel save = this.jewelRepository.save(jewel);
-        final JewelDto jewelDto1 = new JewelDto();
-        jewelDto1.setJewelType(save.getJewelType());
-        jewelDto1.setGuardian(save.getGuardian());
-        return jewelDto1;
+        final var savedJewel = this.jewelRepository.save(jewel);
+        return JewelDto.builder()
+                .jewelType(savedJewel.getJewelType())
+                .guardian(savedJewel.getGuardian())
+                .build();
     }
 
 

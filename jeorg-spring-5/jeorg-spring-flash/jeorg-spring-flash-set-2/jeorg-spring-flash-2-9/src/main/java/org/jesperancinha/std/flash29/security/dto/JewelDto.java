@@ -1,34 +1,20 @@
 package org.jesperancinha.std.flash29.security.dto;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Value;
 import org.jesperancinha.std.flash29.security.services.JewelType;
 
+@Value
+@Builder
+@AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class JewelDto {
 
-    private JewelType jewelType;
+    @JsonProperty("jewelType")
+    JewelType jewelType;
 
-    private String guardian;
-
-    public JewelType getJewelType() {
-        return jewelType;
-    }
-
-    public void setJewelType(JewelType jewelType) {
-        this.jewelType = jewelType;
-    }
-
-    public String getGuardian() {
-        return guardian;
-    }
-
-    public void setGuardian(String guardian) {
-        this.guardian = guardian;
-    }
-
-    @Override
-    public String toString() {
-        return "JewelDto{" +
-                "jewelType=" + jewelType +
-                ", guardian='" + guardian + '\'' +
-                '}';
-    }
+    @JsonProperty("guardian")
+    String guardian;
 }

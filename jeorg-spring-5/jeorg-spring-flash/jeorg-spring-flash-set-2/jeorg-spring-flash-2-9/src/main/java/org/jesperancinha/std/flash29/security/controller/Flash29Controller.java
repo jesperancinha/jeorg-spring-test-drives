@@ -59,16 +59,18 @@ public class Flash29Controller {
         return jewelService.getJewelById(id);
     }
 
-    @PostMapping(path = "/jewels", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/jewels",
+            consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<JewelDto> Jewel(
             @RequestBody
                     JewelDto jewelDto) {
-        Jewel jewel = new Jewel();
-        jewel.setJewelType(jewelDto.getJewelType());
-        jewel.setGuardian(jewelDto.getGuardian());
-        final JewelDto jewel1 = jewelService.createJewel(jewel);
-        GREEN.printGenericLn("Created jewel -> %s", jewel1);
-        return ResponseEntity.ok().body(jewel1);
+        final var jewel = Jewel.builder()
+                .jewelType(jewelDto.getJewelType())
+                .guardian(jewelDto.getGuardian())
+                .build();
+        final JewelDto createdJewel = jewelService.createJewel(jewel);
+        GREEN.printGenericLn("Created jewel -> %s", createdJewel);
+        return ResponseEntity.ok().body(createdJewel);
     }
 
     @DeleteMapping("/jewels/{id}")

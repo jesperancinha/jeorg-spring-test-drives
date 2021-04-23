@@ -2,11 +2,12 @@ package org.jesperancinha.std.flash29.security;
 
 import org.jesperancinha.std.flash29.security.domain.Jewel;
 import org.jesperancinha.std.flash29.security.repository.JewelRepository;
-import org.jesperancinha.std.flash29.security.services.JewelType;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+
+import static org.jesperancinha.std.flash29.security.services.JewelType.AMETHYST;
 
 @SpringBootApplication
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -23,10 +24,11 @@ public class SpringFlash29Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        final Jewel jewel = new Jewel();
-        jewel.setJewelType(JewelType.AMETHYST);
-        jewel.setGuardian("admin");
+    public void run(String... args) {
+        final Jewel jewel = Jewel.builder()
+                .jewelType(AMETHYST)
+                .guardian("admin")
+                .build();
         jewelRepository.save(jewel);
     }
 }
