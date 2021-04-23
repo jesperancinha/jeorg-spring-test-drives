@@ -15,14 +15,27 @@ public interface JewelService {
     @PreAuthorize("hasRole('ROLE_ADMIN') && #jewel.guardian != null &&  #jewel.guardian == authentication.name")
     JewelDto updateJewel(JewelDto jewel);
 
+    /**
+     * To read our own jewels, we shouldn't have any special role.
+     * After all they are our own.
+     * The only jewels to be reject are the jewels that do not belong to us.
+     *
+     * @param id This is the id of the Jewel {@link Long}
+     * @return The {@link JewelDto} we need to find.
+     */
     @PostAuthorize("returnObject.guardian == authentication.name")
     JewelDto getJewelById(final Long id);
 
-    List<Jewel> getAll();
+    /**
+     * For demonstration purposes, this is our only method that has no protection on a service level.
+     * @return The list of all current Jewels in our system. {@link List}
+     */
+    List<JewelDto> getAll();
 
     /**
      * For demonstration purposes, we will make a delete method, by using a Jewel dto.
      * This way we can test our jewels via their content and the authentication role.
+     *
      * @param jewel
      */
     @PreAuthorize("#jewel.guardian == authentication.name && hasRole('ROLE_ADMIN')")

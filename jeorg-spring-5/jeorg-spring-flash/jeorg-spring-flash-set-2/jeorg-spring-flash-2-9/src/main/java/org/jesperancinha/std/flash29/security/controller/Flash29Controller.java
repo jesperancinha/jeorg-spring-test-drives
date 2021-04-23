@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash29.security.controller;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash29.security.dto.JewelDto;
 import org.jesperancinha.std.flash29.security.services.JewelService;
 import org.springframework.http.MediaType;
@@ -54,6 +55,7 @@ public class Flash29Controller {
                 .collect(Collectors.toList());
     }
 
+    @GetMapping("/jewels/{id}")
     public
     @ResponseBody
     JewelDto jewel(
@@ -67,6 +69,11 @@ public class Flash29Controller {
     public ResponseEntity<JewelDto> Jewel(
             @RequestBody
                     JewelDto jewelDto) {
+        ConsolerizerComposer.outSpace()
+                .blue("Received:")
+                .yellow()
+                .jsonPrettyPrint(jewelDto)
+                .reset();
         final JewelDto createdJewel = jewelService.createJewel(jewelDto);
         GREEN.printGenericLn("Created jewel -> %s", createdJewel);
         return ResponseEntity.ok().body(createdJewel);

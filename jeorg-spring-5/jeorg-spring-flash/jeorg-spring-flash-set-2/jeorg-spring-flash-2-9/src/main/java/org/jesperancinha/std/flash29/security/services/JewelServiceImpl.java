@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
@@ -37,7 +38,7 @@ public class JewelServiceImpl implements JewelService {
     /**
      * (U) pdate
      *
-     * @param jewel
+     * @param jewel {@link Jewel}
      */
     public JewelDto updateJewel(JewelDto jewel) {
         final Jewel save = this.jewelRepository.save(Jewel
@@ -66,8 +67,13 @@ public class JewelServiceImpl implements JewelService {
         return JewelDto.builder().jewelType(jewel.getJewelType()).guardian(jewel.getGuardian()).build();
     }
 
-    public List<Jewel> getAll() {
-        return jewelRepository.findAll();
+    public List<JewelDto> getAll() {
+        return jewelRepository.findAll().stream().map(jewel ->
+                JewelDto.builder()
+                        .jewelType(jewel.getJewelType())
+                        .guardian(jewel.getGuardian())
+                        .build())
+                .collect(Collectors.toList());
     }
 
     /**

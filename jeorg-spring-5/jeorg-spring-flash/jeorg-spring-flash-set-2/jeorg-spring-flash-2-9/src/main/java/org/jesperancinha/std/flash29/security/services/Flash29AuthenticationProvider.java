@@ -28,12 +28,15 @@ public class Flash29AuthenticationProvider implements AuthenticationProvider {
         final var flashLoginUser = FlashUser.builder().name(username).password(password).build();
         final var userOptional =
                 FLASH_USERS.stream()
-                        .filter(flashLoginUser::equals)
+                        .filter(flashUser ->
+                                flashUser.getName().equals(flashLoginUser.getName()) &&
+                                        flashUser.getPassword().equals(flashLoginUser.getPassword())
+                        )
                         .findAny();
         final var grantedAuthorities =
-                        userOptional.orElseThrow(() ->
-                                new BadCredentialsException(String.format("User %s cannot be authenticated!", username)))
-                                .getRoles().stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+                userOptional.orElseThrow(() ->
+                        new BadCredentialsException(String.format("User %s cannot be authenticated!", username)))
+                        .getRoles().stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
         return new UsernamePasswordAuthenticationToken(username, password, grantedAuthorities);
     }
 

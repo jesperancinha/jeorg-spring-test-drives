@@ -1,0 +1,65 @@
+package org.jesperancinha.std.flash29.security.services;
+
+import org.jesperancinha.std.flash29.security.domain.Jewel;
+import org.jesperancinha.std.flash29.security.repository.JewelRepository;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
+import org.springframework.security.test.context.support.WithMockUser;
+
+import java.util.Optional;
+
+import static org.jesperancinha.std.flash29.security.services.JewelType.DIAMOND;
+import static org.jesperancinha.std.flash29.security.services.JewelType.PEARL;
+import static org.jesperancinha.std.flash29.security.services.JewelType.RUBY;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.reset;
+import static org.mockito.Mockito.when;
+
+@SpringBootTest
+class JewelServiceGetIT {
+
+    @Autowired
+    private JewelService jewelService;
+
+    @MockBean
+    private JewelRepository jewelRepository;
+
+    @BeforeEach
+    public void setUp() {
+        reset(jewelRepository);
+        when(jewelRepository.save(any())).thenAnswer(invocationOnMock -> invocationOnMock.getArguments()[0]);
+        Optional<Jewel> gregoryJewel = Optional.of(Jewel.builder().jewelType(PEARL).guardian("gregory_kitten").build());
+        Optional<Jewel> megaKitten = Optional.of(Jewel.builder().jewelType(DIAMOND).guardian("MegaKitten").build());
+        Optional<Jewel> joao = Optional.of(Jewel.builder().jewelType(RUBY).guardian("Joao").build());
+        when(jewelRepository.findById(1L)).thenReturn(gregoryJewel);
+        when(jewelRepository.findById(2L)).thenReturn(megaKitten);
+        when(jewelRepository.findById(3L)).thenReturn(joao);
+    }
+
+    @Test
+    void testGetJewelById_whenNoAuthentication_thenFail() {
+        assertThrows(AuthenticationCredentialsNotFoundException.class, () -> jewelService.getJewelById(1L));
+    }
+
+    @Test
+    @WithMockUser(username = "MegaKitten")
+    void testGetJewelById_whenGuardianDoesNotMatch_thenFail() {
+        assertThrows(AccessDeniedException. class,() -> jewelService.getJewelById(3L));
+    }
+
+    @Test
+    @WithMockUser(username = "MegaKitten")
+    void testGetJewelById_whenGuardianMatch_thenOk() {
+        jewelService.getJewelById(2L);
+    }
+
+
+}
