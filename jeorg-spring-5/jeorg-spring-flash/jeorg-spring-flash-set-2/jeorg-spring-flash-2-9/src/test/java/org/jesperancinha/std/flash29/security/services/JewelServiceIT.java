@@ -105,7 +105,7 @@ class JewelServiceIT {
         final var jewelResult = jewelService.createJewel(jewel);
         assertThat(jewelResult.getJewelType()).isEqualTo(OPAL);
         assertThat(jewelResult.getGuardian()).isEqualTo("gregory_kitten");
-        verify(jewelRepository, times(1)).save(jewelArgumentCaptor.capture());
+        verify(jewelRepository, times(2)).save(jewelArgumentCaptor.capture());
         final Jewel result = jewelArgumentCaptor.getValue();
         assertThat(result).isNotNull();
         assertThat(result).isSameAs(jewel);
