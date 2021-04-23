@@ -80,7 +80,11 @@ class Flash27HealthIndicatorTest {
         assertThat(flash27Details.getFree()).isNull();
         assertThat(flash27Details.getThreshold()).isNull();
         assertThat(flash27Details.getLyric()).isNotNull();
-        assertThat(flash27Details.getLyric()).isIn("Leave you as you are", "Then direct you into my arms", "If he felt he had to direct you");
+        assertThat(flash27Details.getLyric()).isIn(
+                "Oh, not to touch a hair on your head",
+                "Leave you as you are",
+                "If he felt he had to direct you",
+                "Then direct you into my arms");
         final var ping = components.getPing();
         assertThat(ping).isNotNull();
         final var pingStatus = ping.getStatus();

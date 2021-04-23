@@ -6,6 +6,7 @@ import org.jesperancinha.std.flash29.security.repository.JewelRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
@@ -24,8 +25,8 @@ public class JewelServiceImpl implements JewelService {
      * @param jewel
      * @return
      */
-    public JewelDto createJewel(Jewel jewel) {
-        final var savedJewel = this.jewelRepository.save(jewel);
+    public JewelDto createJewel(JewelDto jewel) {
+        final var savedJewel = this.jewelRepository.save(Jewel.builder().jewelType(jewel.getJewelType()).guardian(jewel.getGuardian()).build());
         return JewelDto.builder()
                 .jewelType(savedJewel.getJewelType())
                 .guardian(savedJewel.getGuardian())
@@ -38,8 +39,16 @@ public class JewelServiceImpl implements JewelService {
      *
      * @param jewel
      */
-    public void updateJewel(Jewel jewel) {
-        this.jewelRepository.save(jewel);
+    public JewelDto updateJewel(JewelDto jewel) {
+        final Jewel save = this.jewelRepository.save(Jewel
+                .builder()
+                .jewelType(jewel.getJewelType())
+                .guardian(jewel.getGuardian())
+                .build());
+        return JewelDto.builder()
+                .jewelType(save.getJewelType())
+                .guardian(save.getGuardian())
+                .build();
     }
 
     /**
@@ -48,10 +57,13 @@ public class JewelServiceImpl implements JewelService {
      * @param id
      * @return {@link Jewel}
      */
-    public Jewel getJewelById(final Long id) {
+    public JewelDto getJewelById(final Long id) {
         final Jewel jewel = jewelRepository.findById(id).orElse(null);
+        if (Objects.isNull(jewel)) {
+            return null;
+        }
         ORANGE.printGenericLn(jewel);
-        return jewel;
+        return JewelDto.builder().jewelType(jewel.getJewelType()).guardian(jewel.getGuardian()).build();
     }
 
     public List<Jewel> getAll() {
@@ -63,7 +75,7 @@ public class JewelServiceImpl implements JewelService {
      *
      * @param jewel
      */
-    public void deleteJewel(Jewel jewel) {
-        jewelRepository.delete(jewel);
+    public void deleteJewel(JewelDto jewel) {
+        jewelRepository.delete(Jewel.builder().jewelType(jewel.getJewelType()).guardian(jewel.getGuardian()).build());
     }
 }

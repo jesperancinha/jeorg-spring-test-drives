@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash29.security.controller;
 
-import org.jesperancinha.std.flash29.security.domain.Jewel;
 import org.jesperancinha.std.flash29.security.dto.JewelDto;
 import org.jesperancinha.std.flash29.security.services.JewelService;
 import org.springframework.http.MediaType;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
@@ -46,14 +46,17 @@ public class Flash29Controller {
     }
 
     @GetMapping("/jewels")
-    public @ResponseBody
-    List<Jewel> listJewels() {
-        return jewelService.getAll();
+    public
+    @ResponseBody
+    List<JewelDto> listJewels() {
+        return jewelService.getAll().stream().map(jewel ->
+                JewelDto.builder().jewelType(jewel.getJewelType()).guardian(jewel.getGuardian()).build())
+                .collect(Collectors.toList());
     }
 
-    @GetMapping("/jewels/{id}")
-    public @ResponseBody
-    Jewel jewel(
+    public
+    @ResponseBody
+    JewelDto jewel(
             @PathVariable
                     Long id) {
         return jewelService.getJewelById(id);
@@ -64,21 +67,23 @@ public class Flash29Controller {
     public ResponseEntity<JewelDto> Jewel(
             @RequestBody
                     JewelDto jewelDto) {
-        final var jewel = Jewel.builder()
-                .jewelType(jewelDto.getJewelType())
-                .guardian(jewelDto.getGuardian())
-                .build();
-        final JewelDto createdJewel = jewelService.createJewel(jewel);
+        final JewelDto createdJewel = jewelService.createJewel(jewelDto);
         GREEN.printGenericLn("Created jewel -> %s", createdJewel);
         return ResponseEntity.ok().body(createdJewel);
     }
 
+    /**
+     * This method is here for pure demonstration purposes
+     * The goal is to check the getJewel method in combination with a delete method in order to explore authentication
+     *
+     * @param id The id of the Jewel {@link Long}
+     */
     @DeleteMapping("/jewels/{id}")
     public @ResponseBody
     void removeJewel(
             @PathVariable
                     Long id) {
-        final Jewel jewelById = jewelService.getJewelById(id);
+        final JewelDto jewelById = jewelService.getJewelById(id);
         jewelService.deleteJewel(jewelById);
         RED.printGenericLn("Removed jewel -> %d", id);
     }

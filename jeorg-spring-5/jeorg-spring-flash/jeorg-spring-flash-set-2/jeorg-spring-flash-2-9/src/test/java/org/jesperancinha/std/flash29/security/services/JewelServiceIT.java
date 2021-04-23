@@ -1,11 +1,13 @@
 package org.jesperancinha.std.flash29.security.services;
 
 import org.jesperancinha.std.flash29.security.domain.Jewel;
+import org.jesperancinha.std.flash29.security.dto.JewelDto;
 import org.jesperancinha.std.flash29.security.repository.JewelRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -17,6 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.jesperancinha.std.flash29.security.services.JewelType.OPAL;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
@@ -33,6 +36,7 @@ class JewelServiceIT {
 
     @BeforeEach
     public void setUp() {
+        reset(jewelRepository);
         when(jewelRepository.save(any())).thenAnswer(invocationOnMock -> invocationOnMock.getArguments()[0]);
     }
 
@@ -41,7 +45,7 @@ class JewelServiceIT {
 
     @Test
     void testCreateJewel_whenNoAuthentication_thenFail() {
-        final var jewel = Jewel
+        final var jewel = JewelDto
                 .builder()
                 .jewelType(OPAL)
                 .guardian("Kitten")
@@ -54,7 +58,7 @@ class JewelServiceIT {
     @Test
     @WithMockUser(username = "gregory_kitten")
     void testCreateJewel_whenAuthenticationButNoRoles_thenFail() {
-        final var jewel = Jewel
+        final var jewel = JewelDto
                 .builder()
                 .jewelType(OPAL)
                 .guardian("Kitten")
@@ -68,7 +72,7 @@ class JewelServiceIT {
     @WithMockUser(username = "gregory_kitten",
             roles = "ADMIN")
     void testCreateJewel_whenAuthenticationButNotEnoughRoles_thenFail() {
-        final var jewel = Jewel
+        final var jewel = JewelDto
                 .builder()
                 .jewelType(OPAL)
                 .guardian("Kitten")
@@ -82,7 +86,7 @@ class JewelServiceIT {
     @WithMockUser(username = "gregory_kitten",
             roles = {"ADMIN", "WRITE"})
     void testCreateJewel_whenAuthenticationAndRolesButGuardianNotMatch_thenFail() {
-        final var jewel = Jewel
+        final var jewel = JewelDto
                 .builder()
                 .jewelType(OPAL)
                 .guardian("Kitten")
@@ -96,7 +100,7 @@ class JewelServiceIT {
     @WithMockUser(username = "gregory_kitten",
             roles = {"ADMIN", "WRITE"})
     void testCreateJewel_whenAuthenticationAndRightRoles_thenOk() {
-        final var jewel = Jewel
+        final var jewel = JewelDto
                 .builder()
                 .jewelType(OPAL)
                 .guardian("gregory_kitten")
@@ -105,15 +109,72 @@ class JewelServiceIT {
         final var jewelResult = jewelService.createJewel(jewel);
         assertThat(jewelResult.getJewelType()).isEqualTo(OPAL);
         assertThat(jewelResult.getGuardian()).isEqualTo("gregory_kitten");
-        verify(jewelRepository, times(2)).save(jewelArgumentCaptor.capture());
+        verify(jewelRepository, times(1)).save(jewelArgumentCaptor.capture());
         final Jewel result = jewelArgumentCaptor.getValue();
         assertThat(result).isNotNull();
-        assertThat(result).isSameAs(jewel);
+        assertThat(result.getGuardian()).isEqualTo(jewel.getGuardian());
+        assertThat(result.getJewelType()).isEqualTo(jewel.getJewelType());
     }
 
     @Test
-    void updateJewel() {
+    void testUpdateJewel_whenNoAuthentication_thenFail() {
+        final var jewel = JewelDto
+                .builder()
+                .jewelType(OPAL)
+                .guardian("Kitten")
+                .build();
+
+        assertThrows(AuthenticationCredentialsNotFoundException.class, () -> jewelService.updateJewel(jewel));
+        verifyNoInteractions(jewelRepository);
     }
+
+    @Test
+    @WithMockUser(username = "MegaKitten")
+    void testUpdateJewel_whenAuthenticationNoRoles_thenFail() {
+        final var jewel = JewelDto
+                .builder()
+                .jewelType(OPAL)
+                .guardian("Kitten")
+                .build();
+
+        assertThrows(AccessDeniedException.class, () -> jewelService.updateJewel(jewel));
+        verifyNoInteractions(jewelRepository);
+    }
+
+    @Test
+    @WithMockUser(username = "MegaKitten",
+            roles = "ADMIN")
+    void testUpdateJewel_whenAuthenticationRolesGuardianUnMatch_thenFail() {
+        final var jewel = JewelDto
+                .builder()
+                .jewelType(OPAL)
+                .guardian("Kitten")
+                .build();
+
+        assertThrows(AccessDeniedException.class, () -> jewelService.updateJewel(jewel));
+        verifyNoInteractions(jewelRepository);
+    }
+
+    @Test
+    @WithMockUser(username = "MegaKitten",
+            roles = "ADMIN")
+    void testUpdateJewel_whenAuthenticationRolesGuardiaMatch_thenOk() {
+        final var jewel = JewelDto
+                .builder()
+                .jewelType(OPAL)
+                .guardian("MegaKitten")
+                .build();
+
+        final var jewelResult = jewelService.updateJewel(jewel);
+        assertThat(jewelResult.getJewelType()).isEqualTo(OPAL);
+        assertThat(jewelResult.getGuardian()).isEqualTo("MegaKitten");
+        verify(jewelRepository, times(1)).save(jewelArgumentCaptor.capture());
+        final Jewel result = jewelArgumentCaptor.getValue();
+        assertThat(result).isNotNull();
+        assertThat(result.getGuardian()).isEqualTo(jewel.getGuardian());
+        assertThat(result.getJewelType()).isEqualTo(jewel.getJewelType());
+    }
+
 
     @Test
     void getJewelById() {
