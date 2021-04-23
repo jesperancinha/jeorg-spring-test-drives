@@ -2,6 +2,7 @@ package org.jesperancinha.std.flash29.security.controller;
 
 import org.jesperancinha.std.flash29.security.repository.JewelRepository;
 import org.jesperancinha.std.flash29.security.services.JewelService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -11,6 +12,8 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static java.util.Collections.singletonList;
+import static org.mockito.Mockito.reset;
+import static org.mockito.Mockito.verifyNoInteractions;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -28,6 +31,11 @@ class Flash29ControllerTest {
     @MockBean
     private JewelRepository jewelRepository;
 
+    @BeforeEach
+    public void setup(){
+        reset(jewelRepository);
+    }
+
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
@@ -38,6 +46,8 @@ class Flash29ControllerTest {
                 .andExpect(model().attribute("name", "joao"))
                 .andExpect(model().attribute("roles", singletonList(
                         new SimpleGrantedAuthority("ROLE_ADMIN"))));
+
+        verifyNoInteractions(jewelRepository);
     }
 
     @Test

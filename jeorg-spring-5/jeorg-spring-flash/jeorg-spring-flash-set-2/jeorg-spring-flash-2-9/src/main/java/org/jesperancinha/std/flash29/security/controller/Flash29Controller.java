@@ -51,7 +51,10 @@ public class Flash29Controller {
     @ResponseBody
     List<JewelDto> listJewels() {
         return jewelService.getAll().stream().map(jewel ->
-                JewelDto.builder().jewelType(jewel.getJewelType()).guardian(jewel.getGuardian()).build())
+                JewelDto.builder()
+                        .jewelType(jewel.getJewelType())
+                        .guardian(jewel.getGuardian())
+                        .build())
                 .collect(Collectors.toList());
     }
 
