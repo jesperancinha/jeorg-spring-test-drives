@@ -9,14 +9,15 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Flash29AuthenticationProvider implements AuthenticationProvider {
     private static final List<FlashUser> FLASH_USERS = Arrays.asList(
-            FlashUser.FlashUserBuilder.flashUserBuilder().name("admin").password("admin").roles("ROLE_ADMIN", "ROLE_READ").build(),
-            FlashUser.FlashUserBuilder.flashUserBuilder().name("admin2").password("admin").roles("ROLE_ADMIN", "ROLE_READ", "ROLE_WRITE").build(),
-            FlashUser.FlashUserBuilder.flashUserBuilder().name("user").password("user").roles("ROLE_USER").build()
+            FlashUser.builder().name("admin").password("admin").roles(Arrays.asList("ROLE_ADMIN", "ROLE_READ")).build(),
+            FlashUser.builder().name("admin2").password("admin").roles(Arrays.asList("ROLE_ADMIN", "ROLE_READ", "ROLE_WRITE")).build(),
+            FlashUser.builder().name("user").password("user").roles(Collections.singletonList("ROLE_USER")).build()
     );
 
     @Override
@@ -24,7 +25,7 @@ public class Flash29AuthenticationProvider implements AuthenticationProvider {
             throws AuthenticationException {
         final var username = authentication.getName();
         final var password = authentication.getCredentials().toString();
-        final var flashLoginUser = FlashUser.FlashUserBuilder.flashUserBuilder().name(username).password(password).build();
+        final var flashLoginUser = FlashUser.builder().name(username).password(password).build();
         final var userOptional =
                 FLASH_USERS.stream()
                         .filter(flashLoginUser::equals)
