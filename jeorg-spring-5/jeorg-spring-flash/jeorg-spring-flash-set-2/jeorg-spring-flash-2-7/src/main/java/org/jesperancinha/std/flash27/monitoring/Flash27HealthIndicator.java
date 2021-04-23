@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Flash27HealthIndicator implements HealthIndicator {
-    private static String[] LYRICS = new String[]{"Oh, not to touch a hair on your head", "Leave you as you are", "If he felt he had to direct you", "Then direct you into my arms"};
-    private static Status[] STATUSES = new Status[]{Status.DOWN, Status.UNKNOWN, Status.UP, Status.OUT_OF_SERVICE};
+    private static final String[] LYRICS = new String[]{"Oh, not to touch a hair on your head", "Leave you as you are", "If he felt he had to direct you", "Then direct you into my arms"};
+    private static final Status[] STATUSES = new Status[]{Status.DOWN, Status.UNKNOWN, Status.UP, Status.OUT_OF_SERVICE};
 
     @Override
     public Health health() {
