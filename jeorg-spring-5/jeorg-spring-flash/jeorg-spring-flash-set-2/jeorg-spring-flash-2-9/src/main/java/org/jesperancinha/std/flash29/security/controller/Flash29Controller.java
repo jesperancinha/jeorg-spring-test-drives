@@ -93,8 +93,13 @@ public class Flash29Controller {
     void removeJewel(
             @PathVariable
                     Long id) {
-        final JewelDto jewelById = jewelService.getJewelById(id);
-        jewelService.deleteJewel(jewelById);
+        final JewelDto jewelDto = jewelService.getJewelById(id);
+        ConsolerizerComposer.outSpace()
+                .blue("Deleting the following jeeel:")
+                .yellow()
+                .jsonPrettyPrint(jewelDto)
+                .reset();
+        jewelService.deleteJewel(jewelDto);
         RED.printGenericLn("Removed jewel -> %d", id);
     }
 }
