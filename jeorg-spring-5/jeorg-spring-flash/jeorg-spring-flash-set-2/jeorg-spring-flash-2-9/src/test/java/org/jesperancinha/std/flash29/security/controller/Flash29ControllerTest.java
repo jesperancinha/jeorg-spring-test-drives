@@ -12,6 +12,7 @@ import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
@@ -19,14 +20,18 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.List;
 
 import static java.util.Collections.singletonList;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.jesperancinha.std.flash29.security.services.JewelType.EMERALD;
 import static org.jesperancinha.std.flash29.security.services.JewelType.RUBY;
 import static org.mockito.Mockito.only;
 import static org.mockito.Mockito.reset;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -50,7 +55,7 @@ class Flash29ControllerTest {
     private JewelRepository jewelRepository;
 
     @Captor
-    private ArgumentCaptor<Jewel> jewelArgumentCaptor;
+    private ArgumentCaptor<JewelDto> jewelDtoArgumentCaptor;
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -96,6 +101,24 @@ class Flash29ControllerTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
+    void testCreateJewel_whenCreatingOne_thenCreateIt() throws Exception {
+        final var kittenPowersJewel = JewelDto.builder().jewelType(EMERALD).guardian("KittenPowers").build();
+        when(jewelService.createJewel(kittenPowersJewel)).thenReturn(kittenPowersJewel);
+
+        mockMvc.perform(post("/jewels")
+                .content(objectMapper.writeValueAsString(kittenPowersJewel))
+                .header("Content-Type", MediaType.APPLICATION_JSON_VALUE))
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(kittenPowersJewel)));
+
+        verify(jewelService, only()).createJewel(kittenPowersJewel);
+        verifyNoInteractions(jewelRepository);
+
+    }
+
+    @Test
+    @WithMockUser(username = "joao",
+            roles = "ADMIN")
     void testJewel_whenFetchingById_thenReturnMatchingJewel() throws Exception {
         final JewelDto jewelDto = JewelDto.builder().jewelType(EMERALD).guardian("KittenPowers").build();
         when(jewelService.getJewelById(1L)).thenReturn(jewelDto);
@@ -109,6 +132,20 @@ class Flash29ControllerTest {
     }
 
     @Test
-    void removeJewel() {
+    @WithMockUser(username = "joao",
+            roles = "ADMIN")
+    void testRemoveJewel_whenCallToDeleteJewel1_thenRemoveIt() throws Exception {
+        final var jewelDto = JewelDto.builder().jewelType(EMERALD).guardian("KittenPowers").build();
+        when(jewelService.getJewelById(1L)).thenReturn(jewelDto);
+
+        mockMvc.perform(delete("/jewels/1"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(""));
+
+        verify(jewelService, times(1)).getJewelById(1L);
+        verify(jewelService, times(1)).deleteJewel(jewelDtoArgumentCaptor.capture());
+        final var deletedJewel = jewelDtoArgumentCaptor.getValue();
+        assertThat(deletedJewel).isEqualTo(jewelDto);
+        verifyNoInteractions(jewelRepository);
     }
 }
