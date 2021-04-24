@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN" monitorInterval="30">
     <Properties>
-        <Property name="LOG_PATTERN">SpringFlash212Launcher=>Work it, just a little bit =>%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
+        <Property name="LOG_PATTERN">SpringFlash211Launcher=>Work it, just a little bit =>%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
         <Property name="FILE_LOG_DIR">/tmp</Property>
     </Properties>
     <Appenders>
