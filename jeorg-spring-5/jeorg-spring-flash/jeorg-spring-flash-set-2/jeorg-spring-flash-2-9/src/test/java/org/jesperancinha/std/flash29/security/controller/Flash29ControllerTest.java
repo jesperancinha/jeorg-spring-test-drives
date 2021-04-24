@@ -94,7 +94,18 @@ class Flash29ControllerTest {
     }
 
     @Test
-    void jewel() {
+    @WithMockUser(username = "joao",
+            roles = "ADMIN")
+    void testJewel_whenFetchingById_thenReturnMatchingJewel() throws Exception {
+        final JewelDto jewelDto = JewelDto.builder().jewelType(EMERALD).guardian("KittenPowers").build();
+        when(jewelService.getJewelById(1L)).thenReturn(jewelDto);
+
+        mockMvc.perform(get("/jewels/1"))
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(jewelDto)));
+
+        verify(jewelService, only()).getJewelById(1L);
+        verifyNoInteractions(jewelRepository);
     }
 
     @Test
