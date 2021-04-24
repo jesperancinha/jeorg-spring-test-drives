@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash29.security.services;
 
-import org.jesperancinha.std.flash29.security.domain.Jewel;
 import org.jesperancinha.std.flash29.security.dto.JewelDto;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -28,6 +27,7 @@ public interface JewelService {
 
     /**
      * For demonstration purposes, this is our only method that has no protection on a service level.
+     *
      * @return The list of all current Jewels in our system. {@link List}
      */
     List<JewelDto> getAll();

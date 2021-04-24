@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.jesperancinha.std.flash29.security.services.JewelType.DIAMOND;
@@ -20,6 +20,13 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.when;
 
+
+/**
+ * In this case, we also do not use {@link SpringExtension}, because we want security to be activated.
+ * When using Spring Extension, some features of Spring like Spring Security, won't be activated, resulting in this particular case, in a test that seems to work both ways, but it only actually tests the security aspect with {@link SpringBootTest}
+ */
+//@ExtendWith(SpringExtension.class)
+//@ContextConfiguration(classes = JewelServiceImpl.class)
 @SpringBootTest
 class JewelServiceGetAllIT {
 

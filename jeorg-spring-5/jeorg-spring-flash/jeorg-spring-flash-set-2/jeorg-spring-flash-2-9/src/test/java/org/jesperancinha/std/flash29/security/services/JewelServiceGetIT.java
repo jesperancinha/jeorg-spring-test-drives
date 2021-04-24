@@ -4,8 +4,6 @@ import org.jesperancinha.std.flash29.security.domain.Jewel;
 import org.jesperancinha.std.flash29.security.repository.JewelRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -36,9 +34,9 @@ class JewelServiceGetIT {
     public void setUp() {
         reset(jewelRepository);
         when(jewelRepository.save(any())).thenAnswer(invocationOnMock -> invocationOnMock.getArguments()[0]);
-        Optional<Jewel> gregoryJewel = Optional.of(Jewel.builder().jewelType(PEARL).guardian("gregory_kitten").build());
-        Optional<Jewel> megaKitten = Optional.of(Jewel.builder().jewelType(DIAMOND).guardian("MegaKitten").build());
-        Optional<Jewel> joao = Optional.of(Jewel.builder().jewelType(RUBY).guardian("Joao").build());
+        final var gregoryJewel = Optional.of(Jewel.builder().jewelType(PEARL).guardian("gregory_kitten").build());
+        final var megaKitten = Optional.of(Jewel.builder().jewelType(DIAMOND).guardian("MegaKitten").build());
+        final var joao = Optional.of(Jewel.builder().jewelType(RUBY).guardian("Joao").build());
         when(jewelRepository.findById(1L)).thenReturn(gregoryJewel);
         when(jewelRepository.findById(2L)).thenReturn(megaKitten);
         when(jewelRepository.findById(3L)).thenReturn(joao);
@@ -52,7 +50,7 @@ class JewelServiceGetIT {
     @Test
     @WithMockUser(username = "MegaKitten")
     void testGetJewelById_whenGuardianDoesNotMatch_thenFail() {
-        assertThrows(AccessDeniedException. class,() -> jewelService.getJewelById(3L));
+        assertThrows(AccessDeniedException.class, () -> jewelService.getJewelById(3L));
     }
 
     @Test
