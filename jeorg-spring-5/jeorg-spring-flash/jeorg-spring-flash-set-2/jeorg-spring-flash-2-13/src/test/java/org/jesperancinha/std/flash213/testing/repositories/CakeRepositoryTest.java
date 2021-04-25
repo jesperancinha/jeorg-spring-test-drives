@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash213.testing.repositories;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash213.testing.model.Cake;
 import org.junit.Before;
 import org.junit.Test;
@@ -39,10 +40,19 @@ public class CakeRepositoryTest {
 
     @Test
     public void testGetCake_whenGoodId_thenGetCake(){
-        final Optional<Cake> byId = cakeRepository.findById(1L);
+        final Optional<Cake> optionalCake = cakeRepository.findById(1L);
 
-        assertThat(byId.isPresent()).isTrue();
-        final Cake actual = byId.get();
+        assertThat(optionalCake.isPresent()).isTrue();
+
+        ConsolerizerComposer.outSpace()
+                .magenta("We run a %s test", DataJpaTest.class.getCanonicalName())
+                .magenta("This is probably the easiest way to test that our JPA repositories work correctly")
+                .blue("In our case we get:")
+                .jsonPrettyPrint(optionalCake)
+                .green("From the database")
+                .reset();
+
+        final Cake actual = optionalCake.get();
         assertThat(actual.getId()).isEqualTo(1L);
         assertThat(actual.getName()).isEqualTo("Bolo de Chila");
         assertThat(actual.getLocale()).isEqualTo(new Locale("pt-PT", "PTR"));
