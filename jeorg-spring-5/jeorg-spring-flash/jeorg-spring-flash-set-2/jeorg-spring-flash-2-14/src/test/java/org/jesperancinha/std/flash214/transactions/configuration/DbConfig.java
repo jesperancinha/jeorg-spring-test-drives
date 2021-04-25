@@ -1,12 +1,11 @@
 package org.jesperancinha.std.flash214.transactions.configuration;
 
 import de.flapdoodle.embed.process.runtime.Network;
-import org.hibernate.SessionFactory;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import ru.yandex.qatools.embed.postgresql.PostgresExecutable;
 import ru.yandex.qatools.embed.postgresql.PostgresProcess;
 import ru.yandex.qatools.embed.postgresql.PostgresStarter;
@@ -15,12 +14,14 @@ import ru.yandex.qatools.embed.postgresql.config.PostgresConfig;
 import ru.yandex.qatools.embed.postgresql.distribution.Version;
 
 import javax.sql.DataSource;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
 import static java.lang.String.format;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @Configuration
 public class DbConfig {
@@ -64,6 +65,15 @@ public class DbConfig {
     public PostgresProcess postgresProcess(PostgresConfig config) throws IOException {
         PostgresStarter<PostgresExecutable, PostgresProcess> runtime = PostgresStarter.getDefaultInstance();
         PostgresExecutable exec = runtime.prepare(config);
-        return exec.start();
+        try {
+            return exec.start();
+        } catch (final FileNotFoundException fileNotFoundException) {
+            ConsolerizerComposer.outSpace()
+                    .orange("Warning, nos postgres process has started!")
+                    .orange(fileNotFoundException)
+                    .reset();
+            RED.printExpectedException("Postgres not able to start!", fileNotFoundException);
+            throw fileNotFoundException;
+        }
     }
 }
