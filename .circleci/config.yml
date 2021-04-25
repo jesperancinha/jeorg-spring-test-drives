@@ -37,7 +37,7 @@ jobs:
 
       - run:
           name: Build Test and Install
-          command: 'su -c "mkdir -p /home/test/.m2/repository && cd /tmp/repo && mvn clean install" test'
+          command: 'su -c "cd /tmp/repo && mvn clean install" test'
 
       - save_cache:
           paths:
