@@ -40,6 +40,10 @@ jobs:
           command: 'useradd -d /home/test -p $(openssl passwd -crypt test) test'
 
       - run:
+          name: Add user to postgres
+          command: 'usermod -a -G postgres test'
+
+      - run:
           name: Create test folder
           command: 'mkdir -p /home/test'
 
