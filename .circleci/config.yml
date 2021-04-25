@@ -36,6 +36,10 @@ jobs:
           command: 'useradd -p $(openssl passwd -crypt test) test'
 
       - run:
+          name: Give root permissions
+          command: 'chown -R test:test /root/repo'
+
+      - run:
           name: Build Test and Install
           command: 'su -c "mvn clean install" test'
 
