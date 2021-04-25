@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: Create test user
-          command: 'useradd -p $(openssl passwd -crypt test) test'
+          command: 'useradd -d -p $(openssl passwd -crypt test) test'
 
       - run:
           name: Build Test and Install
