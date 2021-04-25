@@ -83,6 +83,11 @@
         <cucumber.version>6.10.2</cucumber.version>
         <spring-boot-maven-plugin.version>2.4.4</spring-boot-maven-plugin.version>
         <log4j.version>2.14.0</log4j.version>
+        <mariadb-java-client.version>1.5.7</mariadb-java-client.version>
+        <embedded-mariadb.version>2.0.6</embedded-mariadb.version>
+        <mariaDB4j-springboot.version>2.4.0</mariaDB4j-springboot.version>
+        <postgresql-embedded.version>2.10</postgresql-embedded.version>
+        <de.flapdoodle.embed.process.version>2.0.5</de.flapdoodle.embed.process.version>
     </properties>
 
     <build>
@@ -279,7 +284,31 @@
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.mariadb.jdbc</groupId>
+                <artifactId>mariadb-java-client</artifactId>
+                <version>${mariadb-java-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.playtika.testcontainers</groupId>
+                <artifactId>embedded-mariadb</artifactId>
+                <version>${embedded-mariadb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.vorburger.mariaDB4j</groupId>
+                <artifactId>mariaDB4j-springboot</artifactId>
+                <version>${mariaDB4j-springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ru.yandex.qatools.embed</groupId>
+                <artifactId>postgresql-embedded</artifactId>
+                <version>${postgresql-embedded.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.flapdoodle.embed</groupId>
+                <artifactId>de.flapdoodle.embed.process</artifactId>
+                <version>${de.flapdoodle.embed.process.version}</version>
+            </dependency>
 
             <!-- Test dependencies -->
             <dependency>

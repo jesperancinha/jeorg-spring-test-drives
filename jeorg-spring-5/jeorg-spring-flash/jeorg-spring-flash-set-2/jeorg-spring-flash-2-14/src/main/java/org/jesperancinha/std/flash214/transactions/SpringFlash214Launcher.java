@@ -1,8 +1,10 @@
 package org.jesperancinha.std.flash214.transactions;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
@@ -22,8 +24,16 @@ public class SpringFlash214Launcher implements CommandLineRunner {
     public void run(String... args) throws Exception {
 //        jdbcTemplate.execute("SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION LEVEL READ UNCOMMITTED");
 //        jdbcTemplate.execute("SET LOCK_MODE 0");
-        jdbcTemplate.execute("SET GLOBAL TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;");
-        jdbcTemplate.execute("SET SESSION tx_isolation='READ-UNCOMMITTED';");
-        jdbcTemplate.execute("DELETE FROM CAR;");
+        try {
+            jdbcTemplate.execute("SET GLOBAL TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;");
+            jdbcTemplate.execute("SET SESSION tx_isolation='READ-UNCOMMITTED';");
+            jdbcTemplate.execute("DELETE FROM CAR;");
+        } catch (final BadSqlGrammarException badSqlGrammarException) {
+            ConsolerizerComposer.outSpace()
+                    .orange("Unfortunately I was not able to set the global transaction isolation level")
+                    .orange("I am prepared to handle MariaDB requests, so please check if that is the case")
+                    .orange(badSqlGrammarException)
+                    .reset();
+        }
     }
 }
