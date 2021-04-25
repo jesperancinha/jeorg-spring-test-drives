@@ -32,6 +32,10 @@ jobs:
             - v1-dependencies-
 
       - run:
+          name: Install Locales
+          command: 'apt-get install -y locales'
+
+      - run:
           name: Create test user
           command: 'useradd -d /home/test -p $(openssl passwd -crypt test) test'
 
