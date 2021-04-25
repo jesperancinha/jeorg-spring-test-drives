@@ -25,15 +25,15 @@ jobs:
 
       # Download and cache dependencies
 
-      - run:
-          name: Setup test user
-          command: 'useradd -p $(openssl passwd -crypt test) test'
-
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
+
+      - run:
+          name: Create test user
+          command: 'useradd -p $(openssl passwd -crypt test) test'
 
       - run:
           name: Build Test and Install
@@ -47,3 +47,4 @@ jobs:
       # run tests!
       - run:
           name: Integration tests
+          command: 'su -c "mvn integration-test" test'
