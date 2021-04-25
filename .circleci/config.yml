@@ -37,7 +37,7 @@ jobs:
 
       - run:
           name: Give root permissions
-          command: 'chown -R test:test /root/repo'
+          command: 'chown -R test:test /root/repo && chmod a+rx /root/repo'
 
       - run:
           name: Build Test and Install
