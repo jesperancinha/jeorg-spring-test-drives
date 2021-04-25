@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: Build Test and Install
-          command: 'su -c "mvn clean install" test'
+          command: 'su -c "cd /root/repo && mvn clean install" test'
 
       - save_cache:
           paths:
@@ -51,4 +51,4 @@ jobs:
       # run tests!
       - run:
           name: Integration tests
-          command: 'su -c "mvn integration-test" test'
+          command: 'su -c "cd /root/repo && mvn integration-test" test'
