@@ -16,7 +16,7 @@ import ru.yandex.qatools.embed.postgresql.distribution.Version;
 import javax.sql.DataSource;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 
@@ -26,8 +26,8 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RE
 @Configuration
 public class DbConfig {
 
-    private static final List<String> DEFAULT_ADDITIONAL_INIT_DB_PARAMS = Arrays
-            .asList("--nosync", "--locale=en_US.UTF-8");
+    private static final List<String> DEFAULT_ADDITIONAL_INIT_DB_PARAMS =
+            Collections.singletonList("--nosync");
 
     @Bean
     public PostgresConfig postgresConfig() throws IOException {
@@ -38,6 +38,7 @@ public class DbConfig {
                 new AbstractPostgresConfig.Credentials("sa", "sa")
         );
         postgresConfig.getAdditionalInitDbParams().addAll(DEFAULT_ADDITIONAL_INIT_DB_PARAMS);
+
         return postgresConfig;
     }
 
