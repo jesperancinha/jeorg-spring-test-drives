@@ -30,10 +30,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: apt-get install -y sudo
       - run:
           name: Build Test and Install
-          command: 'sudo mvn clean install'
+          command: 'mvn clean install'
 
       - save_cache:
           paths:
@@ -43,4 +42,4 @@ jobs:
       # run tests!
       - run:
           name: Integration tests
-          command: 'sudo mvn integration-test'
+          command: 'mvn integration-test'
