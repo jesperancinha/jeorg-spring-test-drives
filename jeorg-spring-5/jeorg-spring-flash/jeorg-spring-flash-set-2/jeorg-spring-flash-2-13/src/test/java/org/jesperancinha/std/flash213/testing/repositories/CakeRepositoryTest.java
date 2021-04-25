@@ -49,6 +49,7 @@ public class CakeRepositoryTest {
                 .magenta("This is probably the easiest way to test that our JPA repositories work correctly")
                 .blue("In our case we get:")
                 .jsonPrettyPrint(optionalCake)
+                .jsonPrettyPrint(optionalCake.get())
                 .green("From the database")
                 .reset();
 
