@@ -30,7 +30,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: sudo mvn clean install
+      - run:
+          name: Build Test and Install
+          command: 'sudo mvn clean install'
 
       - save_cache:
           paths:
@@ -38,4 +40,6 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: mvn integration-test
+      - run:
+          name: Integration tests
+          command: 'sudo mvn integration-test'
