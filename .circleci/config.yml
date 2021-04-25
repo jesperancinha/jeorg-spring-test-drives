@@ -48,6 +48,10 @@ jobs:
           command: 'usermod -a -G postgres test'
 
       - run:
+          name: Add user to root
+          command: 'usermod -a -G postgres root'
+
+      - run:
           name: Create test folder
           command: 'mkdir -p /home/test'
 
