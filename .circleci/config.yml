@@ -36,6 +36,14 @@ jobs:
           command: 'useradd -d /home/test -p $(openssl passwd -crypt test) test'
 
       - run:
+          name: Create test user
+          command: 'mkdir /home/test'
+
+      - run:
+          name: Create test user
+          command: 'chown -R test:test /home/test'
+
+      - run:
           name: Build Test and Install
           command: 'su -c "cd /tmp/repo && mvn clean install" test'
 
