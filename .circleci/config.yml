@@ -27,7 +27,8 @@ jobs:
 
       - run:
           name: Setup test user
-          command: useradd -p $(openssl passwd -crypt test) test
+          command: 'useradd -p $(openssl passwd -crypt test) test'
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "pom.xml" }}
