@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: Build Test and Install
-          command: 'su mvn clean install'
+          command: 'su &&  mvn clean install'
 
       - save_cache:
           paths:
@@ -43,4 +43,4 @@ jobs:
       # run tests!
       - run:
           name: Integration tests
-          command: 'su mvn integration-test'
+          command: 'su && mvn integration-test'
