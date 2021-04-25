@@ -37,7 +37,7 @@ jobs:
 
       - run:
           name: Create test user
-          command: 'mkdir /home/test'
+          command: 'mkdir -p /home/test'
 
       - run:
           name: Create test user
