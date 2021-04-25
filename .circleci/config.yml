@@ -36,6 +36,10 @@ jobs:
           command: 'apt-get install -y locales'
 
       - run:
+          name: Create Group
+          command: 'groupadd postgres'
+
+      - run:
           name: Create test user
           command: 'useradd -d /home/test -p $(openssl passwd -crypt test) test'
 
