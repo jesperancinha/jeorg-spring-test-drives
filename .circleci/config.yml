@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: Build Test and Install
-          command: 'su -c "mvn clean install"'
+          command: 'su -c "mvn clean install" nginx'
 
       - save_cache:
           paths:
@@ -43,4 +43,4 @@ jobs:
       # run tests!
       - run:
           name: Integration tests
-          command: 'su -c "mvn integration-test"'
+          command: 'su -c "mvn integration-test" nginx'
