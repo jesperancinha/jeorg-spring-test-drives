@@ -68,6 +68,7 @@ public class CarReadUncommittedDAO implements CarDAO {
     @Override
     public boolean deleteCarById(Long id) {
         carRepository.deleteById(id);
+        ConsolerizerComposer.outSpace().red("Deleted car with id %d", id).reset();
         return true;
     }
 }

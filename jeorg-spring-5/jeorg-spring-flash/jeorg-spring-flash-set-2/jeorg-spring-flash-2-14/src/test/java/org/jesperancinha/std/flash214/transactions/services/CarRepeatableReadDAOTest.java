@@ -14,6 +14,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 
 @SpringBootTest
@@ -26,7 +27,11 @@ class CarRepeatableReadDAOTest {
     @Autowired
     private CarRepeatableReadDAO carRepeatableReadDAO;
 
-
+    /**
+     * A running example for the repeatable read isolation level
+     *
+     * @throws InterruptedException An error
+     */
     @Test
     void testRepeatableRead_whenRunning_thenExemplifyRepeatableRead() throws InterruptedException {
         ConsolerizerComposer.outSpace()
@@ -36,17 +41,23 @@ class CarRepeatableReadDAOTest {
                 .magenta("A Repeatable read means that the reader transaction will always read at least the same.")
                 .magenta("The small nuance comes from the fact that removals will not be detected. Additions, however will.")
                 .magenta("In this repeatable read example, we will see how we can read the progress of one transaction from another repeatable transaction.")
-                .magenta("We won't, in any case, see the removals.")
+                .magenta("We won't, in any case, see the removals, nor we will see the aditions. This is after all, an embedded database system")
                 .reset();
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         executorService.submit(() -> {
             final var car = carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
+            final var car2 = carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                RED.printThrowableAndExit(e);
+            }
             carRepeatableReadDAO.deleteCarById(car.getId());
         });
         executorService.submit(() -> {
-            ConsolerizerComposer.outSpace().yellow("First repeatable read transaction");
+            ConsolerizerComposer.outSpace().yellow("First repeatable read transaction. Phantom reads would occur here in a supportive real database");
             carRepeatableReadDAO.getAllCars();
-            ConsolerizerComposer.outSpace().yellow("Second repeatable read transaction");
+            ConsolerizerComposer.outSpace().yellow("Second repeatable read transaction. Phantom reads would occur here in a supportive real database");
             carRepeatableReadDAO.getAllCars();
         });
         executorService.shutdown();

@@ -26,13 +26,18 @@ class CarReadCommittedDAOTest {
     @Autowired
     private CarReadCommittedDAO carReadCommittedDAO;
 
+    /**
+     * A running example for the read committed isolation level
+     *
+     * @throws InterruptedException An error
+     */
     @Test
     void testReadCommitted_whenRunning_thenExemplifyReadCommitted() throws InterruptedException {
         ConsolerizerComposer.outSpace()
                 .cyan(title("Read Committed"))
                 .magenta("In this example, we are writing data in one transaction.")
                 .magenta("At the same time, another transaction is starting.")
-                .magenta("Read committed transactions only allow reading after on transaction is done.")
+                .magenta("Read committed transactions only allow reading after a transaction is done.")
                 .magenta("This means we can accompany another transactions progress only after a commit has been made")
                 .magenta("In this read committed example, we see that we can read the progress of one transaction from another read committed transaction.")
                 .magenta("This can still result in phantom reads, given that the data can change, while the read transaction is ongoing.")

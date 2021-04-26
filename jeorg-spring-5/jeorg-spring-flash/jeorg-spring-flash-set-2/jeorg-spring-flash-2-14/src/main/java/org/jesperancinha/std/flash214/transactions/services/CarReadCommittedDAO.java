@@ -73,6 +73,7 @@ public class CarReadCommittedDAO implements CarDAO {
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
+        ConsolerizerComposer.outSpace().red("Deleted car with id %d", id).reset();
         return true;
     }
 }

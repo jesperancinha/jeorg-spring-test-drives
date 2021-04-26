@@ -50,7 +50,11 @@ public class CarRepeatableReadDAO implements CarDAO {
     public List<Car> getAllCars() {
         for (int i = 0; i < 10; i++) {
             final List<Car> allCars1 = carRepository.findAll();
-            ConsolerizerComposer.outSpace().green("There are still %d cars available!", allCars1.size());
+            ConsolerizerComposer.outSpace()
+                    .green("There are still %d cars available!", allCars1.size());
+            ConsolerizerComposer.outSpace()
+                    .green(carRepository.findById(1L).orElse(null))
+                    .green(carRepository.findById(2L).orElse(null));
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
@@ -68,6 +72,7 @@ public class CarRepeatableReadDAO implements CarDAO {
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
+        ConsolerizerComposer.outSpace().red("Deleted car with id %d", id).reset();
         return true;
     }
 }

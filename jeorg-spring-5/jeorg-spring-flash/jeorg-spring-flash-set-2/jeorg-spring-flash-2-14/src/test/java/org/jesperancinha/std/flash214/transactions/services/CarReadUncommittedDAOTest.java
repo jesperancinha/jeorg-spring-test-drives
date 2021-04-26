@@ -26,7 +26,11 @@ class CarReadUncommittedDAOTest {
     @Autowired
     private CarReadUncommittedDAO carReadUncommittedDAO;
 
-
+    /**
+     * A running example for the read uncommmitted isolation level
+     *
+     * @throws InterruptedException An error
+     */
     @Test
     void testReadUncommitted_whenRunning_thenExemplifyReadUncommitted() throws InterruptedException {
         ConsolerizerComposer.outSpace()
