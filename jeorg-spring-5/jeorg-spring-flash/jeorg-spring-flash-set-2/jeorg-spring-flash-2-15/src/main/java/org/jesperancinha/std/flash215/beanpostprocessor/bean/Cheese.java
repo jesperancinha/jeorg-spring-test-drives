@@ -1,53 +1,32 @@
 package org.jesperancinha.std.flash215.beanpostprocessor.bean;
 
-import java.util.ArrayList;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.Value;
+
 import java.util.List;
 
+@Value
+@Builder
+@AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Cheese {
-    private String name;
 
-    private String url;
+    @JsonProperty("name")
+    String name;
 
-    private final List<String> checks = new ArrayList<>();
+    @JsonProperty("url")
+    String url;
 
-    public Cheese(){
-        //CDI
-    }
-    public Cheese(String name) {
-        this.name = name;
-    }
+    @JsonProperty(value = "checks")
+    List<String> checks;
 
-    public Cheese(String name, String url) {
-        this.name = name;
-        this.url = url;
+    public Cheese() {
+        name = null;
+        url = null;
+        checks = null;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public List<String> getChecks() {
-        return checks;
-    }
-
-    @Override
-    public String toString() {
-        return "Cheese{" +
-                "name='" + name + '\'' +
-                ", url='" + url + '\'' +
-                ", checks=" + checks +
-                '}';
-    }
 }
