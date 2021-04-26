@@ -56,20 +56,4 @@ class CarReadCommittedDAOTest {
         final boolean termination = executorService.awaitTermination(50, TimeUnit.SECONDS);
         assertThat(termination).isTrue();
     }
-
-    @Test
-    void createCar() {
-    }
-
-    @Test
-    void getCarById() {
-    }
-
-    @Test
-    void getAllCars() {
-    }
-
-    @Test
-    void deleteCarById() {
-    }
 }
