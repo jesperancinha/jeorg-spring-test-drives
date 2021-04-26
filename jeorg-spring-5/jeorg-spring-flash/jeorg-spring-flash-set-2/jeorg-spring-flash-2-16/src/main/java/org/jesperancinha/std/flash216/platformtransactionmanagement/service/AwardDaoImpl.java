@@ -21,11 +21,18 @@ public class AwardDaoImpl implements AwardDao {
     private final JdbcTemplate jdbcTemplate;
     private final PlatformTransactionManager transactionManager;
 
-    public AwardDaoImpl(DataSource dataSource, PlatformTransactionManager transactionManager) {
+    /**
+     * @param dataSource {@link DataSource} The currently configured datasource
+     * @param transactionManager {@link PlatformTransactionManager} The currently configured platform transaction manager
+     */
+    public AwardDaoImpl(final DataSource dataSource, final PlatformTransactionManager transactionManager) {
         this.transactionManager = transactionManager;
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
+    /**
+     * Creates the tables needed for this module
+     */
     @Override
     public void createTables() {
         jdbcTemplate.execute("CREATE TABLE AWARDS(\n" +
@@ -37,11 +44,24 @@ public class AwardDaoImpl implements AwardDao {
                 ");");
     }
 
+    /**
+     * Removes all data from the table {@link Award}, to allow a fresh start for the following test
+     */
     @Override
     public void resetDatabase() {
         jdbcTemplate.execute("delete from awards;");
     }
 
+
+    /**
+     * Creates an artist/award record in a typical fashion.
+     * The {@link PlatformTransactionManager} allows for commits and rollbacks when needed.
+     *
+     * @param artist        The artist name
+     * @param award         The award name
+     * @param awardDateTime The date and time when it was awarded
+     * @return The resulting {@link Award}
+     */
     @Override
     public Award create(String artist, String award, LocalDateTime awardDateTime) {
         final var defaultTransactionDefinition = new DefaultTransactionDefinition();
@@ -59,6 +79,14 @@ public class AwardDaoImpl implements AwardDao {
         return getAward();
     }
 
+    /**
+     * Tries to create an artist/name registration but it will purpously fail in order to demonstrat the rollback mechanism
+     *
+     * @param artist        The artist name
+     * @param award         The award name
+     * @param awardDateTime The date and time when it was awarded
+     * @return null
+     */
     @Override
     public Award createRollback(String artist, String award, LocalDateTime awardDateTime) {
         final var defaultTransactionDefinition = new DefaultTransactionDefinition();
@@ -76,6 +104,17 @@ public class AwardDaoImpl implements AwardDao {
         return getAward();
     }
 
+    /**
+     * Creates an artist/award record in a failed fashion
+     * The rollback will be purpously performed after the commit as been issued.
+     * After the commit, it is evidently not possible to rollback.
+     * The exception is cached and this returns the artist anyways.
+     *
+     * @param artist        The artist name
+     * @param award         The award name
+     * @param awardDateTime The date and time when it was awarded
+     * @return The resulting {@link Award}
+     */
     @Override
     public Award createFailRollback(String artist, String award, LocalDateTime awardDateTime) {
         final var defaultTransactionDefinition = new DefaultTransactionDefinition();
@@ -94,6 +133,14 @@ public class AwardDaoImpl implements AwardDao {
         return getAward();
     }
 
+    /**
+     * No transaction is required. However we will rely on the autocommit system of the {@link PlatformTransactionManager}.
+     *
+     * @param artist        The artist name
+     * @param award         The award name
+     * @param awardDateTime The date and time when it was awarded
+     * @return The resulting {@link Award}
+     */
     @Override
     public Award createNoTransaction(String artist, String award, LocalDateTime awardDateTime) {
         final int update = jdbcTemplate.update("insert into AWARDS (ARTIST, AWARD, AWARD_DATE) values (?, ?, ?)", artist, award, awardDateTime);
@@ -103,6 +150,11 @@ public class AwardDaoImpl implements AwardDao {
         return getAward();
     }
 
+    /**
+     * Returns the current list of awards in the database
+     *
+     * @return {@link List<Award>} List of awards in the database
+     */
     @Override
     public List<Award> listAwards() {
         return jdbcTemplate.query("select * from awards",
@@ -114,6 +166,11 @@ public class AwardDaoImpl implements AwardDao {
                         .build());
     }
 
+    /**
+     * Gets the first found award record on the table.
+     *
+     * @return The resulting {@link Award}. In case of an empty result, it returns null.
+     */
     @Nullable
     private Award getAward() {
         final var query = jdbcTemplate.query("select * from AWARDS", (rs, i) -> Award
