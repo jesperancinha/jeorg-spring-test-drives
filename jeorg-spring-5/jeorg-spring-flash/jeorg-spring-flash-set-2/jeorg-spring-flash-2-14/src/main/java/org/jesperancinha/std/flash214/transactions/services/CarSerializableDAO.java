@@ -1,6 +1,7 @@
-package org.jesperancinha.std.flash214.transactions.sevices;
+package org.jesperancinha.std.flash214.transactions.services;
 
 import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.jesperancinha.std.flash214.transactions.model.Car;
 import org.jesperancinha.std.flash214.transactions.repository.CarRepository;
 import org.springframework.stereotype.Service;
@@ -15,17 +16,14 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RE
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Service
-public class CarReadCommittedDAO implements CarDAO {
+public class CarSerializableDAO implements CarDAO {
 
     private final CarRepository carRepository;
 
-    public CarReadCommittedDAO(CarRepository carRepository) {
+    public CarSerializableDAO(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
 
-    @Transactional(propagation = Propagation.REQUIRED,
-            isolation = Isolation.READ_COMMITTED,
-            rollbackFor = RuntimeException.class)
     @Override
     public Car createCar(Car car) {
         final Car save = this.carRepository.save(car);
@@ -39,7 +37,7 @@ public class CarReadCommittedDAO implements CarDAO {
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW,
-            isolation = Isolation.READ_COMMITTED)
+            isolation = Isolation.SERIALIZABLE)
     @Override
     public Car getCarById(Long id) {
         final Car car = carRepository.findById(id).orElse(null);
@@ -49,8 +47,13 @@ public class CarReadCommittedDAO implements CarDAO {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRES_NEW,
-            isolation = Isolation.READ_COMMITTED)
+            isolation = Isolation.SERIALIZABLE)
     public List<Car> getAllCars() {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            RED.printThrowableAndExit(e);
+        }
         for (int i = 0; i < 20; i++) {
             final List<Car> allCars1 = carRepository.findAll();
             try {
@@ -60,6 +63,7 @@ public class CarReadCommittedDAO implements CarDAO {
             }
             Consolerizer.printRandomColorGeneric("There are still %d cars available!", allCars1.size());
         }
+        ConsolerizerGraphs.printRainbowFlag("Finished 20 read tries!");
         return carRepository.findAll();
     }
 

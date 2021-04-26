@@ -1,0 +1,67 @@
+package org.jesperancinha.std.flash214.transactions.services;
+
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.jesperancinha.std.flash214.transactions.model.Car;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
+
+@SpringBootTest
+@ActiveProfiles("emb")
+@ComponentScan({"org.jesperancinha.std.flash214.transactions", "org.jesperancinha.std.flash214.transactions.services"})
+@Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD,
+        scripts = "classpath:schema.sql")
+class CarReadCommittedDAOTest {
+
+    @Autowired
+    private CarReadCommittedDAO carReadCommittedDAO;
+
+    @Test
+    void testReadCommitted_whenRunning_thenExemplifyReadCommitted() throws InterruptedException {
+        ConsolerizerComposer.outSpace()
+                .cyan(title("Read Committed"))
+                .magenta("In this example, we are writing data in one transaction.")
+                .magenta("At the same time, another transaction is starting.")
+                .magenta("Read committed transactions only allow reading after on transaction is done.")
+                .magenta("This means we can accompany another transactions progress only after a commit has been made")
+                .magenta("In this read committed example, we see that we can read the progress of one transaction from another read committed transaction.")
+                .magenta("This can still result in phantom reads, given that the data can change, while the read transaction is ongoing.")
+                .reset();
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        executorService.submit(() -> {
+            carReadCommittedDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
+        });
+        executorService.submit(() -> {
+            carReadCommittedDAO.getAllCars();
+        });
+        executorService.shutdown();
+        final boolean termination = executorService.awaitTermination(50, TimeUnit.SECONDS);
+        assertThat(termination).isTrue();
+    }
+
+    @Test
+    void createCar() {
+    }
+
+    @Test
+    void getCarById() {
+    }
+
+    @Test
+    void getAllCars() {
+    }
+
+    @Test
+    void deleteCarById() {
+    }
+}

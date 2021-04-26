@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
+
 @SpringBootApplication
 public class SpringFlash214Launcher implements CommandLineRunner {
 
@@ -35,5 +37,15 @@ public class SpringFlash214Launcher implements CommandLineRunner {
                     .orange(badSqlGrammarException)
                     .reset();
         }
+        ConsolerizerComposer.outSpace()
+                .blue(title("Welcome to the this car app"))
+                .magenta("The goal of this application is to investigate all transaction levels provided by Spring")
+                .magenta("These are general concepts implemented with the Spring flavour to them")
+                .magenta("For identification purposes, we are going to use a color code as follows:")
+                .green("1. Green - These are all read operations")
+                .orange("2. Orange - These are all the change operations")
+                .cyan("3. Cyan - These are all the create operations")
+                .red("4. Red - These are all the remove operations")
+                .reset();
     }
 }

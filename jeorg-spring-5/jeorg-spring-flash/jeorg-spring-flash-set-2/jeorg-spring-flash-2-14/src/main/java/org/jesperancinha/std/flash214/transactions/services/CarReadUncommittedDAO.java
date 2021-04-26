@@ -1,5 +1,6 @@
-package org.jesperancinha.std.flash214.transactions.sevices;
+package org.jesperancinha.std.flash214.transactions.services;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash214.transactions.model.Car;
 import org.jesperancinha.std.flash214.transactions.repository.CarRepository;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,8 @@ public class CarReadUncommittedDAO implements CarDAO {
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRES_NEW,
+            isolation = Isolation.READ_UNCOMMITTED)
     public Car createCar(Car car) {
         final Car save = this.carRepository.save(car);
         try {
@@ -30,9 +33,9 @@ public class CarReadUncommittedDAO implements CarDAO {
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
-        GREEN.printGenericLn("Saving car %s", save);
+        ConsolerizerComposer.outSpace().green("Saving car %s", save).reset();
         try {
-            Thread.sleep(4000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
@@ -49,6 +52,8 @@ public class CarReadUncommittedDAO implements CarDAO {
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRES_NEW,
+            isolation = Isolation.READ_UNCOMMITTED)
     public List<Car> getAllCars() {
         try {
             Thread.sleep(1000);
@@ -56,12 +61,12 @@ public class CarReadUncommittedDAO implements CarDAO {
             RED.printThrowableAndExit(e);
         }
         final List<Car> all = carRepository.findAll();
-        YELLOW.printGenericLn("These are all cars -> %s", all);
+        GREEN.printGenericLn("These are all cars -> %s", all);
         return all;
     }
 
     @Override
-    public boolean deleteCarById(Long id){
+    public boolean deleteCarById(Long id) {
         carRepository.deleteById(id);
         return true;
     }

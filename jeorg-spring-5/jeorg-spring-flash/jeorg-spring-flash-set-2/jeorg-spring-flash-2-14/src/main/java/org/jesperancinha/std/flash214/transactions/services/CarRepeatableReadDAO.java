@@ -1,4 +1,4 @@
-package org.jesperancinha.std.flash214.transactions.sevices;
+package org.jesperancinha.std.flash214.transactions.services;
 
 import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.std.flash214.transactions.model.Car;
