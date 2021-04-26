@@ -1,16 +1,13 @@
 package org.jesperancinha.std.flash216.platformtransactionmanagement;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash216.platformtransactionmanagement.domain.Award;
 import org.jesperancinha.std.flash216.platformtransactionmanagement.service.AwardDao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.LocalDateTime;
-
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 @SpringBootApplication
 public class SpringFlash216Launcher implements CommandLineRunner {
@@ -26,10 +23,28 @@ public class SpringFlash216Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         awardDao.createTables();
-        final Award award = awardDao.create("Mylène Farmer", "World's Best Selling French Artist", LocalDateTime.of(1993, 5, 31, 12, 0, 0));
-        GREEN.printGenericLn(award);
-        BLUE.printGenericLn(awardDao.listAwards());
+        final Award award1 = awardDao.create("Mylène Farmer", "World's Best Selling French Artist", LocalDateTime.of(1993, 5, 31, 12, 0, 0));
+        awardDao.resetDatabase();
+        final Award award2 = awardDao.createRollback("Mylène Farmer", "World's Best Selling French Artist", LocalDateTime.of(1993, 5, 31, 12, 0, 0));
+        awardDao.resetDatabase();
+        final Award award3 = awardDao.createFailRollback("Mylène Farmer", "World's Best Selling French Artist", LocalDateTime.of(1993, 5, 31, 12, 0, 0));
+        awardDao.resetDatabase();
+        final Award award4 = awardDao.createNoTransaction("Mylène Farmer", "World's Best Selling French Artist", LocalDateTime.of(1993, 5, 31, 12, 0, 0));
+        ConsolerizerComposer.outSpace()
+                .green("Awards")
+                .green("AW1 - Normal")
+                .red().jsonPrettyPrint(award1)
+                .green("AW2 - Rollback")
+                .red().jsonPrettyPrint(award2)
+                .green("AW3 - Rollback Fail")
+                .red().jsonPrettyPrint(award3)
+                .green("AW4 - No Commit / No Rollback")
+                .red().jsonPrettyPrint(award4)
+                .green("AWN - Final List!")
+                .jsonPrettyPrint(awardDao.listAwards())
+                .reset();
+
     }
 }
