@@ -16,8 +16,8 @@ public class CheeseProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof Cheese) {
-            GREEN.printGeneric("This bean is named %s and its contents are %s. We have finished initialization", beanName, bean);
             ((Cheese) bean).getChecks().add("Finished Initialization-" + LocalDateTime.now().toString());
+            GREEN.printGeneric("This bean is named %s and its contents are %s. We have finished initialization", beanName, bean);
         } else {
             ConsolerizerComposer.outSpace().white(beanName);
         }
