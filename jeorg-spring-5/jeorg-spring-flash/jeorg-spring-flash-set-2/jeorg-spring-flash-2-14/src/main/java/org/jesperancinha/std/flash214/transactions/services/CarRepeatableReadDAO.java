@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash214.transactions.services;
 
-import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash214.transactions.model.Car;
 import org.jesperancinha.std.flash214.transactions.repository.CarRepository;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RE
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Service
-public class CarRepeatableReadDAO implements CarDAO{
+public class CarRepeatableReadDAO implements CarDAO {
 
     private final CarRepository carRepository;
 
@@ -28,7 +28,7 @@ public class CarRepeatableReadDAO implements CarDAO{
         final Car save = this.carRepository.save(car);
         GREEN.printGenericLn("Saving car %s", save);
         try {
-            Thread.sleep(500);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
@@ -48,19 +48,14 @@ public class CarRepeatableReadDAO implements CarDAO{
     @Transactional(propagation = Propagation.REQUIRES_NEW,
             isolation = Isolation.REPEATABLE_READ)
     public List<Car> getAllCars() {
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            RED.printThrowableAndExit(e);
-        }
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             final List<Car> allCars1 = carRepository.findAll();
+            ConsolerizerComposer.outSpace().green("There are still %d cars available!", allCars1.size());
             try {
-                Thread.sleep(500);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 RED.printThrowableAndExit(e);
             }
-            Consolerizer.printRandomColorGeneric("There are still %d cars available!", allCars1.size());
         }
         return carRepository.findAll();
     }
