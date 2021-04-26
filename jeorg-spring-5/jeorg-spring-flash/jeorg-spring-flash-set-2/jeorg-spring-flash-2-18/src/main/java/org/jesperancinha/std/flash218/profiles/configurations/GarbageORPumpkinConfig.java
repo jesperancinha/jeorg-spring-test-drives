@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @Profile("garbage | pumpkin")
-public class GarbageAndPumpkinConfig {
-    public GarbageAndPumpkinConfig(){
+public class GarbageORPumpkinConfig {
+    public GarbageORPumpkinConfig(){
         new GarbageConfig();
         new PumpkinsConfig();
     }
