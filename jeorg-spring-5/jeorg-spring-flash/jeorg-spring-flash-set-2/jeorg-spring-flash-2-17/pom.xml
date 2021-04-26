@@ -11,11 +11,6 @@
 
     <artifactId>jeorg-spring-flash-2-17</artifactId>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.jesperancinha.console</groupId>
@@ -98,29 +93,25 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.atomikos/transactions-jta -->
         <dependency>
             <groupId>com.atomikos</groupId>
             <artifactId>transactions-jta</artifactId>
-            <version>5.0.8</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.atomikos/transactions-jdbc -->
         <dependency>
             <groupId>com.atomikos</groupId>
             <artifactId>transactions-jdbc</artifactId>
-            <version>5.0.8</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.atomikos/transactions-jms -->
         <dependency>
             <groupId>com.atomikos</groupId>
             <artifactId>transactions-jms</artifactId>
-            <version>5.0.8</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.atomikos/transactions-hibernate3 -->
         <dependency>
             <groupId>com.atomikos</groupId>
             <artifactId>transactions-hibernate3</artifactId>
-            <version>5.0.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
         <dependency>
@@ -141,6 +132,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -157,15 +149,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>${maven-compiler-plugin.source}</source>
-                    <target>${maven-compiler-plugin.target}</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>

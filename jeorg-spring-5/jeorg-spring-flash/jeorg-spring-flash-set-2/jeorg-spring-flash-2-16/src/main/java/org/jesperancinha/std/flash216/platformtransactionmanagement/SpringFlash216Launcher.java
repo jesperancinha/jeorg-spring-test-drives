@@ -45,6 +45,5 @@ public class SpringFlash216Launcher implements CommandLineRunner {
                 .green("AWN - Final List!")
                 .jsonPrettyPrint(awardDao.listAwards())
                 .reset();
-
     }
 }

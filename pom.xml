@@ -88,6 +88,7 @@
         <mariaDB4j-springboot.version>2.4.0</mariaDB4j-springboot.version>
         <postgresql-embedded.version>2.10</postgresql-embedded.version>
         <de.flapdoodle.embed.process.version>2.0.5</de.flapdoodle.embed.process.version>
+        <atomikos.transactions.version>5.0.8</atomikos.transactions.version>
     </properties>
 
     <build>
@@ -308,6 +309,26 @@
                 <groupId>de.flapdoodle.embed</groupId>
                 <artifactId>de.flapdoodle.embed.process</artifactId>
                 <version>${de.flapdoodle.embed.process.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>transactions-jta</artifactId>
+                <version>${atomikos.transactions.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>transactions-jdbc</artifactId>
+                <version>${atomikos.transactions.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>transactions-jms</artifactId>
+                <version>${atomikos.transactions.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.atomikos</groupId>
+                <artifactId>transactions-hibernate3</artifactId>
+                <version>${atomikos.transactions.version}</version>
             </dependency>
 
             <!-- Test dependencies -->

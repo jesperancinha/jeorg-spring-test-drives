@@ -11,6 +11,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import javax.sql.DataSource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -158,12 +160,7 @@ public class AwardDaoImpl implements AwardDao {
     @Override
     public List<Award> listAwards() {
         return jdbcTemplate.query("select * from awards",
-                (rs, rowNum) -> Award
-                        .builder()
-                        .artist(rs.getString("ARTIST"))
-                        .award(rs.getString("AWARD"))
-                        .awardDate(rs.getTimestamp("AWARD_DATE").toLocalDateTime())
-                        .build());
+                (rs, rowNum) -> createMarble(rs));
     }
 
     /**
@@ -173,15 +170,20 @@ public class AwardDaoImpl implements AwardDao {
      */
     @Nullable
     private Award getAward() {
-        final var query = jdbcTemplate.query("select * from AWARDS", (rs, i) -> Award
-                .builder()
-                .artist(rs.getString("ARTIST"))
-                .award(rs.getString("AWARD"))
-                .awardDate(rs.getTimestamp("AWARD_DATE").toLocalDateTime())
-                .build());
+        final var query = jdbcTemplate.query("select * from AWARDS",
+                (rs, i) -> createMarble(rs));
         if (query.size() == 0) {
             return null;
         }
         return query.get(0);
+    }
+
+    private Award createMarble(ResultSet rs) throws SQLException {
+        return Award
+                .builder()
+                .artist(rs.getString("ARTIST"))
+                .award(rs.getString("AWARD"))
+                .awardDate(rs.getTimestamp("AWARD_DATE").toLocalDateTime())
+                .build();
     }
 }
