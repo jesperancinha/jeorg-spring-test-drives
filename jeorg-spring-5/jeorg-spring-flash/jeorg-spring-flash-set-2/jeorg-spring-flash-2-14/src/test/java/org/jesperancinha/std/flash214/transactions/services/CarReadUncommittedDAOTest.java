@@ -43,8 +43,8 @@ class CarReadUncommittedDAOTest {
                 .magenta("Our embedded database, and many database systems do not support read uncommitted.")
                 .magenta("This is the reason why this example works in the same way as the read committed one.")
                 .magenta("In a read uncommitted example, we would see that we would be able to read the progress of one transaction from another read uncommitted transaction.")
-                .magenta("In this example, we never see a single car, because a rollback occurs evrytime before the transaction completes.")
-                .magenta("In a real case, we would see the new cars being added before a commit or rollback.")
+                .magenta("In this example, we never see a single car, because a rollback occurs everytime before the transaction completes.")
+                .magenta("In a real case, we would see the new cars being added before a commit or a rollback.")
                 .reset();
         final var executorService = Executors.newFixedThreadPool(2);
         executorService.submit(() -> {

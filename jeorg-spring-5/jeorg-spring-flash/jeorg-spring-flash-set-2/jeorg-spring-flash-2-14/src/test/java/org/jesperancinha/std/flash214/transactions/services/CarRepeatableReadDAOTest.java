@@ -44,7 +44,7 @@ class CarRepeatableReadDAOTest {
                 .magenta("A Repeatable read means that the reader transaction will always read at least the same.")
                 .magenta("The small nuance comes from the fact that removals will not be detected. Additions, however will.")
                 .magenta("In this repeatable read example, we will see how we can read the progress of one transaction from another repeatable transaction.")
-                .magenta("We won't, in any case, see the removals, nor we will see the aditions. This is after all, an embedded database system")
+                .magenta("We won't, in any case, see the removals, nor we will see the additions. This is after all, an embedded database system")
                 .reset();
         final var executorService = Executors.newFixedThreadPool(2);
         executorService.submit(() -> {
