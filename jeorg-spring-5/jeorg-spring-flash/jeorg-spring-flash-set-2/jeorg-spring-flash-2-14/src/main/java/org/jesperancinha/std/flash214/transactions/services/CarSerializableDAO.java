@@ -1,7 +1,5 @@
 package org.jesperancinha.std.flash214.transactions.services;
 
-import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
-import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.jesperancinha.std.flash214.transactions.model.Car;
 import org.jesperancinha.std.flash214.transactions.repository.CarRepository;
 import org.springframework.stereotype.Service;
@@ -11,9 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+import static java.lang.Thread.sleep;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.outSpace;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printRainbowFlag;
 
 @Service
 public class CarSerializableDAO implements CarDAO {
@@ -27,13 +28,13 @@ public class CarSerializableDAO implements CarDAO {
     @Override
     public Car createCar(Car car) {
         final var savedCar = this.carRepository.save(car);
-        ConsolerizerComposer.outSpace()
+        outSpace()
                 .cyan("Saving car:")
                 .jsonPrettyPrint(savedCar)
                 .reset();
         GREEN.printGenericLn("Saving car %s", savedCar);
         try {
-            Thread.sleep(100);
+            sleep(100);
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
@@ -53,19 +54,19 @@ public class CarSerializableDAO implements CarDAO {
     @Transactional(propagation = Propagation.REQUIRES_NEW,
             isolation = Isolation.SERIALIZABLE)
     public List<Car> getAllCars() {
-        ConsolerizerComposer.outSpace().green("Creating empty car")
+        outSpace().green("Creating empty car")
                 .jsonPrettyPrint(this.carRepository.save(Car.builder().build()));
         for (int i = 0; i < 10; i++) {
             final List<Car> allCars1 = carRepository.findAll();
             try {
-                Thread.sleep(50);
+                sleep(50);
             } catch (InterruptedException e) {
                 RED.printThrowableAndExit(e);
             }
-            ConsolerizerComposer.outSpace().green("There are still %d cars available!", allCars1.size())
+            outSpace().green("There are still %d cars available!", allCars1.size())
                     .jsonPrettyPrint(allCars1).reset();
         }
-        ConsolerizerGraphs.printRainbowFlag("Finished 20 read tries!");
+        printRainbowFlag("Finished 20 read tries!");
         return carRepository.findAll();
     }
 
@@ -73,11 +74,11 @@ public class CarSerializableDAO implements CarDAO {
     public boolean deleteCarById(Long id) {
         carRepository.deleteById(id);
         try {
-            Thread.sleep(500);
+            sleep(500);
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
-        ConsolerizerComposer.outSpace().red("Deleted car with id %d", id).reset();
+        outSpace().red("Deleted car with id %d", id).reset();
         return true;
     }
 }

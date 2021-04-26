@@ -9,12 +9,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
+import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TEST_METHOD;
 
 @SpringBootTest
 @ActiveProfiles("emb")
@@ -22,7 +22,7 @@ import static org.jesperancinha.console.consolerizer.console.ConsolerizerCompose
         "org.jesperancinha.std.flash214.transactions",
         "org.jesperancinha.std.flash214.transactions.services"
 })
-@Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD,
+@Sql(executionPhase = BEFORE_TEST_METHOD,
         scripts = "classpath:schema.sql")
 class CarReadCommittedDAOTest {
 
@@ -45,7 +45,7 @@ class CarReadCommittedDAOTest {
                 .magenta("In this read committed example, we see that we can read the progress of one transaction from another read committed transaction.")
                 .magenta("This can still result in phantom reads, given that the data can change, while the read transaction is ongoing.")
                 .reset();
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        final var executorService = Executors.newFixedThreadPool(2);
         executorService.submit(() -> {
             carReadCommittedDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
         });

@@ -14,11 +14,12 @@ import org.springframework.test.context.jdbc.Sql;
 import javax.sql.DataSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TEST_METHOD;
 
 @SpringBootTest
 @ActiveProfiles("emb")
 @ComponentScan("org.jesperancinha.std.flash214.transactions")
-@Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD,
+@Sql(executionPhase = BEFORE_TEST_METHOD,
         scripts = "classpath:schema.sql")
 class SpringFlash214LauncherTest {
 
@@ -39,7 +40,7 @@ class SpringFlash214LauncherTest {
 
         final var car = Car.builder().brand("Renault").model("Twingo").build();
 
-        final Car savedCar = carRepository.save(car);
+        final var savedCar = carRepository.save(car);
 
         ConsolerizerComposer.outSpace()
                 .green("This car has just been saved in the database:")
