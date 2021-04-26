@@ -19,7 +19,10 @@ import static org.jesperancinha.console.consolerizer.console.ConsolerizerCompose
 
 @SpringBootTest
 @ActiveProfiles("emb")
-@ComponentScan({"org.jesperancinha.std.flash214.transactions", "org.jesperancinha.std.flash214.transactions.services"})
+@ComponentScan({
+        "org.jesperancinha.std.flash214.transactions",
+        "org.jesperancinha.std.flash214.transactions.services"
+})
 @Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD,
         scripts = "classpath:schema.sql")
 class CarRepeatableReadDAOTest {
@@ -46,7 +49,7 @@ class CarRepeatableReadDAOTest {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         executorService.submit(() -> {
             final var car = carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
-            final var car2 = carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
+            carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
@@ -58,6 +61,8 @@ class CarRepeatableReadDAOTest {
             ConsolerizerComposer.outSpace().yellow("First repeatable read transaction. Phantom reads would occur here in a supportive real database");
             carRepeatableReadDAO.getAllCars();
             ConsolerizerComposer.outSpace().yellow("Second repeatable read transaction. Phantom reads would occur here in a supportive real database");
+            carRepeatableReadDAO.getAllCars();
+            ConsolerizerComposer.outSpace().yellow("Third repeatable read transaction. Phantom reads would occur here in a supportive real database");
             carRepeatableReadDAO.getAllCars();
         });
         executorService.shutdown();

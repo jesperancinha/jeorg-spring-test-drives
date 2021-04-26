@@ -207,6 +207,7 @@ public class CarController {
         }
         return carRepeatableReadDAO.getCarById(1L);
     }
+
     @PostMapping(path = "/create/serializable",
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public Car createCarSerializable(

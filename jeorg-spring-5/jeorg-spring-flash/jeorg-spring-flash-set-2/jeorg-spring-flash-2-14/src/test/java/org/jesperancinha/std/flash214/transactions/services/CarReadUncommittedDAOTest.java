@@ -18,7 +18,10 @@ import static org.jesperancinha.console.consolerizer.console.ConsolerizerCompose
 
 @SpringBootTest
 @ActiveProfiles("emb")
-@ComponentScan({"org.jesperancinha.std.flash214.transactions", "org.jesperancinha.std.flash214.transactions.services"})
+@ComponentScan({
+        "org.jesperancinha.std.flash214.transactions",
+        "org.jesperancinha.std.flash214.transactions.services"
+})
 @Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD,
         scripts = "classpath:schema.sql")
 class CarReadUncommittedDAOTest {
@@ -40,9 +43,14 @@ class CarReadUncommittedDAOTest {
                 .magenta("Our embedded database, and many database systems do not support read uncommitted.")
                 .magenta("This is the reason why this example works in the same way as the read committed one.")
                 .magenta("In a read uncommitted example, we would see that we would be able to read the progress of one transaction from another read uncommitted transaction.")
+                .magenta("In this example, we never see a single car, because a rollback occurs evrytime before the transaction completes.")
+                .magenta("In a real case, we would see the new cars being added before a commit or rollback.")
                 .reset();
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         executorService.submit(() -> {
+            carReadUncommittedDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
+            carReadUncommittedDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
+            carReadUncommittedDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
             carReadUncommittedDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
         });
         executorService.submit(() -> {

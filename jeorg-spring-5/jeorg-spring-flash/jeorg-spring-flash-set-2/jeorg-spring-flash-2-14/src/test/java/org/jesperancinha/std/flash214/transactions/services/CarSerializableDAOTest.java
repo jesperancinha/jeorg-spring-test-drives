@@ -19,7 +19,10 @@ import static org.jesperancinha.console.consolerizer.console.ConsolerizerCompose
 
 @SpringBootTest
 @ActiveProfiles("emb")
-@ComponentScan({"org.jesperancinha.std.flash214.transactions", "org.jesperancinha.std.flash214.transactions.services"})
+@ComponentScan({
+        "org.jesperancinha.std.flash214.transactions",
+        "org.jesperancinha.std.flash214.transactions.services"
+})
 @Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD,
         scripts = "classpath:schema.sql")
 class CarSerializableDAOTest {

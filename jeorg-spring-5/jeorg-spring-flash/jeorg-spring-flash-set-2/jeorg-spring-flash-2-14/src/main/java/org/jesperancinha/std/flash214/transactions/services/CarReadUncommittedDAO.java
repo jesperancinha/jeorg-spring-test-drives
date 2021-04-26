@@ -27,18 +27,17 @@ public class CarReadUncommittedDAO implements CarDAO {
     @Transactional(propagation = Propagation.REQUIRES_NEW,
             isolation = Isolation.READ_UNCOMMITTED)
     public Car createCar(Car car) {
-        final Car save = this.carRepository.save(car);
+        final var savedCar = this.carRepository.save(car);
+        ConsolerizerComposer.outSpace()
+                .cyan("Saving car:")
+                .jsonPrettyPrint(savedCar)
+                .reset();
         try {
-            Thread.sleep(1500);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
-        ConsolerizerComposer.outSpace().green("Saving car %s", save).reset();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            RED.printThrowableAndExit(e);
-        }
+        ConsolerizerComposer.outSpace().green("Saving car %s", savedCar).reset();
         throw new RuntimeException();
     }
 
@@ -56,7 +55,7 @@ public class CarReadUncommittedDAO implements CarDAO {
             isolation = Isolation.READ_UNCOMMITTED)
     public List<Car> getAllCars() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(50);
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }

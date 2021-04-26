@@ -26,14 +26,18 @@ public class CarSerializableDAO implements CarDAO {
 
     @Override
     public Car createCar(Car car) {
-        final Car save = this.carRepository.save(car);
-        GREEN.printGenericLn("Saving car %s", save);
+        final var savedCar = this.carRepository.save(car);
+        ConsolerizerComposer.outSpace()
+                .cyan("Saving car:")
+                .jsonPrettyPrint(savedCar)
+                .reset();
+        GREEN.printGenericLn("Saving car %s", savedCar);
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
             RED.printThrowableAndExit(e);
         }
-        return save;
+        return savedCar;
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW,

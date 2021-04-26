@@ -93,14 +93,13 @@ COMMIT;
 ```
 
 4. At another command mysql> prompt:
-Transaction 2:
+   Transaction 2:
 
 ```sql
 SELECT * from car;
 ```
 
-If you run rollback and then run the select again, you'll notice that you can always read.
-This is what dirty read is about. Reading all the transaction progress without performing a commit from another transaction.
+If you run rollback and then run the select again, you'll notice that you can always read. This is what dirty read is about. Reading all the transaction progress without performing a commit from another transaction.
 
 ### Regular tests
 
@@ -111,6 +110,7 @@ lsof -i :8081
 ```
 
 2 Run service with test profile. We'll see the CSRF Filter in the logs
+
 ```bash
 mvn clean install spring-boot:run
 ```
