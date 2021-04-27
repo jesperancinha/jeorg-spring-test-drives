@@ -13,13 +13,13 @@ Topics:
 
 ### Context
 
-- [Richard Thompson](https://en.wikipedia.org/wiki/Richard_Thompson_(musician))
+- [Suzanne Vega](https://en.wikipedia.org/wiki/Suzanne_Vega)
 
 <div align="center">
-      <a title="Read About Love" href="https://www.youtube.com/watch?v=XYiZY3qC8IQ">
+      <a title="Suzanne Vega - Book Of Dreams" href="https://www.youtube.com/watch?v=uAWGw8meEDE">
      <img 
-          src="https://img.youtube.com/vi/XYiZY3qC8IQ/0.jpg" 
-          style="width:10%;">
+          src="https://img.youtube.com/vi/uAWGw8meEDE/0.jpg" 
+          style="width:50%;">
       </a>
 </div>
 

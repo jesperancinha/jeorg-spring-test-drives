@@ -41,4 +41,9 @@ public class BookService implements DisposableBean, InitializingBean {
         printRainbowFlag("You've reached something special!");
         ORANGE.printGenericLn("Properties have been set! We only have one, and it is this book -> %s", book);
     }
+
+    private void destructionExtra() {
+        printRainbowFlag("You've reached something special!");
+        ORANGE.printGenericLn("The book will now be archived-> %s", book);
+    }
 }

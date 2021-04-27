@@ -32,24 +32,24 @@ public class SpringFlash220Launcher {
             produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<String> postAllSinsMatrix(
             @PathVariable
-                    String test,
+            final String test,
             @MatrixVariable(name = "sin1",
                     pathVar = "test")
-                    String sin1,
+            final String sin1,
             @MatrixVariable
-                    String sin2,
+            final String sin2,
             @MatrixVariable
-                    String sin3,
+            final String sin3,
             @MatrixVariable
-                    String sin4,
+            final String sin4,
             @MatrixVariable
-                    String sin5,
+            final String sin5,
             @MatrixVariable
-                    String sin6,
+            final String sin6,
             @MatrixVariable
-                    String sin7) {
+            final String sin7) {
 
-        final var answers = Arrays.asList(sin1, sin2, sin3, sin4, sin5, sin6, sin7);
+        final var answers = List.of(sin1, sin2, sin3, sin4, sin5, sin6, sin7);
         Collections.sort(answers);
         Collections.sort(SEVEN_SINS);
         if (!answers.equals(SEVEN_SINS)) {
@@ -73,21 +73,21 @@ public class SpringFlash220Launcher {
             produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<String> postAllSinsRequest(
             @PathVariable
-                    String sin1,
+            final String sin1,
             @PathVariable
-                    String sin2,
+            final String sin2,
             @RequestParam
-                    String sin3,
+            final String sin3,
             @RequestParam
-                    String sin4,
+            final String sin4,
             @RequestHeader
-                    String sin5,
+            final String sin5,
             @RequestHeader
-                    String sin6,
+            final String sin6,
             @RequestHeader
-                    String sin7) {
+            final String sin7) {
 
-        final var answers = Arrays.asList(sin1, sin2, sin3, sin4, sin5, sin6, sin7);
+        final var answers = List.of(sin1, sin2, sin3, sin4, sin5, sin6, sin7);
         Collections.sort(answers);
         Collections.sort(SEVEN_SINS);
         if (!answers.equals(SEVEN_SINS)) {
