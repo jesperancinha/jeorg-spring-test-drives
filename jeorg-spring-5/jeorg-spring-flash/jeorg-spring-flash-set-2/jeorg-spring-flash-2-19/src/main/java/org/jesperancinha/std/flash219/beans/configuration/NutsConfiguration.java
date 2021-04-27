@@ -10,7 +10,12 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BL
 public class NutsConfiguration {
 
     @Bean(destroyMethod = "goToCake", initMethod = "initiate")
-    public Nut almond() {
+    public Nut almond(final Nut nut) {
+        return nut;
+    }
+
+    @Bean
+    public Nut nut() {
         final Nut nut = new Nut();
         nut.setName("Almond");
         BLUE.printGenericLn("Created %s", nut);
