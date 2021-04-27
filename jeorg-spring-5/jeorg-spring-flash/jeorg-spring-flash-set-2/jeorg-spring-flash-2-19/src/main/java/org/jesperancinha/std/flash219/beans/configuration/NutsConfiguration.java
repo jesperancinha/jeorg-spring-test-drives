@@ -9,7 +9,8 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BL
 @Configuration
 public class NutsConfiguration {
 
-    @Bean(destroyMethod = "goToCake", initMethod = "initiate")
+    @Bean(destroyMethod = "goToCake",
+            initMethod = "initiate")
     public Nut almond(final Nut nut) {
         return nut;
     }

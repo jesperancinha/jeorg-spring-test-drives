@@ -1,21 +1,14 @@
 package org.jesperancinha.std.flash219.beans.domain;
 
-import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
+import lombok.Data;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BROWN;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
+@Data
 public class Nut {
 
     private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     private void goToCake() {
         BROWN.printGenericLn("Going to cake...");
