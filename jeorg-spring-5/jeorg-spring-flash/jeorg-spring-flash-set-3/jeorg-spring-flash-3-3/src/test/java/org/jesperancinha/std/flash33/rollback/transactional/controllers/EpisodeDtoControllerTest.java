@@ -9,11 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.only;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -166,10 +170,23 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void getEpisodeById() {
+    void testGetEpisodeById_whenCall_thenGetEpisode1() throws Exception {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+        when(episodeService.getEpisodeById(1L)).thenReturn(episodeDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/1"))
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(episodeDto)));
     }
 
     @Test
-    void getAllEpisodes() {
+    void testGetAllEpisodes_whenCalled_thenReturnList() throws Exception {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+        final var episodeDtos = List.of(episodeDto);
+        when(episodeService.getAllEpisodes()).thenReturn(episodeDtos);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/"))
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(episodeDtos)));
     }
 }
