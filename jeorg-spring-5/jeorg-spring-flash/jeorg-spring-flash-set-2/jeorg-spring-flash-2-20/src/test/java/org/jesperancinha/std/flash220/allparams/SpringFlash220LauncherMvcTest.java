@@ -3,10 +3,8 @@ package org.jesperancinha.std.flash220.allparams;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -20,7 +18,20 @@ class SpringFlash220LauncherMvcTest {
     @Test
     void testPostAllSinsMatrix_whenCall_thenGetAllSins() throws Exception {
         mockMvc.perform(
-                post("/matrix/wow;sin1=Lust;sin2=Gluttony;sin3=Greed;sin4=Sloth;sin5=Wrath;sin6=Envy;sin7=Pride"))
+                post("/matrix/wow;sin1=Lust;sin2=Gluttony;sin3=Greed;sin4=Sloth;sin5=Wrath;sin6=Envy;sin7=Pride")
+        )
+                .andExpect(status().isOk())
+                .andExpect(content().string("You are wise!"));
+    }
+
+    @Test
+    void testPostAllSinsRequest_whenCall_thenGetAllSins() throws Exception {
+        mockMvc.perform(
+                post("/request/Lust/Gluttony?sin3=Greed&sin4=Sloth")
+                        .header("sin5", "Wrath")
+                        .header("sin6", "Envy")
+                        .header("sin7", "Pride")
+        )
                 .andExpect(status().isOk())
                 .andExpect(content().string("You are wise!"));
     }
