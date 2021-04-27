@@ -49,7 +49,7 @@ public class SpringFlash220Launcher {
             @MatrixVariable
             final String sin7) {
 
-        final var answers = List.of(sin1, sin2, sin3, sin4, sin5, sin6, sin7);
+        final var answers = Arrays.asList(sin1, sin2, sin3, sin4, sin5, sin6, sin7);
         Collections.sort(answers);
         Collections.sort(SEVEN_SINS);
         if (!answers.equals(SEVEN_SINS)) {
@@ -87,7 +87,7 @@ public class SpringFlash220Launcher {
             @RequestHeader
             final String sin7) {
 
-        final var answers = List.of(sin1, sin2, sin3, sin4, sin5, sin6, sin7);
+        final var answers = Arrays.asList(sin1, sin2, sin3, sin4, sin5, sin6, sin7);
         Collections.sort(answers);
         Collections.sort(SEVEN_SINS);
         if (!answers.equals(SEVEN_SINS)) {
