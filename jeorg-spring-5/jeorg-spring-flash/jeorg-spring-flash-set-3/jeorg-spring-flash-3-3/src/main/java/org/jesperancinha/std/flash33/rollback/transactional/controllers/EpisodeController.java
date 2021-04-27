@@ -1,22 +1,99 @@
 package org.jesperancinha.std.flash33.rollback.transactional.controllers;
 
 import org.jesperancinha.std.flash33.rollback.transactional.domain.Episode;
+import org.jesperancinha.std.flash33.rollback.transactional.dto.EpisodeDto;
+import org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException;
+import org.jesperancinha.std.flash33.rollback.transactional.services.EpisodeService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-public interface EpisodeController {
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-    void createEpisode(final Episode episode);
+@RestController
+public class EpisodeController {
 
-    void createEpisodeExceptionRollback(final Episode episode);
+    private final EpisodeService episodeService;
 
-    void createEpisodeExceptionNoRollback(final Episode episode);
+    public EpisodeController(EpisodeService episodeService) {
+        this.episodeService = episodeService;
+    }
 
-    void createEpisodeMixRollback(final Episode episode);
+    @PostMapping(path = "/createEpisode",
+            consumes = APPLICATION_JSON_VALUE)
+    public void createEpisode(
+            @RequestBody
+                    EpisodeDto episode) {
+        try {
+            episodeService.createEpisode(episode);
+        } catch (EpisodeException episodeException) {
+            YELLOW.printGenericLn("This exception won't trigger a rollback, please check the main listing page in path /", episodeException);
+            throw episodeException;
+        }
+    }
 
-    void createEpisodeMixNoRollback(final Episode episode);
+    @PostMapping(path = "/createEpisodeExceptionRollback",
+            consumes = APPLICATION_JSON_VALUE)
+    public void createEpisodeExceptionRollback(
+            @RequestBody
+                    EpisodeDto episode) {
+        try {
+            episodeService.createEpisodeExceptionRollback(episode);
+        } catch (RuntimeException exception) {
+            YELLOW.printGenericLn("This exception will trigger a rollback, please check the main listing page in path /", exception);
+        }
+    }
 
-    Episode getEpisodeById(final Long id);
+    @PostMapping(path = "/createEpisodeExceptionNoRollback",
+            consumes = APPLICATION_JSON_VALUE)
+    public void createEpisodeExceptionNoRollback(
+            @RequestBody
+                    EpisodeDto episode) {
+        try {
+            episodeService.createEpisodeExceptionNoRollback(episode);
+        } catch (RuntimeException exception) {
+            YELLOW.printGenericLn("This exception will trigger a rollback, please check the main listing page in path /", exception);
+        }
+    }
 
-    List<Episode> getAllEpisodes();
+    @PostMapping(path = "/createEpisodeMixRollback",
+            consumes = APPLICATION_JSON_VALUE)
+    public void createEpisodeMixRollback(
+            @RequestBody
+                    EpisodeDto episode) {
+        try {
+            episodeService.createEpisodeMixRollback(episode);
+        } catch (RuntimeException exception) {
+            YELLOW.printGenericLn("This exception will trigger a rollback, please check the main listing page in path /", exception);
+        }
+    }
+
+    @PostMapping(path = "/createEpisodeMixNoRollback",
+            consumes = APPLICATION_JSON_VALUE)
+    public void createEpisodeMixNoRollback(
+            @RequestBody
+                    EpisodeDto episode) {
+        try {
+            episodeService.createEpisodeMixNoRollback(episode);
+        } catch (EpisodeException exception) {
+            YELLOW.printGenericLn("This exception won't trigger a rollback, please check the main listing page in path /", exception);
+        }
+    }
+
+    @GetMapping("{id}")
+    public EpisodeDto getEpisodeById(
+            @PathVariable
+                    Long id) {
+        return episodeService.getEpisodeById(id);
+    }
+
+    @GetMapping("/")
+    public List<EpisodeDto> getAllEpisodes() {
+        return episodeService.getAllEpisodes();
+    }
 }
