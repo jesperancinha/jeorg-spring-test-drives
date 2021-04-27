@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash33.rollback.transactional.controllers;
 
-import org.jesperancinha.std.flash33.rollback.transactional.domain.Episode;
 import org.jesperancinha.std.flash33.rollback.transactional.dto.EpisodeDto;
 import org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException;
 import org.jesperancinha.std.flash33.rollback.transactional.services.EpisodeService;
@@ -46,6 +45,7 @@ public class EpisodeController {
             episodeService.createEpisodeExceptionRollback(episode);
         } catch (RuntimeException exception) {
             YELLOW.printGenericLn("This exception will trigger a rollback, please check the main listing page in path /", exception);
+            throw exception;
         }
     }
 
@@ -58,6 +58,7 @@ public class EpisodeController {
             episodeService.createEpisodeExceptionNoRollback(episode);
         } catch (RuntimeException exception) {
             YELLOW.printGenericLn("This exception will trigger a rollback, please check the main listing page in path /", exception);
+            throw exception;
         }
     }
 
@@ -70,6 +71,7 @@ public class EpisodeController {
             episodeService.createEpisodeMixRollback(episode);
         } catch (RuntimeException exception) {
             YELLOW.printGenericLn("This exception will trigger a rollback, please check the main listing page in path /", exception);
+            throw exception;
         }
     }
 

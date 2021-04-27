@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.only;
 import static org.mockito.Mockito.verify;
+import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -32,10 +32,10 @@ class EpisodeDtoControllerTest {
 
     @Test
     void testCreateEpisode_whenPerformingPost_thenReturnNothing() throws Exception {
-        final EpisodeDto episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         mockMvc.perform(post("/createEpisode")
-                .contentType(MediaType.APPLICATION_JSON)
+                .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto)))
                 .andExpect(status().isOk())
                 .andExpect(content().string(""));
@@ -44,12 +44,12 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisode_whenServiceFail_thenErrorAndReturnNothing() throws Exception {
-        final EpisodeDto episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+    void testCreateEpisode_whenServiceFail_thenErrorAndReturnNothing() {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         doThrow(new EpisodeException()).when(episodeService).createEpisode(episodeDto);
 
         assertThatThrownBy(() -> mockMvc.perform(post("/createEpisode")
-                .contentType(MediaType.APPLICATION_JSON)
+                .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
                 .hasCauseInstanceOf(EpisodeException.class)
                 .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException");
@@ -58,19 +58,111 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void createEpisodeExceptionRollback() {
+    void testCreateEpisodeExceptionRollback_whenPerformingPost_thenReturnNothing() throws Exception {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+
+        mockMvc.perform(post("/createEpisodeExceptionRollback")
+                .contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(episodeDto)))
+                .andExpect(status().isOk())
+                .andExpect(content().string(""));
+
+        verify(episodeService, only()).createEpisodeExceptionRollback(episodeDto);
     }
 
     @Test
-    void createEpisodeExceptionNoRollback() {
+    void testCreateEpisodeExceptionRollback_whenServiceFail_thenErrorAndReturnNothing() {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+        doThrow(new RuntimeException()).when(episodeService).createEpisodeExceptionRollback(episodeDto);
+
+        assertThatThrownBy(() -> mockMvc.perform(post("/createEpisodeExceptionRollback")
+                .contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(episodeDto))))
+                .hasCauseInstanceOf(RuntimeException.class)
+                .hasMessage("Request processing failed; nested exception is java.lang.RuntimeException");
+
+        verify(episodeService, only()).createEpisodeExceptionRollback(episodeDto);
     }
 
     @Test
-    void createEpisodeMixRollback() {
+    void testCreateEpisodeExceptionNoRollback_whenPerformingPost_thenReturnNothing() throws Exception {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+
+        mockMvc.perform(post("/createEpisodeExceptionNoRollback")
+                .contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(episodeDto)))
+                .andExpect(status().isOk())
+                .andExpect(content().string(""));
+
+        verify(episodeService, only()).createEpisodeExceptionNoRollback(episodeDto);
     }
 
     @Test
-    void createEpisodeMixNoRollback() {
+    void testCreateEpisodeExceptionNoRollback_whenServiceFail_thenErrorAndReturnNothing() {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+        doThrow(new RuntimeException()).when(episodeService).createEpisodeExceptionNoRollback(episodeDto);
+
+        assertThatThrownBy(() -> mockMvc.perform(post("/createEpisodeExceptionNoRollback")
+                .contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(episodeDto))))
+                .hasCauseInstanceOf(RuntimeException.class)
+                .hasMessage("Request processing failed; nested exception is java.lang.RuntimeException");
+
+        verify(episodeService, only()).createEpisodeExceptionNoRollback(episodeDto);
+    }
+
+    @Test
+    void testCreateEpisodeMixRollback_whenPerformingPost_thenReturnNothing() throws Exception {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+
+        mockMvc.perform(post("/createEpisodeMixRollback")
+                .contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(episodeDto)))
+                .andExpect(status().isOk())
+                .andExpect(content().string(""));
+
+        verify(episodeService, only()).createEpisodeMixRollback(episodeDto);
+    }
+
+    @Test
+    void testCreateEpisodeMixRollback_whenServiceFail_thenErrorAndReturnNothing() {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+        doThrow(new RuntimeException()).when(episodeService).createEpisodeMixRollback(episodeDto);
+
+        assertThatThrownBy(() -> mockMvc.perform(post("/createEpisodeMixRollback")
+                .contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(episodeDto))))
+                .hasCauseInstanceOf(RuntimeException.class)
+                .hasMessage("Request processing failed; nested exception is java.lang.RuntimeException");
+
+        verify(episodeService, only()).createEpisodeMixRollback(episodeDto);
+    }
+
+    @Test
+    void testCreateEpisodeMixNoRollback_whenPerformingPost_thenReturnNothing() throws Exception {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+
+        mockMvc.perform(post("/createEpisodeMixNoRollback")
+                .contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(episodeDto)))
+                .andExpect(status().isOk())
+                .andExpect(content().string(""));
+
+        verify(episodeService, only()).createEpisodeMixNoRollback(episodeDto);
+    }
+
+    @Test
+    void testCreateEpisodeMixNoRollback_whenServiceFail_thenErrorAndReturnNothing() {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+        doThrow(new RuntimeException()).when(episodeService).createEpisodeMixNoRollback(episodeDto);
+
+        assertThatThrownBy(() -> mockMvc.perform(post("/createEpisodeMixNoRollback")
+                .contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(episodeDto))))
+                .hasCauseInstanceOf(RuntimeException.class)
+                .hasMessage("Request processing failed; nested exception is java.lang.RuntimeException");
+
+        verify(episodeService, only()).createEpisodeMixNoRollback(episodeDto);
     }
 
     @Test
