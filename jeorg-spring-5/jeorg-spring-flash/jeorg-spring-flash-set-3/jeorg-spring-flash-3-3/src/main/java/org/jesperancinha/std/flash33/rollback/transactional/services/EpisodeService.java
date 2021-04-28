@@ -21,7 +21,8 @@ public class EpisodeService {
         this.episodeRepository = episodeRepository;
     }
 
-    @Transactional(rollbackFor = VideoCountryException.class, noRollbackFor = EpisodeException.class)
+    @Transactional(rollbackFor = VideoCountryException.class,
+            noRollbackFor = EpisodeException.class)
     public void createEpisode(EpisodeDto episodeDto) {
         episodeRepository.save(toData(episodeDto));
         throw new EpisodeException();
@@ -64,7 +65,7 @@ public class EpisodeService {
     }
 
     private EpisodeDto toDto(Episode episode) {
-        if(Objects.isNull(episode)){
+        if (Objects.isNull(episode)) {
             return null;
         }
         return EpisodeDto.builder()
