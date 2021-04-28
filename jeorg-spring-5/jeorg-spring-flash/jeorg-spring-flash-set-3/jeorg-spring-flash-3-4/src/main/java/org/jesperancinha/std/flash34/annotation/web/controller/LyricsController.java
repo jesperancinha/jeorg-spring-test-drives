@@ -20,17 +20,21 @@ public class LyricsController extends HttpServlet {
 
     public LyricsController(){
         ConsolerizerComposer.outSpace()
-                .cyan(title("Analysing the AnnotationConfigWebApplicationContext"))
+                .orange(title("Analysing the AnnotationConfigWebApplicationContext"))
                 .reset();
     }
 
     @RequestMapping(value = "/carpenters",
             method = RequestMethod.GET)
     public @ResponseBody
-    String carpenters(Model model) throws Exception {
+    String carpenters(Model model) {
         LyricCollection lyricCollection = new LyricCollection();
         lyricCollection.setBand("The Carpenters");
         lyricCollection.getLyrics().add("Top of The World");
+        ConsolerizerComposer.outSpace()
+                .green("Returning:")
+                .orange().jsonPrettyPrint(lyricCollection)
+                .reset();
         return lyricCollection.toString();
     }
 }

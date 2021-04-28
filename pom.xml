@@ -90,6 +90,9 @@
         <de.flapdoodle.embed.process.version>2.0.5</de.flapdoodle.embed.process.version>
         <atomikos.transactions.version>5.0.8</atomikos.transactions.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+        <cglib.version>2.2.2</cglib.version>
+        <jstl.version>1.2</jstl.version>
+        <commons-logging.version>1.1.1</commons-logging.version>
     </properties>
 
     <build>
@@ -335,6 +338,26 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${javax.servlet-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.16</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons-logging.version}</version>
             </dependency>
 
             <!-- Test dependencies -->
