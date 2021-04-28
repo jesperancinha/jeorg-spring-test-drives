@@ -11,7 +11,7 @@ public class Tomato {
         this.message = message;
     }
 
-    public String pickupTomato(){
+    public String pickupTomato() {
         return "I'm out of the box! Well... it's an illusion...";
     }
 

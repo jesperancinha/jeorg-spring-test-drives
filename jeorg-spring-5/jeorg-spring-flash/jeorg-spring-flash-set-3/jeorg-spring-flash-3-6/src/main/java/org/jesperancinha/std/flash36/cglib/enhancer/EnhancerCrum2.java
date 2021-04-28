@@ -3,8 +3,6 @@ package org.jesperancinha.std.flash36.cglib.enhancer;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.InvocationHandler;
 
-import java.lang.reflect.Method;
-
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.CYAN;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printUnicornsLn;
 
@@ -19,19 +17,16 @@ public class EnhancerCrum2 {
         CYAN.printGenericLn("Can we make ketchup -> %s", tomato.makeKetchup());
 
 
-        Enhancer enhancer = new Enhancer();
+        final var enhancer = new Enhancer();
         enhancer.setSuperclass(Tomato.class);
-        enhancer.setCallback(new InvocationHandler() {
-            @Override
-            public Object invoke(Object proxy, Method method, Object[] args)
-                    throws Throwable {
-                if (method.getReturnType() == String.class && method.getName().equals("pickupTomato")) {
-                    return "You've opened the box and finally took me out!";
-                } if (method.getReturnType() == String.class && method.getName().equals("makeKetchup")) {
-                    return "You've made ketchup!";
-                } else {
-                    return method.invoke(tomato);
-                }
+        enhancer.setCallback((InvocationHandler) (proxy, method, args1) -> {
+            if (method.getReturnType() == String.class && method.getName().equals("pickupTomato")) {
+                return "You've opened the box and finally took me out!";
+            }
+            if (method.getReturnType() == String.class && method.getName().equals("makeKetchup")) {
+                return "You've made ketchup!";
+            } else {
+                return method.invoke(tomato);
             }
         });
         final var proxy = (Tomato) enhancer.create();

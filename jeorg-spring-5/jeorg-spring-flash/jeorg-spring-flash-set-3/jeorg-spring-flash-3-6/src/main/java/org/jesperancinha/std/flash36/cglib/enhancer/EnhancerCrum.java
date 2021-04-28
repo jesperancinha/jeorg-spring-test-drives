@@ -15,14 +15,9 @@ public class EnhancerCrum {
         CYAN.printGenericLn("If we pick the tomato now, we do not have a proxy -> %s", tomato.pickupTomato());
         CYAN.printGenericLn("Can we make ketchup -> %s", tomato.makeKetchup());
 
-        Enhancer enhancer = new Enhancer();
+        final var enhancer = new Enhancer();
         enhancer.setSuperclass(Tomato.class);
-        enhancer.setCallback(new FixedValue() {
-            @Override
-            public Object loadObject() throws Exception {
-                return "You've opened the box and finally took me out!";
-            }
-        });
+        enhancer.setCallback((FixedValue) () -> "You've opened the box and finally took me out!");
         final var proxy = (Tomato) enhancer.create();
 
         printUnicornsLn(100);
