@@ -4,7 +4,7 @@ import org.jesperancinha.std.flash35.aop.security.user.UserMessengerDetails;
 
 public class SouthernOracle {
 
-    private static ThreadLocal<UserMessengerDetails> threadLocal = new ThreadLocal<>();
+    private static final ThreadLocal<UserMessengerDetails> threadLocal = new ThreadLocal<>();
 
     public void login(String userName) {
         threadLocal.set(new UserMessengerDetails(userName));
