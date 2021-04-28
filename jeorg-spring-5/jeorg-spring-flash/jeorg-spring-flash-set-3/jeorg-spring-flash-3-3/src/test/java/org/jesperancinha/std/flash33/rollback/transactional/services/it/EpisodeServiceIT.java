@@ -2,8 +2,10 @@ package org.jesperancinha.std.flash33.rollback.transactional.services.it;
 
 import org.jesperancinha.std.flash33.rollback.transactional.dto.EpisodeDto;
 import org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException;
+import org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException;
 import org.jesperancinha.std.flash33.rollback.transactional.repositories.EpisodeRepository;
 import org.jesperancinha.std.flash33.rollback.transactional.services.EpisodeService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,8 +16,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 @SpringBootTest
-@ComponentScan("org.jesperancinha.std.flash33.rollback.transactional")
-@Transactional
 class EpisodeServiceIT {
 
     @Autowired
@@ -24,8 +24,13 @@ class EpisodeServiceIT {
     @Autowired
     private EpisodeService episodeService;
 
+    @BeforeEach
+    public void setUp(){
+        episodeRepository.deleteAll();
+    }
+
     @Test
-    void testCreateEpisode_whenCreateOne_thenCallSave() {
+     void testCreateEpisode_whenCreateOne_thenCallSave() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         assertThatExceptionOfType(EpisodeException.class)
@@ -37,20 +42,23 @@ class EpisodeServiceIT {
         assertThat(all).hasSize(1);
         final var episode = all.get(0);
         assertThat(episode).isNotNull();
-        assertThat(episode.getId()).isEqualTo(episodeDto.getId());
+        assertThat(episode.getId()).isNotNull();
+        assertThat(episode.getId()).isBetween(1L, 10L);
         assertThat(episode.getName()).isEqualTo(episodeDto.getName());
     }
 
-//    @Test
-//    void testCreateEpisodeExceptionRollback_whenCreateOne_thenCallSave() {
-//        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
-//
-//        assertThatExceptionOfType(RuntimeException.class)
-//                .isThrownBy(() -> episodeService.createEpisodeExceptionRollback(episodeDto));
-//
-//        verify(episodeRepository, times(1))
-//                .save(Episode.builder().id(1L).name(episodeDto.getName()).build());
-//    }
+    @Test
+    void testCreateEpisodeExceptionRollback_whenCreateOne_thenCallSave() {
+        final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
+
+        assertThatExceptionOfType(VideoCountryException.class)
+                .isThrownBy(() -> episodeService.createEpisodeExceptionRollback(episodeDto));
+
+        final var all = episodeRepository.findAll();
+
+        assertThat(all).isNotNull();
+        assertThat(all).hasSize(0);
+    }
 //
 //    @Test
 //    void testCreateEpisodeExceptionNoRollback_whenCreateOne_thenCallSave() {
