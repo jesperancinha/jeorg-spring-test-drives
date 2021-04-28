@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -62,6 +63,9 @@ public class EpisodeService {
     }
 
     private EpisodeDto toDto(Episode episode) {
+        if(Objects.isNull(episode)){
+            return null;
+        }
         return EpisodeDto.builder()
                 .id(episode.getId())
                 .name(episode.getName())
