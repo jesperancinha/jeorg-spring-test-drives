@@ -3,6 +3,7 @@ package org.jesperancinha.std.flash33.rollback.transactional.services;
 import org.jesperancinha.std.flash33.rollback.transactional.domain.Episode;
 import org.jesperancinha.std.flash33.rollback.transactional.dto.EpisodeDto;
 import org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException;
+import org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException;
 import org.jesperancinha.std.flash33.rollback.transactional.repositories.EpisodeRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,19 +21,19 @@ public class EpisodeService {
         this.episodeRepository = episodeRepository;
     }
 
-    @Transactional(rollbackFor = RuntimeException.class, noRollbackFor = EpisodeException.class)
+    @Transactional(rollbackFor = VideoCountryException.class, noRollbackFor = EpisodeException.class)
     public void createEpisode(EpisodeDto episodeDto) {
         episodeRepository.save(toData(episodeDto));
         throw new EpisodeException();
     }
 
-    @Transactional(rollbackFor = RuntimeException.class)
+    @Transactional(rollbackFor = VideoCountryException.class)
     public void createEpisodeExceptionRollback(EpisodeDto episodeDto) {
         episodeRepository.save(toData(episodeDto));
-        throw new RuntimeException();
+        throw new VideoCountryException();
     }
 
-    @Transactional(rollbackForClassName = "RuntimeException",
+    @Transactional(rollbackForClassName = "VideoCountryException",
             noRollbackForClassName = "EpisodeException")
     public void createEpisodeExceptionNoRollback(EpisodeDto episodeDto) {
         episodeRepository.save(toData(episodeDto));
@@ -40,14 +41,14 @@ public class EpisodeService {
 
     }
 
-    @Transactional(rollbackFor = RuntimeException.class,
+    @Transactional(rollbackFor = VideoCountryException.class,
             noRollbackForClassName = "EpisodeException")
     public void createEpisodeMixRollback(EpisodeDto episodeDto) {
         episodeRepository.save(toData(episodeDto));
-        throw new RuntimeException();
+        throw new VideoCountryException();
     }
 
-    @Transactional(rollbackFor = RuntimeException.class,
+    @Transactional(rollbackFor = VideoCountryException.class,
             noRollbackForClassName = "EpisodeException")
     public void createEpisodeMixNoRollback(EpisodeDto episodeDto) {
         episodeRepository.save(toData(episodeDto));

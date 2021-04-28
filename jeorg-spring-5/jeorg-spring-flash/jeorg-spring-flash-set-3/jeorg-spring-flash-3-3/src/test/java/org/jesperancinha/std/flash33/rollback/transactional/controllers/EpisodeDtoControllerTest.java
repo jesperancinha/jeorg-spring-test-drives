@@ -3,6 +3,7 @@ package org.jesperancinha.std.flash33.rollback.transactional.controllers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jesperancinha.std.flash33.rollback.transactional.dto.EpisodeDto;
 import org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException;
+import org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException;
 import org.jesperancinha.std.flash33.rollback.transactional.services.EpisodeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,13 +78,13 @@ class EpisodeDtoControllerTest {
     @Test
     void testCreateEpisodeExceptionRollback_whenServiceFail_thenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
-        doThrow(new RuntimeException()).when(episodeService).createEpisodeExceptionRollback(episodeDto);
+        doThrow(new VideoCountryException()).when(episodeService).createEpisodeExceptionRollback(episodeDto);
 
         assertThatThrownBy(() -> mockMvc.perform(post("/createEpisodeExceptionRollback")
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
-                .hasCauseInstanceOf(RuntimeException.class)
-                .hasMessage("Request processing failed; nested exception is java.lang.RuntimeException");
+                .hasCauseInstanceOf(VideoCountryException.class)
+                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
 
         verify(episodeService, only()).createEpisodeExceptionRollback(episodeDto);
     }
@@ -104,13 +105,13 @@ class EpisodeDtoControllerTest {
     @Test
     void testCreateEpisodeExceptionNoRollback_whenServiceFail_thenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
-        doThrow(new RuntimeException()).when(episodeService).createEpisodeExceptionNoRollback(episodeDto);
+        doThrow(new VideoCountryException()).when(episodeService).createEpisodeExceptionNoRollback(episodeDto);
 
         assertThatThrownBy(() -> mockMvc.perform(post("/createEpisodeExceptionNoRollback")
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
-                .hasCauseInstanceOf(RuntimeException.class)
-                .hasMessage("Request processing failed; nested exception is java.lang.RuntimeException");
+                .hasCauseInstanceOf(VideoCountryException.class)
+                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
 
         verify(episodeService, only()).createEpisodeExceptionNoRollback(episodeDto);
     }
@@ -131,13 +132,13 @@ class EpisodeDtoControllerTest {
     @Test
     void testCreateEpisodeMixRollback_whenServiceFail_thenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
-        doThrow(new RuntimeException()).when(episodeService).createEpisodeMixRollback(episodeDto);
+        doThrow(new VideoCountryException()).when(episodeService).createEpisodeMixRollback(episodeDto);
 
         assertThatThrownBy(() -> mockMvc.perform(post("/createEpisodeMixRollback")
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
-                .hasCauseInstanceOf(RuntimeException.class)
-                .hasMessage("Request processing failed; nested exception is java.lang.RuntimeException");
+                .hasCauseInstanceOf(VideoCountryException.class)
+                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
 
         verify(episodeService, only()).createEpisodeMixRollback(episodeDto);
     }
@@ -158,13 +159,13 @@ class EpisodeDtoControllerTest {
     @Test
     void testCreateEpisodeMixNoRollback_whenServiceFail_thenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
-        doThrow(new RuntimeException()).when(episodeService).createEpisodeMixNoRollback(episodeDto);
+        doThrow(new VideoCountryException()).when(episodeService).createEpisodeMixNoRollback(episodeDto);
 
         assertThatThrownBy(() -> mockMvc.perform(post("/createEpisodeMixNoRollback")
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
-                .hasCauseInstanceOf(RuntimeException.class)
-                .hasMessage("Request processing failed; nested exception is java.lang.RuntimeException");
+                .hasCauseInstanceOf(VideoCountryException.class)
+                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
 
         verify(episodeService, only()).createEpisodeMixNoRollback(episodeDto);
     }
