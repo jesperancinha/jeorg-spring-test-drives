@@ -7,11 +7,11 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YE
 
 @Component
 public class TicketAfterBean {
-    public void logBeforeTicket(JoinPoint joinPoint) {
+    public void logAfterTicket(JoinPoint joinPoint) {
         YELLOW.printGenericLn("After -> TicketService.createTicket() -> %s", joinPoint.getSignature().getName());
     }
 
-    public void logBeforeTicketNoAround(JoinPoint joinPoint) {
+    public void logAfterTicketNoAround(JoinPoint joinPoint) {
         YELLOW.printGenericLn("After -> TicketService.createTicket() -> %s", joinPoint.getSignature().getName());
     }
 }

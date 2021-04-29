@@ -82,14 +82,40 @@ public class TicketServiceTest {
         assertThat(proceedingJoinPointArgumentCaptor.getAllValues()).hasSize(1);
         final var proceedingJoinPointArgumentCaptorValue = proceedingJoinPointArgumentCaptor.getValue();
         assertThat(proceedingJoinPointArgumentCaptorValue.getArgs()[0]).isSameAs(ticketDto);
-        verify(ticketAfterBean, times(1)).logBeforeTicket(joinPointArgumentCaptor.capture());
+        verify(ticketAfterBean, times(1)).logAfterTicket(joinPointArgumentCaptor.capture());
         assertThat(joinPointArgumentCaptor.getAllValues()).hasSize(1);
         final var joinPointArgumentCaptorValue = joinPointArgumentCaptor.getValue();
         assertThat(joinPointArgumentCaptorValue.getArgs()[0]).isSameAs(ticketDto);
-        verify(ticketAfterBean, never()).logBeforeTicketNoAround(joinPointArgumentCaptor.capture());
+        verify(ticketAfterBean, never()).logAfterTicketNoAround(joinPointArgumentCaptor.capture());
     }
 
+    /**
+     * In this uni test, we are testing that both the before and after advices are executed by the aspect since there is no overlap
+     */
     @Test
     public void testCreateTicketNoAround() {
+        when(ticketRepository.save(any(Ticket.class))).thenAnswer(invocationOnMock -> invocationOnMock.getArgument(0));
+
+        final var ticketDto = TicketDto
+                .builder()
+                .id(1L)
+                .artist("Placebo")
+                .show("Bearded Theory's Spring Gathering 2022")
+                .uuid(UUID.randomUUID())
+                .build();
+        ticketService.createTicketNoAround(ticketDto);
+
+        verify(ticketBeforeBean, times(1)).logBeforeTicketNoAround(joinPointArgumentCaptor.capture());
+        assertThat(joinPointArgumentCaptor.getAllValues()).hasSize(1);
+        final var joinPointArgumentCaptorValue = joinPointArgumentCaptor.getValue();
+        assertThat(joinPointArgumentCaptorValue.getArgs()[0]).isSameAs(ticketDto);
+        verify(ticketBeforeBean, never()).logBeforeTicket(joinPointArgumentCaptor.capture());
+        verify(ticketAroundBean, never()).aroundTicket(proceedingJoinPointArgumentCaptor.capture());
+        verify(ticketAfterBean, times(1)).logAfterTicketNoAround(joinPointArgumentCaptor.capture());
+        assertThat(joinPointArgumentCaptor.getAllValues()).hasSize(2);
+        final var joinPointArgumentAfterCaptorValue = joinPointArgumentCaptor.getValue();
+        assertThat(joinPointArgumentAfterCaptorValue.getArgs()[0]).isSameAs(ticketDto);
+        verify(ticketAfterBean, never()).logAfterTicket(joinPointArgumentCaptor.capture());
+
     }
 }

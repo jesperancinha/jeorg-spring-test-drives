@@ -16,13 +16,13 @@ public class TicketAspectAfter {
         this.ticketAfterBean = ticketAfterBean;
     }
 
-    @After("execution(* org.jesperancinha.std.flash37.aop.detail.service.TicketService.createTicket*(..))")
-    public void logBeforeTicket(JoinPoint joinPoint) {
-        ticketAfterBean.logBeforeTicket(joinPoint);
+    @After("execution(* org.jesperancinha.std.flash37.aop.detail.service.TicketService.createTicket(..))")
+    public void logAfterTicket(JoinPoint joinPoint) {
+        ticketAfterBean.logAfterTicket(joinPoint);
     }
 
-    @After("execution(* org.jesperancinha.std.flash37.aop.detail.service.TicketService.createTicketNoAround*(..))")
-    public void logBeforeTicketNoAround(JoinPoint joinPoint) {
-        ticketAfterBean.logBeforeTicketNoAround(joinPoint);
+    @After("execution(* org.jesperancinha.std.flash37.aop.detail.service.TicketService.createTicketNoAround(..))")
+    public void logAfterTicketNoAround(JoinPoint joinPoint) {
+        ticketAfterBean.logAfterTicketNoAround(joinPoint);
     }
 }
