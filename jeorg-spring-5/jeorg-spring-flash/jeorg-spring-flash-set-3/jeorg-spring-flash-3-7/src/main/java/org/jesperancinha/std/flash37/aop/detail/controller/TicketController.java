@@ -1,6 +1,7 @@
 package org.jesperancinha.std.flash37.aop.detail.controller;
 
 import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.std.flash37.aop.detail.dto.TicketDto;
 import org.jesperancinha.std.flash37.aop.detail.model.Ticket;
 import org.jesperancinha.std.flash37.aop.detail.service.TicketService;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,15 +21,19 @@ public class TicketController {
 
 
     @PostMapping("/")
-    public UUID createTicket(@RequestBody final Ticket ticket){
-        final Ticket ticket1 = ticketService.createTicket(ticket);
+    public UUID createTicket(
+            @RequestBody
+            final TicketDto ticket) {
+        final TicketDto ticket1 = ticketService.createTicket(ticket);
         Consolerizer.printRainbowTitleLn("Created ticket %s", ticket1);
         return ticket1.getUuid();
     }
 
     @PostMapping("/no-around")
-    public UUID createTicketNoAround(@RequestBody final Ticket ticket){
-        final Ticket ticket1 = ticketService.createTicketNoAround(ticket);
+    public UUID createTicketNoAround(
+            @RequestBody
+            final TicketDto ticket) {
+        final TicketDto ticket1 = ticketService.createTicketNoAround(ticket);
         Consolerizer.printRainbowTitleLn("Created ticket %s", ticket1);
         return ticket1.getUuid();
     }

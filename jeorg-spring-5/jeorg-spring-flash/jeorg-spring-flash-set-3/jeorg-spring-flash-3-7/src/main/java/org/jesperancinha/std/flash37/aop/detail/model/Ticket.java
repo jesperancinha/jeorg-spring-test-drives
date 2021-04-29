@@ -1,6 +1,7 @@
 package org.jesperancinha.std.flash37.aop.detail.model;
 
-import org.springframework.lang.Nullable;
+import lombok.Builder;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +14,8 @@ import java.util.UUID;
 
 @Table
 @Entity
+@Data
+@Builder
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,55 +32,4 @@ public class Ticket {
 
     @Column
     private UUID uuid;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
-    public String getShow() {
-        return show;
-    }
-
-    public void setShow(String show) {
-        this.show = show;
-    }
-
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
-    }
-
-    public void setLocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
-    }
-
-    public UUID getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    @Override
-    public String toString() {
-        return "Ticket{" +
-                "id=" + id +
-                ", artist='" + artist + '\'' +
-                ", show='" + show + '\'' +
-                ", localDateTime=" + localDateTime +
-                ", uuid=" + uuid +
-                '}';
-    }
 }

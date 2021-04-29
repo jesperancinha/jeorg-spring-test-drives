@@ -3,20 +3,26 @@ package org.jesperancinha.std.flash37.aop.detail.aspects;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
+import org.jesperancinha.std.flash37.aop.detail.beans.TicketAfterBean;
 import org.springframework.stereotype.Component;
-
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Aspect
 @Component
 public class TicketAspectAfter {
-    @After("execution(* org.jesperancinha.std.flash37.aop.detail.service.TicketServiceImpl.createTicket*(..))")
-    public void logBeforeTicket(JoinPoint joinPoint) {
-        YELLOW.printGenericLn("After -> TicketService.createTicket() -> %s", joinPoint.getSignature().getName());
+
+    private final TicketAfterBean ticketAfterBean;
+
+    public TicketAspectAfter(TicketAfterBean ticketAfterBean) {
+        this.ticketAfterBean = ticketAfterBean;
     }
 
-    @After("execution(* org.jesperancinha.std.flash37.aop.detail.service.TicketServiceImpl.createTicketNoAround*(..))")
+    @After("execution(* org.jesperancinha.std.flash37.aop.detail.service.TicketService.createTicket*(..))")
+    public void logBeforeTicket(JoinPoint joinPoint) {
+        ticketAfterBean.logBeforeTicket(joinPoint);
+    }
+
+    @After("execution(* org.jesperancinha.std.flash37.aop.detail.service.TicketService.createTicketNoAround*(..))")
     public void logBeforeTicketNoAround(JoinPoint joinPoint) {
-        YELLOW.printGenericLn("After -> TicketService.createTicket() -> %s", joinPoint.getSignature().getName());
+        ticketAfterBean.logBeforeTicketNoAround(joinPoint);
     }
 }
