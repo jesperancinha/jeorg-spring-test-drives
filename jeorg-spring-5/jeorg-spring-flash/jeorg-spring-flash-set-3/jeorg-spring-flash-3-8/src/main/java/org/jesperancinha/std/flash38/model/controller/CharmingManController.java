@@ -1,6 +1,7 @@
 package org.jesperancinha.std.flash38.model.controller;
 
 import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -31,6 +32,13 @@ public class CharmingManController {
         ConsolerizerColor.MAGENTA.printGenericLn("It can be passed around and changed in the JSP.");
         ConsolerizerColor.MAGENTA.printGenericLn("As an example here is the model of a charmless man:");
         ConsolerizerColor.GREEN.printGenericLn(modelOfTheCharmlessMan);
-        return new ModelAndView("index");
+        ConsolerizerComposer.outSpace()
+                .magenta("And this is the actual model:")
+                .green()
+                .jsonPrettyPrint(model.getAttribute("modelOfTheCharmlessMan"))
+                .reset();
+        final ModelAndView indexView = new ModelAndView("index");
+        indexView.getModel().put("lyrics", modelOfTheCharmlessMan);
+        return indexView;
     }
 }
