@@ -23,6 +23,10 @@ public class Bean {
         return "The soup is made";
     }
 
+    public String makeBeanSoupPirate(){
+        return makeBeanSoup();
+    }
+
     @Override
     public String toString() {
         return "Bean{" +

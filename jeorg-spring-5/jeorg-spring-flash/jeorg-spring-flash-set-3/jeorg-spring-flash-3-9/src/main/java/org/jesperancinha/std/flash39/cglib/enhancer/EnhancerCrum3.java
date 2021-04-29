@@ -47,6 +47,7 @@ public class EnhancerCrum3 {
         printUnicornsLn(100);
         CYAN.printGenericLn("Our bean is -> %s", proxy);
         CYAN.printGenericLn("If we check the bean now, we do have a proxy -> %s", proxy.beanState());
+        CYAN.printGenericLn("If we pirate into the makeSoup we can confirm that it has never changed -> %s", proxy.makeBeanSoupPirate());
         CYAN.printGenericLn("If we make another soup now, we do have a proxy -> %s", proxy.makeProtectedBeanSoup());
 
     }
