@@ -31,7 +31,7 @@ public class EnhancerCrum3 {
                 if (method.getReturnType() == String.class && method.getName().equals("beanState")) {
                     return "This is a plant and no soup is made";
                 }
-                if (method.getReturnType() == String.class && method.getName().equals("makeBeanSoup")) {
+                if (method.getName().equals("makeBeanSoup")) {
                     RED.printThrowableAndExit(new RuntimeException("A private method never gets intercepted"));
                     return "Soup would be made here, but this is never called";
                 }
