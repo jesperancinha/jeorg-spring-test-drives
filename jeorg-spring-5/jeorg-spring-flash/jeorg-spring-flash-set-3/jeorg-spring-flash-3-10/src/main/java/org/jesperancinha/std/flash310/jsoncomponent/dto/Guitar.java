@@ -1,66 +1,25 @@
 package org.jesperancinha.std.flash310.jsoncomponent.dto;
 
-import org.springframework.data.annotation.Transient;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Value;
 
+@Value
+@Builder
+@AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Guitar {
-    private String brand;
 
-    private String model;
+    @JsonProperty("brand")
+    String brand;
 
-    private Long value;
+    @JsonProperty("model")
+    String model;
 
-    @Transient
-    private String currency;
+    @JsonProperty("value")
+    Long value;
 
-    public Guitar() {
-    }
-
-    public Guitar(String brand, String model, Long value, String currency) {
-        this.brand = brand;
-        this.model = model;
-        this.value = value;
-        this.currency = currency;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public Long getValue() {
-        return value;
-    }
-
-    public void setValue(Long value) {
-        this.value = value;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
-    @Override
-    public String toString() {
-        return "Guitar{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", value=" + value +
-                ", currency='" + currency + '\'' +
-                '}';
-    }
+    @JsonProperty("currency")
+    String currency;
 }

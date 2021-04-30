@@ -6,6 +6,8 @@ import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.InvocationHandler;
 
 import java.lang.reflect.Method;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -57,13 +59,26 @@ public class EnhancerCrum3 {
 
 
         final List<String> ab = List.of("a", "b", "c");
-        final List<String> ac= List.of("a", "b", "b");
+        final List<String> ac = List.of("a", "b", "b");
         final Map<String, String> collectedMap = IntStream.range(0, ab.size())
                 .boxed()
                 .collect(Collectors.toMap(ab::get, ac::get));
         ConsolerizerComposer.outSpace()
                 .blue(title("And this is just for fun!"))
                 .jsonPrettyPrint(collectedMap)
+                .reset();
+
+
+        Collection<String> bc = List.of("a", "b", "c");
+        Collection<String> bd = List.of("a", "b", "b");
+        final Iterator<String> iteratorbc = bc.iterator();
+        final Iterator<String> iteratorbd = bd.iterator();
+        final Map<String, String> collectedMap2 = bc.stream()
+                .collect(Collectors.toMap((e) -> iteratorbc.next(), (e) -> iteratorbd.next()));
+
+        ConsolerizerComposer.outSpace()
+                .blue(title("And this is just for fun too!"))
+                .jsonPrettyPrint(collectedMap2)
                 .reset();
     }
 }

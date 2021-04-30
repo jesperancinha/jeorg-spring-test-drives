@@ -11,6 +11,7 @@ Topics:
 ## Endpoint
 
 ```bash
+curl http://localhost:8081/
 curl -X POST -H 'Content-Type: application/json' http://localhost:8081/ --data '{"brand":"Fender","model":"75TH Anni Com Strat MN 2BB","value":"2400","currency":"EUR"}'
 ```
 ## References
