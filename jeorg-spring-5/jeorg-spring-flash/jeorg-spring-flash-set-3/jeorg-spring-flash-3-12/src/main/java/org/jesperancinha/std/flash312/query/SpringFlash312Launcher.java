@@ -61,13 +61,19 @@ public class SpringFlash312Launcher implements CommandLineRunner {
                 .reset();
     }
 
-    private List<Map<String, Object>> getMaps() {
-        return jdbcTemplate.queryForList("SELECT * FROM rancid_objects");
-    }
-
     private void insertDemoData() {
         final var allRancidObjects = Arrays.asList(new Object[]{"Black Coat"}, new Object[]{"Black Shoes"}, new Object[]{"Black Hat"}, new Object[]{"Cadillac"});
         jdbcTemplate.batchUpdate("INSERT INTO rancid_objects (name) VALUES (?)", allRancidObjects);
+    }
+
+    private void initializeDatabase() {
+        jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS rancid_objects(\n" +
+                "ID INT NOT NULL AUTO_INCREMENT,\n" +
+                "NAME VARCHAR(255) NOT NULL)");
+    }
+
+    private List<Map<String, Object>> getMaps() {
+        return jdbcTemplate.queryForList("SELECT * FROM rancid_objects");
     }
 
     private RancidObject getObject() {
@@ -77,12 +83,6 @@ public class SpringFlash312Launcher implements CommandLineRunner {
                     ORANGE.printGenericLn("Name is -> %s", rs.getString("name"));
                     return new RancidObject(rs.getString("name"));
                 });
-    }
-
-    private void initializeDatabase() {
-        jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS rancid_objects(\n" +
-                "ID INT NOT NULL AUTO_INCREMENT,\n" +
-                "NAME VARCHAR(255) NOT NULL)");
     }
 
     private RancidObject getRancidObject() {
