@@ -13,7 +13,7 @@ public class LoveController extends AbstractController {
 
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest request,
-                                                 HttpServletResponse response) throws Exception {
+                                                 HttpServletResponse response) {
         final var modelAndView = new ModelAndView("love");
         modelAndView.addObject("message", "Love is stronger than death");
         ConsolerizerComposer.outSpace()

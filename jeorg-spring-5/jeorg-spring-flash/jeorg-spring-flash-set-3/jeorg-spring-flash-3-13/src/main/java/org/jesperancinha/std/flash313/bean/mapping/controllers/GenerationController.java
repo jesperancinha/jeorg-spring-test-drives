@@ -13,7 +13,7 @@ public class GenerationController extends AbstractController {
 
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest request,
-                                                 HttpServletResponse response) throws Exception {
+                                                 HttpServletResponse response) {
         final var modelAndView = new ModelAndView("generation");
         modelAndView.addObject("message", "Open your imagination");
         ConsolerizerComposer.outSpace()
