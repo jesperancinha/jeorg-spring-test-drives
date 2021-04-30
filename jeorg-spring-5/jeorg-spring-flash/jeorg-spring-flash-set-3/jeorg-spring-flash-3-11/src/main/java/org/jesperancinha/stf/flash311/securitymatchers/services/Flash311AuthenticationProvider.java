@@ -11,12 +11,10 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.jesperancinha.stf.flash311.securitymatchers.domain.FlashUser.FlashUserBuilder.flashUserBuilder;
-
 public class Flash311AuthenticationProvider implements AuthenticationProvider {
     private static final List<FlashUser> FLASH_USERS = Arrays.asList(
-            flashUserBuilder().name("neo_truth").password("redpill").role("ROLE_RED").build(),
-            flashUserBuilder().name("neo_lie").password("bluepill").role("ROLE_BLUE").build()
+            FlashUser.builder().name("neo_truth").password("redpill").role("ROLE_RED").build(),
+            FlashUser.builder().name("neo_lie").password("bluepill").role("ROLE_BLUE").build()
     );
 
     @Override
@@ -24,7 +22,7 @@ public class Flash311AuthenticationProvider implements AuthenticationProvider {
             throws AuthenticationException {
         final var username = authentication.getName();
         final var password = authentication.getCredentials().toString();
-        final var flashLoginUser = flashUserBuilder().name(username).password(password).build();
+        final var flashLoginUser = FlashUser.builder().name(username).password(password).build();
         final var userOptional =
                 FLASH_USERS.stream()
                         .filter(flashLoginUser::equals)

@@ -16,8 +16,7 @@ If you run spring boot from the command line, you should not see any issue:
 mvn clean install spring-boot:run
 ```
 
-On the other hand, if running through an IDE, the root path must be specified.
-In IntelliJ as an example:
+On the other hand, if running through an IDE, the root path must be specified. In IntelliJ as an example:
 
 ![alt img](./../../../docs/workingdirectory.png)
 
@@ -31,6 +30,7 @@ You have two users:
 
 1. `neo_truth`/`redpill` - Can see only the admin page, and the userdata page
 2. `neo_lie`/`bluepill` - Can see only the user page, and the userdata page
+
 ## References
 
 ### Context
@@ -45,6 +45,7 @@ You have two users:
           style="width:10%;">
       </a>
 </div>
+
 ### Online
 
 - [Spring Security – Securing URLs By HTTP Method](https://www.naturalprogrammer.com/blog/16385/spring-security-urls-http-method)

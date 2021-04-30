@@ -1,12 +1,11 @@
 package org.jesperancinha.stf.flash311.securitymatchers.controllers;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Controller
 public class Flash311Controller {
@@ -17,11 +16,14 @@ public class Flash311Controller {
                 SecurityContextHolder
                         .getContext()
                         .getAuthentication();
-        YELLOW.printGenericLn("This is the object we are analyzing %s", authentication);
+        ConsolerizerComposer.outSpace()
+                .yellow("This is the object we are analyzing:")
+                .jsonPrettyPrint(authentication)
+                .reset();
         model
                 .addAttribute("name", authentication.getName())
                 .addAttribute("roles", authentication.getAuthorities());
-        return new ModelAndView("bluepill");
+        return new ModelAndView("redpill");
     }
 
     @RequestMapping("/normal/**")
@@ -30,7 +32,10 @@ public class Flash311Controller {
                 SecurityContextHolder
                         .getContext()
                         .getAuthentication();
-        YELLOW.printGenericLn("This is the object we are analyzing %s", authentication);
+        ConsolerizerComposer.outSpace()
+                .yellow("This is the object we are analyzing:")
+                .jsonPrettyPrint(authentication)
+                .reset();
         model
                 .addAttribute("name", authentication.getName())
                 .addAttribute("roles", authentication.getAuthorities());
@@ -43,10 +48,13 @@ public class Flash311Controller {
                 SecurityContextHolder
                         .getContext()
                         .getAuthentication();
-        YELLOW.printGenericLn("This is the object we are analyzing %s", authentication);
+        ConsolerizerComposer.outSpace()
+                .yellow("This is the object we are analyzing:")
+                .jsonPrettyPrint(authentication)
+                .reset();
         model
                 .addAttribute("name", authentication.getName())
                 .addAttribute("roles", authentication.getAuthorities());
-        return new ModelAndView("redpill");
+        return new ModelAndView("bluepill");
     }
 }
