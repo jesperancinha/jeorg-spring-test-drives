@@ -16,8 +16,7 @@ If you run spring boot from the command line, you should not see any issue:
 mvn clean install spring-boot:run
 ```
 
-On the other hand, if running through an IDE, the root path must be specified.
-In IntelliJ as an example:
+On the other hand, if running through an IDE, the root path must be specified. In IntelliJ as an example:
 
 ![alt img](./../../../docs/workingdirectory.png)
 
@@ -45,6 +44,7 @@ In IntelliJ as an example:
           style="width:10%;">
       </a>
 </div>
+
 ### Online
 
 - [Spring MVC - Bean Name Url Handler Mapping Example](https://www.tutorialspoint.com/springmvc/springmvc_beannameurlhandlermapping.htm)

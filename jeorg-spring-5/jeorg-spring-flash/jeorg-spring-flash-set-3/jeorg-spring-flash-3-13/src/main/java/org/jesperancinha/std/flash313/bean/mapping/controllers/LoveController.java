@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash313.bean.mapping.controllers;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
@@ -13,8 +14,12 @@ public class LoveController extends AbstractController {
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest request,
                                                  HttpServletResponse response) throws Exception {
-        ModelAndView model = new ModelAndView("love");
-        model.addObject("message", "Love is stronger than death");
-        return model;
+        final var modelAndView = new ModelAndView("love");
+        modelAndView.addObject("message", "Love is stronger than death");
+        ConsolerizerComposer.outSpace()
+                .cyan()
+                .jsonPrettyPrint(modelAndView)
+                .reset();
+        return modelAndView;
     }
 }
