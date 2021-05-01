@@ -21,6 +21,7 @@ Exploring JDK proxies in comparison to CGLib in Spring
 
 ### Online
 
+- [Difference between JDK dynamic proxy and CGLib proxy in Spring](https://www.tutorialspoint.com/difference-between-jdk-dynamic-proxy-and-cglib-proxy-in-spring#:~:text=JDK%20dynamic%20proxy%20is%20available,spring%20used%20for%20creating%20proxy.)
 - [JDK Dynamic Proxies](https://www.byteslounge.com/tutorials/jdk-dynamic-proxies)
 - [Spring MVC - Bean Name Url Handler Mapping Example](https://www.tutorialspoint.com/springmvc/springmvc_beannameurlhandlermapping.htm)
 - [Spring Security – Securing URLs By HTTP Method](https://www.naturalprogrammer.com/blog/16385/spring-security-urls-http-method)
