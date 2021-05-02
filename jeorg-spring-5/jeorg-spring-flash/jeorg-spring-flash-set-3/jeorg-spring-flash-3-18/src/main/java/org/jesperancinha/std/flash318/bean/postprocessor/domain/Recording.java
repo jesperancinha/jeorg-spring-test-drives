@@ -42,28 +42,28 @@ public class Recording implements DisposableBean, InitializingBean {
     @PostConstruct
     public void postConstruct() {
         ConsolerizerComposer.outSpace()
-                .green("🥦 - We pour the broccoli soup")
+                .green("🍲 - We pour the soup")
                 .reset();
     }
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         ConsolerizerComposer.outSpace()
-                .green("🥦 - We are now eating the broccoli soup.")
+                .green("🍲 - We are now eating soup.")
                 .reset();
     }
 
     @PreDestroy
     public void preDestroy() {
         ConsolerizerComposer.outSpace()
-                .green("🥦 - We scoop the rest from the pan")
+                .green("🍲 - We scoop the rest from the pan")
                 .reset();
     }
 
     @Override
     public void destroy() {
         ConsolerizerComposer.outSpace()
-                .green("🥦 - We've eaten the broccoli soup and now we're done.")
+                .green("🍲 - We've eaten the soup and now we're done.")
                 .reset();
 
     }
