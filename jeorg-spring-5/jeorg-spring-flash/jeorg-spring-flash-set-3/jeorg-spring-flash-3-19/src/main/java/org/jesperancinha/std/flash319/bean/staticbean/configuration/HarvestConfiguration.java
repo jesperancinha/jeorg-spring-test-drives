@@ -12,14 +12,14 @@ public class HarvestConfiguration {
 
     @Bean
     public static Harvest harvest1() {
-        final Harvest forTheWorld = new Harvest("for the world");
+        final Harvest forTheWorld = Harvest.builder().goal("for the world").build();
         GREEN.printGenericLn("This is the static harvest. It has been created -> %s", forTheWorld);
         return forTheWorld;
     }
 
     @Bean
     public Harvest harvest2() {
-        final Harvest forTheWorld = new Harvest("for the world");
+        final Harvest forTheWorld = Harvest.builder().goal("for my home").build();
         MAGENTA.printGenericLn("This is the instance harvest. It has been created -> %s", forTheWorld);
         return forTheWorld;
     }
