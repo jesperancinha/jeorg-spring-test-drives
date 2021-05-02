@@ -3,7 +3,7 @@ package org.jesperancinha.std.flash315.autowired.domain;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Profile({"test", "!prod"})
+@Profile({"test && prod"})
 @Component
 public class SomethingElse {
     private String content = "In this world full of people";
