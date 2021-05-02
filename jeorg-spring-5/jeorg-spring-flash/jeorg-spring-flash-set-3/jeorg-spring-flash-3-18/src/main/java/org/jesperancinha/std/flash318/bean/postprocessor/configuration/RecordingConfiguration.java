@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class RecordingConfiguration {
 
     @Bean
-    public Recording recording(){
-        return new Recording("Bohemian Raphsody",19670L,"Rockfield Studio 1","Monmouth, South Wales");
+    public Recording recording() {
+        return new Recording("Bohemian Raphsody", 19670L, "Rockfield Studio 1", "Monmouth, South Wales");
     }
 }

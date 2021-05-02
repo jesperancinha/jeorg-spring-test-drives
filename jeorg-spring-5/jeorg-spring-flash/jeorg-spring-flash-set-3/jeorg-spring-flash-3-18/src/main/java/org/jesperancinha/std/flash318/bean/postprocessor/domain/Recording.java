@@ -1,6 +1,15 @@
 package org.jesperancinha.std.flash318.bean.postprocessor.domain;
 
-public class Recording {
+import lombok.Data;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+@Data
+public class Recording implements DisposableBean, InitializingBean {
     private String title;
 
     private Long years;
@@ -20,38 +29,6 @@ public class Recording {
         this.years = years;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Long getYears() {
-        return years;
-    }
-
-    public void setYears(Long years) {
-        this.years = years;
-    }
-
-    public String getStudio() {
-        return studio;
-    }
-
-    public void setStudio(String studio) {
-        this.studio = studio;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     @Override
     public String toString() {
         return "Recording{" +
@@ -60,5 +37,34 @@ public class Recording {
                 ", studio='" + studio + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @PostConstruct
+    public void postConstruct() {
+        ConsolerizerComposer.outSpace()
+                .green("🥦 - We pour the broccoli soup")
+                .reset();
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        ConsolerizerComposer.outSpace()
+                .green("🥦 - We are now eating the broccoli soup.")
+                .reset();
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        ConsolerizerComposer.outSpace()
+                .green("🥦 - We scoop the rest from the pan")
+                .reset();
+    }
+
+    @Override
+    public void destroy() {
+        ConsolerizerComposer.outSpace()
+                .green("🥦 - We've eaten the broccoli soup and now we're done.")
+                .reset();
+
     }
 }
