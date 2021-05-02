@@ -30,7 +30,7 @@ public class EnhancerCrum4 {
                                 if (method.getReturnType() == String.class && method.getName().equals("beanState")) {
                                     return "This is a plant and no soup is made";
                                 }
-                                if (method.getReturnType() == String.class && method.getName().equals("makeBeanSoup")) {
+                                if (method.getName().equals("makeBeanSoup")) {
                                     RED.printThrowableAndExit(new RuntimeException("A private method never gets intercepted"));
                                     return "Soup would be made here, but this is never called";
                                 }
@@ -46,6 +46,7 @@ public class EnhancerCrum4 {
         printUnicornsLn(100);
         CYAN.printGenericLn("Our bean is -> %s", proxy);
         CYAN.printGenericLn("If we check the bean now, we do have a proxy -> %s", proxy.beanState());
+        CYAN.printGenericLn("If we pirate into the makeSoup we can confirm that it has never changed -> %s", proxy.makeBeanSoupPirate());
         CYAN.printGenericLn("If we make another soup now, we do have a proxy -> %s", proxy.makeProtectedBeanSoup());
 
     }

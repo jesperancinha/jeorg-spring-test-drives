@@ -1,15 +1,10 @@
 package org.jesperancinha.std.flash314.jdk.enhancer;
 
+import lombok.Data;
+
+@Data
 public class Bean implements IBean {
     private String message;
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 
     public String beanState() {
         return "I'm just a bean seed. " + makeBeanSoup();
@@ -21,6 +16,10 @@ public class Bean implements IBean {
 
     public String makeProtectedBeanSoup() {
         return "The soup is made";
+    }
+
+    public String makeBeanSoupPirate() {
+        return makeBeanSoup();
     }
 
     @Override

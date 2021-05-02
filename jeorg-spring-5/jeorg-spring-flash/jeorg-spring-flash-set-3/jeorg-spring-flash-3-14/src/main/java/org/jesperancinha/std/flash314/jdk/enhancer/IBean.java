@@ -4,4 +4,6 @@ public interface IBean {
     String beanState();
 
     String makeProtectedBeanSoup();
+
+    String makeBeanSoupPirate();
 }
