@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash41.scope.prototype.domain;
 
-import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -24,8 +23,8 @@ public class Desert {
 
     private String statement;
 
-    public Desert(){
-        this.statement = DESERT_MISS_THE_RAIN[(int) (DESERT_MISS_THE_RAIN.length*Math.random())];
+    public Desert() {
+        this.statement = DESERT_MISS_THE_RAIN[(int) (DESERT_MISS_THE_RAIN.length * Math.random())];
     }
 
     public String getStatement() {
@@ -37,17 +36,17 @@ public class Desert {
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         GREEN.printGenericLn("This method gets called on the initialization of the bean");
     }
 
     @PreDestroy
-    public void destroy(){
+    public void destroy() {
         GREEN.printGenericLn("This method won't be called!");
         ConsolerizerColor.RED.printThrowableAndExit(new RuntimeException("If this get's called I'll shut down the process. This just doesn't happen, because the Spring Container is unaware of my existence. I'm prototype"));
     }
 
-    public void reachableDestroy(){
+    public void reachableDestroy() {
         MAGENTA.printGenericLn("Since you miss me like the desert miss the rain, you need to keep a reference to me and make sure to call your own destroy mechanism");
     }
 }
