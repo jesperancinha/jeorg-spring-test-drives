@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash316.requestparam.controller;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash316.requestparam.model.Think;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,14 +24,14 @@ public class ThinkController {
             final List<String> thinks,
             @RequestParam(required = false)
             final String artist) {
-        final List<Think> thinkList = thinks.stream().map(s -> {
-            final Think think1 = new Think();
-            think1.setArtist(artist);
-            think1.setName(s);
-            return think1;
-        }).collect(Collectors.toList());
+        final List<Think> thinkList = thinks.stream().map(thinkString ->
+                Think.builder().artist(artist).thinkString(thinkString).build()).collect(Collectors.toList());
         final Think think = thinkList.get((int) (thinkList.size() * Math.random()));
         MAGENTA.printGenericLn("An artist is not required by default and that we need to specify. This is when we want it to be optional and not mandatory");
+        ConsolerizerComposer.outSpace()
+                .random()
+                .jsonPrettyPrint(thinkList)
+                .reset();
         return think;
     }
 }
