@@ -19,7 +19,7 @@ public class SpringFlash317Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         ConsolerizerColor.BRIGHT_BLUE.printGenericLn(messenger);
     }
 }
