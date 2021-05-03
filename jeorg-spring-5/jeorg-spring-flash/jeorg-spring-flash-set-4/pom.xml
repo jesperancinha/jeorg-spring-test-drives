@@ -33,11 +33,6 @@
         <module>jeorg-spring-flash-4-20</module>
     </modules>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
-
     <packaging>pom</packaging>
 
 </project>
