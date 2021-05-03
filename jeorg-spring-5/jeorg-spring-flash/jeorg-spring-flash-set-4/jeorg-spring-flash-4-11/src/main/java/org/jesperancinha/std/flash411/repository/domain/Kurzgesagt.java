@@ -1,5 +1,10 @@
 package org.jesperancinha.std.flash411.repository.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +15,10 @@ import java.time.LocalDate;
 
 @Entity
 @Table
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Kurzgesagt {
 
     @Id
@@ -25,35 +34,4 @@ public class Kurzgesagt {
     @Column
     private String youtubeCode;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getEpisode() {
-        return episode;
-    }
-
-    public void setEpisode(String episode) {
-        this.episode = episode;
-    }
-
-    public LocalDate getYouTubePublication() {
-        return youTubePublication;
-    }
-
-    public void setYouTubePublication(LocalDate youTubePublication) {
-        this.youTubePublication = youTubePublication;
-    }
-
-    public String getYoutubeCode() {
-        return youtubeCode;
-    }
-
-    public void setYoutubeCode(String youtubeCode) {
-        this.youtubeCode = youtubeCode;
-    }
 }
