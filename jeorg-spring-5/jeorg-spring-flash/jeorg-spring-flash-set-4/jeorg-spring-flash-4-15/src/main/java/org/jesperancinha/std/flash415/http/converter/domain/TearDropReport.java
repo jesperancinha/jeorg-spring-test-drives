@@ -1,47 +1,28 @@
 package org.jesperancinha.std.flash415.http.converter.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Value;
+
 import java.util.Set;
 
+@Value
+@Builder
+@AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class TearDropReport {
 
-    private Long totalCount;
+    @JsonProperty("totalCount")
+    Long totalCount;
 
-    private Long average;
+    @JsonProperty("average")
+    Long average;
 
-    private Long stdDeviation;
+    @JsonProperty("stdDeviation")
+    Long stdDeviation;
 
-    private Set<TearDropType> tearDropTypeSet;
-
-    public Long getTotalCount() {
-        return totalCount;
-    }
-
-    public void setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-    }
-
-    public Long getAverage() {
-        return average;
-    }
-
-    public void setAverage(Long average) {
-        this.average = average;
-    }
-
-    public Long getStdDeviation() {
-        return stdDeviation;
-    }
-
-    public void setStdDeviation(Long stdDeviation) {
-        this.stdDeviation = stdDeviation;
-    }
-
-    public Set<TearDropType> getTearDropTypeSet() {
-        return tearDropTypeSet;
-    }
-
-    public void setTearDropTypeSet(Set<TearDropType> tearDropTypeSet) {
-        this.tearDropTypeSet = tearDropTypeSet;
-    }
+    @JsonProperty("tearDropTypeSet")
+    Set<TearDropType> tearDropTypeSet;
 }
 

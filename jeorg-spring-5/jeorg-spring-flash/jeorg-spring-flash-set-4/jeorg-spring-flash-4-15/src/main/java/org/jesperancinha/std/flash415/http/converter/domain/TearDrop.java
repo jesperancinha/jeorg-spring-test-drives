@@ -1,24 +1,18 @@
 package org.jesperancinha.std.flash415.http.converter.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Value;
+
+@Value
+@Builder
+@AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class TearDrop {
+    @JsonProperty("count")
+    Long count;
 
-    private Long count;
-
-    private TearDropType tearDropType;
-
-    public Long getCount() {
-        return count;
-    }
-
-    public void setCount(Long count) {
-        this.count = count;
-    }
-
-    public TearDropType getTearDropType() {
-        return tearDropType;
-    }
-
-    public void setTearDropType(TearDropType tearDropType) {
-        this.tearDropType = tearDropType;
-    }
+    @JsonProperty("tearDropType")
+    TearDropType tearDropType;
 }
