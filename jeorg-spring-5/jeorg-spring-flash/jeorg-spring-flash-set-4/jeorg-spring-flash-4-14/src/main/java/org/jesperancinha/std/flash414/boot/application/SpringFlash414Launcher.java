@@ -16,7 +16,7 @@ public class SpringFlash414Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         Arrays.stream(this.getClass().getAnnotations()).forEach(annotation ->
         {
             BRIGHT_BLUE.printGenericLn(annotation);
