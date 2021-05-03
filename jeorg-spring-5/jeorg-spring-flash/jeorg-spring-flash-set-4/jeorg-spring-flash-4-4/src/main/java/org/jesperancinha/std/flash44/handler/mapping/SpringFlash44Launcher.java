@@ -37,7 +37,7 @@ public class SpringFlash44Launcher {
     @RequestMapping(value = "/")
     @ResponseBody
     public Stream<SpringBeanMappedInstance> handleRequest() {
-        Map<String, HandlerMapping> runningBeans = BeanFactoryUtils.beansOfTypeIncludingAncestors(
+        final var runningBeans = BeanFactoryUtils.beansOfTypeIncludingAncestors(
                 context, HandlerMapping.class, true, false);
         maxLineCharsGlobal = 200;
         titleSpread = 200;
