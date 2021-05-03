@@ -1,7 +1,7 @@
 package org.jesperancinha.std.flash48.userservice;
 
 import org.jesperancinha.std.flash48.userservice.oauth.domain.User;
-import org.jesperancinha.std.flash48.userservice.oauth.repository.UserRepository;
+import org.jesperancinha.std.flash48.userservice.oauth.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,11 +23,11 @@ import java.util.List;
 public class SpringFlash48Launcher {
 
     private final PasswordEncoder passwordEncoder;
-    private final UserRepository userRepository;
+    private final UserService userService;
 
-    public SpringFlash48Launcher(PasswordEncoder passwordEncoder, UserRepository userRepository) {
+    public SpringFlash48Launcher(PasswordEncoder passwordEncoder, UserService userService) {
         this.passwordEncoder = passwordEncoder;
-        this.userRepository = userRepository;
+        this.userService = userService;
     }
 
     public static void main(String[] args) {
@@ -56,11 +56,11 @@ public class SpringFlash48Launcher {
         user.setEmail(email);
         user.setRole("ROLE_ADMIN");
         user.setDate(new Timestamp(LocalDateTime.now().toInstant(ZoneOffset.UTC).getNano()));
-        userRepository.save(user);
+        userService.saveUser(user);
     }
 
     @GetMapping("/concerts")
-    List<String> allConcerts(){
+    List<String> allConcerts() {
         return Arrays.asList(
                 "Madonna - Holiday (Live Aid 1985)",
                 "Queen - Radio Ga Ga (Live Aid 1985)"
