@@ -10,7 +10,6 @@ Exploring SpringBootContextLoader for Testing in Spring
 
 1. [http://localhost:8081](http://localhost:8081)
 
-```
 ## How to run
 
 If you run spring boot from the command line, you should not see any issue:

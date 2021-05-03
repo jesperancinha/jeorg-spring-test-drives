@@ -34,6 +34,14 @@ class SpringFlash413LauncherTest {
             }
         });
         final String power = (String) context.getBean("power");
+        ConsolerizerComposer.out()
+                .cyan("1. We create a delegate")
+                .cyan("2. We create a bootstrap context")
+                .cyan("3. We create a bootstrapper and set the bootstrap context to it")
+                .cyan("4. Having the bootstrapper, we build a contxct configuration")
+                .cyan("5. Once this is done, we create an application context by loading the context configuration")
+                .cyan("6. The application context contains all the beans configured by the launcher")
+                .reset();
         ConsolerizerComposer
                 .out(" ")
                 .green("We are able to load the power.")

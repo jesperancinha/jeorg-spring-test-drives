@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class SpringFlash413Launcher {
     public static void main(String[] args) {
-        final ConfigurableApplicationContext run = SpringApplication.run(new Class[]{SpringFlash413Launcher.class}, args);
+       SpringApplication.run(new Class[]{SpringFlash413Launcher.class}, args);
     }
 }
