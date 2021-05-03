@@ -28,30 +28,16 @@ public class SpringFlash47Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        jdbcTemplate.execute("create table flowers(" +
-                "ID int not null auto_increment," +
-                "SPECIES VARCHAR(255)," +
-                "AVAILABLE INT" +
-                ")");
+    public void run(String... args) {
+        initializeDatabase();
 
-        jdbcTemplate.update("insert into flowers (species, available) values ( ?,? )", "tulip", 10);
-        jdbcTemplate.update("insert into flowers (species, available) values ( ?,? )", "rose", 100);
-        jdbcTemplate.update("insert into flowers (species, available) values ( ?,? )", "carnations", 1000);
+        final var flowers = createData();
 
+        ConsolerizerComposer.outSpace()
+                .random("There are in total %d💐 flowers in the database", flowers)
+                .reset();
 
-        final String fullMessageStatus = jdbcTemplate.query("select * from flowers", new ResultSetExtractor<String>() {
-            @Override
-            public String extractData(ResultSet rs) throws SQLException, DataAccessException {
-                final var sb = new StringBuilder();
-                while (rs.next()) {
-                    sb.append(String.format("There are %d %s available\n",
-                            rs.getInt("available"),
-                            rs.getString("species")));
-                }
-                return sb.toString();
-            }
-        });
+        final String fullMessageStatus = getFlowerSummary();
 
         ConsolerizerComposer.out(" ")
                 .magenta("We got the flowers result from the database using")
@@ -61,5 +47,32 @@ public class SpringFlash47Launcher implements CommandLineRunner {
                 .brightCyan(fullMessageStatus)
                 .toConsoleLn();
 
+    }
+
+    private String getFlowerSummary() {
+        return jdbcTemplate.query("select * from flowers", rs -> {
+            final var sb = new StringBuilder();
+            while (rs.next()) {
+                sb.append(String.format("There are %d %s available\n",
+                        rs.getInt("available"),
+                        rs.getString("species")));
+            }
+            return sb.toString();
+        });
+    }
+
+    private int createData() {
+        final int tulip = jdbcTemplate.update("insert into flowers (species, available) values ( ?,? )", "tulip", 10);
+        final int rose = jdbcTemplate.update("insert into flowers (species, available) values ( ?,? )", "rose", 100);
+        final int carnations = jdbcTemplate.update("insert into flowers (species, available) values ( ?,? )", "carnations", 1000);
+        return tulip + rose + carnations;
+    }
+
+    private void initializeDatabase() {
+        jdbcTemplate.execute("create table flowers(" +
+                "ID int not null auto_increment," +
+                "SPECIES VARCHAR(255)," +
+                "AVAILABLE INT" +
+                ")");
     }
 }
