@@ -18,7 +18,7 @@ public class SpringFlash49AuditEventListener extends AbstractAuditListener {
     }
 
     @Override
-    protected void onAuditEvent(AuditEvent event) {
+    protected void onAuditEvent(final AuditEvent event) {
         ConsolerizerComposer
                 .out(" ")
                 .brightMagenta("This event has been thrown by the AbstractAuditListener ->")

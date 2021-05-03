@@ -1,7 +1,7 @@
 package org.jesperancinha.std.flash49.actuator;
 
 import org.jesperancinha.std.flash49.actuator.oauth.domain.User;
-import org.jesperancinha.std.flash49.actuator.oauth.repository.UserRepository;
+import org.jesperancinha.std.flash49.actuator.oauth.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,11 +23,11 @@ import java.util.List;
 public class SpringFlash49Launcher {
 
     private final PasswordEncoder passwordEncoder;
-    private final UserRepository userRepository;
+    private final UserService userService;
 
-    public SpringFlash49Launcher(PasswordEncoder passwordEncoder, UserRepository userRepository) {
+    public SpringFlash49Launcher(PasswordEncoder passwordEncoder, UserService userService) {
         this.passwordEncoder = passwordEncoder;
-        this.userRepository = userRepository;
+        this.userService = userService;
     }
 
     public static void main(String[] args) {
@@ -56,11 +56,11 @@ public class SpringFlash49Launcher {
         user.setEmail(email);
         user.setRole("ROLE_ADMIN");
         user.setDate(new Timestamp(LocalDateTime.now().toInstant(ZoneOffset.UTC).getNano()));
-        userRepository.save(user);
+        userService.saveUser(user);
     }
 
     @GetMapping("/concerts")
-    List<String> allConcerts() {
+    public List<String> allConcerts() {
         return Collections.singletonList(
                 "Nirvana - Aneurysm (Live At The Paramount, Seattle / 1991)"
         );
