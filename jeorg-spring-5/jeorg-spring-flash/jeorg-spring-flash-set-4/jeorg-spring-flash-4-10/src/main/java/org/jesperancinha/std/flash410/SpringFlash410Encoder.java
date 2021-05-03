@@ -1,13 +1,12 @@
 package org.jesperancinha.std.flash410;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 @SpringBootApplication
 @Profile("encode")
@@ -22,10 +21,14 @@ public class SpringFlash410Encoder implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String hashedPassword = passwordEncoder.encode(password);
-        BLUE.printGenericLn(hashedPassword);
-        System.exit(0);
+    public void run(String... args) {
+        final var passwordEncoder = new BCryptPasswordEncoder();
+        final var hashedPassword = passwordEncoder.encode(password);
+
+        ConsolerizerComposer.outSpace()
+                .blue("The encoded password for: %s", password)
+                .blue("is")
+                .blue(hashedPassword)
+                .reset();
     }
 }

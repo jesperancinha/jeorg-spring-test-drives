@@ -1,3 +1,4 @@
+drop table if exists user_roles;
 drop table if exists users;
 
 create table if not exists users
@@ -7,8 +8,6 @@ create table if not exists users
     enabled  tinyint      not null,
     primary key (username)
 );
-
-drop table if exists user_roles;
 
 create table if not exists user_roles
 (

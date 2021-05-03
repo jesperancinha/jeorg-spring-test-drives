@@ -32,7 +32,7 @@ lsof -i :8081
 1. Run Spring Boot SpringFlash410Launcher
 
 ```bash
-mvn clean install spring-boot:run
+mvn clean install spring-boot:run -Pmain -Dspring-boot.run.profiles=main
 ```
 
 1.1. [http://localhost:8081/login](http://localhost:8081/login)
@@ -42,7 +42,13 @@ mvn clean install spring-boot:run
 2. See how encoding works with SpringFlash410Encoder
 
 ```bash
-mvn clean install spring-boot:run -Dspring-boot.run.profiles=encoder
+mvn clean install spring-boot:run -Pencode -Dspring-boot.run.profiles=encode
+```
+
+Useful commands:
+- Check all active profiles
+```bash
+mvn help:active-profiles
 ```
 
 ## References

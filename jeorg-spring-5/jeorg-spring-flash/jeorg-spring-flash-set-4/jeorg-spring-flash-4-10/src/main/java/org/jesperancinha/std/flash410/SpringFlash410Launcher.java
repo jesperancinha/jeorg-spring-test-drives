@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,8 +24,11 @@ public class SpringFlash410Launcher implements CommandLineRunner {
 
     private final JdbcTemplate jdbcTemplate;
 
-    public SpringFlash410Launcher(JdbcTemplate jdbcTemplate) {
+    private final PasswordEncoder passwordEncoder;
+
+    public SpringFlash410Launcher(JdbcTemplate jdbcTemplate, PasswordEncoder passwordEncoder) {
         this.jdbcTemplate = jdbcTemplate;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public static void main(String[] args) {
@@ -33,8 +36,7 @@ public class SpringFlash410Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        final var passwordEncoder = new BCryptPasswordEncoder();
+    public void run(String... args) {
         jdbcTemplate.update(
                 "insert into users(username, password, enabled)\n" +
                         "values (?,?,?);", "admin", passwordEncoder.encode("admin"), true);
