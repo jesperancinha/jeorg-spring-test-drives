@@ -14,7 +14,6 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YE
 @SpringBootApplication
 public class SpringFlash412Launcher implements CommandLineRunner {
 
-
     private final ApplicationContext applicationContext;
 
     public SpringFlash412Launcher(ApplicationContext applicationContext) {
@@ -26,7 +25,7 @@ public class SpringFlash412Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         final var beans = (Beans) applicationContext.getBean("beans");
         final var pork = (Pork) applicationContext.getBean("pork");
 
@@ -34,11 +33,11 @@ public class SpringFlash412Launcher implements CommandLineRunner {
         YELLOW.printGenericLn(pork.showFood());
 
         try {
-            final Object food = applicationContext.getBean("food");
+             applicationContext.getBean("food");
         } catch (Throwable e) {
             RED.printExpectedException("This is what we get if the id is not found. @Component is responsible for attributing the id", e);
         }
-        ConsolerizerComposer.out(" ")
+        ConsolerizerComposer.outSpace()
                 .brightMagenta("Let's make supper.")
                 .magenta("We add %s.", pork)
                 .brightMagenta("To our %s.", beans)
@@ -48,6 +47,6 @@ public class SpringFlash412Launcher implements CommandLineRunner {
                 .cyan("The purpose of this exercise is to understand bean Id's")
                 .newLine()
                 .orange("Trying to get %s will not work", "food")
-                .toConsoleLn();
+                .reset();
     }
 }
