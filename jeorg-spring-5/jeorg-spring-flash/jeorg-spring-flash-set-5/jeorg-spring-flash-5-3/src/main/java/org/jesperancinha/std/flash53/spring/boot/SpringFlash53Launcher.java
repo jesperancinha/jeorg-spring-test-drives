@@ -22,7 +22,7 @@ public class SpringFlash53Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         ConsolerizerComposer.out(" ")
                 .yellow("The @SpringBootAnnotation is composed of a lot of other annotations")
                 .newLine()
