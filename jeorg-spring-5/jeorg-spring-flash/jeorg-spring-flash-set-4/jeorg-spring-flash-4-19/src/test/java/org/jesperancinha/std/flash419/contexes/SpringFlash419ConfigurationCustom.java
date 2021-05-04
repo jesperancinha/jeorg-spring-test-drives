@@ -14,7 +14,7 @@ public class SpringFlash419ConfigurationCustom {
     public TestApplicationContext testApplicationContext() {
         final TestApplicationContext testApplicationContext = TestUtils.createTestApplicationContext();
         testApplicationContext.refresh();
-        testApplicationContext.registerBean("songObject", new SongObject());
+        testApplicationContext.registerBean("songObject", SongObject.builder().build());
         return testApplicationContext;
     }
 }

@@ -4,15 +4,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Arrays;
-import java.util.List;
 
 @Configuration
 public class SpringFlash419Configuration {
 
     @Bean
-    public SongObject songObject(){
-        final SongObject songObject = new SongObject();
-        List<String> songList = Arrays.asList(
+    public SongObject songObject() {
+        return SongObject.builder().allSongs(Arrays.asList(
                 "Beyonce feat. Shakira - Beautiful Liar (Freemasons Club Vox) 0:00:00",
                 "Moby - Disco Lies (Freemasons Club Mix) 0:09:39",
                 "Kylie Minogue - The One (Freemasons Club Mix) 0:17:16",
@@ -24,8 +22,6 @@ public class SpringFlash419Configuration {
                 "Rihanna - Only Girl In The World (Freemasons Remix) 1:00:26",
                 "Freemasons Feat. Sophie Ellis Bextor- Heartbreak (Club Mix) 1:06:32",
                 "Beyonce - De Javu (Freemasons Club Mix) 1:14:00"
-        );
-        songObject.setAllSongs(songList);
-        return songObject;
+        )).build();
     }
 }
