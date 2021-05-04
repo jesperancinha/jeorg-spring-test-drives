@@ -25,22 +25,25 @@ public class SpringFlash52Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        final DelegatingFilterProxyRegistrationBean securityFilterChainRegistration = applicationContext.getBean("securityFilterChainRegistration", DelegatingFilterProxyRegistrationBean.class);
-        final DelegatingFilterProxy delegatingFilterProxy = securityFilterChainRegistration.getFilter();
-        ConsolerizerComposer.out(" ")
+    public void run(String... args) {
+        final var securityFilterChainRegistration = applicationContext.getBean("securityFilterChainRegistration", DelegatingFilterProxyRegistrationBean.class);
+        final var delegatingFilterProxy = securityFilterChainRegistration.getFilter();
+        ConsolerizerComposer.outSpace()
+                .none()
                 .orange("This is the DelegatingFilterProxy")
-                .newLine()
                 .magenta(delegatingFilterProxy)
                 .newLine()
+                .orange("getContextAttribute")
                 .brightWhite(delegatingFilterProxy.getContextAttribute())
                 .newLine()
+                .orange("getEnvironment")
                 .yellow(delegatingFilterProxy.getEnvironment())
                 .newLine()
+                .orange("getFilterConfig")
                 .brightWhite(delegatingFilterProxy.getFilterConfig())
                 .newLine()
                 .orange("Isn't it beautiful?")
-                .toConsoleLn();
+                .reset();
     }
 
 }
