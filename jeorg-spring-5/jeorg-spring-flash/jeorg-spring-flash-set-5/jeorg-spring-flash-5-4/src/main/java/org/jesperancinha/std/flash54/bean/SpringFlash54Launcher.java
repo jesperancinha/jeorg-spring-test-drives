@@ -16,7 +16,7 @@ public class SpringFlash54Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         ConsolerizerComposer
                 .out(" ")
                 .red("Our tomato has grown 🍅")

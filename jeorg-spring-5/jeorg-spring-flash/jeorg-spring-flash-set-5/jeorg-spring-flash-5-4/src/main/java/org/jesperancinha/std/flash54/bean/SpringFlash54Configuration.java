@@ -6,8 +6,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringFlash54Configuration {
 
-    @Bean(initMethod = "growTomato", destroyMethod = "eatTomato")
-    public Tomato tomato(){
-        return new Tomato("This is a good tomato!");
+    @Bean(initMethod = "growTomato",
+            destroyMethod = "eatTomato")
+    public Tomato tomato(final Tomato originalTomato) {
+        return originalTomato;
     }
 }
