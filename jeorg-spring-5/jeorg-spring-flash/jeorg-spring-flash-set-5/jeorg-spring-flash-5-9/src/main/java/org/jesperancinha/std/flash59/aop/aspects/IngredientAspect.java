@@ -16,30 +16,30 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YE
 public class IngredientAspect {
 
     @Around("execution(* org.jesperancinha.std.flash59.aop.service.Recipe.bake())")
-    public String aroundBake1(ProceedingJoinPoint pjp) throws Throwable {
-        YELLOW.printGenericLn("Around with execution -> %s", pjp.getSignature().getName());
-        final String proceed = (String) pjp.proceed();
+    public String aroundBake1(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        YELLOW.printGenericLn("Around with signature -> %s", proceedingJoinPoint.getSignature().getName());
+        final String proceed = (String) proceedingJoinPoint.proceed();
         return "Ok1" + proceed;
     }
 
     @Around("execution(* org.jesperancinha.std.flash59.aop.service.Recipe.bake())")
-    public String aroundBake2(ProceedingJoinPoint pjp) throws Throwable {
-        YELLOW.printGenericLn("Around with execution -> %s", pjp.getSignature().getName());
-        final String proceed = (String) pjp.proceed();
+    public String aroundBake2(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        YELLOW.printGenericLn("Around with signature -> %s", proceedingJoinPoint.getSignature().getName());
+        final String proceed = (String) proceedingJoinPoint.proceed();
         return "Ok2" + proceed;
     }
 
     @Around("@annotation(org.jesperancinha.std.flash59.aop.annotation.Diet)")
-    public String allRound(ProceedingJoinPoint pjp) throws Throwable {
-        YELLOW.printGenericLn("Around with annotation -> %s", pjp.getSignature().getName());
-        final String proceed = (String) pjp.proceed();
+    public String allRound(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        YELLOW.printGenericLn("Around with signature -> %s", proceedingJoinPoint.getSignature().getName());
+        final String proceed = (String) proceedingJoinPoint.proceed();
         return "Ok2" + proceed;
     }
 
     @Before("execution(* org.jesperancinha.std.flash59.aop.service.Recipe.bake())")
     public void before(JoinPoint joinPoint) {
         ConsolerizerComposer.outSpace()
-                .newLine()
+                .yellow("Before with signature %s", joinPoint.getSignature().getName())
                 .black()
                 .bgGreen(joinPoint)
                 .green(joinPoint.getSignature())
@@ -54,7 +54,7 @@ public class IngredientAspect {
     @After("execution(* org.jesperancinha.std.flash59.aop.service.Recipe.bake())")
     public void after(JoinPoint joinPoint) {
         ConsolerizerComposer.outSpace()
-                .newLine()
+                .yellow("After with signature %s", joinPoint.getSignature().getName())
                 .black()
                 .bgGreen(joinPoint)
                 .green(joinPoint.getSignature())

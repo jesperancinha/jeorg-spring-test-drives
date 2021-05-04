@@ -21,7 +21,8 @@ public class RecipeImpl implements Recipe {
                 .magenta("I just baked a nice cake with only")
                 .brightMagenta("these ingredients")
                 .newLine()
-                .yellow(ingredients);
+                .yellow(ingredients)
+                .reset();
 
         return "Baked Cake";
     }
@@ -33,7 +34,8 @@ public class RecipeImpl implements Recipe {
                 .magenta("I just baked a nice diet cake with only")
                 .brightMagenta("these ingredients")
                 .newLine()
-                .yellow(ingredients);
+                .yellow(ingredients)
+                .reset();
 
         return "Diet Baked Cake";
     }

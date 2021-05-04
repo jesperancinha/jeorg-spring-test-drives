@@ -20,16 +20,20 @@ public class SpringFlash59Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         ConsolerizerComposer.outSpace()
-                .newLine()
+                .unicorns(50)
+                .yellow("Here is the result of bake:")
                 .black()
                 .bgYellow(recipe.bake())
+                .unicorns(50)
                 .reset();
         ConsolerizerComposer.outSpace()
-                .newLine()
+                .unicorns(50)
+                .yellow("Here is the result of bakeDiet:")
                 .black()
                 .bgYellow(recipe.bakeDiet())
+                .unicorns(50)
                 .reset();
     }
 }
