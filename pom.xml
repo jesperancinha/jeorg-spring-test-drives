@@ -96,6 +96,7 @@
         <spring-security-oauth2-client.version>5.4.5</spring-security-oauth2-client.version>
         <spring-security-oauth2.version>2.5.0.RELEASE</spring-security-oauth2.version>
         <spring-hateoas.version>1.2.4</spring-hateoas.version>
+        <groovy.version>3.0.7</groovy.version>
     </properties>
 
     <build>
@@ -371,6 +372,11 @@
                 <groupId>org.springframework.hateoas</groupId>
                 <artifactId>spring-hateoas</artifactId>
                 <version>${spring-hateoas.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy</artifactId>
+                <version>${groovy.version}</version>
             </dependency>
 
             <!-- Test dependencies -->
