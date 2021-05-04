@@ -35,3 +35,9 @@ cookies.txt
 # Logs
 tmlog.lck
 tmlog*.log
+
+# Coveralls
+.coveralls.yml
+
+# Codecov
+codecov.yml
