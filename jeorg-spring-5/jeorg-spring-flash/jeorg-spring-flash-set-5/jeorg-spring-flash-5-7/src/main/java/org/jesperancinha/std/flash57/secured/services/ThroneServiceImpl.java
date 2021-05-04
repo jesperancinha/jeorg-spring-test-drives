@@ -13,7 +13,7 @@ import java.util.List;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 @Service
-@Profile({"prof", "!test && !acc"})
+@Profile({"prod", "!test && !acc"})
 public class ThroneServiceImpl implements ThroneService {
 
     private final ThroneRepository throneRepository;
@@ -57,7 +57,7 @@ public class ThroneServiceImpl implements ThroneService {
      */
     @PostAuthorize("isAuthenticated() && returnObject.keeper == authentication.name")
     public Throne getThrone(final Long id) {
-        final Throne throne = throneRepository.findById(id).orElse(null);
+        final var throne = throneRepository.getOne(1L);
         ORANGE.printGenericLn(throne);
         return throne;
     }

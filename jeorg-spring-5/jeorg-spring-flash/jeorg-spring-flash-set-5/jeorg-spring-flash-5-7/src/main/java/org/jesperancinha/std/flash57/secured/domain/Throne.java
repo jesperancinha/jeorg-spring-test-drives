@@ -1,6 +1,9 @@
 package org.jesperancinha.std.flash57.secured.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.jesperancinha.std.flash57.secured.services.ThroneType;
 
 import javax.persistence.Column;
@@ -15,6 +18,9 @@ import javax.persistence.Table;
 @Entity
 @Table
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Throne {
 
     @Id

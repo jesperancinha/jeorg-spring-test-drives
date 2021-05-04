@@ -27,7 +27,7 @@ public class ThroneServiceSecuredImpl implements ThroneService {
      * @param throne
      * @return
      */
-    @Secured({"IS_AUTHENTICATED_FULLY", "ROLE_RULER"})
+    @Secured({"ROLE_RULER"})
     public ThroneDto createThrone(Throne throne) {
         final Throne save = this.throneRepository.save(throne);
         return ThroneDto
@@ -43,7 +43,7 @@ public class ThroneServiceSecuredImpl implements ThroneService {
      *
      * @param throne
      */
-    @Secured({"IS_AUTHENTICATED_FULLY", "ROLE_RULER"})
+    @Secured({"ROLE_RULER"})
     public void updateThrone(Throne throne) {
         this.throneRepository.save(throne);
     }
@@ -56,12 +56,12 @@ public class ThroneServiceSecuredImpl implements ThroneService {
      */
     @Secured({"IS_AUTHENTICATED_FULLY", "ROLE_RULER"})
     public Throne getThrone(final Long id) {
-        final Throne throne = throneRepository.findById(id).orElse(null);
+        final var throne = throneRepository.getOne(id);
         ORANGE.printGenericLn(throne);
         return throne;
     }
 
-    @Secured({"IS_AUTHENTICATED_FULLY", "ROLE_RULER"})
+    @Secured({"ROLE_RULER"})
     public List<Throne> getAll() {
         return throneRepository.findAll();
     }
@@ -71,12 +71,12 @@ public class ThroneServiceSecuredImpl implements ThroneService {
      *
      * @param throne
      */
-    @Secured({"IS_AUTHENTICATED_FULLY", "ROLE_RULER"})
+    @Secured({"ROLE_RULER"})
     public void deleteThrone(Throne throne) {
         throneRepository.delete(throne);
     }
 
-    @Secured({"IS_AUTHENTICATED_FULLY", "ROLE_RULER", "ROLE_DANCER", "ROLE_ADMIN"})
+    @Secured({"ROLE_RULER", "ROLE_DANCER", "ROLE_ADMIN"})
     public String dance() {
         return "We would Pop Champagne and Raise our tones!";
     }

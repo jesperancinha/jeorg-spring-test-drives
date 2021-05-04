@@ -56,7 +56,7 @@ public class ThroneServiceJsr250Impl implements ThroneService {
      */
     @RolesAllowed("ROLE_RULER")
     public Throne getThrone(final Long id) {
-        final Throne throne = throneRepository.findById(id).orElse(null);
+        final var throne = throneRepository.getOne(id);
         ORANGE.printGenericLn(throne);
         return throne;
     }
