@@ -26,7 +26,7 @@ public class SpringFlash510Launcher implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        DefaultListableBeanFactory bf = new DefaultListableBeanFactory(applicationContext);
+        final var bf = new DefaultListableBeanFactory(applicationContext);
         final var blackBean = bf.getBean("blackBean");
         ConsolerizerComposer.outSpace()
                 .yellow("We have gotten the %s by using the DefaultListableBeanFactory", blackBean);

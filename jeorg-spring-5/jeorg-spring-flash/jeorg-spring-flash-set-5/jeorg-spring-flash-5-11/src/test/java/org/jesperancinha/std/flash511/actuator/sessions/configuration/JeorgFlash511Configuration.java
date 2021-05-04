@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 public class JeorgFlash511Configuration {
 
     @Bean
-    public String pepper(){
+    public String pepper() {
         return "Give it away, give it away, give it away, now";
     }
 }

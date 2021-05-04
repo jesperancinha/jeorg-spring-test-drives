@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash511.actuator.sessions;
 
-import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
