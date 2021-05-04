@@ -19,9 +19,8 @@ public class SpringFlash512CommandLineLauncher implements CommandLineRunner {
         SpringApplication.run(SpringFlash512CommandLineLauncher.class, args);
     }
 
-
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         ConsolerizerComposer.outSpace()
                 .cyan(title("CommandLineRunner"))
                 .outList("We've started our application with non option args %s %s %s",

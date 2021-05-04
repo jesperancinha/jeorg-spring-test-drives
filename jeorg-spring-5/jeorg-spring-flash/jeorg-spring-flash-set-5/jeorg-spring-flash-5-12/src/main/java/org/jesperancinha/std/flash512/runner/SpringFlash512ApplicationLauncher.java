@@ -22,7 +22,7 @@ public class SpringFlash512ApplicationLauncher implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         final List<Object[]> collect = args.getOptionNames().stream().map(option ->
                 new Object[]{option, args.getOptionValues(option)})
                 .collect(Collectors.toList());
@@ -31,7 +31,7 @@ public class SpringFlash512ApplicationLauncher implements ApplicationRunner {
                 .magenta("We've started our application with non option args %s", args.getNonOptionArgs())
                 .magenta("We've started our application with option names %s", args.getOptionNames())
                 .orange()
-                .outList("This is one option name %s for value %s",ConsolerizerVars.createListFromObjects(collect))
+                .outList("This is one option name %s for value %s", ConsolerizerVars.createListFromObjects(collect))
                 .magenta("We've started our application with an original source of %s", Arrays.stream(args.getSourceArgs()).collect(Collectors.toList()))
                 .blue()
                 .bgBlue()
