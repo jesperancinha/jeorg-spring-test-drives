@@ -1,45 +1,30 @@
 package org.jesperancinha.std.flash418.controller.advice;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Value;
+
 import java.time.LocalDate;
 
+@Value
+@Builder
+@AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Song {
 
-    private String name;
+    @JsonProperty("name")
+    String name;
 
-    private String artist;
+    @JsonProperty("artist")
+    String artist;
 
-    private LocalDate hitDate;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
-    public LocalDate getHitDate() {
-        return hitDate;
-    }
-
-    public void setHitDate(LocalDate hitDate) {
-        this.hitDate = hitDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Song{" +
-                "name='" + name + '\'' +
-                ", artist='" + artist + '\'' +
-                ", hitDate=" + hitDate +
-                '}';
-    }
+    @JsonProperty("hitDate")
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    LocalDate hitDate;
 }

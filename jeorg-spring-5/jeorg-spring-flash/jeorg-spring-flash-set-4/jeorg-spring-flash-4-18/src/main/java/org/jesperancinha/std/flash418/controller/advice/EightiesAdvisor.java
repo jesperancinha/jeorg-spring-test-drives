@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash418.controller.advice;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -11,6 +12,8 @@ import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
+
 @ControllerAdvice
 public class EightiesAdvisor extends ResponseEntityExceptionHandler {
 
@@ -21,6 +24,13 @@ public class EightiesAdvisor extends ResponseEntityExceptionHandler {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("message", "This music is not from the eighties");
+        body.put("error", ex);
+
+        ConsolerizerComposer.outSpace()
+                .magenta(title("ResponseEntityExceptionHandler"))
+                .yellow("Do bare in mind that the ResponseEntityExceptionHandler is not necessary")
+                .yellow("It just means that the advisor will inherit Spring handlers which conform to Spring standards")
+                .reset();
 
         return new ResponseEntity<>(body, HttpStatus.NOT_ACCEPTABLE);
     }

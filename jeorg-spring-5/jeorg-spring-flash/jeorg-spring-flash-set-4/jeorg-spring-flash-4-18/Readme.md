@@ -9,8 +9,11 @@ Exploring @ControllerAdvice in Spring
 ## Endpoints
 
 1. [http://localhost:8081](http://localhost:8081)
+     
+## Supporting modules
 
-```
+1. [jeorg-spring-flash-3-10](./../../jeorg-spring-flash-set-3/jeorg-spring-flash-3-10) - Converters
+
 ## How to run
 
 If you run spring boot from the command line, you should not see any issue:
