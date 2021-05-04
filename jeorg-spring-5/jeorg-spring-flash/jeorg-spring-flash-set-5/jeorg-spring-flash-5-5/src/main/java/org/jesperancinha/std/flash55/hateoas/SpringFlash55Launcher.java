@@ -23,17 +23,29 @@ public class SpringFlash55Launcher implements CommandLineRunner {
 
     }
 
+    /**
+     * The idea of this endpoint is to link to /endless endpoint.
+     * The latter will link back to this one
+     *
+     * @return {@link ImmuneCells} with a HATEOAS link
+     */
     @GetMapping("/")
-    public ImmuneCells getAllCells(){
-        final ImmuneCells immuneCells = new ImmuneCells();
+    public ImmuneCells getAllCells() {
+        final var immuneCells = new ImmuneCells();
         immuneCells.add(Link.of("/endless"));
         return immuneCells;
     }
 
 
+    /**
+     * The idea of this endpoint is to link to / endpoint.
+     * The latter will link back to this one
+     *
+     * @return {@link ImmuneCells} with a HATEOAS link
+     */
     @GetMapping("/endless")
-    public ImmuneCells getAllCellsEndless(){
-        final ImmuneCells immuneCells = new ImmuneCells();
+    public ImmuneCells getAllCellsEndless() {
+        final var immuneCells = new ImmuneCells();
         immuneCells.add(Link.of("/"));
         return immuneCells;
     }
