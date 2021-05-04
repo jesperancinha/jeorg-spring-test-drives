@@ -4,8 +4,6 @@ import org.jesperancinha.std.flash57.secured.domain.Throne;
 import org.jesperancinha.std.flash57.secured.dto.ThroneDto;
 import org.jesperancinha.std.flash57.secured.repository.ThroneRepository;
 import org.springframework.context.annotation.Profile;
-import org.springframework.security.access.prepost.PostAuthorize;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.security.RolesAllowed;
@@ -32,10 +30,11 @@ public class ThroneServiceJsr250Impl implements ThroneService {
     @RolesAllowed("ROLE_RULER")
     public ThroneDto createThrone(Throne throne) {
         final Throne save = this.throneRepository.save(throne);
-        final ThroneDto throneDto1 = new ThroneDto();
-        throneDto1.setThroneType(save.getThroneType());
-        throneDto1.setKeeper(save.getKeeper());
-        return throneDto1;
+        return ThroneDto
+                .builder()
+                .throneType(save.getThroneType())
+                .keeper(save.getKeeper())
+                .build();
     }
 
 
@@ -77,7 +76,7 @@ public class ThroneServiceJsr250Impl implements ThroneService {
         throneRepository.delete(throne);
     }
 
-    @RolesAllowed({"ROLE_RULER","ROLE_ADMIN","ROLE_DANCER"})
+    @RolesAllowed({"ROLE_RULER", "ROLE_ADMIN", "ROLE_DANCER"})
     public String dance() {
         return "We would Pop Champagne and Raise our tones!";
     }

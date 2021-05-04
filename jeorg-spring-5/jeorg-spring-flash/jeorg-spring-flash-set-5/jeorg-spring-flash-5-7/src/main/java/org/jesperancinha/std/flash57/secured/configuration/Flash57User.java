@@ -1,82 +1,24 @@
 package org.jesperancinha.std.flash57.secured.configuration;
 
-import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode.Exclude;
+import lombok.Value;
+
 import java.util.List;
-import java.util.Objects;
 
+@Value
+@Builder
+@AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Flash57User {
-    private String name;
-    private String password;
-    private List<String> roles;
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Flash57User)) return false;
-        Flash57User flash57User = (Flash57User) o;
-        return getName().equals(flash57User.getName()) && getPassword().equals(flash57User.getPassword());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getName(), getPassword());
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public List<String> getRoles() {
-        return roles;
-    }
-
-    public static class FlashUserBuilder {
-        private String name;
-        private String password;
-        private List<String> roles;
-
-        public static FlashUserBuilder flashUserBuilder() {
-            return new FlashUserBuilder();
-        }
-
-        public FlashUserBuilder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        public FlashUserBuilder password(String password) {
-            this.password = password;
-            return this;
-        }
-
-        public FlashUserBuilder roles(String ... roles) {
-            this.roles = Arrays.asList(roles);
-            return this;
-        }
-
-        public Flash57User build() {
-            final var flashUser = new Flash57User();
-            flashUser.setName(name);
-            flashUser.setPassword(password);
-            flashUser.setRoles(roles);
-            return flashUser;
-        }
-    }
+    @JsonProperty("name")
+    String name;
+    @JsonProperty("password")
+    String password;
+    @JsonProperty("roles")
+    @Exclude
+    List<String> roles;
 }

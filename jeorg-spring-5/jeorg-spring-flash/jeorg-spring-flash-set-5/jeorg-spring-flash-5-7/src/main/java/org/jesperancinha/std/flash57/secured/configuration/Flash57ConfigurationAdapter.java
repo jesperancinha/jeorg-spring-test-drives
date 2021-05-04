@@ -13,7 +13,7 @@ public class Flash57ConfigurationAdapter extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/**").hasAnyRole("RULER","DANCER","MERCHANT")
+                .antMatchers("/**").hasAnyRole("RULER", "DANCER", "MERCHANT")
                 .anyRequest()
                 .authenticated()
                 .and()

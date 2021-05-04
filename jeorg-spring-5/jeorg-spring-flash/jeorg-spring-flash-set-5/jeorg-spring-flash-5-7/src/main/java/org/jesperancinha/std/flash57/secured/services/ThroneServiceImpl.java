@@ -31,10 +31,11 @@ public class ThroneServiceImpl implements ThroneService {
     @PreAuthorize("isAuthenticated() && hasRole('ROLE_RULER') && #throne.keeper != null &&  #throne.keeper == authentication.name")
     public ThroneDto createThrone(Throne throne) {
         final Throne save = this.throneRepository.save(throne);
-        final ThroneDto throneDto1 = new ThroneDto();
-        throneDto1.setThroneType(save.getThroneType());
-        throneDto1.setKeeper(save.getKeeper());
-        return throneDto1;
+        return ThroneDto
+                .builder()
+                .throneType(save.getThroneType())
+                .keeper(save.getKeeper())
+                .build();
     }
 
 

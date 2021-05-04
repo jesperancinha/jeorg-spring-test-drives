@@ -5,24 +5,17 @@ import org.jesperancinha.std.flash57.secured.dto.ThroneDto;
 import org.jesperancinha.std.flash57.secured.services.ThroneService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @RestController
 public class Flash57Controller {
@@ -44,16 +37,17 @@ public class Flash57Controller {
     }
 
     @GetMapping("/thrones/{id}")
-    public 
-    Throne jewel(
+    public Throne jewel(
             @PathVariable
                     Long id) {
         return throneService.getThrone(id);
     }
 
-    @PostMapping(path = "/thrones", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/thrones",
+            consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ThroneDto> Jewel(
-            @RequestBody ThroneDto throneDto) {
+            @RequestBody
+                    ThroneDto throneDto) {
         Throne throne = new Throne();
         throne.setThroneType(throneDto.getThroneType());
         throne.setKeeper(throneDto.getKeeper());

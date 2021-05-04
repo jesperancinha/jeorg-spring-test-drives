@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash57.secured.domain;
 
+import lombok.Data;
 import org.jesperancinha.std.flash57.secured.services.ThroneType;
 
 import javax.persistence.Column;
@@ -13,6 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
+@Data
 public class Throne {
 
     @Id
@@ -21,42 +23,11 @@ public class Throne {
     private Long id;
 
     @Column
-	@Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private ThroneType throneType;
 
     @Column
     private String keeper;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public ThroneType getThroneType() {
-        return throneType;
-    }
-
-    public void setThroneType(ThroneType throneType) {
-        this.throneType = throneType;
-    }
-
-    public String getKeeper() {
-        return keeper;
-    }
-
-    public void setKeeper(String keeper) {
-        this.keeper = keeper;
-    }
-
-    @Override
-    public String toString() {
-        return "Throne{" +
-                "id=" + id +
-                ", throneType=" + throneType +
-                ", keeper='" + keeper + '\'' +
-                '}';
-    }
 }
