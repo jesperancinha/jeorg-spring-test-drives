@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -28,7 +27,7 @@ public class SpringFlash513Launcher implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         final var restTemplate = new RestTemplate();
         final var casket = new Casket();
         casket.setBrand("Chiquita");
@@ -79,7 +78,7 @@ public class SpringFlash513Launcher implements ApplicationRunner {
                 .brightBlue("We just received your casket filled with")
                 .brightGreen(casket)
                 .reset();
-        httpServletResponse.addHeader("Location","http://joaofilipesabinoesperancinha.nl");
+        httpServletResponse.addHeader("Location", "http://joaofilipesabinoesperancinha.nl");
         return casket;
     }
 }
