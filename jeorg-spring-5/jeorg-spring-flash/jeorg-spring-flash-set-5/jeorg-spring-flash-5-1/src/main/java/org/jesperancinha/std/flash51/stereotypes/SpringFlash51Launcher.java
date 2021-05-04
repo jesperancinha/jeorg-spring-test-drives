@@ -17,10 +17,10 @@ public class SpringFlash51Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        ConsolerizerComposer.out(" ")
-                .magenta("The @Indexed annotation is the only annotation that does not mark a type get picked via component scan")
-                .toConsoleLn();
+    public void run(String... args) {
+        ConsolerizerComposer.outSpace()
+                .magenta("The @Indexed annotation is the only stereotype annotation that does not mark a component to get picked via component scan")
+                .reset();
         new BlurIndexedDreaming();
     }
 }

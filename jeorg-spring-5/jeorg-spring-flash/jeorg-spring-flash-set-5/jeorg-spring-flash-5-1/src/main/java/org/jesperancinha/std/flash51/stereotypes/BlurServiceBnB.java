@@ -6,11 +6,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class BlurServiceBnB {
     BlurServiceBnB() {
-        ConsolerizerComposer.out(" ")
+        ConsolerizerComposer.outSpace()
                 .yellow("Runs a little BnB")
                 .blue("This is Blur")
-                .orange("Our annotations are %s", (Object[]) this.getClass().getAnnotations())
-                .toConsoleLn();
-
+                .orange("Our annotations are %s", this.getClass().getAnnotations())
+                .reset();
     }
 }

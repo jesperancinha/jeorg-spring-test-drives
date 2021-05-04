@@ -5,11 +5,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class BlurRepositoryStereotypes {
-    public BlurRepositoryStereotypes(){
-        ConsolerizerComposer.out(" ")
+    public BlurRepositoryStereotypes() {
+        ConsolerizerComposer.outSpace()
                 .yellow("Than stereotypes")
                 .blue("This is Blur")
-                .orange("Our annotations are %s", (Object[]) this.getClass().getAnnotations())
-                .toConsoleLn();
+                .orange("Our annotations are %s", this.getClass().getAnnotations())
+                .reset();
     }
 }

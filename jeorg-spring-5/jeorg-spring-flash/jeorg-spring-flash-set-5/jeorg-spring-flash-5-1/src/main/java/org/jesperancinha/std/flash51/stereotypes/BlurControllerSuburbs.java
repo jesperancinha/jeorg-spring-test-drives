@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller("/")
 public class BlurControllerSuburbs {
     BlurControllerSuburbs() {
-        ConsolerizerComposer.out(" ")
+        ConsolerizerComposer.outSpace()
                 .yellow("She's been feeling frisky since her husband said goodbye")
                 .blue("This is Blur")
-                .orange("Our annotations are %s", (Object[]) this.getClass().getAnnotations())
-                .toConsoleLn();
+                .orange("Our annotations are %s", this.getClass().getAnnotations())
+                .reset();
     }
 
     @GetMapping("/")

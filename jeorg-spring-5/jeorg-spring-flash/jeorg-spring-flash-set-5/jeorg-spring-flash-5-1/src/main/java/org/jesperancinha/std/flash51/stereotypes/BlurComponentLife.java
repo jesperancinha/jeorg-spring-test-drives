@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class BlurComponentLife {
     BlurComponentLife() {
-        ConsolerizerComposer.out(" ")
+        ConsolerizerComposer.outSpace()
                 .yellow("There must be more to life")
                 .blue("This is Blur")
-                .orange("Our annotations are %s", (Object[]) this.getClass().getAnnotations())
-                .toConsoleLn();
+                .orange("Our annotations are %s", this.getClass().getAnnotations())
+                .reset();
     }
 }
