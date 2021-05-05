@@ -1,5 +1,6 @@
 package org.jesperancinha.std.action.aop.aspects;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -22,7 +23,13 @@ public class BonitoAspect2 {
     }
 
     @Before("waitPrivatelyForFishCatch()")
-    public void waitForFishCatch() {
-        bonito2Service.waitForFishCatch();
+    public void waitForFishCatch(final JoinPoint joinPoint) {
+        bonito2Service.waitForFishCatch(joinPoint);
     }
+
+    @Before("execution(public * org.jesperancinha.std.action.aop.methods.BonitoCatcher.catch*())")
+    public void beforeAnyCatch(final JoinPoint joinPoint){
+        bonito2Service.beforeAnyCatch(joinPoint);
+    }
+
 }

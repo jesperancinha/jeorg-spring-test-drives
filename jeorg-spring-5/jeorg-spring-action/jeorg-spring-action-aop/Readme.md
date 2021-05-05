@@ -35,6 +35,7 @@ There are a least 4 scope types for @Aspect:
 
 ### Online
 
+- [Spring AOP works without @EnableAspectJAutoProxy?](https://stackoverflow.com/questions/48625149/spring-aop-works-without-enableaspectjautoproxy)
 - [Class AspectMetadata](http://api.iotinfra.net/spring/3.2.9/javadoc-api/org/springframework/aop/aspectj/annotation/AspectMetadata.html)
 - [Pointcut expressions in Spring AOP](https://jstobigdata.com/spring/pointcut-expressions-in-spring-aop/)
 - [3. Data Access with JDBC](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#jdbc)
