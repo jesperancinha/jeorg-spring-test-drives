@@ -1,6 +1,5 @@
 package org.jesperancinha.std.action.aop.beans;
 
-import org.aspectj.lang.annotation.Before;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.stereotype.Service;
 

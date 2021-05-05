@@ -2,24 +2,21 @@ package org.jesperancinha.std.action.aop.aspects;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.jesperancinha.std.action.aop.beans.CodService;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class CodAspect {
 
+    private final CodService codService;
+
+    public CodAspect(CodService codService) {
+        this.codService = codService;
+    }
+
     @Before("within(org.jesperancinha.std.action.aop.methods..*)")
     public void withinTheCode() {
-        ConsolerizerComposer.outSpace()
-                .none()
-                .white("We are going to catch a")
-                .magenta("CodFish")
-                .white("!")
-                .magenta("You see? We always say that")
-                .red("within")
-                .magenta("...")
-                .newLine()
-                .reset();
+        codService.withinTheCode();
     }
 }

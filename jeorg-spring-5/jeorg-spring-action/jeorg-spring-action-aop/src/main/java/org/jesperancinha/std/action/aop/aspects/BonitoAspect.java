@@ -2,7 +2,6 @@ package org.jesperancinha.std.action.aop.aspects;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.action.aop.beans.Bonito1Service;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
