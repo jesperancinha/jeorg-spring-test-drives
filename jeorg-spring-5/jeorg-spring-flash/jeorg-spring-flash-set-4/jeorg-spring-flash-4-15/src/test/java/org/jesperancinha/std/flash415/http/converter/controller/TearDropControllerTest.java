@@ -3,7 +3,6 @@ package org.jesperancinha.std.flash415.http.converter.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jesperancinha.std.flash415.http.converter.domain.TearDrop;
 import org.jesperancinha.std.flash415.http.converter.domain.TearDropReport;
-import org.jesperancinha.std.flash415.http.converter.domain.TearDropType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

@@ -20,7 +20,8 @@ import java.util.stream.StreamSupport;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = SpaceRocketConfig.class, loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(classes = SpaceRocketConfig.class,
+        loader = AnnotationConfigContextLoader.class)
 public class SpaceRocketServiceIntegrationTest {
 
     @Autowired

@@ -13,11 +13,11 @@ public class ScrapbookDto {
 
     private Long id;
 
-    public ScrapbookDto(){
+    public ScrapbookDto() {
 
     }
 
-    public ScrapbookDto(final Scrapbook scrapbook){
+    public ScrapbookDto(final Scrapbook scrapbook) {
         this.name = scrapbook.getName();
         this.scrapbookType = scrapbook.getScrapbookType();
         this.pages = scrapbook.getPages();

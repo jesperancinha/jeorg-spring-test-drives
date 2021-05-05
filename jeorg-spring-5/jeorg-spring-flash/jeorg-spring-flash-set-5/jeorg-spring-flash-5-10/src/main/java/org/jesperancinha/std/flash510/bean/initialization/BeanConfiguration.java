@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class BeanConfiguration {
 
     @Bean
-    public Seed blackBean(){
+    public Seed blackBean() {
         final var seed = new Seed();
         seed.setSeedState(SeedState.DRY);
         seed.setDescription("Black Bean");

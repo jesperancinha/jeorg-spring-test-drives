@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
@@ -15,7 +14,8 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MA
 @RestController
 public class GuitarController {
 
-    @GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/",
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Guitar> allGuitars() {
         return List.of(
                 new Guitar("Fender", "75TH Anni Com Strat MN 2BB", 2400L, "EUR"),

@@ -1,11 +1,8 @@
 package org.jesperancinha.std.flash320.bean.required;
 
 import org.jesperancinha.console.consolerizer.console.Consolerizer;
-import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.std.flash320.bean.required.domain.People;
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.BeanInitializationException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

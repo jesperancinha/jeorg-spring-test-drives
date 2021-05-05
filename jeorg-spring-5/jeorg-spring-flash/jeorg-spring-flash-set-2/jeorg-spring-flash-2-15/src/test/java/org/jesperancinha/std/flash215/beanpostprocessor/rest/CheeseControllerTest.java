@@ -25,8 +25,8 @@ class CheeseControllerTest {
     @Test
     void testGetAllCheeses_whenCall_thenRetrieveCheeseList() throws Exception {
         final var expectedCheeses = List.of(
-                Cheese.builder().name("Camembert").url( "https://en.wikipedia.org/wiki/Camembert").checks(new ArrayList<>()).build(),
-                Cheese.builder().name("Brie").url( "https://en.wikipedia.org/wiki/Brie").checks(new ArrayList<>()).build(),
+                Cheese.builder().name("Camembert").url("https://en.wikipedia.org/wiki/Camembert").checks(new ArrayList<>()).build(),
+                Cheese.builder().name("Brie").url("https://en.wikipedia.org/wiki/Brie").checks(new ArrayList<>()).build(),
                 Cheese.builder().name("Sao Jorge").url("https://en.wikipedia.org/wiki/S%C3%A3o_Jorge_cheese").checks(new ArrayList<>()).build()
         );
         final var objectMapper = new ObjectMapper();

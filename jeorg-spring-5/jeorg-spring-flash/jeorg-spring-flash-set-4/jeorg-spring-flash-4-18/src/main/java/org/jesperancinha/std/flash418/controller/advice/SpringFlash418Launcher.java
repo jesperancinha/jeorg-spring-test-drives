@@ -3,8 +3,6 @@ package org.jesperancinha.std.flash418.controller.advice;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +18,8 @@ public class SpringFlash418Launcher {
         SpringApplication.run(SpringFlash418Launcher.class, args);
     }
 
-    @PutMapping(path = "/", consumes = APPLICATION_JSON_VALUE)
+    @PutMapping(path = "/",
+            consumes = APPLICATION_JSON_VALUE)
     public boolean checkEighties(
             @RequestBody
             final Song song) {

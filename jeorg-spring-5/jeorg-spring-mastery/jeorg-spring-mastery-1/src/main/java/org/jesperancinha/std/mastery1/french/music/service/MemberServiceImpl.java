@@ -21,7 +21,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public List<Member> getMembersLike(String param) {
-        return memberRepository.findAllByNameLike(String.format("%%%s%%",param));
+        return memberRepository.findAllByNameLike(String.format("%%%s%%", param));
     }
 
     @Override

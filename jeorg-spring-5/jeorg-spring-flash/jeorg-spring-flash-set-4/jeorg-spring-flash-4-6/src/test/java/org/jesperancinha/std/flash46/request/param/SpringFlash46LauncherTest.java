@@ -47,6 +47,7 @@ class SpringFlash46LauncherTest {
                                 .andExpect(status().isOk())
                                 .andExpect(content().string(containsString(test.getValue())))));
     }
+
     @TestFactory
     Stream<DynamicTest> testCallCats_whenCatType_thenRightYouTubeVideo() {
         final var testMap = Map.of(

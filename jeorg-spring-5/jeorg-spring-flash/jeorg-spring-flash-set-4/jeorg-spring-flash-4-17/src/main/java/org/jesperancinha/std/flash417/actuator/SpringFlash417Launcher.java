@@ -13,7 +13,7 @@ public class SpringFlash417Launcher {
     }
 
     @GetMapping("/")
-    public String getCity(){
+    public String getCity() {
         return "Ghost Town";
     }
 }

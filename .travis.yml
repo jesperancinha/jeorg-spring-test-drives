@@ -4,3 +4,4 @@ jdk:
   - openjdk11
 script:
   - mvn clean install -Dconsolerizer.show=false
+  - bash <(curl -s https://codecov.io/bash)

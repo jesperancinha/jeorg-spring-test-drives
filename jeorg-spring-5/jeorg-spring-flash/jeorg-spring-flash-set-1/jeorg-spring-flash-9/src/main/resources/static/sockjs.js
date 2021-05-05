@@ -10,7 +10,7 @@ startConnection = () => {
             displayMessages(JSON.parse(message.body));
         });
         sockJSStompClient.subscribe('/business/notification', function (message) {
-           console.log(message)
+            console.log(message)
         });
     });
 }

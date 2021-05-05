@@ -1,7 +1,6 @@
 package org.jesperancinha.std.mastery1.french.music.api;
 
 import org.jesperancinha.std.mastery1.french.music.domain.Member;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 

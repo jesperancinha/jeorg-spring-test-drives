@@ -1,7 +1,6 @@
 package org.jesperancinha.std.flash48.userservice.oauth.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
@@ -17,19 +16,19 @@ public class Flash48ResourceServerConfigurer extends ResourceServerConfigurerAda
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
         resources.resourceId(RESOURCE_ID)
-            .stateless(false);
+                .stateless(false);
     }
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-            .antMatchers("/open/**")
-            .permitAll()
-            .mvcMatchers("/concerts/**")
-            .authenticated()
-            .and()
-            .exceptionHandling()
-            .accessDeniedHandler(new OAuth2AccessDeniedHandler());
+                .antMatchers("/open/**")
+                .permitAll()
+                .mvcMatchers("/concerts/**")
+                .authenticated()
+                .and()
+                .exceptionHandling()
+                .accessDeniedHandler(new OAuth2AccessDeniedHandler());
     }
 
 }

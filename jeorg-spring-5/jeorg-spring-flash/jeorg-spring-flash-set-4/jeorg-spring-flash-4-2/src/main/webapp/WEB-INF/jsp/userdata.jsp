@@ -17,11 +17,13 @@
             text-align: center;
             width: 100%;
         }
+
         h1 {
             text-align: center;
             width: 100%;
             background-color: greenyellow;
         }
+
         .xFiles {
             background-color: black;
             color: greenyellow;
@@ -56,7 +58,7 @@
 <p class="xFiles"><sec:authentication property="principal"/></p>
 
 <form method="post" action="/logout">
-    <sec:csrfInput />
+    <sec:csrfInput/>
     <input type="submit" value="Logout">
 </form>
 

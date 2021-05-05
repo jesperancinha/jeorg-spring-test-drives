@@ -1,19 +1,19 @@
-<beans xmlns = "http://www.springframework.org/schema/beans"
-       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id = "flower1" class = "org.jesperancinha.std.topic.container.beans.Flower">
-        <property name = "name" value = "Tulip"/>
-        <property name = "height" value = "1"/>
+    <bean id="flower1" class="org.jesperancinha.std.topic.container.beans.Flower">
+        <property name="name" value="Tulip"/>
+        <property name="height" value="1"/>
     </bean>
 
-    <bean id = "flower2" class = "org.jesperancinha.std.topic.container.beans.Flower">
-        <property name = "name" value = "Rose"/>
-        <property name = "height" value = "2"/>
+    <bean id="flower2" class="org.jesperancinha.std.topic.container.beans.Flower">
+        <property name="name" value="Rose"/>
+        <property name="height" value="2"/>
     </bean>
 
-    <bean id="kidneyBean" class = "org.jesperancinha.std.topic.container.beans.Bean">
+    <bean id="kidneyBean" class="org.jesperancinha.std.topic.container.beans.Bean">
         <constructor-arg name="name" value="Kidney Bean"/>
         <constructor-arg name="scientificName" value="Phaseolus vulgaris"/>
         <constructor-arg name="mainColor" value="red"/>

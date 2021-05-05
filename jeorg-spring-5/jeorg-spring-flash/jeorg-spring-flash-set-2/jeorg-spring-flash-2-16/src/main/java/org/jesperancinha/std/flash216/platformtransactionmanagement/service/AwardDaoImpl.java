@@ -24,7 +24,7 @@ public class AwardDaoImpl implements AwardDao {
     private final PlatformTransactionManager transactionManager;
 
     /**
-     * @param dataSource {@link DataSource} The currently configured datasource
+     * @param dataSource         {@link DataSource} The currently configured datasource
      * @param transactionManager {@link PlatformTransactionManager} The currently configured platform transaction manager
      */
     public AwardDaoImpl(final DataSource dataSource, final PlatformTransactionManager transactionManager) {

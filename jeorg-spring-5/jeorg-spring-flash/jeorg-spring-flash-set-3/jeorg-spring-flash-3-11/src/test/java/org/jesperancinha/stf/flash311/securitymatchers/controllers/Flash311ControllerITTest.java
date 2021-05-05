@@ -33,6 +33,7 @@ class Flash311ControllerITTest {
                 .andExpect(model().attribute("roles",
                         List.of(new SimpleGrantedAuthority("ROLE_RED"))));
     }
+
     @Test
     @WithMockUser(username = "neo_lie",
             roles = "BLUE")

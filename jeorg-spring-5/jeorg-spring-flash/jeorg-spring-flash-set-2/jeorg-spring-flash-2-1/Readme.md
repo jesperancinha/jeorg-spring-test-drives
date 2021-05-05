@@ -15,6 +15,7 @@ Topics
 ```bash
 curl http://localhost:9000/api/message/dancing
 ```
+
 ## How to run
 
 1. Test running services

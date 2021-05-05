@@ -56,6 +56,7 @@ public class MemberBean {
         BLUE.printGenericTitleLn("Finishing Member transaction");
         RED.printGenericTitleLn("Nothing happened!");
     }
+
     public void persistMember(final Member member) {
         BLUE.printGenericTitleLn("Beginning Member transaction to persist");
         TransactionTemplate transactionTemplate = new TransactionTemplate(platformTransactionManager);

@@ -79,11 +79,11 @@ public class SpringFlash410Launcher implements CommandLineRunner {
         });
         ConsolerizerColor.MAGENTA.printGenericLn(query);
 
-        final List<String> collecting = jdbcTemplate.query("select * from users", new ResultSetExtractor<List<String> >() {
+        final List<String> collecting = jdbcTemplate.query("select * from users", new ResultSetExtractor<List<String>>() {
             @Override
             public List<String> extractData(ResultSet rs) throws SQLException, DataAccessException {
-               final var collection = new ArrayList<String>();
-                while(rs.next()) {
+                final var collection = new ArrayList<String>();
+                while (rs.next()) {
                     ConsolerizerComposer.out(" ")
                             .green("User")
                             .brightGreen(rs.getString("username"))

@@ -12,5 +12,7 @@ import java.util.List;
 @Repository
 public interface SpaceRocketRepository extends JpaRepository<SpaceRocket, Integer> {
 
-    List<SpaceRocket> findSpaceRocketByName(@Param("name") String name);
+    List<SpaceRocket> findSpaceRocketByName(
+            @Param("name")
+                    String name);
 }

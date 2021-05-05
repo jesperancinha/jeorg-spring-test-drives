@@ -33,7 +33,7 @@ public class SpringFlash412Launcher implements CommandLineRunner {
         YELLOW.printGenericLn(pork.showFood());
 
         try {
-             applicationContext.getBean("food");
+            applicationContext.getBean("food");
         } catch (Throwable e) {
             RED.printExpectedException("This is what we get if the id is not found. @Component is responsible for attributing the id", e);
         }

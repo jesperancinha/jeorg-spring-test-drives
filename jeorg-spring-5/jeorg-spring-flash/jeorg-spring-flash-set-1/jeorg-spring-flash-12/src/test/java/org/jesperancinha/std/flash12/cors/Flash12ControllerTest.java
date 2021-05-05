@@ -51,6 +51,7 @@ class Flash12ControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("When accessing from jeorg-spring-flash-12, there should be no blocking to visualization"));
     }
+
     @Test
     void testSentenceProtected_whenCalledDiffentOrigint_thenFail() throws Exception {
         mockMvc.perform(get("/protected")

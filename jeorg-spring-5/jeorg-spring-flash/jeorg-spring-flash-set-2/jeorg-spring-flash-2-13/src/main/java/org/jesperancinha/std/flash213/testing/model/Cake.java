@@ -1,7 +1,5 @@
 package org.jesperancinha.std.flash213.testing.model;
 
-import io.micrometer.core.annotation.Counted;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

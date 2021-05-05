@@ -41,7 +41,7 @@ public class SpringFlash24Launcher implements CommandLineRunner {
     public void run(String... strings) {
         try {
             testException();
-        } catch (DataAccessException dataAccessException){
+        } catch (DataAccessException dataAccessException) {
             ConsolerizerComposer.outSpace()
                     .yellow(dataAccessException.getMessage())
                     .reset();
@@ -173,7 +173,7 @@ public class SpringFlash24Launcher implements CommandLineRunner {
     int[] textCRUDCreate(List<Object[]> concerts) {
         GREEN.printGenericTitleLn("from: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete");
         ORANGE.printGenericLn("Performing a CRUD operation -> Create = INSERT");
-       return jdbcTemplate.batchUpdate("insert into concerts(name, venue, local_date_time) values (?,?,?)", concerts);
+        return jdbcTemplate.batchUpdate("insert into concerts(name, venue, local_date_time) values (?,?,?)", concerts);
     }
 
     /**

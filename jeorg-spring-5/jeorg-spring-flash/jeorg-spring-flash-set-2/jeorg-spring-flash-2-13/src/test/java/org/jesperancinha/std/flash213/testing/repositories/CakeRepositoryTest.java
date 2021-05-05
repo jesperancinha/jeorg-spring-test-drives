@@ -31,7 +31,7 @@ public class CakeRepositoryTest {
 
 
     @Before
-    public void setUp(){
+    public void setUp() {
         final var cake = new Cake();
         cake.setLocale(new Locale("pt-PT", "PTR"));
         cake.setName("Bolo de Chila");
@@ -39,7 +39,7 @@ public class CakeRepositoryTest {
     }
 
     @Test
-    public void testGetCake_whenGoodId_thenGetCake(){
+    public void testGetCake_whenGoodId_thenGetCake() {
         final Optional<Cake> optionalCake = cakeRepository.findById(1L);
 
         assertThat(optionalCake.isPresent()).isTrue();

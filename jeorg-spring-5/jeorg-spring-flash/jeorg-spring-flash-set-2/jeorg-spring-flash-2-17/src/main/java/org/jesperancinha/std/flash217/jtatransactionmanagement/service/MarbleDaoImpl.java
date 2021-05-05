@@ -71,7 +71,8 @@ public class MarbleDaoImpl implements MarbleDao {
         try {
             final int update = jdbcTemplate.update("insert into MARBLES (NAME, COLOR) values (?, ?)", name, color);
             ConsolerizerComposer.outSpace()
-                    .green("Updated %d record(s)", update);transactionManager.commit(status);
+                    .green("Updated %d record(s)", update);
+            transactionManager.commit(status);
         } catch (DataAccessException e) {
             System.out.println("Error in creating record, rolling back");
             transactionManager.rollback(status);
@@ -94,7 +95,8 @@ public class MarbleDaoImpl implements MarbleDao {
         try {
             final int update = jdbcTemplate.update("insert into MARBLES (NAME, COLOR) values (?, ?)", name, color);
             ConsolerizerComposer.outSpace()
-                    .green("Updated %d record(s)", update);transactionManager.rollback(status);
+                    .green("Updated %d record(s)", update);
+            transactionManager.rollback(status);
         } catch (DataAccessException e) {
             System.out.println("Error in creating record, rolling back");
             transactionManager.rollback(status);
@@ -120,7 +122,8 @@ public class MarbleDaoImpl implements MarbleDao {
         try {
             final int update = jdbcTemplate.update("insert into MARBLES (NAME, COLOR) values (?, ?)", name, color);
             ConsolerizerComposer.outSpace()
-                    .green("Updated %d record(s)", update); transactionManager.commit(status);
+                    .green("Updated %d record(s)", update);
+            transactionManager.commit(status);
             transactionManager.rollback(status);
         } catch (final IllegalTransactionStateException exception) {
             ConsolerizerComposer.outSpace()

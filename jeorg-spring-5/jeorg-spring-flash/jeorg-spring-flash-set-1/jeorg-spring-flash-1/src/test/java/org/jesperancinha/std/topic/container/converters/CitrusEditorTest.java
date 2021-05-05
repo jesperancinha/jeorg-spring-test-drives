@@ -12,6 +12,6 @@ class CitrusEditorTest {
         final Object value = citrusEditor.getValue();
 
         assertThat(value).isInstanceOf(Lemon.class);
-        assertThat(((Lemon)value).getSize()).isEqualTo(123);
+        assertThat(((Lemon) value).getSize()).isEqualTo(123);
     }
 }

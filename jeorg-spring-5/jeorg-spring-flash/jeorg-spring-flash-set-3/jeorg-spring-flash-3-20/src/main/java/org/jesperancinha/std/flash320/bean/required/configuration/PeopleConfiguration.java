@@ -13,7 +13,7 @@ public class PeopleConfiguration {
 
     @Bean("people")
     @Profile("!incomplete")
-    public People peopleComplete(){
+    public People peopleComplete() {
         final People people = new People();
         people.setHomesick(true);
         people.setColdAs("stone");

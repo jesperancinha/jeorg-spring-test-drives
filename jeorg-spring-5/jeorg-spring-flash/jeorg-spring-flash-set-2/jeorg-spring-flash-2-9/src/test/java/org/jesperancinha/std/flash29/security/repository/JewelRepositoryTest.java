@@ -22,7 +22,7 @@ class JewelRepositoryTest {
 
     @BeforeEach
     @Transactional
-    public void setUp(){
+    public void setUp() {
         final Jewel jewel = jewelRepository.save(Jewel.builder()
                 .jewelType(DIAMOND)
                 .guardian("sabino").build());
@@ -34,7 +34,7 @@ class JewelRepositoryTest {
     }
 
     @Test
-    public void testGetJewel_whenReadingJewel_thenResultInJewel(){
+    public void testGetJewel_whenReadingJewel_thenResultInJewel() {
         final var jewel = jewelRepository.getOne(1L);
         final var jewel2 = jewelRepository.getOne(2L);
 

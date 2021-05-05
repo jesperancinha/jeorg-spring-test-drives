@@ -18,7 +18,8 @@ public class DetailService {
         this.detailRepository = detailRepository;
     }
 
-    @Cacheable(value = "detailCache", key = "#id")
+    @Cacheable(value = "detailCache",
+            key = "#id")
     public DetailEntity findBetailById(Integer id) {
         return detailRepository.findById(id).orElseThrow();
     }

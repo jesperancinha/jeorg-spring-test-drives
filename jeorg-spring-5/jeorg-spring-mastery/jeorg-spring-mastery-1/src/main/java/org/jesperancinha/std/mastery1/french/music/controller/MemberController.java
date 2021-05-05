@@ -58,11 +58,16 @@ public class MemberController {
     }
 
     @PostMapping("/create/rollback")
-    public void createMemberRollback(@RequestBody final Member member){
+    public void createMemberRollback(
+            @RequestBody
+            final Member member) {
         memberBean.persistMemberRollback(member);
     }
+
     @PostMapping("/create")
-    public void createMember(@RequestBody final Member member){
+    public void createMember(
+            @RequestBody
+            final Member member) {
         memberBean.persistMember(member);
     }
 }

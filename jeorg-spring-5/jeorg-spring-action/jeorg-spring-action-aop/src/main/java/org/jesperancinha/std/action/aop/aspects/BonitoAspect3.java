@@ -20,7 +20,7 @@ public class BonitoAspect3 {
     }
 
     @Before("waitPrivatelyForFishCatchWithClaw() || waitPrivatelyForFishCatchWithHand()")
-    public void waitForFishCatch(){
+    public void waitForFishCatch() {
         ConsolerizerComposer.outSpace()
                 .bgYellow()
                 .unicorns(100)
@@ -28,8 +28,9 @@ public class BonitoAspect3 {
                 .red("We send a red light when we catch by hand or by claw")
                 .reset();
     }
+
     @Before("!waitPrivatelyForFishCatchWithClaw() && waitPrivatelyForFishCatchWithHand()")
-    public void waitForFishNoClawCatch(){
+    public void waitForFishNoClawCatch() {
         ConsolerizerComposer.outSpace()
                 .bgYellow()
                 .unicorns(100)

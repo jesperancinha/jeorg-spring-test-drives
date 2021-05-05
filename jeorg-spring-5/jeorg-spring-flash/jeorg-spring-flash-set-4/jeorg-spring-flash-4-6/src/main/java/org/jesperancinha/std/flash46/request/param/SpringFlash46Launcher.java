@@ -12,7 +12,6 @@ import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.html.HtmlizerLinks.getYouTubeFrame;
 import static org.jesperancinha.std.flash46.request.param.CatType.BENGAL;
 import static org.jesperancinha.std.flash46.request.param.CatType.MAINE_COON;

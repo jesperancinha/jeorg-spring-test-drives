@@ -18,8 +18,7 @@ If you run spring boot from the command line, you should not see any issue:
 mvn clean install spring-boot:run
 ```
 
-On the other hand, if running through an IDE, the root path must be specified.
-In IntelliJ as an example:
+On the other hand, if running through an IDE, the root path must be specified. In IntelliJ as an example:
 
 ![alt img](./../../../docs/workingdirectory.png)
 
@@ -28,6 +27,7 @@ In IntelliJ as an example:
 ```bash
 lsof -i :8081
 ```
+
 1.1. Run the service with the `AbstractAuditListener`
 
 ```bash
@@ -47,6 +47,7 @@ curl -X POST -H 'username: admin' -H 'password: admin' http://localhost:8081/ope
 ```
 
 3. Authenticate with OAUTH local
+
 ```bash
 curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=admin&password=admin&client_id=flash49-client&client_secret=flash49&scope=read&redirect_uri=http://localhost:8081/oauth" http://localhost:8081/oauth/token
 curl -H "Authorization: Bearer TOKEN" http://localhost:8081/concerts

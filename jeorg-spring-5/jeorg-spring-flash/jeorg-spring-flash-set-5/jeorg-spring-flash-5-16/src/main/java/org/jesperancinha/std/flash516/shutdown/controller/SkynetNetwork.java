@@ -8,7 +8,7 @@ import javax.annotation.PreDestroy;
 @Component
 public class SkynetNetwork {
     @PreDestroy
-    public void preDestroy(){
+    public void preDestroy() {
         ConsolerizerComposer
                 .outSpace()
                 .cyan("Yeeehhaaaaa!!!")

@@ -26,8 +26,9 @@ public class CharmingManController {
     }
 
     @RequestMapping("/")
-    public ModelAndView goToIndex(final Model model, @ModelAttribute("modelOfTheCharmlessMan")
-            final List<String> modelOfTheCharmlessMan) {
+    public ModelAndView goToIndex(final Model model,
+                                  @ModelAttribute("modelOfTheCharmlessMan")
+                                  final List<String> modelOfTheCharmlessMan) {
         ConsolerizerColor.MAGENTA.printGenericLn("This is one way of getting a model attribute.");
         ConsolerizerColor.MAGENTA.printGenericLn("It can be passed around and changed in the JSP.");
         ConsolerizerColor.MAGENTA.printGenericLn("As an example here is the model of a charmless man:");

@@ -4,13 +4,8 @@ import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 @RestController
 @SpringBootApplication

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringFlash413Configuration {
     @Bean
-    public String power(){
+    public String power() {
         return "The power of goodbye";
     }
 }

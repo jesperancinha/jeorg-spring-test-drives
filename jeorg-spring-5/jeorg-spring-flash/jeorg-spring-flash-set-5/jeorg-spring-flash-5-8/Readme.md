@@ -6,7 +6,9 @@
 
 Exploring Conditionals in Spring - All of them
 
-1. `@ConditionalOnEnabledHealthIndicator`, `@ConditionalOnProperty`, `@ConditionalOnNotWebApplication`, `@ConditionalOnBean`, `@ConditionalOnMissingClass`, `@ConditionalOnInitializedRestarter`, `@ConditionalOnResource`, `@ConditionalOnManagementPort`, `@ConditionalOnClass`, `@ConditionalOnMissingBean`, `@ConditionalOnRepositoryType`, `@ConditionalOnWebApplication`, `@ConditionalOnEnabledInfoContributor`, `@ConditionalOnExpression`, `@ConditionalOnEnabledResourceChain`, `@ConditionalOnJava`, `@ConditionalOnCloudPlatform`, `@ConditionalOnEnabledEndpoint`, `@ConditionalOnJndi`, `@ConditionalOnSingleCandidate`
+1. `@ConditionalOnEnabledHealthIndicator`, `@ConditionalOnProperty`, `@ConditionalOnNotWebApplication`, `@ConditionalOnBean`, `@ConditionalOnMissingClass`, `@ConditionalOnInitializedRestarter`, `@ConditionalOnResource`, `@ConditionalOnManagementPort`, `@ConditionalOnClass`
+   , `@ConditionalOnMissingBean`, `@ConditionalOnRepositoryType`, `@ConditionalOnWebApplication`, `@ConditionalOnEnabledInfoContributor`, `@ConditionalOnExpression`, `@ConditionalOnEnabledResourceChain`, `@ConditionalOnJava`, `@ConditionalOnCloudPlatform`, `@ConditionalOnEnabledEndpoint`
+   , `@ConditionalOnJndi`, `@ConditionalOnSingleCandidate`
 
 ## Endpoints
 
@@ -21,6 +23,7 @@ lsof -i :8081
 1. Run the service
 
 1.1. With profile test
+
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 ```

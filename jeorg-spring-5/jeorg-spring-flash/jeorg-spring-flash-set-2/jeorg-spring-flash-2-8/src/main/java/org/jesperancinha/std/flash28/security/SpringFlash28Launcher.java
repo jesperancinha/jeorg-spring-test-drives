@@ -13,7 +13,7 @@ public class SpringFlash28Launcher {
     }
 
     @GetMapping("/")
-    public String getBird(){
+    public String getBird() {
         return "A little bird lit down on henry lee";
     }
 }

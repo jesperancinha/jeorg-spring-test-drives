@@ -50,6 +50,7 @@ class SpringFlash418LauncherTest {
                 .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(containsString("This music is not from the eighties")));
     }
+
     @Test
     void testEightiesCheck_whenCallingMethodNotAllowed_thenHandleInASpringFashion() throws Exception {
         final var song = Song.builder().name("Madison Avenue - Don''t Call Me Baby").artist("Madison Avenue").hitDate(LocalDate.of(1999, 10, 8)).build();
@@ -59,6 +60,6 @@ class SpringFlash418LauncherTest {
                 .content(objectMapper.writeValueAsString(song)))
                 .andExpect(status().isMethodNotAllowed())
                 .andExpect(content().string(containsString("")))
-                .andExpect(header().string("allow","PUT"));
+                .andExpect(header().string("allow", "PUT"));
     }
 }

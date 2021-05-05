@@ -1,7 +1,6 @@
 package org.jesperancinha.std.flash29.security.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.jesperancinha.std.flash29.security.domain.Jewel;
 import org.jesperancinha.std.flash29.security.dto.JewelDto;
 import org.jesperancinha.std.flash29.security.repository.JewelRepository;
 import org.jesperancinha.std.flash29.security.services.JewelService;

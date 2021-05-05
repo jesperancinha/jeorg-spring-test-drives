@@ -62,7 +62,7 @@ class SpringFlash22LauncherTest {
         final ModelAndView value = modelAndViewArgumentCaptor.getValue();
         assertThat(value).isNull();
         final Exception exception = exceptionArgumentCaptor.getValue();
-        assertThat(exception ).isNull();
+        assertThat(exception).isNull();
 
     }
 }

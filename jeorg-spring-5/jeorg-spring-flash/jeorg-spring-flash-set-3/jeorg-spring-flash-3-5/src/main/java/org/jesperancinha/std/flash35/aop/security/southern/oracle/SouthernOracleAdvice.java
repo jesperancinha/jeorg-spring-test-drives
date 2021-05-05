@@ -17,10 +17,14 @@ public class SouthernOracleAdvice implements MethodBeforeAdvice {
     }
 
     @Override
-    public void before(@NonNull Method method, @NonNull Object[] objects, Object target) {
+    public void before(
+            @NonNull
+                    Method method,
+            @NonNull
+                    Object[] objects, Object target) {
         UserMessengerDetails user = southernOracle.getLoggedOnUser();
         if (user == null) {
-           RED.printGenericLn("No user logged in. This could be the Nothing");
+            RED.printGenericLn("No user logged in. This could be the Nothing");
             throw new SecurityException("A suspected login was tried. Please check for the presence of the Nothing");
         } else if ("Atreyu".equals(user.getUserName())) {
             GREEN.printGenericLn("%s can log in!", user);

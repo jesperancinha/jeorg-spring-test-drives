@@ -4,7 +4,6 @@ import org.jesperancinha.std.flash57.secured.domain.Throne;
 import org.jesperancinha.std.flash57.secured.dto.ThroneDto;
 import org.jesperancinha.std.flash57.secured.repository.ThroneRepository;
 import org.jesperancinha.std.flash57.secured.security.Flash57PreConfiguration;
-import org.jesperancinha.std.flash57.secured.security.Flash57SecuredConfiguration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;

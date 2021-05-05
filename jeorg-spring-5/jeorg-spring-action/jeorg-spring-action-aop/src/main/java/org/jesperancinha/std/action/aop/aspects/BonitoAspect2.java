@@ -4,7 +4,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -16,7 +15,7 @@ public class BonitoAspect2 {
     }
 
     @Before("waitPrivatelyForFishCatch()")
-    public void waitForFishCatch(){
+    public void waitForFishCatch() {
         ConsolerizerComposer.outSpace()
                 .bgBlue()
                 .unicorns(100)

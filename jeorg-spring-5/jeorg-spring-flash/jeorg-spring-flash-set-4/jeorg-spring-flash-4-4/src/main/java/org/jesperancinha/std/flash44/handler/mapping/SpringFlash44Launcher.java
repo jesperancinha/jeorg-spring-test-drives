@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import java.util.Map;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.console.Consolerizer.maxLineCharsGlobal;

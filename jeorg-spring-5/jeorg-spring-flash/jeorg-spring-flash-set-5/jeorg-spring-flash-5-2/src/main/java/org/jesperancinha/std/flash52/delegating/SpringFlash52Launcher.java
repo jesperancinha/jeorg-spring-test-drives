@@ -6,7 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
 import org.springframework.context.ApplicationContext;
-import org.springframework.web.filter.DelegatingFilterProxy;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 

@@ -1,8 +1,8 @@
 package org.jesperancinha.std.flash19.transactional.controllers;
 
 import org.jesperancinha.std.flash19.transactional.domain.Album;
-import org.jesperancinha.std.flash19.transactional.repos.AlbumRepository;
 import org.jesperancinha.std.flash19.transactional.dto.AlbumDto;
+import org.jesperancinha.std.flash19.transactional.repos.AlbumRepository;
 import org.jesperancinha.std.flash19.transactional.services.AlbumService;
 import org.jesperancinha.std.flash19.transactional.services.AlbumServiceImpl;
 import org.junit.jupiter.api.Test;

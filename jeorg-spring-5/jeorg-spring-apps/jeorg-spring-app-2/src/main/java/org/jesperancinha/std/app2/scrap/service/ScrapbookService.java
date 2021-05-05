@@ -4,7 +4,7 @@ import org.jesperancinha.std.app2.scrap.dto.ScrapbookDto;
 
 import java.util.List;
 
-public interface  ScrapbookService {
+public interface ScrapbookService {
 
     ScrapbookDto createScrapbook(final ScrapbookDto scrapbook);
 

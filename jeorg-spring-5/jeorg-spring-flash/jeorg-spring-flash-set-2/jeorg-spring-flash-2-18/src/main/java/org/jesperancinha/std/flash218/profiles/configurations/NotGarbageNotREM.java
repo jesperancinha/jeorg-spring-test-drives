@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 @Profile("!garbage & !rem")
 public class NotGarbageNotREM {
-    public NotGarbageNotREM(){
+    public NotGarbageNotREM() {
         new PumpkinsConfig();
         ConsolerizerGraphs.printRainbowFlag("It's the smashing pumpkins!");
     }

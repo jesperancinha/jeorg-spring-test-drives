@@ -69,7 +69,7 @@ public class Mastery11Configuration implements Mastery1Configuration {
     }
 
     @Override
-    public void makeAllTest(){
+    public void makeAllTest() {
         final Member celineDion = createMember("Celine Dion", 1981);
         createMember("Kate Ryan", 2001);
 

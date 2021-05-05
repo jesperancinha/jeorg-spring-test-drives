@@ -19,11 +19,11 @@ public class Flash49ResourceServerConfigurer extends ResourceServerConfigurerAda
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
         resources.resourceId(RESOURCE_ID)
-            .stateless(false);
+                .stateless(false);
     }
 
     @Bean
-    public InMemoryAuditEventRepository repository(){
+    public InMemoryAuditEventRepository repository() {
         final InMemoryAuditEventRepository inMemoryAuditEventRepository = new InMemoryAuditEventRepository();
         ConsolerizerComposer.out(" ")
                 .magenta("Initializing bean")
@@ -39,15 +39,15 @@ public class Flash49ResourceServerConfigurer extends ResourceServerConfigurerAda
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-            .antMatchers("/open/**")
-            .permitAll()
-            .mvcMatchers( "/auditevents/**")
-            .permitAll()
-            .mvcMatchers("/concerts/**")
-            .authenticated()
-            .and()
-            .exceptionHandling()
-            .accessDeniedHandler(new OAuth2AccessDeniedHandler());
+                .antMatchers("/open/**")
+                .permitAll()
+                .mvcMatchers("/auditevents/**")
+                .permitAll()
+                .mvcMatchers("/concerts/**")
+                .authenticated()
+                .and()
+                .exceptionHandling()
+                .accessDeniedHandler(new OAuth2AccessDeniedHandler());
     }
 
 }

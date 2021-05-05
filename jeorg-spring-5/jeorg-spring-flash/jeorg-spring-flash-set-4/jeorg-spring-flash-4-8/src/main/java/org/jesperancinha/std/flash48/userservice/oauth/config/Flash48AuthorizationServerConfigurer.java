@@ -1,7 +1,6 @@
 package org.jesperancinha.std.flash48.userservice.oauth.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
@@ -40,25 +39,25 @@ public class Flash48AuthorizationServerConfigurer extends AuthorizationServerCon
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-            .withClient(CLIENT_ID)
-            .secret(passwordEncoder.encode(CLIENT_SECRET))
-            .authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN)
-            .scopes(SCOPE_READ, SCOPE_WRITE, TRUST)
-            .accessTokenValiditySeconds(VALID_FOREVER)
-            .refreshTokenValiditySeconds(VALID_FOREVER);
+                .withClient(CLIENT_ID)
+                .secret(passwordEncoder.encode(CLIENT_SECRET))
+                .authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN)
+                .scopes(SCOPE_READ, SCOPE_WRITE, TRUST)
+                .accessTokenValiditySeconds(VALID_FOREVER)
+                .refreshTokenValiditySeconds(VALID_FOREVER);
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
         endpoints.tokenStore(tokenStore)
-            .authenticationManager(authManager)
-            .allowedTokenEndpointRequestMethods();
+                .authenticationManager(authManager)
+                .allowedTokenEndpointRequestMethods();
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) {
         oauthServer.passwordEncoder(passwordEncoder)
-            .allowFormAuthenticationForClients();
+                .allowFormAuthenticationForClients();
     }
 
 }

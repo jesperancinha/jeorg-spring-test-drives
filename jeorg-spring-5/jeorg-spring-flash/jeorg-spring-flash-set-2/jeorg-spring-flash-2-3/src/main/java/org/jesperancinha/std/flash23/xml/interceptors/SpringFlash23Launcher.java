@@ -13,7 +13,7 @@ public class SpringFlash23Launcher {
     }
 
     @GetMapping("/")
-    public String getString(){
+    public String getString() {
         return "Fine Wine";
     }
 }

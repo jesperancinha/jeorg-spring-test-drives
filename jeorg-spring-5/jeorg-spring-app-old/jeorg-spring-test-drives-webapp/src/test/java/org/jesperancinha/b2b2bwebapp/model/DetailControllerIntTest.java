@@ -19,7 +19,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Disabled
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = DetailConfig.class, loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(classes = DetailConfig.class,
+        loader = AnnotationConfigContextLoader.class)
 public class DetailControllerIntTest {
 
     private static final String NAME_1 = "Name1";

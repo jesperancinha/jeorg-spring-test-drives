@@ -13,7 +13,7 @@ import org.springframework.context.ApplicationEventPublisher;
 @SpringBootApplication
 public class SpringFlash515Launcher implements ApplicationRunner {
 
-     static SpringApplication application;
+    static SpringApplication application;
     private final ApplicationContext applicationContext;
 
     private final ApplicationEventPublisher applicationEventPublisher;

@@ -16,13 +16,14 @@ Exploring @Required in Spring
 lsof -i :8081
 ```
 
-1. Run a working version when the `@Required` fields are given 
+1. Run a working version when the `@Required` fields are given
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
 2. Run a non-working version when the `@Required` fields are not given
+
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=incomplete
 ```

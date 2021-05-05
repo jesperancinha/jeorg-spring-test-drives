@@ -68,6 +68,14 @@ mvn clean install -Dconsolerizer.show=false
 sdk install java 11.0.9.hs-adpt
 sdk use java 11.0.9.hs-adpt
 ```
+
+## Run Codecov
+
+```bash
+mvn clean test -Dconsolerizer.show=false
+bash <(curl -s https://codecov.io/bash)
+```
+
 ## Sequence Diagram
 
 ```mermaid

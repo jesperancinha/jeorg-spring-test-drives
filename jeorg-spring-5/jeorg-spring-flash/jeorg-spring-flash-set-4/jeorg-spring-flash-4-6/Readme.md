@@ -21,7 +21,7 @@ Main page:
 7. [http://localhost:8081/dogs?dogType=DOBERMANN](http://localhost:8081/dogs?dogType=DOBERMANN)
 8. [http://localhost:8081/dogs?dogType=SIBERIAN_HUSKY](http://localhost:8081/dogs?dogType=SIBERIAN_HUSKY)
 9. [http://localhost:8081/dogs?dogType=ROTTWEILLER](http://localhost:8081/dogs?dogType=ROTTWEILLER)
-10.[http://localhost:8081/dogs?dogType=COCKERS_SPANIEL](http://localhost:8081/dogs?dogType=COCKERS_SPANIEL)
+   10.[http://localhost:8081/dogs?dogType=COCKERS_SPANIEL](http://localhost:8081/dogs?dogType=COCKERS_SPANIEL)
 11. [http://localhost:8081/dogs?dogType=GERMAN_SHEPPARD](http://localhost:8081/dogs?dogType=GERMAN_SHEPPARD)
 12. [http://localhost:8081/dogs?dogType=BELGIAN_SHEPPARD](http://localhost:8081/dogs?dogType=BELGIAN_SHEPPARD)
 
@@ -33,8 +33,7 @@ If you run spring boot from the command line, you should not see any issue:
 mvn clean install spring-boot:run
 ```
 
-On the other hand, if running through an IDE, the root path must be specified.
-In IntelliJ as an example:
+On the other hand, if running through an IDE, the root path must be specified. In IntelliJ as an example:
 
 ![alt img](./../../../docs/workingdirectory.png)
 

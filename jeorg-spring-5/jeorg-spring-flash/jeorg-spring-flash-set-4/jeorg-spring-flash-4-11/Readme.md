@@ -16,6 +16,7 @@ Exploring the @RepositoryDefinition
 curl -X POST -H 'Content-Type: application/json' --data '{"episode":"Space Elevator – Science Fiction or the Future of Mankind?", "youTubePublication":"2016-04-08","youtubeCode":"qPQQwqGWktE"}' http://localhost:8081/create
 curl http://localhost:8081
 ```
+
 ## How to run
 
 If you run spring boot from the command line, you should not see any issue:
@@ -24,8 +25,7 @@ If you run spring boot from the command line, you should not see any issue:
 mvn clean install spring-boot:run 
 ```
 
-On the other hand, if running through an IDE, the root path must be specified.
-In IntelliJ as an example:
+On the other hand, if running through an IDE, the root path must be specified. In IntelliJ as an example:
 
 ![alt img](./../../../docs/workingdirectory.png)
 

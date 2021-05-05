@@ -2,7 +2,6 @@ package org.jesperancinha.std.flash411.repository.controller;
 
 import org.jesperancinha.std.flash411.repository.domain.Kurzgesagt;
 import org.jesperancinha.std.flash411.repository.service.KurzgesagtService;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,11 +21,15 @@ public class KurzgesagtController {
     }
 
     @PostMapping("/create")
-    public void createKurzgesagt(@RequestBody final Kurzgesagt kurzgesagt){
+    public void createKurzgesagt(
+            @RequestBody
+            final Kurzgesagt kurzgesagt) {
         kurzgesagtService.create(kurzgesagt);
     }
-    @GetMapping(path = "/", produces = APPLICATION_JSON_VALUE)
-    public List<Kurzgesagt> listAll(){
+
+    @GetMapping(path = "/",
+            produces = APPLICATION_JSON_VALUE)
+    public List<Kurzgesagt> listAll() {
         return kurzgesagtService.getAll();
     }
 }

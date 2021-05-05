@@ -15,7 +15,6 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.times;
@@ -64,8 +63,8 @@ class SpringFlash48LauncherTest {
     @Test
     void testCreateUser_whenCreateOne_thenSaveOne() throws Exception {
         mockMvc.perform(post("/open/create")
-                .header("username","joao")
-                .header("password","joao2")
+                .header("username", "joao")
+                .header("password", "joao2")
                 .contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
 
@@ -83,7 +82,8 @@ class SpringFlash48LauncherTest {
     }
 
     @Test
-    @WithMockUser(username = "joao", roles = "ADMIN")
+    @WithMockUser(username = "joao",
+            roles = "ADMIN")
     void testGetAllConcerts_withAuthenticatedAdmin_thenGetAll() throws Exception {
         final var allConcerts = Arrays.asList(
                 "Madonna - Holiday (Live Aid 1985)",

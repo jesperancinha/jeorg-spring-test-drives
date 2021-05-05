@@ -11,9 +11,11 @@ Exploring Shutdown in Spring
 ## Endpoints
 
 1. [http://localhost:8081](http://localhost:8081)
+
 ```bash
 curl http://localhost:8081/api/terminator1
 ```
+
 ## Testing
 
 ```bash
@@ -25,6 +27,7 @@ lsof -i :8081
 ```bash
 mvn clean install spring-boot:run
 ```
+
 ## References
 
 ### Context

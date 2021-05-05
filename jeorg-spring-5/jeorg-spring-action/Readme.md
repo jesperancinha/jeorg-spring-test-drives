@@ -25,7 +25,8 @@ The goal of this module set is to disambiguate potential nuances and complicated
 6. AutoConfig - [jeorg-spring-action-auto-config](./jeorg-spring-action-auto-config)
 7. Actuator - [jeorg-spring-action-actuator](./jeorg-spring-action-actuator)
 
-`management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`, `management.endpoint.integrationgraph.enabled`
+`management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`
+, `management.endpoint.integrationgraph.enabled`
 `info`, `health`, `defaults`
 
 8. Testing - [jeorg-spring-action-testing](./jeorg-spring-action-testing)

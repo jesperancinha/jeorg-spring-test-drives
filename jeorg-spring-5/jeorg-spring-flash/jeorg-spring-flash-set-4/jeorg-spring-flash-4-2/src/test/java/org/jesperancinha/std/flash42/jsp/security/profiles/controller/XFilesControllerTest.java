@@ -42,6 +42,7 @@ class XFilesControllerTest {
                 .andExpect(model().attribute("roles",
                         Collections.singletonList(new SimpleGrantedAuthority("ROLE_ADMIN"))));
     }
+
     @Test
     @WithMockUser(username = "joao",
             roles = "SOMETHING")

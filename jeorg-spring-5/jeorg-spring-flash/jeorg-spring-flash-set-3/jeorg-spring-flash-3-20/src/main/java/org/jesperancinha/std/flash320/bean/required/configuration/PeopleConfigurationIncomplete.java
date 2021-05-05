@@ -13,7 +13,7 @@ public class PeopleConfigurationIncomplete {
 
     @Bean("people")
     @Profile("incomplete")
-    public People peopleIncomplete(){
+    public People peopleIncomplete() {
         return new People();
     }
 }

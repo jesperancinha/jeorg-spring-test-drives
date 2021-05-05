@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash31.bean.initialization.domain;
 
-import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 

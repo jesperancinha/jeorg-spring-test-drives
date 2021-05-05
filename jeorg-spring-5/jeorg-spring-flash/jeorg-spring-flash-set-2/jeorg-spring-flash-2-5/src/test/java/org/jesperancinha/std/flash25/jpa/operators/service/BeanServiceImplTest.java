@@ -4,7 +4,6 @@ import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
@@ -23,6 +22,6 @@ class BeanServiceImplTest {
 
     @Test
     void tesGetSlogan_whenCalled_getProductionSlogan() {
-       assertThat(beanService.getSlogan()).isEqualTo("Beans are the best!");
+        assertThat(beanService.getSlogan()).isEqualTo("Beans are the best!");
     }
 }

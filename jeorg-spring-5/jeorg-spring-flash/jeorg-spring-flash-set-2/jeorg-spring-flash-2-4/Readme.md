@@ -15,6 +15,7 @@ Topics
 ```bash
 curl http://localhost:8081
 ```
+
 ## How to run
 
 1. Test running services
@@ -37,7 +38,7 @@ mvn clean install spring-boot:run
 - [VH1 Divas](https://en.wikipedia.org/wiki/VH1_Divas)
 - [Róisín Murphy Concert List](https://www.songkick.com/artists/1168629-roisin-murphy)
 - [Lollapalooza](https://en.wikipedia.org/wiki/Lollapalooza)
- 
+
 <div align="center">
       <a title="Róisín Murphy - Murphy's Law" href="https://www.youtube.com/watch?v=_Khh8NB-qBo">
      <img 

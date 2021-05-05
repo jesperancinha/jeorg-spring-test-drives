@@ -18,8 +18,7 @@ If you run spring boot from the command line, you should not see any issue:
 mvn clean install spring-boot:run
 ```
 
-On the other hand, if running through an IDE, the root path must be specified.
-In IntelliJ as an example:
+On the other hand, if running through an IDE, the root path must be specified. In IntelliJ as an example:
 
 ![alt img](./../../../docs/workingdirectory.png)
 

@@ -17,7 +17,7 @@ public class DesertController {
     }
 
     @GetMapping("/")
-    public Desert randomDesert(){
+    public Desert randomDesert() {
         desert.reachableDestroy();
         ConsolerizerComposer.outSpace()
                 .yellow()

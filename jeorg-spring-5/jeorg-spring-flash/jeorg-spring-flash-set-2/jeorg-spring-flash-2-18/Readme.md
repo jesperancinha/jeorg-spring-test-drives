@@ -13,6 +13,7 @@ Topics
 1. [http://localhost:8081](http://localhost:8081)
 
 Play with these and check the console everytime with different combinations:
+
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=rem
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=pumpkin

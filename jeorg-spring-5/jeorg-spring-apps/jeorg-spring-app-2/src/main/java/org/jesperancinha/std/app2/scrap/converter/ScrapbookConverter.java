@@ -43,6 +43,7 @@ public class ScrapbookConverter {
         scrapbook.setPages(scrapBookDto.getPages());
         return scrapbook;
     }
+
     public static Scrapbook toScrapbookBadReservations(final ScrapbookDto scrapBookDto) {
         final Scrapbook scrapbook = new ScrapbookBadreservations();
         ConsolerizerComposer

@@ -15,6 +15,7 @@ Topics
 ```bash
 curl http://localhost:8081
 ```
+
 ## How to run
 
 1. Test running services
@@ -42,7 +43,7 @@ mvn clean install spring-boot:run
           style="width:10%;">
       </a>
 </div>
-    
+
 ### Online
 
 - [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)

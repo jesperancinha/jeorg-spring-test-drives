@@ -23,7 +23,7 @@ public class Bean {
         return "The soup is made";
     }
 
-    public String makeBeanSoupPirate(){
+    public String makeBeanSoupPirate() {
         return makeBeanSoup();
     }
 

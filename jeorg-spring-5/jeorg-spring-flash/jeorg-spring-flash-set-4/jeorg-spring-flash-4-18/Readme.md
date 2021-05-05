@@ -1,4 +1,4 @@
- # jeorg-spring-flash-4-18
+# jeorg-spring-flash-4-18
 
 ## Introduction
 
@@ -9,7 +9,7 @@ Exploring @ControllerAdvice in Spring
 ## Endpoints
 
 1. [http://localhost:8081](http://localhost:8081)
-     
+
 ## Supporting modules
 
 1. [jeorg-spring-flash-3-10](./../../jeorg-spring-flash-set-3/jeorg-spring-flash-3-10) - Converters
@@ -22,8 +22,7 @@ If you run spring boot from the command line, you should not see any issue:
 mvn clean install spring-boot:run 
 ```
 
-On the other hand, if running through an IDE, the root path must be specified.
-In IntelliJ as an example:
+On the other hand, if running through an IDE, the root path must be specified. In IntelliJ as an example:
 
 ![alt img](./../../../docs/workingdirectory.png)
 

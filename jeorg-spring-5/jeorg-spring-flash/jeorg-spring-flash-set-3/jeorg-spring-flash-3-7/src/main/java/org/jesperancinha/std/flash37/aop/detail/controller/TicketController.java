@@ -2,7 +2,6 @@ package org.jesperancinha.std.flash37.aop.detail.controller;
 
 import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.std.flash37.aop.detail.dto.TicketDto;
-import org.jesperancinha.std.flash37.aop.detail.model.Ticket;
 import org.jesperancinha.std.flash37.aop.detail.service.TicketService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

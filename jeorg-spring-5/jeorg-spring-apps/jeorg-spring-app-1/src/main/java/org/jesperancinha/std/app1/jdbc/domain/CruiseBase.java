@@ -10,7 +10,8 @@ import javax.persistence.Table;
 public abstract class CruiseBase {
 
     @Id
-    @Column(updatable = false, unique = true)
+    @Column(updatable = false,
+            unique = true)
     private Long id;
 
     private String tourOperator;

@@ -1,8 +1,8 @@
 package org.jesperancinha.std.flash19.transactional.controllers;
 
 import org.jesperancinha.std.flash19.transactional.domain.Album;
-import org.jesperancinha.std.flash19.transactional.repos.AlbumRepository;
 import org.jesperancinha.std.flash19.transactional.dto.AlbumDto;
+import org.jesperancinha.std.flash19.transactional.repos.AlbumRepository;
 import org.jesperancinha.std.flash19.transactional.services.AlbumServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class  AlbumControllerUnitTest {
+class AlbumControllerUnitTest {
 
     @Mock
     private AlbumRepository albumRepository;

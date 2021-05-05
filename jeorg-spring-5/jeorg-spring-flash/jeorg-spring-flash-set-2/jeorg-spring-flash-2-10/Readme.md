@@ -19,6 +19,7 @@ lsof -i :8081
 ```
 
 2 Run service with test profile. We'll see the CSRF Filter in the logs
+
 ```bash
 mvn clean install spring-boot:run
 ```
