@@ -3,5 +3,5 @@ language: java
 jdk:
   - openjdk11
 script:
-  - mvn clean install -Dconsolerizer.show=false
+  - mvn clean install -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
   - bash <(curl -s https://codecov.io/bash)
