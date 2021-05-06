@@ -27,6 +27,7 @@ There are a least 4 scope types for @Aspect:
 
 ### Books
 
+- [Spring Core Technologies Version 5.3.6 - Chapter 5 -  Aspect Oriented Programming with Spring](https://docs.spring.io/spring-framework/docs/5.3.6/reference/pdf)
 - Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5 - Chapter 4</i>. (Second Edition). Apress
 - Sharma, R. (September 2018). <i>Hands-On Reactive Programming with Reactor</i>. (First Edition). Packt
 - Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools - Chapter 5</i>. (Fifth Edition). Apress
