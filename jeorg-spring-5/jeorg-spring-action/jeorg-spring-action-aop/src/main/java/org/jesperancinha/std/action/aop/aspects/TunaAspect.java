@@ -17,7 +17,7 @@ public class TunaAspect {
     }
 
     /**
-     * In this pontcut, we are defining an advice that will be invoked just before calling the catchWithNet method from {@link org.jesperancinha.std.action.aop.methods.TunaCatcher} and any of its subclasses.
+     * In this pointcut, we are defining an advice that will be invoked just before calling the catchWithNet method from {@link org.jesperancinha.std.action.aop.methods.TunaCatcher} and any of its subclasses.
      * This is done with the + wildcard.
      *
      * @param joinPoint {@link JoinPoint}

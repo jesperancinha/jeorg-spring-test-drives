@@ -1,5 +1,6 @@
 package org.jesperancinha.std.action.aop.methods;
 
+import org.jesperancinha.std.action.aop.annotations.Master;
 import org.jesperancinha.std.action.aop.model.Gamba;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +16,12 @@ public class GambaFoodCatcher implements SeaFoodCatcher<Gamba> {
         return null;
     }
 
-    @Override
+    @Master
     public Gamba catchByHand() {
         return null;
     }
 
+    @Master
     @Override
     public void catchByHandExtra() {
 
