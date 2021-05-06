@@ -16,18 +16,14 @@ public class GambaAspect {
         this.gambaService = gambaService;
     }
 
-    @Before("execution(public * org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.*()) && within(org.jesperancinha.std.action.aop.methods.G*))")
+    @Before("execution(public * org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.*()) " +
+            "&& within(org.jesperancinha.std.action.aop.methods.G*))")
     public void beforeWithin(final JoinPoint joinPoint) {
         gambaService.beforeWithin(joinPoint);
     }
 
-
-    /**
-     * Here we test a within that is not @within
-     *
-     * @param joinPoint {@link JoinPoint}
-     */
-    @Before("execution(public * org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.catchByHand()) && @annotation(org.jesperancinha.std.action.aop.annotations.Master))")
+    @Before("execution(public * org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.catchByHand()) " +
+            "&& @annotation(org.jesperancinha.std.action.aop.annotations.Master))")
     public void beforeWithinNoAtAnnotation(final JoinPoint joinPoint) {
         gambaService.beforeWithinNoAtAnnotation(joinPoint);
 

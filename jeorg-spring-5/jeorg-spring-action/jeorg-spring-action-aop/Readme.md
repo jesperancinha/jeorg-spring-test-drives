@@ -10,6 +10,7 @@ Topics:
 2. `@Pointcut`, `@Before`
 3. `!`, `||`, `&&`
 4. `@Before`, `within`
+5. `@annotation`, `execution`
 
 ## Notes
 
