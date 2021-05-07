@@ -1,8 +1,8 @@
 os: osx
 language: java
-install: mvn dependency:resolve | cut -b 1-200
+install: mvn dependency:resolve | egrep -v "WARNING" | egrep -v "DEBUG"
 jdk:
   - openjdk11
 script:
-  - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN} | cut -b 1-300
+  - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN} | egrep -v "WARNING" | egrep -v "DEBUG"
   - bash <(curl -s https://codecov.io/bash)
