@@ -59,3 +59,13 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-topics
         - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
+
+    - language: java
+      stage: JEOrg Spring Mastery (Kotlin)
+      jdk:
+        - openjdk11
+      install: mvn dependency:resolve
+      script:
+        - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
+        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - bash <(curl -s https://codecov.io/bash)
