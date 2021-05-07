@@ -1,7 +1,8 @@
 os: osx
 language: java
+install: mvn dependency:resolve | cut -b 1-200
 jdk:
   - openjdk11
 script:
-  - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+  - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN} | cut -b 1-300
   - bash <(curl -s https://codecov.io/bash)
