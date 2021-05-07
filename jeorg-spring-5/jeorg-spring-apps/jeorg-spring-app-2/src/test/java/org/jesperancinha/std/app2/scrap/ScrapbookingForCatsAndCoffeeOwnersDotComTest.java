@@ -1,14 +1,12 @@
-package org.jesperancinha.std.app1.jdbc;
+package org.jesperancinha.std.app2.scrap;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class SpringApp1LauncherTest {
+public class ScrapbookingForCatsAndCoffeeOwnersDotComTest {
 
     @Test
     public void testContext() {
-
     }
-
 }
