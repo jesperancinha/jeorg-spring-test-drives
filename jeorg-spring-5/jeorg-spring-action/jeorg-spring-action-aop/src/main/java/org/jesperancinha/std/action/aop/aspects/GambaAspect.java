@@ -16,13 +16,13 @@ public class GambaAspect {
         this.gambaService = gambaService;
     }
 
-    @Before("execution(public * org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.*()) " +
-            "&& within(org.jesperancinha.std.action.aop.methods.G*))")
+    @Before("execution(public * org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.*()) " +
+            "&& within(org.jesperancinha.std.action.aop.catchers.G*))")
     public void beforeWithin(final JoinPoint joinPoint) {
         gambaService.beforeWithin(joinPoint);
     }
 
-    @Before("execution(public * org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.catchByHand()) " +
+    @Before("execution(public * org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.catchByHand()) " +
             "&& @annotation(org.jesperancinha.std.action.aop.annotations.Master))")
     public void beforeWithinNoAtAnnotation(final JoinPoint joinPoint) {
         gambaService.beforeWithinNoAtAnnotation(joinPoint);
@@ -34,7 +34,7 @@ public class GambaAspect {
         gambaService.beforeWithinAnnotation(joinPoint);
     }
 
-    @Before("execution(@org.jesperancinha.std.action.aop.annotations.Master public * org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.*()))")
+    @Before("execution(@org.jesperancinha.std.action.aop.annotations.Master public * org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.*()))")
     public void beforeExecution(final JoinPoint joinPoint) {
         gambaService.beforeExecution(joinPoint);
     }

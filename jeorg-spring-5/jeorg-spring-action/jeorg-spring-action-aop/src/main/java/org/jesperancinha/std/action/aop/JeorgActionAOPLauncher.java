@@ -1,7 +1,13 @@
 package org.jesperancinha.std.action.aop;
 
-import org.jesperancinha.std.action.aop.methods.BonitoCatcher;
-import org.jesperancinha.std.action.aop.methods.cod.CodCatcher;
+import org.jesperancinha.std.action.aop.catchers.BonitoCatcher;
+import org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher;
+import org.jesperancinha.std.action.aop.catchers.MackerelCatcher;
+import org.jesperancinha.std.action.aop.catchers.MegaTunaCatcher;
+import org.jesperancinha.std.action.aop.catchers.SardineCatcher;
+import org.jesperancinha.std.action.aop.catchers.ShrimpCatcher;
+import org.jesperancinha.std.action.aop.catchers.TunaCatcher;
+import org.jesperancinha.std.action.aop.catchers.cod.CodCatcher;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,11 +20,30 @@ public class JeorgActionAOPLauncher implements ApplicationRunner {
 
     private final BonitoCatcher bonitoCatcher;
     private final CodCatcher codCatcher;
+    private final GambaFoodCatcher gambaFoodCatcher;
+    private final MackerelCatcher mackerelCatcher;
+    private final MegaTunaCatcher megaTunaCatcher;
+    private final SardineCatcher sardineCatcher;
+    private final ShrimpCatcher shrimpCatcher;
+    private final TunaCatcher tunaCatcher;
 
-    public JeorgActionAOPLauncher(BonitoCatcher bonitoCatcher,
-                                  CodCatcher codCatcher) {
+    public JeorgActionAOPLauncher(
+            final BonitoCatcher bonitoCatcher,
+            final CodCatcher codCatcher,
+            final GambaFoodCatcher gambaFoodCatcher,
+            final MackerelCatcher mackerelCatcher,
+            final MegaTunaCatcher megaTunaCatcher,
+            final SardineCatcher sardineCatcher,
+            final ShrimpCatcher shrimpCatcher,
+            final TunaCatcher tunaCatcher) {
         this.bonitoCatcher = bonitoCatcher;
         this.codCatcher = codCatcher;
+        this.gambaFoodCatcher = gambaFoodCatcher;
+        this.mackerelCatcher = mackerelCatcher;
+        this.megaTunaCatcher = megaTunaCatcher;
+        this.sardineCatcher = sardineCatcher;
+        this.shrimpCatcher = shrimpCatcher;
+        this.tunaCatcher = tunaCatcher;
     }
 
     public static void main(String[] args) {
@@ -31,5 +56,11 @@ public class JeorgActionAOPLauncher implements ApplicationRunner {
         bonitoCatcher.catchByHandExtra();
         bonitoCatcher.catchWithClaws();
         codCatcher.catchByHand();
+        gambaFoodCatcher.catchByHand();
+        mackerelCatcher.catchWithNet();
+        megaTunaCatcher.catchWithNet();
+        sardineCatcher.catchWithNet();
+        shrimpCatcher.catchByHand();
+        tunaCatcher.catchByHand();
     }
 }

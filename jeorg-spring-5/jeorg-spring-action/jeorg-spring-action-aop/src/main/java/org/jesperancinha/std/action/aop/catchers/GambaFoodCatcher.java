@@ -1,10 +1,11 @@
-package org.jesperancinha.std.action.aop.methods;
+package org.jesperancinha.std.action.aop.catchers;
 
 import org.jesperancinha.std.action.aop.annotations.Master;
 import org.jesperancinha.std.action.aop.model.Gamba;
 import org.springframework.stereotype.Service;
 
 @Service
+@Master
 public class GambaFoodCatcher implements SeaFoodCatcher<Gamba> {
     @Override
     public Gamba catchWithNet() {

@@ -16,12 +16,12 @@ public class BonitoAspect3 {
         this.bonito3Service = bonito3Service;
     }
 
-    @Pointcut("execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.methods.BonitoCatcher.catchWithClaws())")
+    @Pointcut("execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catchWithClaws())")
     public void waitPrivatelyForFishCatchWithClaw() {
         bonito3Service.waitPrivatelyForFishCatchWithClaw();
     }
 
-    @Pointcut("execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.methods.BonitoCatcher.catchByHand())")
+    @Pointcut("execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catchByHand())")
     public void waitPrivatelyForFishCatchWithHand() {
         bonito3Service.waitPrivatelyForFishCatchWithHand();
     }

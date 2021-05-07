@@ -8,14 +8,12 @@ import org.springframework.stereotype.Service;
 public class Bonito4Service {
 
     public void waitPrivatelyForFishCatch(JoinPoint joinPoint) {
-    }
-
-    public void waitForFishCatch(JoinPoint joinPoint) {
         ConsolerizerComposer.outSpace()
                 .bgBlue()
                 .unicorns(100)
-                .reset()
-                .blue("Waiting for fish...");
+                .green(joinPoint)
+                .blue("waitPrivatelyForFishCatch for fish...")
+                .reset();
     }
 
     public void beforeAnyCatch(JoinPoint joinPoint) {

@@ -6,7 +6,7 @@ import org.jesperancinha.std.action.aop.beans.Bonito1Service;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Aspect("perthis(execution(public void org.jesperancinha.std.action.aop.methods.BonitoCatcher.catchByHandExtra()))")
+@Aspect("perthis(execution(public void org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catchByHandExtra()))")
 //@Aspect
 @Component
 @Scope("prototype")
@@ -22,12 +22,12 @@ public class BonitoAspect {
      * This advice won't executed
      * It is not included in the @Aspect value, which filters all its advices and pointcuts
      */
-    @Before("execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.methods.BonitoCatcher.catchByHand())")
+    @Before("execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catchByHand())")
     public void waitForFishCatch() {
         bonito1Service.waitForFishCatch();
     }
 
-    @Before("execution(public void org.jesperancinha.std.action.aop.methods.BonitoCatcher.catchByHandExtra())")
+    @Before("execution(public void org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catchByHandExtra())")
     public void waitForFishNoCatch() {
         bonito1Service.waitForFishNoCatch();
     }

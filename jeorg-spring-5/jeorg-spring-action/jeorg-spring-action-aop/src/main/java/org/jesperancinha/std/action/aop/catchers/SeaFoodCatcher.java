@@ -1,4 +1,4 @@
-package org.jesperancinha.std.action.aop.methods;
+package org.jesperancinha.std.action.aop.catchers;
 
 public interface SeaFoodCatcher<T> {
 

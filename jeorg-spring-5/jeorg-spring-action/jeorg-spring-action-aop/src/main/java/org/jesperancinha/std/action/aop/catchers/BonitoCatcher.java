@@ -1,4 +1,4 @@
-package org.jesperancinha.std.action.aop.methods;
+package org.jesperancinha.std.action.aop.catchers;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.action.aop.model.Bonito;

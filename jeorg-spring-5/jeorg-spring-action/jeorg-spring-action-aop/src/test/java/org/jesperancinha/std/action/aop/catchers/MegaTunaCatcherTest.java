@@ -1,9 +1,10 @@
-package org.jesperancinha.std.action.aop.methods;
+package org.jesperancinha.std.action.aop.catchers;
 
 import org.aspectj.lang.JoinPoint;
 import org.jesperancinha.std.action.aop.aspects.TunaAspect;
 import org.jesperancinha.std.action.aop.beans.Bonito4Service;
 import org.jesperancinha.std.action.aop.beans.TunaService;
+import org.jesperancinha.std.action.aop.catchers.MegaTunaCatcher;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
@@ -46,7 +47,7 @@ class MegaTunaCatcherTest {
         verify(tunaService, only()).beforeCatching(joinPointArgumentCaptor.capture());
         final var joinPointArgumentCaptorValue = joinPointArgumentCaptor.getValue();
         assertThat(joinPointArgumentCaptorValue.getSignature().toString())
-                .isEqualTo("Tuna org.jesperancinha.std.action.aop.methods.MegaTunaCatcher.catchWithNet()");
+                .isEqualTo("Tuna org.jesperancinha.std.action.aop.catchers.MegaTunaCatcher.catchWithNet()");
         verifyNoInteractions(bonito4Service);
     }
 

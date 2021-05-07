@@ -20,9 +20,9 @@
     <aop:config>
         <aop:aspect ref="bonitoAspect4">
             <aop:before
-                    pointcut="execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.methods.BonitoCatcher.catchWithClaws())"
+                    pointcut="execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catchWithClaws())"
                     method="waitPrivatelyForFishCatch"/>
-            <aop:before pointcut="execution(public * org.jesperancinha.std.action.aop.methods.BonitoCatcher.catch*())"
+            <aop:before pointcut="execution(public * org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catch*())"
                         method="beforeAnyCatch"/>
         </aop:aspect>
     </aop:config>

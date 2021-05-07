@@ -17,7 +17,7 @@ public class BonitoAspect2 {
         this.bonito2Service = bonito2Service;
     }
 
-    @Pointcut("execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.methods.BonitoCatcher.catchWithClaws())")
+    @Pointcut("execution(public org.jesperancinha.std.action.aop.model.Bonito org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catchWithClaws())")
     public void waitPrivatelyForFishCatch() {
         bonito2Service.waitPrivatelyForFishCatch();
     }
@@ -27,8 +27,8 @@ public class BonitoAspect2 {
         bonito2Service.waitForFishCatch(joinPoint);
     }
 
-    @Before("execution(public * org.jesperancinha.std.action.aop.methods.BonitoCatcher.catch*())")
-    public void beforeAnyCatch(final JoinPoint joinPoint){
+    @Before("execution(public * org.jesperancinha.std.action.aop.catchers.BonitoCatcher.catch*()) && !@within(org.jesperancinha.std.action.aop.annotations.Master)")
+    public void beforeAnyCatch(final JoinPoint joinPoint) {
         bonito2Service.beforeAnyCatch(joinPoint);
     }
 

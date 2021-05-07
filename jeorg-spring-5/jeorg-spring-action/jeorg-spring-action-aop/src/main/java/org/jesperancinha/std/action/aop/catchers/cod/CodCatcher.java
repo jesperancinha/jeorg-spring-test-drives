@@ -1,7 +1,7 @@
-package org.jesperancinha.std.action.aop.methods.cod;
+package org.jesperancinha.std.action.aop.catchers.cod;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
-import org.jesperancinha.std.action.aop.methods.SeaFoodCatcher;
+import org.jesperancinha.std.action.aop.catchers.SeaFoodCatcher;
 import org.jesperancinha.std.action.aop.model.Cod;
 import org.springframework.stereotype.Service;
 

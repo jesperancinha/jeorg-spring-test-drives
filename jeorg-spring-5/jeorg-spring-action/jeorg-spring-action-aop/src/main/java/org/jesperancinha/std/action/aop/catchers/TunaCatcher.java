@@ -1,9 +1,10 @@
-package org.jesperancinha.std.action.aop.methods;
+package org.jesperancinha.std.action.aop.catchers;
 
 import org.jesperancinha.std.action.aop.model.Tuna;
+import org.springframework.stereotype.Service;
 
-public class MegaTunaCatcher extends TunaCatcher {
-
+@Service
+public class TunaCatcher implements SeaFoodCatcher<Tuna> {
     @Override
     public Tuna catchWithNet() {
         return null;

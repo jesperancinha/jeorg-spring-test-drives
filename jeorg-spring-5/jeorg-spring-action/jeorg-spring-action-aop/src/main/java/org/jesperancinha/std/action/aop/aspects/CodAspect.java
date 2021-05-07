@@ -15,7 +15,7 @@ public class CodAspect {
         this.codService = codService;
     }
 
-    @Before("within(org.jesperancinha.std.action.aop.methods..*)")
+    @Before("within(org.jesperancinha.std.action.aop.catchers..*)")
     public void withinTheCode() {
         codService.withinTheCode();
     }

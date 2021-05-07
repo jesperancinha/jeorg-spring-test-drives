@@ -1,4 +1,4 @@
-package org.jesperancinha.std.action.aop.methods;
+package org.jesperancinha.std.action.aop.catchers;
 
 import org.aspectj.lang.JoinPoint;
 import org.jesperancinha.std.action.aop.aspects.GambaAspect;
@@ -40,10 +40,14 @@ class GambaFoodCatcherTest {
     void catchWithNet() {
         gambaFoodCatcher.catchWithNet();
 
-        verify(gambaService, only()).beforeWithin(joinPointArgumentCaptor.capture());
+        verify(gambaService, times(1)).beforeWithin(joinPointArgumentCaptor.capture());
         final var joinPointArgumentCaptorValue = joinPointArgumentCaptor.getValue();
         assertThat(joinPointArgumentCaptorValue.getSignature().toString())
-                .isEqualTo("Gamba org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.catchWithNet()");
+                .isEqualTo("Gamba org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.catchWithNet()");
+        verify(gambaService, times(1)).beforeWithinAnnotation(joinPointArgumentCaptor.capture());
+        final var joinPointArgumentCaptorValue2 = joinPointArgumentCaptor.getValue();
+        assertThat(joinPointArgumentCaptorValue2.getSignature().toString())
+                .isEqualTo("Gamba org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.catchWithNet()");
     }
 
     @Test
@@ -63,16 +67,16 @@ class GambaFoodCatcherTest {
         assertThat(joinPointArgumentCaptorAllValues).hasSize(4);
         final var joinPointArgumentCaptorValue = joinPointArgumentCaptorAllValues.get(0);
         assertThat(joinPointArgumentCaptorValue.getSignature().toString())
-                .isEqualTo("Gamba org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.catchByHand()");
+                .isEqualTo("Gamba org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.catchByHand()");
         final var joinPointArgumentCaptorValue1 = joinPointArgumentCaptorAllValues.get(1);
         assertThat(joinPointArgumentCaptorValue1.getSignature().toString())
-                .isEqualTo("Gamba org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.catchByHand()");
+                .isEqualTo("Gamba org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.catchByHand()");
         final var joinPointArgumentCaptorValue2 = joinPointArgumentCaptorAllValues.get(2);
         assertThat(joinPointArgumentCaptorValue2.getSignature().toString())
-                .isEqualTo("Gamba org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.catchByHand()");
+                .isEqualTo("Gamba org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.catchByHand()");
         final var joinPointArgumentCaptorValue3 = joinPointArgumentCaptorAllValues.get(3);
         assertThat(joinPointArgumentCaptorValue3.getSignature().toString())
-                .isEqualTo("Gamba org.jesperancinha.std.action.aop.methods.GambaFoodCatcher.catchByHand()");
+                .isEqualTo("Gamba org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.catchByHand()");
     }
 
     @Test

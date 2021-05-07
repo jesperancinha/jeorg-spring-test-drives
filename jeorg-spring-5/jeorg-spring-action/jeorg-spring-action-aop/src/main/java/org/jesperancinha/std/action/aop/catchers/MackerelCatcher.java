@@ -1,4 +1,4 @@
-package org.jesperancinha.std.action.aop.methods;
+package org.jesperancinha.std.action.aop.catchers;
 
 import org.jesperancinha.std.action.aop.model.Mackerel;
 import org.springframework.stereotype.Service;
