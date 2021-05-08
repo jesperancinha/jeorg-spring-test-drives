@@ -21,7 +21,7 @@ public class SpringFlash210Launcher implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         Consolerizer.printRainbowTitleLn(material);
 
     }

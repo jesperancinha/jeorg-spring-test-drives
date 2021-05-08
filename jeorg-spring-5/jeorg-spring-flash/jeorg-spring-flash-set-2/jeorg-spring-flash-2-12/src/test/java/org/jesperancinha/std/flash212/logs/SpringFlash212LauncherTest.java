@@ -15,5 +15,6 @@ class SpringFlash212LauncherTest {
                 .magenta(title("Logback example"))
                 .magenta("In this example we check how Spring Framework can use Logback when it finds a logback file")
                 .reset();
+        SpringFlash212Launcher.main(new String[0]);
     }
 }

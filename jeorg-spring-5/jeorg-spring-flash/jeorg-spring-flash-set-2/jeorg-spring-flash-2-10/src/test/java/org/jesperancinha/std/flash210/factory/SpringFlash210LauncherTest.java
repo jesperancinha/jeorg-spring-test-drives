@@ -23,5 +23,6 @@ class SpringFlash210LauncherTest {
                 .brightBlue()
                 .jsonPrettyPrint(material)
                 .reset();
+        SpringFlash210Launcher.main(new String[0]);
     }
 }
