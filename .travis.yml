@@ -8,7 +8,6 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-flash
         - mvn dependency:resolve
       script:
-        - cd jeorg-spring-5/jeorg-spring-flash
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
@@ -20,7 +19,6 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-action
         - mvn dependency:resolve
       script:
-        - cd jeorg-spring-5/jeorg-spring-action
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
@@ -32,7 +30,6 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-app-old
         - mvn dependency:resolve
       script:
-        - cd jeorg-spring-5/jeorg-spring-app-old
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
@@ -44,7 +41,6 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-apps
         - mvn dependency:resolve
       script:
-        - cd jeorg-spring-5/jeorg-spring-apps
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
@@ -56,7 +52,6 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-mastery
         - mvn dependency:resolve
       script:
-        - cd jeorg-spring-5/jeorg-spring-mastery
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
@@ -68,7 +63,6 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-topics
         - mvn dependency:resolve
       script:
-        - cd jeorg-spring-5/jeorg-spring-topics
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
@@ -80,6 +74,5 @@ jobs:
         - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
         - mvn dependency:resolve
       script:
-        - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
