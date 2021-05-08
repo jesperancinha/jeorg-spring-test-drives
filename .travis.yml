@@ -1,6 +1,17 @@
 jobs:
   include:
     - language: java
+      stage: JEOrg Spring Mastery (Kotlin)
+      jdk:
+        - openjdk11
+      install:
+        - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
+        - mvn dependency:resolve
+      script:
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - bash <(curl -s https://codecov.io/bash)
+
+    - language: java
       stage: JEOrg Spring Flash Set 1 (Java)
       jdk:
         - openjdk11
@@ -105,17 +116,6 @@ jobs:
         - openjdk11
       install:
         - cd jeorg-spring-5/jeorg-spring-topics
-        - mvn dependency:resolve
-      script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-
-    - language: java
-      stage: JEOrg Spring Mastery (Kotlin)
-      jdk:
-        - openjdk11
-      install:
-        - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
         - mvn dependency:resolve
       script:
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
