@@ -1,71 +1,85 @@
 jobs:
   include:
     - language: java
+      stage: JEOrg Spring Flash (Java)
+      jdk:
+        - openjdk11
+      install:
+        - cd jeorg-spring-5/jeorg-spring-flash
+        - mvn dependency:resolve
+      script:
+        - cd jeorg-spring-5/jeorg-spring-flash
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - bash <(curl -s https://codecov.io/bash)
+
+    - language: java
       stage: JEOrg Spring Action (Java)
       jdk:
         - openjdk11
-      install: mvn dependency:resolve
+      install:
+        - cd jeorg-spring-5/jeorg-spring-action
+        - mvn dependency:resolve
       script:
         - cd jeorg-spring-5/jeorg-spring-action
-        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
     - language: java
       stage: JEOrg Spring App Old (Java)
       jdk:
         - openjdk11
-      install: mvn dependency:resolve
+      install:
+        - cd jeorg-spring-5/jeorg-spring-app-old
+        - mvn dependency:resolve
       script:
         - cd jeorg-spring-5/jeorg-spring-app-old
-        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
     - language: java
       stage: JEOrg Spring Apps (Java)
       jdk:
         - openjdk11
-      install: mvn dependency:resolve
+      install:
+        - cd jeorg-spring-5/jeorg-spring-apps
+        - mvn dependency:resolve
       script:
         - cd jeorg-spring-5/jeorg-spring-apps
-        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-
-    - language: java
-      stage: JEOrg Spring Flash (Java)
-      jdk:
-        - openjdk11
-      install: mvn dependency:resolve
-      script:
-        - cd jeorg-spring-5/jeorg-spring-flash
-        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
     - language: java
       stage: JEOrg Spring Mastery (Java)
       jdk:
         - openjdk11
-      install: mvn dependency:resolve
+      install:
+        - cd jeorg-spring-5/jeorg-spring-mastery
+        - mvn dependency:resolve
       script:
         - cd jeorg-spring-5/jeorg-spring-mastery
-        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
     - language: java
       stage: JEOrg Spring Topics (Java)
       jdk:
         - openjdk11
-      install: mvn dependency:resolve
+      install:
+        - cd jeorg-spring-5/jeorg-spring-topics
+        - mvn dependency:resolve
       script:
         - cd jeorg-spring-5/jeorg-spring-topics
-        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
 
     - language: java
       stage: JEOrg Spring Mastery (Kotlin)
       jdk:
         - openjdk11
-      install: mvn dependency:resolve
+      install:
+        - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
+        - mvn dependency:resolve
       script:
         - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
-        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
