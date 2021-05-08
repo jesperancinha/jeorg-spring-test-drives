@@ -1,11 +1,55 @@
 jobs:
   include:
     - language: java
-      stage: JEOrg Spring Flash (Java)
+      stage: JEOrg Spring Flash Set 1 (Java)
       jdk:
         - openjdk11
       install:
-        - cd jeorg-spring-5/jeorg-spring-flash
+        - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-1
+        - mvn dependency:resolve
+      script:
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - bash <(curl -s https://codecov.io/bash)
+
+    - language: java
+      stage: JEOrg Spring Flash Set 2 (Java)
+      jdk:
+        - openjdk11
+      install:
+        - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-2
+        - mvn dependency:resolve
+      script:
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - bash <(curl -s https://codecov.io/bash)
+
+    - language: java
+      stage: JEOrg Spring Flash Set 3 (Java)
+      jdk:
+        - openjdk11
+      install:
+        - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-3
+        - mvn dependency:resolve
+      script:
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - bash <(curl -s https://codecov.io/bash)
+
+    - language: java
+      stage: JEOrg Spring Flash Set 4 (Java)
+      jdk:
+        - openjdk11
+      install:
+        - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-4
+        - mvn dependency:resolve
+      script:
+        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
+        - bash <(curl -s https://codecov.io/bash)
+
+    - language: java
+      stage: JEOrg Spring Flash Set 5 (Java)
+      jdk:
+        - openjdk11
+      install:
+        - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-5
         - mvn dependency:resolve
       script:
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
