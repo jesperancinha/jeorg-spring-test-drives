@@ -33,11 +33,11 @@ Topics covered:
 ## Profiles
 
 1.  test
-    1. Almost all logs deactivated. Here the focus is to look at the Consolerizer logs
+    1.  Almost all logs deactivated. Here the focus is to look at the Consolerizer logs
 2.  prod
-    1. All logs from `org.jesperancinha` are on TRACE level
+    1.  All logs from `org.jesperancinha` are on TRACE level
 3.  default
-    1. All in TRACE log level
+    1.  All in TRACE log level
 
 ## How to run
 

@@ -36,8 +36,8 @@ mvn clean install spring-boot:run
 
 2.  Test users:
 
-    1. user/user
-    2. admin/admin
+    1.  user/user
+    2.  admin/admin
 
 ## References
 

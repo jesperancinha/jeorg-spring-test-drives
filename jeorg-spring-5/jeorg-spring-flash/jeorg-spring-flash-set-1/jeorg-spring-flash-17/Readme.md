@@ -63,8 +63,8 @@ curl -X POST -H "name: user" -H "password: user" -H "role: ADMIN" http://localho
 ```
 
 4.  Test with credentials
-    1. admin/admin -> User with role <b>ROLE_ADMIN</b> -> User can login and access the whole website
-    2. user/user -> User with role <b>ROLE_USER</b> -> User can login, but there are not authorizations available
+    1.  admin/admin -> User with role <b>ROLE_ADMIN</b> -> User can login and access the whole website
+    2.  user/user -> User with role <b>ROLE_USER</b> -> User can login, but there are not authorizations available
 
 5.  Important dependency
 

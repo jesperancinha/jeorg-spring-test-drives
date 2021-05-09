@@ -13,10 +13,10 @@ Exploring the Security Context in Spring
 Using the film as inspiration:
 
 1.  As a `user`, with user/pass as user/user you will only know that Maja is looking for the truth.
-    1. Use [http://localhost:8081](http://localhost:8081)
+    1.  Use [http://localhost:8081](http://localhost:8081)
 
 2.  As an `admin` with user/pass as admin/amin you find out that Thomas holds a secret
-    1. Use [http://localhost:8081/origin](http://localhost:8081/origin)
+    1.  Use [http://localhost:8081/origin](http://localhost:8081/origin)
 
 ## How to run
 
