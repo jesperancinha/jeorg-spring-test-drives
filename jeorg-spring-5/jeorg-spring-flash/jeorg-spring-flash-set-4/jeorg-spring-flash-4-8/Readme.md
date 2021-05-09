@@ -4,11 +4,11 @@
 
 Exploring the UserDetails in Spring with OAuth
 
-1. `UserDetails`
+1.  `UserDetails`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## How to run
 
@@ -28,19 +28,19 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1. Run the service
+1.  Run the service
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2. Create user
+2.  Create user
 
 ```bash
 curl -X POST -H 'username: admin' -H 'password: admin' http://localhost:8081/open/create
 ```
 
-3. Authenticate with OAUTH local
+3.  Authenticate with OAUTH local
 
 ```bash
 curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=admin&password=admin&client_id=flash48-client&client_secret=flash48&scope=read&redirect_uri=http://localhost:8081/oauth" http://localhost:8081/oauth/token

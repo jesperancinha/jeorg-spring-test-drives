@@ -6,11 +6,11 @@ Exploring the Form Parameters
 
 Topics
 
-1. `Model`, `ModelAndView`, `commandName`, `modelAttribute`, `<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>`
+1.  `Model`, `ModelAndView`, `commandName`, `modelAttribute`, `<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>`
 
 ## Endpoints
 
-1. [http://localhost:8081/](http://localhost:8081/)
+1.  [http://localhost:8081/](http://localhost:8081/)
 
 ## How to run
 

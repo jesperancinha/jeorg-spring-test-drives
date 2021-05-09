@@ -2,26 +2,26 @@
 
 ## Contents
 
-1. [jeorg-spring-flash-2-1](./jeorg-spring-flash-2-1) - 🕺🏻 Embedded Containers
-2. [jeorg-spring-flash-2-2](./jeorg-spring-flash-2-2) - 🍷 InterceptorRegistry
-3. [jeorg-spring-flash-2-3](./jeorg-spring-flash-2-3) - 🥂 XML interceptors
-4. [jeorg-spring-flash-2-4](./jeorg-spring-flash-2-4) - 🧑🏻‍⚖️ JdbcTemplate
-5. [jeorg-spring-flash-2-5](./jeorg-spring-flash-2-5) - 🧮️ JPA Operators
-6. [jeorg-spring-flash-2-6](./jeorg-spring-flash-2-6) - 🐚 RowMapper and ResultSetExtractor
-7. [jeorg-spring-flash-2-7](./jeorg-spring-flash-2-7) - 🙅🏽‍♂️ management.endpoint
-8. [jeorg-spring-flash-2-8](./jeorg-spring-flash-2-8) - 🦅 SecurityFilterChain
-9. [jeorg-spring-flash-2-9](./jeorg-spring-flash-2-9) - 💍 EnableGlobalMethodSecurity, PreAuthorize and PostAuthorize
-10. [jeorg-spring-flash-2-10](./jeorg-spring-flash-2-10) - 🪐 spring.factories
-11. [jeorg-spring-flash-2-11](./jeorg-spring-flash-2-11) - 🍢 Logging with Log4j2
-12. [jeorg-spring-flash-2-12](./jeorg-spring-flash-2-12) - 🍡 Logging with LogBack
-13. [jeorg-spring-flash-2-13](./jeorg-spring-flash-2-13) - 🧁 Database JPA respositories
-14. [jeorg-spring-flash-2-14](./jeorg-spring-flash-2-14) - 🚖 🏎 Database transactions
-15. [jeorg-spring-flash-2-15](./jeorg-spring-flash-2-15) - 🧀 BeanPostProcessor
-16. [jeorg-spring-flash-2-16](./jeorg-spring-flash-2-16) - 👩🏻‍🌾 PlatformTransactionManager
-17. [jeorg-spring-flash-2-17](./jeorg-spring-flash-2-17) - 🔮 JtaTransactionManager
-18. [jeorg-spring-flash-2-18](./jeorg-spring-flash-2-18) - 👥 Profile
-19. [jeorg-spring-flash-2-19](./jeorg-spring-flash-2-19) - 🍃 Bean
-20. [jeorg-spring-flash-2-20](./jeorg-spring-flash-2-20) - 7️⃣ PathVariable, MatrixVariable, RequestHeader, RequestParam
+1.  [jeorg-spring-flash-2-1](./jeorg-spring-flash-2-1) - 🕺🏻 Embedded Containers
+2.  [jeorg-spring-flash-2-2](./jeorg-spring-flash-2-2) - 🍷 InterceptorRegistry
+3.  [jeorg-spring-flash-2-3](./jeorg-spring-flash-2-3) - 🥂 XML interceptors
+4.  [jeorg-spring-flash-2-4](./jeorg-spring-flash-2-4) - 🧑🏻‍⚖️ JdbcTemplate
+5.  [jeorg-spring-flash-2-5](./jeorg-spring-flash-2-5) - 🧮️ JPA Operators
+6.  [jeorg-spring-flash-2-6](./jeorg-spring-flash-2-6) - 🐚 RowMapper and ResultSetExtractor
+7.  [jeorg-spring-flash-2-7](./jeorg-spring-flash-2-7) - 🙅🏽‍♂️ management.endpoint
+8.  [jeorg-spring-flash-2-8](./jeorg-spring-flash-2-8) - 🦅 SecurityFilterChain
+9.  [jeorg-spring-flash-2-9](./jeorg-spring-flash-2-9) - 💍 EnableGlobalMethodSecurity, PreAuthorize and PostAuthorize
+10.  [jeorg-spring-flash-2-10](./jeorg-spring-flash-2-10) - 🪐 spring.factories
+11.  [jeorg-spring-flash-2-11](./jeorg-spring-flash-2-11) - 🍢 Logging with Log4j2
+12.  [jeorg-spring-flash-2-12](./jeorg-spring-flash-2-12) - 🍡 Logging with LogBack
+13.  [jeorg-spring-flash-2-13](./jeorg-spring-flash-2-13) - 🧁 Database JPA respositories
+14.  [jeorg-spring-flash-2-14](./jeorg-spring-flash-2-14) - 🚖 🏎 Database transactions
+15.  [jeorg-spring-flash-2-15](./jeorg-spring-flash-2-15) - 🧀 BeanPostProcessor
+16.  [jeorg-spring-flash-2-16](./jeorg-spring-flash-2-16) - 👩🏻‍🌾 PlatformTransactionManager
+17.  [jeorg-spring-flash-2-17](./jeorg-spring-flash-2-17) - 🔮 JtaTransactionManager
+18.  [jeorg-spring-flash-2-18](./jeorg-spring-flash-2-18) - 👥 Profile
+19.  [jeorg-spring-flash-2-19](./jeorg-spring-flash-2-19) - 🍃 Bean
+20.  [jeorg-spring-flash-2-20](./jeorg-spring-flash-2-20) - 7️⃣ PathVariable, MatrixVariable, RequestHeader, RequestParam
 
 ## References
 

@@ -4,11 +4,11 @@
 
 Exploring the ModelAttribute in Spring
 
-1. `@ModelAttribute`
+1.  `@ModelAttribute`
 
 ## Endpoints
 
-1. [http://localhost:8081/](http://localhost:8081/)
+1.  [http://localhost:8081/](http://localhost:8081/)
 
 ## References
 

@@ -13,23 +13,23 @@ French language in music
 
 Topics covered:
 
-1. `@ResponseBody`, `@RequestMapping`, `@RequestParam`
-2. `AuthenticationProvider`, `AuthorizationServerConfigurerAdapter`, `WebSecurityConfigurerAdapter`, `ResourceServerConfigurerAdapter`, `TokenStore`
-3. `@DataJpaTest`, `@ExtendWith(SpringExtension.class)`
-4. `InMemoryAuditEventRepository`, `AbstractAuditListener`, `management.endpoints.web.exposure.include=*`
-5. `@EnableConfigurationProperties`, `@ConfigurationProperties(prefix = "mastery1")`, `@PropertySource("classpath:extras.properties")`
-6. `propagation = Propagation.REQUIRES_NEW`, `isolation = Isolation.SERIALIZABLE`, `rollbackFor = RuntimeException.class`, `rollbackForClassName = "RuntimeException"`, `noRollbackForClassName = "Error"`, `noRollbackFor = Error.class`
-7. `@Qualifier`, `@DataJpaTest`
-8. `@Query("select m from Member m where m.joinDate is not null")`
-9. `TransactionTemplate`, `PlatformTransactionManager`, `TransactionStatus`
-10. `@Transactional`, `JDK proxies`, `EntityManager`, `getReference`
+1.  `@ResponseBody`, `@RequestMapping`, `@RequestParam`
+2.  `AuthenticationProvider`, `AuthorizationServerConfigurerAdapter`, `WebSecurityConfigurerAdapter`, `ResourceServerConfigurerAdapter`, `TokenStore`
+3.  `@DataJpaTest`, `@ExtendWith(SpringExtension.class)`
+4.  `InMemoryAuditEventRepository`, `AbstractAuditListener`, `management.endpoints.web.exposure.include=*`
+5.  `@EnableConfigurationProperties`, `@ConfigurationProperties(prefix = "mastery1")`, `@PropertySource("classpath:extras.properties")`
+6.  `propagation = Propagation.REQUIRES_NEW`, `isolation = Isolation.SERIALIZABLE`, `rollbackFor = RuntimeException.class`, `rollbackForClassName = "RuntimeException"`, `noRollbackForClassName = "Error"`, `noRollbackFor = Error.class`
+7.  `@Qualifier`, `@DataJpaTest`
+8.  `@Query("select m from Member m where m.joinDate is not null")`
+9.  `TransactionTemplate`, `PlatformTransactionManager`, `TransactionStatus`
+10.  `@Transactional`, `JDK proxies`, `EntityManager`, `getReference`
 
 ## Endpoints
 
-1. [http://localhost:8081/actuator](http://localhost:8081/actuator)
-2. [http://localhost:8081/member/search?param=Celine](http://localhost:8081/member/search?param=Celine)
-3. [http://localhost:8081/member](http://localhost:8081/member)
-4. [http://localhost:8081/member/nonnull/](http://localhost:8081/member/nonnull/)
+1.  [http://localhost:8081/actuator](http://localhost:8081/actuator)
+2.  [http://localhost:8081/member/search?param=Celine](http://localhost:8081/member/search?param=Celine)
+3.  [http://localhost:8081/member](http://localhost:8081/member)
+4.  [http://localhost:8081/member/nonnull/](http://localhost:8081/member/nonnull/)
 
 ## Command line requests
 
@@ -45,13 +45,13 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8081/member/cr
 
 ## How to run
 
-1. Running with the default profile
+1.  Running with the default profile
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2. Running with the prod profile
+2.  Running with the prod profile
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod

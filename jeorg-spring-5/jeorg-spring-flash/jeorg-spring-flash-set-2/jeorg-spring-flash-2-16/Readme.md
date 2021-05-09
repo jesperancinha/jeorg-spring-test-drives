@@ -6,11 +6,11 @@ Exploring the PlatformTransactionManager in Spring
 
 Topics
 
-1. `PlatformTransactionManager`
+1.  `PlatformTransactionManager`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## References
 

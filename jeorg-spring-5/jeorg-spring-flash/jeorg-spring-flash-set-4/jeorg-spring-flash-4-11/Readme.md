@@ -4,11 +4,11 @@
 
 Exploring the @RepositoryDefinition
 
-1. `@RepositoryDefinition`
+1.  `@RepositoryDefinition`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## Command line
 
@@ -35,7 +35,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1. Run Spring Boot SpringFlash411Launcher
+1.  Run Spring Boot SpringFlash411Launcher
 
 ```bash
 mvn clean install spring-boot:run

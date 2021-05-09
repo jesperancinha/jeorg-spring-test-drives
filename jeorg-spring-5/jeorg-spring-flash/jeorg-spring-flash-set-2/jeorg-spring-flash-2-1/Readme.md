@@ -6,11 +6,11 @@ Exploring Embedded Container
 
 Topics
 
-1. `WebServerFactoryCustomizer`, `ConfigurableServletWebServerFactory`
+1.  `WebServerFactoryCustomizer`, `ConfigurableServletWebServerFactory`
 
 ## Endpoints
 
-1. [http://localhost:9000/api/message/dancing](http://localhost:9000/api/message/dancing)
+1.  [http://localhost:9000/api/message/dancing](http://localhost:9000/api/message/dancing)
 
 ```bash
 curl http://localhost:9000/api/message/dancing
@@ -18,14 +18,14 @@ curl http://localhost:9000/api/message/dancing
 
 ## How to run
 
-1. Test running services
+1.  Test running services
 
 ```bash
 lsof -i :8081
 lsof -i :9000
 ```
 
-2. Run service
+2.  Run service
 
 ```bash
 mvn clean install spring-boot:run

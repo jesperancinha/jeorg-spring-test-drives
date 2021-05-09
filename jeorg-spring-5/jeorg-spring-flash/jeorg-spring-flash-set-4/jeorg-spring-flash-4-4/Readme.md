@@ -4,7 +4,7 @@
 
 Exploring the HandlerMapping in Spring
 
-1. `HandlerMapping`
+1.  `HandlerMapping`
 
 ## Endpoints
 
@@ -26,7 +26,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1. Run the service
+1.  Run the service
 
 ```bash
 mvn clean install spring-boot:run

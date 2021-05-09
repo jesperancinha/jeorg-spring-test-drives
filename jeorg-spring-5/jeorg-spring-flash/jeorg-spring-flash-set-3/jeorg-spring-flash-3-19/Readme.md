@@ -4,11 +4,11 @@
 
 Exploring static @Bean injection in Spring
 
-1. `static`, `@Bean`
+1.  `static`, `@Bean`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 

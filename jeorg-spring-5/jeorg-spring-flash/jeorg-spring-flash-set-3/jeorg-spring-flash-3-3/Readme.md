@@ -6,11 +6,11 @@ Exploring Rollback control in @Transactional in Spring
 
 Topics:
 
-1. `@Transactional`, `rollbackFor`, `noRollbackForClassName`, `rollbackForClassName`, `noRollbackFor`
+1.  `@Transactional`, `rollbackFor`, `noRollbackForClassName`, `rollbackForClassName`, `noRollbackFor`
 
 ## Endpoints
 
-1. [http://localhost:8081/](http://localhost:8081)
+1.  [http://localhost:8081/](http://localhost:8081)
 
 ```bash
 curl -X POST -H 'Content-Type: application/json' http://localhost:8081/createEpisode --data '{"name": "Il était une fois… la Vie - La vaccination"}'

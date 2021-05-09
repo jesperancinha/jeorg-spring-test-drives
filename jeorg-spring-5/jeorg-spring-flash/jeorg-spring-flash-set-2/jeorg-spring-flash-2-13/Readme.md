@@ -6,13 +6,13 @@ Exploring Testing in Spring
 
 Topics
 
-1. `@DataJpaTest`, `SpringRunner`, `@Autowired`
+1.  `@DataJpaTest`, `SpringRunner`, `@Autowired`
 
 ## Endpoints
 
 ## How to run
 
-1. Test running services
+1.  Test running services
 
 ```bash
 lsof -i :8081

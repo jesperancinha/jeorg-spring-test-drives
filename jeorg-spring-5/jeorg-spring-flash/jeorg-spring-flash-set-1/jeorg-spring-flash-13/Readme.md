@@ -6,12 +6,12 @@ Exploring GzipResourceResolver
 
 Topics
 
-1. `GzipResourceResolver`
+1.  `GzipResourceResolver`
 
 ## Endpoints
 
-1. [http://localhost:8081/flash13.styles.css](http://localhost:8081/flash13.styles.css) - We don't see the present CSS. We only see the contents of the GZipped file
-2. [http://localhost:8081/original.styles.css](http://localhost:8081/original.styles.css) - We see the original contente because there is no GZipped file available
+1.  [http://localhost:8081/flash13.styles.css](http://localhost:8081/flash13.styles.css) - We don't see the present CSS. We only see the contents of the GZipped file
+2.  [http://localhost:8081/original.styles.css](http://localhost:8081/original.styles.css) - We see the original contente because there is no GZipped file available
 
 ## About GZIP
 

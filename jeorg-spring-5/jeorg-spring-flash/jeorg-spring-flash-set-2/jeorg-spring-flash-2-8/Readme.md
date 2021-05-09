@@ -6,11 +6,11 @@ Exploring the SecurityFilterChain in Spring
 
 Topics
 
-1. `CsrfFilter`, `SecurityFilterChain`, `logging.level.org.springframework.security.web.FilterChainProxy=DEBUG`
+1.  `CsrfFilter`, `SecurityFilterChain`, `logging.level.org.springframework.security.web.FilterChainProxy=DEBUG`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ```bash
 curl http://localhost:8081
@@ -18,7 +18,7 @@ curl http://localhost:8081
 
 ## How to run
 
-1. Test running services
+1.  Test running services
 
 ```bash
 lsof -i :8081

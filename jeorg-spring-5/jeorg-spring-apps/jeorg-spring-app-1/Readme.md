@@ -11,7 +11,7 @@ Topics covered:
 
 ## Sketches
 
-1. First Sketch
+1.  First Sketch
 
 ![alt text](./docs/sketch-1.JPG)
 

@@ -4,11 +4,11 @@
 
 Exploring the UserDetails in Spring with OAuth
 
-1. `UserDetails`, `AbstractAuditListener`, `AbstractAuthenticationAuditListener`
+1.  `UserDetails`, `AbstractAuditListener`, `AbstractAuthenticationAuditListener`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## How to run
 
@@ -40,13 +40,13 @@ mvn clean install spring-boot:run
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
-2. Create user
+2.  Create user
 
 ```bash
 curl -X POST -H 'username: admin' -H 'password: admin' http://localhost:8081/open/create
 ```
 
-3. Authenticate with OAUTH local
+3.  Authenticate with OAUTH local
 
 ```bash
 curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=admin&password=admin&client_id=flash49-client&client_secret=flash49&scope=read&redirect_uri=http://localhost:8081/oauth" http://localhost:8081/oauth/token

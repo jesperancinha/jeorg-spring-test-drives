@@ -34,8 +34,8 @@ The purpose of this project is to keep up with the development of the Spring Fra
 
 ## Contents:
 
-1. [Spring 5](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
-2. [Spring Kotlin 5](./jeorg-spring-kotlin-5) - Test drives for the Spring 5 Frawework in Kotlin (Bare minimum focus given to Spring Boot)
+1.  [Spring 5](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
+2.  [Spring Kotlin 5](./jeorg-spring-kotlin-5) - Test drives for the Spring 5 Frawework in Kotlin (Bare minimum focus given to Spring Boot)
 
 VERY IMPORTANT NOTE: It is important to take note that none of the examples presented are thought to become production versions of any sort of product.   
 The goal of this project is purely to demonstrate and provide examples of different Aspects of the Spring Framework.  

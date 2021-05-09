@@ -6,7 +6,7 @@ Exploring RowCallbackHandler in Spring
 
 Topics:
 
-1. `RowCallbackHandler`
+1.  `RowCallbackHandler`
 
 ## References
 

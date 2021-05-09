@@ -37,8 +37,8 @@ sdk use java 15.0.2.hs-adpt
 
 Topics covered:
 
-1. `constructor-arg`, `bean`, `id`, `class`
-2. `@ConstructorProperties`
+1.  `constructor-arg`, `bean`, `id`, `class`
+2.  `@ConstructorProperties`
 
 ## References:
 

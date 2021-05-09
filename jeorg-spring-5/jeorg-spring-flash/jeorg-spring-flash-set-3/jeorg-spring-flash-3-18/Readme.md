@@ -4,11 +4,11 @@
 
 Exploring BeanPostProcessor in Spring
 
-1. `postProcessBeforeInitialization`, `postProcessAfterInitialization`, `BeanPostProcessor`
+1.  `postProcessBeforeInitialization`, `postProcessAfterInitialization`, `BeanPostProcessor`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 

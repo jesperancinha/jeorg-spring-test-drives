@@ -6,7 +6,7 @@ Exploring Database transactions in Spring
 
 Topics
 
-1. `Isolation.READ_UNCOMMITTED`, `Isolation.READ_COMMITTED`, `Isolation.REPEATABLE_READ`, `Isolation.SERIALIZABLE`
+1.  `Isolation.READ_UNCOMMITTED`, `Isolation.READ_COMMITTED`, `Isolation.REPEATABLE_READ`, `Isolation.SERIALIZABLE`
 
 ## Endpoints
 
@@ -66,19 +66,19 @@ SHOW GLOBAL VARIABLES LIKE 'PORT';
 
 Via spring annotations, it seems difficult to get dirty reads to work.
 
-1. After setting MariaDB on your machine, run spring with:
+1.  After setting MariaDB on your machine, run spring with:
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
-2. Then run:
+2.  Then run:
 
 ```bash
 mysql
 ```
 
-3. At the command mysql> prompt:
+3.  At the command mysql> prompt:
 
 Transaction 1:
 
@@ -92,7 +92,7 @@ ROLLBACK;
 COMMIT;
 ```
 
-4. At another command mysql> prompt:
+4.  At another command mysql> prompt:
    Transaction 2:
 
 ```sql
@@ -103,7 +103,7 @@ If you run rollback and then run the select again, you'll notice that you can al
 
 ### Regular tests
 
-1. Test running services
+1.  Test running services
 
 ```bash
 lsof -i :8081
@@ -115,7 +115,7 @@ lsof -i :8081
 mvn clean install spring-boot:run
 ```
 
-3. Test cases
+3.  Test cases
 
 ```bash
 curl -X POST http://localhost:8081/create/uncommitted --header "Content-Type: application/json"  --data '{"model":"Phantom II", "brand":"Rolls-Royce", "year":"1929", "movieAppearances":["Indiana Jones And The Last Cruzade","The Sorcerer''s Apprentice"]}'

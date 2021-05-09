@@ -6,13 +6,13 @@ Exploring default logs in Spring - Log4J2
 
 Topics
 
-1. `log4j2.xml`
+1.  `log4j2.xml`
 
 ## Endpoints
 
 ## How to run
 
-1. Test running services
+1.  Test running services
 
 ```bash
 lsof -i :8081

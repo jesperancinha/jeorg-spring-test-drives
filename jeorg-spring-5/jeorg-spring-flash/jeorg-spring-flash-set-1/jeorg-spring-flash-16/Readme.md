@@ -6,11 +6,11 @@ Exploring Authentication in Spring
 
 Topics
 
-1. `WebSecurityConfigurerAdapter`, `tomcat-embed-jasper`, `Authentication`, `SimpleGrantedAuthority`, `UsernamePasswordAuthenticationToken`
+1.  `WebSecurityConfigurerAdapter`, `tomcat-embed-jasper`, `Authentication`, `SimpleGrantedAuthority`, `UsernamePasswordAuthenticationToken`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081/)
+1.  [http://localhost:8081](http://localhost:8081/)
 
 ```bash
 curl localhost:8081/
@@ -18,23 +18,23 @@ curl localhost:8081/
 
 ## How to run
 
-1. Test running services
+1.  Test running services
 
 ```bash
 lsof -i :8081
 ```
 
-2. Run service
+2.  Run service
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-3. Test with credentials
+3.  Test with credentials
     1. admin/admin -> User with role <b>ROLE_ADMIN</b> -> User can login and access the whole website
     2. user/user -> User with role <b>ROLE_USER</b> -> User can login, but there are not authorizations available
 
-4. Important dependency
+4.  Important dependency
 
 ```xml
 

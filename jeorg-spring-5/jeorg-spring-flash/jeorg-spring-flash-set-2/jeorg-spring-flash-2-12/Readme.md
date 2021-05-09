@@ -6,13 +6,13 @@ Exploring default logs in Spring - LogBack
 
 Topics
 
-1. `logback.xml`
+1.  `logback.xml`
 
 ## Endpoints
 
 ## How to run
 
-1. Test running services
+1.  Test running services
 
 ```bash
 lsof -i :8081

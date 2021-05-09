@@ -4,11 +4,11 @@
 
 Exploring <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %> JSP taglib in Spring
 
-1. `<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>`
+1.  `<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## How to run
 
@@ -28,13 +28,13 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1. Run the service
+1.  Run the service
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2. Test users:
+2.  Test users:
 
     1. user/user
     2. admin/admin

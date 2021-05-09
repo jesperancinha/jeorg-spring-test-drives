@@ -6,11 +6,11 @@
 
 Exploring Spring HATEOAS - Hypermedia As The Engine Of Application State
 
-1. `EnableHypermediaSupport`, `RepresentationModel`
+1.  `EnableHypermediaSupport`, `RepresentationModel`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -18,7 +18,7 @@ Exploring Spring HATEOAS - Hypermedia As The Engine Of Application State
 lsof -i :8081
 ```
 
-1. Run the service
+1.  Run the service
 
 ```bash
 mvn clean install spring-boot:run

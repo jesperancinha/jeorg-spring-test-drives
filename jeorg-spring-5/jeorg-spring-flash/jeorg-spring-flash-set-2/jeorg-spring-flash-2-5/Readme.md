@@ -6,33 +6,33 @@ Exploring JPA repository operators in Spring
 
 Topics
 
-1. `First`, `By`, `Like`, `Top`, `Distinct`, `Contains`, `LessThan`, `GreaterThan`, `Between`
-2. `By`, `Is`, `Null`
-3. `@Service("normal")`, `@Named("that-other-bean-service")`
-4. `@TestPropertySource`, `@PropertySource`
-5. `ExpressionParser`, `SpelExpressionParser`, `parseExpression`
-6. `SpringBootTest.WebEnvironment.MOCK`. `SpringBootTest.WebEnvironment.NONE`, `SpringBootTest.WebEnvironment.RANDOM_PORT`, `SpringBootTest.WebEnvironment.DEFINED_PORT`
-7. `IgnoreCase`, `findBy<>Not`, `deleteBy<>`
-8. `@ConfigurationProperties`
+1.  `First`, `By`, `Like`, `Top`, `Distinct`, `Contains`, `LessThan`, `GreaterThan`, `Between`
+2.  `By`, `Is`, `Null`
+3.  `@Service("normal")`, `@Named("that-other-bean-service")`
+4.  `@TestPropertySource`, `@PropertySource`
+5.  `ExpressionParser`, `SpelExpressionParser`, `parseExpression`
+6.  `SpringBootTest.WebEnvironment.MOCK`. `SpringBootTest.WebEnvironment.NONE`, `SpringBootTest.WebEnvironment.RANDOM_PORT`, `SpringBootTest.WebEnvironment.DEFINED_PORT`
+7.  `IgnoreCase`, `findBy<>Not`, `deleteBy<>`
+8.  `@ConfigurationProperties`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
-2. [http://localhost:8081/1](http://localhost:8081/1)
-3. [http://localhost:8081/high50](http://localhost:8081/high50)
-4. [http://localhost:8081/low50](http://localhost:8081/low50)
-5. [http://localhost:8081/kidneys](http://localhost:8081/kidneys)
-6. [http://localhost:8081/between/20/60](http://localhost:8081/between/20/60)
-7. [http://localhost:8081/between/40/50](http://localhost:8081/between/40/50)
-8. [http://localhost:8081/runner](http://localhost:8081/runner)
-9. [http://localhost:8081/first/30](http://localhost:8081/first/30)
-10. [http://localhost:8081/contains/ack](http://localhost:8081/contains/ack)
-11. [http://localhost:8081/bean/Aduki](http://localhost:8081/bean/Aduki)
-12. [http://localhost:8081/bean/not/weighed](http://localhost:8081/bean/not/weighed)
-13. [http://localhost:8081/bean/case/Aduki](http://localhost:8081/bean/case/Aduki)
-14. [http://localhost:8081/bean/case/ADuki](http://localhost:8081/bean/case/ADuki)
-15. [http://localhost:8081/bean/case/AdUkI](http://localhost:8081/bean/case/AdUkI)
-16. [http://localhost:8081/bean/not/Aduki](http://localhost:8081/bean/not/Aduki)
+1.  [http://localhost:8081](http://localhost:8081)
+2.  [http://localhost:8081/1](http://localhost:8081/1)
+3.  [http://localhost:8081/high50](http://localhost:8081/high50)
+4.  [http://localhost:8081/low50](http://localhost:8081/low50)
+5.  [http://localhost:8081/kidneys](http://localhost:8081/kidneys)
+6.  [http://localhost:8081/between/20/60](http://localhost:8081/between/20/60)
+7.  [http://localhost:8081/between/40/50](http://localhost:8081/between/40/50)
+8.  [http://localhost:8081/runner](http://localhost:8081/runner)
+9.  [http://localhost:8081/first/30](http://localhost:8081/first/30)
+10.  [http://localhost:8081/contains/ack](http://localhost:8081/contains/ack)
+11.  [http://localhost:8081/bean/Aduki](http://localhost:8081/bean/Aduki)
+12.  [http://localhost:8081/bean/not/weighed](http://localhost:8081/bean/not/weighed)
+13.  [http://localhost:8081/bean/case/Aduki](http://localhost:8081/bean/case/Aduki)
+14.  [http://localhost:8081/bean/case/ADuki](http://localhost:8081/bean/case/ADuki)
+15.  [http://localhost:8081/bean/case/AdUkI](http://localhost:8081/bean/case/AdUkI)
+16.  [http://localhost:8081/bean/not/Aduki](http://localhost:8081/bean/not/Aduki)
 
 ```bash
 curl http://localhost:8081
@@ -51,13 +51,13 @@ curl -X DELETE http://localhost:8081/bean/1
 
 ## How to run
 
-1. Test running services
+1.  Test running services
 
 ```bash
 lsof -i :8081
 ```
 
-2. Run service
+2.  Run service
 
 ```bash
 mvn clean install spring-boot:run

@@ -6,13 +6,13 @@
 
 Exploring Conditionals in Spring - All of them
 
-1. `@ConditionalOnEnabledHealthIndicator`, `@ConditionalOnProperty`, `@ConditionalOnNotWebApplication`, `@ConditionalOnBean`, `@ConditionalOnMissingClass`, `@ConditionalOnInitializedRestarter`, `@ConditionalOnResource`, `@ConditionalOnManagementPort`, `@ConditionalOnClass`
+1.  `@ConditionalOnEnabledHealthIndicator`, `@ConditionalOnProperty`, `@ConditionalOnNotWebApplication`, `@ConditionalOnBean`, `@ConditionalOnMissingClass`, `@ConditionalOnInitializedRestarter`, `@ConditionalOnResource`, `@ConditionalOnManagementPort`, `@ConditionalOnClass`
    , `@ConditionalOnMissingBean`, `@ConditionalOnRepositoryType`, `@ConditionalOnWebApplication`, `@ConditionalOnEnabledInfoContributor`, `@ConditionalOnExpression`, `@ConditionalOnEnabledResourceChain`, `@ConditionalOnJava`, `@ConditionalOnCloudPlatform`, `@ConditionalOnEnabledEndpoint`
    , `@ConditionalOnJndi`, `@ConditionalOnSingleCandidate`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.  [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -20,7 +20,7 @@ Exploring Conditionals in Spring - All of them
 lsof -i :8081
 ```
 
-1. Run the service
+1.  Run the service
 
 1.1. With profile test
 

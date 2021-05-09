@@ -4,13 +4,13 @@
 
 Exploring the CGLib in Spring
 
-1. [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2),
-2. [jeorg-spring-flash-3-5](../jeorg-spring-flash-3-5)
-3. [jeorg-spring-flash-3-6](../jeorg-spring-flash-3-6)
+1.  [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2),
+2.  [jeorg-spring-flash-3-5](../jeorg-spring-flash-3-5)
+3.  [jeorg-spring-flash-3-6](../jeorg-spring-flash-3-6)
 
 ---
 
-1. `private`, `Enhancer`, `create`, `invoke`
+1.  `private`, `Enhancer`, `create`, `invoke`
 
 ## References
 
