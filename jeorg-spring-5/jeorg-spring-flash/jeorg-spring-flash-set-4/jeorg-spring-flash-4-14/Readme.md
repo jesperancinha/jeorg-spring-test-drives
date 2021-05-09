@@ -4,11 +4,11 @@
 
 Exploring @SpringBootApplication in Spring
 
-1.    `@SpringBootApplication`, `@Target`, `@Retention`, `@Documented`, `@Inherited`, `@SpringBootConfiguration`, `@EnableAutoConfiguration`, `@ComponentScan`, `@ConfigurationProperties`
+1. `@SpringBootApplication`, `@Target`, `@Retention`, `@Documented`, `@Inherited`, `@SpringBootConfiguration`, `@EnableAutoConfiguration`, `@ComponentScan`, `@ConfigurationProperties`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
+1. [http://localhost:8081](http://localhost:8081)
 
 ```
 ## How to run
@@ -29,7 +29,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1.    Run Spring Boot
+1. Run Spring Boot
 
 ```bash
 mvn clean install spring-boot:run

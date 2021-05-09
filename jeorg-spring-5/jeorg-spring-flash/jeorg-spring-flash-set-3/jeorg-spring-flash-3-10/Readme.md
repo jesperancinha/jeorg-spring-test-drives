@@ -6,7 +6,7 @@ Exploring the @JsonComponent in Spring
 
 Topics:
 
-1.     `Serialize`, `Deserialize`
+1. `Serialize`, `Deserialize`
 
 ## Endpoint
 

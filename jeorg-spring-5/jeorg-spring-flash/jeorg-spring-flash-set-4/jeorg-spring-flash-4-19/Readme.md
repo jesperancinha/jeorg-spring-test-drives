@@ -4,11 +4,11 @@
 
 Exploring TestApplicationContext in Spring
 
-1.    `TestApplicationContext`, `ApplicationContext`, `WebApplicationContext`
+1. `TestApplicationContext`, `ApplicationContext`, `WebApplicationContext`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
+1. [http://localhost:8081](http://localhost:8081)
 
 ```
 ## How to run
@@ -29,13 +29,13 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1.    Run Spring Boot
+1. Run Spring Boot
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2.    Make requests
+2. Make requests
 
 ```bash
 curl -X POST -H 'Content-Type: application/json' --data '{"name":"You Keep Me Hangin'' On","artist":"Kim Wilde","hitDate":"1987-06-01"}' http://localhost:8081/

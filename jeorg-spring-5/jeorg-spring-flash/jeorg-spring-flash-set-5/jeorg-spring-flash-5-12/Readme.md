@@ -6,11 +6,11 @@
 
 Exploring Runner in Spring
 
-1.    `CommandLineRunner`, `ApplicationRunner`
+1. `CommandLineRunner`, `ApplicationRunner`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
+1. [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -18,13 +18,13 @@ Exploring Runner in Spring
 lsof -i :8081
 ```
 
-1.    Run the service with the SpringFlash512CommandLineLauncher
+1. Run the service with the SpringFlash512CommandLineLauncher
 
 ```bash
 mvn clean install -Pcommand spring-boot:run -Dspring-boot.run.profiles=command -Dspring-boot.run.arguments="a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-a=a,-b=b,--put=\"A ring on it\",--put=\"Hands up\",--dont=\"pay him any attention\""
 ```
 
-1.    Run the service with the SpringFlash512ApplicationLauncher
+1. Run the service with the SpringFlash512ApplicationLauncher
 
 ```bash
 mvn clean install -Papplication spring-boot:run -Dspring-boot.run.profiles=application -Dspring-boot.run.arguments="a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-a=a,-b=b,--put=\"A ring on it\",--put=\"Hands up\",--dont=\"pay him any attention\""

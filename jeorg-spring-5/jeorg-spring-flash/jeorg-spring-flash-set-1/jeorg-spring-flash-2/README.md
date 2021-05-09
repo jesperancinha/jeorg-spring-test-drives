@@ -11,7 +11,7 @@
 
 Discovering Interceptors
 
-1.    `MethodInterceptor`, `Interceptor`, `Advice`, `ProxyFaxtory`, `addAdvice`, `setTarget`
+1. `MethodInterceptor`, `Interceptor`, `Advice`, `ProxyFaxtory`, `addAdvice`, `setTarget`
 
 ```bash
 sdk install java 15.0.2.hs-adpt

@@ -4,11 +4,11 @@
 
 Exploring @SpringBootApplication in Spring
 
-1.    `AbstractHttpMessageConverter`, `HttpMessageConverter`
+1. `AbstractHttpMessageConverter`, `HttpMessageConverter`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
+1. [http://localhost:8081](http://localhost:8081)
 
 ```
 ## How to run
@@ -29,13 +29,13 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1.    Run Spring Boot
+1. Run Spring Boot
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2.    Both of these are different requests with different formats, but yet, we can get to the same endpoint with the same result:
+2. Both of these are different requests with different formats, but yet, we can get to the same endpoint with the same result:
 
 ```bash
 curl -X POST -H 'Content-Type: application/json' --data '[{"count":100,"tearDropType":"HAPPINESS"},{"count":50,"tearDropType":"SADNESS"}]' http://localhost:8081/

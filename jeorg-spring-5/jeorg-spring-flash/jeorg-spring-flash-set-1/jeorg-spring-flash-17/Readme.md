@@ -6,11 +6,11 @@ Exploring UserDetailsManager in Spring
 
 Topics
 
-1.    `UserDetailsManager`, `tomcat-embed-jasper`, `PasswordEncoder`, `HttpSecurity`, `AuthenticationManagerBuilder`
+1. `UserDetailsManager`, `tomcat-embed-jasper`, `PasswordEncoder`, `HttpSecurity`, `AuthenticationManagerBuilder`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081/)
+1. [http://localhost:8081](http://localhost:8081/)
 
 ```bash
 curl localhost:8081/
@@ -28,7 +28,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 
 ![alt img](./../../../docs/workingdirectory.png)
 
-1.    Test running services
+1. Test running services
 
 ```bash
 lsof -i :8081
@@ -62,11 +62,11 @@ curl -X POST -H "name: joao" -H "password: joao" -H "role: ADMIN" http://localho
 curl -X POST -H "name: user" -H "password: user" -H "role: ADMIN" http://localhost:8081/open/create 
 ```
 
-4.    Test with credentials
+4. Test with credentials
     1. admin/admin -> User with role <b>ROLE_ADMIN</b> -> User can login and access the whole website
     2. user/user -> User with role <b>ROLE_USER</b> -> User can login, but there are not authorizations available
 
-5.    Important dependency
+5. Important dependency
 
 ```xml
 

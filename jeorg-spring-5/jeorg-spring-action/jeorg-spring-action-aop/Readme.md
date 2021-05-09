@@ -6,20 +6,20 @@
 
 Topics:
 
-1.    `@Aspect`, `perthis`, `@Scope`, `prototype`, `@Before`
-2.    `@Pointcut`, `@Before`
-3.    `!`, `||`, `&&`
-4.    `@Before`, `within`
-5.    `@annotation`, `execution`
+1. `@Aspect`, `perthis`, `@Scope`, `prototype`, `@Before`
+2. `@Pointcut`, `@Before`
+3. `!`, `||`, `&&`
+4. `@Before`, `within`
+5. `@annotation`, `execution`
 
 ## Notes
 
 There are a least 4 scope types for @Aspect:
 
-1.    `singleton`
-2.    `perthis`
-3.    `pertarget`
-4.    `pertypewithin`
+1. `singleton`
+2. `perthis`
+3. `pertarget`
+4. `pertypewithin`
 
 ## References
 

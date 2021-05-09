@@ -4,15 +4,15 @@
 
 Exploring @ControllerAdvice in Spring
 
-1.    `@ControllerAdvice`, `@ExceptionHandler`, `ResponseEntityExceptionHandler`
+1. `@ControllerAdvice`, `@ExceptionHandler`, `ResponseEntityExceptionHandler`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
+1. [http://localhost:8081](http://localhost:8081)
 
 ## Supporting modules
 
-1.    [jeorg-spring-flash-3-10](./../../jeorg-spring-flash-set-3/jeorg-spring-flash-3-10) - Converters
+1. [jeorg-spring-flash-3-10](./../../jeorg-spring-flash-set-3/jeorg-spring-flash-3-10) - Converters
 
 ## How to run
 
@@ -32,13 +32,13 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1.    Run Spring Boot
+1. Run Spring Boot
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2.    Make requests
+2. Make requests
 
 ```bash
 curl -X POST -H 'Content-Type: application/json' --data '{"name":"You Keep Me Hangin'' On","artist":"Kim Wilde","hitDate":"1987-06-01"}' http://localhost:8081/

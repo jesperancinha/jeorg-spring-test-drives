@@ -11,7 +11,7 @@
 
 Discovering Property Converters
 
-1.    `PropertyEditorRegistrar`, `registerCustomEditors`, `PropertyEditorSupport`, `CustomEditorConfigurer`
+1. `PropertyEditorRegistrar`, `registerCustomEditors`, `PropertyEditorSupport`, `CustomEditorConfigurer`
 
 ```bash
 sdk install java 15.0.2.hs-adpt

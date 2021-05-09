@@ -6,17 +6,17 @@ Exploring @Transactional in Spring
 
 Topics
 
-1.    `@Override`, `@Transactional`, `propagation`, `Propagation.REQUIRES_NEW`, `rollbackFor`, `RuntimeException.class`
+1. `@Override`, `@Transactional`, `propagation`, `Propagation.REQUIRES_NEW`, `rollbackFor`, `RuntimeException.class`
 
 ## Endpoints
 
-1.    [http://localhost:8081/list/all](http://localhost:8081/list/all)
+1. [http://localhost:8081/list/all](http://localhost:8081/list/all)
 
 ```bash
 curl http://localhost:8081/list/all
 ```
 
-2.    Posting albums
+2. Posting albums
 
 ```bash
 curl -X POST -H "name: East and West" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1984" http://localhost:8081/create/album
@@ -24,7 +24,7 @@ curl -X POST -H "name: Anna Domino" -H "artist: Anna Domino" -H "publisher: Cré
 curl -X POST -H "name: This Time" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1987" http://localhost:8081/create/album
 ```
 
-3.    Posting albums but rollbacking them
+3. Posting albums but rollbacking them
 
 ```bash
 curl -X POST -H "name: East and West" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1984" http://localhost:8081/create/albumRollback
@@ -32,13 +32,13 @@ curl -X POST -H "name: Anna Domino" -H "artist: Anna Domino" -H "publisher: Cré
 curl -X POST -H "name: This Time" -H "artist: Anna Domino" -H "publisher: Crépuscule" -H "year: 1987" http://localhost:8081/create/albumRollback
 ```
 
-4.    Deleting albums
+4. Deleting albums
 
 ```bash
 curl -X DELETE http://localhost:8081/delete/album/1
 ```
 
-5.    Listing all albums
+5. Listing all albums
 
 ```bash
 curl http://localhost:8081/list/all
@@ -46,13 +46,13 @@ curl http://localhost:8081/list/all
 
 ## How to run
 
-1.    Test running services
+1. Test running services
 
 ```bash
 lsof -i :8081
 ```
 
-2.    Run service
+2. Run service
 
 ```bash
 mvn clean install spring-boot:run

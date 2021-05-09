@@ -2,15 +2,15 @@
 
 ## Contents
 
-1.    [jeorg-spring-flash-5-1](./jeorg-spring-flash-5-1) - 👖 @Component, @Controller, @Indexed, @Repository, @Service
-2.    [jeorg-spring-flash-5-2](./jeorg-spring-flash-5-2) - 👩‍💼 DelegatingFilterProxyRegistrationBean, DelegatingFilterProxy
-3.    [jeorg-spring-flash-5-3](./jeorg-spring-flash-5-3) - 🌱 @SpringBootApplication
-4.    [jeorg-spring-flash-5-4](./jeorg-spring-flash-5-4) - 🍅 @Bean
-5.    [jeorg-spring-flash-5-5](./jeorg-spring-flash-5-5) - 🧫 Spring HATEOS - Hypermedia As The Engine Of Application State
-6.    [jeorg-spring-flash-5-6](./jeorg-spring-flash-5-6) - 📚 JdbcTemplate - Good practices
-7.    [jeorg-spring-flash-5-7](./jeorg-spring-flash-5-7) - 💂 @EnableGlobalMethodSecurity - All modes
-8.    [jeorg-spring-flash-5-8](./jeorg-spring-flash-5-8) - 🕺🏻 All Conditionals in Spring - Most of them at least
-9.    [jeorg-spring-flash-5-9](./jeorg-spring-flash-5-9) - 👨‍🍳 @Aspect, @Before, @After and @Around
+1. [jeorg-spring-flash-5-1](./jeorg-spring-flash-5-1) - 👖 @Component, @Controller, @Indexed, @Repository, @Service
+2. [jeorg-spring-flash-5-2](./jeorg-spring-flash-5-2) - 👩‍💼 DelegatingFilterProxyRegistrationBean, DelegatingFilterProxy
+3. [jeorg-spring-flash-5-3](./jeorg-spring-flash-5-3) - 🌱 @SpringBootApplication
+4. [jeorg-spring-flash-5-4](./jeorg-spring-flash-5-4) - 🍅 @Bean
+5. [jeorg-spring-flash-5-5](./jeorg-spring-flash-5-5) - 🧫 Spring HATEOS - Hypermedia As The Engine Of Application State
+6. [jeorg-spring-flash-5-6](./jeorg-spring-flash-5-6) - 📚 JdbcTemplate - Good practices
+7. [jeorg-spring-flash-5-7](./jeorg-spring-flash-5-7) - 💂 @EnableGlobalMethodSecurity - All modes
+8. [jeorg-spring-flash-5-8](./jeorg-spring-flash-5-8) - 🕺🏻 All Conditionals in Spring - Most of them at least
+9. [jeorg-spring-flash-5-9](./jeorg-spring-flash-5-9) - 👨‍🍳 @Aspect, @Before, @After and @Around
 10. [jeorg-spring-flash-5-10](./jeorg-spring-flash-5-10) - 🌿 postProcessBeforeInitialization, @PostConstruct, afterPropertiesSet and postProcessAfterInitialization
 11. [jeorg-spring-flash-5-11](./jeorg-spring-flash-5-11) - 📈 Actuator endpoints
 12. [jeorg-spring-flash-5-12](./jeorg-spring-flash-5-12) - 💍 CommandLineRunner, ApplicationRunner

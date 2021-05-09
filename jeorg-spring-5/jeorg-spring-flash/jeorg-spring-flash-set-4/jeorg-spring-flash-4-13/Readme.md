@@ -4,11 +4,11 @@
 
 Exploring SpringBootContextLoader for Testing in Spring
 
-1.    `SpringBootContextLoader`, `CacheAwareContextLoaderDelegate`, `BootstrapContext`, `SpringBootTestContextBootstrapper`, `MergedContextConfiguration`, `AssertableApplicationContext`
+1. `SpringBootContextLoader`, `CacheAwareContextLoaderDelegate`, `BootstrapContext`, `SpringBootTestContextBootstrapper`, `MergedContextConfiguration`, `AssertableApplicationContext`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
+1. [http://localhost:8081](http://localhost:8081)
 
 ## How to run
 
@@ -28,7 +28,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1.    Run Spring Boot
+1. Run Spring Boot
 
 ```bash
 mvn clean install spring-boot:run

@@ -13,30 +13,30 @@ Spring Mastery Kotlin 1
 
 Topics covered:
 
-1.    `@RestController`, `@GetMapping`, `@RequestMapping`
-2.    `listOf`
-3.    `logging.level`
-4.    `management.endpoint.health.enabled=true` `management.endpoint.httptrace.enabled=true` `management.endpoint.info.enabled=true` `management.endpoint.metrics.enabled=true`
-5.    `BeanPostProcessor`
-6.    `BeanFactoryPostProcessor`
+1. `@RestController`, `@GetMapping`, `@RequestMapping`
+2. `listOf`
+3. `logging.level`
+4. `management.endpoint.health.enabled=true` `management.endpoint.httptrace.enabled=true` `management.endpoint.info.enabled=true` `management.endpoint.metrics.enabled=true`
+5. `BeanPostProcessor`
+6. `BeanFactoryPostProcessor`
 
 ## Endpoints
 
 ## Command line requests
 
-1.    [http://localhost:8080/movies/thesoundofmusic](http://localhost:8080/movies/thesoundofmusic)
-2.    [http://localhost:8080/movies/list](http://localhost:8080/movies/list)
-3.    [http://localhost:8081/actuator](http://localhost:8081/actuator)
-4.    [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
-5.    [http://localhost:8081/actuator/info](http://localhost:8081/actuator/info)
+1. [http://localhost:8080/movies/thesoundofmusic](http://localhost:8080/movies/thesoundofmusic)
+2. [http://localhost:8080/movies/list](http://localhost:8080/movies/list)
+3. [http://localhost:8081/actuator](http://localhost:8081/actuator)
+4. [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
+5. [http://localhost:8081/actuator/info](http://localhost:8081/actuator/info)
 
 ## Profiles
 
-1.    test
+1. test
     1. Almost all logs deactivated. Here the focus is to look at the Consolerizer logs
-2.    prod
+2. prod
     1. All logs from `org.jesperancinha` are on TRACE level
-3.    default
+3. default
     1. All in TRACE log level
 
 ## How to run

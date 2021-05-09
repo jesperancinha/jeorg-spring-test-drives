@@ -6,12 +6,12 @@ Exploring the @PreAuthorize and @PostAuthorize in Spring
 
 Topics
 
-1.    `@EnableGlobalMethodSecurity`, `@PreAuthorize`, `@PostAuthorize`, `returnObject`, `SpEL`
+1. `@EnableGlobalMethodSecurity`, `@PreAuthorize`, `@PostAuthorize`, `returnObject`, `SpEL`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
-2.    [http://localhost:8081/jewels/1](http://localhost:8081/jewels/1)
+1. [http://localhost:8081](http://localhost:8081)
+2. [http://localhost:8081/jewels/1](http://localhost:8081/jewels/1)
 
 ```bash
 curl http://localhost:8081
@@ -32,7 +32,7 @@ curl -v -sL -b cookies.txt --header "Content-Type: application/json"  -X POST --
 
 ## How to run
 
-1.    Test running services
+1. Test running services
 
 ```bash
 lsof -i :8081

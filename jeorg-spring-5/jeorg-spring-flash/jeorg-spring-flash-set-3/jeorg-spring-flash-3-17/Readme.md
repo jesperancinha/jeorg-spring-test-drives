@@ -4,11 +4,11 @@
 
 Exploring @Profile on methods in Spring
 
-1.    `@Profile`
+1. `@Profile`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
+1. [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 

@@ -6,7 +6,7 @@ Exploring BeanNameUrlHandlerMapping in Spring
 
 Topics:
 
-1.    `BeanNameUrlHandlerMapping`
+1. `BeanNameUrlHandlerMapping`
 
 ## How to run
 
@@ -22,9 +22,9 @@ On the other hand, if running through an IDE, the root path must be specified. I
 
 ## Endpoint
 
-1.    [http://localhost:8081](http://localhost:8081/)
-2.    [http://localhost:8081/love.html](http://localhost:8081/love.html)
-3.    [http://localhost:8081/beatenGeneration.html](http://localhost:8081/beatenGeneration.html)
+1. [http://localhost:8081](http://localhost:8081/)
+2. [http://localhost:8081/love.html](http://localhost:8081/love.html)
+3. [http://localhost:8081/beatenGeneration.html](http://localhost:8081/beatenGeneration.html)
 
 ## References
 

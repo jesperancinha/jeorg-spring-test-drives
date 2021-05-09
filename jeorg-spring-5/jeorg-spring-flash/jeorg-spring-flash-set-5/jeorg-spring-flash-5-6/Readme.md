@@ -6,11 +6,11 @@
 
 Exploring JdbcTemplate in Spring - Good practices
 
-1.    `update`, `execute`, `delete`, `JdbcTemplate`
+1. `update`, `execute`, `delete`, `JdbcTemplate`
 
 ## Endpoints
 
-1.    [http://localhost:8081](http://localhost:8081)
+1. [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -18,7 +18,7 @@ Exploring JdbcTemplate in Spring - Good practices
 lsof -i :8081
 ```
 
-1.    Run the service
+1. Run the service
 
 ```bash
 mvn clean install spring-boot:run
