@@ -42,7 +42,7 @@ SET SESSION tx_isolation='READ-UNCOMMITTED';
 SELECT @@GLOBAL.tx_isolation, @@tx_isolation;
 ```
 
-#### Maria DB Socket issue:
+#### Maria DB Socket issue
 
 > ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2 "No such file or directory")
 
@@ -156,6 +156,7 @@ curl -X POST http://localhost:8081/create/serializable --header "Content-Type: a
           style="width:10%;">
       </a>
 </div>
+
 ### Online
 
 -   [Homebrew MariaDB/MySQL socket issues](https://laracasts.com/discuss/channels/servers/homebrew-mariadbmysql-socket-issues)

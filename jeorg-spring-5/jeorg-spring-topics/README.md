@@ -54,12 +54,12 @@ sdk install java 15.0.2.hs-adpt
 sdk use java 15.0.2.hs-adpt
 ```
 
-## Contents:
+## Contents
 
 1.  [jeorg-spring-app-old](./jeorg-spring-app-old) - 💾 Old applications present when this project started
 2.  [jeorg-spring-topics](./jeorg-spring-topics) - 🗄 A set of Spring Boot applications exploring each relevant Spring topic per application
 
-## References:
+## References
 
 ### Online
 

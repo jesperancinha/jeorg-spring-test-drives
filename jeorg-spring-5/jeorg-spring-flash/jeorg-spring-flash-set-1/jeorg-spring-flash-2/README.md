@@ -20,7 +20,7 @@ sdk use java 15.0.2.hs-adpt
 
 Topics covered:
 
-## References:
+## References
 
 ### Context
 

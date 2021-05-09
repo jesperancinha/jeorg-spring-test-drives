@@ -38,7 +38,7 @@ curl http://localhost:8081/api/%5Ba-zA-Z%20%21%5D
 curl http://localhost:8081/api
 ```
 
-## References:
+## References
 
 ### Context
 
