@@ -4,7 +4,7 @@
 
 Exploring the @RequestParam in Spring
 
-1. `@RequestParam`
+1.  `@RequestParam`
 
 ## Endpoints
 
@@ -12,7 +12,7 @@ Main page:
 
 [http://localhost:8081](http://localhost:8081)
 
-1. [http://localhost:8081/cats?catType=MAINE_COON](http://localhost:8081/cats?catType=MAINE_COON)
+1.  [http://localhost:8081/cats?catType=MAINE_COON](http://localhost:8081/cats?catType=MAINE_COON)
 2. [http://localhost:8081/cats?catType=BENGAL](http://localhost:8081/cats?catType=BENGAL)
 3. [http://localhost:8081/cats?catType=SCOTTISH_FOLD](http://localhost:8081/cats?catType=SCOTTISH_FOLD)
 4. [http://localhost:8081/cats?catType=PERSIAN](http://localhost:8081/cats?catType=PERSIAN)
@@ -21,7 +21,7 @@ Main page:
 7. [http://localhost:8081/dogs?dogType=DOBERMANN](http://localhost:8081/dogs?dogType=DOBERMANN)
 8. [http://localhost:8081/dogs?dogType=SIBERIAN_HUSKY](http://localhost:8081/dogs?dogType=SIBERIAN_HUSKY)
 9. [http://localhost:8081/dogs?dogType=ROTTWEILLER](http://localhost:8081/dogs?dogType=ROTTWEILLER)
-   10.[http://localhost:8081/dogs?dogType=COCKERS_SPANIEL](http://localhost:8081/dogs?dogType=COCKERS_SPANIEL)
+10. [http://localhost:8081/dogs?dogType=COCKERS_SPANIEL](http://localhost:8081/dogs?dogType=COCKERS_SPANIEL)
 11. [http://localhost:8081/dogs?dogType=GERMAN_SHEPPARD](http://localhost:8081/dogs?dogType=GERMAN_SHEPPARD)
 12. [http://localhost:8081/dogs?dogType=BELGIAN_SHEPPARD](http://localhost:8081/dogs?dogType=BELGIAN_SHEPPARD)
 

@@ -30,7 +30,7 @@
 
 SPRING study project.
 
-The purporse of this project is to keep up with the development of the Spring Framework
+The purpose of this project is to keep up with the development of the Spring Framework
 
 ## Contents:
 
