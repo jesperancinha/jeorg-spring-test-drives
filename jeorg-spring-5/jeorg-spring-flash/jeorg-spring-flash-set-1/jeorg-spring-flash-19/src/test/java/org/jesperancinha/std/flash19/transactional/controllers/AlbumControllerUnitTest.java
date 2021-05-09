@@ -25,7 +25,7 @@ class AlbumControllerUnitTest {
     private AlbumServiceImpl albumService;
 
     @Test
-    void testGetAllAlbums_whenCall_thenGetAllAlbums(
+    void testGetAllAlbumsWhenCallThenGetAllAlbums(
             @Mock
             final List<Album> albums) {
         when(albumRepository.findAll()).thenReturn(albums);

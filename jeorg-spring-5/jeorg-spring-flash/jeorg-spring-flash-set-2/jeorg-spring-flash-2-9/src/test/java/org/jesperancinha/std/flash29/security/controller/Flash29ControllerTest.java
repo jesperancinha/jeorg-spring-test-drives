@@ -66,7 +66,7 @@ class Flash29ControllerTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testGenericHandle_whenCalled_thenReturnOwnedJewelsView() throws Exception {
+    void testGenericHandleWhenCalledThenReturnOwnedJewelsView() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("ownedjewels"))
@@ -80,7 +80,7 @@ class Flash29ControllerTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testListJewels_whenSimpleAuthentication_thenStillAbleToGetList() throws Exception {
+    void testListJewelsWhenSimpleAuthenticationThenStillAbleToGetList() throws Exception {
         final var listOfJewels = List.of(
                 JewelDto.builder().jewelType(EMERALD).guardian("KittenPowers").build(),
                 JewelDto.builder().jewelType(RUBY).guardian("KittenStrongSword").build()
@@ -100,7 +100,7 @@ class Flash29ControllerTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testCreateJewel_whenCreatingOne_thenCreateIt() throws Exception {
+    void testCreateJewelWhenCreatingOneThenCreateIt() throws Exception {
         final var kittenPowersJewel = JewelDto.builder().jewelType(EMERALD).guardian("KittenPowers").build();
         when(jewelService.createJewel(kittenPowersJewel)).thenReturn(kittenPowersJewel);
 
@@ -118,7 +118,7 @@ class Flash29ControllerTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testJewel_whenFetchingById_thenReturnMatchingJewel() throws Exception {
+    void testJewelWhenFetchingByIdThenReturnMatchingJewel() throws Exception {
         final JewelDto jewelDto = JewelDto.builder().jewelType(EMERALD).guardian("KittenPowers").build();
         when(jewelService.getJewelById(1L)).thenReturn(jewelDto);
 
@@ -133,7 +133,7 @@ class Flash29ControllerTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testRemoveJewel_whenCallToDeleteJewel1_thenRemoveIt() throws Exception {
+    void testRemoveJewelWhenCallToDeleteJewel1ThenRemoveIt() throws Exception {
         final var jewelDto = JewelDto.builder().jewelType(EMERALD).guardian("KittenPowers").build();
         when(jewelService.getJewelById(1L)).thenReturn(jewelDto);
 

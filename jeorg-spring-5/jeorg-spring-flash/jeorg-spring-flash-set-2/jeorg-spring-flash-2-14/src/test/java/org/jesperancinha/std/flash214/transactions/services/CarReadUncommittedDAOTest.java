@@ -35,7 +35,7 @@ class CarReadUncommittedDAOTest {
      * @throws InterruptedException An error
      */
     @Test
-    void testReadUncommitted_whenRunning_thenExemplifyReadUncommitted() throws InterruptedException {
+    void testReadUncommittedWhenRunningThenExemplifyReadUncommitted() throws InterruptedException {
         ConsolerizerComposer.outSpace()
                 .cyan(title("Read Uncommitted"))
                 .magenta("In this example, we are writing data in one transaction.")

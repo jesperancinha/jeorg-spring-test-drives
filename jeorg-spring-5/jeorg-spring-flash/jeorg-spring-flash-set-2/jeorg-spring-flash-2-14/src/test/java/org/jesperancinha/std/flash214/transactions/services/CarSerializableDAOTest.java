@@ -37,7 +37,7 @@ class CarSerializableDAOTest {
      * @throws InterruptedException An error
      */
     @Test
-    void testSerializable_whenRunning_thenExemplifySerializable() throws InterruptedException {
+    void testSerializableWhenRunningThenExemplifySerializable() throws InterruptedException {
         ConsolerizerComposer.outSpace()
                 .cyan(title("Serializable"))
                 .magenta("In this example, we are writing data in one transaction.")

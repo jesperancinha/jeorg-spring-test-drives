@@ -24,7 +24,7 @@ class Flash11ControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void testMainPage_whenMakingCall_thenGotoIndex() throws Exception {
+    void testMainPageWhenMakingCallThenGotoIndex() throws Exception {
         final var music = new Music();
         music.setArtist("Tracy Chapman");
         music.setSong("Talkin' About A Revolution");
@@ -36,7 +36,7 @@ class Flash11ControllerTest {
     }
 
     @Test
-    void testHandleRequest_whenMusicReceived_thenWriteCorrectPage() throws Exception {
+    void testHandleRequestWhenMusicReceivedThenWriteCorrectPage() throws Exception {
         final var music = new Music();
         music.setArtist("Tracy Chapman");
         music.setSong("Talkin' About A Revolution");

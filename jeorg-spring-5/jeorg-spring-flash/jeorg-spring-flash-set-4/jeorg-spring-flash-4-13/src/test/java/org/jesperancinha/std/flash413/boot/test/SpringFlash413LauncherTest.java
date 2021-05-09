@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class SpringFlash413LauncherTest {
 
     @Test
-    public void testSpringBootContextLoader_whenSomething_sayGoodbye() {
+    public void testSpringBootContextLoaderWhenSomething_sayGoodbye() {
         final CacheAwareContextLoaderDelegate delegate = new DefaultCacheAwareContextLoaderDelegate();
         final BootstrapContext bootstrapContext = new DefaultBootstrapContext(SpringFlash413Launcher.class, delegate);
         final SpringBootTestContextBootstrapper bootstrapper = new SpringBootTestContextBootstrapper();

@@ -1,6 +1,6 @@
 let sockJSStompClient = null;
 
-startConnection = () => {
+let startConnection = () => {
     const socket = new SockJS('/ws');
     sockJSStompClient = Stomp.over(socket);
     sockJSStompClient.connect({}, function (frame) {
@@ -10,19 +10,19 @@ startConnection = () => {
             displayMessages(JSON.parse(message.body));
         });
         sockJSStompClient.subscribe('/business/notification', function (message) {
-            console.log(message)
+            console.log(message);
         });
     });
 }
 
-stopConnection = () => {
+let stopConnection = () => {
     if (sockJSStompClient !== null) {
         sockJSStompClient.disconnect();
     }
     updateControls(false);
 }
 
-updateControls = (connected) => {
+let updateControls = (connected) => {
     $("#btnConnect").prop("disabled", connected);
     $("#btnDisconnect").prop("disabled", !connected);
     $("#btnSendMessage").prop("disabled", !connected);
@@ -31,13 +31,13 @@ updateControls = (connected) => {
     $("#lblConnect").prop("class", connected ? "sockJSLive" : "sockJSOff");
 }
 
-displayMessages = (message) => {
+let displayMessages = (message) => {
     let $messaging = $("#messaging");
     $messaging.append("<p>Message:'" + message.message + "' sent on " + message.localDateTime + " and received on " + message.systemDateTime + ". Server response is: " + message.response + "</p>");
     $("#console").prop("style", $messaging.html() !== "" ? "display" : "display:none");
 }
 
-sendMessage = () => {
+let sendMessage = () => {
     let $textMessage = $("#textMessage");
     sockJSStompClient.send("/flash9/request", {}, JSON.stringify({
         'message': $textMessage.val(),
@@ -46,7 +46,7 @@ sendMessage = () => {
     $("#requests").append("<p>" + $textMessage.val() + " at " + new Date() + "</p>");
 }
 
-updateBtnControls = () => {
+let updateBtnControls = () => {
     $("#btnConnect").click(function () {
         startConnection();
     });
@@ -58,7 +58,7 @@ updateBtnControls = () => {
     });
 }
 
-setupForm = () => {
+let setupForm = () => {
     $("form").on('submit', function (e) {
         e.preventDefault();
     });

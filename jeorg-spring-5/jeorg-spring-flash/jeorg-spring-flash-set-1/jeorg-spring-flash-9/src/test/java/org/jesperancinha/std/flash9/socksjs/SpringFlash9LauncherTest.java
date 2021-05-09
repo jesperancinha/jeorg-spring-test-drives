@@ -66,7 +66,7 @@ class SpringFlash9LauncherTest {
     }
 
     @Test
-    void testSendMessage_whenReceiveMessage_thenSendResponseBack() throws ExecutionException, InterruptedException, TimeoutException {
+    void testSendMessageWhenReceiveMessageThenSendResponseBack() throws ExecutionException, InterruptedException, TimeoutException {
         final var blockingQueue = new ArrayBlockingQueue<Present>(1);
 
         final var session = webSocketStompClient

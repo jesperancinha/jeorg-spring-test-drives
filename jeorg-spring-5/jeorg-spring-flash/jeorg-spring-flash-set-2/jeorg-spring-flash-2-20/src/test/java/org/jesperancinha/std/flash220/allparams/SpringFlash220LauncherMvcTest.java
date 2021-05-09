@@ -16,7 +16,7 @@ class SpringFlash220LauncherMvcTest {
     private MockMvc mockMvc;
 
     @Test
-    void testPostAllSinsMatrix_whenCall_thenGetAllSins() throws Exception {
+    void testPostAllSinsMatrixWhenCallThenGetAllSins() throws Exception {
         mockMvc.perform(
                 post("/matrix/wow;sin1=Lust;sin2=Gluttony;sin3=Greed;sin4=Sloth;sin5=Wrath;sin6=Envy;sin7=Pride")
         )
@@ -25,7 +25,7 @@ class SpringFlash220LauncherMvcTest {
     }
 
     @Test
-    void testPostAllSinsRequest_whenCall_thenGetAllSins() throws Exception {
+    void testPostAllSinsRequestWhenCallThenGetAllSins() throws Exception {
         mockMvc.perform(
                 post("/request/Lust/Gluttony?sin3=Greed&sin4=Sloth")
                         .header("sin5", "Wrath")

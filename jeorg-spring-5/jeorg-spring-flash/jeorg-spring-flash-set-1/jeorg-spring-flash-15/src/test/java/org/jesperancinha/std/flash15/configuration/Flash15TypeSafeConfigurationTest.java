@@ -13,7 +13,7 @@ class Flash15TypeSafeConfigurationTest {
     private Flash15TypeSafeConfiguration flash15TypeSafeConfiguration;
 
     @Test
-    public void testConfiguration_whenTypeSafe_thenCorrectConfiguration() {
+    public void testConfigurationWhenTypeSafeThenCorrectConfiguration() {
         assertThat(flash15TypeSafeConfiguration.getLyric3()).isEqualTo("Don't wanna lie here");
         assertThat(flash15TypeSafeConfiguration.getLyric4()).isEqualTo("But you can learn to");
     }

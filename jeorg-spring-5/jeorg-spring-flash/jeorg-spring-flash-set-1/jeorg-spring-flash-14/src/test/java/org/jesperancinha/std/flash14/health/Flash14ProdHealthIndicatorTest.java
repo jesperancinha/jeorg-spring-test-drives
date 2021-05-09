@@ -36,7 +36,7 @@ class Flash14ProdHealthIndicatorTest {
     private final RestTemplate restTemplate = new RestTemplate();
 
     @Test
-    void testHealthCheck_whenEndpointCalled_thenReturnHealthChecks() {
+    void testHealthCheckWhenEndpointCalledThenReturnHealthChecks() {
         final String url = String.format("http://localhost:%s/actuator/health", port);
         final var headers = new HttpHeaders();
         final var request = new HttpEntity<>(headers);

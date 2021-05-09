@@ -32,7 +32,7 @@ class EpisodeServiceTest {
     private EpisodeService episodeService;
 
     @Test
-    void testCreateEpisode_whenCreateOne_thenCallSave() {
+    void testCreateEpisodeWhenCreateOneThenCallSave() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         assertThatExceptionOfType(EpisodeException.class)
@@ -43,7 +43,7 @@ class EpisodeServiceTest {
     }
 
     @Test
-    void testCreateEpisodeExceptionRollback_whenCreateOne_thenCallSave() {
+    void testCreateEpisodeExceptionRollbackWhenCreateOneThenCallSave() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         assertThatExceptionOfType(RuntimeException.class)
@@ -54,7 +54,7 @@ class EpisodeServiceTest {
     }
 
     @Test
-    void testCreateEpisodeExceptionNoRollback_whenCreateOne_thenCallSave() {
+    void testCreateEpisodeExceptionNoRollbackWhenCreateOneThenCallSave() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         assertThatExceptionOfType(EpisodeException.class)
@@ -65,7 +65,7 @@ class EpisodeServiceTest {
     }
 
     @Test
-    void testCreateEpisodeMixRollback_whenCreateOne_thenCallSave() {
+    void testCreateEpisodeMixRollbackWhenCreateOneThenCallSave() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         assertThatExceptionOfType(VideoCountryException.class)
@@ -76,7 +76,7 @@ class EpisodeServiceTest {
     }
 
     @Test
-    void testCreateEpisodeMixNoRollback_whenCreateOne_thenCallSave() {
+    void testCreateEpisodeMixNoRollbackWhenCreateOneThenCallSave() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         assertThatExceptionOfType(EpisodeException.class)
@@ -87,7 +87,7 @@ class EpisodeServiceTest {
     }
 
     @Test
-    void testGetEpisodeById_whenGetById1_thenGetEpisode1() {
+    void testGetEpisodeByIdWhenGetById1ThenGetEpisode1() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         when(episodeRepository.findById(1L)).thenReturn(Optional.of(Episode.builder().id(1L).name(episodeDto.getName()).build()));
 

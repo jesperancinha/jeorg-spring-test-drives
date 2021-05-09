@@ -16,7 +16,7 @@ class Flash15TraditionalConfigurationTest {
     private Flash15TraditionalConfiguration flash15TraditionalConfiguration;
 
     @Test
-    public void testConfiguration_whenTraditional_thenCorrectConfiguration() {
+    public void testConfigurationWhenTraditionalThenCorrectConfiguration() {
         assertThat(flash15TraditionalConfiguration.getLyric1()).isEqualTo("And you say, \"As long as I'm here");
         assertThat(flash15TraditionalConfiguration.getLyric2()).isEqualTo("No one can hurt you");
     }

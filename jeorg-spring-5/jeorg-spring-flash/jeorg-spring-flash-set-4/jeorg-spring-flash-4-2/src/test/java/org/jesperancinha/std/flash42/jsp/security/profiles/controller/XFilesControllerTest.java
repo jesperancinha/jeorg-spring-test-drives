@@ -22,7 +22,7 @@ class XFilesControllerTest {
 
     @Test
     @WithMockUser(username = "joao")
-    void testGenericHandle_whenCalledWithUser_thenRightModelAndView() throws Exception {
+    void testGenericHandleWhenCalledWithUserThenRightModelAndView() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("userdata"))
@@ -34,7 +34,7 @@ class XFilesControllerTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testGenericHandle_whenCalledWithAdmin_thenRightModelAndView() throws Exception {
+    void testGenericHandleWhenCalledWithAdminThenRightModelAndView() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("userdata"))
@@ -46,7 +46,7 @@ class XFilesControllerTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "SOMETHING")
-    void testGenericHandle_whenCalledWithSomething_thenAuthorizationDenied() throws Exception {
+    void testGenericHandleWhenCalledWithSomethingThenAuthorizationDenied() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isForbidden());
     }

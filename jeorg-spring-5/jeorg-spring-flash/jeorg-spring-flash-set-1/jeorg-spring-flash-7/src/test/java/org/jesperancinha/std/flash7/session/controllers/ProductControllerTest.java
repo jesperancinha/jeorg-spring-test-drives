@@ -32,7 +32,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetTulips_whenCalled_getResponse() throws Exception {
+    void testGetTulipsWhenCalled_getResponse() throws Exception {
         final MvcResult tulips = mockMvc
                 .perform(get("/tulips"))
                 .andExpect(status().isOk())
@@ -44,7 +44,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetTulipsOk_whenCalled_getResponse() throws Exception {
+    void testGetTulipsOkWhenCalled_getResponse() throws Exception {
         final MvcResult tulips = mockMvc.perform(get("/tulips/ok"))
                 .andExpect(status().isOk())
                 .andReturn();
@@ -55,7 +55,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetTulipsError_whenCalled_getResponse() throws Exception {
+    void testGetTulipsErrorWhenCalled_getResponse() throws Exception {
         final MvcResult tulips = mockMvc.perform(get("/tulips/error"))
                 .andExpect(status().isServiceUnavailable())
                 .andReturn();
@@ -66,7 +66,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetFlower_whenCalled_getResponse() throws Exception {
+    void testGetFlowerWhenCalled_getResponse() throws Exception {
         final ObjectMapper objectMapper = new ObjectMapper();
         final MvcResult roses = mockMvc.perform(get("/flowers/rose"))
                 .andExpect(status().isNotFound())
@@ -80,7 +80,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetCar_whenCalled_getResponse() throws Exception {
+    void testGetCarWhenCalled_getResponse() throws Exception {
         final ObjectMapper objectMapper = new ObjectMapper();
         final MvcResult cars = mockMvc.perform(get("/cars/kitt"))
                 .andExpect(status().isNotFound())
@@ -94,7 +94,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetFlowerLocal_whenCalled_getResponse() throws Exception {
+    void testGetFlowerLocalWhenCalled_getResponse() throws Exception {
         final MvcResult roses = mockMvc.perform(get("/flowers/local/rose"))
                 .andExpect(status().isOk())
                 .andReturn();
@@ -117,7 +117,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetCarLocal_whenCalled_getResponse() throws Exception {
+    void testGetCarLocalWhenCalled_getResponse() throws Exception {
         final MvcResult cars = mockMvc.perform(get("/cars/local/kitt"))
                 .andExpect(status().isOk())
                 .andReturn();
@@ -139,7 +139,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetPottery_whenCalled_getResponse() throws Exception {
+    void testGetPotteryWhenCalled_getResponse() throws Exception {
         final ObjectMapper objectMapper = new ObjectMapper();
         final MvcResult pottery = mockMvc.perform(get("/pottery/amphora"))
                 .andExpect(status().isNotFound())
@@ -153,7 +153,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetFourWheels_whenCalled_getResponse() throws Exception {
+    void testGetFourWheelsWhenCalled_getResponse() throws Exception {
         final ObjectMapper objectMapper = new ObjectMapper();
         final MvcResult fourWheels = mockMvc.perform(get("/fourwheels/rover"))
                 .andExpect(status().isNotFound())

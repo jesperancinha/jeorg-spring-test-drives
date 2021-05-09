@@ -22,7 +22,7 @@ class SpringFlash13LauncherTest {
     }
 
     @Test
-    void testCallsToCss_whenNormal_thenGetNormal() throws Exception {
+    void testCallsToCssWhenNormalThenGetNormal() throws Exception {
         mockMvc.perform(get("/flash13.styles.css"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(".car {\n" +
@@ -32,7 +32,7 @@ class SpringFlash13LauncherTest {
     }
 
     @Test
-    void testCallsToCss_whenGzip_thenGetContents() throws Exception {
+    void testCallsToCssWhenGzipThenGetContents() throws Exception {
         mockMvc.perform(get("/original.styles.css"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(".car {\n" +

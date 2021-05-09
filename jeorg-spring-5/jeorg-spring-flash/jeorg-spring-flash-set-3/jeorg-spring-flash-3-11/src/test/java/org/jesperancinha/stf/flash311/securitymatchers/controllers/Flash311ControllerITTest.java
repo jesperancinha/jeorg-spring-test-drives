@@ -25,7 +25,7 @@ class Flash311ControllerITTest {
     @Test
     @WithMockUser(username = "neo_truth",
             roles = "RED")
-    void testGenericHandleAdmin_whenAdmin_thenOk() throws Exception {
+    void testGenericHandleAdminWhenAdminThenOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/admin"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("redpill"))
@@ -37,13 +37,13 @@ class Flash311ControllerITTest {
     @Test
     @WithMockUser(username = "neo_lie",
             roles = "BLUE")
-    void testGenericHandleAdmin_whenUser_thenAuthorizationDenied() throws Exception {
+    void testGenericHandleAdminWhenUserThenAuthorizationDenied() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/admin"))
                 .andExpect(status().isForbidden());
     }
 
     @Test
-    void testGenericHandleNormal_whenNoAuthentication_thenStillAuthorized() throws Exception {
+    void testGenericHandleNormalWhenNoAuthenticationThenStillAuthorized() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/normal"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("userdata"))
@@ -55,7 +55,7 @@ class Flash311ControllerITTest {
     @Test
     @WithMockUser(username = "neo_lie",
             roles = "BLUE")
-    void testGenericHandleUser_whenUser_thenOk() throws Exception {
+    void testGenericHandleUserWhenUserThenOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/user"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("bluepill"))
@@ -67,7 +67,7 @@ class Flash311ControllerITTest {
     @Test
     @WithMockUser(username = "neo_truth",
             roles = "RED")
-    void testGenericHandleUser_whenAdmin_thenAuthorizationDenied() throws Exception {
+    void testGenericHandleUserWhenAdminThenAuthorizationDenied() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/user"))
                 .andExpect(status().isForbidden());
     }

@@ -16,7 +16,7 @@ class JeorgFlash511SessionListenerInnerBeanTest {
     private String pepper;
 
     @Test
-    void testSessionCreated_whenInjected_thenNoPeppers() {
+    void testSessionCreatedWhenInjectedThenNoPeppers() {
         ConsolerizerComposer.outSpace()
                 .unicorns(100)
                 .black()
@@ -27,7 +27,7 @@ class JeorgFlash511SessionListenerInnerBeanTest {
     }
 
     @Test
-    void testSessionDestroyed_whenInjected_thenNoPeppers() {
+    void testSessionDestroyedWhenInjectedThenNoPeppers() {
         ConsolerizerComposer.outSpace()
                 .unicorns(100)
                 .black()

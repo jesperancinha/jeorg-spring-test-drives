@@ -21,7 +21,7 @@ class SpringFlash4LauncherTest {
     }
 
     @Test
-    void testCurrentDate_whenRequest_noErrors() throws Exception {
+    void testCurrentDateWhenRequest_noErrors() throws Exception {
         mockMvc.perform(post("/")
                 .contentType("application/text")
                 .header("currentTime", "1999-12-01"))
@@ -29,7 +29,7 @@ class SpringFlash4LauncherTest {
     }
 
     @Test
-    void testCurrentTime_whenRequest_noErrors() throws Exception {
+    void testCurrentTimeWhenRequest_noErrors() throws Exception {
         mockMvc.perform(post("/time")
                 .contentType("application/text")
                 .header("currentTime", "1999-12-01 12:30:31"))

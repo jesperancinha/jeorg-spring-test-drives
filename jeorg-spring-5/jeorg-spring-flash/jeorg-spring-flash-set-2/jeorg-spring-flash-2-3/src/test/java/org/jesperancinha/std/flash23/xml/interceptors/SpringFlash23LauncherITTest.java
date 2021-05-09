@@ -46,7 +46,7 @@ class SpringFlash23LauncherITTest {
     }
 
     @Test
-    void testGetString_whenCalled_thenTriggerInterceptors() throws Exception {
+    void testGetStringWhenCalledThenTriggerInterceptors() throws Exception {
         when(feelingLoveBean.preHandle(any(Object.class))).thenReturn(true);
 
         mockMvc.perform(get("/"))

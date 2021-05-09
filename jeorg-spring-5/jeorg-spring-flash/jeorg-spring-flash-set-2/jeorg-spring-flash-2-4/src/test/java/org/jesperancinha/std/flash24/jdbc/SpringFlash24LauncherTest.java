@@ -58,7 +58,7 @@ class SpringFlash24LauncherTest {
     }
 
     @Test
-    void testCRUDDelete_whenCalled_thenRemove1And2ButNot3() {
+    void testCRUDDeleteWhenCalledThenRemove1And2ButNot3() {
         final var concert1Id = springFlash24Launcher.testCRUDDelete(1);
         final var concert2Id = springFlash24Launcher.testCRUDDelete(2);
         final var concert3Id = springFlash24Launcher.testCRUDDelete(3);
@@ -69,7 +69,7 @@ class SpringFlash24LauncherTest {
     }
 
     @Test
-    void testCRUDRead2_whenCalled_thenReadAsNormal() {
+    void testCRUDRead2_whenCalledThenReadAsNormal() {
         final var concerts = springFlash24Launcher.testCRUDRead2();
 
         assertThat(concerts).isNotNull();
@@ -89,7 +89,7 @@ class SpringFlash24LauncherTest {
     }
 
     @Test
-    void testCRUDUpdate_whenCalledWith2Records_thenUpdate2Records() {
+    void testCRUDUpdateWhenCalledWith2RecordsThenUpdate2Records() {
         final String[] concert1Update = {"<HIDDEN1>", "New York's Beacon Theatre, US", LocalDateTime.of(1998, 4, 16, 0, 0, 0).toString(), "1"};
         final String[] concert2Update = {"<HIDDEN2>", "Chicago’s Grant Park, US", LocalDateTime.of(2012, 8, 12, 16, 0, 0).toString(), "2"};
         final List<Object[]> concertsUpdate = Arrays.asList(concert1Update, concert2Update);
@@ -118,7 +118,7 @@ class SpringFlash24LauncherTest {
     }
 
     @Test
-    void testCRUDRead_whenCalled_thenReadAsNormal() {
+    void testCRUDReadWhenCalledThenReadAsNormal() {
         final var concerts = springFlash24Launcher.testCRUDRead();
 
         assertThat(concerts).isNotNull();
@@ -138,7 +138,7 @@ class SpringFlash24LauncherTest {
     }
 
     @Test
-    void testCRUDCreate_whenCalledWith2Records_thenInsertTwoRecordsIndependently() {
+    void testCRUDCreateWhenCalledWith2RecordsThenInsertTwoRecordsIndependently() {
         final String[] concert1 = {"VH1 Divas Live", "New York's Beacon Theatre, US", LocalDateTime.of(1998, 4, 16, 0, 0, 0).toString()};
         final String[] concert2 = {"Lollapalooza 2012", "Chicago’s Grant Park, US", LocalDateTime.of(2012, 8, 12, 16, 0, 0).toString()};
         final List<Object[]> concerts = Arrays.asList(
@@ -155,7 +155,7 @@ class SpringFlash24LauncherTest {
 
 
     @Test
-    void testException_whenDataAccessExceptionIsCustom_thenThrowEnrichedDataAccessException() {
+    void testExceptionWhenDataAccessExceptionIsCustomThenThrowEnrichedDataAccessException() {
         assertThrows(DataAccessException.class, () -> springFlash24Launcher.testException());
 
         verify(jdbcTemplate, times(1)).setExceptionTranslator(abstractFallbackSQLExceptionTranslatorArgumentCaptor.capture());

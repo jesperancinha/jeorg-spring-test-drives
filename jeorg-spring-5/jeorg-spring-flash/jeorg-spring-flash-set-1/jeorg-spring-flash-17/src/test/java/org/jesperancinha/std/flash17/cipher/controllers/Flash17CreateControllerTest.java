@@ -46,7 +46,7 @@ class Flash17CreateControllerTest {
     private PasswordEncoder passwordEncoder;
 
     @Test
-    void testCreateUser_whenCalled_thenCallCreationOk() throws Exception {
+    void testCreateUserWhenCalledThenCallCreationOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/open/create")
                 .header("name", "admin")
                 .header("password", "password")

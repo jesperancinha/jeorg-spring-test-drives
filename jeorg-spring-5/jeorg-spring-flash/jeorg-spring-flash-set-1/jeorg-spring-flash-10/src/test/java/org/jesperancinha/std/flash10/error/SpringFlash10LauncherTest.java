@@ -23,7 +23,7 @@ class SpringFlash10LauncherTest {
     }
 
     @Test
-    void testGetString_whenCalledOnProd_thenGotoErrorPage() throws Exception {
+    void testGetStringWhenCalledOnProdThenGotoErrorPage() throws Exception {
         final MvcResult mvcResult = mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andReturn();

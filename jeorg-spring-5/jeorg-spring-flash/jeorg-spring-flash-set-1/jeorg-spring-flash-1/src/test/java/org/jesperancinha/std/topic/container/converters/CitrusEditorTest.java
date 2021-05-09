@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class CitrusEditorTest {
     @Test
-    void testSetAsText_whenSetText_thenTextIsOk() {
+    void testSetAsTextWhenSetTextThenTextIsOk() {
         final CitrusEditor citrusEditor = new CitrusEditor();
         citrusEditor.setAsText("lemon-123");
         final Object value = citrusEditor.getValue();

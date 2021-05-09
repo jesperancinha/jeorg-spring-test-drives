@@ -50,7 +50,7 @@ class ThroneServiceImplTest {
     }
 
     @Test
-    void testCreateThrone_whenCreatingThroneNoAuthentication_thenFail() {
+    void testCreateThroneWhenCreatingThroneNoAuthenticationThenFail() {
         final var throne = Throne.builder().keeper("test").throneType(SAVANNAH_WOOD).build();
 
         assertThrows(AuthenticationCredentialsNotFoundException.class,
@@ -59,7 +59,7 @@ class ThroneServiceImplTest {
 
     @Test
     @WithMockUser(username = "intruder")
-    void testCreateThrone_whenCreatingWithDefaultUserRole_thenOk() {
+    void testCreateThroneWhenCreatingWithDefaultUserRoleThenOk() {
         final var throne = Throne.builder().keeper("test").throneType(SAVANNAH_WOOD).build();
 
         assertThrows(AccessDeniedException.class,
@@ -69,7 +69,7 @@ class ThroneServiceImplTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "RULER")
-    void testCreateThrone_whenCreatingWithRoleRuler_thenOk() {
+    void testCreateThroneWhenCreatingWithRoleRulerThenOk() {
         final var throne = Throne.builder().keeper("joao").throneType(SAVANNAH_WOOD).build();
 
         final ThroneDto throneDto = throneService.createThrone(throne);
@@ -79,7 +79,7 @@ class ThroneServiceImplTest {
     }
 
     @Test
-    void testUpdateThrone_whenCreatingThroneNoAuthentication_thenFail() {
+    void testUpdateThroneWhenCreatingThroneNoAuthenticationThenFail() {
         final var throne = Throne.builder().keeper("test").throneType(SAVANNAH_WOOD).build();
 
         assertThrows(AuthenticationCredentialsNotFoundException.class,
@@ -88,7 +88,7 @@ class ThroneServiceImplTest {
 
     @Test
     @WithMockUser(username = "intruder")
-    void testUpdateThrone_whenCreatingWithDefaultUserRole_thenOk() {
+    void testUpdateThroneWhenCreatingWithDefaultUserRoleThenOk() {
         final var throne = Throne.builder().keeper("test").throneType(SAVANNAH_WOOD).build();
 
         assertThrows(AccessDeniedException.class,
@@ -98,7 +98,7 @@ class ThroneServiceImplTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "RULER")
-    void testUpdateThrone_whenCreatingWithRoleRuler_thenOk() {
+    void testUpdateThroneWhenCreatingWithRoleRulerThenOk() {
         final var throne = Throne.builder().keeper("joao").throneType(SAVANNAH_WOOD).build();
 
         throneService.updateThrone(throne);
@@ -112,14 +112,14 @@ class ThroneServiceImplTest {
     }
 
     @Test
-    void testGetThroneById_whenCreatingThroneNoAuthentication_thenFail() {
+    void testGetThroneByIdWhenCreatingThroneNoAuthenticationThenFail() {
         assertThrows(AuthenticationCredentialsNotFoundException.class,
                 () -> throneService.getThrone(1L));
     }
 
     @Test
     @WithMockUser(username = "intruder")
-    void testGetThroneById_whenCreatingWithDefaultUserRole_thenOk() {
+    void testGetThroneByIdWhenCreatingWithDefaultUserRoleThenOk() {
         final var throne = Throne.builder().keeper("test").throneType(SAVANNAH_WOOD).build();
         when(throneRepository.getOne(1L)).thenReturn(throne);
         assertThrows(AccessDeniedException.class,
@@ -130,7 +130,7 @@ class ThroneServiceImplTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "RULER")
-    void testGetThroneById_whenCreatingWithRoleRuler_thenOk() {
+    void testGetThroneByIdWhenCreatingWithRoleRulerThenOk() {
         final var throne = Throne.builder().keeper("joao").throneType(SAVANNAH_WOOD).build();
         when(throneRepository.getOne(1L)).thenReturn(throne);
 
@@ -142,14 +142,14 @@ class ThroneServiceImplTest {
 
 
     @Test
-    void testGetAll_whenCreatingThroneNoAuthentication_thenFail() {
+    void testGetAllWhenCreatingThroneNoAuthenticationThenFail() {
         assertThrows(AuthenticationCredentialsNotFoundException.class,
                 () -> throneService.getAll());
     }
 
     @Test
     @WithMockUser(username = "intruder")
-    void testGetAll_whenCreatingWithDefaultUserRole_thenOk() {
+    void testGetAllWhenCreatingWithDefaultUserRoleThenOk() {
         assertThrows(AccessDeniedException.class,
                 () -> throneService.getAll());
     }
@@ -157,7 +157,7 @@ class ThroneServiceImplTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "RULER")
-    void testGetAll_whenCreatingWithRoleRuler_thenOk() {
+    void testGetAllWhenCreatingWithRoleRulerThenOk() {
         final var throne = Throne.builder().keeper("test").throneType(SAVANNAH_WOOD).build();
         when(throneRepository.findAll()).thenReturn(List.of(throne));
 
@@ -171,7 +171,7 @@ class ThroneServiceImplTest {
     }
 
     @Test
-    void testDelete_whenCreatingThroneNoAuthentication_thenFail() {
+    void testDeleteWhenCreatingThroneNoAuthenticationThenFail() {
         final var throne = Throne.builder().keeper("test").throneType(SAVANNAH_WOOD).build();
         assertThrows(AuthenticationCredentialsNotFoundException.class,
                 () -> throneService.deleteThrone(throne));
@@ -179,7 +179,7 @@ class ThroneServiceImplTest {
 
     @Test
     @WithMockUser(username = "intruder")
-    void testDelete_whenCreatingWithDefaultUserRole_thenOk() {
+    void testDeleteWhenCreatingWithDefaultUserRoleThenOk() {
         final var throne = Throne.builder().keeper("test").throneType(SAVANNAH_WOOD).build();
         assertThrows(AccessDeniedException.class,
                 () -> throneService.deleteThrone(throne));
@@ -188,7 +188,7 @@ class ThroneServiceImplTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testDelete_whenCreatingWithRoleRuler_thenOk() {
+    void testDeleteWhenCreatingWithRoleRulerThenOk() {
         final var throne = Throne.builder().keeper("joao").throneType(SAVANNAH_WOOD).build();
 
         throneService.deleteThrone(throne);
@@ -201,14 +201,14 @@ class ThroneServiceImplTest {
     }
 
     @Test
-    void testDance_whenCreatingThroneNoAuthentication_thenFail() {
+    void testDanceWhenCreatingThroneNoAuthenticationThenFail() {
         assertThrows(AuthenticationCredentialsNotFoundException.class,
                 () -> throneService.dance());
     }
 
     @Test
     @WithMockUser(username = "intruder")
-    void testDance_whenCreatingWithDefaultUserRole_thenOk() {
+    void testDanceWhenCreatingWithDefaultUserRoleThenOk() {
         assertThrows(AccessDeniedException.class,
                 () -> throneService.dance());
     }
@@ -216,7 +216,7 @@ class ThroneServiceImplTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "RULER")
-    void testDance_whenCreatingWithRoleRuler_thenOk() {
+    void testDanceWhenCreatingWithRoleRulerThenOk() {
         final String dance = throneService.dance();
 
         assertThat(dance).isEqualTo("We would Pop Champagne and Raise our tones!");
@@ -225,7 +225,7 @@ class ThroneServiceImplTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "DANCER")
-    void testDance_whenCreatingWithRoleDancer_thenOk() {
+    void testDanceWhenCreatingWithRoleDancerThenOk() {
         final String dance = throneService.dance();
 
         assertThat(dance).isEqualTo("We would Pop Champagne and Raise our tones!");
@@ -234,7 +234,7 @@ class ThroneServiceImplTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testDance_whenCreatingWithRoleAdmin_thenOk() {
+    void testDanceWhenCreatingWithRoleAdminThenOk() {
         final String dance = throneService.dance();
 
         assertThat(dance).isEqualTo("We would Pop Champagne and Raise our tones!");

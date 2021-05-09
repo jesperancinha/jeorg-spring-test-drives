@@ -45,7 +45,7 @@ class Flash17CSRFCreateControllerTest {
     private PasswordEncoder passwordEncoder;
 
     @Test
-    void testCreateUserViaGe_whenCreateUserViaGet_thenOk() throws Exception {
+    void testCreateUserViaGeWhenCreateUserViaGetThenOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/open/create/admin/password/ADMIN"))
                 .andExpect(status().isOk());
 
@@ -61,7 +61,7 @@ class Flash17CSRFCreateControllerTest {
     }
 
     @Test
-    void testCreateUserViaGe_whenCreateUserViaPost_thenForbidden() throws Exception {
+    void testCreateUserViaGeWhenCreateUserViaPostThenForbidden() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/open/create/admin/password/ADMIN"))
                 .andExpect(status().isForbidden());
         ConsolerizerComposer.outSpace()

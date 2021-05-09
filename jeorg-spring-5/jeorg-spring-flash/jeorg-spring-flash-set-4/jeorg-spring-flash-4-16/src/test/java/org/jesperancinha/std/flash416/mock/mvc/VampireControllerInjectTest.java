@@ -21,7 +21,7 @@ class VampireControllerInjectTest {
     private MockMvc mockMvc;
 
     @Test
-    void testArms_whenRequest_thenReturnOk() throws Exception {
+    void testArmsWhenRequestThenReturnOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/arms"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith("text/plain"))
@@ -29,7 +29,7 @@ class VampireControllerInjectTest {
     }
 
     @Test
-    void testBody_whenRequest_thenReturnOk() throws Exception {
+    void testBodyWhenRequestThenReturnOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/body"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith("text/plain"))

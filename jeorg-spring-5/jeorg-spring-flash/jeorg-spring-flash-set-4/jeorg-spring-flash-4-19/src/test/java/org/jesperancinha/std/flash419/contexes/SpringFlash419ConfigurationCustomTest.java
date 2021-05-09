@@ -18,7 +18,7 @@ class SpringFlash419ConfigurationCustomTest {
     private TestUtils.TestApplicationContext testApplicationContext;
 
     @Test
-    void testSongObject_whenContent_thenWhatIsIt() {
+    void testSongObjectWhenContentThenWhatIsIt() {
         final Object songObject = testApplicationContext.getBean("songObject");
         ConsolerizerComposer.outSpace()
                 .blue("We get bean")

@@ -16,7 +16,7 @@ class GenerationControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void testHandleRequestInternal_whenCalled_thenGotoGenerationView() throws Exception {
+    void testHandleRequestInternalWhenCalledThenGotoGenerationView() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/beatenGeneration.html"))
                 .andExpect(status().isOk())
                 .andExpect(model().attribute("message", "Open your imagination"));

@@ -17,7 +17,7 @@ class TheUniverseConfigurationTest {
     private Material material1;
 
     @Test
-    void testMaterial1_whenInject_thenGetMaterial2() {
+    void testMaterial1_whenInjectThenGetMaterial2() {
         assertThat(material1.getValue()).isEqualTo("The world is not enough!");
     }
 }

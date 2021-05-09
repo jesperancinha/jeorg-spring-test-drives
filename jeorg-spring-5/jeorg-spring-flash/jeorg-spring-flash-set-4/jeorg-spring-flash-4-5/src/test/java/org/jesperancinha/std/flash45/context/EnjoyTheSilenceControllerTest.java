@@ -15,7 +15,7 @@ class EnjoyTheSilenceControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void testHome_whenSilence_thenEnjoy() throws Exception {
+    void testHomeWhenSilenceThenEnjoy() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk());
     }

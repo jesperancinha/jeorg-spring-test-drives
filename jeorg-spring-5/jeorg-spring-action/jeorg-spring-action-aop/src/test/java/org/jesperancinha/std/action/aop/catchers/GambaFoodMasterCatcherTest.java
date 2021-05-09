@@ -112,7 +112,7 @@ class GambaFoodMasterCatcherTest {
     private ArgumentCaptor<JoinPoint> joinPointArgumentCaptor;
 
     @Test
-    void testCatchWithNet_whenCallingMasterAnnotatedMethod_thenTriggerTheRightAdvices() {
+    void testCatchWithNetWhenCallingMasterAnnotatedMethodThenTriggerTheRightAdvices() {
         gambaFoodCatcher.catchWithNet();
         bonitoCatcher.catchWithNet();
         mackerelCatcher.catchWithNet();

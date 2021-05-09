@@ -36,7 +36,7 @@ class EpisodeDtoControllerTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
-    void testCreateEpisode_whenPerformingPost_thenReturnNothing() throws Exception {
+    void testCreateEpisodeWhenPerformingPostThenReturnNothing() throws Exception {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         mockMvc.perform(post("/createEpisode")
@@ -49,7 +49,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisode_whenServiceFail_thenErrorAndReturnNothing() {
+    void testCreateEpisodeWhenServiceFailThenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         doThrow(new EpisodeException()).when(episodeService).createEpisode(episodeDto);
 
@@ -63,7 +63,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisodeExceptionRollback_whenPerformingPost_thenReturnNothing() throws Exception {
+    void testCreateEpisodeExceptionRollbackWhenPerformingPostThenReturnNothing() throws Exception {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         mockMvc.perform(post("/createEpisodeExceptionRollback")
@@ -76,7 +76,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisodeExceptionRollback_whenServiceFail_thenErrorAndReturnNothing() {
+    void testCreateEpisodeExceptionRollbackWhenServiceFailThenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         doThrow(new VideoCountryException()).when(episodeService).createEpisodeExceptionRollback(episodeDto);
 
@@ -90,7 +90,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisodeExceptionNoRollback_whenPerformingPost_thenReturnNothing() throws Exception {
+    void testCreateEpisodeExceptionNoRollbackWhenPerformingPostThenReturnNothing() throws Exception {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         mockMvc.perform(post("/createEpisodeExceptionNoRollback")
@@ -103,7 +103,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisodeExceptionNoRollback_whenServiceFail_thenErrorAndReturnNothing() {
+    void testCreateEpisodeExceptionNoRollbackWhenServiceFailThenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         doThrow(new VideoCountryException()).when(episodeService).createEpisodeExceptionNoRollback(episodeDto);
 
@@ -117,7 +117,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisodeMixRollback_whenPerformingPost_thenReturnNothing() throws Exception {
+    void testCreateEpisodeMixRollbackWhenPerformingPostThenReturnNothing() throws Exception {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         mockMvc.perform(post("/createEpisodeMixRollback")
@@ -130,7 +130,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisodeMixRollback_whenServiceFail_thenErrorAndReturnNothing() {
+    void testCreateEpisodeMixRollbackWhenServiceFailThenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         doThrow(new VideoCountryException()).when(episodeService).createEpisodeMixRollback(episodeDto);
 
@@ -144,7 +144,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisodeMixNoRollback_whenPerformingPost_thenReturnNothing() throws Exception {
+    void testCreateEpisodeMixNoRollbackWhenPerformingPostThenReturnNothing() throws Exception {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
 
         mockMvc.perform(post("/createEpisodeMixNoRollback")
@@ -157,7 +157,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testCreateEpisodeMixNoRollback_whenServiceFail_thenErrorAndReturnNothing() {
+    void testCreateEpisodeMixNoRollbackWhenServiceFailThenErrorAndReturnNothing() {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         doThrow(new VideoCountryException()).when(episodeService).createEpisodeMixNoRollback(episodeDto);
 
@@ -171,7 +171,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testGetEpisodeById_whenCall_thenGetEpisode1() throws Exception {
+    void testGetEpisodeByIdWhenCallThenGetEpisode1() throws Exception {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         when(episodeService.getEpisodeById(1L)).thenReturn(episodeDto);
 
@@ -181,7 +181,7 @@ class EpisodeDtoControllerTest {
     }
 
     @Test
-    void testGetAllEpisodes_whenCalled_thenReturnList() throws Exception {
+    void testGetAllEpisodesWhenCalledThenReturnList() throws Exception {
         final var episodeDto = EpisodeDto.builder().id(1L).name("The eyes see more").build();
         final var episodeDtos = List.of(episodeDto);
         when(episodeService.getAllEpisodes()).thenReturn(episodeDtos);

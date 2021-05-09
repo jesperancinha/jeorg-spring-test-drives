@@ -22,7 +22,7 @@ class GuitarControllerTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
-    void testAllGuitars_whenCalling_thenReturnSimulatedData() throws Exception {
+    void testAllGuitarsWhenCallingThenReturnSimulatedData() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content()
@@ -30,7 +30,7 @@ class GuitarControllerTest {
     }
 
     @Test
-    void testCreateGuitar_whenCalling_thenSimulateCreation() throws Exception {
+    void testCreateGuitarWhenCallingThenSimulateCreation() throws Exception {
         final var guitar = Guitar.builder().brand("Gibson").currency("EUR").model("SG Junior").value(1399L).build();
 
         mockMvc.perform(post("/")

@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class SpringFlash513LauncherTest {
 
     @Test
-    void testSendCasket_whenPostRequest_thenGetResponse() throws JSONException {
+    void testSendCasketWhenPostRequestThenGetResponse() throws JSONException {
         final var restTemplate = new RestTemplate();
         final var expectedCasket = "{\"designation\":\"Bananas\", \"units\":100,\"brand\":\"Chiquita\"}";
         final var casket = new Casket();

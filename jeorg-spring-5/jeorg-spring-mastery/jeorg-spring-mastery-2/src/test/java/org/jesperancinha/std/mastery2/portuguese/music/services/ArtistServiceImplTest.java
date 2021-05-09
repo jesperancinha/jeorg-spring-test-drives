@@ -44,7 +44,7 @@ class ArtistServiceImplTest {
 
 
     @Test
-    void testListArtists_whenListAll_thenGetAList() {
+    void testListArtistsWhenListAllThenGetAList() {
         final var artists = artistService.listArtists();
 
         assertThat(artists).hasSize(1);
@@ -63,7 +63,7 @@ class ArtistServiceImplTest {
                             config = @SqlConfig(transactionMode = SqlConfig.TransactionMode.ISOLATED)),
             }
     )
-    void testListArtistsWithSQL_whenListAll_thenGetAList() {
+    void testListArtistsWithSQLWhenListAllThenGetAList() {
         final var artists = artistService.listArtists();
 
         assertThat(artists).hasSize(2);
@@ -77,7 +77,7 @@ class ArtistServiceImplTest {
     }
 
     @Test
-    void testGetArtistByNameUnauthenticated_whenGetArtist_thenFail() {
+    void testGetArtistByNameUnauthenticatedWhenGetArtistThenFail() {
 
         Assertions.assertThrows(AuthenticationCredentialsNotFoundException.class
                 , () -> artistService.getArtistByName("António"));
@@ -85,7 +85,7 @@ class ArtistServiceImplTest {
 
     @Test
     @WithMockUser
-    void testGetArtistByNameUnauthorizer_whenGetArtist_thenGetArtist() {
+    void testGetArtistByNameUnauthorizerWhenGetArtistThenGetArtist() {
         Assertions.assertThrows(AccessDeniedException.class
                 , () -> artistService.getArtistByName("António"));
     }
@@ -95,7 +95,7 @@ class ArtistServiceImplTest {
             password = "admin",
             roles = "ADMIN",
             value = "admin")
-    void testGetArtistByName_whenGetArtist_thenGetArtist() {
+    void testGetArtistByNameWhenGetArtistThenGetArtist() {
         final var actual = artistService.getArtistByName("António");
 
         assertThat(actual.getName()).isEqualTo("António Variações");

@@ -19,7 +19,7 @@ class PotatoRepositoryTest {
 
     @Test
     @Transactional
-    public void testSave_whenNewPotato_thenGetItBack() {
+    public void testSaveWhenNewPotatoThenGetItBack() {
         final var potato = new Potato();
         final Potato potatoSave = potatoRepository.save(potato);
 

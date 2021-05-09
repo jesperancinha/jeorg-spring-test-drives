@@ -56,7 +56,7 @@ class SpringFlash26LauncherTest {
     }
 
     @Test
-    void testRowMapper_whenMakingRequest_thenReturnElements() {
+    void testRowMapperWhenMakingRequestThenReturnElements() {
         final var shells = springFlash26Launcher.testRowMapper();
 
         assertThat(shells).hasSize(2);
@@ -78,7 +78,7 @@ class SpringFlash26LauncherTest {
     }
 
     @Test
-    void testResultSetExtractor_whenCalling_thenGetOKResultAndPrint2Records() {
+    void testResultSetExtractorWhenCallingThenGetOKResultAndPrint2Records() {
         final var shells = springFlash26Launcher.testResultSetExtractor();
 
         assertThat(shells).isNotNull();
@@ -92,7 +92,7 @@ class SpringFlash26LauncherTest {
     }
 
     @Test
-    void testInsertData_whenInserting2Rows_thenCallBatchUpdateFor2Records() {
+    void testInsertDataWhenInserting2RowsThenCallBatchUpdateFor2Records() {
         final var data = Arrays.asList(
                 new Object[]{"Berbigão", "Cerastoderma edule", "white"},
                 new Object[]{"Conquilha", "Donax trunculus", "blue"}
@@ -107,7 +107,7 @@ class SpringFlash26LauncherTest {
     }
 
     @Test
-    void testNoResultQueryOnResultSetExtractor_whenMakingQueryWithNoResults_thenThrowException() {
+    void testNoResultQueryOnResultSetExtractorWhenMakingQueryWithNoResultsThenThrowException() {
         assertThrows(UncategorizedSQLException.class,
                 () -> springFlash26Launcher.testNoResultQueryOnResultSetExtractor());
 

@@ -16,7 +16,7 @@ class LoveControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void teatHandleRequestInternal_whenCalled_thenGotoLoveView() throws Exception {
+    void teatHandleRequestInternal_whenCalledThenGotoLoveView() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/love.html"))
                 .andExpect(status().isOk())
                 .andExpect(model().attribute("message", "Love is stronger than death"));

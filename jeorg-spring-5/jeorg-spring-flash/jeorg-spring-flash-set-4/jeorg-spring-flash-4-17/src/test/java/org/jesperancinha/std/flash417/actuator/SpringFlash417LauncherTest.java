@@ -18,14 +18,14 @@ class SpringFlash417LauncherTest {
     private MockMvc mockMvc;
 
     @Test
-    void testRoot_whenCalling_getGhostTown() throws Exception {
+    void testRootWhenCalling_getGhostTown() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Ghost Town"));
     }
 
     @Test
-    void testActuator_whenCalling_getAllActuatorEndpoints() throws Exception {
+    void testActuatorWhenCalling_getAllActuatorEndpoints() throws Exception {
         mockMvc.perform(get("/actuator"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"_links\":{" +

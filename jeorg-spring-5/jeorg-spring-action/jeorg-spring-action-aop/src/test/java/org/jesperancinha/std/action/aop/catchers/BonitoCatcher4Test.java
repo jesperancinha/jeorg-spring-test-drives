@@ -39,7 +39,7 @@ class BonitoCatcher4Test {
     private ArgumentCaptor<JoinPoint> joinPointArgumentCaptor;
 
     @Test
-    void testCatchWithNet_whenCalled_thenTriggerAllAdvices() {
+    void testCatchWithNetwhenCalledThenTriggerAllAdvices() {
         bonitoCatcher.catchWithNet();
 
         verify(bonito4Service, only()).beforeAnyCatch(joinPointArgumentCaptor.capture());
@@ -48,7 +48,7 @@ class BonitoCatcher4Test {
     }
 
     @Test
-    void testCatchWithFishingPole_whenCalled_thenTriggerAllAdvices() {
+    void testCatchWithFishingPoleWhenCalledThenTriggerAllAdvices() {
         bonitoCatcher.catchWithFishingPole();
 
         verify(bonito4Service, only()).beforeAnyCatch(joinPointArgumentCaptor.capture());
@@ -57,7 +57,7 @@ class BonitoCatcher4Test {
     }
 
     @Test
-    void testCatchByHand_whenCalled_thenTriggerAllAdvices() {
+    void testCatchByHandWhenCalledThenTriggerAllAdvices() {
         bonitoCatcher.catchByHand();
 
         verify(bonito4Service, only()).beforeAnyCatch(joinPointArgumentCaptor.capture());
@@ -66,7 +66,7 @@ class BonitoCatcher4Test {
     }
 
     @Test
-    void testCatchByHandExtra_whenCalled_thenTriggerAllAdvices() {
+    void testCatchByHandExtraWhenCalledThenTriggerAllAdvices() {
         bonitoCatcher.catchByHandExtra();
 
         verify(bonito4Service, only()).beforeAnyCatch(joinPointArgumentCaptor.capture());
@@ -75,7 +75,7 @@ class BonitoCatcher4Test {
     }
 
     @Test
-    void testCatchWithClaws_whenCalled_thenTriggerAllAdvices() {
+    void testCatchWithClawsWhenCalledThenTriggerAllAdvices() {
         bonitoCatcher.catchWithClaws();
 
         verify(bonito4Service, times(1)).beforeAnyCatch(joinPointArgumentCaptor.capture());
@@ -89,7 +89,7 @@ class BonitoCatcher4Test {
     }
 
     @Test
-    void testCatchWithSuperSonicWaves_whenCalled_thenTriggerAllAdvices() {
+    void testCatchWithSuperSonicWavesWhenCalledThenTriggerAllAdvices() {
         bonitoCatcher.catchWithSuperSonicWaves();
 
         verify(bonito4Service, only()).beforeAnyCatch(joinPointArgumentCaptor.capture());
@@ -98,7 +98,7 @@ class BonitoCatcher4Test {
     }
 
     @Test
-    void testCatchWithABucket_whenCalled_thenTriggerAllAdvices() {
+    void testCatchWithABucketWhenCalledThenTriggerAllAdvices() {
         bonitoCatcher.catchWithABucket();
 
         verify(bonito4Service, only()).beforeAnyCatch(joinPointArgumentCaptor.capture());
@@ -107,7 +107,7 @@ class BonitoCatcher4Test {
     }
 
     @Test
-    void testCatchWithLove_whenCalled_thenTriggerAllAdvices() {
+    void testCatchWithLoveWhenCalledThenTriggerAllAdvices() {
         bonitoCatcher.catchWithLove();
 
         verify(bonito4Service, only()).beforeAnyCatch(joinPointArgumentCaptor.capture());

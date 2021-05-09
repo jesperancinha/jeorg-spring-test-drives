@@ -27,7 +27,7 @@ class TearDropControllerTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
-    void testCreateTearDropReport_whenCalled_thenReturnConvertedValues() throws Exception {
+    void testCreateTearDropReportWhenCalledThenReturnConvertedValues() throws Exception {
         final var tearDrop1 = TearDrop.builder().tearDropType(HAPPINESS).count(100L).build();
         final var tearDrop2 = TearDrop.builder().tearDropType(SADNESS).count(50L).build();
 

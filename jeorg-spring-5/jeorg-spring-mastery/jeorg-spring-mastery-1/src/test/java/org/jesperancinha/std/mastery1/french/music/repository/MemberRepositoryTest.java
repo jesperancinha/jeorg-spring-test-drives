@@ -40,7 +40,7 @@ class MemberRepositoryTest {
     }
 
     @Test
-    void testGetOne_whenFindOne_thenMatch() {
+    void testGetOneWhenFindOneThenMatch() {
         final Member member = memberRepository.getOne(1L);
         assertThat(member).isNotNull();
         assertThat(member.getName()).isEqualTo("Celine Dion");
@@ -48,7 +48,7 @@ class MemberRepositoryTest {
     }
 
     @Test
-    void testFindAllByNameLike_whenFindAll_thenGetAll() {
+    void testFindAllByNameLikeWhenFindAllThenGetAll() {
         final List<Member> members = memberRepository.findAllByNameLike("%Dion%");
         assertThat(members).hasSize(1);
         final Member member = members.get(0);

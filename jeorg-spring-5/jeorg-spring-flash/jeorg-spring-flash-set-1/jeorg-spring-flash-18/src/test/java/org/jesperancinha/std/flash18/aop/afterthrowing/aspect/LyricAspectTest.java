@@ -39,7 +39,7 @@ class LyricAspectTest {
      * Tests the Advices that are supposed to respond to method {@link LyricsService#resultLyric1()}
      */
     @Test
-    void testAfterThrowingAdvice_whenCallingEnumerateLyric1_thenRegisterAllAdvices() {
+    void testAfterThrowingAdviceWhenCallingEnumerateLyric1ThenRegisterAllAdvices() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.enumerateLyric1());
 
         verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
@@ -54,7 +54,7 @@ class LyricAspectTest {
     }
 
     @Test
-    void testAfterThrowingAdvice1_whenCallingEnumerateLyric1_thenRegisterAllAdvices() {
+    void testAfterThrowingAdvice1_whenCallingEnumerateLyric1ThenRegisterAllAdvices() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.enumerateLyric1());
 
         verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
@@ -69,7 +69,7 @@ class LyricAspectTest {
     }
 
     @Test
-    void testAfterThrowingAdvice2_whenCallingEnumerateLyric2_thenRegisterAllAdvices() {
+    void testAfterThrowingAdvice2_whenCallingEnumerateLyric2ThenRegisterAllAdvices() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.enumerateLyric2());
 
         verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
@@ -84,7 +84,7 @@ class LyricAspectTest {
     }
 
     @Test
-    void testAfterThrowingAdvice3_whenCallingEnumerateLyric3_thenRegisterAllAdvices() {
+    void testAfterThrowingAdvice3_whenCallingEnumerateLyric3ThenRegisterAllAdvices() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.enumerateLyric3());
 
         verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
@@ -99,7 +99,7 @@ class LyricAspectTest {
     }
 
     @Test
-    void testAfterThrowingAdviceResults_whenResultLyric1_thenRegisterAllAdvice() {
+    void testAfterThrowingAdviceResultsWhenResultLyric1ThenRegisterAllAdvice() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.resultLyric1());
 
         verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
@@ -117,7 +117,7 @@ class LyricAspectTest {
     }
 
     @Test
-    void testAfterThrowingAdviceResults_whenResultLyric2_thenRegisterAllAdvice() {
+    void testAfterThrowingAdviceResultsWhenResultLyric2ThenRegisterAllAdvice() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.resultLyric2());
 
         verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
@@ -135,7 +135,7 @@ class LyricAspectTest {
     }
 
     @Test
-    void testAfterThrowingAdviceResults_whenResultLyric3_thenRegisterAllAdvice() {
+    void testAfterThrowingAdviceResultsWhenResultLyric3ThenRegisterAllAdvice() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.resultLyric3());
 
         verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
@@ -153,7 +153,7 @@ class LyricAspectTest {
     }
 
     @Test
-    void testAfterThrowingAdviceResults_whenResultLyric4_thenRegisterAllAdvice() {
+    void testAfterThrowingAdviceResultsWhenResultLyric4ThenRegisterAllAdvice() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.resultLyric4());
 
         verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());

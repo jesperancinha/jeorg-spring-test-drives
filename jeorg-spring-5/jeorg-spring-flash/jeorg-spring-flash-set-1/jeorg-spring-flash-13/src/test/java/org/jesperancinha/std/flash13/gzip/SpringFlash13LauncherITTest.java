@@ -26,7 +26,7 @@ class SpringFlash13LauncherITTest {
     }
 
     @Test
-    void testCallsToCss_whenNormal_thenGetNormal() {
+    void testCallsToCssWhenNormalThenGetNormal() {
         final var headers = new HttpHeaders();
         final var request = new HttpEntity<>(headers);
         var response = restTemplate.exchange(

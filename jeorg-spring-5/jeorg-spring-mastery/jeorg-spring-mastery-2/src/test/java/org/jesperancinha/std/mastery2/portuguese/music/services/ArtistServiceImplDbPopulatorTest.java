@@ -34,7 +34,7 @@ class ArtistServiceImplDbPopulatorTest {
     private DataSource dataSource;
 
     @Test
-    void testListArtistsWithSQL_whenListAll_thenGetAList() throws SQLException {
+    void testListArtistsWithSQLWhenListAllThenGetAList() throws SQLException {
         databasePopulator.populate(dataSource.getConnection());
         final var artists = artistService.listArtists();
 

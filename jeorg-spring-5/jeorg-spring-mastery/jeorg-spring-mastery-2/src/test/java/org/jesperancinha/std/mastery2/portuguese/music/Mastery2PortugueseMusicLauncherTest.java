@@ -31,7 +31,7 @@ class Mastery2PortugueseMusicLauncherTest {
     }
 
     @Test
-    void testRun_whenAskingPorts_thenGetSeparatePorts() {
+    void testRunWhenAskingPortsThenGetSeparatePorts() {
         ConsolerizerComposer.out(" ")
                 .brightGreen(localServerPort)
                 .toConsoleLn();

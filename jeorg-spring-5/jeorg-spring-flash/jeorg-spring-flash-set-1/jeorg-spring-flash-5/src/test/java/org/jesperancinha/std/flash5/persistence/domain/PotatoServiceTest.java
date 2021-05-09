@@ -46,7 +46,7 @@ class PotatoServiceTest {
     }
 
     @Test
-    void testCreatePotato_whenCreated_thenCanCallFromDatabase() {
+    void testCreatePotatoWhenCreatedThenCanCallFromDatabase() {
         final var newPotato = new Potato();
         newPotato.setForm("Kindest of them all");
         final var savedPotato = new Potato();
@@ -68,7 +68,7 @@ class PotatoServiceTest {
     }
 
     @Test
-    void testGetAllPotatoes_whenListing_thenGetAllFromDatabase() {
+    void testGetAllPotatoesWhenListingThenGetAllFromDatabase() {
         final var newPotato1 = new Potato();
         newPotato1.setForm("Sweet");
         final var newPotato2 = new Potato();

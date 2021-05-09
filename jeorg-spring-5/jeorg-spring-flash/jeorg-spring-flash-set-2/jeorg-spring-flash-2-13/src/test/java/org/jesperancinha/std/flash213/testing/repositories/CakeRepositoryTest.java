@@ -39,7 +39,7 @@ public class CakeRepositoryTest {
     }
 
     @Test
-    public void testGetCake_whenGoodId_thenGetCake() {
+    public void testGetCakeWhenGoodIdThenGetCake() {
         final Optional<Cake> optionalCake = cakeRepository.findById(1L);
 
         assertThat(optionalCake.isPresent()).isTrue();

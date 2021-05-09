@@ -26,7 +26,7 @@ class ThinkControllerTest {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
-    void testThinkRandom_whenAllInputParams_thenCreateRandomThink() throws Exception {
+    void testThinkRandomWhenAllInputParamsThenCreateRandomThink() throws Exception {
         final var allThinks = Arrays.asList(
                 Think.builder().artist("Kelly Clarkson").thinkString("You think you got the best of me").build(),
                 Think.builder().artist("Kelly Clarkson").thinkString("Think you had the last laugh").build(),
@@ -50,7 +50,7 @@ class ThinkControllerTest {
     }
 
     @Test
-    void testThinkRandom_whenOnlyThinks_thenCreateRandomThinkWithNullArtist() throws Exception {
+    void testThinkRandomWhenOnlyThinksThenCreateRandomThinkWithNullArtist() throws Exception {
         final var allThinks = Arrays.asList(
                 Think.builder().thinkString("You think you got the best of me").build(),
                 Think.builder().thinkString("Think you had the last laugh").build(),

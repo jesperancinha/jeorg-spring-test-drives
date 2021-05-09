@@ -18,7 +18,7 @@ class ViewControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void testMainPage_whenCalled_thenAIWFCIY() throws Exception {
+    void testMainPageWhenCalledThenAIWFCIY() throws Exception {
         final MvcResult mvcResult = mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andReturn();

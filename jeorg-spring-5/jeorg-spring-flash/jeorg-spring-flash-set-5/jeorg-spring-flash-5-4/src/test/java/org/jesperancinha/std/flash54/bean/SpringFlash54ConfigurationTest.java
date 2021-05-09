@@ -24,7 +24,7 @@ class SpringFlash54ConfigurationTest {
     private static TomatoExtended originalTomato;
 
     @Test
-    void testTomato_whenTomatoInitsAndEnds_thenInitAndEndMethodsCalled() {
+    void testTomatoWhenTomatoInitsAndEndsThenInitAndEndMethodsCalled() {
         verify(originalTomato, times(1)).growTomato();
     }
 

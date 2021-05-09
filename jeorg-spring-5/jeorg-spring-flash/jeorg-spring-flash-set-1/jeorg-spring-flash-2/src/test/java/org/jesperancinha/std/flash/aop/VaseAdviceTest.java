@@ -18,7 +18,7 @@ class VaseAdviceTest {
     private MethodInvocation methodInvocation;
 
     @Test
-    void testInvoke_whenCall_thenCallandReturnObject() throws Throwable {
+    void testInvokeWhenCallThenCallandReturnObject() throws Throwable {
         when(methodInvocation.proceed()).thenReturn("Proceed");
 
         final VaseAdvice vaseAdvice = new VaseAdvice();

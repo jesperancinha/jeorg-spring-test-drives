@@ -30,7 +30,7 @@ class SpringFlash46LauncherTest {
     }
 
     @TestFactory
-    Stream<DynamicTest> testCallDogs_whenDogType_thenRightYouTubeVideo() {
+    Stream<DynamicTest> testCallDogsWhenDogTypeThenRightYouTubeVideo() {
         final var testMap = Map.of(
                 DogType.DOBERMANN, "0LgCGpbMhAo",
                 DogType.SIBERIAN_HUSKY, "tbn8IF0D9Yg",
@@ -49,7 +49,7 @@ class SpringFlash46LauncherTest {
     }
 
     @TestFactory
-    Stream<DynamicTest> testCallCats_whenCatType_thenRightYouTubeVideo() {
+    Stream<DynamicTest> testCallCatsWhenCatTypeThenRightYouTubeVideo() {
         final var testMap = Map.of(
                 CatType.MAINE_COON, "weebcQPRGUE",
                 CatType.BENGAL, "FVGhzxzx88M",

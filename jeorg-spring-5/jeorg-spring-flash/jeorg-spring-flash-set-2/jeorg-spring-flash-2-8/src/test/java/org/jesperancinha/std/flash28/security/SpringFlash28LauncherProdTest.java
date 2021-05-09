@@ -19,7 +19,7 @@ class SpringFlash28LauncherProdTest {
     private MockMvc mockMvc;
 
     @Test
-    public void testGetBird_whenCallingBird_thenReturnBird() throws Exception {
+    public void testGetBirdWhenCallingBirdThenReturnBird() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("A little bird lit down on henry lee"));

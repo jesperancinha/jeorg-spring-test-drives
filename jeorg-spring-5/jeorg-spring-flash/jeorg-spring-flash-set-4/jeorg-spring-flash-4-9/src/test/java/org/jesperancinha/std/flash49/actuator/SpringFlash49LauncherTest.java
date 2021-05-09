@@ -48,7 +48,7 @@ class SpringFlash49LauncherTest {
     }
 
     @Test
-    void testEncode_whenString_thenEncode() throws Exception {
+    void testEncodeWhenStringThenEncode() throws Exception {
         final var mvcResult = mockMvc.perform(get("/open?encode=123456789"))
                 .andExpect(status().isOk())
                 .andReturn();
@@ -61,7 +61,7 @@ class SpringFlash49LauncherTest {
     }
 
     @Test
-    void testCreateUser_whenCreateOne_thenSaveOne() throws Exception {
+    void testCreateUserWhenCreateOneThenSaveOne() throws Exception {
         mockMvc.perform(post("/open/create")
                 .header("username", "joao")
                 .header("password", "joao2")
@@ -84,7 +84,7 @@ class SpringFlash49LauncherTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testGetAllConcerts_withAuthenticatedAdmin_thenGetAll() throws Exception {
+    void testGetAllConcertsWithAuthenticatedAdminThenGetAll() throws Exception {
         final var allConcerts = Collections.singletonList(
                 "Nirvana - Aneurysm (Live At The Paramount, Seattle / 1991)"
         );
@@ -94,7 +94,7 @@ class SpringFlash49LauncherTest {
     }
 
     @Test
-    void testActuator_whenCalled_thenNoEvents() throws Exception {
+    void testActuatorWhenCalledThenNoEvents() throws Exception {
         mockMvc.perform(get("/actuator/auditevents"))
                 .andExpect(content().json("{\"events\":[]}"));
     }

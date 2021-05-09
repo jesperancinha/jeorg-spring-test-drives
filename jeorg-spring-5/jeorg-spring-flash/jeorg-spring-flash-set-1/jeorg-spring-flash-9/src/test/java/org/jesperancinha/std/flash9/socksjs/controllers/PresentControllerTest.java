@@ -14,7 +14,7 @@ class PresentControllerTest {
     private final PresentController presentController = new PresentController();
 
     @Test
-    void testSendPresent_whenAskingForSnap_thenGetRhythmIsADancer() {
+    void testSendPresentWhenAskingForSnapThenGetRhythmIsADancer() {
         final var request = new Request();
         request.setMessage("snap");
         request.setLocalDateTime(LocalDateTime.now());
@@ -29,7 +29,7 @@ class PresentControllerTest {
     }
 
     @Test
-    void testSendPresent_whenAskingForSoup_thenGetSidewinder() {
+    void testSendPresentWhenAskingForSoupThenGetSidewinder() {
         final var request = new Request();
         request.setMessage("soup");
         request.setLocalDateTime(LocalDateTime.now());
@@ -44,7 +44,7 @@ class PresentControllerTest {
     }
 
     @Test
-    void testSendPresent_whenAskingHello_thenGetHello() throws NoSuchFieldException, IllegalAccessException {
+    void testSendPresentWhenAskingHelloThenGetHello() throws NoSuchFieldException, IllegalAccessException {
         final var request = new Request();
         request.setMessage("hello");
         request.setLocalDateTime(LocalDateTime.now());
@@ -62,7 +62,7 @@ class PresentControllerTest {
     }
 
     @Test
-    void testSendPresent_whenUnknown_thenGetUnknown() {
+    void testSendPresentWhenUnknownThenGetUnknown() {
         final var request = new Request();
         request.setMessage("Something good");
         request.setLocalDateTime(LocalDateTime.now());

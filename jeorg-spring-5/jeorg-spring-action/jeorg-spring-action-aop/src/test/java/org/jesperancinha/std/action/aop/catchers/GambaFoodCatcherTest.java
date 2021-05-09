@@ -55,7 +55,7 @@ class GambaFoodCatcherTest {
     }
 
     @Test
-    void testCatchByHand_whenCalling_thenTriggerAllMatchingBeforeAdvices() {
+    void testCatchByHandWhenCallingThenTriggerAllMatchingBeforeAdvices() {
         gambaFoodCatcher.catchByHand();
 
         verify(gambaService, times(1)).beforeAnnotation(joinPointArgumentCaptor.capture());

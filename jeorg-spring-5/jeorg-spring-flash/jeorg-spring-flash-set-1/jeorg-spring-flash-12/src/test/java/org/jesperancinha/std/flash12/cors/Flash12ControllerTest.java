@@ -16,14 +16,14 @@ class Flash12ControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void testSentence_whenCalled_thenShowSentence() throws Exception {
+    void testSentenceWhenCalledThenShowSentence() throws Exception {
         mockMvc.perform(get("/cors"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("When accessing from jeorg-spring-flash-12, there should be no blocking to visualization"));
     }
 
     @Test
-    void testSentence_whenCalledWithDifferentOrigin_thenFail() throws Exception {
+    void testSentenceWhenCalledWithDifferentOriginThenFail() throws Exception {
         mockMvc.perform(get("/cors")
                 .header("Origin", "http://thissiteissomethingcopletelydifferentlocalhost.com"))
                 .andExpect(status().isForbidden())
@@ -31,14 +31,14 @@ class Flash12ControllerTest {
     }
 
     @Test
-    void testSentenceAlways_whenCalled_thenShowSentence() throws Exception {
+    void testSentenceAlwaysWhenCalledThenShowSentence() throws Exception {
         mockMvc.perform(get("/always"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("This should be blocked from the opposite url."));
     }
 
     @Test
-    void testSentenceAlways_whenCalledDifferentOrigin_thenShowSentence() throws Exception {
+    void testSentenceAlwaysWhenCalledDifferentOriginThenShowSentence() throws Exception {
         mockMvc.perform(get("/always")
                 .header("Origin", "http://thissiteissomethingcopletelydifferentlocalhost.com"))
                 .andExpect(status().isOk())
@@ -46,14 +46,14 @@ class Flash12ControllerTest {
     }
 
     @Test
-    void testSentenceProtected_whenCalled_thenShowSentence() throws Exception {
+    void testSentenceProtectedWhenCalledThenShowSentence() throws Exception {
         mockMvc.perform(get("/protected"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("When accessing from jeorg-spring-flash-12, there should be no blocking to visualization"));
     }
 
     @Test
-    void testSentenceProtected_whenCalledDiffentOrigint_thenFail() throws Exception {
+    void testSentenceProtectedWhenCalledDiffentOrigintThenFail() throws Exception {
         mockMvc.perform(get("/protected")
                 .header("Origin", "http://thissiteissomethingcopletelydifferentlocalhost.com"))
                 .andExpect(status().isForbidden())

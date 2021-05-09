@@ -41,7 +41,7 @@ class AlbumServiceImplTest {
     private ArgumentCaptor<Long> longArgumentCaptor;
 
     @Test
-    void testDeleteAlbumByIdI_whenRemovingPerId_thenReturnTrueOnDelete() {
+    void testDeleteAlbumByIdIWhenRemovingPerIdThenReturnTrueOnDelete() {
         final boolean deleted = albumService.deleteAlbumByIdI(1L);
         assertThat(deleted).isTrue();
 
@@ -50,7 +50,7 @@ class AlbumServiceImplTest {
     }
 
     @Test
-    void testUpdateAlbum_whenUpdatingAlgum_thenReturnUpdatedAlbum() {
+    void testUpdateAlbumWhenUpdatingAlgumThenReturnUpdatedAlbum() {
         when(albumRepository.save(any(Album.class))).thenAnswer(invocationOnMock -> invocationOnMock.getArguments()[0]);
         final var inputAlbum = new AlbumDto();
         inputAlbum.setName("The Abbey Road Sessions");
@@ -73,7 +73,7 @@ class AlbumServiceImplTest {
     }
 
     @Test
-    void testCreateAlbum_whenCreatingAlbum_thenReturnCreatedAlbum() {
+    void testCreateAlbumWhenCreatingAlbumThenReturnCreatedAlbum() {
         when(albumRepository.save(any(Album.class))).thenAnswer(invocationOnMock -> invocationOnMock.getArguments()[0]);
 
         final AlbumDto album = albumService.createAlbum(
@@ -92,7 +92,7 @@ class AlbumServiceImplTest {
     }
 
     @Test
-    void testCreateAlbumRollBack_whenCall_thenSimulatePerformARollback() {
+    void testCreateAlbumRollBackWhenCallThenSimulatePerformARollback() {
         assertThrows(RuntimeException.class, () ->
                 albumService.createAlbumRollBack(
                         "The Downward Spiral", "Nine Inch Nails", "Nothing Records", 1995L));
@@ -107,7 +107,7 @@ class AlbumServiceImplTest {
     }
 
     @Test
-    void testGetAllAlbums_whenCall_thenGetAllAlbums() {
+    void testGetAllAlbumsWhenCallThenGetAllAlbums() {
         final List<Album> albums = new ArrayList<>();
         when(albumRepository.findAll()).thenReturn(albums);
 

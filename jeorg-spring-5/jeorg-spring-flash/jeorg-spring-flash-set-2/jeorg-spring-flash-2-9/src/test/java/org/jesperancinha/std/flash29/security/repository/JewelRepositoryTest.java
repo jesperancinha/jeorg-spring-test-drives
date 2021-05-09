@@ -34,7 +34,7 @@ class JewelRepositoryTest {
     }
 
     @Test
-    public void testGetJewel_whenReadingJewel_thenResultInJewel() {
+    public void testGetJewelWhenReadingJewelThenResultInJewel() {
         final var jewel = jewelRepository.getOne(1L);
         final var jewel2 = jewelRepository.getOne(2L);
 
@@ -48,7 +48,7 @@ class JewelRepositoryTest {
 
     @Test
     @Transactional(REQUIRED)
-    public void testSaveJewel_whenCreating_thenGetId() {
+    public void testSaveJewelWhenCreatingThenGetId() {
         final Jewel jewel = jewelRepository.save(Jewel.builder()
                 .jewelType(RUBY)
                 .guardian("joao").build());

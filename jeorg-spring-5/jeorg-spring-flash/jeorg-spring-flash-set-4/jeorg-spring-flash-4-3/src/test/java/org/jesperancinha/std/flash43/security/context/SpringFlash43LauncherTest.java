@@ -25,18 +25,18 @@ class SpringFlash43LauncherTest {
     private PasswordEncoder passwordEncoder;
 
     @Test
-    void testLoginPage_whenNoAuthentication_thenAllow() throws Exception {
+    void testLoginPageWhenNoAuthenticationThenAllow() throws Exception {
         mockMvc.perform(get("/login"))
                 .andExpect(status().isOk());
     }
 
     @Test
-    void testPasswordEncoder_whenInjected_thenNotNull() {
+    void testPasswordEncoderWhenInjectedThenNotNull() {
         assertThat(passwordEncoder).isNotNull();
     }
 
     @Test
-    void testRevealSecret_whenCalledWithoutAuthentication_thenRedirect() throws Exception {
+    void testRevealSecretWhenCalledWithoutAuthenticationThenRedirect() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("http://localhost/login"));
@@ -45,7 +45,7 @@ class SpringFlash43LauncherTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testRevealSecret_whenCalledWithAdmin_thenForbidden() throws Exception {
+    void testRevealSecretWhenCalledWithAdminThenForbidden() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isForbidden());
     }
@@ -53,14 +53,14 @@ class SpringFlash43LauncherTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "USER")
-    void testRevealSecret_whenCalledWithUser_thenOk() throws Exception {
+    void testRevealSecretWhenCalledWithUserThenOk() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("index"));
     }
 
     @Test
-    void testRevealPartOfTheSecret_whenCalledWithoutAuthentication_thenRedirect() throws Exception {
+    void testRevealPartOfTheSecretWhenCalledWithoutAuthenticationThenRedirect() throws Exception {
         mockMvc.perform(get("/origin"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("http://localhost/login"));
@@ -69,7 +69,7 @@ class SpringFlash43LauncherTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "USER")
-    void testRevealPartOfTheSecret_whenCalledWithUser_thenForbidden() throws Exception {
+    void testRevealPartOfTheSecretWhenCalledWithUserThenForbidden() throws Exception {
         mockMvc.perform(get("/origin"))
                 .andExpect(status().isForbidden());
     }
@@ -77,7 +77,7 @@ class SpringFlash43LauncherTest {
     @Test
     @WithMockUser(username = "joao",
             roles = "ADMIN")
-    void testRevealPartOfTheSecret_whenCalledWithAdmin_thenOk() throws Exception {
+    void testRevealPartOfTheSecretWhenCalledWithAdminThenOk() throws Exception {
         mockMvc.perform(get("/origin"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("index"));

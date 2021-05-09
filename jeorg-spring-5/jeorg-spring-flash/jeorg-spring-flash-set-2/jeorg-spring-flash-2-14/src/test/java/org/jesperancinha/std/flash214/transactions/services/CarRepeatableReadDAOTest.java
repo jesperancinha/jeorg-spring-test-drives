@@ -36,7 +36,7 @@ class CarRepeatableReadDAOTest {
      * @throws InterruptedException An error
      */
     @Test
-    void testRepeatableRead_whenRunning_thenExemplifyRepeatableRead() throws InterruptedException {
+    void testRepeatableReadWhenRunningThenExemplifyRepeatableRead() throws InterruptedException {
         ConsolerizerComposer.outSpace()
                 .cyan(title("Repeatable Read"))
                 .magenta("In this example, we are writing data in one transaction.")

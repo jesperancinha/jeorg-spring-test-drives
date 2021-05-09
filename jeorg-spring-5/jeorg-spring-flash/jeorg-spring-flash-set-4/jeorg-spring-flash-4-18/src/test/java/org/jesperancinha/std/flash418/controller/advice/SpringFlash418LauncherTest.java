@@ -30,7 +30,7 @@ class SpringFlash418LauncherTest {
     }
 
     @Test
-    void testEightiesCheck_whenSendingHit80s_thenNoError() throws Exception {
+    void testEightiesCheckWhenSendingHit80sThenNoError() throws Exception {
         final var song = Song.builder().name("You Keep Me Hangin'' On").artist("Kim Wilde").hitDate(LocalDate.of(1987, 6, 1)).build();
 
         mockMvc.perform(MockMvcRequestBuilders.put("/")
@@ -41,7 +41,7 @@ class SpringFlash418LauncherTest {
     }
 
     @Test
-    void testEightiesCheck_whenSendingHit90s_thenThrowError() throws Exception {
+    void testEightiesCheckWhenSendingHit90sThenThrowError() throws Exception {
         final var song = Song.builder().name("Madison Avenue - Don''t Call Me Baby").artist("Madison Avenue").hitDate(LocalDate.of(1999, 10, 8)).build();
 
         mockMvc.perform(MockMvcRequestBuilders.put("/")
@@ -52,7 +52,7 @@ class SpringFlash418LauncherTest {
     }
 
     @Test
-    void testEightiesCheck_whenCallingMethodNotAllowed_thenHandleInASpringFashion() throws Exception {
+    void testEightiesCheckWhenCallingMethodNotAllowedThenHandleInASpringFashion() throws Exception {
         final var song = Song.builder().name("Madison Avenue - Don''t Call Me Baby").artist("Madison Avenue").hitDate(LocalDate.of(1999, 10, 8)).build();
 
         mockMvc.perform(MockMvcRequestBuilders.post("/")

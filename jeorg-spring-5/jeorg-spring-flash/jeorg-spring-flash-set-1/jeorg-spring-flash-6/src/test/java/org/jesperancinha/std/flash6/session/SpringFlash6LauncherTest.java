@@ -24,7 +24,7 @@ class SpringFlash6LauncherTest {
     private MockMvc mockMvc;
 
     @Test
-    void testShowSessionDetails_whenCalled_thenTopListWithNumbers() throws Exception {
+    void testShowSessionDetailsWhenCalledThenTopListWithNumbers() throws Exception {
         final ObjectMapper objectMapper = new ObjectMapper();
         final MvcResult mvcResult = mockMvc.perform(get("/"))
                 .andReturn();
@@ -40,7 +40,7 @@ class SpringFlash6LauncherTest {
     }
 
     @Test
-    void testGenerateList_whenCreate_thenAddAnotherNumber() {
+    void testGenerateListWhenCreateThenAddAnotherNumber() {
         final var app = new SpringFlash6Launcher();
         final var session = mock(HttpSession.class);
         final var numberList = new ArrayList<Integer>();

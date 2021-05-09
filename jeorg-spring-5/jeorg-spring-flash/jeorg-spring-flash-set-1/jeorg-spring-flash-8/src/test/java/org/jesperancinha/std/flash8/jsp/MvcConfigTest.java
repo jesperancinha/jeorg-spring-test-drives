@@ -10,7 +10,7 @@ class MvcConfigTest {
     private final MvcConfig mvcConfig = new MvcConfig();
 
     @Test
-    void testGetViewResolver_whenCalled_thenGoodViewResolver() {
+    void testGetViewResolverWhenCalledThenGoodViewResolver() {
         final var viewResolver = mvcConfig.getViewResolver();
         assertThat(viewResolver).isInstanceOf(InternalResourceViewResolver.class);
         final InternalResourceViewResolver internalResourceViewResolver = (InternalResourceViewResolver) viewResolver;

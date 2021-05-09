@@ -25,7 +25,7 @@ class SpringFlash55LauncherTest {
      * Hypermedia as the engine of application state test
      */
     @Test
-    void testGetAllCells_whenCalling_thenReturnWithHATEOASLink() throws Exception {
+    void testGetAllCellsWhenCallingThenReturnWithHATEOASLink() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("" +
@@ -38,7 +38,7 @@ class SpringFlash55LauncherTest {
      * Hypermedia as the engine of application state test
      */
     @Test
-    void testGetAllCells_whenCallingEndless_thenReturnWithHATEOASLink() throws Exception {
+    void testGetAllCellsWhenCallingEndlessThenReturnWithHATEOASLink() throws Exception {
         mockMvc.perform(get("/endless"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("" +

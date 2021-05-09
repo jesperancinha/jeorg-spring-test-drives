@@ -22,7 +22,7 @@ class CarRepositoryTest {
     private CarRepository carRepository;
 
     @Test
-    public void testSave_whenSaveCar_thenRetrieveIt() {
+    public void testSaveWhenSaveCarThenRetrieveIt() {
         final var car = Car.builder().brand("Renault").model("Twingo").build();
 
         final Car savedCar = carRepository.save(car);

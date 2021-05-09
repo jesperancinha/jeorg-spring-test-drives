@@ -27,7 +27,7 @@ class SpringFlash15LauncherRestTest {
     private MockMvc mockMvc;
 
     @Test
-    void testGetResponse_whenCalling_thenReturnConfiguration() throws Exception {
+    void testGetResponseWhenCallingThenReturnConfiguration() throws Exception {
         when(flash15TraditionalConfiguration.getLyric1()).thenReturn("got");
         when(flash15TraditionalConfiguration.getLyric2()).thenReturn("everything");
         when(flash15TypeSafeConfiguration.getLyric3()).thenReturn("I");

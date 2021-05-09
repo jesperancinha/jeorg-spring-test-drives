@@ -31,7 +31,7 @@ class KurzgesagtRepositoryTest {
 
     @Test
     @Transactional
-    void testSave_whenSaving_thenSave() {
+    void testSaveWhenSavingThenSave() {
         final Kurzgesagt qqsLTNkzvaY = kurzgesagtRepository.save(Kurzgesagt
                 .builder()
                 .episode("The Ultimate Guide to Black Holes")
@@ -49,7 +49,7 @@ class KurzgesagtRepositoryTest {
 
     @Test
     @Transactional
-    void testFindAll_whenFindingAll_thenListAll() {
+    void testFindAllWhenFindingAllThenListAll() {
         final List<Kurzgesagt> all = kurzgesagtRepository.findAll();
 
         assertThat(all).isNotNull();

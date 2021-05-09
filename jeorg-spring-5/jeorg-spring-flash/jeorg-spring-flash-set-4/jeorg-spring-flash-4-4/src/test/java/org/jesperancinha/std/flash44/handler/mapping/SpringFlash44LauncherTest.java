@@ -23,7 +23,7 @@ class SpringFlash44LauncherTest {
     }
 
     @Test
-    void testHandlerRequest_whenCalled_thenGetAllRunningBeans() throws Exception {
+    void testHandlerRequestWhenCalledThenGetAllRunningBeans() throws Exception {
         final var mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("[" +
