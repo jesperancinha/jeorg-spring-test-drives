@@ -19,7 +19,7 @@ public class MasterAspect {
     }
 
     @Before("within(@org.jesperancinha.std.action.aop.annotations.Master org.jesperancinha.std.action.aop.catchers.*)")
-    public void masterize(final JoinPoint joinPoint){
+    public void masterize(final JoinPoint joinPoint) {
         masterService.masterize(joinPoint);
     }
 }

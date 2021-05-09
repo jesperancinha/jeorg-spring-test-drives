@@ -27,8 +27,8 @@ mvn clean spring-boot:run
 
 ### Context
 
-- [Rhythm Is a Dancer](https://en.wikipedia.org/wiki/Rhythm_Is_a_Dancer)
-- [The Sidewinder Sleeps Tonite](https://en.wikipedia.org/wiki/The_Sidewinder_Sleeps_Tonite)
+-   [Rhythm Is a Dancer](https://en.wikipedia.org/wiki/Rhythm_Is_a_Dancer)
+-   [The Sidewinder Sleeps Tonite](https://en.wikipedia.org/wiki/The_Sidewinder_Sleeps_Tonite)
 
 <div align="center">
       <a title="Snap! - Rhythm is a Dancer" href="https://www.youtube.com/watch?v=KkhGkRahU6g">
@@ -45,17 +45,17 @@ mvn clean spring-boot:run
 
 ### Online
 
-- [Write Integration Tests For Your Spring WebSocket Endpoints](https://rieckpil.de/write-integration-tests-for-your-spring-websocket-endpoints/)
-- [Streaming Text Oriented Messaging Protocol](https://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol)
-- [Using STOMP JS](https://stomp-js.github.io/stomp-websocket/codo/extra/docs-src/Usage.md.html)
-- [Spring Boot WebSocket STOMP SockJS Example](https://www.javaguides.net/2019/06/spring-boot-websocket-stomp-sockjs-example.html)
-- [STOMP Protocol Specification, Version 1.2](https://stomp.github.io/stomp-specification-1.2.html#Abstract)
-- [26. WebSocket Support](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html)
-- [Spring Boot JSP View Resolver Example](https://howtodoinjava.com/spring-boot/spring-boot-jsp-view-example/)
-- [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
-- [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
-- [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
-- [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
+-   [Write Integration Tests For Your Spring WebSocket Endpoints](https://rieckpil.de/write-integration-tests-for-your-spring-websocket-endpoints/)
+-   [Streaming Text Oriented Messaging Protocol](https://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol)
+-   [Using STOMP JS](https://stomp-js.github.io/stomp-websocket/codo/extra/docs-src/Usage.md.html)
+-   [Spring Boot WebSocket STOMP SockJS Example](https://www.javaguides.net/2019/06/spring-boot-websocket-stomp-sockjs-example.html)
+-   [STOMP Protocol Specification, Version 1.2](https://stomp.github.io/stomp-specification-1.2.html#Abstract)
+-   [26. WebSocket Support](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/html/websocket.html)
+-   [Spring Boot JSP View Resolver Example](https://howtodoinjava.com/spring-boot/spring-boot-jsp-view-example/)
+-   [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
+-   [Creating a Web Application with Spring Boot with JSP](https://www.springboottutorial.com/creating-web-application-with-spring-boot)
+-   [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)
+-   [Spring Session - REST](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/java-rest.html)
 
 ### Books
 

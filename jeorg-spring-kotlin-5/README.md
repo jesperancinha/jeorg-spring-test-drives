@@ -46,13 +46,13 @@ SPRING 5 study project in Kotlin 4
 
 ### Online
 
-- [Maven for Kotlin](https://kotlinlang.org/docs/maven.html#attributes-specific-for-jvm)
-- [Automatic Rollback of Transactions in Spring Tests](https://relentlesscoding.com/posts/automatic-rollback-of-transactions-in-spring-tests/)
-- [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
-- [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
-- [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
-- [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
-- [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
+-   [Maven for Kotlin](https://kotlinlang.org/docs/maven.html#attributes-specific-for-jvm)
+-   [Automatic Rollback of Transactions in Spring Tests](https://relentlesscoding.com/posts/automatic-rollback-of-transactions-in-spring-tests/)
+-   [AOP Alliance (Java/J2EE AOP standards)](http://aopalliance.sourceforge.net/)
+-   [Spring Framework Documentation 5.3.3](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/)
+-   [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
+-   [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
+-   [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
 
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 

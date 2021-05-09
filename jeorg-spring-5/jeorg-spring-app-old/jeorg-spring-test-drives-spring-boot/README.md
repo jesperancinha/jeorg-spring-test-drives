@@ -4,8 +4,8 @@
 
 ### Online
 
-- [IoC : Ulises Fasoli's blog](http://ufasoli.blogspot.nl/2014/02/spring-boot-and-spring-data-jpa_6.html)
-- [Spring Data JPA Tutorial using Spring Boot](http://javabeat.net/spring-data-jpa/)
+-   [IoC : Ulises Fasoli's blog](http://ufasoli.blogspot.nl/2014/02/spring-boot-and-spring-data-jpa_6.html)
+-   [Spring Data JPA Tutorial using Spring Boot](http://javabeat.net/spring-data-jpa/)
 
 ### Books
 

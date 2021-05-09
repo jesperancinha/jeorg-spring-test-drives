@@ -18,12 +18,12 @@
 
 ### Online
 
-- [1.1. Introduction to the Spring IoC Container and Bean](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/core.html#beans)
-- [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
-- [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
-- [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
-- [BeanFactory Example in Spring](https://www.onlinetutorialspoint.com/spring/beanfactory-example-in-spring.html)
-- [Spring ApplicationContext Container](https://www.tutorialspoint.com/spring/spring_applicationcontext_container.htm)
+-   [1.1. Introduction to the Spring IoC Container and Bean](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/core.html#beans)
+-   [VMware Spring Professional 2021 - EDU-1202](https://www.vmware.com/education-services/certification/vcp-spring.html)
+-   [What’s new in Spring Framework 5](https://developer.ibm.com/languages/java/tutorials/j-whats-new-in-spring-framework-5-theedom)
+-   [Spring Framework Overview](https://docs.spring.io/spring-framework/docs/5.1.18.RELEASE/spring-framework-reference/overview.html)
+-   [BeanFactory Example in Spring](https://www.onlinetutorialspoint.com/spring/beanfactory-example-in-spring.html)
+-   [Spring ApplicationContext Container](https://www.tutorialspoint.com/spring/spring_applicationcontext_container.htm)
 
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 

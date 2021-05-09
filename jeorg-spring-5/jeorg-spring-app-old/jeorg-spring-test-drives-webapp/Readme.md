@@ -10,8 +10,8 @@
 
 ### Online
 
-- [2. JPA Repositories](http://docs.spring.io/spring-data/jpa/docs/1.3.0.RELEASE/reference/html/jpa.repositories.html)
-- [Using Second Level Caching in a JPA Application](http://www.developer.com/java/using-second-level-caching-in-a-jpa-application.html)
+-   [2. JPA Repositories](http://docs.spring.io/spring-data/jpa/docs/1.3.0.RELEASE/reference/html/jpa.repositories.html)
+-   [Using Second Level Caching in a JPA Application](http://www.developer.com/java/using-second-level-caching-in-a-jpa-application.html)
 
 ### Books
 

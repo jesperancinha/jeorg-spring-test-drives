@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
     <style>
-        table {
-            background-color: blueviolet;
-            text-align: center;
-            width: 100%;
-        }
+      table {
+        background-color: blueviolet;
+        text-align: center;
+        width: 100%;
+      }
 
-        form {
-            text-align: center;
-            width: 100%;
-        }
+      form {
+        text-align: center;
+        width: 100%;
+      }
 
-        p {
-            text-align: center;
-            width: 100%;
-        }
+      p {
+        text-align: center;
+        width: 100%;
+      }
 
-        h1 {
-            text-align: center;
-            width: 100%;
-            background-color: greenyellow;
-        }
+      h1 {
+        text-align: center;
+        width: 100%;
+        background-color: greenyellow;
+      }
 
-        .xFiles {
-            background-color: black;
-            color: greenyellow;
-        }
+      .xFiles {
+        background-color: black;
+        color: greenyellow;
+      }
     </style>
     <title>Evaluating current user login info</title>
 </head>

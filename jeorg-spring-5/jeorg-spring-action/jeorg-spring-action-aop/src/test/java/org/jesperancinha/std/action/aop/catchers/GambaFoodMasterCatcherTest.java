@@ -139,8 +139,8 @@ class GambaFoodMasterCatcherTest {
         verifyNoInteractions(bonito3Service);
         verify(bonito2Service, atLeast(1)).beforeAnyCatch(joinPointArgumentCaptor.capture());
         final var allValuesForBonito2Service = joinPointArgumentCaptor.getAllValues();
-        IntStream.range(3, allValuesForBonito2Service.size()-1)
-                .forEach(i-> assertThat(joinPointArgumentCaptorValue1.getSignature().toString())
+        IntStream.range(3, allValuesForBonito2Service.size() - 1)
+                .forEach(i -> assertThat(joinPointArgumentCaptorValue1.getSignature().toString())
                         .isNotEqualTo("Gamba org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher.catchWithNet()"));
         verifyNoInteractions(bonito1Service);
     }

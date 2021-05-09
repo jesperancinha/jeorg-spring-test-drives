@@ -26,8 +26,8 @@ class SpringFlash13LauncherTest {
         mockMvc.perform(get("/flash13.styles.css"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(".car {\n" +
-                        "    text-align: center;\n" +
-                        "    font-weight: bolder;\n" +
+                        "  text-align: center;\n" +
+                        "  font-weight: bolder;\n" +
                         "}"));
     }
 
@@ -36,8 +36,8 @@ class SpringFlash13LauncherTest {
         mockMvc.perform(get("/original.styles.css"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(".car {\n" +
-                        "    text-align: center;\n" +
-                        "    font-weight: bolder;\n" +
+                        "  text-align: center;\n" +
+                        "  font-weight: bolder;\n" +
                         "}"));
     }
 }

@@ -1,16 +1,16 @@
 <html lang="en">
 <head>
     <style>
-        table {
-            background-color: blueviolet;
-            text-align: center;
-            width: 100%;
-        }
+      table {
+        background-color: blueviolet;
+        text-align: center;
+        width: 100%;
+      }
 
-        form {
-            text-align: center;
-            width: 100%;
-        }
+      form {
+        text-align: center;
+        width: 100%;
+      }
     </style>
 </head>
 <body>

@@ -1,82 +1,82 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 table {
-    width: 100%;
+  width: 100%;
 }
 
 td {
-    text-align: center;
+  text-align: center;
 }
 
 th {
-    background: #00ffff;
+  background: #00ffff;
 }
 
 .sockJSInput {
-    background: #00ffff;
-    width: 200px;
-    max-width: 500px;
+  background: #00ffff;
+  width: 200px;
+  max-width: 500px;
 }
 
 .sockJSText {
-    background: #00ffff;
-    width: 200px;
-    max-width: 500px;
-    border-radius: 10px;
-    border: 5px solid #0859c6;
+  background: #00ffff;
+  width: 200px;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 5px solid #0859c6;
 }
 
 .sockJSButton {
-    box-shadow: 0 1px 0 0 #ffffff;
-    background: #00dbff linear-gradient(to left, #00ffff 5%, #0859c6 100%);
-    border-radius: 10px;
-    border: 5px solid #0c71e0;
-    padding: 5px 20px;
-    cursor: pointer;
-    color: darkslategrey;
-    display: inline-block;
+  box-shadow: 0 1px 0 0 #ffffff;
+  background: #00dbff linear-gradient(to left, #00ffff 5%, #0859c6 100%);
+  border-radius: 10px;
+  border: 5px solid #0c71e0;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: darkslategrey;
+  display: inline-block;
 }
 
 .sockJSLive {
-    box-shadow: 0 1px 0 0 #ffffff;
-    background: #00ff00 linear-gradient(to left, #9ce62a 5%, #344d0e 100%);
-    border-radius: 10px;
-    border: 5px solid #68991c;
-    padding: 5px 20px;
-    cursor: pointer;
-    color: darkslategrey;
-    display: inline-block;
+  box-shadow: 0 1px 0 0 #ffffff;
+  background: #00ff00 linear-gradient(to left, #9ce62a 5%, #344d0e 100%);
+  border-radius: 10px;
+  border: 5px solid #68991c;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: darkslategrey;
+  display: inline-block;
 }
 
 .sockJSOff {
-    box-shadow: 0 1px 0 0 #ffffff;
-    background: #ff2400 linear-gradient(to left, #c21807 5%, #7c0a02 100%);
-    border-radius: 10px;
-    border: 5px solid #960019;
-    padding: 5px 20px;
-    cursor: pointer;
-    color: darkslategrey;
-    display: inline-block;
+  box-shadow: 0 1px 0 0 #ffffff;
+  background: #ff2400 linear-gradient(to left, #c21807 5%, #7c0a02 100%);
+  border-radius: 10px;
+  border: 5px solid #960019;
+  padding: 5px 20px;
+  cursor: pointer;
+  color: darkslategrey;
+  display: inline-block;
 }
 
 .sockJSButton:hover {
-    background: #0859c6 linear-gradient(to left, #00ffff 5%, #00dbff 100%);
+  background: #0859c6 linear-gradient(to left, #00ffff 5%, #00dbff 100%);
 }
 
 .sockJSButton:active {
-    position: relative;
-    top: 5px;
+  position: relative;
+  top: 5px;
 
 }
 
 .sockJSButton:disabled {
-    position: relative;
-    background: gray;
+  position: relative;
+  background: gray;
 }
 

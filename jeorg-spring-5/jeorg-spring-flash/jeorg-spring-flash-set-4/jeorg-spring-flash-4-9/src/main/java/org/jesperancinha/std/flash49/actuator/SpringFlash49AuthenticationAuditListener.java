@@ -24,7 +24,8 @@ public class SpringFlash49AuthenticationAuditListener extends AbstractAuthentica
     }
 
     @Override
-    public void onApplicationEvent(final @NotNull AbstractAuthenticationEvent event) {
+    public void onApplicationEvent(final @NotNull
+                                           AbstractAuthenticationEvent event) {
         ConsolerizerComposer
                 .out(" ")
                 .brightMagenta("This event has been thrown by the AbstractAuthenticationAuditListener ->")
