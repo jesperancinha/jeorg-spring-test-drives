@@ -20,6 +20,8 @@ class JewelRepositoryTest {
     @Autowired
     private JewelRepository jewelRepository;
 
+    private Long sabinoId;
+
     @BeforeEach
     @Transactional
     public void setUp() {
@@ -31,12 +33,14 @@ class JewelRepositoryTest {
         assertThat(jewel.getId()).isNotNull();
         assertThat(jewel.getJewelType()).isEqualTo(DIAMOND);
         assertThat(jewel.getGuardian()).isEqualTo("sabino");
+
+        sabinoId = jewel.getId();
     }
 
     @Test
     public void testGetJewelWhenReadingJewelThenResultInJewel() {
         final var jewel = jewelRepository.getOne(1L);
-        final var jewel2 = jewelRepository.getOne(2L);
+        final var jewel2 = jewelRepository.getOne(sabinoId);
 
         assertThat(jewel).isNotNull();
         assertThat(jewel.getGuardian()).isEqualTo("admin");
