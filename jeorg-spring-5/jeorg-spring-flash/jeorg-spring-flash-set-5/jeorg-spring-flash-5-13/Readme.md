@@ -6,12 +6,12 @@
 
 Exploring RestTemplate in Spring
 
-1. `RestTemplate`, `postForLocation`, `postForEntity`, `postForObject`
-2. `JSONAssert`, `org.skyscreamer`
+1.   `RestTemplate`, `postForLocation`, `postForEntity`, `postForObject`
+2.   `JSONAssert`, `org.skyscreamer`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -19,7 +19,7 @@ Exploring RestTemplate in Spring
 lsof -i :8081
 ```
 
-1. Run the service
+1.   Run the service
 
 ```bash
 mvn clean install spring-boot:run

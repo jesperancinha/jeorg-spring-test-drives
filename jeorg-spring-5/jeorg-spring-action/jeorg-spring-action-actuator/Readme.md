@@ -6,23 +6,23 @@
 
 Topics:
 
-1. `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`
+1.   `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`
    , `management.endpoint.integrationgraph.enabled`
-2. `info`, `health`, `defaults`
+2.   `info`, `health`, `defaults`
 
 ## Endpoints
 
-1. [http://localhost:8081/management](http://localhost:8081/management)
+1.   [http://localhost:8081/management](http://localhost:8081/management)
 
 ## How to run
 
-1. Defaults - Just the actuator activation
+1.   Defaults - Just the actuator activation
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2. Test - In-depth actuator exploration
+2.   Test - In-depth actuator exploration
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=test

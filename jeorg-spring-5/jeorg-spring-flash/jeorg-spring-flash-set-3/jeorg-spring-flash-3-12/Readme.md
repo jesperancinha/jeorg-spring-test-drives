@@ -6,7 +6,7 @@ Exploring how to query with the JdbcTemplate in Spring
 
 Topics:
 
-1. `queryForObject`, `queryForList`
+1.   `queryForObject`, `queryForList`
 
 ## How to run
 
@@ -16,7 +16,7 @@ mvn clean install spring-boot:run
 
 ## Endpoint
 
-1. [http://localhost:8081](http://localhost:8081/)
+1.   [http://localhost:8081](http://localhost:8081/)
 
 ## References
 

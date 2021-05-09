@@ -30,7 +30,7 @@ SPRING 5 study project in Kotlin 4
 
 ## Contents
 
-1. [jeorg-spring-kotlin-mastery](./jeorg-spring-kotlin-mastery) - Mastery modules
+1.   [jeorg-spring-kotlin-mastery](./jeorg-spring-kotlin-mastery) - Mastery modules
 
 ## References
 

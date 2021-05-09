@@ -6,11 +6,11 @@
 
 Exploring `@EnableGlobalMethodSecurity `in Spring - All three options
 
-1. `@EnableGlobalMethodSecurity`, `jsr250Enabled`, `securedEnabled`, `prePostEnabled`
+1.   `@EnableGlobalMethodSecurity`, `jsr250Enabled`, `securedEnabled`, `prePostEnabled`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -18,7 +18,7 @@ Exploring `@EnableGlobalMethodSecurity `in Spring - All three options
 lsof -i :8081
 ```
 
-1. Run the service
+1.   Run the service
 
 1.1. Production @PreAuthorize and @PostAuthorize
 
@@ -44,7 +44,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=acc
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 ```
 
-2. Users
+2.   Users
 
 |User|Password|Role|
 |---|---|---|
@@ -70,7 +70,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 ]
 ```
 
-3. Request all thrones
+3.   Request all thrones
 
 3.1 Rulers (Allowed)
 
@@ -90,7 +90,7 @@ curl -v --cookie-jar cookies.txt -d username=merchant -d password=admin -L http:
 curl -v -sL -b cookies.txt http://localhost:8081/thrones
 ```
 
-4. Request to dance
+4.   Request to dance
 
 4.1 Rulers and Dancers (Allowed)
 

@@ -6,11 +6,11 @@
 
 Exploring spring.factories in Spring
 
-1. `spring.factories`
+1.   `spring.factories`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -18,7 +18,7 @@ Exploring spring.factories in Spring
 lsof -i :8081
 ```
 
-1. Run the service
+1.   Run the service
 
 ```bash
 mvn clean install spring-boot:run

@@ -6,30 +6,30 @@ Welcome to action modules.
 
 The goal of this module set is to disambiguate potential nuances and complicated topics surrounding the Spring architecture:
 
-1. AOP - [jeorg-spring-action-aop](./jeorg-spring-action-aop)
+1.   AOP - [jeorg-spring-action-aop](./jeorg-spring-action-aop)
 
 `@Aspect`, `perthis`, `@Scope`, `prototype`, `@Before`
 `@Pointcut`, `@Before`
 `!`, `||`, `&&`
 
-2. MVC - [jeorg-spring-action-mvc](./jeorg-spring-action-mvc)
+2.   MVC - [jeorg-spring-action-mvc](./jeorg-spring-action-mvc)
 
 `@PathVariable`, `@RequestParam`, `Principal`, `ServletRequest`
 
-3. Security - [jeorg-spring-action-security](./jeorg-spring-action)
-4. JPA - Spring - Data - [jeorg-spring-action-data](./jeorg-spring-action-data)
+3.   Security - [jeorg-spring-action-security](./jeorg-spring-action)
+4.   JPA - Spring - Data - [jeorg-spring-action-data](./jeorg-spring-action-data)
 
 `JdbcTemplate` `DataSource` `Connection` `execute` `PreparedStatementCallback` `doInPreparedStatement` `RowMapper` `setExceptionTranslator` `DataAccessException` `AbstractFallbackSQLExceptionTranslator`
 
-5. Boot - Intro - [jeorg-spring-action-boot](./jeorg-spring-action-boot)
-6. AutoConfig - [jeorg-spring-action-auto-config](./jeorg-spring-action-auto-config)
-7. Actuator - [jeorg-spring-action-actuator](./jeorg-spring-action-actuator)
+5.   Boot - Intro - [jeorg-spring-action-boot](./jeorg-spring-action-boot)
+6.   AutoConfig - [jeorg-spring-action-auto-config](./jeorg-spring-action-auto-config)
+7.   Actuator - [jeorg-spring-action-actuator](./jeorg-spring-action-actuator)
 
 `management.endpoints.enabled-by-default`, `management.endpoints.web.exposure.include`, `management.endpoint.threaddump.enabled`, `management.endpoint.threaddump.enabled`, `management.endpoint.sessions.enabled`, `management.endpoint.flyway.enabled`, `management.endpoint.liquibase.enabled`
 , `management.endpoint.integrationgraph.enabled`
 `info`, `health`, `defaults`
 
-8. Testing - [jeorg-spring-action-testing](./jeorg-spring-action-testing)
+8.   Testing - [jeorg-spring-action-testing](./jeorg-spring-action-testing)
 
 ## References
 

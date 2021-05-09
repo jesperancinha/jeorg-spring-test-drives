@@ -6,7 +6,7 @@ Exploring the mvcMatcher vs antMatcher in Spring
 
 Topics:
 
-1. `mvcMatcher`, `antMatcher`
+1.   `mvcMatcher`, `antMatcher`
 
 ## How to run
 
@@ -22,14 +22,14 @@ On the other hand, if running through an IDE, the root path must be specified. I
 
 ## Endpoint
 
-1. [http://localhost:8081/static/index.html](http://localhost:8081/static/index.html)
+1.   [http://localhost:8081/static/index.html](http://localhost:8081/static/index.html)
 
 ## Testing
 
 You have two users:
 
-1. `neo_truth`/`redpill` - Can see only the admin page, and the userdata page
-2. `neo_lie`/`bluepill` - Can see only the user page, and the userdata page
+1.   `neo_truth`/`redpill` - Can see only the admin page, and the userdata page
+2.   `neo_lie`/`bluepill` - Can see only the user page, and the userdata page
 
 ## References
 

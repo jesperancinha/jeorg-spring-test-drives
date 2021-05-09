@@ -6,14 +6,14 @@
 
 Exploring Production Ready Metrics in Spring
 
-1. `actuator`, `sessions`, `beans`, `caches`, `health`, `info`, `conditions`, `shutdown`, `configprops`, `env`, `loggers`, `headdump`, `threaddump`, `metrics`, `scheduledtasks`, `mappings`
-2. `@TestConfiguration`, `@SpringBootTest`, `@Import`
+1.   `actuator`, `sessions`, `beans`, `caches`, `health`, `info`, `conditions`, `shutdown`, `configprops`, `env`, `loggers`, `headdump`, `threaddump`, `metrics`, `scheduledtasks`, `mappings`
+2.   `@TestConfiguration`, `@SpringBootTest`, `@Import`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
-2. [http://localhost:8081/actuator/sessions](http://localhost:8081/actuator/sessions) for sessions
-3. [http://localhost:8081/actuator](http://localhost:8081/actuator) for actuators
+1.   [http://localhost:8081](http://localhost:8081)
+2.   [http://localhost:8081/actuator/sessions](http://localhost:8081/actuator/sessions) for sessions
+3.   [http://localhost:8081/actuator](http://localhost:8081/actuator) for actuators
 
 ## Testing
 
@@ -21,13 +21,13 @@ Exploring Production Ready Metrics in Spring
 lsof -i :8081
 ```
 
-1. Run the service
+1.   Run the service
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2. Add sessions
+2.   Add sessions
 
 ```bash
 curl -v -d username=admin -d password=admin -L http://localhost:8081/login

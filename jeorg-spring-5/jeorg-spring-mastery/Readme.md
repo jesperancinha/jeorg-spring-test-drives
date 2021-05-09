@@ -2,7 +2,7 @@
 
 ## Contents
 
-1. 🇫🇷 [French language in music](./jeorg-spring-mastery-1) - [jeorg-spring-mastery-1](./jeorg-spring-mastery-1)
+1.   🇫🇷 [French language in music](./jeorg-spring-mastery-1) - [jeorg-spring-mastery-1](./jeorg-spring-mastery-1)
 
 `@ResponseBody`, `@RequestMapping`, `@RequestParam`
 `AuthenticationProvider`, `AuthorizationServerConfigurerAdapter`, `WebSecurityConfigurerAdapter`, `ResourceServerConfigurerAdapter`, `TokenStore`
@@ -15,7 +15,7 @@
 `TransactionTemplate`, `PlatformTransactionManager`, `TransactionStatus`
 `@Transactional`, `JDK proxies`, `EntityManager`, `getReference`
 
-2. 🇵🇹 [Portuguese language in music](./jeorg-spring-mastery-2) - [jeorg-spring-mastery-2](./jeorg-spring-mastery-2)
+2.   🇵🇹 [Portuguese language in music](./jeorg-spring-mastery-2) - [jeorg-spring-mastery-2](./jeorg-spring-mastery-2)
 
 `application.properties`, `H2 database`
 `@LocalServerPort`, `@Value`

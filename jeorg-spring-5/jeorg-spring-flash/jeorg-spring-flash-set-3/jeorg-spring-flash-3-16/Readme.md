@@ -4,11 +4,11 @@
 
 Exploring @RequestParameter in Spring
 
-1. `@RequestParameter`, `required`
+1.   `@RequestParameter`, `required`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 

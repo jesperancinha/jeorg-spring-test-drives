@@ -22,9 +22,9 @@ Some scrapbooks talk about coffee. ☕️
 
 The goal of this application is to illustrate three fundamental principles of software development:
 
-1. [SOLID](https://en.wikipedia.org/wiki/SOLID) - (S)ingle responsibility, (O)pen Close, (L)iskov-substitution, (I)nterface segregation, (D)ependency inversion.
-2. [ACID](https://en.wikipedia.org/wiki/ACID) - (A)tomicity, (C)onsistency, (I)solation, (D)urability
-3. [12 Factor application](https://12factor.net/) - Codebase, Dependencies, Config, Backing Services, Build/release/run, Processes, Port Binding, Concurrency, Disposability, Dev/Prod parity, Logs, Admin/Management
+1.   [SOLID](https://en.wikipedia.org/wiki/SOLID) - (S)ingle responsibility, (O)pen Close, (L)iskov-substitution, (I)nterface segregation, (D)ependency inversion.
+2.   [ACID](https://en.wikipedia.org/wiki/ACID) - (A)tomicity, (C)onsistency, (I)solation, (D)urability
+3.   [12 Factor application](https://12factor.net/) - Codebase, Dependencies, Config, Backing Services, Build/release/run, Processes, Port Binding, Concurrency, Disposability, Dev/Prod parity, Logs, Admin/Management
 
 ## Request
 

@@ -6,11 +6,11 @@
 
 Exploring GenericApplicationContext in Spring
 
-1. `GenericApplicationContext`, `XmlBeanDefinitionReader`, `GroovyBeanDefinitionReader`, `PropertiesBeanDefinitionReader`
+1.   `GenericApplicationContext`, `XmlBeanDefinitionReader`, `GroovyBeanDefinitionReader`, `PropertiesBeanDefinitionReader`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ```bash
 curl http://localhost:8081
@@ -22,7 +22,7 @@ curl http://localhost:8081
 lsof -i :8081
 ```
 
-1. Run the service
+1.   Run the service
 
 ```bash
 mvn clean install spring-boot:run

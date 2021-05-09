@@ -6,14 +6,14 @@ Exploring CGLib to create instance proxies in Spring
 
 Please take a look at exercises:
 
-1. [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2),
-2. [jeorg-spring-flash-3-5](../jeorg-spring-flash-3-5)
+1.   [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2),
+2.   [jeorg-spring-flash-3-5](../jeorg-spring-flash-3-5)
 
 on practical proxy examples.
 
 Topics:
 
-1. `Enhancer`, `FixedValue`, `InvocationHandler`
+1.   `Enhancer`, `FixedValue`, `InvocationHandler`
 
 ## References
 

@@ -4,11 +4,11 @@
 
 Exploring the Spring Security with XML in Spring with OAuth
 
-1. `org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder`, `authentication-manager`, `authentication-provider`, `password-encoder`
+1.   `org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder`, `authentication-manager`, `authentication-provider`, `password-encoder`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ## How to run
 
@@ -28,7 +28,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1. Run Spring Boot SpringFlash410Launcher
+1.   Run Spring Boot SpringFlash410Launcher
 
 ```bash
 mvn clean install spring-boot:run -Pmain -Dspring-boot.run.profiles=main
@@ -38,7 +38,7 @@ mvn clean install spring-boot:run -Pmain -Dspring-boot.run.profiles=main
 
 1.2. Try with users `admin`/`admin` and `user`/`user`
 
-2. See how encoding works with SpringFlash410Encoder
+2.   See how encoding works with SpringFlash410Encoder
 
 ```bash
 mvn clean install spring-boot:run -Pencode -Dspring-boot.run.profiles=encode

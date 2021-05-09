@@ -6,7 +6,7 @@ Exploring Exception Handling in Spring
 
 Topics
 
-1. `@ResponseStatus(HttpStatus.NOT_FOUND)`, `@ControllerAdvice`,`ModelAndView`, `ResponseEntity`, `@ExceptionHandler`
+1.   `@ResponseStatus(HttpStatus.NOT_FOUND)`, `@ControllerAdvice`,`ModelAndView`, `ResponseEntity`, `@ExceptionHandler`
 
 ## Endpoints
 
@@ -16,15 +16,15 @@ Check running on 8081
 lsof -i :8081
 ```
 
-1. [http://localhost:8081/tulips](http://localhost:8081/tulips)
-2. [http://localhost:8081/tulips/ok](http://localhost:8081/tulips/ok)
-3. [http://localhost:8081/tulips/error](http://localhost:8081/tulips/error)
-4. [http://localhost:8081/flowers/carnation](http://localhost:8081/flowers/carnation)
-5. [http://localhost:8081/cars/kitt](http://localhost:8081/cars/kit)
-6. [http://localhost:8081/flowers/loca/carnation](http://localhost:8081/flowers/local/carnation)
-7. [http://localhost:8081/cars/local/kitt](http://localhost:8081/cars/local/kit)
-8. [http://localhost:8081/fourwheels/monster](http://localhost:8081/fourwheels/monster)
-9. [http://localhost:8081/pottery/amphor](http://localhost:8081/pottery/amphor)
+1.   [http://localhost:8081/tulips](http://localhost:8081/tulips)
+2.   [http://localhost:8081/tulips/ok](http://localhost:8081/tulips/ok)
+3.   [http://localhost:8081/tulips/error](http://localhost:8081/tulips/error)
+4.   [http://localhost:8081/flowers/carnation](http://localhost:8081/flowers/carnation)
+5.   [http://localhost:8081/cars/kitt](http://localhost:8081/cars/kit)
+6.   [http://localhost:8081/flowers/loca/carnation](http://localhost:8081/flowers/local/carnation)
+7.   [http://localhost:8081/cars/local/kitt](http://localhost:8081/cars/local/kit)
+8.   [http://localhost:8081/fourwheels/monster](http://localhost:8081/fourwheels/monster)
+9.   [http://localhost:8081/pottery/amphor](http://localhost:8081/pottery/amphor)
 
 ```bash
 curl http://localhost:8081/tulips

@@ -4,11 +4,11 @@
 
 Exploring @Required in Spring
 
-1. `@Required`, `RequiredAnnotationBeanPostProcessor`
+1.   `@Required`, `RequiredAnnotationBeanPostProcessor`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -16,13 +16,13 @@ Exploring @Required in Spring
 lsof -i :8081
 ```
 
-1. Run a working version when the `@Required` fields are given
+1.   Run a working version when the `@Required` fields are given
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2. Run a non-working version when the `@Required` fields are not given
+2.   Run a non-working version when the `@Required` fields are not given
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=incomplete

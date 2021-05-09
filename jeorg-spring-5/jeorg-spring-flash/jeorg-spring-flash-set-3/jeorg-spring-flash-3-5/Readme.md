@@ -8,7 +8,7 @@ Please look on exercise in [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1
 
 Topics:
 
-1. `MethodBeforeAdvice`, `ProxyFactory`, `setTarget`, `addAdvice`
+1.   `MethodBeforeAdvice`, `ProxyFactory`, `setTarget`, `addAdvice`
 
 ## References
 

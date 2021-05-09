@@ -4,14 +4,14 @@
 
 Exploring JDK proxies in comparison to CGLib in Spring
 
-1. [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2),
-2. [jeorg-spring-flash-3-5](../jeorg-spring-flash-3-5)
-3. [jeorg-spring-flash-3-6](../jeorg-spring-flash-3-6)
-3. [jeorg-spring-flash-3-9](../jeorg-spring-flash-3-9)
+1.   [jeorg-spring-flash-2](../../jeorg-spring-flash-set-1/jeorg-spring-flash-2),
+2.   [jeorg-spring-flash-3-5](../jeorg-spring-flash-3-5)
+3.   [jeorg-spring-flash-3-6](../jeorg-spring-flash-3-6)
+3.   [jeorg-spring-flash-3-9](../jeorg-spring-flash-3-9)
 
 ---
 
-1. `Proxy`, `newProxyInstance`
+1.   `Proxy`, `newProxyInstance`
 
 ## References
 

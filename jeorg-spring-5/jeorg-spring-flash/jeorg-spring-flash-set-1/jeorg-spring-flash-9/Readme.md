@@ -6,11 +6,11 @@ Exploring WebSockets and fallback to SockJS in Spring using the [STOMP protocol 
 
 Topics
 
-1. `@EnableWebSocketMessageBroker`, `registerStompEndpoints`, `configureMessageBroker`, `@MessageMapping`, `@SendTo`
+1.   `@EnableWebSocketMessageBroker`, `registerStompEndpoints`, `configureMessageBroker`, `@MessageMapping`, `@SendTo`
 
 ## Endpoints
 
-1. [http://localhost:8081/](http://localhost:8081/)
+1.   [http://localhost:8081/](http://localhost:8081/)
 
 ## How to run
 
@@ -20,8 +20,8 @@ mvn clean spring-boot:run
 
 ## Dialogue usages
 
-1. Snap -> Rhythm is a dancer.
-2. We have instant soup at the office - Baby instant soup doesn't really grab me, today I need something more sub-sub-sub-substantial.
+1.   Snap -> Rhythm is a dancer.
+2.   We have instant soup at the office - Baby instant soup doesn't really grab me, today I need something more sub-sub-sub-substantial.
 
 ## References
 

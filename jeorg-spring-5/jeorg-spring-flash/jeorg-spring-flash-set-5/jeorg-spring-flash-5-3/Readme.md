@@ -4,11 +4,11 @@
 
 Exploring All @SpringBootApplication annotations in Spring
 
-1. `@SpringBootApplication`
+1.   `@SpringBootApplication`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -16,7 +16,7 @@ Exploring All @SpringBootApplication annotations in Spring
 lsof -i :8081
 ```
 
-1. Run the service
+1.   Run the service
 
 ```bash
 mvn clean install spring-boot:run

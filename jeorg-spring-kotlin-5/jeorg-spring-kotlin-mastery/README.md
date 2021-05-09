@@ -15,7 +15,7 @@ This project is intended as a study tool for Spring version 5 in Kotlin
 
 ## Contents
 
-1. [jeorg-spring-kotlin-mastery-1](./jeorg-spring-kotlin-mastery-1)
+1.   [jeorg-spring-kotlin-mastery-1](./jeorg-spring-kotlin-mastery-1)
 
 ## References
 

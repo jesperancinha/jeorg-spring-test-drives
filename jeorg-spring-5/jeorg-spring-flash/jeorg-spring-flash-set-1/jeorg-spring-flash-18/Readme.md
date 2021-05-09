@@ -6,11 +6,11 @@ Exploring @AfterThrowing in Spring AOP
 
 Topics
 
-1. `@Aspect`, `@AfterThrowing`, `execution`
+1.   `@Aspect`, `@AfterThrowing`, `execution`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081/)
+1.   [http://localhost:8081](http://localhost:8081/)
 
 ```bash
 curl localhost:8081/
@@ -18,13 +18,13 @@ curl localhost:8081/
 
 ## How to run
 
-1. Test running services
+1.   Test running services
 
 ```bash
 lsof -i :8081
 ```
 
-2. Run service
+2.   Run service
 
 ```bash
 mvn clean install spring-boot:run

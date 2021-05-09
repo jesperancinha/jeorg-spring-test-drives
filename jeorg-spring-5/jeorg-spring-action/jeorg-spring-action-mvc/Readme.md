@@ -6,11 +6,11 @@
 
 Topics:
 
-1. `@PathVariable`, `@RequestParam`, `Principal`, `ServletRequest`
+1.   `@PathVariable`, `@RequestParam`, `Principal`, `ServletRequest`
 
 ## Endpoints
 
-1. [http://localhost:8081/api/12312?extra=Resistor](http://localhost:8081/api/12312?extra=Resistor)
+1.   [http://localhost:8081/api/12312?extra=Resistor](http://localhost:8081/api/12312?extra=Resistor)
 
 ## References
 

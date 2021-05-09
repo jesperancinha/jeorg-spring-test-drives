@@ -4,11 +4,11 @@
 
 Exploring @Scope prototype in Spring
 
-1. `@Scope`, `prototype`
+1.   `@Scope`, `prototype`
 
 ## Endpoints
 
-1. [http://localhost:8081](http://localhost:8081)
+1.   [http://localhost:8081](http://localhost:8081)
 
 ## Testing
 
@@ -16,7 +16,7 @@ Exploring @Scope prototype in Spring
 lsof -i :8081
 ```
 
-1. Run the service
+1.   Run the service
 
 ```bash
 mvn clean install spring-boot:run
