@@ -11,17 +11,17 @@
 7.  [jeorg-spring-flash-7](./jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
 8.  [jeorg-spring-flash-8](./jeorg-spring-flash-8) - 🎄 Xmas message with simple JSP in Spring
 9.  [jeorg-spring-flash-9](./jeorg-spring-flash-9) - 🤖 A very simple bot with SockJS support
-10.  [jeorg-spring-flash-10](./jeorg-spring-flash-10) - 🛑 Error messages
-11.  [jeorg-spring-flash-11](./jeorg-spring-flash-11) - 👔 Form parameters
-12.  [jeorg-spring-flash-12](./jeorg-spring-flash-12) - 🔑 CORS explained via annotations
-13.  [jeorg-spring-flash-13](./jeorg-spring-flash-13) - 🗄 GZipping Static Resources
-14.  [jeorg-spring-flash-14](./jeorg-spring-flash-14) - 🏠 Health Indicators
-15.  [jeorg-spring-flash-15](./jeorg-spring-flash-15) - 🧑‍🎤 Type safe configuration
-16.  [jeorg-spring-flash-16](./jeorg-spring-flash-16) - 🚨 Authentication
-17.  [jeorg-spring-flash-17](./jeorg-spring-flash-17) - 🧞‍♂️ User details manager
-18.  [jeorg-spring-flash-18](./jeorg-spring-flash-18) - ✂️ AOP Throwables
-19.  [jeorg-spring-flash-19](./jeorg-spring-flash-19) - 🎫 Transaction
-20.  [jeorg-spring-flash-20](./jeorg-spring-flash-20) - 🌏 CORS via XML
+10. [jeorg-spring-flash-10](./jeorg-spring-flash-10) - 🛑 Error messages
+11. [jeorg-spring-flash-11](./jeorg-spring-flash-11) - 👔 Form parameters
+12. [jeorg-spring-flash-12](./jeorg-spring-flash-12) - 🔑 CORS explained via annotations
+13. [jeorg-spring-flash-13](./jeorg-spring-flash-13) - 🗄 GZipping Static Resources
+14. [jeorg-spring-flash-14](./jeorg-spring-flash-14) - 🏠 Health Indicators
+15. [jeorg-spring-flash-15](./jeorg-spring-flash-15) - 🧑‍🎤 Type safe configuration
+16. [jeorg-spring-flash-16](./jeorg-spring-flash-16) - 🚨 Authentication
+17. [jeorg-spring-flash-17](./jeorg-spring-flash-17) - 🧞‍♂️ User details manager
+18. [jeorg-spring-flash-18](./jeorg-spring-flash-18) - ✂️ AOP Throwables
+19. [jeorg-spring-flash-19](./jeorg-spring-flash-19) - 🎫 Transaction
+20. [jeorg-spring-flash-20](./jeorg-spring-flash-20) - 🌏 CORS via XML
 
 ## References
 

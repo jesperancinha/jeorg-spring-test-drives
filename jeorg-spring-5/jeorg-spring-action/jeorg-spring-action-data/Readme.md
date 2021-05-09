@@ -15,7 +15,7 @@ Topics:
 7.  `RowMapper`
 8.  `setExceptionTranslator`
 9.  `DataAccessException`
-10.  `AbstractFallbackSQLExceptionTranslator`
+10. `AbstractFallbackSQLExceptionTranslator`
 
 ## References
 

@@ -21,9 +21,9 @@ Main page:
 7.  [http://localhost:8081/dogs?dogType=DOBERMANN](http://localhost:8081/dogs?dogType=DOBERMANN)
 8.  [http://localhost:8081/dogs?dogType=SIBERIAN_HUSKY](http://localhost:8081/dogs?dogType=SIBERIAN_HUSKY)
 9.  [http://localhost:8081/dogs?dogType=ROTTWEILLER](http://localhost:8081/dogs?dogType=ROTTWEILLER)
-10.  [http://localhost:8081/dogs?dogType=COCKERS_SPANIEL](http://localhost:8081/dogs?dogType=COCKERS_SPANIEL)
-11.  [http://localhost:8081/dogs?dogType=GERMAN_SHEPPARD](http://localhost:8081/dogs?dogType=GERMAN_SHEPPARD)
-12.  [http://localhost:8081/dogs?dogType=BELGIAN_SHEPPARD](http://localhost:8081/dogs?dogType=BELGIAN_SHEPPARD)
+10. [http://localhost:8081/dogs?dogType=COCKERS_SPANIEL](http://localhost:8081/dogs?dogType=COCKERS_SPANIEL)
+11. [http://localhost:8081/dogs?dogType=GERMAN_SHEPPARD](http://localhost:8081/dogs?dogType=GERMAN_SHEPPARD)
+12. [http://localhost:8081/dogs?dogType=BELGIAN_SHEPPARD](http://localhost:8081/dogs?dogType=BELGIAN_SHEPPARD)
 
 ## How to run
 

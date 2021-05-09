@@ -22,7 +22,7 @@ Topics covered:
 7.  `@Qualifier`, `@DataJpaTest`
 8.  `@Query("select m from Member m where m.joinDate is not null")`
 9.  `TransactionTemplate`, `PlatformTransactionManager`, `TransactionStatus`
-10.  `@Transactional`, `JDK proxies`, `EntityManager`, `getReference`
+10. `@Transactional`, `JDK proxies`, `EntityManager`, `getReference`
 
 ## Endpoints
 
