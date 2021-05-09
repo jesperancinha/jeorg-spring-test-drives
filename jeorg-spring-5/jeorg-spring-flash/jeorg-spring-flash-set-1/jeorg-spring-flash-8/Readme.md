@@ -6,12 +6,12 @@ Exploring JSP in Spring
 
 Topics
 
-1.   `@Configuration`, `@EnableWebMvc`, `@ComponentScan`, `InternalResourceViewResolver`, `ViewResolver`
-2.   `WebMvcConfigurer`, `@Controller`
+1.    `@Configuration`, `@EnableWebMvc`, `@ComponentScan`, `InternalResourceViewResolver`, `ViewResolver`
+2.    `WebMvcConfigurer`, `@Controller`
 
 ## Endpoints
 
-1.   http://localhost:8081
+1.    http://localhost:8081
 
 ## How to run
 

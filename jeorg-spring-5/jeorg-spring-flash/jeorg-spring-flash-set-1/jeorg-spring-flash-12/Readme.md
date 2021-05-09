@@ -6,11 +6,11 @@ Exploring CORS
 
 Topics
 
-1.   `@CORS`, `origins`, `WebMvcConfigurer`, `CorsRegistry`
+1.    `@CORS`, `origins`, `WebMvcConfigurer`, `CorsRegistry`
 
 ## Endpoints
 
-1.   [http://localhost:8081/index.html](http://localhost:8081/index.html)
+1.    [http://localhost:8081/index.html](http://localhost:8081/index.html)
 
 ## How to run
 

@@ -13,13 +13,13 @@ Portuguese language in music 🇵🇹
 
 Topics covered:
 
-1.   `application.properties`, `H2 database`
-2.   `@LocalServerPort`, `@Value`
-3.   `FilterChainProxy`, `springSecurityFilterChain`
-4.   `@WithMockUser(username = "admin", password = "admin", roles = "ADMIN", value = "admin")`
-5.   `import org.springframework.test.context.jdbc.Sql`, `import org.springframework.test.context.jdbc.SqlGroup`
-6.   `DatabasePopulator`
-7.   `populate`
+1.    `application.properties`, `H2 database`
+2.    `@LocalServerPort`, `@Value`
+3.    `FilterChainProxy`, `springSecurityFilterChain`
+4.    `@WithMockUser(username = "admin", password = "admin", roles = "ADMIN", value = "admin")`
+5.    `import org.springframework.test.context.jdbc.Sql`, `import org.springframework.test.context.jdbc.SqlGroup`
+6.    `DatabasePopulator`
+7.    `populate`
 
 ## Endpoints
 
@@ -27,13 +27,13 @@ Topics covered:
 
 ## How to run
 
-1.   Running with the default profile
+1.    Running with the default profile
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2.   Running with the prod profile
+2.    Running with the prod profile
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod

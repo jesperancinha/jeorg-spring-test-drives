@@ -6,11 +6,11 @@ Exploring Profile in Spring
 
 Topics
 
-1.   `@Profile`
+1.    `@Profile`
 
 ## Endpoints
 
-1.   [http://localhost:8081](http://localhost:8081)
+1.    [http://localhost:8081](http://localhost:8081)
 
 Play with these and check the console everytime with different combinations:
 

@@ -6,7 +6,7 @@ Exploring Bean in Spring
 
 Topics
 
-1.   `@Bean`, `destroyMethod`, `initMethod`
+1.    `@Bean`, `destroyMethod`, `initMethod`
 
 ## Endpoints
 

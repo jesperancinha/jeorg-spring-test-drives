@@ -6,11 +6,11 @@ Exploring Health Indicator in Spring
 
 Topics
 
-1.   `HealthIndicator`, `AbstractHealthIndicator`, `health`, `doHealthCheck`
+1.    `HealthIndicator`, `AbstractHealthIndicator`, `health`, `doHealthCheck`
 
 ## Endpoints
 
-1.   [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
+1.    [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
 
 ```bash
 curl localhost:8081/actuator/health
@@ -26,13 +26,13 @@ cp testfile.txt /tmp
 
 Run Spring Boot
 
-1.   Running Health Checks the old way
+1.    Running Health Checks the old way
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 ```
 
-2.   Running Health Checks the new way
+2.    Running Health Checks the new way
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod

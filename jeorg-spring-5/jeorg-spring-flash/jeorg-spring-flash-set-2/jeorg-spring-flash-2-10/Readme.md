@@ -6,13 +6,13 @@ Exploring spring.factories in Spring
 
 Topics
 
-1.   `spring.factories`, `@Configuration`, `@Bean`
+1.    `spring.factories`, `@Configuration`, `@Bean`
 
 ## Endpoints
 
 ## How to run
 
-1.   Test running services
+1.    Test running services
 
 ```bash
 lsof -i :8081

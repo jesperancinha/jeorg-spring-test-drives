@@ -4,11 +4,11 @@
 
 Exploring AOP in Spring
 
-1.   `@Aspect`, `@After`, `@Before`, `@Around`
+1.    `@Aspect`, `@After`, `@Before`, `@Around`
 
 ## Endpoints
 
-1.   [http://localhost:8081](http://localhost:8081)
+1.    [http://localhost:8081](http://localhost:8081)
 
 ```bash
 curl -X POST -H 'Content-Type: application/json' http://localhost:8081 --data '{"artist":"Madonna", "show":"Sticky & Sweet Tour in 2008", "localDateTime":"2008-12-04T18:00:00.000000000"}' 

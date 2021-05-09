@@ -6,7 +6,7 @@ Exploring REST params in Spring
 
 Topics:
 
-1.   `@PathVariable`, `@MatrixVariable`, `@RequestHeader`, `@RequestParam`
+1.    `@PathVariable`, `@MatrixVariable`, `@RequestHeader`, `@RequestParam`
 
 ## Endpoints
 

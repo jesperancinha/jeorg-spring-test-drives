@@ -6,17 +6,17 @@ Exploring how to make sequence generators
 
 Topics
 
-1.   `@SequenceGenerator`
+1.    `@SequenceGenerator`
 
 ## Endpoints
 
-1.   Save all potatoes!
+1.    Save all potatoes!
 
 ```bash
 curl -X POST  http://localhost:8081
 ```
 
-2.   Get all potatoes! Notice the start and the loop
+2.    Get all potatoes! Notice the start and the loop
 
 ```bash
 curl http://localhost:8081

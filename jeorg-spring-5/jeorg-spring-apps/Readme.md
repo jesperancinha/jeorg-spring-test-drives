@@ -2,8 +2,8 @@
 
 ## Contents
 
-1.   [jeorg-spring-app-1](./jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
-2.   [jeorg-spring-app-2](./jeorg-spring-app-2) - 📔 - ScrapbookingDotCom ([ACID](https://en.wikipedia.org/wiki/ACID), [SOLID](https://en.wikipedia.org/wiki/SOLID) and [12 Factor App](https://12factor.net/))
+1.    [jeorg-spring-app-1](./jeorg-spring-app-1) - 🛳 - Cruise Ships (JDBC and persistence)
+2.    [jeorg-spring-app-2](./jeorg-spring-app-2) - 📔 - ScrapbookingDotCom ([ACID](https://en.wikipedia.org/wiki/ACID), [SOLID](https://en.wikipedia.org/wiki/SOLID) and [12 Factor App](https://12factor.net/))
 
 ## References:
 

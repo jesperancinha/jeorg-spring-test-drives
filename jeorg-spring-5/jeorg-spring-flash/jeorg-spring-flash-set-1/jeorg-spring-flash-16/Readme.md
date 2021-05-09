@@ -34,7 +34,7 @@ mvn clean install spring-boot:run
     1. admin/admin -> User with role <b>ROLE_ADMIN</b> -> User can login and access the whole website
     2. user/user -> User with role <b>ROLE_USER</b> -> User can login, but there are not authorizations available
 
-4.   Important dependency
+4.    Important dependency
 
 ```xml
 

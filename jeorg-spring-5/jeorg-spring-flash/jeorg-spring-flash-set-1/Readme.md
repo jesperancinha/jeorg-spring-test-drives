@@ -2,15 +2,15 @@
 
 ## Contents
 
-1.   [jeorg-spring-flash-1](./jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
-2.   [jeorg-spring-flash-2](./jeorg-spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
-3.   [jeorg-spring-flash-3](./jeorg-spring-flash-3) - ⛴ JDBC with boats
-4.   [jeorg-spring-flash-4](./jeorg-spring-flash-4) - 🪄 Spring param converters
-5.   [jeorg-spring-flash-5](./jeorg-spring-flash-5) - 🥔 Sequence generator with potatoes
-6.   [jeorg-spring-flash-6](./jeorg-spring-flash-6) - 🧮 Keep the math in the Session
-7.   [jeorg-spring-flash-7](./jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
-8.   [jeorg-spring-flash-8](./jeorg-spring-flash-8) - 🎄 Xmas message with simple JSP in Spring
-9.   [jeorg-spring-flash-9](./jeorg-spring-flash-9) - 🤖 A very simple bot with SockJS support
+1.    [jeorg-spring-flash-1](./jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters
+2.    [jeorg-spring-flash-2](./jeorg-spring-flash-2) - 🌱 AOP (Aspect Oriented Programming)
+3.    [jeorg-spring-flash-3](./jeorg-spring-flash-3) - ⛴ JDBC with boats
+4.    [jeorg-spring-flash-4](./jeorg-spring-flash-4) - 🪄 Spring param converters
+5.    [jeorg-spring-flash-5](./jeorg-spring-flash-5) - 🥔 Sequence generator with potatoes
+6.    [jeorg-spring-flash-6](./jeorg-spring-flash-6) - 🧮 Keep the math in the Session
+7.    [jeorg-spring-flash-7](./jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
+8.    [jeorg-spring-flash-8](./jeorg-spring-flash-8) - 🎄 Xmas message with simple JSP in Spring
+9.    [jeorg-spring-flash-9](./jeorg-spring-flash-9) - 🤖 A very simple bot with SockJS support
 10. [jeorg-spring-flash-10](./jeorg-spring-flash-10) - 🛑 Error messages
 11. [jeorg-spring-flash-11](./jeorg-spring-flash-11) - 👔 Form parameters
 12. [jeorg-spring-flash-12](./jeorg-spring-flash-12) - 🔑 CORS explained via annotations

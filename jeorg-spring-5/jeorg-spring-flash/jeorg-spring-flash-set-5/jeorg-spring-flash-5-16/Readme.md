@@ -6,11 +6,11 @@
 
 Exploring Shutdown in Spring
 
-1.   `ApplicationContext`, `SpringApplication.exit(applicationContext, () -> 0)`, `applicationContext.registerShutdownHook()`, `applicationContext.close()`
+1.    `ApplicationContext`, `SpringApplication.exit(applicationContext, () -> 0)`, `applicationContext.registerShutdownHook()`, `applicationContext.close()`
 
 ## Endpoints
 
-1.   [http://localhost:8081](http://localhost:8081)
+1.    [http://localhost:8081](http://localhost:8081)
 
 ```bash
 curl http://localhost:8081/api/terminator1
@@ -22,7 +22,7 @@ curl http://localhost:8081/api/terminator1
 lsof -i :8081
 ```
 
-1.   Run the service
+1.    Run the service
 
 ```bash
 mvn clean install spring-boot:run

@@ -4,18 +4,18 @@
 
 Exploring the Security Context in Spring
 
-1.   `intercept-url`, `pattern`, `access`
+1.    `intercept-url`, `pattern`, `access`
 
 ## Endpoints
 
-1.   [http://localhost:8081](http://localhost:8081)
+1.    [http://localhost:8081](http://localhost:8081)
 
 Using the film as inspiration:
 
-1.   As a `user`, with user/pass as user/user you will only know that Maja is looking for the truth.
+1.    As a `user`, with user/pass as user/user you will only know that Maja is looking for the truth.
     1. Use [http://localhost:8081](http://localhost:8081)
 
-2.   As an `admin` with user/pass as admin/amin you find out that Thomas holds a secret
+2.    As an `admin` with user/pass as admin/amin you find out that Thomas holds a secret
     1. Use [http://localhost:8081/origin](http://localhost:8081/origin)
 
 ## How to run
@@ -36,7 +36,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1.   Run the service
+1.    Run the service
 
 ```bash
 mvn clean install spring-boot:run

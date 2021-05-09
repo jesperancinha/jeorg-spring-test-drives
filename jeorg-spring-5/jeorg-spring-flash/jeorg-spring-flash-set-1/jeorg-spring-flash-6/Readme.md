@@ -14,7 +14,7 @@ Check running on 8081
 lsof -i :8081
 ```
 
-1.   http://localhost:8081
+1.    http://localhost:8081
 
 ```bash
 curl http://localhost:8081

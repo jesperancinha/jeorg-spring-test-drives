@@ -6,27 +6,27 @@ Exploring the Error page
 
 Topics
 
-1.   `WebMvcConfigurerAdapter`, `@Profile`, `/error`, `SimpleMappingExceptionResolver`
+1.    `WebMvcConfigurerAdapter`, `@Profile`, `/error`, `SimpleMappingExceptionResolver`
 
 ## Endpoints
 
-1.   [http://localhost:8081/](http://localhost:8081/)
+1.    [http://localhost:8081/](http://localhost:8081/)
 
 ## How to run
 
-1.   To check white label page
+1.    To check white label page
 
 ```bash
 mvn clean spring-boot:run
 ```
 
-2.   To check disabling white label page
+2.    To check disabling white label page
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 ```
 
-3.   To check custom error page
+3.    To check custom error page
 
 ```bash
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod

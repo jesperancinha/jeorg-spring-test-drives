@@ -7,7 +7,7 @@ Exploring AnnotationConfigWebApplicationContext to load annotated resources in S
 
 Topics:
 
-1.   `AnnotationConfigWebApplicationContext`
+1.    `AnnotationConfigWebApplicationContext`
 
 ## Installation
 
@@ -21,7 +21,7 @@ mvn clean install jetty:run
 
 ## Endpoints
 
-1.   [http://localhost:8080/jeorg-spring-flash-3-4/carpenters/](http://localhost:8080/jeorg-spring-flash-3-4/carpenters)
+1.    [http://localhost:8080/jeorg-spring-flash-3-4/carpenters/](http://localhost:8080/jeorg-spring-flash-3-4/carpenters)
 
 ```bash
 curl http://localhost:8080/jeorg-spring-flash-3-4/carpenters

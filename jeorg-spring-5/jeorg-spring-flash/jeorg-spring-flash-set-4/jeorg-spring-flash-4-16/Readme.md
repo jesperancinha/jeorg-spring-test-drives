@@ -4,11 +4,11 @@
 
 Exploring MockMvc in Spring
 
-1.   `@ExtendWith(SpringExtension.class)`, `@AutoConfigureMockMvc`, `@WebMvcTest(VampireController.class)`, `@ContextConfiguration(classes = VampireController.class)`
+1.    `@ExtendWith(SpringExtension.class)`, `@AutoConfigureMockMvc`, `@WebMvcTest(VampireController.class)`, `@ContextConfiguration(classes = VampireController.class)`
 
 ## Endpoints
 
-1.   [http://localhost:8081](http://localhost:8081)
+1.    [http://localhost:8081](http://localhost:8081)
 
 ```
 ## How to run
@@ -29,13 +29,13 @@ On the other hand, if running through an IDE, the root path must be specified. I
 lsof -i :8081
 ```
 
-1.   Run Spring Boot
+1.    Run Spring Boot
 
 ```bash
 mvn clean install spring-boot:run
 ```
 
-2.   Make requests
+2.    Make requests
 
 ```bash
 curl http://localhost:8081/arms
