@@ -4,12 +4,13 @@
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)
 [![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-spring-5-test-drives.svg)](#)
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/gh/jesperancinha/jeorg-spring-5-test-drives/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/jeorg-spring-5-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-jeorg-spring-5-test-drives-master)
 [![CircleCI](https://circleci.com/gh/jesperancinha/jeorg-spring-5-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/jeorg-spring-5-test-drives)
 [![Build Status](https://travis-ci.com/jesperancinha/jeorg-spring-5-test-drives.svg?branch=master)](https://travis-ci.com/jesperancinha/jeorg-spring-5-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/jeorg-spring-5-test-drives?branch=master)](https://bettercodehub.com/)
 [![Build status](https://ci.appveyor.com/api/projects/status/wksvhmqaq0sd8505?svg=true)](https://ci.appveyor.com/project/jesperancinha/jeorg-spring-5-test-drives)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/gh/jesperancinha/jeorg-spring-5-test-drives/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/jeorg-spring-5-test-drives&amp;utm_campaign=Badge_Grade)
+[![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-jeorg-spring-5-test-drives-master)
+[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/jeorg-spring-5-test-drives?branch=master)](https://bettercodehub.com/results/jesperancinha/jeorg-spring-5-test-drives)
 [![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/jeorg-spring-5-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/jeorg-spring-5-test-drives)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/gh/jesperancinha/jeorg-spring-5-test-drives/dashboard?utm_source=github.com&utm_medium=referral&utm_content=jesperancinha/jeorg-spring-5-test-drives&utm_campaign=Badge_Coverage)
