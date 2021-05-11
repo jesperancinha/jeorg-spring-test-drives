@@ -5,7 +5,7 @@ cache:
 jobs:
   include:
     - language: java
-      stage: JEOrg Spring Full (4 Codacy - No Logs)
+      stage: JEOrg Spring Full (Codacy/Coveralls/Codecov reports - Limited Logs)
       jdk:
         - openjdk11
       cache:
@@ -15,138 +15,160 @@ jobs:
       install:
         - mvn dependency:resolve | egrep "Building|Tests|SpringBoot|jesperancinha"
       script:
-        - mvn clean install coveralls:report -Dconsolerizer.show=false | egrep "Building|Tests|SpringBoot|jesperancinha"
+        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN} | egrep "Building|Tests|SpringBoot|jesperancinha"
         - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java Kotlin $(find **/jacoco*.xml -printf '-r %p ')
 
     - language: java
       stage: JEOrg Spring Mastery (Kotlin)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Kotlin $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Flash Set 1 (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-1
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Flash Set 2 (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-2
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Flash Set 3 (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-3
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Flash Set 4 (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-4
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Flash Set 5 (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-5
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Action (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-action
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring App Old (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-app-old
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Apps (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-apps
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Mastery (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-mastery
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
 
     - language: java
       stage: JEOrg Spring Topics (Java)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - cd jeorg-spring-5/jeorg-spring-topics
         - mvn dependency:resolve
       script:
-        - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+        - mvn clean install
