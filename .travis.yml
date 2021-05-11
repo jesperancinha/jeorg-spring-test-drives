@@ -5,21 +5,6 @@ cache:
 jobs:
   include:
     - language: java
-      stage: JEOrg Spring Full (Codacy/Coveralls/Codecov reports - Limited Logs)
-      jdk:
-        - openjdk11
-      cache:
-        directories:
-        - .autoconf
-        - $HOME/.m2
-      install:
-        - mvn dependency:resolve | egrep "Building|Tests|SpringBoot|jesperancinha"
-      script:
-        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN} | egrep "Building|Tests|SpringBoot|jesperancinha"
-        - bash <(curl -s https://codecov.io/bash)
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java Kotlin $(find **/jacoco*.xml -printf '-r %p ')
-
-    - language: java
       stage: JEOrg Spring Mastery (Kotlin)
       jdk:
         - openjdk11
@@ -172,3 +157,17 @@ jobs:
         - mvn dependency:resolve
       script:
         - mvn clean install
+    - language: java
+      stage: JEOrg Spring Full (Codacy/Coveralls/Codecov reports - Limited Logs)
+      jdk:
+        - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
+      install:
+        - mvn dependency:resolve | egrep "Building|Tests|SpringBoot|jesperancinha"
+      script:
+        - mvn clean install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN} | egrep "Building|Tests|SpringBoot|jesperancinha"
+        - bash <(curl -s https://codecov.io/bash)
+        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java Kotlin $(find **/jacoco*.xml -printf '-r %p ')
