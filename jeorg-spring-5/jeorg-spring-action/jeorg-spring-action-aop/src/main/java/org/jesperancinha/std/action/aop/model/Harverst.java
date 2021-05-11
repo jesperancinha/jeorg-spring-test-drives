@@ -1,4 +1,4 @@
 package org.jesperancinha.std.action.aop.model;
 
-public class Shrimp implements SeaFood {
+public interface Harverst {
 }

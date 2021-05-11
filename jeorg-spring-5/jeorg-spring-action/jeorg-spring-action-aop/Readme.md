@@ -25,6 +25,9 @@ There are a least 4 scope types for @Aspect:
 
 ### Context
 
+-   [Fisherman](https://en.wikipedia.org/wiki/Fisherman)
+-   [Shrimp Fishery](https://en.wikipedia.org/wiki/Shrimp_fishery)
+
 ### Books
 
 -   [Spring Boot Reference Documentation Phillip Webb, Dave Syer, Josh Long, Stéphane Nicoll, Rob Winch, Andy Wilkinson, Marcel Overdijk, Christian Dupuis, Sébastien Deleuze, Michael Simons, Vedran Pavić, Jay Bryant, Madhura Bhave, Eddú Meléndez, Scott Frederick](https://docs.spring.io/spring-boot/docs/2.5.x/reference/pdf)

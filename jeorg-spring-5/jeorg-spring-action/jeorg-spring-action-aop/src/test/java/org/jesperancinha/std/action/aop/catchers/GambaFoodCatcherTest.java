@@ -37,7 +37,7 @@ class GambaFoodCatcherTest {
     private ArgumentCaptor<JoinPoint> joinPointArgumentCaptor;
 
     @Test
-    void catchWithNet() {
+    void testCatchWithNetWhenCallingThenTriggerAllMatchingBeforeAdvices() {
         gambaFoodCatcher.catchWithNet();
 
         verify(gambaService, times(1)).beforeWithin(joinPointArgumentCaptor.capture());
