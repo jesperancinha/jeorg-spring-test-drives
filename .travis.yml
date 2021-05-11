@@ -5,9 +5,9 @@ jobs:
       jdk:
         - openjdk11
       install:
-        - travis_wait 30 mvn dependency:resolve | egrep "Building"
+        - travis_wait 30 mvn dependency:resolve | egrep "Building|Tests"
       script:
-        - travis_wait 30 mvn install coveralls:report  |  egrep "Building"
+        - travis_wait 30 mvn clean install coveralls:report  |  egrep "Building|Tests"
         - bash <(curl -s https://codecov.io/bash)
         - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
 
