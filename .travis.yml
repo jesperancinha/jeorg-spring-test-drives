@@ -8,6 +8,10 @@ jobs:
       stage: JEOrg Spring Full (4 Codacy - No Logs)
       jdk:
         - openjdk11
+      cache:
+        directories:
+        - .autoconf
+        - $HOME/.m2
       install:
         - mvn dependency:resolve | egrep "Building|Tests|SpringBoot|jesperancinha"
       script:
