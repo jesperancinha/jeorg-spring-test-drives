@@ -9,7 +9,7 @@ jobs:
       jdk:
         - openjdk11
       install:
-        - mvn dependency:resolve | egrep "Building|Tests|SpringBoot"
+        - mvn dependency:resolve | egrep "Building|Tests|SpringBoot|jesperancinha"
       script:
         - mvn clean install coveralls:report -Dconsolerizer.show=false | egrep "Building|Tests|SpringBoot"
         - bash <(curl -s https://codecov.io/bash)
