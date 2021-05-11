@@ -11,7 +11,7 @@ jobs:
       install:
         - mvn dependency:resolve | egrep "Building|Tests|SpringBoot"
       script:
-        - mvn clean install coveralls:report  |  egrep "Building|Tests|SpringBoot"
+        - mvn clean install coveralls:report -Dconsolerizer.show=false | egrep "Building|Tests|SpringBoot"
         - bash <(curl -s https://codecov.io/bash)
         - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
 
