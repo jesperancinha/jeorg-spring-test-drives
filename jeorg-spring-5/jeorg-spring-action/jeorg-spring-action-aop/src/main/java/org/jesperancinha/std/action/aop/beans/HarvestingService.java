@@ -1,6 +1,7 @@
 package org.jesperancinha.std.action.aop.beans;
 
 import org.aspectj.lang.JoinPoint;
+import org.jesperancinha.std.action.aop.fishing.Shrimper;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -26,6 +27,10 @@ public class HarvestingService {
     }
 
     public void thisShrimper(JoinPoint joinPoint) {
+
+    }
+
+    public void passingTargetArgument(JoinPoint joinPoint, Shrimper shrimper) {
 
     }
 }

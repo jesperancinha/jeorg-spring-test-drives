@@ -4,6 +4,7 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.jesperancinha.std.action.aop.beans.HarvestingService;
+import org.jesperancinha.std.action.aop.fishing.Shrimper;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -44,5 +45,10 @@ public class HarvestingAspect {
     @Before("this(org.jesperancinha.std.action.aop.fishing.Shrimper)")
     public void thisShrimper(final JoinPoint joinPoint) {
         harvestingService.thisShrimper(joinPoint);
+    }
+
+    @Before("execution(* org.jesperancinha.std.action.aop.fishing.Shrimper.secretHarvest()) && target(shrimper)")
+    public void passingTargetArgument(final JoinPoint joinPoint, final Shrimper shrimper) {
+        harvestingService.passingTargetArgument(joinPoint, shrimper);
     }
 }
