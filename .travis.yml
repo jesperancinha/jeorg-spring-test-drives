@@ -1,3 +1,7 @@
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
 jobs:
   include:
     - language: java
@@ -5,9 +9,9 @@ jobs:
       jdk:
         - openjdk11
       install:
-        - mvn dependency:resolve | egrep "Building|Tests"
+        - mvn dependency:resolve | egrep "Building|Tests|SpringBoot"
       script:
-        - mvn clean install coveralls:report  |  egrep "Building|Tests"
+        - mvn clean install coveralls:report  |  egrep "Building|Tests|SpringBoot"
         - bash <(curl -s https://codecov.io/bash)
         - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
 
