@@ -1,6 +1,16 @@
 jobs:
   include:
     - language: java
+      stage: JEOrg Spring Full (4 Codacy - No Logs)
+      jdk:
+        - openjdk11
+      install:
+      script:
+        - mvn install coveralls:report >> /dev/null
+        - bash <(curl -s https://codecov.io/bash)
+        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
+
+    - language: java
       stage: JEOrg Spring Mastery (Kotlin)
       jdk:
         - openjdk11
