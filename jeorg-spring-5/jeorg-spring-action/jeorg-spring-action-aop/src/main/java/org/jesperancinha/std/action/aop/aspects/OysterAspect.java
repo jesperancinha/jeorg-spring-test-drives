@@ -19,6 +19,6 @@ public class OysterAspect {
 
     @Before("args(oyster)")
     public void oysterProcessing(final JoinPoint joinPoint, final Oyster oyster) {
-        oysterService.oysterProcessing(joinPoint);
+        oysterService.oysterProcessing(joinPoint, oyster);
     }
 }
