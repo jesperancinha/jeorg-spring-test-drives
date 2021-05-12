@@ -172,7 +172,7 @@ class HarvestingAspectTest {
 
 
     @Test
-    void testFishShrimpWhenCallParamterThenTriggerOnlyFisherRefAdvicesAndAllInstanceShrimperAdvices() {
+    void testFishShrimpWhenCallParameterThenTriggerOnlyFisherRefAdvicesAndAllInstanceShrimperAdvices() {
         shrimper.secretHarvest();
 
         verify(harvestingService, times(1))
@@ -224,7 +224,7 @@ class HarvestingAspectTest {
 
 
     @Test
-    void testFishShrimpWhenCallParamterThenProxyServiceGetsIntoAdvice() {
+    void testFishShrimpWhenCallParameterThenProxyServiceGetsIntoAdvice() {
         shrimper.secretHarvest();
 
         verify(harvestingService, times(1))
