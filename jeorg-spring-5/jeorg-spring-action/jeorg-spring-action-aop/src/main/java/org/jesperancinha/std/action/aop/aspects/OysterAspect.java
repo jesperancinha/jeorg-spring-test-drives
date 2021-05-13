@@ -21,4 +21,9 @@ public class OysterAspect {
     public void oysterProcessing(final JoinPoint joinPoint, final Oyster oyster) {
         oysterService.oysterProcessing(joinPoint, oyster);
     }
+
+    @Before("@args(org.jesperancinha.std.action.aop.annotations.HighQuality)")
+    public void oysterQualityProcessing(final JoinPoint joinPoint) {
+        oysterService.oysterQualityProcessing(joinPoint);
+    }
 }

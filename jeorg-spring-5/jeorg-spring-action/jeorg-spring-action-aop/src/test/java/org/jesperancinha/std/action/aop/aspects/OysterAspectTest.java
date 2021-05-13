@@ -16,8 +16,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.only;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 @ExtendWith({SpringExtension.class})
 @ContextConfiguration(classes = {
@@ -44,17 +44,37 @@ class OysterAspectTest {
     void testOysterProcessing() {
         final var oyster = new Oyster();
 
-        final Oyster pickup = oysterPicker.pickup(oyster);
+        final var pickup = oysterPicker.pickup(oyster);
 
         assertThat(pickup).isEqualTo(oyster);
         verify(oysterService, only())
                 .oysterProcessing(
                         joinPointArgumentCaptor.capture(), oysterArgumentCaptor.capture());
-
         final var joinPointArgumentCaptorValue = joinPointArgumentCaptor.getValue();
         assertThat(joinPointArgumentCaptorValue).isNotNull();
-        assertThat(joinPointArgumentCaptorValue.getSignature().toString()).isEqualTo("Oyster org.jesperancinha.std.action.aop.pickers.OysterPicker.pickup(Oyster)");
+        assertThat(joinPointArgumentCaptorValue.getSignature().toString())
+                .isEqualTo("Oyster org.jesperancinha.std.action.aop.pickers.OysterPicker.pickup(Oyster)");
         final var value = oysterArgumentCaptor.getValue();
         assertThat(value).isNotNull();
+        verifyNoMoreInteractions(oysterService);
+    }
+
+    @Test
+    void testOysterQualityProcessing() {
+        final var oyster = new Oyster();
+
+        final var pickup = oysterPicker.pickWithQuality(oyster);
+
+        assertThat(pickup).isEqualTo(oyster);
+        verify(oysterService, only())
+                .oysterProcessing(
+                        joinPointArgumentCaptor.capture(), oysterArgumentCaptor.capture());
+        final var joinPointArgumentCaptorValue = joinPointArgumentCaptor.getValue();
+        assertThat(joinPointArgumentCaptorValue).isNotNull();
+        assertThat(joinPointArgumentCaptorValue.getSignature().toString())
+                .isEqualTo("Oyster org.jesperancinha.std.action.aop.pickers.OysterPicker.pickWithQuality(Oyster)");
+        final var value = oysterArgumentCaptor.getValue();
+        assertThat(value).isNotNull();
+        verifyNoMoreInteractions(oysterService);
     }
 }

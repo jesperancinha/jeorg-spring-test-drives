@@ -9,4 +9,8 @@ public class OysterService {
     public void oysterProcessing(JoinPoint joinPoint, Oyster oyster) {
 
     }
+
+    public void oysterQualityProcessing(JoinPoint joinPoint) {
+
+    }
 }
