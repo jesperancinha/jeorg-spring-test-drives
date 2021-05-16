@@ -16,7 +16,7 @@ jobs:
         - cd jeorg-spring-kotlin-5/jeorg-spring-kotlin-mastery
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Flash Set 1 (Java)
@@ -30,7 +30,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-1
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Flash Set 2 (Java)
@@ -44,7 +44,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-2
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Flash Set 3 (Java)
@@ -58,7 +58,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-3
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Flash Set 4 (Java)
@@ -72,7 +72,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-4
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Flash Set 5 (Java)
@@ -86,7 +86,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-flash/jeorg-spring-flash-set-5
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Action (Java)
@@ -100,7 +100,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-action
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring App Old (Java)
@@ -114,7 +114,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-app-old
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Apps (Java)
@@ -128,7 +128,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-apps
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Mastery (Java)
@@ -142,7 +142,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-mastery
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
 
     - language: java
       stage: JEOrg Spring Topics (Java)
@@ -156,7 +156,7 @@ jobs:
         - cd jeorg-spring-5/jeorg-spring-topics
         - mvn dependency:resolve
       script:
-        - mvn clean install
+        - mvn clean install -Dconsolerizer.show=false
     - language: java
       stage: JEOrg Spring Full (Codacy/Coveralls/Codecov reports - Limited Logs)
       jdk:
