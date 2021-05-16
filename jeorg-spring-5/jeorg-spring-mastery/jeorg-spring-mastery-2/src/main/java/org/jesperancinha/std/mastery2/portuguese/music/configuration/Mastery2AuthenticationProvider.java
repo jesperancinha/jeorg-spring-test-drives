@@ -12,8 +12,8 @@ import java.util.List;
 
 public class Mastery2AuthenticationProvider implements AuthenticationProvider {
     private static final List<Mastery2User> FLASH_USERS = Arrays.asList(
-            Mastery2User.Mastery2UserBuilder.flashUserBuilder().name("admin").password("admin").role("ROLE_ADMIN").build(),
-            Mastery2User.Mastery2UserBuilder.flashUserBuilder().name("user").password("user").role("ROLE_USER").build()
+            Mastery2User.builder().name("admin").password("admin").role("ROLE_ADMIN").build(),
+            Mastery2User.builder().name("user").password("user").role("ROLE_USER").build()
     );
 
     @Override
@@ -21,7 +21,11 @@ public class Mastery2AuthenticationProvider implements AuthenticationProvider {
             throws AuthenticationException {
         final var username = authentication.getName();
         final var password = authentication.getCredentials().toString();
-        final var flashLoginUser = Mastery2User.Mastery2UserBuilder.flashUserBuilder().name(username).password(password).build();
+        final var flashLoginUser = Mastery2User
+                .builder()
+                .name(username)
+                .password(password)
+                .build();
         final var userOptional =
                 FLASH_USERS.stream()
                         .filter(flashLoginUser::equals)

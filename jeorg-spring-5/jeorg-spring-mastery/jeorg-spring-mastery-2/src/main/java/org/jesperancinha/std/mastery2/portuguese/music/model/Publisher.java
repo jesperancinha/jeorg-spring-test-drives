@@ -1,5 +1,7 @@
 package org.jesperancinha.std.mastery2.portuguese.music.model;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +12,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table
+@Data
 public class Publisher {
 
     @Id
@@ -25,36 +28,4 @@ public class Publisher {
     @Column
     private LocalDate foundationDate;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public LocalDate getFoundationDate() {
-        return foundationDate;
-    }
-
-    public void setFoundationDate(LocalDate foundationDate) {
-        this.foundationDate = foundationDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Publisher{" +
-                "name='" + name + '\'' +
-                ", city='" + city + '\'' +
-                ", foundationDate=" + foundationDate +
-                '}';
-    }
 }
