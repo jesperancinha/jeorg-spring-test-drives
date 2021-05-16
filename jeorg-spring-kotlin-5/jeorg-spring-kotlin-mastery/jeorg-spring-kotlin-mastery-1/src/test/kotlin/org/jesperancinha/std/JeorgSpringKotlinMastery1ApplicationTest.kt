@@ -8,7 +8,7 @@ class JeorgSpringKotlinMastery1ApplicationTest {
 
     @Test
     fun contextLoads() {
+        main(arrayOf())
     }
 
 }
-
