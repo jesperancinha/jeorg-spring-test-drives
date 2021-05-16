@@ -100,6 +100,7 @@
         <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
+        <kotlinx-serialization-json.version>1.2.0</kotlinx-serialization-json.version>
     </properties>
 
     <build>
@@ -431,6 +432,12 @@
                 <artifactId>groovy</artifactId>
                 <version>${groovy.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlinx</groupId>
+                <artifactId>kotlinx-serialization-json</artifactId>
+                <version>${kotlinx-serialization-json.version}</version>
+            </dependency>
+
 
             <!-- Test dependencies -->
             <dependency>

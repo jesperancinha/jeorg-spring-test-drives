@@ -24,6 +24,7 @@ class FilmChronology : BeanPostProcessor {
             .bgOrange("3. postProcessAfterInitialization")
             .red(title("This is phase postProcessAfterInitialization of BeanPostProcessor"))
             .blue("This is bean %s", beanName)
+            .reset()
         return bean
     }
 
@@ -42,6 +43,7 @@ class FilmChronology : BeanPostProcessor {
             .bgOrange("2. postProcessBeforeInitialization")
             .red(title("This is phase postProcessBeforeInitialization of BeanPostProcessor"))
             .blue("This is bean %s", beanName)
+            .reset()
         return bean
     }
 }

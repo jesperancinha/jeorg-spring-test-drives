@@ -25,16 +25,14 @@ class MovieLinesController {
             .ln()
             .black()
             .bgYellow(title("Method list"))
-            .toConsoleLn()
-        return listOf(
+            .reset()
+        return arrayListOf(
             Film(
-                id = UUID.randomUUID().toString(),
                 title = "The sound of music",
                 genre = FilmGenre.ROMANTIC,
                 nationality = "USA"
             ),
             Film(
-                id = UUID.randomUUID().toString(),
                 title = "Os Olhos Azuis de Yonta",
                 genre = FilmGenre.HISTORIC,
                 nationality = "Portugal"
