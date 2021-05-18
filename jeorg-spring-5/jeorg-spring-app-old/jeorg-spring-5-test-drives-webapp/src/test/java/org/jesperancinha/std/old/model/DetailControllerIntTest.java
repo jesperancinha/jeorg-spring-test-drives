@@ -4,7 +4,7 @@ import org.jesperancinha.std.old.webapp.config.DetailConfig;
 import org.jesperancinha.std.old.webapp.model.Detail;
 import org.jesperancinha.std.old.webapp.model.DetailEntity;
 import org.jesperancinha.std.old.webapp.repository.DetailRepository;
-import org.jesperancinha.std.old.webapp.service.DetailController;
+import org.jesperancinha.std.old.webapp.service.DetailLayer2Service;
 import org.jesperancinha.std.old.webapp.service.DetailService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -32,7 +32,7 @@ public class DetailControllerIntTest {
     private DetailService detailService;
 
     @Autowired
-    private DetailController detailController;
+    private DetailLayer2Service detailController;
 
     @Autowired
     private DetailRepository detailRepository;

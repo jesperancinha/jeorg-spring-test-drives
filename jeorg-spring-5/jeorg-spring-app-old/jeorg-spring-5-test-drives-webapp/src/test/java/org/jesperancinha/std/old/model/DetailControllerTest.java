@@ -1,6 +1,6 @@
 package org.jesperancinha.std.old.model;
 
-import org.jesperancinha.std.old.webapp.service.DetailController;
+import org.jesperancinha.std.old.webapp.service.DetailLayer2Service;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -10,7 +10,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 public class DetailControllerTest {
 
     @InjectMocks
-    DetailController detailController;
+    DetailLayer2Service detailController;
 
     @Test
     public void findDetailById() {

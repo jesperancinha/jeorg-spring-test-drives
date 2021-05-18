@@ -1,20 +1,15 @@
 package org.jesperancinha.std.old.webapp.config;
 
-import org.jesperancinha.std.old.webapp.repository.DetailRepository;
-import org.jesperancinha.std.old.webapp.service.DetailController;
-import org.jesperancinha.std.old.webapp.service.DetailService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCache;
 import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 import org.springframework.jdbc.datasource.init.DatabasePopulator;
 import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
@@ -23,7 +18,6 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -35,11 +29,8 @@ import java.util.Properties;
  */
 
 @Configuration
-@EnableJpaRepositories(basePackages = "org.jesperancinha.std")
-@EnableTransactionManagement
-@EnableCaching
 @PropertySource({"classpath:config.properties", "classpath:db.properties"})
-@ComponentScan
+@Profile("!test")
 public class DetailConfig {
 
     @Bean
@@ -51,20 +42,10 @@ public class DetailConfig {
 
 
     @Bean
-    public DetailService detailService(DetailRepository detailRepository) {
-        return new DetailService(detailRepository);
-    }
-
-    @Bean
-    public DetailController detailController() {
-        return new DetailController();
-    }
-
-    @Bean
+    @Profile("!test")
     public DataSource dataSource() {
-        DataSource dataSource = createDataSource("");
+        DataSource dataSource = createDataSource("test");
         DatabasePopulatorUtils.execute(createDatabasePopulator("create.sql"), dataSource);
-        dataSource = createDataSource("/test");
         DatabasePopulatorUtils.execute(createDatabasePopulator("schema.sql"), dataSource);
         return dataSource;
     }
@@ -77,7 +58,7 @@ public class DetailConfig {
         return databasePopulator;
     }
 
-    private SimpleDriverDataSource createDataSource(String database) {
+    public SimpleDriverDataSource createDataSource(String database) {
         SimpleDriverDataSource simpleDriverDataSource = new SimpleDriverDataSource();
         simpleDriverDataSource.setDriverClass(org.postgresql.Driver.class);
         simpleDriverDataSource.setUrl("jdbc:postgresql://localhost" + database);
@@ -91,12 +72,13 @@ public class DetailConfig {
 
 
     @Bean
+    @Profile("!test")
     public EntityManagerFactory entityManagerFactory() {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         vendorAdapter.setGenerateDdl(true);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("org.jesperancinha.b2b2bwebapp.model");
+        factory.setPackagesToScan("org.jesperancinha.std.old.webapp.model");
         factory.setDataSource(dataSource());
         final Properties connectionProperties = new Properties();
         connectionProperties.setProperty("hibernate.connection.autocommit", "true");
