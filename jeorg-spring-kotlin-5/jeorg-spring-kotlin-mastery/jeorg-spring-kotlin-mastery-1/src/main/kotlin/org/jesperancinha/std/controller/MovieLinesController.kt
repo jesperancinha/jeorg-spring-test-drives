@@ -2,13 +2,12 @@ package org.jesperancinha.std.controller
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title
-import org.jesperancinha.std.model.Film
-import org.jesperancinha.std.model.FilmGenre
+import org.jesperancinha.std.old.webapp.model.Film
+import org.jesperancinha.std.old.webapp.model.FilmGenre
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import java.util.*
 
 @RestController
 @RequestMapping("movies")

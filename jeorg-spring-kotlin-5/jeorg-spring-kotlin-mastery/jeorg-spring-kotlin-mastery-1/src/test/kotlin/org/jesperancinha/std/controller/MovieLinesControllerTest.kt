@@ -1,8 +1,8 @@
 package org.jesperancinha.std.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import org.jesperancinha.std.model.Film
-import org.jesperancinha.std.model.FilmGenre
+import org.jesperancinha.std.old.webapp.model.Film
+import org.jesperancinha.std.old.webapp.model.FilmGenre
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
