@@ -41,13 +41,31 @@ public class DetailConfig {
     }
 
 
-    @Bean
+    @Bean(name = "dataSource")
     @Profile("!test")
-    public DataSource dataSource() {
+    public DataSource dataSourcePSQL() {
         DataSource dataSource = createDataSource("test");
         DatabasePopulatorUtils.execute(createDatabasePopulator("create.sql"), dataSource);
         DatabasePopulatorUtils.execute(createDatabasePopulator("schema.sql"), dataSource);
         return dataSource;
+    }
+
+    @Bean(name = "dataSource")
+    @Profile("test")
+    public DataSource dataSourceH2() {
+        DataSource dataSource = createTestDataSource();
+        DatabasePopulatorUtils.execute(createDatabasePopulator("create.sql"), dataSource);
+        DatabasePopulatorUtils.execute(createDatabasePopulator("schema.sql"), dataSource);
+        return dataSource;
+    }
+
+    private DataSource createTestDataSource() {
+        SimpleDriverDataSource simpleDriverDataSource = new SimpleDriverDataSource();
+        simpleDriverDataSource.setDriverClass(org.postgresql.Driver.class);
+        simpleDriverDataSource.setUrl("jdbc:h2:mem:test;LOCK_MODE=0;SCHEMA=TEST");
+        simpleDriverDataSource.setUsername("sa");
+        simpleDriverDataSource.setPassword("sa");
+        return simpleDriverDataSource;
     }
 
 
@@ -72,14 +90,13 @@ public class DetailConfig {
 
 
     @Bean
-    @Profile("!test")
-    public EntityManagerFactory entityManagerFactory() {
+    public EntityManagerFactory entityManagerFactory(DataSource dataSource) {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         vendorAdapter.setGenerateDdl(true);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan("org.jesperancinha.std.old.webapp.model");
-        factory.setDataSource(dataSource());
+        factory.setDataSource(dataSource);
         final Properties connectionProperties = new Properties();
         connectionProperties.setProperty("hibernate.connection.autocommit", "true");
         connectionProperties.setProperty("hibernate.hbm2ddl.auto", "create");
@@ -93,9 +110,9 @@ public class DetailConfig {
     }
 
     @Bean
-    public PlatformTransactionManager transactionManager() {
+    public PlatformTransactionManager transactionManager(DataSource dataSource) {
         JpaTransactionManager txManager = new JpaTransactionManager();
-        txManager.setEntityManagerFactory(entityManagerFactory());
+        txManager.setEntityManagerFactory(entityManagerFactory(dataSource));
         return txManager;
     }
 

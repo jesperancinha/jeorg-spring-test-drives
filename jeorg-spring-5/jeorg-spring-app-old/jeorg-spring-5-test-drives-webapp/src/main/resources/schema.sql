@@ -1,5 +1,5 @@
-CREATE TABLE detail
+CREATE TABLE if not exists detail
 (
     id   INT PRIMARY KEY,
-    name varchar(255),
+    name varchar(255)
 );

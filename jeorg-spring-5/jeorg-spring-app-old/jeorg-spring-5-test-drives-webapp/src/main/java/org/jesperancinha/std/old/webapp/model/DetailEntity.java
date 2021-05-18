@@ -24,7 +24,6 @@ import javax.persistence.Transient;
 @Cacheable("detailCache")
 @Cache(usage = CacheConcurrencyStrategy.TRANSACTIONAL)
 @Table(name = "detail",
-        catalog = "test",
         schema = "public")
 public class DetailEntity {
 

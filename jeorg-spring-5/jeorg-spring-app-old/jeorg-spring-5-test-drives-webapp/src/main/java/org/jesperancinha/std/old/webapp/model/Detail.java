@@ -10,7 +10,7 @@ import lombok.Getter;
 @Getter
 public class Detail {
 
-    private String name;
+    private final String name;
 
-    private String city;
+    private final String city;
 }

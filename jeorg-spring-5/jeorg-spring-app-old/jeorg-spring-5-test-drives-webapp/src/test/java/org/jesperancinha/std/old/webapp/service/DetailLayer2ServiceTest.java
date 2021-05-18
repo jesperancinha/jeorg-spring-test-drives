@@ -1,35 +1,24 @@
-package org.jesperancinha.std.old.model;
+package org.jesperancinha.std.old.webapp.service;
 
-import org.jesperancinha.std.old.webapp.config.DetailConfig;
 import org.jesperancinha.std.old.webapp.model.Detail;
 import org.jesperancinha.std.old.webapp.model.DetailEntity;
 import org.jesperancinha.std.old.webapp.repository.DetailRepository;
-import org.jesperancinha.std.old.webapp.service.DetailLayer2Service;
-import org.jesperancinha.std.old.webapp.service.DetailService;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Disabled
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = DetailConfig.class,
-        loader = AnnotationConfigContextLoader.class)
-public class DetailControllerIntTest {
+@SpringBootTest
+@ActiveProfiles("test")
+public class DetailLayer2ServiceTest {
 
     private static final String NAME_1 = "Name1";
     private static final String CITY_1 = "City1";
-
-    @Autowired
-    private DetailService detailService;
 
     @Autowired
     private DetailLayer2Service detailController;
@@ -56,7 +45,7 @@ public class DetailControllerIntTest {
 
         detailRepository.deleteAll();
 
-        DetailEntity checkForNone = detailRepository.findById(1).orElseThrow();
+        DetailEntity checkForNone = detailRepository.findById(1).orElse(null);
         assertThat(checkForNone).isNull();
 
         final Detail resultCached = detailController.findDetailById(1);
