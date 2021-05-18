@@ -6,10 +6,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.jesperancinha.std.mastery3.plants.Mastery3Plants.*;
 
 @SpringBootTest
-class Mastery3PlantsTest {
+public class Mastery3PlantsTest {
 
     @Test
-    void testContext() {
+    public void testContext() {
         main(new String[0]);
     }
 }

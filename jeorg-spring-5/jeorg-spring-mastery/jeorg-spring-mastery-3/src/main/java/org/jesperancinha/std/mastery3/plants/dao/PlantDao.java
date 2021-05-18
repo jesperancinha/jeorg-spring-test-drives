@@ -1,5 +1,6 @@
 package org.jesperancinha.std.mastery3.plants.dao;
 
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.mastery3.plants.model.Plant;
 import org.springframework.dao.DataAccessException;
@@ -26,24 +27,23 @@ public class PlantDao {
     }
 
     public Plant createPlant(final Plant plant) {
-        jdbcTemplate.execute("create table if not exists plant(" +
-                "ID int not null auto_increment," +
-                "name VARCHAR(255)," +
-                "scientificName VARCHAR(255)," +
-                ")");
-
-
         final var defaultTransactionDefinition = new DefaultTransactionDefinition();
-        final var status = transactionManager.getTransaction(defaultTransactionDefinition);
+        final var transactionStatus = transactionManager.getTransaction(defaultTransactionDefinition);
+        jdbcTemplate.execute("drop table if exists plant");
+        jdbcTemplate.execute("create table if not exists plant(" +
+                "id int not null auto_increment," +
+                "name VARCHAR(255)," +
+                "scientificName VARCHAR(255)" +
+                ")");
         try {
-            final int update = jdbcTemplate.update("insert into plant (id, name, scientificName) values ( ?, ?, ? )", 1, plant.getName(), plant.getScientificName());
+            final int update = jdbcTemplate.update("insert into plant(id, name, scientificName) values ( ? , ? , ? )", 1, plant.getName(), plant.getScientificName());
             ConsolerizerComposer.outSpace()
                     .green("Updated %d record(s)", update);
-            transactionManager.rollback(status);
+            transactionManager.rollback(transactionStatus);
             ConsolerizerComposer.outSpace()
-                    .green("Transaction is rolled back!", update);
+                    .green("Transaction is rolled back!");
         } catch (DataAccessException e) {
-            System.out.println("Error in creating record, rolling back");
+            ConsolerizerColor.RED.printThrowableAndExit(e);
             throw e;
         }
         final List<Plant> query = jdbcTemplate.query("select * from plant", new RowMapper<Plant>() {
@@ -51,11 +51,12 @@ public class PlantDao {
             public Plant mapRow(ResultSet resultSet, int i) throws SQLException {
                 return Plant
                         .builder()
+                        .id(resultSet.getLong("id"))
                         .name(resultSet.getString("name"))
-                        .name(resultSet.getString("scientificName"))
+                        .scientificName(resultSet.getString("scientificName"))
                         .build();
             }
         });
-        return query.get(0);
+        return query.size() == 0 ? null : query.get(0);
     }
 }

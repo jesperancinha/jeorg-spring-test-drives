@@ -1,16 +1,13 @@
 package org.jesperancinha.std.mastery3.plants.dao;
 
-import org.jesperancinha.std.mastery3.plants.configuration.JmpConfigBean;
 import org.jesperancinha.std.mastery3.plants.model.Plant;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@DataJpaTest
-@MockBean({JmpConfigBean.class, PlantDao.class})
+@SpringBootTest
 public class PlantDaoTest {
 
     @Autowired
