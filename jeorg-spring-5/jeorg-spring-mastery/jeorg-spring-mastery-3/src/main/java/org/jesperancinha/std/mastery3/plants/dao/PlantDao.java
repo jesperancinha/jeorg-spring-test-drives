@@ -28,6 +28,7 @@ public class PlantDao {
 
     public Plant createPlant(final Plant plant) {
         final var defaultTransactionDefinition = new DefaultTransactionDefinition();
+        defaultTransactionDefinition.setName("A plant transaction");
         final var transactionStatus = transactionManager.getTransaction(defaultTransactionDefinition);
         jdbcTemplate.execute("drop table if exists plant");
         jdbcTemplate.execute("create table if not exists plant(" +
