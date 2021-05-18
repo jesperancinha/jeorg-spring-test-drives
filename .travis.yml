@@ -157,6 +157,7 @@ jobs:
         - mvn dependency:resolve
       script:
         - mvn clean install -Dconsolerizer.show=false
+
     - language: java
       stage: JEOrg Spring Full (Codacy/Coveralls/Codecov reports - Limited Logs)
       jdk:
