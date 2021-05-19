@@ -29,5 +29,8 @@ public class Plant {
 
     @Column
     private String scientificName;
+
+    @Column
+    private String owner;
 }
 

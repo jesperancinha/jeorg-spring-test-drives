@@ -6,12 +6,16 @@ import org.jesperancinha.std.mastery3.plants.model.Plant;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.security.access.prepost.PostFilter;
+import org.springframework.security.access.prepost.PreFilter;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -24,6 +28,23 @@ public class PlantDao {
     public PlantDao(JdbcTemplate jdbcTemplate, PlatformTransactionManager transactionManager) {
         this.jdbcTemplate = jdbcTemplate;
         this.transactionManager = transactionManager;
+    }
+
+    @PostFilter("filterObject.owner == authentication.name")
+    public List<Plant> getExamplePlants() {
+        final var plants = new ArrayList<Plant>();
+        plants.add(Plant.builder()
+                        .name("Yucca")
+                        .owner("Joao")
+                        .scientificName("Yucca filamentosa")
+                        .build());
+        plants.add(Plant
+                        .builder()
+                        .name("Sansevieria")
+                        .owner("Sabino")
+                        .scientificName("Sansevieria")
+                        .build());
+        return plants;
     }
 
     public Plant createPlant(final Plant plant) {
