@@ -31,4 +31,13 @@ public class PlantConfiguration {
                 .scientificName("Yucca filamentosa")
                 .build();
     }
+
+    @Bean(name ="sansevieria")
+    public PlantDto plantDtoSansevieria(){
+        return PlantDto
+                .builder()
+                .name("Sansevieria")
+                .scientificName("Sansevieria")
+                .build();
+    }
 }

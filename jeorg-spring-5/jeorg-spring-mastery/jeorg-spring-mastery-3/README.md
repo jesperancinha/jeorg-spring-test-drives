@@ -16,6 +16,7 @@ Topics covered:
 1.  `PlaceholderConfigurerSupport`, `PropertySourcesPlaceholderConfigurer`
 2.  `PlatformTransactionManager`, `rollback`
 3.  `@Bean.name`
+4.  Array injection
 
 ## Endpoints
 

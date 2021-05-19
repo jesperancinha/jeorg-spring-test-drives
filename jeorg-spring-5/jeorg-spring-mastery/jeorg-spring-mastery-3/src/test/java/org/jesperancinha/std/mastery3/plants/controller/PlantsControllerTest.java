@@ -74,4 +74,25 @@ public class PlantsControllerTest {
                         plantDto, plantDto, plantDto
                 ))));
     }
+
+    @Test
+    public void testGet3CopiesArrayWhenCallThenReturn3Yuccas() throws Exception {
+        final var plantDto = PlantDto
+                .builder()
+                .name("Yucca")
+                .scientificName("Yucca filamentosa")
+                .build();
+        final var plantDto2 = PlantDto
+                .builder()
+                .name("Sansevieria")
+                .scientificName("Sansevieria")
+                .build();
+
+        mockMvc.perform(get("/list/array/copies")
+                .accept(APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(objectMapper.writeValueAsString(List.of(
+                        plantDto, plantDto2
+                ))));
+    }
 }
