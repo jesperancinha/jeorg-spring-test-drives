@@ -10,7 +10,7 @@
 [![CircleCI](https://circleci.com/gh/jesperancinha/jeorg-spring-5-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/jeorg-spring-5-test-drives)
 [![Build Status](https://travis-ci.com/jesperancinha/jeorg-spring-5-test-drives.svg?branch=master)](https://travis-ci.com/jesperancinha/jeorg-spring-5-test-drives)
 [![Build status](https://ci.appveyor.com/api/projects/status/wksvhmqaq0sd8505?svg=true)](https://ci.appveyor.com/project/jesperancinha/jeorg-spring-5-test-drives)
-[![spring-5-tesdrives](https://github.com/jesperancinha/jeorg-spring-5-test-drives/actions/workflows/spring-5-testdrives.yml/badge.svg)](https://github.com/jesperancinha/jeorg-spring-5-test-drives/actions/workflows/spring-5-testdrives.yml)
+[![jeorg-spring-5-test-drives](https://github.com/jesperancinha/jeorg-spring-5-test-drives/actions/workflows/jeorg-spring-5-test-drives.yml/badge.svg)](https://github.com/jesperancinha/jeorg-spring-5-test-drives/actions/workflows/jeorg-spring-5-test-drives.yml)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9d14f60a58bd456fb1084860b5a46871)](https://www.codacy.com/gh/jesperancinha/jeorg-spring-5-test-drives/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/jeorg-spring-5-test-drives&amp;utm_campaign=Badge_Grade)
 [![codebeat badge](https://codebeat.co/badges/b9097b8c-40f8-48bf-beb3-2007803b4bad)](https://codebeat.co/projects/github-com-jesperancinha-jeorg-spring-5-test-drives-master)
