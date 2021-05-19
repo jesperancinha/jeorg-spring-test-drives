@@ -17,6 +17,7 @@ Topics covered:
 2.  `PlatformTransactionManager`, `rollback`
 3.  `@Bean.name`
 4.  Array injection
+5.  `@Timed` JUnit4 Only
 
 ## Endpoints
 
