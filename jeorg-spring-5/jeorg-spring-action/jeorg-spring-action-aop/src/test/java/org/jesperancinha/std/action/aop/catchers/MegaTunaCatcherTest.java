@@ -4,7 +4,6 @@ import org.aspectj.lang.JoinPoint;
 import org.jesperancinha.std.action.aop.aspects.TunaAspect;
 import org.jesperancinha.std.action.aop.beans.Bonito4Service;
 import org.jesperancinha.std.action.aop.beans.TunaService;
-import org.jesperancinha.std.action.aop.catchers.MegaTunaCatcher;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
