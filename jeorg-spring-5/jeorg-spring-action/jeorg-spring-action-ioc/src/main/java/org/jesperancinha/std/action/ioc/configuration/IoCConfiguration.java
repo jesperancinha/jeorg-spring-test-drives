@@ -29,4 +29,12 @@ public class IoCConfiguration {
                 .blue(allCutlery)
                 .reset();
     }
+
+    @Value("${org.jesperancinha.std.action.ioc.cutlery}")
+    public void perform2(final String allCutlery) {
+        ConsolerizerComposer.outSpace()
+                .blue("This is directly done via initialization2")
+                .blue(allCutlery)
+                .reset();
+    }
 }
