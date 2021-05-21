@@ -18,11 +18,11 @@ public interface RestaurantInterface {
 
     }
 
-    class Table{
-        public Table(){
-          ConsolerizerComposer.outSpace()
-                  .yellow("Table is created!")
-                  .reset();
+    class Table {
+        public Table() {
+            ConsolerizerComposer.outSpace()
+                    .yellow("Table is created!")
+                    .reset();
         }
     }
 
