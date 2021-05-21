@@ -53,5 +53,13 @@ public class IoCConfiguration {
                 .reset();
     }
 
-
+    @Bean
+    public Cutlery justDoIt(@Autowired Cutlery cutlery2){
+        ConsolerizerComposer.outSpace()
+                .unicorns(100)
+                .bgYellow("Just did it!!1")
+                .bgRed(cutlery2)
+                .reset();
+        return cutlery2;
+    }
 }
