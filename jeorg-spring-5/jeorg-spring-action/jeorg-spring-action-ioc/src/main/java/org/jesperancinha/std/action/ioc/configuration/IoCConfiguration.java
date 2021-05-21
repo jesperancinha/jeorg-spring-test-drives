@@ -1,6 +1,8 @@
 package org.jesperancinha.std.action.ioc.configuration;
 
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.action.ioc.model.Cutlery;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,5 +18,15 @@ public class IoCConfiguration {
                 .builder()
                 .contents(allCutlery)
                 .build();
+    }
+
+    @Autowired
+    public void perform(
+            @Value("${org.jesperancinha.std.action.ioc.cutlery}")
+            final String allCutlery) {
+        ConsolerizerComposer.outSpace()
+                .blue("This is directly done via initialization")
+                .blue(allCutlery)
+                .reset();
     }
 }
