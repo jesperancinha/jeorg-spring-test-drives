@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class JeorgActionIoCLauncherTest {
 
     @Test
-    void main() {
+    void testContext() {
         JeorgActionIoCLauncher.main(new String[0]);
     }
 }

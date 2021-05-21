@@ -7,8 +7,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
+
 @Configuration
 public class IoCConfiguration {
+
+    @Value("La tagliatella")
+    public String restaurante;
 
     @Bean
     public Cutlery cutlery(
@@ -28,6 +33,11 @@ public class IoCConfiguration {
                 .blue("This is directly done via initialization")
                 .blue(allCutlery)
                 .reset();
+
+        ConsolerizerComposer.outSpace()
+                .cyan(title("Our restaurante name is:"))
+                .cyan(restaurante)
+                .reset();
     }
 
     @Value("${org.jesperancinha.std.action.ioc.cutlery}")
@@ -36,5 +46,12 @@ public class IoCConfiguration {
                 .blue("This is directly done via initialization2")
                 .blue(allCutlery)
                 .reset();
+
+        ConsolerizerComposer.outSpace()
+                .cyan(title("Our restaurante name is:"))
+                .cyan(restaurante)
+                .reset();
     }
+
+
 }

@@ -3,13 +3,19 @@ package org.jesperancinha.std.action.ioc;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.action.ioc.interfaces.RestaurantInterface;
 import org.jesperancinha.std.action.ioc.model.Cutlery;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
+
 @SpringBootApplication
 public class JeorgActionIoCLauncher implements ApplicationRunner {
+
+    @Value("La tagliatella")
+    public String restaurante;
 
     private final Cutlery cutlery;
 
@@ -39,6 +45,11 @@ public class JeorgActionIoCLauncher implements ApplicationRunner {
         ConsolerizerComposer.outSpace()
                 .orange("Presenting the cutlery")
                 .yellow(cutlery)
+                .reset();
+
+        ConsolerizerComposer.outSpace()
+                .cyan(title("Our restaurante name is:"))
+                .cyan(restaurante)
                 .reset();
     }
 }
