@@ -53,7 +53,9 @@ The purpose of this project is to keep up with the development of the Spring Fra
 1.  [Spring 5](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
 2.  [Spring Kotlin 5](./jeorg-spring-kotlin-5) - Test drives for the Spring 5 Frawework in Kotlin (Bare minimum focus given to Spring Boot)
 
-VERY IMPORTANT NOTE: It is important to take note that none of the examples presented are thought to become production versions of any sort of product.   
+### Communication 1
+
+It is important to take note that none of the examples presented are thought to become production versions of any sort of product.   
 The goal of this project is purely to demonstrate and provide examples of different Aspects of the Spring Framework.  
 Concepts related to immutability/mutability, SOLID, ACID, 12 Factor App, Reactive Manifesto and others are present, but they are not followed in every single example module.   
 The reason being is that they take time, and adding these concerns per module can potentially lead away from the specific goal of each module.   
@@ -65,6 +67,16 @@ What's important to take away from this repo it to understand how the Spring Fra
 If you understand all of this, then please continue with your studies. Thank you! 🙏
 
 João Esperancinha, 2021/04/21
+
+### Communication 2
+
+The [jeorg-spring-5-test-drives](https://github.com/jesperancinha/jeorg-spring-5-test-drives) repository has reached a colossal size.	  
+Therefore, it is not feasible to continue developing on this repo for new developments.   
+You can consider this repo as basic overall round overview of important Spring technology developments for your day to day work.
+However, this is only the beginning of the road into your Spring journey.
+We will continue on this in a new repo called [Spring Master 5 Test Drives](https://github.com/jesperancinha/jeorg-spring-master-5-test-drives).
+
+João Esperancinha, 2021/05/21
 
 ## Build
 
@@ -93,6 +105,7 @@ sdk use java 11.0.9.hs-adpt
 mvn clean test -Dconsolerizer.show=false
 bash <(curl -s https://codecov.io/bash)
 ```
+
 ## Sequence Diagram
 
 ```mermaid
