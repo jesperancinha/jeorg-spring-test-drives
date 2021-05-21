@@ -15,6 +15,7 @@
         <module>jeorg-spring-action-aop</module>
         <module>jeorg-spring-action-actuator</module>
         <module>jeorg-spring-action-mvc</module>
+        <module>jeorg-spring-action-ioc</module>
     </modules>
 
     <properties>
