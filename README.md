@@ -117,6 +117,10 @@ sequenceDiagram
 <i>Note: You need a Mermaid plugin extension</i>
 i.e. [mermaid-plugin](https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil/related)
 
+## Tech-stack Cloud
+
+`@Transational timeout`, `TestRestTemplate`, `HealthIndicator`, `actuator`, `Embedded`, `JPA`, `Big Data`
+
 ## References
 
 ### Books
