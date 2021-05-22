@@ -1,4 +1,8 @@
-# spring-test-drives-spring-boot
+# jeorg-spring-5-test-drives-spring-boot
+
+## Spring Boot Starter Test Dependency
+
+`JUnit`, `Spring Test & Spring Boot Test`, `AssertJ`, `Hamcrest`, `Mockito`, `JSONassert`, `JsonPath`
 
 ## References
 

@@ -48,8 +48,6 @@
 
         <!-- Test -->
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
-        <assertj-core.version>3.13.2</assertj-core.version>
-        <mockito-core.version>3.1.0</mockito-core.version>
 
         <!-- Plugins -->
         <java.version>11</java.version>
@@ -447,30 +445,9 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.assertj</groupId>
-                <artifactId>assertj-core</artifactId>
-                <version>${assertj-core.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>jeorg-spring-test</artifactId>
                 <version>${spring.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- Mockito -->
-            <!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-junit-jupiter</artifactId>
-                <version>${mockito-core.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version>${mockito-core.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -488,11 +465,6 @@
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-core</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
                 <version>${log4j.version}</version>
             </dependency>
             <dependency>
