@@ -27,6 +27,13 @@ mvn clean install jetty:run
 curl http://localhost:8080/jeorg-spring-flash-3-4/carpenters
 ```
 
+## Spring Boot Starter Test Dependency
+
+In this project, we need to add Mockito and AssertJ because they are not part of spring-test.   
+They are part, on the other hand, of spring-boot-test.
+
+`JUnit`, `Spring Test & Spring Boot Test`, `AssertJ`, `Hamcrest`, `Mockito`, `JSONassert`, `JsonPath`
+
 ## References
 
 ### Context
