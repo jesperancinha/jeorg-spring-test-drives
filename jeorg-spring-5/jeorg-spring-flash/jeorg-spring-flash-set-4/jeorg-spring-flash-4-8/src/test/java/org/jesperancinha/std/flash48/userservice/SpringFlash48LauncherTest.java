@@ -1,7 +1,7 @@
 package org.jesperancinha.std.flash48.userservice;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.jesperancinha.std.flash48.userservice.oauth.domain.User;
+import org.jesperancinha.std.flash48.userservice.oauth.domain.ApplicationUser;
 import org.jesperancinha.std.flash48.userservice.oauth.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -41,7 +41,7 @@ class SpringFlash48LauncherTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Captor
-    private ArgumentCaptor<User> userArgumentCaptor;
+    private ArgumentCaptor<ApplicationUser> userArgumentCaptor;
 
     @Test
     void testContext() {

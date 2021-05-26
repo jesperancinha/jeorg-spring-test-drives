@@ -1,8 +1,9 @@
 package org.jesperancinha.std.flash48.userservice.oauth.service;
 
-import org.jesperancinha.std.flash48.userservice.oauth.domain.User;
+import org.jesperancinha.std.flash48.userservice.oauth.domain.ApplicationUser;
 import org.jesperancinha.std.flash48.userservice.oauth.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -23,18 +24,23 @@ public class Flash48UserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        final Optional<User> userEntity = userRepository.findById(username);
+        final Optional<ApplicationUser> userEntity = userRepository.findById(username);
 
         if (userEntity.isPresent()) {
-            final User user = userEntity.get();
-            return createUserDetails(user);
+            final ApplicationUser applicationUser = userEntity.get();
+            return createUserDetails(applicationUser);
         }
 
         return null;
     }
 
-    private org.springframework.security.core.userdetails.User createUserDetails(User user) {
-        return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), Collections.singletonList(new SimpleGrantedAuthority(user.getRole())));
+    private User createUserDetails(ApplicationUser applicationUser) {
+        return new User(
+                applicationUser.getEmail(),
+                applicationUser.getPassword(),
+                Collections.singletonList(
+                        new SimpleGrantedAuthority(
+                                applicationUser.getRole())));
     }
 
 }

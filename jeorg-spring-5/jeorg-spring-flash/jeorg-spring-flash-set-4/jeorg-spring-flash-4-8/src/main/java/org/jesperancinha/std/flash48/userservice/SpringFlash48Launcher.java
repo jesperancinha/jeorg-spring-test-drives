@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash48.userservice;
 
-import org.jesperancinha.std.flash48.userservice.oauth.domain.User;
+import org.jesperancinha.std.flash48.userservice.oauth.domain.ApplicationUser;
 import org.jesperancinha.std.flash48.userservice.oauth.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -50,13 +50,13 @@ public class SpringFlash48Launcher {
                     String password,
             @RequestHeader(required = false)
                     String email) {
-        final User user = new User();
-        user.setName(username);
-        user.setPassword(passwordEncoder.encode(password));
-        user.setEmail(email);
-        user.setRole("ROLE_ADMIN");
-        user.setDate(new Timestamp(LocalDateTime.now().toInstant(ZoneOffset.UTC).getNano()));
-        userService.saveUser(user);
+        final ApplicationUser applicationUser = new ApplicationUser();
+        applicationUser.setName(username);
+        applicationUser.setPassword(passwordEncoder.encode(password));
+        applicationUser.setEmail(email);
+        applicationUser.setRole("ROLE_ADMIN");
+        applicationUser.setDate(new Timestamp(LocalDateTime.now().toInstant(ZoneOffset.UTC).getNano()));
+        userService.saveUser(applicationUser);
     }
 
     @GetMapping("/concerts")

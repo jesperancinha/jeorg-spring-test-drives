@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class ApplicationUser {
 
     @Id
     @Column(unique = true)

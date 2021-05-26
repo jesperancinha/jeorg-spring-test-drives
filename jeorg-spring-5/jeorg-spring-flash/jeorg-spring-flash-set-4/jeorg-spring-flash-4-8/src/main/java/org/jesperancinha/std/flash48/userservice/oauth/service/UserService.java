@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash48.userservice.oauth.service;
 
-import org.jesperancinha.std.flash48.userservice.oauth.domain.User;
+import org.jesperancinha.std.flash48.userservice.oauth.domain.ApplicationUser;
 import org.jesperancinha.std.flash48.userservice.oauth.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void saveUser(User user) {
-        userRepository.save(user);
+    public void saveUser(ApplicationUser applicationUser) {
+        userRepository.save(applicationUser);
     }
 }
