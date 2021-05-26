@@ -39,6 +39,8 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/jetty-50.png "Jetty")](https://www.eclipse.org/jetty/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mockito-50.png "Mockito")](https://site.mockito.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/assertj-50.png "AssertJ")](https://assertj.github.io/doc/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/docker-50.png "Docker")](https://www.docker.com/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/docker-compose-50.png "Docker Compose")](https://docs.docker.com/compose/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/h2-50.png "H2")](https://www.h2database.com/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/postgres-50.png "Postgres")](https://www.postgresql.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cassandra-50.png "Cassandra")](http://cassandra.apache.org/)
@@ -79,6 +81,11 @@ You can consider this repo as basic overall round overview of important Spring t
 
 João Esperancinha, 2021/05/21
 
+## Specs
+
+1.  Spring: [org.springframework](https://mvnrepository.com/artifact/org.springframework/) - 5.2.15.RELEASE
+2.  Spring Boot: [org.springframework.boot/spring-boot-starter-parent](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent) - 2.3.11.RELEASE
+
 ## Build
 
 Note that if you want to build this project from the root, you need to use one of the JDK 11 or upper versions.
@@ -106,6 +113,11 @@ mvn clean test -Dconsolerizer.show=false
 bash <(curl -s https://codecov.io/bash)
 ```
 
+## Detect Non-Runing Tests
+
+```bash
+mvn clean install | egrep "Tests run|----"
+```
 ## Sequence Diagram
 
 ```mermaid

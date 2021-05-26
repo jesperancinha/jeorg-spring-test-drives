@@ -10,10 +10,20 @@
     </parent>
     <artifactId>jeorg-spring-5-test-drives-hadoop</artifactId>
     <packaging>jar</packaging>
-    <name>spring-test-drives-hadoop</name>
+    <name>jeorg-spring-5-test-drives-hadoop</name>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven-failsafe-plugin.version}</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>

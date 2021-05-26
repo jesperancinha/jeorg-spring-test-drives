@@ -42,7 +42,8 @@ class ThinkControllerTest {
             }
         }).collect(Collectors.toList());
 
-        mockMvc.perform(post("?artist=Kelly Clarkson")
+        mockMvc.perform(post("/")
+                .queryParam("artist", "Kelly Clarkson")
                 .contentType(APPLICATION_JSON)
                 .content("[\"You think you got the best of me\", \"Think you had the last laugh\", \"Bet you think that everything good is gone\", \"Think you left me broken down\", \"Think that I'd come running back\"]"))
                 .andExpect(status().isOk())

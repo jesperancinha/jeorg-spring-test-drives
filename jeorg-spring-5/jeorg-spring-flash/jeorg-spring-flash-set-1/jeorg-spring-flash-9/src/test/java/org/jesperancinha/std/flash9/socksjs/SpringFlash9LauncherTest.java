@@ -24,6 +24,7 @@ import org.springframework.web.socket.messaging.WebSocketStompClient;
 import org.springframework.web.socket.sockjs.client.SockJsClient;
 import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -99,8 +100,12 @@ class SpringFlash9LauncherTest {
                     @NonNull
                             StompHeaders headers, Object payload) {
                 try {
-                    blockingQueue.add(objectMapper.readValue(objectMapper.writeValueAsString(payload), Present.class));
+                    blockingQueue.add(objectMapper.readValue((byte[]) (payload), Present.class));
                 } catch (JsonProcessingException e) {
+                    ConsolerizerColor.RED.printGenericLn("A JSON Parsing Exception has occured!");
+                    ConsolerizerColor.RED.printThrowableAndExit(e);
+                } catch (IOException e) {
+                    ConsolerizerColor.RED.printGenericLn("An IO Exception has occurred!");
                     ConsolerizerColor.RED.printThrowableAndExit(e);
                 }
             }
