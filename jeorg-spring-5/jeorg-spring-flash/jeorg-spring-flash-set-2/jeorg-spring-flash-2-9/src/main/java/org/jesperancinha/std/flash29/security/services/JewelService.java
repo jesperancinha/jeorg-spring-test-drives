@@ -6,9 +6,13 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 import java.util.List;
 
+/**
+ * It is important to notice that ROLE_ as a prefix has no actual effect in the authoriazations resolutions.
+ * Spring handles the role as must having ROLE_. If we don't specify this, Spring will add it for us.
+ */
 public interface JewelService {
 
-    @PreAuthorize("hasRole('ROLE_WRITE') && hasRole('ROLE_ADMIN') && #jewel.guardian != null &&  #jewel.guardian == authentication.name")
+    @PreAuthorize("hasRole('WRITE') && hasRole('ADMIN') && #jewel.guardian != null &&  #jewel.guardian == authentication.name")
     JewelDto createJewel(final JewelDto jewel);
 
     @PreAuthorize("hasRole('ROLE_ADMIN') && #jewel.guardian != null &&  #jewel.guardian == authentication.name")
