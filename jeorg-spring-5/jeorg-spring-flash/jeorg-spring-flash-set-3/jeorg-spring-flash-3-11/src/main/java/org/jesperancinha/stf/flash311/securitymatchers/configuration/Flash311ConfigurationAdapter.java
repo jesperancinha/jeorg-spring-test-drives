@@ -32,7 +32,7 @@ public class Flash311ConfigurationAdapter extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin().defaultSuccessUrl("/static/index.html", true);
 
-        GREEN.printGenericLn("Note that RED in this case is a short statement for ROLE_RED");
+        GREEN.printGenericLn("Note that RED and BLUE in this case is a short statement for ROLE_RED and ROlE_BLUE respectively");
         GREEN.printGenericLn("When we assign our SimpleGrantedAuthority to our Authentication, we give it a role as parameter");
         GREEN.printGenericLn("The role is an extended name. In our case it will be ROLE_RED");
         GREEN.printGenericLn("The same goes to all other roles like ROLE_BLUE");
