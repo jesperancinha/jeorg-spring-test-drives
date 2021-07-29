@@ -2,12 +2,16 @@ package org.jesperancinha.std.flash214.transactions.services;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash214.transactions.model.Car;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
+import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -24,10 +28,22 @@ import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TE
 })
 @Sql(executionPhase = BEFORE_TEST_METHOD,
         scripts = "classpath:schema.sql")
+@Testcontainers
 class CarReadUncommittedDAOTest {
 
     @Autowired
     private CarReadUncommittedDAO carReadUncommittedDAO;
+
+    @Container
+    private static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer()
+            .withDatabaseName("db")
+            .withUsername("sa")
+            .withPassword("sa");
+
+    @BeforeEach
+    public void setup() {
+        assertThat(postgreSQLContainer.isRunning()).isTrue();
+    }
 
     /**
      * A running example for the read uncommmitted isolation level

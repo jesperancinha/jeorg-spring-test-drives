@@ -114,6 +114,7 @@
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
         <kotest-extensions-spring.version>1.0.0</kotest-extensions-spring.version>
         <junit.version>4.13.2</junit.version>
+        <testcontainers.version>1.16.0</testcontainers.version>
     </properties>
 
     <build>
@@ -211,12 +212,6 @@
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-core</artifactId>
                 <version>${camel.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
@@ -469,6 +464,22 @@
                 <artifactId>jackson-module-kotlin</artifactId>
                 <version>${jackson-module-kotlin.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers</artifactId>
+                <version>${testcontainers.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${testcontainers.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${testcontainers.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.apache.camel</groupId>
@@ -535,6 +546,12 @@
                 <groupId>io.kotest</groupId>
                 <artifactId>kotest-runner-junit5</artifactId>
                 <version>${kotest.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>

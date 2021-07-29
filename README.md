@@ -143,6 +143,32 @@ i.e. [mermaid-plugin](https://chrome.google.com/webstore/detail/mermaid-diagrams
 
 `@Transational timeout`, `TestRestTemplate`, `HealthIndicator`, `actuator`, `Embedded`, `JPA`, `Big Data`
 
+## Running unit and integration tests
+
+The examples presented in this repo need to use a docker-engine/docker-machine in order to run.
+
+This is because they make use of the [testcontainers](https://www.testcontainers.org/) project.
+
+I tested this using Docker Desktop for mac and on an ubuntu-unity machine. As long as the docker-machine/docker-engine is running, the maven build shoud also work.
+
+Using embedded alternatives revealed to be quite cumbersome, inefficient and slow.
+
+For more info on docker desktop please check their [website](https://www.docker.com/).
+
+For learning how to install docker in ubuntu please check their [website](https://docs.docker.com/engine/install/ubuntu/).
+
+When this is ready, just run:
+
+```shell
+make build
+```
+
+or
+
+```shell
+mvn clean install
+```
+
 ## References
 
 ### Books
