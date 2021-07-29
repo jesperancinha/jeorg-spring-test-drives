@@ -3,13 +3,11 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 
-# Check https://circleci.com/docs/2.0/language-java/ for more details
-#
 version: 2
 machine: true
 jobs:
   build:
-    docker:
+    machine:
       # specify the version you desire here
       - image: jesperancinha/je-all-build:0.0.4
 
