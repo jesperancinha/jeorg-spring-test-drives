@@ -13,8 +13,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import java.util.Map;
 
 @SpringBootApplication
-@EnableWebSecurity
-@EnableWebMvc
 @Controller
 @ImportResource("classpath:/WEB-INF/spring/spring-security.xml")
 public class SpringFlash43Launcher {
