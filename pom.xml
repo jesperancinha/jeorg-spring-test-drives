@@ -113,6 +113,7 @@
         <kotest.version>4.4.0</kotest.version>
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
         <kotest-extensions-spring.version>1.0.0</kotest-extensions-spring.version>
+        <junit.version>4.13.2</junit.version>
     </properties>
 
     <build>
@@ -211,7 +212,12 @@
                 <artifactId>camel-core</artifactId>
                 <version>${camel.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-spring</artifactId>

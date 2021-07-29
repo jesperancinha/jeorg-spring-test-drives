@@ -2,6 +2,8 @@ package org.jesperancinha.std.mastery3.plants.configuration;
 
 import org.jesperancinha.std.mastery3.plants.controller.GeneralExceptionResolver;
 import org.springframework.beans.BeansException;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +19,11 @@ import javax.servlet.ServletContext;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer, ApplicationContextAware, ServletContextAware {
+
+    @Bean
+    WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> enableDefaultServlet() {
+        return (factory) -> factory.setRegisterDefaultServlet(true);
+    }
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {

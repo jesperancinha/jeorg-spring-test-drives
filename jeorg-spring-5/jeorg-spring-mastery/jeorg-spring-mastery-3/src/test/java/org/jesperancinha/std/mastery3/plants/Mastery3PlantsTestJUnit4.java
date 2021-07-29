@@ -13,7 +13,7 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RE
 public class Mastery3PlantsTestJUnit4 {
 
     @Test
-    @Timed(millis = 100L)
+    @Timed(millis = 200L)
     public void testContext() {
         try {
             Thread.sleep(10L);
