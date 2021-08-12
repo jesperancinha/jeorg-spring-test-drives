@@ -12,8 +12,6 @@
     <artifactId>jeorg-spring-app-old</artifactId>
 
     <modules>
-        <module>jeorg-spring-5-test-drives-hadoop</module>
-        <module>jeorg-spring-5-test-drives-postgres</module>
         <module>jeorg-spring-5-test-drives-spring-boot</module>
         <module>jeorg-spring-5-test-drives-webapp</module>
     </modules>

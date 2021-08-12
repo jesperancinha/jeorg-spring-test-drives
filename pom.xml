@@ -25,7 +25,7 @@
 
         <!-- External -->
         <spring.version>5.2.1.RELEASE</spring.version>
-        <lombok.version>1.18.10</lombok.version>
+        <lombok.version>1.18.20</lombok.version>
         <jscience>4.3.1</jscience>
         <commons.lang3>3.4</commons.lang3>
         <guava.version>30.0-jre</guava.version>
@@ -107,7 +107,7 @@
         <java-driver-core.version>4.11.1</java-driver-core.version>
         <metrics-core.version>3.0.2</metrics-core.version>
         <spring-security-oauth2.version>2.5.0.RELEASE</spring-security-oauth2.version>
-        <kotlin.version>1.4.30</kotlin.version>
+        <kotlin.version>1.5.21</kotlin.version>
         <jackson-module-kotlin.version>2.12.1</jackson-module-kotlin.version>
         <springmockk.version>3.0.1</springmockk.version>
         <kotest.version>4.4.0</kotest.version>
@@ -468,6 +468,7 @@
                 <groupId>org.testcontainers</groupId>
                 <artifactId>testcontainers</artifactId>
                 <version>${testcontainers.version}</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.testcontainers</groupId>
@@ -479,6 +480,7 @@
                 <groupId>org.testcontainers</groupId>
                 <artifactId>junit-jupiter</artifactId>
                 <version>${testcontainers.version}</version>
+                <scope>test</scope>
             </dependency>
 
             <dependency>
