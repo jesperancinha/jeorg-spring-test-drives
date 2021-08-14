@@ -29,5 +29,5 @@ fun main(args: Array<String>) {
         .yellow("This is the first module to understand the basics")
         .toConsoleLn();
 
-    runApplication<JeorgSpringKotlinMastery1Application>(*args)
+    runApplication<JeorgSpringKotlinMastery1Application>(* args)
 }

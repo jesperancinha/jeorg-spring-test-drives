@@ -98,7 +98,7 @@
         <jstl.version>1.2</jstl.version>
         <commons-logging.version>1.1.1</commons-logging.version>
         <groovy.version>3.0.7</groovy.version>
-        <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
         <kotlinx-serialization-json.version>1.2.0</kotlinx-serialization-json.version>
@@ -110,7 +110,7 @@
         <kotlin.version>1.5.21</kotlin.version>
         <jackson-module-kotlin.version>2.12.1</jackson-module-kotlin.version>
         <springmockk.version>3.0.1</springmockk.version>
-        <kotest.version>4.4.0</kotest.version>
+        <kotest.version>4.6.1</kotest.version>
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
         <kotest-extensions-spring.version>1.0.0</kotest-extensions-spring.version>
         <junit.version>4.13.2</junit.version>
