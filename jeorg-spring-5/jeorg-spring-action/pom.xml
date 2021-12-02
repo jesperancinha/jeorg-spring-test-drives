@@ -18,11 +18,6 @@
         <module>jeorg-spring-action-ioc</module>
     </modules>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
-
     <packaging>pom</packaging>
 
 </project>
