@@ -13,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ContextConfiguration(classes = SpringFlash13Launcher.class)
 class SpringFlash13LauncherITTest {
 
     @LocalServerPort
@@ -35,7 +34,7 @@ class SpringFlash13LauncherITTest {
         final String directGZipValueString = response.getBody();
 
         final var headers2 = new HttpHeaders();
-        headers2.set("Accept-Encoding", "gzip,deflate");
+        headers2.set("Accept-Encoding", "gzip, deflate");
         final var request2 = new HttpEntity<>(headers2);
         var response2 = restTemplate.exchange(
                 String.format("http://localhost:%s/flash13.styles.css", port), HttpMethod.GET,

@@ -5,7 +5,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.amqp.RabbitHealthIndicator;
-import org.springframework.boot.actuate.cassandra.CassandraHealthIndicator;
+import org.springframework.boot.actuate.cassandra.CassandraDriverHealthIndicator;
 import org.springframework.boot.actuate.couchbase.CouchbaseHealthIndicator;
 import org.springframework.boot.actuate.elasticsearch.ElasticsearchRestHealthIndicator;
 import org.springframework.boot.actuate.hazelcast.HazelcastHealthIndicator;
@@ -32,11 +32,11 @@ public class JeorgActionActuatorLauncher implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
 
         ConsolerizerComposer.outSpace()
                 .cyan(title("All Health Indicators Available in the Actuator by default"))
-                .magenta(CassandraHealthIndicator.class)
+                .magenta(CassandraDriverHealthIndicator.class)
                 .magenta(CouchbaseHealthIndicator.class)
                 .magenta(DataSourceHealthIndicator.class)
                 .magenta(DiskSpaceHealthIndicator.class)

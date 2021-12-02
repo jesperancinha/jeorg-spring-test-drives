@@ -19,7 +19,7 @@ class Flash27HealthIndicatorTest {
     @Autowired
     private MockMvc mockMvc;
 
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
     void health() throws Exception {
@@ -47,8 +47,8 @@ class Flash27HealthIndicatorTest {
         final var dbDetails = db.getDetails();
         assertThat(dbDetails).isNotNull();
         assertThat(dbDetails.getDatabase()).isEqualTo("H2");
-        assertThat(dbDetails.getResult()).isEqualTo(1);
-        assertThat(dbDetails.getValidationQuery()).isEqualTo("SELECT 1");
+        assertThat(dbDetails.getResult()).isIn(1, null);
+        assertThat(dbDetails.getValidationQuery()).isIn("SELECT 1", "isValid()");
         assertThat(dbDetails.getLyric()).isNull();
         assertThat(dbDetails.getTotal()).isNull();
         assertThat(dbDetails.getFree()).isNull();
