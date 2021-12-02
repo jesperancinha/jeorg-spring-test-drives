@@ -63,8 +63,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
           src="https://img.youtube.com/vi/h7CyAKyE-FM/0.jpg" 
           style="width:10%;">
       </a>
-</div>
-<div align="center">
       <a title="António Variações | Povo que lavas no rio" href="https://www.youtube.com/watch?v=Sxjasfl2Y_w">
      <img 
           src="https://img.youtube.com/vi/Sxjasfl2Y_w/0.jpg" 
@@ -75,8 +73,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
           src="https://img.youtube.com/vi/GhXf9ZO06U0/0.jpg" 
           style="width:10%;">
       </a>
-</div>
-<div align="center">
       <a title="Taxi - Cairo" href="https://www.youtube.com/watch?v=JCaD2qQXG8I">
      <img 
           src="https://img.youtube.com/vi/JCaD2qQXG8I/0.jpg" 
@@ -87,8 +83,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
           src="https://img.youtube.com/vi/qc0ZwEDGq6U/0.jpg" 
           style="width:10%;">
       </a>
-</div>
-<div align="center">
       <a title="Pedro Abrunhosa & Os Bandemónio - Tudo O Que Eu Te Dou" href="https://www.youtube.com/watch?v=CN-esU1WCw0">
      <img 
           src="https://img.youtube.com/vi/CN-esU1WCw0/0.jpg" 
@@ -99,8 +93,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
           src="https://img.youtube.com/vi/ImeAInvGrY4/0.jpg" 
           style="width:10%;">
       </a>
-</div>
-<div align="center">
       <a title="Sétima Legião - SETE MARES - 7 SEAS" href="https://www.youtube.com/watch?v=NmlDjghuTsw">
      <img 
           src="https://img.youtube.com/vi/NmlDjghuTsw/0.jpg" 
@@ -111,8 +103,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
           src="https://img.youtube.com/vi/BHsKYG-Cs60/0.jpg" 
           style="width:10%;">
       </a>
-</div>
-<div align="center">
       <a title="Radio Macau - Amanhã é sempre longe demais" href="https://www.youtube.com/watch?v=734ywSpCrc0">
      <img 
           src="https://img.youtube.com/vi/734ywSpCrc0/0.jpg" 
