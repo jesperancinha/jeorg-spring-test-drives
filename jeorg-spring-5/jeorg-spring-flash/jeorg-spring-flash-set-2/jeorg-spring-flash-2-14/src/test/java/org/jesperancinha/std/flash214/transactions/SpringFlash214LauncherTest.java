@@ -7,8 +7,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.util.TestPropertyValues;
+import org.springframework.context.ApplicationContextInitializer;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
@@ -23,17 +27,28 @@ import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TE
 @Sql(executionPhase = BEFORE_TEST_METHOD,
         scripts = "classpath:schema.sql")
 @Testcontainers
+@ContextConfiguration(initializers = {SpringFlash214LauncherTest.Initializer.class})
 class SpringFlash214LauncherTest {
 
     @Autowired
     private CarRepository carRepository;
 
     @Container
-    private static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer()
-            .withDatabaseName("db")
-            .withUsername("sa")
-            .withPassword("sa");
+    static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>("postgres:12")
+            .withUsername("postgres")
+            .withPassword("admin")
+            .withDatabaseName("db");
 
+    static class Initializer
+            implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+        public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
+            TestPropertyValues.of(
+                    "spring.datasource.url=" + postgreSQLContainer.getJdbcUrl(),
+                    "spring.datasource.username=" + postgreSQLContainer.getUsername(),
+                    "spring.datasource.password=" + postgreSQLContainer.getPassword()
+            ).applyTo(configurableApplicationContext.getEnvironment());
+        }
+    }
     @BeforeEach
     public void setup() {
         assertThat(postgreSQLContainer.isRunning()).isTrue();

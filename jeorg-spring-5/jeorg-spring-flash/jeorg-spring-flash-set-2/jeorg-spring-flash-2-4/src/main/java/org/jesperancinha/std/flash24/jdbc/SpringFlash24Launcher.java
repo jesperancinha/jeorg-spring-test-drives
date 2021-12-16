@@ -3,6 +3,7 @@ package org.jesperancinha.std.flash24.jdbc;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash24.jdbc.template.Concert;
 import org.jesperancinha.std.flash24.jdbc.template.CustomDataAccessException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,6 +29,9 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RE
 @RestController
 public class SpringFlash24Launcher implements CommandLineRunner {
     private final JdbcTemplate jdbcTemplate;
+
+    @Value("${spring.datasource.driverClassName:}")
+    private String driver;
 
     public SpringFlash24Launcher(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -74,9 +78,9 @@ public class SpringFlash24Launcher implements CommandLineRunner {
         final Object[] newConcert1 = Arrays.copyOf(concert1, concert1.length + 1);
         final Object[] newConcert2 = Arrays.copyOf(concert2, concert2.length + 1);
         newConcert1[1] = "unknown venue";
-        newConcert1[3] = "1";
+        newConcert1[3] = 1;
         newConcert2[1] = "unknown venue";
-        newConcert2[3] = "2";
+        newConcert2[3] = 2;
         return Arrays.asList(
                 newConcert1, newConcert2
         );
@@ -89,8 +93,8 @@ public class SpringFlash24Launcher implements CommandLineRunner {
      */
     private List<Object[]> getData1() {
         MAGENTA.printGenericLn("from: https://www.songkick.com/artists/1168629-roisin-murphy");
-        final String[] concert1 = {"6 Music Festival - By Night", "The Roundhouse, London, UK", LocalDateTime.of(2020, 3, 7, 17, 0, 0).toString()};
-        final String[] concert2 = {"Dekmantel festival 2019", "Amsterdam Forest / Amsterdamse Bos, Amstelveen, Netherlands", LocalDateTime.of(2019, 7, 31, 0, 0, 0).toString()};
+        final Object[] concert1 = {"6 Music Festival - By Night", "The Roundhouse, London, UK", LocalDateTime.of(2020, 3, 7, 17, 0, 0).toString()};
+        final Object[] concert2 = {"Dekmantel festival 2019", "Amsterdam Forest / Amsterdamse Bos, Amstelveen, Netherlands", LocalDateTime.of(2019, 7, 31, 0, 0, 0).toString()};
         return Arrays.asList(
                 concert1, concert2
         );
@@ -180,9 +184,15 @@ public class SpringFlash24Launcher implements CommandLineRunner {
      * Initialization of the table {@link Concert} database
      */
     void initializeDatabase() {
-        jdbcTemplate.execute("drop table concerts if exists ");
-        jdbcTemplate.execute("create table concerts(" +
-                "id SERIAL, name varchar(255), venue varchar(255), local_date_time varchar(255))");
+        jdbcTemplate.execute("drop table if exists concerts;");
+
+        if(driver.equals("org.h2.Driver")){
+            jdbcTemplate.execute("create table concerts(" +
+                    "id int auto_increment primary key, name varchar(255), venue varchar(255), local_date_time varchar(255))");
+        } else {
+            jdbcTemplate.execute("create table concerts(" +
+                    "id serial primary key, name varchar(255), venue varchar(255), local_date_time varchar(255))");
+        }
     }
 
     /**

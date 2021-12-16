@@ -9,10 +9,17 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.boot.test.util.TestPropertyValues;
+import org.springframework.context.ApplicationContextInitializer;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator;
+import org.springframework.test.context.ContextConfiguration;
+import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -24,6 +31,8 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Testcontainers
+@ContextConfiguration(initializers = {SpringFlash24LauncherTest.Initializer.class})
 class SpringFlash24LauncherTest {
 
     @SpyBean
@@ -41,8 +50,26 @@ class SpringFlash24LauncherTest {
     @Captor
     private ArgumentCaptor<AbstractFallbackSQLExceptionTranslator> abstractFallbackSQLExceptionTranslatorArgumentCaptor;
 
+    @Container
+    static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>("postgres:12")
+            .withUsername("postgres")
+            .withPassword("admin")
+            .withDatabaseName("db");
+
+    static class Initializer
+            implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+        public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
+            TestPropertyValues.of(
+                    "spring.datasource.url=" + postgreSQLContainer.getJdbcUrl(),
+                    "spring.datasource.username=" + postgreSQLContainer.getUsername(),
+                    "spring.datasource.password=" + postgreSQLContainer.getPassword()
+            ).applyTo(configurableApplicationContext.getEnvironment());
+        }
+    }
+
     @BeforeEach
     public void setUp() {
+        assertThat(postgreSQLContainer.isRunning()).isTrue();
         springFlash24Launcher.initializeDatabase();
         final String[] concert1 = {"VH1 Divas Live", "New York's Beacon Theatre, US", LocalDateTime.of(1998, 4, 16, 0, 0, 0).toString()};
         final String[] concert2 = {"Lollapalooza 2012", "Chicago’s Grant Park, US", LocalDateTime.of(2012, 8, 12, 16, 0, 0).toString()};
@@ -90,16 +117,15 @@ class SpringFlash24LauncherTest {
 
     @Test
     void testCRUDUpdateWhenCalledWith2RecordsThenUpdate2Records() {
-        final String[] concert1Update = {"<HIDDEN1>", "New York's Beacon Theatre, US", LocalDateTime.of(1998, 4, 16, 0, 0, 0).toString(), "1"};
-        final String[] concert2Update = {"<HIDDEN2>", "Chicago’s Grant Park, US", LocalDateTime.of(2012, 8, 12, 16, 0, 0).toString(), "2"};
+        final Object[] concert1Update = {"<HIDDEN1>", "New York's Beacon Theatre, US", LocalDateTime.of(1998, 4, 16, 0, 0, 0).toString(), 1};
+        final Object[] concert2Update = {"<HIDDEN2>", "Chicago’s Grant Park, US", LocalDateTime.of(2012, 8, 12, 16, 0, 0).toString(), 2};
         final List<Object[]> concertsUpdate = Arrays.asList(concert1Update, concert2Update);
 
         final int[] ints = springFlash24Launcher.testCRUDUpdate(concertsUpdate);
         final var concerts = springFlash24Launcher.testCRUDRead();
 
-        for (int i : ints) {
-            assertThat(ints[i]).isEqualTo(1);
-        }
+        assertThat(ints).hasSize(2);
+        assertThat(ints).containsOnly(1);
         assertThat(concerts).isNotNull();
         assertThat(concerts).hasSize(2);
         final var concert1 = concerts.get(0);
