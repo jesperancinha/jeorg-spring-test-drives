@@ -24,15 +24,15 @@ class SpringFlash32LauncherTemplateTest {
 
     @Test
     void testContext() {
-        verify(jdbcTemplate, times(1)).execute("CREATE TABLE WHEN(\n" +
+        verify(jdbcTemplate, times(1)).execute("CREATE TABLE WHEN_MUSIC(\n" +
                 "   ID INT NOT NULL AUTO_INCREMENT,\n" +
                 "   ARTIST VARCHAR(255) NOT NULL,\n" +
-                "   WHEN VARCHAR(255) NOT NULL,\n" +
+                "   WHEN_MUSIC VARCHAR(255) NOT NULL,\n" +
                 "   PRIMARY KEY (ID)\n" +
                 ");");
-        verify(jdbcTemplate, times(1)).update("INSERT INTO WHEN(ARTIST, WHEN) VALUES (?, ?)", "The Doors", "The Music's Over");
-        verify(jdbcTemplate, times(1)).update("INSERT INTO WHEN(ARTIST, WHEN) VALUES (?, ?)", "Green Day", "I come around");
+        verify(jdbcTemplate, times(1)).update("INSERT INTO WHEN_MUSIC(ARTIST, WHEN_MUSIC) VALUES (?, ?)", "The Doors", "The Music's Over");
+        verify(jdbcTemplate, times(1)).update("INSERT INTO WHEN_MUSIC(ARTIST, WHEN_MUSIC) VALUES (?, ?)", "Green Day", "I come around");
         verify(jdbcTemplate, times(1)).query(stringArgumentCaptor.capture(), any(RowCallbackHandler.class));
-        assertThat(stringArgumentCaptor.getValue()).isEqualTo("SELECT * FROM WHEN");
+        assertThat(stringArgumentCaptor.getValue()).isEqualTo("SELECT * FROM WHEN_MUSIC");
     }
 }
