@@ -41,12 +41,12 @@ public class SpringFlash56Launcher implements CommandLineRunner {
                 "title varchar(255)," +
                 "author varchar(255)," +
                 "publisher varchar(255)," +
-                "year long" +
+                "`year` bigint" +
                 ")");
 
         final var keyHolder = new GeneratedKeyHolder();
 
-        final String query = "insert into book(title, author, publisher, year) values (?, ?, ?, ?)";
+        final String query = "insert into book(title, author, publisher, `year`) values (?, ?, ?, ?)";
         jdbcTemplate.update(connection -> {
             PreparedStatement stmt = connection.prepareStatement(query, new String[]{"id"});
             stmt.setString(1, "Levantado do Chão");
@@ -70,7 +70,7 @@ public class SpringFlash56Launcher implements CommandLineRunner {
                 .magenta("Our id is %d", id)
                 .reset();
 
-        final String query2 = "update book set title = ?, author = ?, publisher = ?, year = ? where id = ?";
+        final String query2 = "update book set title = ?, author = ?, publisher = ?, `year` = ? where id = ?";
         final int update = jdbcTemplate.update(query2, "O ano da Morte de Ricardo Reis", "José Samarago", "Caminho", "1984", id);
         ConsolerizerComposer.outSpace()
                 .blue("An update should be performed with update")
