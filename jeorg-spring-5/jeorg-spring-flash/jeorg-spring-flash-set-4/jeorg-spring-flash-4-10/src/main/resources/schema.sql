@@ -15,6 +15,8 @@ create table if not exists user_roles
     username     varchar(255) not null,
     role         varchar(255) not null,
     primary key (user_role_id),
-    unique key uni_username_role (role,username),
     constraint fk_username foreign key (username) references users (username)
 );
+
+create unique index if not exists uni_username_role on user_roles
+    (role,username)
