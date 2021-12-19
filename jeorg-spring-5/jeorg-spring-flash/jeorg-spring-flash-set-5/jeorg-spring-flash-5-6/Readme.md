@@ -26,6 +26,16 @@ mvn clean install spring-boot:run
 
 ## References
 
+### Videos
+
+<div align="center">
+      <a title="O ANO DA MORTE DE RICARDO REIS / Trailer Oficial PT" href="https://www.youtube.com/watch?v=NaJeDEqve2Y">
+     <img 
+          src="https://img.youtube.com/vi/NaJeDEqve2Y/0.jpg" 
+          style="width:30%;">
+      </a>
+</div>
+
 ### Context
 
 -   [José Saramago](https://en.wikipedia.org/wiki/Jos%C3%A9_Saramago)
