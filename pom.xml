@@ -33,7 +33,7 @@
         <consolerizer.version>2.0.12</consolerizer.version>
 
         <!-- Databases -->
-        <h2.version>2.0.202</h2.version>
+        <h2.version>2.0.204</h2.version>
         <postgresql.version>42.2.13</postgresql.version>
         <hibernate-entitymanager.version>5.4.24.Final</hibernate-entitymanager.version>
         <spring-data.version>2.2.4.RELEASE</spring-data.version>
@@ -70,7 +70,7 @@
         <spring-boot-maven-plugin.version>2.4.5</spring-boot-maven-plugin.version>
 
         <!-- EH Cache -->
-        <ehcache.version>3.8.1</ehcache.version>
+        <ehcache.version>3.9.9</ehcache.version>
         <ehcache-core.version>2.6.11</ehcache-core.version>
 
         <!-- Other -->
@@ -105,8 +105,8 @@
         <java-driver-core.version>4.13.0</java-driver-core.version>
         <metrics-core.version>3.0.2</metrics-core.version>
         <spring-security-oauth2.version>2.5.0.RELEASE</spring-security-oauth2.version>
-        <kotlin.version>1.5.21</kotlin.version>
-        <jackson-module-kotlin.version>2.12.1</jackson-module-kotlin.version>
+        <kotlin.version>1.6.10</kotlin.version>
+        <jackson-module-kotlin.version>2.13.1</jackson-module-kotlin.version>
         <springmockk.version>3.0.1</springmockk.version>
         <kotest.version>4.6.1</kotest.version>
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
