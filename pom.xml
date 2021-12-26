@@ -43,7 +43,7 @@
         <camel.version>3.0.1</camel.version>
 
         <!-- Logs -->
-        <slf4j.version>1.7.28</slf4j.version>
+        <slf4j.version>1.7.32</slf4j.version>
         <log4j.version>2.17.0</log4j.version>
 
         <!-- Test -->
