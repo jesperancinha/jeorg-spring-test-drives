@@ -112,7 +112,7 @@
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
         <kotest-extensions-spring.version>1.0.0</kotest-extensions-spring.version>
         <junit.version>4.13.2</junit.version>
-        <testcontainers.version>1.16.0</testcontainers.version>
+        <testcontainers.version>1.16.2</testcontainers.version>
     </properties>
 
     <build>
