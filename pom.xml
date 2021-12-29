@@ -40,7 +40,7 @@
         <hibernate-core-orm.version>6.0.0.Beta1</hibernate-core-orm.version>
 
         <!-- Camel -->
-        <camel.version>3.0.1</camel.version>
+        <camel.version>3.14.0</camel.version>
 
         <!-- Logs -->
         <slf4j.version>1.7.32</slf4j.version>
@@ -95,7 +95,7 @@
         <cglib.version>3.3.0</cglib.version>
         <jstl.version>1.2</jstl.version>
         <commons-logging.version>1.2</commons-logging.version>
-        <groovy.version>3.0.7</groovy.version>
+        <groovy.version>3.0.9</groovy.version>
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
