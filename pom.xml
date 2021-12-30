@@ -34,7 +34,7 @@
 
         <!-- Databases -->
         <h2.version>2.0.204</h2.version>
-        <postgresql.version>42.2.13</postgresql.version>
+        <postgresql.version>42.3.1</postgresql.version>
         <hibernate-entitymanager.version>5.4.24.Final</hibernate-entitymanager.version>
         <spring-data.version>2.2.4.RELEASE</spring-data.version>
         <hibernate-core-orm.version>6.0.0.Beta1</hibernate-core-orm.version>
