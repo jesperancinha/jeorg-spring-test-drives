@@ -74,7 +74,7 @@
         <ehcache-core.version>2.6.11</ehcache-core.version>
 
         <!-- Other -->
-        <jetty-maven-plugin.version>8.1.0.RC4</jetty-maven-plugin.version>
+        <jetty-maven-plugin.version>8.1.16.v20140903</jetty-maven-plugin.version>
         <jsp-api.version>2.2</jsp-api.version>
         <javax.servlet.jsp-api.version>2.3.3</javax.servlet.jsp-api.version>
         <jquery.version>3.6.0</jquery.version>
