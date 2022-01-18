@@ -33,7 +33,7 @@
         <consolerizer.version>2.0.12</consolerizer.version>
 
         <!-- Databases -->
-        <h2.version>2.0.206</h2.version>
+        <h2.version>2.1.210</h2.version>
         <postgresql.version>42.3.1</postgresql.version>
         <hibernate-entitymanager.version>5.4.24.Final</hibernate-entitymanager.version>
         <spring-data.version>2.2.4.RELEASE</spring-data.version>
