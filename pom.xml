@@ -37,7 +37,7 @@
         <postgresql.version>42.3.1</postgresql.version>
         <hibernate-entitymanager.version>5.6.5.Final</hibernate-entitymanager.version>
         <spring-data.version>2.2.4.RELEASE</spring-data.version>
-        <hibernate-core-orm.version>6.0.0.Beta3</hibernate-core-orm.version>
+        <hibernate-core-orm.version>6.0.0.CR1</hibernate-core-orm.version>
 
         <!-- Camel -->
         <camel.version>3.14.0</camel.version>
