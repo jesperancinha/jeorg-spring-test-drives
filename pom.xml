@@ -112,7 +112,7 @@
         <kotest-extensions-spring.version>1.1.0</kotest-extensions-spring.version>
         <junit.version>4.13.2</junit.version>
         <testcontainers.version>1.16.3</testcontainers.version>
-        <omni-coveragereporter-maven-plugin.version>0.1.4</omni-coveragereporter-maven-plugin.version>
+        <omni-coveragereporter-maven-plugin.version>0.1.5</omni-coveragereporter-maven-plugin.version>
     </properties>
 
     <build>
