@@ -40,7 +40,7 @@
         <hibernate-core-orm.version>6.0.0.CR1</hibernate-core-orm.version>
 
         <!-- Camel -->
-        <camel.version>3.14.1</camel.version>
+        <camel.version>3.15.0</camel.version>
 
         <!-- Logs -->
         <slf4j.version>1.7.35</slf4j.version>
