@@ -34,16 +34,16 @@
 
         <!-- Databases -->
         <h2.version>2.1.210</h2.version>
-        <postgresql.version>42.3.1</postgresql.version>
+        <postgresql.version>42.3.2</postgresql.version>
         <hibernate-entitymanager.version>5.6.5.Final</hibernate-entitymanager.version>
         <spring-data.version>2.2.4.RELEASE</spring-data.version>
         <hibernate-core-orm.version>6.0.0.CR1</hibernate-core-orm.version>
 
         <!-- Camel -->
-        <camel.version>3.14.1</camel.version>
+        <camel.version>3.15.1</camel.version>
 
         <!-- Logs -->
-        <slf4j.version>1.7.35</slf4j.version>
+        <slf4j.version>1.7.36</slf4j.version>
         <log4j.version>2.17.1</log4j.version>
 
         <!-- Test -->
@@ -112,7 +112,7 @@
         <kotest-extensions-spring.version>1.1.0</kotest-extensions-spring.version>
         <junit.version>4.13.2</junit.version>
         <testcontainers.version>1.16.3</testcontainers.version>
-        <omni-coveragereporter-maven-plugin.version>0.1.2</omni-coveragereporter-maven-plugin.version>
+        <omni-coveragereporter-maven-plugin.version>0.0.12</omni-coveragereporter-maven-plugin.version>
     </properties>
 
     <build>
