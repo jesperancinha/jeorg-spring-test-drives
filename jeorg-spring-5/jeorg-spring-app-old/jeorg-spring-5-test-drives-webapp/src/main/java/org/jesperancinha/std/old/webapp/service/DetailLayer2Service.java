@@ -17,7 +17,7 @@ public class DetailLayer2Service {
 
     public Detail findDetailById(Integer id) {
 
-        return DetailConverter.toDetail(detailService.findBetailById(id));
+        return DetailConverter.toDetail(detailService.findDetailById(id));
 
     }
 
