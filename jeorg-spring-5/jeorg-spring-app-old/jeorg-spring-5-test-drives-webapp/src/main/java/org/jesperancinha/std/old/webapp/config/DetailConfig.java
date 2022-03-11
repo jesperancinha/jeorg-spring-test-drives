@@ -1,9 +1,6 @@
 package org.jesperancinha.std.old.webapp.config;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cache.CacheManager;
-import org.springframework.cache.concurrent.ConcurrentMapCache;
-import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -21,7 +18,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.util.Collections;
 import java.util.Properties;
 
 /**
@@ -32,14 +28,6 @@ import java.util.Properties;
 @PropertySource({"classpath:config.properties", "classpath:db.properties"})
 @Profile("!test")
 public class DetailConfig {
-
-    @Bean
-    CacheManager cacheManager() {
-        SimpleCacheManager cacheManager = new SimpleCacheManager();
-        cacheManager.setCaches(Collections.singletonList(new ConcurrentMapCache("detailCache")));
-        return cacheManager;
-    }
-
 
     @Bean(name = "dataSource")
     @Profile("!test")
