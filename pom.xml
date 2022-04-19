@@ -24,7 +24,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- External -->
-        <lombok.version>1.18.22</lombok.version>
+        <lombok.version>1.18.24</lombok.version>
         <jscience>4.3.1</jscience>
         <commons.lang3>3.4</commons.lang3>
         <guava.version>31.1-jre</guava.version>
