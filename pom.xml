@@ -103,7 +103,7 @@
         <embedded-cassandra.version>2.0.4</embedded-cassandra.version>
         <java-driver-core.version>4.14.0</java-driver-core.version>
         <metrics-core.version>3.0.2</metrics-core.version>
-        <spring-security-oauth2.version>2.5.1.RELEASE</spring-security-oauth2.version>
+        <spring-security-oauth2.version>2.5.2.RELEASE</spring-security-oauth2.version>
         <kotlin.version>1.6.21</kotlin.version>
         <jackson-module-kotlin.version>2.13.2</jackson-module-kotlin.version>
         <springmockk.version>3.1.1</springmockk.version>
