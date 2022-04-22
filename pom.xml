@@ -109,7 +109,7 @@
         <springmockk.version>3.1.1</springmockk.version>
         <kotest.version>5.2.3</kotest.version>
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
-        <kotest-extensions-spring.version>1.1.0</kotest-extensions-spring.version>
+        <kotest-extensions-spring.version>1.1.1</kotest-extensions-spring.version>
         <junit.version>4.13.2</junit.version>
         <testcontainers.version>1.17.1</testcontainers.version>
         <omni-coveragereporter-maven-plugin.version>0.3.0</omni-coveragereporter-maven-plugin.version>
