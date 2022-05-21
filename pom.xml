@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-parent</artifactId>
-        <version>2.6.7</version>
+        <version>2.7.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -40,7 +40,7 @@
         <hibernate-core-orm.version>6.0.1.Final</hibernate-core-orm.version>
 
         <!-- Camel -->
-        <camel.version>3.16.0</camel.version>
+        <camel.version>3.17.0</camel.version>
 
         <!-- Logs -->
         <slf4j.version>1.7.36</slf4j.version>
@@ -67,7 +67,7 @@
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
         <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
-        <spring-boot-maven-plugin.version>2.6.7</spring-boot-maven-plugin.version>
+        <spring-boot-maven-plugin.version>2.7.0</spring-boot-maven-plugin.version>
 
         <!-- EH Cache -->
         <ehcache.version>3.10.0</ehcache.version>
@@ -87,7 +87,7 @@
         <commons-io.version>2.11.0</commons-io.version>
         <cucumber.version>7.3.4</cucumber.version>
         <mariadb-java-client.version>3.0.4</mariadb-java-client.version>
-        <embedded-mariadb.version>2.1.8</embedded-mariadb.version>
+        <embedded-mariadb.version>2.2.0</embedded-mariadb.version>
         <mariaDB4j-springboot.version>2.5.3</mariaDB4j-springboot.version>
         <postgresql-embedded.version>2.10</postgresql-embedded.version>
         <atomikos.transactions.version>5.0.9</atomikos.transactions.version>
@@ -111,7 +111,7 @@
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
         <kotest-extensions-spring.version>1.1.1</kotest-extensions-spring.version>
         <junit.version>4.13.2</junit.version>
-        <testcontainers.version>1.17.1</testcontainers.version>
+        <testcontainers.version>1.17.2</testcontainers.version>
         <omni-coveragereporter-maven-plugin.version>0.3.0</omni-coveragereporter-maven-plugin.version>
     </properties>
 
