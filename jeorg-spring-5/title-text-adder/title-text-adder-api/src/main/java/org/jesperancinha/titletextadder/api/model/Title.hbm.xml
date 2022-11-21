@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="org.jesperancinha.titletextadder.api.model.Title" table="titles">
+      <meta attribute="class-description">
+         This class contains the Title detail. 
+      </meta>
+      <id name="id" type="int" column="title_id">
+         <generator class="native"/>
+      </id>
+      <property name="title" column="title" type="string"/>
+      <property name="text" column="title_text" type="string"/>
+      <property name="score" column="title_score" type="int"/>
+      <property name="date" column="title_submission_date" type="date"/>
+   </class>
+</hibernate-mapping>

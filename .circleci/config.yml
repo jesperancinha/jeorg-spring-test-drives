@@ -1,8 +1,3 @@
-# Java Maven CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-java/ for more details
-#
-
 version: 2
 machine: true
 jobs:
@@ -10,24 +5,15 @@ jobs:
     machine:
       image: ubuntu-2004:202010-01
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
     environment:
-      # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
 
     steps:
       - checkout
 
-      # Download and cache dependencies
-
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "pom.xml" }}
-            # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
       - save_cache:
@@ -35,7 +21,10 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      # run tests!
+      - run:
+          name: JDK17 installation
+          command: wget https://download.oracle.com/java/17/archive/jdk-17.0.3.1_linux-x64_bin.tar.gz -O jdk17.tar.gz && tar -xvzf jdk17.tar.gz && mv jdk-17* jdk17 && sudo mv jdk17 /opt/
+
       - run:
           name: All tests
-          command: mvn clean install
+          command: export JAVA_HOME=/opt/jdk17 && export PATH=$PATH::$JAVA_HOME/bin && mvn clean install -DskipTests && mvn test

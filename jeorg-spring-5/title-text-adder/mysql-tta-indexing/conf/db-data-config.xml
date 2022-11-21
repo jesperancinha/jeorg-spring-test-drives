@@ -1,0 +1,10 @@
+<dataConfig>
+  <dataSource type="JdbcDataSource"
+            driver="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/tta_db"
+            user="tta"
+            password="tta" /> 
+  <document>
+    <entity name="id" query="select title_id as id, title, title_text, title_submission_date, title_text_score from titles;" />
+  </document>
+</dataConfig>

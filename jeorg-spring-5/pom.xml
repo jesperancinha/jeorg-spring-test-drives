@@ -18,6 +18,7 @@
         <module>jeorg-spring-flash</module>
         <module>jeorg-spring-apps</module>
         <module>jeorg-spring-action</module>
+        <module>title-text-adder</module>
     </modules>
 
 </project>
