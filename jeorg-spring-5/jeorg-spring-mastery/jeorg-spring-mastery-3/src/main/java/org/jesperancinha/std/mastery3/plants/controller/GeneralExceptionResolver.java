@@ -1,10 +1,9 @@
 package org.jesperancinha.std.mastery3.plants.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 public class GeneralExceptionResolver extends SimpleMappingExceptionResolver {
     @Override
