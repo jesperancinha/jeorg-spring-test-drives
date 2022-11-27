@@ -1,12 +1,10 @@
 package org.jesperancinha.std.app1.jdbc.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 
 @MappedSuperclass
-@Table
 public abstract class CruiseBase {
 
     @Id

@@ -1,9 +1,8 @@
 package org.jesperancinha.std.flash510.bean.initialization;
 
+import jakarta.annotation.PostConstruct;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.beans.factory.InitializingBean;
-
-import javax.annotation.PostConstruct;
 
 import static org.jesperancinha.std.flash510.bean.initialization.SpringFlash510Launcher.atomicInteger;
 

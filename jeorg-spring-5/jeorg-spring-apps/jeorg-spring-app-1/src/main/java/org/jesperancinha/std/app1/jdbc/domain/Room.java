@@ -1,8 +1,8 @@
 package org.jesperancinha.std.app1.jdbc.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Table
 @Entity

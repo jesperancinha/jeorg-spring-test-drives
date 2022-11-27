@@ -1,12 +1,11 @@
 package org.jesperancinha.std.flash318.bean.postprocessor.domain;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import lombok.Data;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 @Data
 public class Recording implements DisposableBean, InitializingBean {

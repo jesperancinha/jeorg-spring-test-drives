@@ -5,11 +5,8 @@ import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.lang.NonNull;
 import org.springframework.test.context.ActiveProfiles;
@@ -42,9 +39,7 @@ class Flash14ProdHealthIndicatorTest {
         final var request = new HttpEntity<>(headers);
         restTemplate.setErrorHandler(new DefaultResponseErrorHandler() {
             @Override
-            protected void handleError(final @NonNull
-                                               ClientHttpResponse response, final @NonNull
-                                               HttpStatus statusCode) throws IOException {
+            protected void handleError(ClientHttpResponse response, HttpStatusCode statusCode) throws IOException {
                 final String responseText = IOUtils.toString(response.getBody());
                 assertThat(responseText).isNotNull();
                 assertThat(responseText).contains("\"lyrics\":\"Without you what does my life amount to\"");

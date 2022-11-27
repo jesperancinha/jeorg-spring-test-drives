@@ -3,7 +3,7 @@
 ## Introduction
 
 Cruises are a kind of travelling type which involves stepping on a big boad and sail to attractive destinations. It is also a place where people find love (❤️), go with their loved ones, go in a family or go with their other half 🌓. It is place to meet new people, enjoy freedom (🏳️‍🌈), and there
-are different sub-types. Some oriented to family, some oriented to single life, others to bachelor life, etc. In this first app, we will make an application to manage all of this.
+are different subtypes. Some oriented to family, some oriented to single life, others to bachelor life, etc. In this first app, we will make an application to manage all of this.
 
 We won't use the JPA repository magic. Instead, we'll use direct queries against the database.
 

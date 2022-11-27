@@ -10,7 +10,7 @@
 
     <context:annotation-config/>
     <bean
-            class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+            class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
     <bean id="peopleXml" class="org.jesperancinha.std.flash320.bean.required.domain.People">
     </bean>
 

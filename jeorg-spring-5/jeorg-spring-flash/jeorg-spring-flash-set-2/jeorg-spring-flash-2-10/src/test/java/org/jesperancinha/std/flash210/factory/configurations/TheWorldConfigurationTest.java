@@ -16,7 +16,7 @@ class TheWorldConfigurationTest {
     private Material material2;
 
     @Test
-    void testMaterial2whenInjectthenGetMaterial2() {
+    void testMaterial2whenInjectionGetMaterial2() {
         assertThat(material2.getValue()).isEqualTo("If you are strong enough!");
     }
 }

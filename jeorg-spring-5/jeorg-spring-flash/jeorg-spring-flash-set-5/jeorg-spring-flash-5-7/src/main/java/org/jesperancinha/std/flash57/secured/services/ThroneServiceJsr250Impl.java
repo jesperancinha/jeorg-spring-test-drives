@@ -1,12 +1,12 @@
 package org.jesperancinha.std.flash57.secured.services;
 
+import jakarta.annotation.security.RolesAllowed;
 import org.jesperancinha.std.flash57.secured.domain.Throne;
 import org.jesperancinha.std.flash57.secured.dto.ThroneDto;
 import org.jesperancinha.std.flash57.secured.repository.ThroneRepository;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;

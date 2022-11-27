@@ -1,5 +1,6 @@
 package org.jesperancinha.std.mastery3.plants.configuration;
 
+import jakarta.servlet.ServletContext;
 import org.jesperancinha.std.mastery3.plants.controller.GeneralExceptionResolver;
 import org.springframework.beans.BeansException;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
@@ -15,7 +16,6 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
-import javax.servlet.ServletContext;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer, ApplicationContextAware, ServletContextAware {

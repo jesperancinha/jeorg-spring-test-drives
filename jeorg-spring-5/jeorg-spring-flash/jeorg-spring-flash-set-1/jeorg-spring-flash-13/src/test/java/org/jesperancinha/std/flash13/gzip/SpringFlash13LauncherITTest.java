@@ -3,7 +3,7 @@ package org.jesperancinha.std.flash13.gzip;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

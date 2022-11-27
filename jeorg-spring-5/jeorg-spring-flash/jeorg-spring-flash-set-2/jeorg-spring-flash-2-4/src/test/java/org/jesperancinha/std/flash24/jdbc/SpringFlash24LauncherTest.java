@@ -51,7 +51,7 @@ class SpringFlash24LauncherTest {
     private ArgumentCaptor<AbstractFallbackSQLExceptionTranslator> abstractFallbackSQLExceptionTranslatorArgumentCaptor;
 
     @Container
-    static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>("postgres:12")
+    static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>("postgres:14")
             .withUsername("postgres")
             .withPassword("admin")
             .withDatabaseName("db");

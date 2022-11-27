@@ -7,7 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.amqp.RabbitHealthIndicator;
 import org.springframework.boot.actuate.cassandra.CassandraDriverHealthIndicator;
 import org.springframework.boot.actuate.couchbase.CouchbaseHealthIndicator;
-import org.springframework.boot.actuate.elasticsearch.ElasticsearchRestHealthIndicator;
+import org.springframework.boot.actuate.data.mongo.MongoHealthIndicator;
+import org.springframework.boot.actuate.data.redis.RedisHealthIndicator;
 import org.springframework.boot.actuate.hazelcast.HazelcastHealthIndicator;
 import org.springframework.boot.actuate.health.PingHealthIndicator;
 import org.springframework.boot.actuate.influx.InfluxDbHealthIndicator;
@@ -15,10 +16,7 @@ import org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator;
 import org.springframework.boot.actuate.jms.JmsHealthIndicator;
 import org.springframework.boot.actuate.ldap.LdapHealthIndicator;
 import org.springframework.boot.actuate.mail.MailHealthIndicator;
-import org.springframework.boot.actuate.mongo.MongoHealthIndicator;
 import org.springframework.boot.actuate.neo4j.Neo4jHealthIndicator;
-import org.springframework.boot.actuate.redis.RedisHealthIndicator;
-import org.springframework.boot.actuate.solr.SolrHealthIndicator;
 import org.springframework.boot.actuate.system.DiskSpaceHealthIndicator;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -40,7 +38,6 @@ public class JeorgActionActuatorLauncher implements ApplicationRunner {
                 .magenta(CouchbaseHealthIndicator.class)
                 .magenta(DataSourceHealthIndicator.class)
                 .magenta(DiskSpaceHealthIndicator.class)
-                .magenta(ElasticsearchRestHealthIndicator.class)
                 .magenta(HazelcastHealthIndicator.class)
                 .magenta(InfluxDbHealthIndicator.class)
                 .magenta(JmsHealthIndicator.class)
@@ -51,7 +48,6 @@ public class JeorgActionActuatorLauncher implements ApplicationRunner {
                 .magenta(PingHealthIndicator.class)
                 .magenta(RabbitHealthIndicator.class)
                 .magenta(RedisHealthIndicator.class)
-                .magenta(SolrHealthIndicator.class)
                 .reset();
 
     }

@@ -34,9 +34,10 @@ class Flash16ControllerTest {
     }
 
     @Test
-    void testGenericHandleWhenPerformingRequestThenRedirect() throws Exception {
+    @WithMockUser(roles = "ADMIN")
+    void testGenericHandleWhenPerformingRequestThenSuccess() throws Exception {
         mockMvc.perform(get("/"))
-                .andExpect(status().is3xxRedirection())
-                .andExpect(forwardedUrl(null));
+                .andExpect(status().is2xxSuccessful())
+                .andExpect(forwardedUrl("/WEB-INF/jsp/userdata.jsp"));
     }
 }

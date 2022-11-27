@@ -1,15 +1,13 @@
 package org.jesperancinha.std.app1.jdbc.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Table
 @Entity
 public class Cruise extends CruiseBase {
 
     private String name;
-
-    private Boat boat;
 
     public String getName() {
         return name;
@@ -19,11 +17,4 @@ public class Cruise extends CruiseBase {
         this.name = name;
     }
 
-    public Boat getBoat() {
-        return boat;
-    }
-
-    public void setBoat(Boat boat) {
-        this.boat = boat;
-    }
 }

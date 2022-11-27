@@ -22,6 +22,8 @@ public class Details {
     Long threshold;
     @JsonProperty("lyric")
     String lyric;
+    @JsonProperty("path")
+    String path;
     @JsonProperty("exists")
     Boolean exists;
 }

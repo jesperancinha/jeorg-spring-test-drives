@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash34.annotation.web.configuration;
 
+import jakarta.servlet.ServletException;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -12,7 +13,7 @@ import static org.jesperancinha.console.consolerizer.console.ConsolerizerCompose
 public class WebInitializer implements WebApplicationInitializer {
 
     @Override
-    public void onStartup(ServletContext servletContext) {
+    public void onStartup(jakarta.servlet.ServletContext servletContext) {
         final var annotationConfigWebApplicationContext = new AnnotationConfigWebApplicationContext();
         annotationConfigWebApplicationContext.register(WebConfig.class);
         ConsolerizerComposer.outSpace()
@@ -26,5 +27,6 @@ public class WebInitializer implements WebApplicationInitializer {
                 "dispatcher", new DispatcherServlet(annotationConfigWebApplicationContext));
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
+
     }
 }

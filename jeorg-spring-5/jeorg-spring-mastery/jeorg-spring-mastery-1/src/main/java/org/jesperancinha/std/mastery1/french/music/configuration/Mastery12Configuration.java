@@ -1,5 +1,6 @@
 package org.jesperancinha.std.mastery1.french.music.configuration;
 
+import jakarta.annotation.PostConstruct;
 import org.jesperancinha.std.mastery1.french.music.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -8,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Configuration

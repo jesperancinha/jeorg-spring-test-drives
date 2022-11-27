@@ -1,10 +1,9 @@
 package org.jesperancinha.std.action.mvc2.view;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.view.AbstractView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.PrintWriter;
 import java.util.Map;
 
 import static org.springframework.http.MediaType.TEXT_HTML_VALUE;

@@ -1,5 +1,7 @@
 package org.jesperancinha.std.flash19.transactional.controllers;
 
+import jakarta.servlet.ServletException;
+import org.jesperancinha.std.flash19.transactional.containers.AbstractTestContainersIT;
 import org.jesperancinha.std.flash19.transactional.domain.Album;
 import org.jesperancinha.std.flash19.transactional.dto.AlbumDto;
 import org.jesperancinha.std.flash19.transactional.repos.AlbumRepository;
@@ -22,7 +24,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 @WebMvcTest(AlbumController.class)
 @EnableTransactionManagement
-@ContextConfiguration(classes = {AlbumServiceImpl.class, AlbumController.class})
+@ContextConfiguration(classes = {AlbumServiceImpl.class, AlbumController.class}, initializers = AbstractTestContainersIT.DockerPostgresDataInitializer.class)
 class AlbumControllerTest {
 
     @Autowired
@@ -52,7 +54,7 @@ class AlbumControllerTest {
 
         when(albumRepository.save(any(Album.class))).thenAnswer(invocationOnMock -> invocationOnMock.getArguments()[0]);
 
-        assertThrows(NestedServletException.class,
+        assertThrows(ServletException.class,
                 () -> mockMvc.perform(post("/create/albumRollback")
                         .header("name", "The Abbey Road Sessions")
                         .header("artist", "Kylie Minogue")

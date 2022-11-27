@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash219.beans.configuration;
 
+import jakarta.annotation.PreDestroy;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash219.beans.domain.Nut;
 import org.junit.jupiter.api.Test;
@@ -13,8 +14,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import javax.annotation.PreDestroy;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BROWN;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;

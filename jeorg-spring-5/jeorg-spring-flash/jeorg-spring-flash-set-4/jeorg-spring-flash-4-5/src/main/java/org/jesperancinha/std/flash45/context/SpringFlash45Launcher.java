@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash45.context;
 
+import jakarta.servlet.ServletContext;
 import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.boot.CommandLineRunner;
@@ -11,7 +12,6 @@ import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import javax.servlet.ServletContext;
 import java.time.LocalDateTime;
 
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
