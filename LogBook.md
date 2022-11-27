@@ -7,6 +7,11 @@ changed and may not reflect accurate descriptions.
 From this day onwards I will make sure to bring this whole project up to dat as much as possible but please expect some
 discrepancies.
 
+Exercises and themes removed:
+
+1. WebSecurityAdapter - This has been migrated to a Security Filter Chain
+2. OAuth2 Resource service - OAuth2 with a resource server (i.e. database with tokens) has finally been deprecated and many functionalities have been removed. Modules 4-8 and 4-9 have been namely removed.
+
 ### Communication 1
 
 It is important to take note that none of the examples presented are thought to become production versions of any sort
