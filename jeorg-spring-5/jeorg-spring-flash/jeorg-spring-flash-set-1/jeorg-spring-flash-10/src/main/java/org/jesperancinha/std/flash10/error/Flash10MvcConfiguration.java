@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
 import java.util.Properties;
@@ -14,7 +13,7 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BR
 @Configuration
 @EnableWebMvc
 @Profile("prod")
-public class Flash10MvcConfiguration extends WebMvcConfigurerAdapter {
+public class Flash10MvcConfiguration {
     @Bean(name = "simpleMappingExceptionResolver")
     public SimpleMappingExceptionResolver
     createSimpleMappingExceptionResolver() {
