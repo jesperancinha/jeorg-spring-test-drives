@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash511.actuator.sessions;
 
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 import java.util.List;
 import java.util.stream.Collectors;
 

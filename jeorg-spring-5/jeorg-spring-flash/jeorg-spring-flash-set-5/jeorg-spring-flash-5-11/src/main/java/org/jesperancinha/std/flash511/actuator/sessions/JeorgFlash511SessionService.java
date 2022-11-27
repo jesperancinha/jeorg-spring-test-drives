@@ -2,7 +2,7 @@ package org.jesperancinha.std.flash511.actuator.sessions;
 
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
