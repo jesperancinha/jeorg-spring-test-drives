@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -30,7 +29,7 @@ public class Mastery2PortugueseMusicLauncher implements CommandLineRunner {
     @Value("${management.server.port}")
     private Long actuatorPort;
 
-    @LocalServerPort
+    @Value("${server.port}")
     private Long serverPort;
 
     public Mastery2PortugueseMusicLauncher(PublisherRepository publisherRepository, ApplicationContext applicationContext) {
