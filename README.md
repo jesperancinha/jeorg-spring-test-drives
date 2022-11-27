@@ -52,6 +52,8 @@ SPRING study project.
 
 The purpose of this project is to keep up with the development of the Spring Framework
 
+See [Log Book](./LogBook.md) for further details.
+
 ## Contents
 
 1.  [Spring 5](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
