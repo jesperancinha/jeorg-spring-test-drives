@@ -17,11 +17,9 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GR
 public class Flash17CSRFConfigurationAdapter {
 
     private JdbcUserDetailsManager jdbcUserDetailsManager;
-    private PasswordEncoder passwordEncoder;
 
-    public Flash17CSRFConfigurationAdapter(final JdbcUserDetailsManager jdbcUserDetailsManager, final PasswordEncoder passwordEncoder) {
+    public Flash17CSRFConfigurationAdapter(final JdbcUserDetailsManager jdbcUserDetailsManager) {
         this.jdbcUserDetailsManager = jdbcUserDetailsManager;
-        this.passwordEncoder = passwordEncoder;
     }
 
 
@@ -31,7 +29,8 @@ public class Flash17CSRFConfigurationAdapter {
         GREEN.printGenericLn("Note that ADMIN in this case is a short statement for ROLE_ADMIN");
         GREEN.printGenericLn("When we assign our SimpleGrantedAuthority to our Authentication, we give it a role as parameter");
         GREEN.printGenericLn("The role is an extended name. In our case it will be ROLE_ADMIN");
-        return http.userDetailsService(jdbcUserDetailsManager)
+        return http
+                .userDetailsService(jdbcUserDetailsManager)
                 .authorizeRequests()
                 .requestMatchers("/open/**")
                 .permitAll()

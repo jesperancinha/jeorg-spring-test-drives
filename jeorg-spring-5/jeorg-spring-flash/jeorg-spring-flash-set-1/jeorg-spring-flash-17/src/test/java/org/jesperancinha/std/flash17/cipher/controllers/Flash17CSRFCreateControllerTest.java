@@ -1,13 +1,17 @@
 package org.jesperancinha.std.flash17.cipher.controllers;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.jesperancinha.std.flash17.cipher.configuration.Flash17CSRFConfigurationAdapter;
+import org.jesperancinha.std.flash17.cipher.configuration.Flash17ConfigurationAdapter;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -28,6 +32,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ActiveProfiles("test")
 @WebMvcTest({Flash17CSRFCreateController.class, Flash17Controller.class})
 @MockBean(classes = {DataSource.class})
+@AutoConfigureMockMvc
+@Import(Flash17CSRFConfigurationAdapter.class)
 class Flash17CSRFCreateControllerTest {
 
     @Autowired
