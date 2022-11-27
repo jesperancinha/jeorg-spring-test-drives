@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash214.transactions.model;
 
-import javax.persistence.AttributeConverter;
+import jakarta.persistence.AttributeConverter;
 import java.util.Objects;
 
 public class MovieAppearanceConverter implements AttributeConverter<String[], String> {
