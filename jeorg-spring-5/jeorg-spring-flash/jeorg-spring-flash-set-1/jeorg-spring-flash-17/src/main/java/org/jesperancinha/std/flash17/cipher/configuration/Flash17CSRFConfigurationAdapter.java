@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -16,7 +15,7 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GR
 @EnableWebSecurity
 public class Flash17CSRFConfigurationAdapter {
 
-    private JdbcUserDetailsManager jdbcUserDetailsManager;
+    private final JdbcUserDetailsManager jdbcUserDetailsManager;
 
     public Flash17CSRFConfigurationAdapter(final JdbcUserDetailsManager jdbcUserDetailsManager) {
         this.jdbcUserDetailsManager = jdbcUserDetailsManager;

@@ -34,7 +34,7 @@ class CarRepositoryTest {
     private CarRepository carRepository;
 
     @Container
-    protected static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>("postgres:12")
+    protected static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>("postgres:14")
             .withUsername("postgres")
             .withPassword("admin")
             .withDatabaseName("db");
