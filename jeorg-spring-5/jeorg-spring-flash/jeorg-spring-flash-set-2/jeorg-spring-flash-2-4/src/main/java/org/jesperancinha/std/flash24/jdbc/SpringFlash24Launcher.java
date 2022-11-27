@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash24.jdbc;
 
+import jakarta.validation.constraints.NotNull;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash24.jdbc.template.Concert;
 import org.jesperancinha.std.flash24.jdbc.template.CustomDataAccessException;
@@ -12,18 +13,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.constraints.NotNull;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.*;
 
 @SpringBootApplication
 @RestController

@@ -1,7 +1,5 @@
 package org.jesperancinha.std.flash320.bean.required.domain;
 
-import org.springframework.beans.factory.annotation.Required;
-
 public class People {
     public String slogan;
 
@@ -22,7 +20,6 @@ public class People {
         return slogan;
     }
 
-    @Required
     public void setSlogan(String slogan) {
         this.slogan = slogan;
     }
@@ -31,7 +28,6 @@ public class People {
         return homesick;
     }
 
-    @Required
     public void setHomesick(Boolean homesick) {
         this.homesick = homesick;
     }
@@ -40,7 +36,6 @@ public class People {
         return coldAs;
     }
 
-    @Required
     public void setColdAs(String coldAs) {
         this.coldAs = coldAs;
     }

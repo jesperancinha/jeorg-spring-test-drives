@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash54.bean;
 
+import jakarta.annotation.PreDestroy;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.mock.mockito.SpyBean;
@@ -7,8 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import javax.annotation.PreDestroy;
 
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;

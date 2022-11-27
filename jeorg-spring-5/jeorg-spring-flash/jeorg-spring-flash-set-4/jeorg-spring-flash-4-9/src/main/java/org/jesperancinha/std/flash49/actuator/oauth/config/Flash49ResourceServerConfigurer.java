@@ -39,11 +39,11 @@ public class Flash49ResourceServerConfigurer extends ResourceServerConfigurerAda
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/open/**")
+                .requestMatchers("/open/**")
                 .permitAll()
-                .mvcMatchers("/auditevents/**")
+                .requestMatchers("/auditevents/**")
                 .permitAll()
-                .mvcMatchers("/concerts/**")
+                .requestMatchers("/concerts/**")
                 .authenticated()
                 .and()
                 .exceptionHandling()

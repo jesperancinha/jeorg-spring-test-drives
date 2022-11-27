@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash49.actuator;
 
+import jakarta.validation.constraints.NotNull;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.boot.actuate.audit.AuditEventRepository;
@@ -9,7 +10,6 @@ import org.springframework.security.authentication.event.AbstractAuthenticationE
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.NotNull;
 import java.util.Objects;
 import java.util.Optional;
 

@@ -11,7 +11,7 @@ import static org.springframework.boot.autoconfigure.condition.ConditionalOnJava
 @Profile("prod")
 @Configuration
 @ConditionalOnJava(range = EQUAL_OR_NEWER,
-        value = JavaVersion.ELEVEN)
+        value = JavaVersion.SEVENTEEN)
 public class Dance16Configuration {
 
     public Dance16Configuration() {

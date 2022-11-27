@@ -1,13 +1,13 @@
 package org.jesperancinha.std.flash17.cipher.configuration;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
@@ -15,7 +15,7 @@ import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GR
 @Profile("prod")
 @Configuration
 @EnableWebSecurity
-public class Flash17ConfigurationAdapter extends WebSecurityConfigurerAdapter {
+public class Flash17ConfigurationAdapter {
 
     private JdbcUserDetailsManager jdbcUserDetailsManager;
     private PasswordEncoder passwordEncoder;
@@ -25,17 +25,9 @@ public class Flash17ConfigurationAdapter extends WebSecurityConfigurerAdapter {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/open/**")
-                .permitAll()
-                .antMatchers("/**").hasRole("ADMIN")
-                .anyRequest()
-                .authenticated()
-                .and()
-                .formLogin()
-                .and().csrf().disable();
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
         GREEN.printGenericLn("We disable CSRF given that it interferes with POST requests");
         BLUE.printGenericLn("From: https://docs.spring.io/spring-security/site/docs/3.2.0.CI-SNAPSHOT/reference/html/csrf.html");
         BLUE.printGenericLn("13.3 When to use CSRF protection\n" +
@@ -43,11 +35,18 @@ public class Flash17ConfigurationAdapter extends WebSecurityConfigurerAdapter {
         GREEN.printGenericLn("Note that ADMIN in this case is a short statement for ROLE_ADMIN");
         GREEN.printGenericLn("When we assign our SimpleGrantedAuthority to our Authentication, we give it a role as parameter");
         GREEN.printGenericLn("The role is an extended name. In our case it will be ROLE_ADMIN");
-    }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(jdbcUserDetailsManager).passwordEncoder(passwordEncoder);
+        return http
+                .userDetailsService(jdbcUserDetailsManager)
+                .authorizeRequests()
+                .requestMatchers("/open/**")
+                .permitAll()
+                .requestMatchers("/**").hasRole("ADMIN")
+                .anyRequest()
+                .authenticated()
+                .and()
+                .formLogin()
+                .and().csrf().disable().build();
     }
 
 }
