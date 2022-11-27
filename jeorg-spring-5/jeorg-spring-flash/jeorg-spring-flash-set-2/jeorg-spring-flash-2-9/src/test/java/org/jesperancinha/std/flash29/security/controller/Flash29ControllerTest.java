@@ -1,6 +1,7 @@
 package org.jesperancinha.std.flash29.security.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jesperancinha.std.flash29.security.configuration.Flash29ConfigurationAdapter;
 import org.jesperancinha.std.flash29.security.dto.JewelDto;
 import org.jesperancinha.std.flash29.security.repository.JewelRepository;
 import org.jesperancinha.std.flash29.security.services.JewelService;
@@ -11,6 +12,7 @@ import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.test.context.support.WithMockUser;
@@ -39,9 +41,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Tests for the controller
  * We are testing all REST methods necessary to manage our jewels
- * Note that for all of the non failing cases, we always need minimally one logged in user at lease, regarless of roles or jewel posession.
+ * Note that for all the non failing cases, we always need minimally one logged in user at lease, regarless of roles or jewel posession.
  */
 @WebMvcTest(controllers = Flash29Controller.class)
+@Import(Flash29ConfigurationAdapter.class)
 class Flash29ControllerTest {
 
     @Autowired
