@@ -11,7 +11,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 @Configuration
-@EnableWebSecurity
 public class Flash311ConfigurationAdapter {
 
     @Bean
@@ -24,18 +23,16 @@ public class Flash311ConfigurationAdapter {
         return http
                 .authenticationProvider(new Flash311AuthenticationProvider())
                 .authorizeRequests()
+                .requestMatchers("/admin/**").hasRole("RED")
+                .requestMatchers("/user/**").hasRole("BLUE")
+                .requestMatchers("/")
+                .authenticated()
                 .requestMatchers("/normal/**")
                 .permitAll()
                 .requestMatchers(HttpMethod.GET, "/static/test.html")
                 .authenticated()
                 .requestMatchers(HttpMethod.GET, "/static/index.html")
                 .permitAll()
-                .requestMatchers("/admin/**").hasRole("RED")
-                .requestMatchers("/admin/**")
-                .authenticated()
-                .requestMatchers("/user/**").hasRole("BLUE")
-                .requestMatchers("/user/**")
-                .authenticated()
                 .and()
                 .formLogin().defaultSuccessUrl("/static/index.html", true)
                 .and().build();
