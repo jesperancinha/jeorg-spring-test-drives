@@ -114,6 +114,7 @@
         <testcontainers.version>1.17.6</testcontainers.version>
         <omni-coveragereporter-maven-plugin.version>0.3.0</omni-coveragereporter-maven-plugin.version>
         <kotlinx-coroutines-debug.version>1.6.4</kotlinx-coroutines-debug.version>
+        <jakarta.servlet.jsp.jstl-api.version>3.0.0</jakarta.servlet.jsp.jstl-api.version>
     </properties>
 
     <build>
@@ -264,6 +265,16 @@
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.servlet.jsp.jstl</groupId>
+                <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+                <version>${jakarta.servlet.jsp.jstl-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb-api.version}</version>
             </dependency>
 
             <dependency>
