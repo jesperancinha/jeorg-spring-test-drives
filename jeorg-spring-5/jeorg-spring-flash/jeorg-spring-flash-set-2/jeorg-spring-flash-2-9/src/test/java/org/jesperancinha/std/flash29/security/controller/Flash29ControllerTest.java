@@ -41,7 +41,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Tests for the controller
  * We are testing all REST methods necessary to manage our jewels
- * Note that for all the non failing cases, we always need minimally one logged in user at lease, regarless of roles or jewel posession.
+ * Note that for all the non failing cases, we always need minimally one logged-in user at lease, regardless of roles or jewel possession.
  */
 @WebMvcTest(controllers = Flash29Controller.class)
 @Import(Flash29ConfigurationAdapter.class)
