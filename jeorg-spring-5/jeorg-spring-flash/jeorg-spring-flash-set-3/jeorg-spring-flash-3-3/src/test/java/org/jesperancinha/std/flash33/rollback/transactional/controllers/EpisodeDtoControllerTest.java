@@ -57,7 +57,7 @@ class EpisodeDtoControllerTest {
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
                 .hasCauseInstanceOf(EpisodeException.class)
-                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException");
+                .hasMessage("Request processing failed: org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException");
 
         verify(episodeService, only()).createEpisode(episodeDto);
     }
@@ -84,7 +84,7 @@ class EpisodeDtoControllerTest {
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
                 .hasCauseInstanceOf(VideoCountryException.class)
-                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
+                .hasMessage("Request processing failed: org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
 
         verify(episodeService, only()).createEpisodeExceptionRollback(episodeDto);
     }
@@ -111,7 +111,7 @@ class EpisodeDtoControllerTest {
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
                 .hasCauseInstanceOf(VideoCountryException.class)
-                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
+                .hasMessage("Request processing failed: org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
 
         verify(episodeService, only()).createEpisodeExceptionNoRollback(episodeDto);
     }
@@ -138,7 +138,7 @@ class EpisodeDtoControllerTest {
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
                 .hasCauseInstanceOf(VideoCountryException.class)
-                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
+                .hasMessage("Request processing failed: org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
 
         verify(episodeService, only()).createEpisodeMixRollback(episodeDto);
     }
@@ -165,7 +165,7 @@ class EpisodeDtoControllerTest {
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(episodeDto))))
                 .hasCauseInstanceOf(VideoCountryException.class)
-                .hasMessage("Request processing failed; nested exception is org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
+                .hasMessage("Request processing failed: org.jesperancinha.std.flash33.rollback.transactional.exceptions.VideoCountryException");
 
         verify(episodeService, only()).createEpisodeMixNoRollback(episodeDto);
     }
