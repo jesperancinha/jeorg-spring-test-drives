@@ -1,7 +1,7 @@
 package org.jesperancinha.std.app1.jdbc.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 import java.util.List;
 
 @Table
@@ -9,8 +9,6 @@ import java.util.List;
 public class Boat extends CruiseBase {
 
     private String name;
-
-    private List<Room> roomList;
 
     public String getName() {
         return name;
@@ -20,11 +18,4 @@ public class Boat extends CruiseBase {
         this.name = name;
     }
 
-    public List<Room> getRoomList() {
-        return roomList;
-    }
-
-    public void setRoomList(List<Room> roomList) {
-        this.roomList = roomList;
-    }
 }

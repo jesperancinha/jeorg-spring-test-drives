@@ -3,10 +3,8 @@ package org.jesperancinha.std.app1.jdbc.domain;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.Table;
 
 @MappedSuperclass
-@Table
 public abstract class CruiseBase {
 
     @Id

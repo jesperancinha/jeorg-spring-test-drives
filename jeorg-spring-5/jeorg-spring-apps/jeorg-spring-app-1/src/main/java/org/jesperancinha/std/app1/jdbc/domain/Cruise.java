@@ -9,8 +9,6 @@ public class Cruise extends CruiseBase {
 
     private String name;
 
-    private Boat boat;
-
     public String getName() {
         return name;
     }
@@ -19,11 +17,4 @@ public class Cruise extends CruiseBase {
         this.name = name;
     }
 
-    public Boat getBoat() {
-        return boat;
-    }
-
-    public void setBoat(Boat boat) {
-        this.boat = boat;
-    }
 }
