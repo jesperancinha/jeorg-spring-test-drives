@@ -1,4 +1,4 @@
-name: jeorg-spring-5-test-drives-pull-request
+name: jeorg-spring-test-drives-pull-request
 
 on:
   pull_request:
