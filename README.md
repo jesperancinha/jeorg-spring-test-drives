@@ -54,6 +54,12 @@ The purpose of this project is to keep up with the development of the Spring Fra
 
 See [Log Book](./LogBook.md) for further details.
 
+#### Stable releases
+
+- [1.0.0](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/1.0.0) - [395d79e218595e57365c7ad9723c2aa20ad77881](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/1.0.0) - Spring boot 2.7.5
+- [2.0.0](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/2.0.0) - [179ec86df1033b9d551621173751bd60590da775](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/2.0.0) - Spring boot 3.0.0
+
+
 ## Contents
 
 1.  [Spring](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
