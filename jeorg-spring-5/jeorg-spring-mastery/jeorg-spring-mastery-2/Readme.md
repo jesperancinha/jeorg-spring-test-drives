@@ -1,4 +1,4 @@
-# jeorg-spring-kotlin-mastery-1 - Spring Mastery Kotlin 1
+# jeorg-spring-mastery-2 - Spring Mastery 2
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
@@ -9,37 +9,35 @@
 
 ## Description
 
-Spring Mastery Kotlin 1
+Portuguese language in music 🇵🇹
 
 Topics covered:
 
-1.  `@RestController`, `@GetMapping`, `@RequestMapping`
-2.  `listOf`
-3.  `logging.level`
-4.  `management.endpoint.health.enabled=true` `management.endpoint.httptrace.enabled=true` `management.endpoint.info.enabled=true` `management.endpoint.metrics.enabled=true`
-5.  `BeanPostProcessor`
-6.  `BeanFactoryPostProcessor`
+1.  `application.properties`, `H2 database`
+2.  `@LocalServerPort`, `@Value`
+3.  `FilterChainProxy`, `springSecurityFilterChain`
+4.  `@WithMockUser(username = "admin", password = "admin", roles = "ADMIN", value = "admin")`
+5.  `import org.springframework.test.context.jdbc.Sql`, `import org.springframework.test.context.jdbc.SqlGroup`
+6.  `DatabasePopulator`
+7.  `populate`
 
 ## Endpoints
 
 ## Command line requests
 
-1.  [http://localhost:8080/movies/thesoundofmusic](http://localhost:8080/movies/thesoundofmusic)
-2.  [http://localhost:8080/movies/list](http://localhost:8080/movies/list)
-3.  [http://localhost:8081/actuator](http://localhost:8081/actuator)
-4.  [http://localhost:8081/actuator/health](http://localhost:8081/actuator/health)
-5.  [http://localhost:8081/actuator/info](http://localhost:8081/actuator/info)
-
-## Profiles
-
-1.  test
-    1.  Almost all logs deactivated. Here the focus is to look at the Consolerizer logs
-2.  prod
-    1.  All logs from `org.jesperancinha` are on TRACE level
-3.  default
-    1.  All in TRACE log level
-
 ## How to run
+
+1.  Running with the default profile
+
+```bash
+mvn clean install spring-boot:run
+```
+
+2.  Running with the prod profile
+
+```bash
+mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
+```
 
 ## References
 
@@ -52,25 +50,74 @@ Topics covered:
 
 ### Context
 
--   [The Sound of Music (film)](https://en.wikipedia.org/wiki/The_Sound_of_Music_(film))
+-   [EMI](https://en.wikipedia.org/wiki/EMI)
 
 <div align="center">
-      <a title="The Sound Of Music" href="https://www.youtube.com/watch?v=LhIfV67Fnc8">
+      <a title="António Variações última atuação em televisão." href="https://www.youtube.com/watch?v=6YkR1WRsXZo">
      <img 
-          src="https://img.youtube.com/vi/LhIfV67Fnc8/0.jpg" 
+          src="https://img.youtube.com/vi/6YkR1WRsXZo/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="António Variações - O corpo é que paga" href="https://www.youtube.com/watch?v=h7CyAKyE-FM">
+     <img 
+          src="https://img.youtube.com/vi/h7CyAKyE-FM/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="António Variações | Povo que lavas no rio" href="https://www.youtube.com/watch?v=Sxjasfl2Y_w">
+     <img 
+          src="https://img.youtube.com/vi/Sxjasfl2Y_w/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Eurovision Portugal 1981 - Carlos Paião - Play Back" href="https://www.youtube.com/watch?v=GhXf9ZO06U0">
+     <img 
+          src="https://img.youtube.com/vi/GhXf9ZO06U0/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Taxi - Cairo" href="https://www.youtube.com/watch?v=JCaD2qQXG8I">
+     <img 
+          src="https://img.youtube.com/vi/JCaD2qQXG8I/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Táxi - Chiclete" href="https://www.youtube.com/watch?v=qc0ZwEDGq6U">
+     <img 
+          src="https://img.youtube.com/vi/qc0ZwEDGq6U/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Pedro Abrunhosa & Os Bandemónio - Tudo O Que Eu Te Dou" href="https://www.youtube.com/watch?v=CN-esU1WCw0">
+     <img 
+          src="https://img.youtube.com/vi/CN-esU1WCw0/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Xutos e Pontapés - Contentores" href="https://www.youtube.com/watch?v=ImeAInvGrY4">
+     <img 
+          src="https://img.youtube.com/vi/ImeAInvGrY4/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Sétima Legião - SETE MARES - 7 SEAS" href="https://www.youtube.com/watch?v=NmlDjghuTsw">
+     <img 
+          src="https://img.youtube.com/vi/NmlDjghuTsw/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="SÉTIMA LEGIÃO - Por quem não esqueci" href="https://www.youtube.com/watch?v=BHsKYG-Cs60">
+     <img 
+          src="https://img.youtube.com/vi/BHsKYG-Cs60/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Radio Macau - Amanhã é sempre longe demais" href="https://www.youtube.com/watch?v=734ywSpCrc0">
+     <img 
+          src="https://img.youtube.com/vi/734ywSpCrc0/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="MLER IFE DADA - Zuvi Zeva Novi" href="https://www.youtube.com/watch?v=vKLlEOO33ko">
+     <img 
+          src="https://img.youtube.com/vi/vKLlEOO33ko/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
--   https://kb.objectrocket.com/postgresql/how-to-import-a-json-file-into-postgresql-database-cluster-1437
--   https://stackoverflow.com/questions/39224382/how-can-i-import-a-json-file-into-postgresql
--   https://stackoverflow.com/questions/58623291/how-to-restore-database-from-dump-or-sql-file-in-docker-using-volume
-
 ### Online
 
--   [Codecov Kotlin Setup Exammple](https://github.com/codecov/example-kotlin/blob/master/pom.xml)
--   [3. Data Access with JDBC](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#jdbc)
--   [Spring BeanPostProcessor Example](https://howtodoinjava.com/spring-core/spring-bean-post-processors/)
+-   [Spring Security - Understanding Spring Security Configuration and components](https://www.logicbig.com/tutorials/spring-framework/spring-security/spring-security-components-and-configuration.html)
 -   [Spring Security Password Encoding](https://www.concretepage.com/spring-5/spring-security-password-encoding)
 -   [How does a JPA Proxy work and how to unproxy it with Hibernate](https://vladmihalcea.com/how-does-a-jpa-proxy-work-and-how-to-unproxy-it-with-hibernate/)
 -   [Spring - Using TransactionTemplate](https://www.logicbig.com/tutorials/spring-framework/spring-data-access-with-jdbc/transaction-template.html)
@@ -160,47 +207,47 @@ Topics covered:
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/sessionize-20.png "Sessionize")](https://sessionize.com/joao-esperancinha/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/bmc-20.png "Buy me a Coffe")](https://www.buymeacoffee.com/jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/credly-20.png "Credly")](https://www.credly.com/users/joao-esperancinha)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=WWW&message=joaofilipesabinoesperancinha.nl&color=6495ED "João Esperancinha Homepage")](https://joaofilipesabinoesperancinha.nl/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/google-apps-20.png "Google Apps")](https://play.google.com/store/apps/developer?id=Joao+Filipe+Sabino+Esperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/sonatype-20.png "Sonatype Search Repos")](https://search.maven.org/search?q=org.jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/docker-20.png "Docker Images")](https://hub.docker.com/u/jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/stack-overflow-20.png)](https://stackoverflow.com/users/3702839/joao-esperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/reddit-20.png "Reddit")](https://www.reddit.com/user/jesperancinha/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/devto-20.png "Dev To")](https://dev.to/jofisaes)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/hackernoon-20.jpeg "Hackernoon")](https://hackernoon.com/@jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/codeproject-20.png "Code Project")](https://www.codeproject.com/Members/jesperancinha)
 [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=Jesperancinha&style=social "GitHub")](https://github.com/jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/bitbucket-20.png "BitBucket")](https://bitbucket.org/jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/gitlab-20.png "GitLab")](https://gitlab.com/jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/coursera-20.png "Coursera")](https://www.coursera.org/user/da3ff90299fa9297e283ee8e65364ffb)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/free-code-camp-20.jpg "FreeCodeCamp")](https://www.freecodecamp.org/jofisaes)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/hackerrank-20.png "HackerRank")](https://www.hackerrank.com/jofisaes)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/leet-code-20.png "LeetCode")](https://leetcode.com/jofisaes)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/codebyte-20.png "Codebyte")](https://coderbyte.com/profile/jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/codewars-20.png "CodeWars")](https://www.codewars.com/users/jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/codepen-20.png "Code Pen")](https://codepen.io/jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/hacker-earth-20.png "Hacker Earth")](https://www.hackerearth.com/@jofisaes)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/khan-academy-20.png "Khan Academy")](https://www.khanacademy.org/profile/jofisaes)
 [![Twitter Follow](https://img.shields.io/twitter/follow/joaofse?label=João%20Esperancinha&style=social "Twitter")](https://twitter.com/joaofse)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/mastodon-20.png "Mastodon")](https://masto.ai/@jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/hacker-news-20.png "Hacker News")](https://news.ycombinator.com/user?id=jesperancinha)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/infoq-20.png "InfoQ")](https://www.infoq.com/profile/Joao-Esperancinha.2/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/linkedin-20.png "LinkedIn")](https://www.linkedin.com/in/joaoesperancinha/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/xing-20.png "Xing")](https://www.xing.com/profile/Joao_Esperancinha/cv)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/tumblr-20.png "Tumblr")](https://jofisaes.tumblr.com/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/pinterest-20.png "Pinterest")](https://nl.pinterest.com/jesperancinha/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/quora-20.png "Quora")](https://nl.quora.com/profile/Jo%C3%A3o-Esperancinha)
-[![VMware Spring Professional 2021](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/vmware-spring-professional-2021-20.png "VMware Spring Professional 2021")](https://www.credly.com/badges/762fa7a4-9cf4-417d-bd29-7e072d74cdb7)
-[![Oracle Certified Professional, JEE 7 Developer](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/oracle-certified-professional-java-ee-7-application-developer-20.png "Oracle Certified Professional, JEE7 Developer")](https://www.credly.com/badges/27a14e06-f591-4105-91ca-8c3215ef39a2)
-[![Oracle Certified Professional, Java SE 11 Programmer](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/oracle-certified-professional-java-se-11-developer-20.png "Oracle Certified Professional, Java SE 11 Programmer")](https://www.credly.com/badges/87609d8e-27c5-45c9-9e42-60a5e9283280)
-[![IBM Cybersecurity Analyst Professional](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/ibm-cybersecurity-analyst-professional-certificate-20.png "IBM Cybersecurity Analyst Professional")](https://www.credly.com/badges/ad1f4abe-3dfa-4a8c-b3c7-bae4669ad8ce)
-[![Certified Advanced JavaScript Developer](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/cancanit-badge-1462-20.png "Certified Advanced JavaScript Developer")](https://cancanit.com/certified/1462/)
-[![Certified Neo4j Professional](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/professional_neo4j_developer-20.png "Certified Neo4j Professional")](https://graphacademy.neo4j.com/certificates/c279afd7c3988bd727f8b3acb44b87f7504f940aac952495ff827dbfcac024fb.pdf)
-[![Deep Learning](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/badges/deep-learning-20.png "Deep Learning")](https://www.credly.com/badges/8d27e38c-869d-4815-8df3-13762c642d64)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEsperancinhaOrg&color=yellow "jesperancinha.org dependencies")](https://github.com/JEsperancinhaOrg)
+| [Sessionize](https://sessionize.com/joao-esperancinha/)
+| [Spotify](https://open.spotify.com/user/jlnozkcomrxgsaip7yvffpqqm?si=b54b89eae8894960)
+| [Medium](https://medium.com/@jofisaes)
+| [Buy me a coffee](https://www.buymeacoffee.com/jesperancinha)
+| [Credly Badges](https://www.credly.com/users/joao-esperancinha)
+| [Google Apps](https://play.google.com/store/apps/developer?id=Joao+Filipe+Sabino+Esperancinha)
+| [Sonatype Search Repos](https://search.maven.org/search?q=org.jesperancinha)
+| [Docker Images](https://hub.docker.com/u/jesperancinha)
+| [Stack Overflow Profile](https://stackoverflow.com/users/3702839/joao-esperancinha)
+| [Reddit](https://www.reddit.com/user/jesperancinha/)
+| [Dev.TO](https://dev.to/jofisaes)
+| [Hackernoon](https://hackernoon.com/@jesperancinha)
+| [Code Project](https://www.codeproject.com/Members/jesperancinha)
+| [BitBucket](https://bitbucket.org/jesperancinha)
+| [GitLab](https://gitlab.com/jesperancinha)
+| [Coursera](https://www.coursera.org/user/da3ff90299fa9297e283ee8e65364ffb)
+| [FreeCodeCamp](https://www.freecodecamp.org/jofisaes)
+| [HackerRank](https://www.hackerrank.com/jofisaes)
+| [LeetCode](https://leetcode.com/jofisaes)
+| [Codebyte](https://coderbyte.com/profile/jesperancinha)
+| [CodeWars](https://www.codewars.com/users/jesperancinha)
+| [Code Pen](https://codepen.io/jesperancinha)
+| [Hacker Earth](https://www.hackerearth.com/@jofisaes)
+| [Khan Academy](https://www.khanacademy.org/profile/jofisaes)
+| [Hacker News](https://news.ycombinator.com/user?id=jesperancinha)
+| [InfoQ](https://www.infoq.com/profile/Joao-Esperancinha.2/)
+| [LinkedIn](https://www.linkedin.com/in/joaoesperancinha/)
+| [Xing](https://www.xing.com/profile/Joao_Esperancinha/cv)
+| [Tumblr](https://jofisaes.tumblr.com/)
+| [Pinterest](https://nl.pinterest.com/jesperancinha/)
+| [Quora](https://nl.quora.com/profile/Jo%C3%A3o-Esperancinha)
+| [VMware Spring Professional 2021](https://www.credly.com/badges/762fa7a4-9cf4-417d-bd29-7e072d74cdb7)
+| [Oracle Certified Professional, Java SE 11 Programmer](https://www.credly.com/badges/87609d8e-27c5-45c9-9e42-60a5e9283280)
+| [Oracle Certified Professional, JEE7 Developer](https://www.credly.com/badges/27a14e06-f591-4105-91ca-8c3215ef39a2)
+| [IBM Cybersecurity Analyst Professional](https://www.credly.com/badges/ad1f4abe-3dfa-4a8c-b3c7-bae4669ad8ce)
+| [Certified Advanced JavaScript Developer](https://cancanit.com/certified/1462/)
+| [Certified Neo4j Professional](https://graphacademy.neo4j.com/certificates/c279afd7c3988bd727f8b3acb44b87f7504f940aac952495ff827dbfcac024fb.pdf)
+| [Deep Learning](https://www.credly.com/badges/8d27e38c-869d-4815-8df3-13762c642d64)
+| [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEsperancinhaOrg&color=yellow "jesperancinha.org dependencies")](https://github.com/JEsperancinhaOrg)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=All%20Badges&message=Badges&color=red "All badges")](https://joaofilipesabinoesperancinha.nl/badges)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=Status&message=Project%20Status&color=red "Project statuses")](https://github.com/jesperancinha/project-signer/blob/master/project-signer-quality/Build.md)
