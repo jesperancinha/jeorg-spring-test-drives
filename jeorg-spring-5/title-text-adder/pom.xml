@@ -16,7 +16,7 @@
     </modules>
 
     <properties>
-        <omni-coveragereporter-maven-plugin.version>0.3.0</omni-coveragereporter-maven-plugin.version>
+        <omni-coveragereporter-maven-plugin.version>0.3.1</omni-coveragereporter-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
         <spring.version>6.0.3</spring.version>
         <jackson.version>1.9.11</jackson.version>
