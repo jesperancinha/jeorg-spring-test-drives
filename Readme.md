@@ -81,21 +81,14 @@ document for more details</i>
 mvn clean install -Dconsolerizer.show=false
 ```
 
-## Install JDK 11 using [SDK-MAN](https://sdkman.io/)
+## Install JDK 17 using [SDK-MAN](https://sdkman.io/)
 
 ```bash
-sdk install java 11.0.9.hs-adpt
-sdk use java 11.0.9.hs-adpt
+sdk install java 17-open
+sdk use java 17-open
 ```
 
-## Run Codecov
-
-```bash
-mvn clean test -Dconsolerizer.show=false
-bash <(curl -s https://codecov.io/bash)
-```
-
-## Detect Non-Runing Tests
+## Detect Non-Running Tests
 
 ```bash
 mvn clean install | egrep "Tests run|----"
