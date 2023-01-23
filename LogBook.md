@@ -34,7 +34,7 @@ João Esperancinha, 2021/04/21
 
 ### Communication 2
 
-The [jeorg-spring-5-test-drives](https://github.com/jesperancinha/jeorg-spring-5-test-drives) repository has reached a
+The [jeorg-spring-test-drives](https://github.com/jesperancinha/jeorg-spring-test-drives) repository has reached a
 colossal size.	  
 Therefore, it is not feasible to continue developing on this repo for new developments.   
 You can consider this repo as basic overall round overview of important Spring technology developments for your day to

@@ -11,12 +11,12 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jesperancinha.std</groupId>
-    <artifactId>jeorg-spring-5-test-drives</artifactId>
+    <artifactId>jeorg-spring-test-drives</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>jeorg-spring-5</module>
-        <module>jeorg-spring-kotlin-5</module>
+        <module>jeorg-spring</module>
+        <module>jeorg-spring-kotlin</module>
     </modules>
 
     <properties>
