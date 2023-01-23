@@ -27,8 +27,7 @@ public class Request {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Request)) return false;
-        Request request = (Request) o;
+        if (!(o instanceof Request request)) return false;
         return Objects.equals(getMessage(), request.getMessage()) && Objects.equals(getLocalDateTime(), request.getLocalDateTime());
     }
 

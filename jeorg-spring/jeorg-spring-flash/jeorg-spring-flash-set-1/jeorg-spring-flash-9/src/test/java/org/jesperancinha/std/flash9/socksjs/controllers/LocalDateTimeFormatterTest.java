@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.format.DateTimeFormatter;
 
-public class LocalDateTimeFormatter {
+public class LocalDateTimeFormatterTest {
 
     @Test
     public void testParser_whenText_thenParseCorrectly() {

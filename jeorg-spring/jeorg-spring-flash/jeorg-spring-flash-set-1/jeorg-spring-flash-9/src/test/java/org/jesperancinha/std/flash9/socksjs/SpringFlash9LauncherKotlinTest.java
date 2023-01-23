@@ -37,7 +37,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class SpringFlash9LauncherTest {
+class SpringFlash9LauncherKotlinTest {
 
     private WebSocketStompClient webSocketStompClient;
 
