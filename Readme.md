@@ -154,6 +154,10 @@ mvn clean install
 
 ## References
 
+### Online
+
+-   [How to test the REST Clients of your Spring Boot Application with @RestClientTest](https://jschmitz.dev/posts/how_to_test_the_rest_clients_of_your_spring_boot_application_with_restclienttest/)
+
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
