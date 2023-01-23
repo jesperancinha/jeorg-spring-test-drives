@@ -6,7 +6,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_BLUE;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
-public class SpringFlash1Launcher {
+public class  SpringFlash1Launcher {
     public static void main(String[] args) {
         final GenericXmlApplicationContext genericXmlApplicationContext = new GenericXmlApplicationContext();
 

@@ -155,10 +155,6 @@
                         <plugin>jpa</plugin>
                         <plugin>spring</plugin>
                     </compilerPlugins>
-
-                    <pluginOptions>
-                        <option>no-arg:invokeInitializers=true</option>
-                    </pluginOptions>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -616,6 +612,11 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.kotest</groupId>
+                <artifactId>kotest-assertions-core-jvm</artifactId>
+                <version>${kotest.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
