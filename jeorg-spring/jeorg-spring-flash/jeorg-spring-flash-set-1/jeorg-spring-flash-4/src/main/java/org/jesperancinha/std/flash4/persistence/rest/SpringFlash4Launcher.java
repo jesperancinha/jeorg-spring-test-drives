@@ -25,32 +25,35 @@ public class SpringFlash4Launcher {
     @PostMapping(path = "/",
             consumes = "application/text",
             headers = "currentTime")
-    public void currentDate(
+    public LocalDate currentDate(
             @RequestHeader("currentTime")
             @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                     LocalDate localDate) {
         BRIGHT_MAGENTA.printGenericTitleLn(localDate);
+        return localDate;
     }
 
     @PostMapping(path = "/time",
             consumes = "application/text",
             headers = "currentTime")
-    public void currentTime(
+    public LocalDateTime currentTime(
             @RequestHeader("currentTime")
             @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
                     LocalDateTime localDateTime) {
         BRIGHT_MAGENTA.printGenericTitleLn(localDateTime);
+        return localDateTime;
     }
 
     @PostMapping(
             path = "/dollars",
             consumes = "application/text",
             headers = "dollars")
-    public void thousandDollars(
+    public BigDecimal thousandDollars(
             @RequestHeader("dollars")
             @NumberFormat(style = NumberFormat.Style.NUMBER,
                     pattern = "$###,###.###")
                     BigDecimal dollars) {
         MAGENTA.printGenericTitleLn(dollars);
+        return dollars;
     }
 }
