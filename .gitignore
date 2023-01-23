@@ -41,3 +41,6 @@ tmlog*.log
 
 # Codecov
 codecov.yml
+
+# Processes
+.attach_pid*

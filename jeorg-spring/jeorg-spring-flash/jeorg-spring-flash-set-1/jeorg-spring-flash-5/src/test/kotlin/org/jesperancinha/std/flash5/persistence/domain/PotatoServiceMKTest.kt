@@ -27,7 +27,7 @@ class PotatoServiceMKTest(
     val potatoRepository: PotatoRepository
 ) : WordSpec() {
 
-    override fun beforeEach(testCase: TestCase) {
+    override suspend fun beforeEach(testCase: TestCase) {
         super.beforeEach(testCase)
         val newPotato1 = Potato();
         newPotato1.form = "Sweet";
