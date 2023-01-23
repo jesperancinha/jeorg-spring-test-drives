@@ -579,6 +579,16 @@
                 <version>${cucumber.version}</version>
             </dependency>
             <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>javax.servlet.jsp-api</artifactId>
+                <version>${javax.servlet.jsp-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${jsp-api.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.github.nosan</groupId>
                 <artifactId>embedded-cassandra-test</artifactId>
                 <version>${embedded-cassandra.version}</version>
