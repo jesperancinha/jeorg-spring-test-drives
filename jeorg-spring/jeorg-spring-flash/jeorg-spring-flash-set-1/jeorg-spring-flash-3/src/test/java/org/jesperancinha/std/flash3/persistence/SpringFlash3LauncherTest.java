@@ -11,17 +11,21 @@ class SpringFlash3LauncherTest {
     public void testContext() {
         ConsolerizerComposer.outSpace()
                 .yellow("We provide the annotation this way:")
-                .blue("      <dependency>\n" +
-                        "            <groupId>org.springframework.boot</groupId>\n" +
-                        "            <artifactId>spring-boot-test</artifactId>\n" +
-                        "            <scope>test</scope>\n" +
-                        "        </dependency>")
+                .blue("""
+                              <dependency>
+                                    <groupId>org.springframework.boot</groupId>
+                                    <artifactId>spring-boot-test</artifactId>
+                                    <scope>test</scope>
+                                </dependency>\
+                        """)
                 .yellow("We provide the implementation this way:")
-                .blue("        <dependency>\n" +
-                        "            <groupId>org.springframework</groupId>\n" +
-                        "            <artifactId>spring-test</artifactId>\n" +
-                        "            <scope>test</scope>\n" +
-                        "        </dependency>")
+                .blue("""
+                                <dependency>
+                                    <groupId>org.springframework</groupId>
+                                    <artifactId>spring-test</artifactId>
+                                    <scope>test</scope>
+                                </dependency>\
+                        """)
                 .reset();
     }
 
