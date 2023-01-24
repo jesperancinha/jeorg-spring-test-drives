@@ -5,6 +5,7 @@ import org.jesperancinha.std.flash18.aop.afterthrowing.service.impl.LyricsServic
 import org.jesperancinha.std.flash18.aop.afterthrowing.service.impl.LyricsServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
@@ -12,7 +13,11 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class SpringFlash18Launcher {
     public static void main(String[] args) {
-        ConfigurableApplicationContext ac = SpringApplication.run(SpringFlash18Launcher.class, args);
+        ApplicationContext ac = SpringApplication.run(SpringFlash18Launcher.class, args);
+        mutateLyricsServiceImpl(ac);
+    }
+
+    static void mutateLyricsServiceImpl(ApplicationContext ac) {
         LyricsService lyricsService = ac.getBean("lyricsServiceImpl", LyricsServiceImpl.class);
         try {
             try {

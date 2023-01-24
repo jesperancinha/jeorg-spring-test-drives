@@ -1,13 +1,21 @@
 package org.jesperancinha.std.flash18.aop.afterthrowing;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 
-@SpringBootTest
+import static org.jesperancinha.std.flash18.aop.afterthrowing.SpringFlash18Launcher.*;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
+
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 class SpringFlash18LauncherTest {
+
+    @Autowired
+    public ApplicationContext applicationContext;
 
     @Test
     void testContext() {
-        SpringFlash18Launcher.main(new String[0]);
+        mutateLyricsServiceImpl(applicationContext);
     }
 }

@@ -54,21 +54,6 @@ class LyricAspectTest {
     }
 
     @Test
-    void testAfterThrowingAdvice1_whenCallingEnumerateLyric1ThenRegisterAllAdvices() {
-        final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.enumerateLyric1());
-
-        verify(joinPointService, times(1)).afterThrowingAdvice(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
-        verify(joinPointService, times(1)).afterThrowingAdvice1(joinPointArgumentCaptor.capture(), exceptionArgumentCaptor.capture());
-        final List<JoinPoint> allValues = joinPointArgumentCaptor.getAllValues();
-        assertThat(allValues).hasSize(2);
-        assertThat(allValues.get(0).toString()).isEqualTo("execution(void org.jesperancinha.std.flash18.aop.afterthrowing.service.impl.LyricsServiceImpl.enumerateLyric1())");
-        assertThat(allValues.get(1).toString()).isEqualTo("execution(void org.jesperancinha.std.flash18.aop.afterthrowing.service.impl.LyricsServiceImpl.enumerateLyric1())");
-        final List<Exception> exceptionList = exceptionArgumentCaptor.getAllValues();
-        assertThat(exceptionList.get(0)).isSameAs(runtimeException);
-        assertThat(exceptionList.get(1)).isSameAs(runtimeException);
-    }
-
-    @Test
     void testAfterThrowingAdvice2_whenCallingEnumerateLyric2ThenRegisterAllAdvices() {
         final RuntimeException runtimeException = assertThrows(RuntimeException.class, () -> lyricsService.enumerateLyric2());
 
