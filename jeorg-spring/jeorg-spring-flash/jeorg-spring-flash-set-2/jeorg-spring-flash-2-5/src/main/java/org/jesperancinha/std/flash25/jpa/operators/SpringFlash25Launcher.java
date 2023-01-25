@@ -9,8 +9,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.event.ContextStartedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.core.env.Environment;
-
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationEventPublisher;
 import javax.inject.Named;
 
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.quote;
@@ -28,23 +31,28 @@ public class SpringFlash25Launcher implements CommandLineRunner {
 
     private final BeanDataBaseProperties beanDataBaseProperties;
 
+    private final ApplicationEventPublisher publisher;
+    private final ApplicationContext source;
+
     public SpringFlash25Launcher(BeanRepository beanRepository,
                                  @Named("that-other-bean-service")
-                                         BeanService beanService,
+                                 BeanService beanService,
                                  Environment environment,
-                                 BeanDataBaseProperties beanDataBaseProperties) {
+                                 BeanDataBaseProperties beanDataBaseProperties, ApplicationEventPublisher publisher, ApplicationContext source) {
         this.beanRepository = beanRepository;
         this.beanService = beanService;
         this.environment = environment;
         this.beanDataBaseProperties = beanDataBaseProperties;
+        this.publisher = publisher;
+        this.source = source;
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringFlash25Launcher.class, args);
+        SpringApplication.run(SpringFlash25Launcher.class, args).start();
     }
 
-    @Override
-    public void run(String... args) {
+    @EventListener
+    public void handleContextRefreshEvent(ContextStartedEvent contextStartedEvent) {
         final Bean bean1 = makeBean("Runner", 40L);
         final Bean bean2 = makeBean("Red Kidney", 60L);
         final Bean bean3 = makeBean("Kidney", 30L);
@@ -89,6 +97,14 @@ public class SpringFlash25Launcher implements CommandLineRunner {
                 .yellow(beanDataBaseProperties.getPassword())
                 .yellow("Driver")
                 .yellow(beanDataBaseProperties.getDriverClassName())
+                .reset();
+    }
+
+    @Override
+    public void run(String... args) {
+        ConsolerizerComposer.outSpace()
+                .black()
+                .bgRed(title("Service is running"))
                 .reset();
     }
 

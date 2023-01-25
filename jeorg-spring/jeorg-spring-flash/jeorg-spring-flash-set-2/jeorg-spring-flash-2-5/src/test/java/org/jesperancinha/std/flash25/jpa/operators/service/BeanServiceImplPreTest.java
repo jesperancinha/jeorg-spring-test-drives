@@ -1,10 +1,12 @@
 package org.jesperancinha.std.flash25.jpa.operators.service;
 
 import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.test.context.ContextConfiguration;
@@ -23,6 +25,14 @@ class BeanServiceImplPreTest {
 
     @Autowired
     private BeanServiceImpl beanService;
+
+    @Autowired
+    private ConfigurableApplicationContext applicationContext;
+
+    @BeforeEach
+    public void setup(){
+        applicationContext.start();
+    }
 
     @Test
     void tesGetSlogan_whenCalled_getProductionSlogan() {
