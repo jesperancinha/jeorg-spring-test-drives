@@ -644,12 +644,6 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
                 <groupId>io.kotest</groupId>
                 <artifactId>kotest-assertions-core-jvm</artifactId>
                 <version>${kotest.version}</version>
