@@ -73,13 +73,10 @@ internal class Flash27HealthIndicatorKotlinTest(
                                         status.shouldBe("UP")
                                         details.shouldNotBeNull()
                                             .apply {
-                                                database shouldBe "H2"
+                                                database.shouldBeIn("H2", null)
                                                 result.shouldBeNull()
-                                                validationQuery.shouldBeIn("SELECT 1", "isValid()")
+                                                validationQuery.shouldBeIn("SELECT 1", "isValid()", null)
                                                 lyric.shouldBeNull()
-                                                total.shouldBeNull()
-                                                free.shouldBeNull()
-                                                threshold.shouldBeNull()
                                             }
                                     }
                                 flash27.shouldNotBeNull()

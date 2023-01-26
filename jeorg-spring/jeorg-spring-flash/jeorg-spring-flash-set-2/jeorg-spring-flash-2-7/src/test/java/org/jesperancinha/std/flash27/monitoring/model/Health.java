@@ -5,11 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 
-@Value
-@AllArgsConstructor(onConstructor_ = @JsonCreator)
-public class Health {
-    @JsonProperty("components")
-    public Components components;
-    @JsonProperty("status")
-    public String status;
+public record Health(
+        @JsonProperty("components") Components components,
+        @JsonProperty("status") String status) {
 }

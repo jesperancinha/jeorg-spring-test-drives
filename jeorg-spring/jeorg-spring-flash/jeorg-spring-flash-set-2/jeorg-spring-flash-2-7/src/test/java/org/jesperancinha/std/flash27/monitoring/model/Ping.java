@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 
-@Value
-@AllArgsConstructor(onConstructor_ = @JsonCreator)
-public class Ping {
-    @JsonProperty("status")
-    public String status;
+public record Ping(
+        @JsonProperty("status") String status) {
 }
