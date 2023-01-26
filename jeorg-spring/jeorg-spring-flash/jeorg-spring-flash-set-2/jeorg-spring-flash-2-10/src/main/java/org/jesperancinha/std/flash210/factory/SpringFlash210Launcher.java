@@ -17,7 +17,7 @@ public class SpringFlash210Launcher implements CommandLineRunner {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringFlash210Launcher.class, args);
+        SpringApplication.run(SpringFlash210Launcher.class, args).start();
     }
 
     @Override
