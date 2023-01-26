@@ -6,7 +6,7 @@ Exploring the @PreAuthorize and @PostAuthorize in Spring
 
 Topics
 
-1.  `@EnableGlobalMethodSecurity`, `@PreAuthorize`, `@PostAuthorize`, `returnObject`, `SpEL`
+1.  `@EnableMethodSecurity`, `@PreAuthorize`, `@PostAuthorize`, `returnObject`, `SpEL`
 
 ## Endpoints
 

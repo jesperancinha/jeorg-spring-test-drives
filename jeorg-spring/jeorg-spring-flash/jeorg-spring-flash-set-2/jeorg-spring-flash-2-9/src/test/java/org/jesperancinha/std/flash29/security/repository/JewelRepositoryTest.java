@@ -1,4 +1,4 @@
-package org.jesperancinha.std.flash29.security.repository;
+ package org.jesperancinha.std.flash29.security.repository;
 
 import jakarta.transaction.Transactional;
 import org.jesperancinha.std.flash29.security.domain.Jewel;
@@ -6,6 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.event.ContextStartedEvent;
 
 
 import static jakarta.transaction.Transactional.TxType.REQUIRED;
@@ -16,16 +19,20 @@ import static org.jesperancinha.std.flash29.security.services.JewelType.RUBY;
 
 @DataJpaTest
 class JewelRepositoryTest {
-
     @Autowired
     private JewelRepository jewelRepository;
+    @Autowired
+    private ConfigurableApplicationContext applicationContext;
+    @Autowired
+    private ApplicationEventPublisher applicationEventPublisher;
 
     private Long sabinoId;
 
     @BeforeEach
     @Transactional
     public void setUp() {
-        final Jewel jewel = jewelRepository.save(Jewel.builder()
+        applicationEventPublisher.publishEvent(new ContextStartedEvent(applicationContext));
+        final var jewel = jewelRepository.save(Jewel.builder()
                 .jewelType(DIAMOND)
                 .guardian("sabino").build());
 
@@ -39,7 +46,7 @@ class JewelRepositoryTest {
 
     @Test
     public void testGetJewelWhenReadingJewelThenResultInJewel() {
-        final var jewel = jewelRepository.getOne(1L);
+        final var jewel = jewelRepository.findAll().stream().filter(j -> j.getGuardian().equals("admin")).findFirst().orElse(null);
         final var jewel2 = jewelRepository.getOne(sabinoId);
 
         assertThat(jewel).isNotNull();
