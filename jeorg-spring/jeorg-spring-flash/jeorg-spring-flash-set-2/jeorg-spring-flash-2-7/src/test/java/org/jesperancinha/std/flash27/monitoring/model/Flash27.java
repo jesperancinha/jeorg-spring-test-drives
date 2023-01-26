@@ -9,7 +9,7 @@ import lombok.Value;
 @AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Flash27 {
     @JsonProperty("status")
-    String status;
+    public String status;
     @JsonProperty("details")
-    Details details;
+    public Details details;
 }

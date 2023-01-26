@@ -9,7 +9,7 @@ import lombok.Value;
 @AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Health {
     @JsonProperty("components")
-    Components components;
+    public Components components;
     @JsonProperty("status")
-    String status;
+    public String status;
 }

@@ -9,5 +9,5 @@ import lombok.Value;
 @AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Ping {
     @JsonProperty("status")
-    String status;
+    public String status;
 }

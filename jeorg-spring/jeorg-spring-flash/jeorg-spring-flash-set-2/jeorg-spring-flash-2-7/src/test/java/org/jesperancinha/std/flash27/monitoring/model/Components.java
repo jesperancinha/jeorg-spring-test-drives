@@ -9,11 +9,11 @@ import lombok.Value;
 @AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Components {
     @JsonProperty("db")
-    DataBaseF27 db;
+    public DataBaseF27 db;
     @JsonProperty("diskSpace")
-    DiskSpace diskSpace;
+    public DiskSpace diskSpace;
     @JsonProperty("flash27")
-    Flash27 flash27;
+    public Flash27 flash27;
     @JsonProperty("ping")
-    Ping ping;
+    public Ping ping;
 }

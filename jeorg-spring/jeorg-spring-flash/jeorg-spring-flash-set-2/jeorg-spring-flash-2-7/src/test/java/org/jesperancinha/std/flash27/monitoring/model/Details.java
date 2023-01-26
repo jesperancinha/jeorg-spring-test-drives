@@ -9,21 +9,21 @@ import lombok.Value;
 @AllArgsConstructor(onConstructor_ = @JsonCreator)
 public class Details {
     @JsonProperty("database")
-    String database;
+    public String database;
     @JsonProperty("result")
-    Integer result;
+    public Integer result;
     @JsonProperty("validationQuery")
-    String validationQuery;
+    public String validationQuery;
     @JsonProperty("total")
-    Long total;
+    public Long total;
     @JsonProperty("free")
-    Long free;
+    public Long free;
     @JsonProperty("threshold")
-    Long threshold;
+    public Long threshold;
     @JsonProperty("lyric")
-    String lyric;
+    public String lyric;
     @JsonProperty("path")
-    String path;
+    public String path;
     @JsonProperty("exists")
-    Boolean exists;
+    public Boolean exists;
 }
