@@ -1,51 +1,54 @@
-package org.jesperancinha.std.flash214.transactions;
+package org.jesperancinha.std.flash214.transactions
 
-import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
-import org.jesperancinha.std.flash214.transactions.model.Car;
-import org.jesperancinha.std.flash214.transactions.repository.CarRepository;
-import org.jesperancinha.std.flash214.transactions.utils.AbstractTestContainerTest;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.jdbc.Sql;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.springframework.test.annotation.DirtiesContext.ClassMode.BEFORE_CLASS;
-import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TEST_METHOD;
+import io.kotest.matchers.nulls.shouldNotBeNull
+import io.kotest.matchers.shouldBe
+import org.assertj.core.api.Assertions
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
+import org.jesperancinha.std.flash214.transactions.model.Car
+import org.jesperancinha.std.flash214.transactions.repository.CarRepository
+import org.jesperancinha.std.flash214.transactions.utils.AbstractTestContainerTest
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.context.annotation.ComponentScan
+import org.springframework.test.annotation.DirtiesContext
+import org.springframework.test.annotation.DirtiesContext.ClassMode
+import org.springframework.test.context.ActiveProfiles
+import org.springframework.test.context.jdbc.Sql
+import org.springframework.test.context.jdbc.Sql.ExecutionPhase
 
 @SpringBootTest
 @ActiveProfiles("emb")
 @ComponentScan("org.jesperancinha.std.flash214.transactions")
-@Sql(executionPhase = BEFORE_TEST_METHOD,
-        scripts = "classpath:schema.sql")
-@DirtiesContext(classMode = BEFORE_CLASS)
-class SpringFlash214LauncherKotlinTest extends AbstractTestContainerTest {
-
+@Sql(executionPhase = ExecutionPhase.BEFORE_TEST_METHOD, scripts = ["classpath:schema.sql"])
+@DirtiesContext(classMode = ClassMode.BEFORE_CLASS)
+internal class SpringFlash214LauncherKotlinTest(
     @Autowired
-    private CarRepository carRepository;
+    private val carRepository: CarRepository
+) : AbstractTestContainerTest() {
 
     @BeforeEach
-    public void setup() {
-        assertThat(postgreSQLContainer.isRunning()).isTrue();
+    fun setup() {
+        Assertions.assertThat(postgreSQLContainer.isRunning).isTrue
     }
 
     @Test
-    void testContext() {
-        final var car = Car.builder().brand("Renault").model("Twingo").build();
-
-        final var savedCar = carRepository.save(car);
-
-        ConsolerizerComposer.outSpace()
-                .green("This car has just been saved in the database:")
-                .jsonPrettyPrint(car)
-                .reset();
-
-        assertThat(savedCar).isNotNull();
-        assertThat(savedCar.getBrand()).isEqualTo("Renault");
-        assertThat(savedCar.getModel()).isEqualTo("Twingo");
+    fun testContext() {
+        Car.builder().brand("Renault").model("Twingo").build()
+            .let { car ->
+                carRepository.save(car)
+                    .also {
+                        ConsolerizerComposer.outSpace()
+                            .green("This car has just been saved in the database:")
+                            .jsonPrettyPrint(car)
+                            .reset()
+                    }
+            }
+            .shouldNotBeNull()
+            .apply {
+                brand shouldBe "Renault"
+                model shouldBe "Twingo"
+            }
     }
 }

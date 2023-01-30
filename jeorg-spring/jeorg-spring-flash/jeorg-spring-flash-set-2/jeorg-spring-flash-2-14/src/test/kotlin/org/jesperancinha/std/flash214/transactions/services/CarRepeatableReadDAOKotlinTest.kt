@@ -1,43 +1,36 @@
-package org.jesperancinha.std.flash214.transactions.services;
+package org.jesperancinha.std.flash214.transactions.services
 
-import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
-import org.jesperancinha.std.flash214.transactions.model.Car;
-import org.jesperancinha.std.flash214.transactions.utils.AbstractTestContainerTest;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.jdbc.Sql;
-
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
-import static org.springframework.test.annotation.DirtiesContext.ClassMode.BEFORE_CLASS;
-import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TEST_METHOD;
+import io.kotest.matchers.booleans.shouldBeTrue
+import org.assertj.core.api.Assertions
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor
+import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
+import org.jesperancinha.std.flash214.transactions.model.Car
+import org.jesperancinha.std.flash214.transactions.utils.AbstractTestContainerTest
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.context.annotation.ComponentScan
+import org.springframework.test.annotation.DirtiesContext
+import org.springframework.test.annotation.DirtiesContext.ClassMode
+import org.springframework.test.context.ActiveProfiles
+import org.springframework.test.context.jdbc.Sql
+import org.springframework.test.context.jdbc.Sql.ExecutionPhase
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
 
 @SpringBootTest
 @ActiveProfiles("emb")
-@ComponentScan({
-        "org.jesperancinha.std.flash214.transactions",
-        "org.jesperancinha.std.flash214.transactions.services"
-})
-@Sql(executionPhase = BEFORE_TEST_METHOD,
-        scripts = "classpath:schema.sql")
-@DirtiesContext(classMode = BEFORE_CLASS)
-class CarRepeatableReadDAOKotlinTest extends AbstractTestContainerTest {
-
+@ComponentScan("org.jesperancinha.std.flash214.transactions", "org.jesperancinha.std.flash214.transactions.services")
+@Sql(executionPhase = ExecutionPhase.BEFORE_TEST_METHOD, scripts = ["classpath:schema.sql"])
+@DirtiesContext(classMode = ClassMode.BEFORE_CLASS)
+internal class CarRepeatableReadDAOKotlinTest(
     @Autowired
-    private CarRepeatableReadDAO carRepeatableReadDAO;
-
+    private val carRepeatableReadDAO: CarRepeatableReadDAO
+) : AbstractTestContainerTest() {
     @BeforeEach
-    public void setup() {
-        assertThat(postgreSQLContainer.isRunning()).isTrue();
+    fun setup() {
+        postgreSQLContainer.isRunning.shouldBeTrue()
     }
 
     /**
@@ -46,37 +39,40 @@ class CarRepeatableReadDAOKotlinTest extends AbstractTestContainerTest {
      * @throws InterruptedException An error
      */
     @Test
-    void testRepeatableReadWhenRunningThenExemplifyRepeatableRead() throws InterruptedException {
+    @Throws(InterruptedException::class)
+    fun testRepeatableReadWhenRunningThenExemplifyRepeatableRead() {
         ConsolerizerComposer.outSpace()
-                .cyan(title("Repeatable Read"))
-                .magenta("In this example, we are writing data in one transaction.")
-                .magenta("At the same time, another transaction is starting.")
-                .magenta("A Repeatable read means that the reader transaction will always read at least the same.")
-                .magenta("The small nuance comes from the fact that removals will not be detected. Additions, however will.")
-                .magenta("In this repeatable read example, we will see how we can read the progress of one transaction from another repeatable transaction.")
-                .magenta("We won't, in any case, see the removals, nor we will see the additions. This is after all, an embedded database system")
-                .reset();
-        final var executorService = Executors.newFixedThreadPool(2);
-        executorService.submit(() -> {
-            final var car = carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
-            carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build());
+            .cyan(ConsolerizerComposer.title("Repeatable Read"))
+            .magenta("In this example, we are writing data in one transaction.")
+            .magenta("At the same time, another transaction is starting.")
+            .magenta("A Repeatable read means that the reader transaction will always read at least the same.")
+            .magenta("The small nuance comes from the fact that removals will not be detected. Additions, however will.")
+            .magenta("In this repeatable read example, we will see how we can read the progress of one transaction from another repeatable transaction.")
+            .magenta("We won't, in any case, see the removals, nor we will see the additions. This is after all, an embedded database system")
+            .reset()
+        val executorService = Executors.newFixedThreadPool(2)
+        executorService.submit {
+            val car = carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build())
+            carRepeatableReadDAO.createCar(Car.builder().brand("Citroën").model("2CV").build())
             try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                RED.printThrowableAndExit(e);
+                Thread.sleep(100)
+            } catch (e: InterruptedException) {
+                ConsolerizerColor.RED.printThrowableAndExit(e)
             }
-            carRepeatableReadDAO.deleteCarById(car.getId());
-        });
-        executorService.submit(() -> {
-            ConsolerizerComposer.outSpace().yellow("First repeatable read transaction. Phantom reads would occur here in a supportive real database");
-            carRepeatableReadDAO.getAllCars();
-            ConsolerizerComposer.outSpace().yellow("Second repeatable read transaction. Phantom reads would occur here in a supportive real database");
-            carRepeatableReadDAO.getAllCars();
-            ConsolerizerComposer.outSpace().yellow("Third repeatable read transaction. Phantom reads would occur here in a supportive real database");
-            carRepeatableReadDAO.getAllCars();
-        });
-        executorService.shutdown();
-        final boolean termination = executorService.awaitTermination(10, TimeUnit.SECONDS);
-        assertThat(termination).isTrue();
+            carRepeatableReadDAO.deleteCarById(car.id)
+        }
+        executorService.submit {
+            ConsolerizerComposer.outSpace()
+                .yellow("First repeatable read transaction. Phantom reads would occur here in a supportive real database")
+            carRepeatableReadDAO.allCars
+            ConsolerizerComposer.outSpace()
+                .yellow("Second repeatable read transaction. Phantom reads would occur here in a supportive real database")
+            carRepeatableReadDAO.allCars
+            ConsolerizerComposer.outSpace()
+                .yellow("Third repeatable read transaction. Phantom reads would occur here in a supportive real database")
+            carRepeatableReadDAO.allCars
+        }
+        executorService.shutdown()
+        executorService.awaitTermination(10, TimeUnit.SECONDS).shouldBeTrue()
     }
 }
