@@ -58,6 +58,7 @@ See [Log Book](./LogBook.md) for further details.
 
 #### Stable releases
 
+-   [0.0.0](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/0.0.0) - [d8700ab7d597fb825cbfc1fca30c2153ef5141ea](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/0.0.0) - Spring boot 2.7.0 / JDK 11
 -   [1.0.0](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/1.0.0) - [395d79e218595e57365c7ad9723c2aa20ad77881](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/1.0.0) - Spring boot 2.7.5 / JDK 17
 -   [2.0.0](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/2.0.0) - [179ec86df1033b9d551621173751bd60590da775](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/2.0.0) - Spring boot 3.0.0 / JDK 17
 -   [3.0.0](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/3.0.0) - [49d0d3863ff7079c473b2a8bfe285c7735a71f9c](https://github.com/jesperancinha/jeorg-spring-test-drives/tree/3.0.0) - Spring boot 3.0.2 / JDK 19
