@@ -1,13 +1,13 @@
 package org.jesperancinha.titletextadder.api.solr;
 
 import org.apache.solr.common.SolrDocumentList;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class SolrJSearcherTest {
 
 	@Test
-	@Ignore
+	@Disabled
 	public void testGetAllFilteredResults() throws Exception {
 		final SolrJSearcher searcher = new SolrJSearcher();
 		final SolrDocumentList results = searcher.getAllFilteredResults("*");

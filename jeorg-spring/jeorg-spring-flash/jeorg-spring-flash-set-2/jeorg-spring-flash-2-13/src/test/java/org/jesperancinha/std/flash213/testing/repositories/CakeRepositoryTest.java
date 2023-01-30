@@ -2,19 +2,20 @@ package org.jesperancinha.std.flash213.testing.repositories;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash213.testing.model.Cake;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Locale;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @DataJpaTest
 // if @DataJpaTest is commented you get:
 //org.springframework.beans.factory.UnsatisfiedDependencyException:
@@ -29,18 +30,19 @@ public class CakeRepositoryTest {
     @Autowired
     private CakeRepository cakeRepository;
 
+    private Cake savedCake;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         final var cake = new Cake();
         cake.setLocale(new Locale("pt-PT", "PTR"));
         cake.setName("Bolo de Chila");
-        cakeRepository.save(cake);
+        savedCake = cakeRepository.save(cake);
     }
 
     @Test
     public void testGetCakeWhenGoodIdThenGetCake() {
-        final Optional<Cake> optionalCake = cakeRepository.findById(1L);
+        final Optional<Cake> optionalCake = cakeRepository.findById(savedCake.getId());
 
         assertThat(optionalCake.isPresent()).isTrue();
 
@@ -54,7 +56,7 @@ public class CakeRepositoryTest {
                 .reset();
 
         final Cake actual = optionalCake.get();
-        assertThat(actual.getId()).isEqualTo(1L);
+        assertThat(actual.getId()).isEqualTo(savedCake.getId());
         assertThat(actual.getName()).isEqualTo("Bolo de Chila");
         assertThat(actual.getLocale()).isEqualTo(new Locale("pt-PT", "PTR"));
     }
