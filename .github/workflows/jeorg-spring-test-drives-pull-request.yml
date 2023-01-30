@@ -2,6 +2,8 @@ name: JEORG_SPRING_TD jeorg-spring-test-drives-pull-request
 
 on:
   push:
+    branches:
+      - '!master'
   pull_request:
     branches: [ master ]
 
