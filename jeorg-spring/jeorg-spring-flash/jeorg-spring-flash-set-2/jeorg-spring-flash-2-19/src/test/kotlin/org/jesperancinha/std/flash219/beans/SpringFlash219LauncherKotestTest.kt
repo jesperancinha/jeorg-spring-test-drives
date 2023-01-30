@@ -4,7 +4,6 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
-import org.apache.commons.lang3.RandomStringUtils.random
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
