@@ -33,7 +33,7 @@ public class Car {
     private String brand;
 
     @Column
-    private Integer year;
+    private Integer carYear;
 
     @Column
     @Convert(converter = MovieAppearanceConverter.class)
@@ -44,7 +44,7 @@ public class Car {
         return new CarBuilder()
                 .model(this.model)
                 .brand(this.brand)
-                .year(this.year)
+                .carYear(this.carYear)
                 .movieAppearances(this.movieAppearances)
                 .build();
     }
