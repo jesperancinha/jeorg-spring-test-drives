@@ -35,7 +35,7 @@ class CakeRepositoryKotlinTest(
     @BeforeEach
     fun setUp() {
         val cake = Cake()
-        cake.locale = Locale.of("pt-PT", "PTR")
+        cake.locale = Locale("pt-PT", "PTR")
         cake.name = "Bolo de Chila"
         savedCake = cakeRepository.save(cake)
     }
@@ -57,7 +57,7 @@ class CakeRepositoryKotlinTest(
                get().apply {
                    id shouldBe savedCake.shouldNotBeNull().id
                    name shouldBe "Bolo de Chila"
-                   locale shouldBe Locale.of("pt-PT", "PTR")
+                   locale shouldBe Locale("pt-PT", "PTR")
                }
            }
     }
