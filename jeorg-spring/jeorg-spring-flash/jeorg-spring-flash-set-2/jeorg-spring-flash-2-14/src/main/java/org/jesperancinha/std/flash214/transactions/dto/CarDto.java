@@ -14,8 +14,8 @@ public class CarDto {
     String model;
     @JsonProperty("brand")
     String brand;
-    @JsonProperty("year")
-    Integer year;
+    @JsonProperty("carYear")
+    Integer carYear;
     @JsonProperty("movieAppearances")
     String[] movieAppearances;
 
