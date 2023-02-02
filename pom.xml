@@ -190,7 +190,7 @@
                 <artifactId>omni-coveragereporter-maven-plugin</artifactId>
                 <version>${omni-coveragereporter-maven-plugin.version}</version>
                 <configuration>
-                    <httpRequestParallelization>5</httpRequestParallelization>
+                    <httpRequestParallelization>2</httpRequestParallelization>
                 </configuration>
             </plugin>
             <plugin>
