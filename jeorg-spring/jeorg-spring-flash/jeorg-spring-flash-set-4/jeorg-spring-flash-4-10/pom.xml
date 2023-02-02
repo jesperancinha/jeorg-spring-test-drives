@@ -155,6 +155,7 @@
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
+                        <version>${spring-boot.version}</version>
                         <configuration>
                             <mainClass>org.jesperancinha.std.flash410.SpringFlash410Encoder</mainClass>
                         </configuration>
@@ -172,6 +173,7 @@
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
+                        <version>${spring-boot.version}</version>
                         <configuration>
                             <mainClass>org.jesperancinha.std.flash410.SpringFlash410Launcher</mainClass>
                         </configuration>
