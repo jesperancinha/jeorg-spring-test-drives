@@ -1,7 +1,7 @@
 name: JEORG_SPRING_TD jeorg-spring-test-drives
 
 on:
-  pull_request_target:
+  pull_request:
     types:
       - closed
   push:
