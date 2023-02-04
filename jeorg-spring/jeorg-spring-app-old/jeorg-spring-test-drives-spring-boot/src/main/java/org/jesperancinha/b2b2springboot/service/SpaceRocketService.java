@@ -11,8 +11,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class SpaceRocketService {
 
-    @Autowired
+    final
     SpaceRocketRepository spaceRocketRepository;
+
+    public SpaceRocketService(SpaceRocketRepository spaceRocketRepository) {
+        this.spaceRocketRepository = spaceRocketRepository;
+    }
 
     public Iterable<SpaceRocket> getAllRockets() {
         return spaceRocketRepository.findAll();
