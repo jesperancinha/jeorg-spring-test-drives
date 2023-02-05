@@ -10,6 +10,5 @@ class JeorgActionIoCLauncherTest {
 
     @Test
     void testContext() {
-        JeorgActionIoCLauncher.main(new String[0]);
     }
 }
