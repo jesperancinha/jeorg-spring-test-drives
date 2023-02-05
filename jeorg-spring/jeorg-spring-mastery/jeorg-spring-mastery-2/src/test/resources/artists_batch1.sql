@@ -1,8 +1,8 @@
-insert into artist(id, name, nationality)
-values (20, 'UHF', 'Portuguese');
-insert into artist(id, name, nationality)
-values (21, 'Radio Macau', 'Portuguese');
-insert into artist(id, name, nationality)
-values (22, 'Humanos', 'Portuguese');
-insert into artist(id, name, nationality)
-values (23, 'Mler Ife Dada', 'Portuguese');
+insert into artist(name, nationality)
+values ('UHF', 'Portuguese');
+insert into artist(name, nationality)
+values ('Radio Macau', 'Portuguese');
+insert into artist(name, nationality)
+values ('Humanos', 'Portuguese');
+insert into artist(name, nationality)
+values ('Mler Ife Dada', 'Portuguese');

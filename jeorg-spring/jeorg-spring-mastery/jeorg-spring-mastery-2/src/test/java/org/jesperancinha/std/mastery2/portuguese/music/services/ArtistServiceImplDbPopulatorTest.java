@@ -2,6 +2,8 @@ package org.jesperancinha.std.mastery2.portuguese.music.services;
 
 import org.jesperancinha.std.mastery2.portuguese.music.api.ArtistService;
 import org.jesperancinha.std.mastery2.portuguese.music.configuration.TestDatabaseConfiguration;
+import org.jesperancinha.std.mastery2.portuguese.music.repositories.ArtistRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,14 @@ class ArtistServiceImplDbPopulatorTest {
 
     @Autowired
     private DataSource dataSource;
+
+    @Autowired
+    private ArtistRepository artistRepository;
+
+    @BeforeEach
+    void setUp(){
+        artistRepository.deleteAll();
+    }
 
     @Test
     void testListArtistsWithSQLWhenListAllThenGetAList() throws SQLException {
