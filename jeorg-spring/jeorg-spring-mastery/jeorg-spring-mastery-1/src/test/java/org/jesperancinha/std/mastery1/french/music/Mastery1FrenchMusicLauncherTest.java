@@ -6,14 +6,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 @Disabled
 class Mastery1FrenchMusicLauncherTest {
 
     @Test
     void testContext() {
-        Mastery1FrenchMusicLauncher.main(new String[0]);
     }
 }
