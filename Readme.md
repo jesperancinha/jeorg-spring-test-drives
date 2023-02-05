@@ -83,11 +83,10 @@ document for more details</i>
 mvn clean install -Dconsolerizer.show=false
 ```
 
-## Install JDK 17 using [SDK-MAN](https://sdkman.io/)
+## Install JDK using [SDK-MAN](https://sdkman.io/)
 
 ```bash
-sdk install java 17-open
-sdk use java 17-open
+. ./sdk19.sh
 ```
 
 ## Detect Non-Running Tests
