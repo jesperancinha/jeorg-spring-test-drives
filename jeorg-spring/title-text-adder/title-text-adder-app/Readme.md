@@ -16,8 +16,14 @@ mvn tomcat7:redeploy
 ## Make curl request
 
 ```shell
-curl -X GET http://localhost:8080/title-text-adder-app/tta/titles/test
+curl -X GET http://localhost:8080/tta/titles/test
 ```
+
+```shell
+curl -X GET http://localhost:8080/addsTitle.htm
+```
+
+
 ## References
 
 * http://www.solrtutorial.com/solr-in-5-minutes.html

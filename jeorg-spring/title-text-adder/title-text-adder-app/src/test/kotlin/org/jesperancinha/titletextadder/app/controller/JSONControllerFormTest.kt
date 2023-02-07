@@ -29,7 +29,7 @@ internal class JSONControllerFormTest @Autowired constructor(
 
     @Test
     fun `should show form`() {
-        jsonControllerForm.showForm() shouldBe "AddsTitle"
+        jsonControllerForm.showForm() shouldBe "addsTitle"
     }
 
     @Test
@@ -45,7 +45,7 @@ internal class JSONControllerFormTest @Autowired constructor(
     fun `should show titles`() {
         every { solrTitleDao.getTitlesByTextFilter("filter") } returns ResponseEntity.ok(arrayOf("title1", "title2"))
         val modelMap = ModelMap()
-        jsonControllerForm.showTitles(modelMap,"filter") shouldBe "ShowTitles"
+        jsonControllerForm.showTitles(modelMap,"filter") shouldBe "showTitles"
         (modelMap.getAttribute("Titles") as Array<String>).shouldContainInOrder("title1", "title2")
     }
 }

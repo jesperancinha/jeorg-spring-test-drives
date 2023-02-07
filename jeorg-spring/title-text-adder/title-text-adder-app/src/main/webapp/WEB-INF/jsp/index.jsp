@@ -1,3 +1,3 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<jsp:forward page="/AddsTitle.htm"></jsp:forward>
+<jsp:forward page="/addsTitle.htm"></jsp:forward>
