@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class JSONController {
 	@RequestMapping(value = "{title}", method = RequestMethod.GET)
 	public @ResponseBody Title getTitleInJSON(@PathVariable String title) {
-
 		Title objectTitle = new Title();
 		objectTitle.setId("1");
-		objectTitle.setTitle("This is an endpoint check" + title);
+		objectTitle.setTitle("This is an endpoint check %s".formatted(title));
 		objectTitle.setText("This is the expected text");
 		objectTitle.setScore(1);
-
 		return objectTitle;
 	}
 }
