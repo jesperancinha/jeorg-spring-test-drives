@@ -25,6 +25,7 @@
         <jackson-databind.version>2.14.2</jackson-databind.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <consolerizer.version>2.0.12</consolerizer.version>
+        <tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
 
         <!-- Databases -->
         <h2.version>2.1.214</h2.version>
@@ -62,13 +63,14 @@
         <maven-failsafe-plugin.version>3.0.0-M8</maven-failsafe-plugin.version>
         <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
         <spring-boot.version>3.0.2</spring-boot.version>
+        <maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version>
 
         <!-- EH Cache -->
         <ehcache.version>3.10.8</ehcache.version>
         <ehcache-core.version>2.6.11</ehcache-core.version>
 
         <!-- Other -->
-        <jetty-maven-plugin.version>8.1.16.v20140903</jetty-maven-plugin.version>
+        <jetty-maven-plugin.version>11.0.13</jetty-maven-plugin.version>
         <jsp-api.version>2.2</jsp-api.version>
         <javax.servlet.jsp-api.version>2.3.3</javax.servlet.jsp-api.version>
         <jquery.version>3.6.3</jquery.version>

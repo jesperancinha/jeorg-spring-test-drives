@@ -1,12 +1,23 @@
 # Title text adder Web APP
 
 
-## Usefull deploy commads
+## Useful deploy commands
 
-* mvn tomcat7:deploy
-* mvn tomcat7:undeploy
-* mvn tomcat7:redeploy
+```shell
+mvn tomcat7:deploy
+```
+```shell
+mvn tomcat7:undeploy
+```
+```shell
+mvn tomcat7:redeploy
+```
 
+## Make curl request
+
+```shell
+curl -X GET http://localhost:8080/title-text-adder-app/tta/titles/test
+```
 ## References
 
 * http://www.solrtutorial.com/solr-in-5-minutes.html
