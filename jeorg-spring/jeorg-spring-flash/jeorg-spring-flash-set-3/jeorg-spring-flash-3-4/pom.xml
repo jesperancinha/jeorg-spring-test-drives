@@ -176,14 +176,14 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.mortbay.jetty</groupId>
+                <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty-maven-plugin.version}</version>
                 <configuration>
-                    <webAppConfig>
+                    <webApp>
                         <contextPath>/${project.artifactId}</contextPath>
                         <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>
-                    </webAppConfig>
+                    </webApp>
                 </configuration>
             </plugin>
         </plugins>

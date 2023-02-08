@@ -21,13 +21,15 @@ public class JSONControllerForm {
         this.solrTitleDao = solrTitleDao;
     }
 
-    @RequestMapping(value = "/AddsTitle.htm", method = RequestMethod.GET)
+    @RequestMapping(value = "/addsTitle.htm", method = RequestMethod.GET)
     public String showForm() {
-        return "AddsTitle";
+        System.out.println("addsTitle GET reached!");
+        return "addsTitle";
     }
 
-    @RequestMapping(value = "/AddsTitle.htm", method = RequestMethod.POST)
+    @RequestMapping(value = "/addsTitle.htm", method = RequestMethod.POST)
     public @ResponseBody String addTitle(@ModelAttribute(value = "title") Title title, BindingResult result) {
+        System.out.println("addsTitle POT reached!");
         if (!result.hasErrors()) {
             return solrTitleDao.sendTitle(title);
         } else {
@@ -35,10 +37,11 @@ public class JSONControllerForm {
         }
     }
 
-    @RequestMapping(value = "/ShowTitles.htm")
+    @RequestMapping(value = "/showTitles.htm")
     public String showTitles(ModelMap model, @ModelAttribute(value = "text_filter") String textFilter) {
+        System.out.println("showTitles GET reached!");
         final ResponseEntity<String[]> response = solrTitleDao.getTitlesByTextFilter(textFilter);
         model.addAttribute("Titles", response.getBody());
-        return "ShowTitles";
+        return "showTitles";
     }
 }

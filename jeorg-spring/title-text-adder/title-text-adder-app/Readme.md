@@ -1,11 +1,28 @@
 # Title text adder Web APP
 
 
-## Usefull deploy commads
+## Useful deploy commands
 
-* mvn tomcat7:deploy
-* mvn tomcat7:undeploy
-* mvn tomcat7:redeploy
+```shell
+mvn tomcat7:deploy
+```
+```shell
+mvn tomcat7:undeploy
+```
+```shell
+mvn tomcat7:redeploy
+```
+
+## Make curl request
+
+```shell
+curl -X GET http://localhost:8080/tta/titles/test
+```
+
+```shell
+curl -X GET http://localhost:8080/addsTitle.htm
+```
+
 
 ## References
 
