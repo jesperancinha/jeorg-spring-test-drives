@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash215.beanpostprocessor.rest;
 
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jesperancinha.std.flash215.beanpostprocessor.bean.Cheese;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
