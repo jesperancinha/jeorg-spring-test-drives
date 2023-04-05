@@ -107,7 +107,7 @@
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
         <kotest-extensions-spring.version>1.1.2</kotest-extensions-spring.version>
         <junit.version>4.13.2</junit.version>
-        <testcontainers.version>1.17.6</testcontainers.version>
+        <testcontainers.version>1.18.0</testcontainers.version>
         <omni-coveragereporter-maven-plugin.version>0.4.2</omni-coveragereporter-maven-plugin.version>
         <kotlinx-coroutines-debug.version>1.6.4</kotlinx-coroutines-debug.version>
         <jakarta.servlet.jsp.jstl-api.version>3.0.0</jakarta.servlet.jsp.jstl-api.version>
