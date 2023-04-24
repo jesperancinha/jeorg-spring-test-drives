@@ -19,6 +19,7 @@
         <jackson-module-kotlin.version>2.15.0</jackson-module-kotlin.version>
         <jackson.mapper.asl.version>1.9.11</jackson.mapper.asl.version>
         <jackson-annotations.version>2.15.0-rc3</jackson-annotations.version>
+        <jackson-core>2.15.0</jackson-core>
         <jaxb-api.version>2.3.1</jaxb-api.version>
 
         <!-- External -->
@@ -343,6 +344,11 @@
                 <groupId>org.jscience</groupId>
                 <artifactId>jscience</artifactId>
                 <version>${jscience}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson-core}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
