@@ -15,15 +15,17 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jackson.version>1.9.11</jackson.version>
+        <jackson-databind.version>2.15.0-rc3</jackson-databind.version>
+        <jackson-module-kotlin.version>2.15.0</jackson-module-kotlin.version>
+        <jackson.mapper.asl.version>1.9.11</jackson.mapper.asl.version>
+        <jackson-annotations.version>2.15.0-rc3</jackson-annotations.version>
+        <jaxb-api.version>2.3.1</jaxb-api.version>
 
         <!-- External -->
         <lombok.version>1.18.26</lombok.version>
         <jscience>4.3.1</jscience>
         <commons.lang3>3.4</commons.lang3>
         <guava.version>31.1-jre</guava.version>
-        <jackson-databind.version>2.15.0</jackson-databind.version>
-        <jaxb-api.version>2.3.1</jaxb-api.version>
         <consolerizer.version>2.2.2</consolerizer.version>
         <tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
 
@@ -101,7 +103,6 @@
         <metrics-core.version>3.0.2</metrics-core.version>
         <spring-security-oauth2.version>2.5.2.RELEASE</spring-security-oauth2.version>
         <kotlin.version>1.8.20</kotlin.version>
-        <jackson-module-kotlin.version>2.15.0</jackson-module-kotlin.version>
         <springmockk.version>4.0.2</springmockk.version>
         <kotest.version>5.6.1</kotest.version>
         <junit-jupiter.version>5.7.1</junit-jupiter.version>
@@ -523,7 +524,12 @@
             <dependency>
                 <groupId>org.codehaus.jackson</groupId>
                 <artifactId>jackson-mapper-asl</artifactId>
-                <version>${jackson.version}</version>
+                <version>${jackson.mapper.asl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-annotations.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
