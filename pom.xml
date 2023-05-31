@@ -19,7 +19,7 @@
         <jackson-module-kotlin.version>2.15.1</jackson-module-kotlin.version>
         <jackson.mapper.asl.version>1.9.11</jackson.mapper.asl.version>
         <jackson-annotations.version>2.15.1</jackson-annotations.version>
-        <jackson-core>2.15.1</jackson-core>
+        <jackson-core>2.15.2</jackson-core>
         <jaxb-api.version>2.3.1</jaxb-api.version>
 
         <!-- External -->
