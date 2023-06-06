@@ -100,7 +100,7 @@
         <kotlinx-serialization-json.version>1.5.1</kotlinx-serialization-json.version>
         <cassandra-unit.version>4.3.1.0</cassandra-unit.version>
         <embedded-cassandra.version>2.0.4</embedded-cassandra.version>
-        <java-driver-core.version>4.15.0</java-driver-core.version>
+        <java-driver-core.version>4.16.0</java-driver-core.version>
         <metrics-core.version>3.0.2</metrics-core.version>
         <spring-security-oauth2.version>2.5.2.RELEASE</spring-security-oauth2.version>
         <kotlin.version>1.8.21</kotlin.version>
