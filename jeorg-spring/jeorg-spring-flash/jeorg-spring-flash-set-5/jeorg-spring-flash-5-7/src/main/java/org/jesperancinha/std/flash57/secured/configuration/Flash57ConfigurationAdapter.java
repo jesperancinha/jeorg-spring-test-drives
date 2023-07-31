@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -15,7 +16,8 @@ public class Flash57ConfigurationAdapter {
         return http
                 .authenticationProvider(new Flash57AuthenticationProvider())
                 .authorizeRequests()
-                .requestMatchers("/**").hasAnyRole("RULER", "DANCER", "MERCHANT")
+                .requestMatchers(new AntPathRequestMatcher("/**"))
+                .hasAnyRole("RULER", "DANCER", "MERCHANT")
                 .anyRequest()
                 .authenticated()
                 .and()
