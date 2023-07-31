@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
@@ -31,9 +32,9 @@ public class Flash17CSRFConfigurationAdapter {
         return http
                 .userDetailsService(jdbcUserDetailsManager)
                 .authorizeRequests()
-                .requestMatchers("/open/**")
+                .requestMatchers(new AntPathRequestMatcher("/open/**"))
                 .permitAll()
-                .requestMatchers("/**").hasRole("ADMIN")
+                .requestMatchers(new AntPathRequestMatcher("/**")).hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()

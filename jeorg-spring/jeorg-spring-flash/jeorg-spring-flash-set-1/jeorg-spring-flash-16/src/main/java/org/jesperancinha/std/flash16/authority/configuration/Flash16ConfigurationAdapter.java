@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
@@ -20,7 +21,7 @@ public class Flash16ConfigurationAdapter {
         GREEN.printGenericLn("The role is an extended name. In our case it will be ROLE_ADMIN");
         return http.authenticationProvider(new Flash16AuthenticationProvider())
                 .authorizeRequests()
-                .requestMatchers("/**").hasRole("ADMIN")
+                .requestMatchers(new AntPathRequestMatcher("/**")).hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()

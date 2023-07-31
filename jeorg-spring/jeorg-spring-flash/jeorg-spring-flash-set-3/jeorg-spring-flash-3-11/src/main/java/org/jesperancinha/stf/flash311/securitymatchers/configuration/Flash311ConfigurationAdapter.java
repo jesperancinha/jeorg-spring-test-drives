@@ -7,6 +7,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
@@ -23,15 +24,15 @@ public class Flash311ConfigurationAdapter {
         return http
                 .authenticationProvider(new Flash311AuthenticationProvider())
                 .authorizeRequests()
-                .requestMatchers("/admin/**").hasRole("RED")
-                .requestMatchers("/user/**").hasRole("BLUE")
-                .requestMatchers("/")
+                .requestMatchers(new AntPathRequestMatcher("/admin/**")).hasRole("RED")
+                .requestMatchers(new AntPathRequestMatcher("/user/**")).hasRole("BLUE")
+                .requestMatchers(new AntPathRequestMatcher("/"))
                 .authenticated()
-                .requestMatchers("/normal/**")
+                .requestMatchers(new AntPathRequestMatcher("/normal/**"))
                 .permitAll()
-                .requestMatchers(HttpMethod.GET, "/static/test.html")
+                .requestMatchers(new AntPathRequestMatcher(HttpMethod.GET, "/static/test.html")
                 .authenticated()
-                .requestMatchers(HttpMethod.GET, "/static/index.html")
+                .requestMatchers(new AntPathRequestMatcher(HttpMethod.GET, "/static/index.html")
                 .permitAll()
                 .and()
                 .formLogin().defaultSuccessUrl("/static/index.html", true)

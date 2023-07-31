@@ -9,6 +9,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableResourceServer
@@ -39,15 +40,15 @@ public class Mastery1ResourceServerConfigurer extends ResourceServerConfigurerAd
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .requestMatchers("/open/**")
+                .requestMatchers(new AntPathRequestMatcher("/open/**"))
                 .permitAll()
-                .requestMatchers("/artist/**")
+                .requestMatchers(new AntPathRequestMatcher("/artist/**"))
                 .permitAll()
-                .requestMatchers("/member/**")
+                .requestMatchers(new AntPathRequestMatcher("/member/**"))
                 .permitAll()
-                .requestMatchers("/auditevents/**")
+                .requestMatchers(new AntPathRequestMatcher("/auditevents/**"))
                 .permitAll()
-                .requestMatchers("/concerts/**")
+                .requestMatchers(new AntPathRequestMatcher("/concerts/**"))
                 .authenticated()
                 .and()
                 .exceptionHandling()
