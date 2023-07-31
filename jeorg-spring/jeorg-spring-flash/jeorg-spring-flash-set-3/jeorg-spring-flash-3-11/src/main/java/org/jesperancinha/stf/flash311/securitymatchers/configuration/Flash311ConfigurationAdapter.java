@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
@@ -30,9 +29,9 @@ public class Flash311ConfigurationAdapter {
                 .authenticated()
                 .requestMatchers(new AntPathRequestMatcher("/normal/**"))
                 .permitAll()
-                .requestMatchers(new AntPathRequestMatcher( "/static/test.html", HttpMethod.GET.toString()))
+                .requestMatchers(new AntPathRequestMatcher("/static/test.html", HttpMethod.GET.toString()))
                 .authenticated()
-                .requestMatchers(new AntPathRequestMatcher("/static/index.html",HttpMethod.GET.toString()))
+                .requestMatchers(new AntPathRequestMatcher("/static/index.html", HttpMethod.GET.toString()))
                 .permitAll()
                 .and()
                 .formLogin().defaultSuccessUrl("/static/index.html", true)
