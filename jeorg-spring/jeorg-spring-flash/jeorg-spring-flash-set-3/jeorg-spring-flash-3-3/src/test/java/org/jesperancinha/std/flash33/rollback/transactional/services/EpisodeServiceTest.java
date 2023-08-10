@@ -17,9 +17,8 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = EpisodeService.class)
@@ -40,6 +39,7 @@ class EpisodeServiceTest {
 
         verify(episodeRepository, times(1))
                 .save(Episode.builder().id(1L).name(episodeDto.getName()).build());
+        verifyNoMoreInteractions(episodeRepository);
     }
 
     @Test
@@ -51,6 +51,7 @@ class EpisodeServiceTest {
 
         verify(episodeRepository, times(1))
                 .save(Episode.builder().id(1L).name(episodeDto.getName()).build());
+        verifyNoMoreInteractions(episodeRepository);
     }
 
     @Test
@@ -106,5 +107,7 @@ class EpisodeServiceTest {
         final var resultEpisodeDtos = episodeService.getAllEpisodes();
 
         assertThat(resultEpisodeDtos).isEqualTo(List.of(episodeDto));
+        verify(episodeRepository, times(1)).findAll();
+        verifyNoMoreInteractions(episodeRepository);
     }
 }

@@ -61,7 +61,11 @@ public class EpisodeService {
     }
 
     public List<EpisodeDto> getAllEpisodes() {
-        return episodeRepository.findAll().stream().map(this::toDto).collect(Collectors.toList());
+        return episodeRepository
+                .findAll()
+                .stream()
+                .map(this::toDto)
+                .collect(Collectors.toList());
     }
 
     private EpisodeDto toDto(Episode episode) {
