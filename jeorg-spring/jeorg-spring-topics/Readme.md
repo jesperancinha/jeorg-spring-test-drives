@@ -25,10 +25,6 @@ SPRING 5 Topics study module. Each module has in its name, the topic we are goin
 
 I'm using JDK version 15.0.2.hs-adpt for all of these tests.
 
-```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
-```
 
 ## Contents
 

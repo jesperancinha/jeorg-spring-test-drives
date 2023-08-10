@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class SpringFlash1LauncherTest {
 
     @Test
-    void main() {
+    void testMain() {
         SpringFlash1Launcher.main(null);
     }
 }

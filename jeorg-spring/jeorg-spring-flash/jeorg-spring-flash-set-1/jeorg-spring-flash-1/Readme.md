@@ -1,22 +1,11 @@
 # jeorg-spring-flash-1 - Spring Flash 1
 
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png "Spring Webfllux")](https://spring.io/projects/spring-boot)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png "Spring Reactor")](https://spring.io/reactive)
-
 ## Description
 
 Discovering Property Converters
 
 1.  `PropertyEditorRegistrar`, `registerCustomEditors`, `PropertyEditorSupport`, `CustomEditorConfigurer`
-
-```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
-```
+2.  `MethodInterceptor`, `Interceptor`, `Advice`, `ProxyFaxtory`, `addAdvice`, `setTarget`
 
 Topics covered:
 
@@ -24,13 +13,7 @@ Topics covered:
 
 ### Context
 
-<div align="center">
-      <a title="Celine Dion - On ne change pas" href="https://www.youtube.com/watch?v=3tOsUgwBgko">
-     <img 
-          src="https://img.youtube.com/vi/3tOsUgwBgko/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
+-  [Celine Dion - On ne change pas](https://www.youtube.com/watch?v=3tOsUgwBgko)
 
 ### Online
 

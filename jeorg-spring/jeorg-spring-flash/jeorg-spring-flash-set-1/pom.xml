@@ -13,7 +13,6 @@
 
     <modules>
         <module>jeorg-spring-flash-1</module>
-        <module>jeorg-spring-flash-2</module>
         <module>jeorg-spring-flash-3</module>
         <module>jeorg-spring-flash-4</module>
         <module>jeorg-spring-flash-5</module>

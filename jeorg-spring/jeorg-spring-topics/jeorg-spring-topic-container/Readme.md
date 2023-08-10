@@ -6,10 +6,6 @@ SPRING 5 Container study module.
 
 I'm using JDK version 15.0.2.hs-adpt for all of these tests.
 
-```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
-```
 
 Topics covered:
 
