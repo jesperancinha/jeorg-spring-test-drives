@@ -5,7 +5,6 @@ import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import io.mockk.every
-import io.mockk.mockk
 import io.mockk.slot
 import io.mockk.verify
 import org.jesperancinha.std.flash29.security.domain.Jewel

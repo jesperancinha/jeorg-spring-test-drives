@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jesperancinha.std.flash7.session.handlers.ErrorCar;
 import org.jesperancinha.std.flash7.session.handlers.ErrorFlower;
 import org.jesperancinha.std.flash7.session.handlers.MixErrorMessage;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -15,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.MockitoAnnotations.initMocks;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -25,11 +23,6 @@ class ProductControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @BeforeEach
-    public void setUp() {
-        initMocks(mockMvc);
-    }
 
     @Test
     void testGetTulipsWhenCalled_getResponse() throws Exception {
