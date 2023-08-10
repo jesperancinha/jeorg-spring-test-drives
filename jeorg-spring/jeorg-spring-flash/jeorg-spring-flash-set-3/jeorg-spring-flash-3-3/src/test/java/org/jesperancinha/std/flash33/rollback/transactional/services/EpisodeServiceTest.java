@@ -110,4 +110,19 @@ class EpisodeServiceTest {
         verify(episodeRepository, times(1)).findAll();
         verifyNoMoreInteractions(episodeRepository);
     }
+
+    @Test
+    void getAllEpisodesMoreCompleteExampleTest() {
+        final var videoName = "Useless videos";
+        final var episodeDto = EpisodeDto.builder().id(1L).name(videoName).build();
+        final var episodes = List.of(Episode.builder().id(1L).name(episodeDto.getName()).build());
+        when(episodeRepository.findAll()).thenReturn(episodes);
+
+        final var resultEpisodeDtos = episodeService.getAllEpisodes();
+
+        assertThat(resultEpisodeDtos).isEqualTo(List.of(episodeDto));
+        assertThat(episodeDto.getName()).isEqualTo(videoName);
+        verify(episodeRepository, times(1)).findAll();
+        verifyNoMoreInteractions(episodeRepository);
+    }
 }
