@@ -11,11 +11,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.*;
 
 public class ContainerLauncher {
 

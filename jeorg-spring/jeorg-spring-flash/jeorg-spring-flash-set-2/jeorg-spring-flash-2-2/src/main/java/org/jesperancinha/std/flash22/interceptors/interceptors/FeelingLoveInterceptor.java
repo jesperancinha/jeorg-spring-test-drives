@@ -1,11 +1,10 @@
 package org.jesperancinha.std.flash22.interceptors.interceptors;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.jesperancinha.std.flash22.interceptors.beans.FeelingLoveBean;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 public class FeelingLoveInterceptor implements HandlerInterceptor {
 

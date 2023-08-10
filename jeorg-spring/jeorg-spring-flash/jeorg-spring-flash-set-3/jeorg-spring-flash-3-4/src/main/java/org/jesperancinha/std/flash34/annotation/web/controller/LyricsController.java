@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash34.annotation.web.controller;
 
+import jakarta.servlet.http.HttpServlet;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash34.annotation.web.model.LyricCollection;
 import org.springframework.ui.Model;
@@ -7,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import jakarta.servlet.http.HttpServlet;
 
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 

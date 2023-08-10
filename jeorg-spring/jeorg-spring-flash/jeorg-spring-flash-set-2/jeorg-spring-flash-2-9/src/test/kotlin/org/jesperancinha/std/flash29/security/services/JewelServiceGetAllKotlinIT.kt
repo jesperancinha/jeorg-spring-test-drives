@@ -5,13 +5,11 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import io.mockk.every
-import org.assertj.core.api.Assertions
 import org.jesperancinha.std.flash29.security.domain.Jewel
 import org.jesperancinha.std.flash29.security.repository.JewelRepository
 import org.jesperancinha.std.flash29.security.services.JewelType.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.mockito.Mockito
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 

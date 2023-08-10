@@ -1,27 +1,8 @@
 package org.jesperancinha.std.action.aop.catchers;
 
 import org.aspectj.lang.JoinPoint;
-import org.jesperancinha.std.action.aop.aspects.BonitoAspect;
-import org.jesperancinha.std.action.aop.aspects.BonitoAspect2;
-import org.jesperancinha.std.action.aop.aspects.BonitoAspect3;
-import org.jesperancinha.std.action.aop.aspects.BonitoAspect4;
-import org.jesperancinha.std.action.aop.aspects.GambaAspect;
-import org.jesperancinha.std.action.aop.aspects.MasterAspect;
-import org.jesperancinha.std.action.aop.beans.Bonito1Service;
-import org.jesperancinha.std.action.aop.beans.Bonito2Service;
-import org.jesperancinha.std.action.aop.beans.Bonito3Service;
-import org.jesperancinha.std.action.aop.beans.Bonito4Service;
-import org.jesperancinha.std.action.aop.beans.CodService;
-import org.jesperancinha.std.action.aop.beans.GambaService;
-import org.jesperancinha.std.action.aop.beans.MasterService;
-import org.jesperancinha.std.action.aop.beans.TunaService;
-import org.jesperancinha.std.action.aop.catchers.BonitoCatcher;
-import org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher;
-import org.jesperancinha.std.action.aop.catchers.MackerelCatcher;
-import org.jesperancinha.std.action.aop.catchers.MegaTunaCatcher;
-import org.jesperancinha.std.action.aop.catchers.SardineCatcher;
-import org.jesperancinha.std.action.aop.catchers.ShrimpCatcher;
-import org.jesperancinha.std.action.aop.catchers.TunaCatcher;
+import org.jesperancinha.std.action.aop.aspects.*;
+import org.jesperancinha.std.action.aop.beans.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
@@ -32,16 +13,10 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.List;
 import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.atLeast;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.only;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.*;
 
 
 @ExtendWith({SpringExtension.class})

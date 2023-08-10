@@ -3,19 +3,13 @@ package org.jesperancinha.std.action.mvc.controllers;
 import jakarta.servlet.ServletRequest;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.action.mvc.dto.Capacitors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
-import static org.jesperancinha.std.action.mvc.dto.CapacitorType.CERAMIC;
-import static org.jesperancinha.std.action.mvc.dto.CapacitorType.MICA;
-import static org.jesperancinha.std.action.mvc.dto.CapacitorType.NON_POLARIZED;
+import static org.jesperancinha.std.action.mvc.dto.CapacitorType.*;
 import static org.jesperancinha.std.action.mvc.dto.CapacitorUnit.uF;
 
 @RestController

@@ -1,6 +1,6 @@
 package org.jesperancinha.std.flash18.aop.afterthrowing
 
-import org.jesperancinha.std.flash18.aop.afterthrowing.SpringFlash18Launcher.*
+import org.jesperancinha.std.flash18.aop.afterthrowing.SpringFlash18Launcher.mutateLyricsServiceImpl
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest

@@ -10,12 +10,9 @@ import org.springframework.web.accept.ContentNegotiationManagerFactoryBean;
 import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Properties;
 
-import static org.springframework.http.MediaType.APPLICATION_PDF_VALUE;
-import static org.springframework.http.MediaType.TEXT_HTML;
-import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
+import static org.springframework.http.MediaType.*;
 
 @Configuration
 public class BookieCookieConfiguration {

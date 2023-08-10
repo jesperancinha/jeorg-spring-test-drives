@@ -3,11 +3,7 @@ package org.jesperancinha.std.flash33.rollback.transactional.controllers;
 import org.jesperancinha.std.flash33.rollback.transactional.dto.EpisodeDto;
 import org.jesperancinha.std.flash33.rollback.transactional.exceptions.EpisodeException;
 import org.jesperancinha.std.flash33.rollback.transactional.services.EpisodeService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 

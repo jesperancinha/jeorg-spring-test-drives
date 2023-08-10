@@ -4,10 +4,7 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Service;
 
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.*;
 import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
 
 /**

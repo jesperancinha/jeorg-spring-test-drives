@@ -7,9 +7,7 @@ import org.jesperancinha.std.app2.scrap.repository.ScrapbookRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapBookDto;
-import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbook;
-import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbookBadReservations;
+import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.*;
 
 public class ScrapbookClosedService implements ScrapbookService {
 

@@ -13,9 +13,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 
 import java.util.Optional;
 
-import static org.jesperancinha.std.flash29.security.services.JewelType.DIAMOND;
-import static org.jesperancinha.std.flash29.security.services.JewelType.PEARL;
-import static org.jesperancinha.std.flash29.security.services.JewelType.RUBY;
+import static org.jesperancinha.std.flash29.security.services.JewelType.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.reset;

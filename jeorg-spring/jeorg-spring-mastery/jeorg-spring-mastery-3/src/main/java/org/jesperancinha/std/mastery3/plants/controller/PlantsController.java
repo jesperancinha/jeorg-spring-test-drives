@@ -2,11 +2,7 @@ package org.jesperancinha.std.mastery3.plants.controller;
 
 import org.jesperancinha.std.mastery3.plants.dto.PlantDto;
 import org.jesperancinha.std.mastery3.plants.service.PlantService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;

@@ -12,7 +12,6 @@ import org.jesperancinha.std.flash19.transactional.repos.AlbumRepository
 import org.jesperancinha.std.flash19.transactional.services.AlbumServiceImpl
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.InjectMocks
 
 @ExtendWith(MockKExtension::class)
 internal class AlbumControllerKotlinUnitTest {

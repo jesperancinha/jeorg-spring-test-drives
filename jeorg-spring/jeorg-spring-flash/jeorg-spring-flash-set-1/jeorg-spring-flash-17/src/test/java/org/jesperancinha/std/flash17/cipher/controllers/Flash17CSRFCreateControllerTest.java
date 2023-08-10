@@ -2,7 +2,6 @@ package org.jesperancinha.std.flash17.cipher.controllers;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash17.cipher.configuration.Flash17CSRFConfigurationAdapter;
-import org.jesperancinha.std.flash17.cipher.configuration.Flash17ConfigurationAdapter;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;

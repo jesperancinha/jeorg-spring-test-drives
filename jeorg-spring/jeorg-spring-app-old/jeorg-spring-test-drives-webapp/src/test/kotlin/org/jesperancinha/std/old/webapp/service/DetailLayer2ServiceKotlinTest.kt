@@ -2,9 +2,7 @@ package org.jesperancinha.std.old.webapp.service
 
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
-import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.Assertions
 import org.jesperancinha.std.old.webapp.model.DetailEntity
 import org.jesperancinha.std.old.webapp.repository.DetailRepository
 import org.junit.jupiter.api.BeforeEach

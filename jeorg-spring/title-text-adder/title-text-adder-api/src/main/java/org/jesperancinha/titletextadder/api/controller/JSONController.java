@@ -1,23 +1,18 @@
 package org.jesperancinha.titletextadder.api.controller;
 
+import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.common.SolrDocumentList;
+import org.jesperancinha.titletextadder.api.model.Title;
+import org.jesperancinha.titletextadder.api.pojo.Response;
+import org.jesperancinha.titletextadder.api.pojo.ResponseStatus;
+import org.jesperancinha.titletextadder.api.service.TitleService;
+import org.jesperancinha.titletextadder.api.solr.SolrJSearcher;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.solr.client.solrj.SolrServerException;
-import org.apache.solr.common.SolrDocumentList;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import org.jesperancinha.titletextadder.api.model.Title;
-import org.jesperancinha.titletextadder.api.pojo.Response;
-import org.jesperancinha.titletextadder.api.service.TitleService;
-import org.jesperancinha.titletextadder.api.solr.SolrJSearcher;
-import org.jesperancinha.titletextadder.api.pojo.ResponseStatus;
 
 @Controller
 @RequestMapping("/tta/titles")

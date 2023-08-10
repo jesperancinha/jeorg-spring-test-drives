@@ -9,9 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapBookDto;
-import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbook;
-import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.toScrapbookBadReservations;
+import static org.jesperancinha.std.app2.scrap.converter.ScrapbookConverter.*;
 
 @Service("scrapBookOpenService")
 public class ScrapbookOpenService implements ScrapbookService {

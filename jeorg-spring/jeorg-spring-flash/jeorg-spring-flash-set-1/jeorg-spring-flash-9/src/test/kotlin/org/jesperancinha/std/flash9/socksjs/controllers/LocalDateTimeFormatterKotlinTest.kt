@@ -1,11 +1,9 @@
 package org.jesperancinha.std.flash9.socksjs.controllers
 
 import io.kotest.matchers.nulls.shouldNotBeNull
-import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 import java.time.LocalDateTime
-import java.time.Month
 import java.time.Month.APRIL
 import java.time.format.DateTimeFormatter
 

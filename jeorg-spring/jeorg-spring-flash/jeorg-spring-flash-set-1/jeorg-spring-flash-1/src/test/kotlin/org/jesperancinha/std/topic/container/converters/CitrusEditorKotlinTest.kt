@@ -2,7 +2,6 @@ package org.jesperancinha.std.topic.container.converters
 
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeTypeOf
-import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 
 internal class CitrusEditorKotlinTest {

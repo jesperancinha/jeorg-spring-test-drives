@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 
-import static org.jesperancinha.std.flash18.aop.afterthrowing.SpringFlash18Launcher.*;
+import static org.jesperancinha.std.flash18.aop.afterthrowing.SpringFlash18Launcher.mutateLyricsServiceImpl;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)

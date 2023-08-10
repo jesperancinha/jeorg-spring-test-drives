@@ -5,7 +5,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-
 import org.jesperancinha.titletextadder.api.model.Title;
 
 public class TitleDao implements TitleDaoInterface<Title, String> {

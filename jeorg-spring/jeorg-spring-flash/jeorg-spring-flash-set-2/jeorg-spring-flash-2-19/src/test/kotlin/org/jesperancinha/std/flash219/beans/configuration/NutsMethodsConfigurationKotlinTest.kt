@@ -3,7 +3,8 @@ package org.jesperancinha.std.flash219.beans.configuration
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.verify
 import jakarta.annotation.PreDestroy
-import org.jesperancinha.console.consolerizer.common.ConsolerizerColor.*
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BROWN
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
 import org.jesperancinha.std.flash219.beans.domain.Nut
 import org.junit.jupiter.api.Test

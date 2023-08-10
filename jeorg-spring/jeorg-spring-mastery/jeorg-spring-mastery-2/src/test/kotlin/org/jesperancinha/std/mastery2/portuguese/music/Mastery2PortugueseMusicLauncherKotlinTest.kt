@@ -4,12 +4,10 @@ import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment
-import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 internal class Mastery2PortugueseMusicLauncherKotlinTest @Autowired constructor(

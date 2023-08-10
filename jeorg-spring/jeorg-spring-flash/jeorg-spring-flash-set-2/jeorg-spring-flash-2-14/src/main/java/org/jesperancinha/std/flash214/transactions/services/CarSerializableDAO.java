@@ -10,9 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static java.lang.Thread.sleep;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.*;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.outSpace;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printRainbowFlag;
 

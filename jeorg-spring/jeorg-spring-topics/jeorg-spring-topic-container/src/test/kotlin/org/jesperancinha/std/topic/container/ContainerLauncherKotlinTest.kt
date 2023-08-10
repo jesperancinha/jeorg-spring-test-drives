@@ -5,7 +5,6 @@ import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
 import org.jesperancinha.std.topic.container.beans.BeanWithContructor
 import org.junit.jupiter.api.Test
-import org.springframework.boot.test.context.SpringBootTest
 
 internal class ContainerLauncherKotlinTest {
     @Test

@@ -2,7 +2,6 @@ package org.jesperancinha.std.flash214.transactions.repository
 
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.Assertions
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
 import org.jesperancinha.std.flash214.transactions.model.Car
 import org.junit.jupiter.api.Test

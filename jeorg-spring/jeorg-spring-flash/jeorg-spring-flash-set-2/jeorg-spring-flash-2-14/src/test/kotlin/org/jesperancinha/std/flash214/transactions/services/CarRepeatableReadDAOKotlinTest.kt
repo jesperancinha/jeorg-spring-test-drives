@@ -1,7 +1,6 @@
 package org.jesperancinha.std.flash214.transactions.services
 
 import io.kotest.matchers.booleans.shouldBeTrue
-import org.assertj.core.api.Assertions
 import org.jesperancinha.console.consolerizer.common.ConsolerizerColor
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer
 import org.jesperancinha.std.flash214.transactions.model.Car

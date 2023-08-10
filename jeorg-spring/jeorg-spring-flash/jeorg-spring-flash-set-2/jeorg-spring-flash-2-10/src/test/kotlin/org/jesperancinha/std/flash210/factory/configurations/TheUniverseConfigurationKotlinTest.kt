@@ -1,7 +1,6 @@
 package org.jesperancinha.std.flash210.factory.configurations
 
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired

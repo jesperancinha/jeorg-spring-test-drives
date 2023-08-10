@@ -1,10 +1,9 @@
 package org.jesperancinha.std.flash10.error;
 
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
-
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
 public class Flash10MappingExceptionResolver extends SimpleMappingExceptionResolver {
     public Flash10MappingExceptionResolver() {

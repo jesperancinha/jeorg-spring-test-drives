@@ -1,8 +1,7 @@
 package org.jesperancinha.std.app1.jdbc.domain;
 
-import jakarta.persistence.*;
-
-import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Table
 @Entity

@@ -1,12 +1,6 @@
 package org.jesperancinha.std.action.aop;
 
-import org.jesperancinha.std.action.aop.catchers.BonitoCatcher;
-import org.jesperancinha.std.action.aop.catchers.GambaFoodCatcher;
-import org.jesperancinha.std.action.aop.catchers.MackerelCatcher;
-import org.jesperancinha.std.action.aop.catchers.MegaTunaCatcher;
-import org.jesperancinha.std.action.aop.catchers.SardineCatcher;
-import org.jesperancinha.std.action.aop.catchers.ShrimpCatcher;
-import org.jesperancinha.std.action.aop.catchers.TunaCatcher;
+import org.jesperancinha.std.action.aop.catchers.*;
 import org.jesperancinha.std.action.aop.catchers.cod.CodCatcher;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

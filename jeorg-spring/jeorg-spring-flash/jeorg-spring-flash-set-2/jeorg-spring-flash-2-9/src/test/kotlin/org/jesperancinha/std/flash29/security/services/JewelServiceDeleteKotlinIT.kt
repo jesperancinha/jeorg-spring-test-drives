@@ -11,17 +11,10 @@ import org.jesperancinha.std.flash29.security.domain.Jewel
 import org.jesperancinha.std.flash29.security.dto.JewelDto
 import org.jesperancinha.std.flash29.security.repository.JewelRepository
 import org.jesperancinha.std.flash29.security.services.JewelType.PEARL
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.mockito.ArgumentCaptor
-import org.mockito.Captor
-import org.mockito.Mockito
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.security.access.AccessDeniedException
-import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException
 import org.springframework.security.test.context.support.WithMockUser
 
 @SpringBootTest

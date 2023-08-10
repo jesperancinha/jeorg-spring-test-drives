@@ -19,9 +19,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.*;
 
 @RestController
 public class CarController {

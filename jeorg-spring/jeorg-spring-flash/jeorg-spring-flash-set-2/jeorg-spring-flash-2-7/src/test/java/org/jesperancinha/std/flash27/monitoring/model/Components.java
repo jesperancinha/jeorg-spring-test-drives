@@ -1,9 +1,6 @@
 package org.jesperancinha.std.flash27.monitoring.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 
 public record Components(@JsonProperty("db") DataBaseF27 db,
                          @JsonProperty("diskSpace") DiskSpace diskSpace,

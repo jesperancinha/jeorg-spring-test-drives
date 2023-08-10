@@ -1,6 +1,5 @@
 package org.jesperancinha.std.action.mvc2.resolver;
 
-import org.h2.api.UserToRolesMapper;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.action.mvc2.view.PdfView;
 import org.springframework.core.Ordered;

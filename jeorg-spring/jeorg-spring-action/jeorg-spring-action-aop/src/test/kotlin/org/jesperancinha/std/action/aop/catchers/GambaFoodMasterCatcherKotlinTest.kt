@@ -9,7 +9,6 @@ import org.jesperancinha.std.action.aop.aspects.*
 import org.jesperancinha.std.action.aop.beans.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.Mockito
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.EnableAspectJAutoProxy
 import org.springframework.test.context.ContextConfiguration

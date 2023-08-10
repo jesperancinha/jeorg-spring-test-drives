@@ -13,9 +13,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.jesperancinha.std.flash29.security.services.JewelType.DIAMOND;
-import static org.jesperancinha.std.flash29.security.services.JewelType.PEARL;
-import static org.jesperancinha.std.flash29.security.services.JewelType.RUBY;
+import static org.jesperancinha.std.flash29.security.services.JewelType.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.when;

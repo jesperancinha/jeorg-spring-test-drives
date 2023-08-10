@@ -4,9 +4,7 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.optional.shouldBeEmpty
 import io.kotest.matchers.optional.shouldBePresent
-import io.kotest.matchers.optional.shouldNotBeEmpty
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.Assertions
 import org.jesperancinha.b2b2springboot.config.SpaceRocketConfig
 import org.jesperancinha.b2b2springboot.entities.SpaceRocket
 import org.jesperancinha.b2b2springboot.entities.SpaceRocketRepository
@@ -18,8 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.context.support.AnnotationConfigContextLoader
-import java.util.stream.Collectors
-import java.util.stream.StreamSupport
 
 @ExtendWith(SpringExtension::class)
 @ContextConfiguration(classes = [SpaceRocketConfig::class], loader = AnnotationConfigContextLoader::class)

@@ -2,7 +2,6 @@ package org.jesperancinha.b2b2springboot.service;
 
 import org.jesperancinha.b2b2springboot.entities.SpaceRocket;
 import org.jesperancinha.b2b2springboot.entities.SpaceRocketRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,30 +1,20 @@
 package org.jesperancinha.std.flash46.request.param;
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.html.HtmlizerLinks.getYouTubeFrame;
-import static org.jesperancinha.std.flash46.request.param.CatType.BENGAL;
-import static org.jesperancinha.std.flash46.request.param.CatType.MAINE_COON;
-import static org.jesperancinha.std.flash46.request.param.CatType.PERSIAN;
-import static org.jesperancinha.std.flash46.request.param.CatType.SAVANNAH;
-import static org.jesperancinha.std.flash46.request.param.CatType.SCOTTISH_FOLD;
-import static org.jesperancinha.std.flash46.request.param.CatType.SIAMESE;
-import static org.jesperancinha.std.flash46.request.param.DogType.BELGIAN_SHEPPARD;
-import static org.jesperancinha.std.flash46.request.param.DogType.COCKERS_SPANIEL;
-import static org.jesperancinha.std.flash46.request.param.DogType.DOBERMANN;
-import static org.jesperancinha.std.flash46.request.param.DogType.GERMAN_SHEPPARD;
-import static org.jesperancinha.std.flash46.request.param.DogType.ROTTWEILLER;
-import static org.jesperancinha.std.flash46.request.param.DogType.SIBERIAN_HUSKY;
+import static org.jesperancinha.std.flash46.request.param.CatType.*;
+import static org.jesperancinha.std.flash46.request.param.DogType.*;
 
 @RestController
 @SpringBootApplication

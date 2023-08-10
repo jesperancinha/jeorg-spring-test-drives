@@ -1,6 +1,7 @@
 package org.jesperancinha.std.mastery1.french.music.configuration;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.persistence.EntityManager;
 import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.mastery1.french.music.domain.Artist;
@@ -17,7 +18,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.lang.NonNull;
 
-import jakarta.persistence.EntityManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;

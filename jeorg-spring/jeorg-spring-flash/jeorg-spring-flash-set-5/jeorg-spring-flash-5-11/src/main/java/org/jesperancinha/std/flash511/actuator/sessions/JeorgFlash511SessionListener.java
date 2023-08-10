@@ -1,9 +1,8 @@
 package org.jesperancinha.std.flash511.actuator.sessions;
 
-import org.springframework.stereotype.Component;
-
 import jakarta.servlet.http.HttpSessionEvent;
 import jakarta.servlet.http.HttpSessionListener;
+import org.springframework.stereotype.Component;
 
 @Component
 public class JeorgFlash511SessionListener implements HttpSessionListener {

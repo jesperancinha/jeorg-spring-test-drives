@@ -6,22 +6,14 @@ import io.kotest.matchers.collections.shouldNotBeEmpty
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import io.mockk.verify
-import org.assertj.core.api.Assertions
 import org.jesperancinha.std.flash23.xml.interceptors.beans.FeelingLoveBean
 import org.junit.jupiter.api.Test
-import org.mockito.ArgumentCaptor
-import org.mockito.ArgumentMatchers
-import org.mockito.Captor
-import org.mockito.Mockito
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
-import org.springframework.boot.test.mock.mockito.SpyBean
 import org.springframework.context.annotation.ImportResource
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
-import org.springframework.web.servlet.ModelAndView
-import java.util.function.Consumer
 
 @WebMvcTest(SpringFlash23Launcher::class)
 @ImportResource("classpath:WEB-INF/beans.xml")

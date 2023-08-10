@@ -1,12 +1,9 @@
 package org.jesperancinha.std.flash34.annotation.web.configuration;
 
-import jakarta.servlet.ServletException;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-
-import javax.servlet.ServletContext;
 
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 

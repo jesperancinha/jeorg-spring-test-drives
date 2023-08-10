@@ -9,10 +9,7 @@ import java.lang.annotation.Annotation;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_BLUE;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_GREEN;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_WHITE;
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.*;
 
 @SpringBootApplication
 public class SpringFlash53Launcher implements CommandLineRunner {

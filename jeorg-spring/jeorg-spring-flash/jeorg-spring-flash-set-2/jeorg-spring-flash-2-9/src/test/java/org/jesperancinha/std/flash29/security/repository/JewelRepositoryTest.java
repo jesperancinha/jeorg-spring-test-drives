@@ -1,21 +1,18 @@
  package org.jesperancinha.std.flash29.security.repository;
 
-import jakarta.transaction.Transactional;
-import org.jesperancinha.std.flash29.security.domain.Jewel;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.event.ContextStartedEvent;
+ import jakarta.transaction.Transactional;
+ import org.jesperancinha.std.flash29.security.domain.Jewel;
+ import org.junit.jupiter.api.BeforeEach;
+ import org.junit.jupiter.api.Test;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+ import org.springframework.context.ApplicationEventPublisher;
+ import org.springframework.context.ConfigurableApplicationContext;
+ import org.springframework.context.event.ContextStartedEvent;
 
-
-import static jakarta.transaction.Transactional.TxType.REQUIRED;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.jesperancinha.std.flash29.security.services.JewelType.AMETHYST;
-import static org.jesperancinha.std.flash29.security.services.JewelType.DIAMOND;
-import static org.jesperancinha.std.flash29.security.services.JewelType.RUBY;
+ import static jakarta.transaction.Transactional.TxType.REQUIRED;
+ import static org.assertj.core.api.Assertions.assertThat;
+ import static org.jesperancinha.std.flash29.security.services.JewelType.*;
 
 @DataJpaTest
 class JewelRepositoryTest {

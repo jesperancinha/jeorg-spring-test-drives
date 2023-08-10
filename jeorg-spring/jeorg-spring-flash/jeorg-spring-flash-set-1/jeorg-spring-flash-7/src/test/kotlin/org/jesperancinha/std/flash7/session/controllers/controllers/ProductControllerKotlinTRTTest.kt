@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash7.session.controllers.controllers
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.BeforeEach

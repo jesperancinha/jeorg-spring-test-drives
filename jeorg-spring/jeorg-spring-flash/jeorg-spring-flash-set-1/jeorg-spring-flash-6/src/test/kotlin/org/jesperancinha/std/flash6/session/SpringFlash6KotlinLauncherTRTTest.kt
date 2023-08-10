@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash6.session
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.ints.shouldBeBetween
 import io.kotest.matchers.longs.shouldBeBetween
@@ -11,13 +10,9 @@ import io.mockk.mockk
 import jakarta.servlet.http.HttpSession
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT
 import org.springframework.boot.test.web.client.TestRestTemplate
-import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.MvcResult
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
