@@ -20,7 +20,6 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDO
  */
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 internal class LyricAspectKotlinTest @Autowired constructor(
-    @Autowired
     private val lyricsService: LyricsService
 ) {
 
