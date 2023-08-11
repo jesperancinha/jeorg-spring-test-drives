@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
 /**
- * In this case, we also do not use [SpringExtension], because we want security to be activated.
+ * In this case, we also do not use SpringExtension, because we want security to be activated.
  * When using Spring Extension, some features of Spring like Spring Security, won't be activated, resulting in this particular case, in a test that seems to work both ways, but it only actually tests the security aspect with [SpringBootTest]
  */
 //@ExtendWith(SpringExtension.class)
@@ -31,16 +31,14 @@ internal class JewelServiceGetAllKotlinIT @Autowired constructor(
     @BeforeEach
     fun setUp() {
         val gregoryJewel = Jewel.builder().jewelType(PEARL).guardian("gregory_kitten").build()
-        val megaKittenJewel = Jewel.builder().jewelType(JewelType.DIAMOND).guardian("MegaKitten").build()
-        val joaoJewel = Jewel.builder().jewelType(JewelType.RUBY).guardian("Joao").build()
+        val megaKittenJewel = Jewel.builder().jewelType(DIAMOND).guardian("MegaKitten").build()
+        val joaoJewel = Jewel.builder().jewelType(RUBY).guardian("Joao").build()
         val jewelList = listOf(gregoryJewel, megaKittenJewel, joaoJewel)
         every { jewelRepository.findAll() } returns jewelList
     }
 
     @Test
     fun testGetAll_whenNoAuthentication_thenStillListAll() {
-        val all = jewelService.all
-
         jewelService
             .shouldNotBeNull()
             .all
