@@ -74,7 +74,7 @@
         <spring-boot.version>3.1.3</spring-boot.version>
 
         <!-- Other -->
-        <jetty-maven-plugin.version>11.0.15</jetty-maven-plugin.version>
+        <jetty-maven-plugin.version>11.0.16</jetty-maven-plugin.version>
         <jsp-api.version>2.2</jsp-api.version>
         <javax.servlet.jsp-api.version>2.3.3</javax.servlet.jsp-api.version>
         <jquery.version>3.7.1</jquery.version>
