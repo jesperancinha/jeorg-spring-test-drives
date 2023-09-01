@@ -34,7 +34,6 @@
         <h2.version>2.2.220</h2.version>
         <postgresql.version>42.6.0</postgresql.version>
         <hibernate-entitymanager.version>5.6.15.Final</hibernate-entitymanager.version>
-        <hibernate-core-orm.version>6.2.7.Final</hibernate-core-orm.version>
 
         <!-- Camel -->
         <camel.version>3.21.0</camel.version>
@@ -409,11 +408,6 @@
                 <groupId>org.mariadb.jdbc</groupId>
                 <artifactId>mariadb-java-client</artifactId>
                 <version>${mariadb-java-client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate.orm</groupId>
-                <artifactId>hibernate-core</artifactId>
-                <version>${hibernate-core-orm.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.playtika.testcontainers</groupId>
