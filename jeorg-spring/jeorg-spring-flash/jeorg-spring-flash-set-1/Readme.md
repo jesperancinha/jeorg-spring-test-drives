@@ -2,15 +2,15 @@
 
 ## Contents
 
-1. [jeorg-spring-flash-1](./jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters + 🌱 AOP (Aspect Oriented Programming)
-2. [jeorg-spring-flash-3](./jeorg-spring-flash-3) - ⛴ JDBC with boats
-3. [jeorg-spring-flash-4](./jeorg-spring-flash-4) - 🪄 Spring param converters
-4. [jeorg-spring-flash-5](./jeorg-spring-flash-5) - 🥔 Sequence generator with potatoes
-5. [jeorg-spring-flash-6](./jeorg-spring-flash-6) - 🧮 Keep the math in the Session
-6. [jeorg-spring-flash-7](./jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
-7. [jeorg-spring-flash-8](./jeorg-spring-flash-8) - 🎄 Xmas message with simple JSP in Spring
-8. [jeorg-spring-flash-9](./jeorg-spring-flash-9) - 🤖 A very simple bot with SockJS support
-9. [jeorg-spring-flash-10](./jeorg-spring-flash-10) - 🛑 Error messages
+1.  [jeorg-spring-flash-1](./jeorg-spring-flash-1) - 🍋 PropertyEditorRegistrar and converters + 🌱 AOP (Aspect Oriented Programming)
+2.  [jeorg-spring-flash-3](./jeorg-spring-flash-3) - ⛴ JDBC with boats
+3.  [jeorg-spring-flash-4](./jeorg-spring-flash-4) - 🪄 Spring param converters
+4.  [jeorg-spring-flash-5](./jeorg-spring-flash-5) - 🥔 Sequence generator with potatoes
+5.  [jeorg-spring-flash-6](./jeorg-spring-flash-6) - 🧮 Keep the math in the Session
+6.  [jeorg-spring-flash-7](./jeorg-spring-flash-7) - 🏎 🌺 Exception handling with cars and flowers
+7.  [jeorg-spring-flash-8](./jeorg-spring-flash-8) - 🎄 Xmas message with simple JSP in Spring
+8.  [jeorg-spring-flash-9](./jeorg-spring-flash-9) - 🤖 A very simple bot with SockJS support
+9.  [jeorg-spring-flash-10](./jeorg-spring-flash-10) - 🛑 Error messages
 10. [jeorg-spring-flash-11](./jeorg-spring-flash-11) - 👔 Form parameters
 11. [jeorg-spring-flash-12](./jeorg-spring-flash-12) - 🔑 CORS explained via annotations
 12. [jeorg-spring-flash-13](./jeorg-spring-flash-13) - 🗄 GZipping Static Resources
@@ -70,7 +70,7 @@
 <div align="center">
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-100/JEOrgLogo-27.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
-[![](https://img.shields.io/badge/youtube-%230077B5.svg?style=for-the-badge&logo=youtube&color=FF0000)](https://www.youtube.com/@joaoesperancinha)
+[![](https://img.shields.io/badge/youtube-%230077B5.svg?style=for-the-badge&logo=youtube&color=FF0000)](https://www.youtube.com/channel/UCzS_JK7QsZ7ZH-zTc5kBX_g)
 [![](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@jofisaes)
 [![](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%230077B5.svg?style=for-the-badge&logo=buymeacoffee&color=yellow)](https://www.buymeacoffee.com/jesperancinha)
 [![](https://img.shields.io/badge/Twitter-%230077B5.svg?style=for-the-badge&logo=twitter&color=white)](https://twitter.com/joaofse)
