@@ -12,6 +12,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 public class OldWebAppLauncher {
     public static void main(String[] args) {
-        SpringApplication.run(OldWebAppLauncher.class, args);
+        SpringApplication.run(OldWebAppLauncher.class, args).refresh();
     }
 }
