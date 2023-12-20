@@ -1,18 +1,26 @@
 package org.jesperancinha.std.old.webapp.service
 
+import io.kotest.matchers.nulls.shouldBeNull
+import io.kotest.matchers.nulls.shouldNotBeNull
+import io.kotest.matchers.shouldBe
 import org.jesperancinha.std.old.webapp.model.DetailEntity
 import org.jesperancinha.std.old.webapp.repository.DetailRepository
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.data.repository.findByIdOrNull
 import org.springframework.test.context.ActiveProfiles
 
 @SpringBootTest
 @ActiveProfiles("test")
 class DetailLayer2ServiceKotlinTest(
+
     @Autowired
-    private val detailRepository: DetailRepository,
+    private val detailService: DetailService,
+
+    @Autowired
+    private val detailRepository: DetailRepository
 ) {
     @BeforeEach
     fun setUp() {
@@ -27,34 +35,34 @@ class DetailLayer2ServiceKotlinTest(
 
     @Test
     fun `should ged details by id`() {
-//        detailController.findDetailById(Integer.valueOf(1))
-//            .shouldNotBeNull()
-//            .apply {
-//                name shouldBe NAME_1
-//                city.shouldBeNull()
-//            }
-//        detailRepository.deleteAll()
-//        detailRepository.findByIdOrNull(1)
-//            .shouldBeNull()
-//        detailController.findDetailById(1)
-//            .shouldNotBeNull()
-//            .apply {
-//                name shouldBe NAME_1
-//                city.shouldBeNull()
-//            }
-//        addOneElement()
-//        detailRepository.findByIdOrNull(1)
-//            .shouldNotBeNull()
-//            .apply {
-//                name shouldBe NAME_1
-//                city.shouldBeNull()
-//            }
-//         detailRepository.findByIdOrNull(1)
-//             .shouldNotBeNull()
-//             .apply {
-//                 name shouldBe NAME_1
-//                 city.shouldBeNull()
-//             }
+        detailService.findDetailById(1)
+            .shouldNotBeNull()
+            .apply {
+                name shouldBe NAME_1
+                city.shouldBeNull()
+            }
+        detailRepository.deleteAll()
+        detailRepository.findByIdOrNull(1)
+            .shouldBeNull()
+        detailService.findDetailById(1)
+            .shouldNotBeNull()
+            .apply {
+                name shouldBe NAME_1
+                city.shouldBeNull()
+            }
+        addOneElement()
+        detailRepository.findByIdOrNull(1)
+            .shouldNotBeNull()
+            .apply {
+                name shouldBe NAME_1
+                city.shouldBeNull()
+            }
+        detailRepository.findByIdOrNull(1)
+            .shouldNotBeNull()
+            .apply {
+                name shouldBe NAME_1
+                city.shouldBeNull()
+            }
     }
 
     companion object {
