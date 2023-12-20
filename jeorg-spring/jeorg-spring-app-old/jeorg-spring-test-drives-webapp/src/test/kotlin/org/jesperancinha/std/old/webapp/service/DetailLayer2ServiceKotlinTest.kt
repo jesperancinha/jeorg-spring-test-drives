@@ -12,8 +12,6 @@ import org.springframework.test.context.ActiveProfiles
 @ActiveProfiles("test")
 class DetailLayer2ServiceKotlinTest(
     @Autowired
-    private val detailController: DetailLayer2Service,
-    @Autowired
     private val detailRepository: DetailRepository,
 ) {
     @BeforeEach
