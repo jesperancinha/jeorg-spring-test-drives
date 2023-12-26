@@ -18,7 +18,7 @@
         <jackson-databind.version>2.16.0</jackson-databind.version>
         <jackson-module-kotlin.version>2.16.0</jackson-module-kotlin.version>
         <jackson.mapper.asl.version>1.9.11</jackson.mapper.asl.version>
-        <jackson-annotations.version>2.16.0</jackson-annotations.version>
+        <jackson-annotations.version>2.16.1</jackson-annotations.version>
         <jackson-core>2.16.1</jackson-core>
         <jaxb-api.version>2.3.1</jaxb-api.version>
 
