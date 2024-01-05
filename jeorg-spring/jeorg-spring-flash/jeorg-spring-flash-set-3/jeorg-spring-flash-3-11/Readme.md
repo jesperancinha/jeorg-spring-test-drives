@@ -31,7 +31,7 @@ You have two users:
 1.  `neo_truth`/`redpill` - Can see only the admin page, and the userdata page
 2.  `neo_lie`/`bluepill` - Can see only the user page, and the userdata page
 
-## References
+## Resources
 
 ### Context
 

@@ -23,7 +23,7 @@
 19. [jeorg-spring-flash-3-19](./jeorg-spring-flash-3-19) - 🌾 static @Bean
 20. [jeorg-spring-flash-3-20](./jeorg-spring-flash-3-20) - 🦢 @Required and RequiredAnnotationBeanPostProcessor
 
-## References
+## Resources
 
 ### Online
 

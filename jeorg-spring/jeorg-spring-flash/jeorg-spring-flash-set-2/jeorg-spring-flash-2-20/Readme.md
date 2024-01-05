@@ -17,7 +17,7 @@ curl -X POST "http://localhost:8081/matrix/wow;sin1=Lust;sin2=Gluttony;sin3=Gree
 curl -X POST -H "sin5: Wrath" -H "sin6: Envy" -H "sin7: Pride" "http://localhost:8081/request/Lust/Gluttony?sin3=Greed&sin4=Sloth"
 ```
 
-## References
+## Resources
 
 ### Context
 

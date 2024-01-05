@@ -127,7 +127,7 @@ or
 mvn clean install
 ```
 
-## References
+## Resources
 
 ### Online
 

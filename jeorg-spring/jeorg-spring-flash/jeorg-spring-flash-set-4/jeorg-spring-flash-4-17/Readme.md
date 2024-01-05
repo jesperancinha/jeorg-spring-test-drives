@@ -42,7 +42,7 @@ curl http://localhost:8082/actuator
 curl http://localhost:8081/
 ```
 
-## References
+## Resources
 
 ### Context
 

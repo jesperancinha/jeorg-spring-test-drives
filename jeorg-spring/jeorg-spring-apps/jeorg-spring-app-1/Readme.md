@@ -15,7 +15,7 @@ Topics covered:
 
 ![alt text](./docs/sketch-1.JPG)
 
-## References
+## Resources
 
 ### Online
 

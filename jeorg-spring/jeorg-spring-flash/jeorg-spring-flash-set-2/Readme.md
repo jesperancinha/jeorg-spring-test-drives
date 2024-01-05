@@ -23,7 +23,7 @@
 19. [jeorg-spring-flash-2-19](./jeorg-spring-flash-2-19) - 🍃 Bean
 20. [jeorg-spring-flash-2-20](./jeorg-spring-flash-2-20) - 7️⃣ PathVariable, MatrixVariable, RequestHeader, RequestParam
 
-## References
+## Resources
 
 ### Online
 

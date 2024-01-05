@@ -119,7 +119,7 @@ curl -v --cookie-jar cookies.txt -d username=queen -d password=admin -L http://l
 curl -v -sL -b cookies.txt http://localhost:8081/thrones/2
 ```
 
-## References
+## Resources
 
 ### Context
 

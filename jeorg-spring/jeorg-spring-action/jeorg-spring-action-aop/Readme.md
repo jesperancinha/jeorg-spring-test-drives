@@ -32,7 +32,7 @@ There are a least 4 scope types for @Aspect:
 3.  `pertarget`
 4.  `pertypewithin`
 
-## References
+## Resources
 
 ### Context
 

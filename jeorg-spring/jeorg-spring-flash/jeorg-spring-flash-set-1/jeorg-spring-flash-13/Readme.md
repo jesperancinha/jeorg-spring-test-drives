@@ -25,7 +25,7 @@ gzip style.css
 mvn clean spring-boot:run
 ```
 
-## References
+## Resources
 
 ### Online
 

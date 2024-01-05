@@ -6,7 +6,7 @@
  alter user postgres with password  'postgres';
 ```
 
-## References
+## Resources
 
 ### Online
 

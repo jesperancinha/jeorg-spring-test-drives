@@ -9,7 +9,7 @@ Topics:
 1.  `destroy`, `afterPropertiesSet`, `DisposableBean`, `InitializingBean`
 2.  `FileSystemXmlApplicationContext`, `ClassPathXmlApplicationContext`
 
-## References
+## Resources
 
 ### Context
 

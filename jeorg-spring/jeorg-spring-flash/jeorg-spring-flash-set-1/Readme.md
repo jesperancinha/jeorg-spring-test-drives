@@ -22,7 +22,7 @@
 18. [jeorg-spring-flash-19](./jeorg-spring-flash-19) - 🎫 Transaction
 19. [jeorg-spring-flash-20](./jeorg-spring-flash-20) - 🌏 CORS via XML
 
-## References
+## Resources
 
 ### Online
 

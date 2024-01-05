@@ -56,7 +56,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 
 ![alt img](./docs/workingdirectory.png)
 
-## References
+## Resources
 
 ### Books
 

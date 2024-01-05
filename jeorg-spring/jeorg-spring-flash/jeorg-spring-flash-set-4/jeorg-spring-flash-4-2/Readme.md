@@ -39,7 +39,7 @@ mvn clean install spring-boot:run
     1.  user/user
     2.  admin/admin
 
-## References
+## Resources
 
 ### Context
 

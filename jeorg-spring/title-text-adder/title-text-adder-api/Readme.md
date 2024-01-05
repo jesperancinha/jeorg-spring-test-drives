@@ -13,7 +13,7 @@
 ## Usefull Solr commands
 * ./solr create -c mysql-tta-indexing -d basic_configs
 
-## References
+## Resources
 * http://www.solrtutorial.com/solr-in-5-minutes.html
 * http://blog.comperiosearch.com/blog/2014/08/28/indexing-database-using-solr/
 * https://examples.javacodegeeks.com/enterprise-java/apache-solr/solr-dataimporthandler-example/
