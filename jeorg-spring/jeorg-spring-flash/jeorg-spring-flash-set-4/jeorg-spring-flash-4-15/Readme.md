@@ -42,7 +42,7 @@ curl -X POST -H 'Content-Type: application/json' --data '[{"count":100,"tearDrop
 curl -X POST -H 'Content-Type: application/json' --data '{"totalCount":150,"average":75,"stdDeviation":35,"tearDropTypeSet":["SADNESS","HAPPINESS"]}' http://localhost:8081/
 ```
 
-## References
+## Resources
 
 ### Context
 

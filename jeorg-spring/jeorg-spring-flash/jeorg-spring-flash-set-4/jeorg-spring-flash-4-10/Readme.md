@@ -52,7 +52,7 @@ Useful commands:
 mvn help:active-profiles
 ```
 
-## References
+## Resources
 
 ### Context
 

@@ -34,7 +34,7 @@ lsof -i :8081
 mvn clean install spring-boot:run
 ```
 
-## References
+## Resources
 
 ### Online
 

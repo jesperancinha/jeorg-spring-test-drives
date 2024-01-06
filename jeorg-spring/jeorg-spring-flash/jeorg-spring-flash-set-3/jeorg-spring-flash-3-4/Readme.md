@@ -34,7 +34,7 @@ They are part, on the other hand, of spring-boot-test.
 
 `JUnit`, `Spring Test & Spring Boot Test`, `AssertJ`, `Hamcrest`, `Mockito`, `JSONassert`, `JsonPath`
 
-## References
+## Resources
 
 ### Context
 

@@ -15,11 +15,11 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jackson-databind.version>2.16.0</jackson-databind.version>
-        <jackson-module-kotlin.version>2.16.0</jackson-module-kotlin.version>
+        <jackson-databind.version>2.16.1</jackson-databind.version>
+        <jackson-module-kotlin.version>2.16.1</jackson-module-kotlin.version>
         <jackson.mapper.asl.version>1.9.11</jackson.mapper.asl.version>
-        <jackson-annotations.version>2.16.0</jackson-annotations.version>
-        <jackson-core>2.16.0</jackson-core>
+        <jackson-annotations.version>2.16.1</jackson-annotations.version>
+        <jackson-core>2.16.1</jackson-core>
         <jaxb-api.version>2.3.1</jaxb-api.version>
 
         <!-- External -->
@@ -36,11 +36,11 @@
         <hibernate-entitymanager.version>5.6.15.Final</hibernate-entitymanager.version>
 
         <!-- Camel -->
-        <camel.version>3.21.1</camel.version>
+        <camel.version>3.22.0</camel.version>
 
         <!-- Logs -->
-        <slf4j.version>2.0.9</slf4j.version>
-        <log4j.version>2.22.0</log4j.version>
+        <slf4j.version>2.0.10</slf4j.version>
+        <log4j.version>2.22.1</log4j.version>
 
         <!-- Test -->
         <assertj-core.version>3.13.2</assertj-core.version>
@@ -55,7 +55,7 @@
         <kotlin.compiler.jvmTarget>${java.version}</kotlin.compiler.jvmTarget>
         <args4j-maven-plugin.version>2.33</args4j-maven-plugin.version>
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
-        <maven-compiler-plugin.version>3.12.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
@@ -94,7 +94,7 @@
         <cglib.version>3.3.0</cglib.version>
         <jstl.version>1.2</jstl.version>
         <commons-logging.version>1.3.0</commons-logging.version>
-        <groovy.version>3.0.19</groovy.version>
+        <groovy.version>3.0.20</groovy.version>
         <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
         <build-helper-maven-plugin.version>3.5.0</build-helper-maven-plugin.version>
         <kotlinx-serialization-json.version>1.6.2</kotlinx-serialization-json.version>
@@ -102,7 +102,7 @@
         <embedded-cassandra.version>2.0.4</embedded-cassandra.version>
         <java-driver-core.version>4.17.0</java-driver-core.version>
         <metrics-core.version>3.0.2</metrics-core.version>
-        <kotlin.version>1.9.21</kotlin.version>
+        <kotlin.version>1.9.22</kotlin.version>
         <springmockk.version>4.0.2</springmockk.version>
         <kotest.version>5.8.0</kotest.version>
         <kotest-extensions-spring.version>1.1.3</kotest-extensions-spring.version>

@@ -23,7 +23,7 @@
 19. [jeorg-spring-flash-4-19](./jeorg-spring-flash-4-19) - 🦩 TestApplicationContext
 20. [jeorg-spring-flash-4-20](./jeorg-spring-flash-4-20) - 🛣 @Rollback and @Commit and @Transactional and @Test
 
-## References
+## Resources
 
 ### Online
 

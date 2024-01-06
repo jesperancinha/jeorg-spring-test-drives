@@ -124,7 +124,7 @@ curl -X POST http://localhost:8081/create/repeatable --header "Content-Type: app
 curl -X POST http://localhost:8081/create/serializable --header "Content-Type: application/json"  --data '{"model":"Phantom II", "brand":"Rolls-Royce", "year":"1929", "movieAppearances":["Indiana Jones And The Last Cruzade","The Sorcerer''s Apprentice"]}'
 ```
 
-## References
+## Resources
 
 ### Context
 

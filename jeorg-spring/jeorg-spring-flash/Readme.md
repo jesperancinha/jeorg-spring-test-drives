@@ -128,7 +128,7 @@ All of these modules are fast-track learning modules about Spring. Flash in this
 `ApplicationContext`, `SpringApplication.exit(applicationContext, () -> 0)`, `applicationContext.registerShutdownHook()`, `applicationContext.close()`
 `GenericApplicationContext`, `XmlBeanDefinitionReader`, `GroovyBeanDefinitionReader`, `PropertiesBeanDefinitionReader`
 
-## References
+## Resources
 
 ### Books
 

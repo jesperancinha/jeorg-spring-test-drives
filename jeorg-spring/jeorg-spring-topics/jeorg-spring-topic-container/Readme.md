@@ -12,7 +12,7 @@ Topics covered:
 1.  `constructor-arg`, `bean`, `id`, `class`
 2.  `@ConstructorProperties`
 
-## References
+## Resources
 
 ### Context
 

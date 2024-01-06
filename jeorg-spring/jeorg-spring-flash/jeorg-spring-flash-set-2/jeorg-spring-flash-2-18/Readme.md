@@ -20,7 +20,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=pumpkin
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=garbage
 ```
 
-## References
+## Resources
 
 ### Context
 

@@ -9,7 +9,7 @@ Discovering Property Converters
 
 Topics covered:
 
-## References
+## Resources
 
 ### Context
 

@@ -42,7 +42,7 @@ curl http://localhost:8081/arms
 curl http://localhost:8081/body
 ```
 
-## References
+## Resources
 
 ### Context
 

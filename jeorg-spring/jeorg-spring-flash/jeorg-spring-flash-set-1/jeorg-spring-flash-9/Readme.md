@@ -23,7 +23,7 @@ mvn clean spring-boot:run
 1.  Snap -> Rhythm is a dancer.
 2.  We have instant soup at the office - Baby instant soup doesn't really grab me, today I need something more sub-sub-sub-substantial.
 
-## References
+## Resources
 
 ### Context
 

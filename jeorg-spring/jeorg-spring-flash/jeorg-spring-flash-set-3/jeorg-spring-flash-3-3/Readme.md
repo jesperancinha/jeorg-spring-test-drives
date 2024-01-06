@@ -20,7 +20,7 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8081/createEpi
 curl -X POST -H 'Content-Type: application/json' http://localhost:8081/createEpisodeMixNoRollback --data '{"name": "Il était une fois… la Vie - La bouche et les dents"}'
 ```
 
-## References
+## Resources
 
 ### Context
 

@@ -15,7 +15,7 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8081 --data '{
 curl -X POST -H 'Content-Type: application/json' http://localhost:8081/no-around --data '{"artist":"Madonna", "show":"Sticky & Sweet Tour in 2008", "localDateTime":"2008-12-04T18:00:00.000000000"}' 
 ```
 
-## References
+## Resources
 
 ### Context
 

@@ -13,7 +13,7 @@ Exploring JDK proxies in comparison to CGLib in Spring
 
 1.  `Proxy`, `newProxyInstance`
 
-## References
+## Resources
 
 ### Context
 

@@ -42,7 +42,7 @@ curl -X POST -H 'Content-Type: application/json' --data '{"name":"You Keep Me Ha
 curl -X POST -H 'Content-Type: application/json' --data '{"name":"Madison Avenue - Don''t Call Me Baby","artist":"Madison Avenue","hitDate":"1999-10-08"}' http://localhost:8081/
 ```
 
-## References
+## Resources
 
 ### Context
 
