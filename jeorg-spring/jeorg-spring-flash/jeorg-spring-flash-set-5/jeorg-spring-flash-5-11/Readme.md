@@ -34,7 +34,7 @@ curl -v -d username=admin -d password=admin -L http://localhost:8081/login
 curl -v -d username=admin2 -d password=admin -L http://localhost:8081/login
 ```
 
-## References
+## Resources
 
 ### Books
 

@@ -31,7 +31,7 @@ lsof -i :9000
 mvn clean install spring-boot:run
 ```
 
-## References
+## Resources
 
 ### Context
 

@@ -12,7 +12,7 @@ Exploring the CGLib in Spring
 
 1.  `private`, `Enhancer`, `create`, `invoke`
 
-## References
+## Resources
 
 ### Context
 

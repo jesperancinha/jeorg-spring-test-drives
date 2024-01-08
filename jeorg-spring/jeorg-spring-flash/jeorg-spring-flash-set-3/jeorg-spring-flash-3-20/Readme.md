@@ -28,7 +28,7 @@ mvn clean install spring-boot:run
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=incomplete
 ```
 
-## References
+## Resources
 
 ### Context
 

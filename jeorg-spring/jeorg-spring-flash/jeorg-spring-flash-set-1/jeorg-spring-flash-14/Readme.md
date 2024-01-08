@@ -38,7 +38,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=test
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
-## References
+## Resources
 
 ### Context
 

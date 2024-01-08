@@ -24,7 +24,7 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=inside
 mvn clean install spring-boot:run -Dspring-boot.run.profiles=outside
 ```
 
-## References
+## Resources
 
 ### Context
 

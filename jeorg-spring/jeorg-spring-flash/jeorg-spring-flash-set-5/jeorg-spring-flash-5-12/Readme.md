@@ -30,7 +30,7 @@ mvn clean install -Pcommand spring-boot:run -Dspring-boot.run.profiles=command -
 mvn clean install -Papplication spring-boot:run -Dspring-boot.run.profiles=application -Dspring-boot.run.arguments="a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-a=a,-b=b,--put=\"A ring on it\",--put=\"Hands up\",--dont=\"pay him any attention\""
 ```
 
-## References
+## Resources
 
 ### Context
 

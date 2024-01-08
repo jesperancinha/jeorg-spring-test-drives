@@ -21,7 +21,7 @@ mvn clean spring-boot:run
 
 Or, using your IDE, configure your working directory.
 
-## References
+## Resources
 
 ### Context
 

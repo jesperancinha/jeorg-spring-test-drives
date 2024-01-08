@@ -26,7 +26,7 @@ On the other hand, if running through an IDE, the root path must be specified. I
 2.  [http://localhost:8081/love.html](http://localhost:8081/love.html)
 3.  [http://localhost:8081/beatenGeneration.html](http://localhost:8081/beatenGeneration.html)
 
-## References
+## Resources
 
 ### Context
 

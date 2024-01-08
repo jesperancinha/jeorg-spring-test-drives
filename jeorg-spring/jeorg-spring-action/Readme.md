@@ -31,7 +31,7 @@ The goal of this module set is to disambiguate potential nuances and complicated
 
 8.  Testing - [jeorg-spring-action-testing](./jeorg-spring-action-testing)
 
-## References
+## Resources
 
 ### Books
 

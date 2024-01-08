@@ -22,7 +22,7 @@ curl -X POST  http://localhost:8081
 curl http://localhost:8081
 ```
 
-## References
+## Resources
 
 ### Books
 

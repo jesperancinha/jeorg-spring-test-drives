@@ -18,7 +18,7 @@ mvn clean install spring-boot:run
 
 1.  [http://localhost:8081](http://localhost:8081/)
 
-## References
+## Resources
 
 ### Context
 

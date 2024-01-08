@@ -8,7 +8,7 @@ Topics:
 
 1.  `RowCallbackHandler`
 
-## References
+## Resources
 
 ### Context
 

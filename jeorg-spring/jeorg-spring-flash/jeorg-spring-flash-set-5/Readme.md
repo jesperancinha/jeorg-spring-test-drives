@@ -20,7 +20,7 @@
 16. [jeorg-spring-flash-5-16](./jeorg-spring-flash-5-16) - ⚙️ Shutting down a SpringBootApplication
 17. [jeorg-spring-flash-5-16](./jeorg-spring-flash-5-17) - 🐟 GenericApplicationContext
 
-## References
+## Resources
 
 ### Books
 

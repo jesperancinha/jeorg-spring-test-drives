@@ -12,7 +12,7 @@ Topics:
 
 1.  [http://localhost:8081/api/12312?extra=Resistor](http://localhost:8081/api/12312?extra=Resistor)
 
-## References
+## Resources
 
 ### Books
 

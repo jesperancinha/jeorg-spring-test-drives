@@ -17,7 +17,7 @@ Topics:
 9.  `DataAccessException`
 10. `AbstractFallbackSQLExceptionTranslator`
 
-## References
+## Resources
 
 ### Context
 

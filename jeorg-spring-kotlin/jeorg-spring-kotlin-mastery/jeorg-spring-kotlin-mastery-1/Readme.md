@@ -34,7 +34,7 @@ Topics covered:
 
 ## How to run
 
-## References
+## Resources
 
 ### Books
 

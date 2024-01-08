@@ -21,7 +21,7 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8081?artist=Ke
 curl -X POST -H 'Content-Type: application/json' http://localhost:8081 --data '["You think you got the best of me", "Think you had the last laugh", "Bet you think that everything good is gone", "Think you left me broken down", "Think that I''d come running back"]'
 ```
 
-## References
+## Resources
 
 ### Context
 

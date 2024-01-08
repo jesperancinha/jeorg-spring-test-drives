@@ -15,7 +15,7 @@ Topics:
 
 1.  `Enhancer`, `FixedValue`, `InvocationHandler`
 
-## References
+## Resources
 
 ### Context
 

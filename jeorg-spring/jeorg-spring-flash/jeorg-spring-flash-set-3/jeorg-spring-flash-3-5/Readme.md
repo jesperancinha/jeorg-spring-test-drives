@@ -10,7 +10,7 @@ Topics:
 
 1.  `MethodBeforeAdvice`, `ProxyFactory`, `setTarget`, `addAdvice`
 
-## References
+## Resources
 
 ### Context
 

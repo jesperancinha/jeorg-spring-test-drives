@@ -49,7 +49,7 @@ lsof -i :8081
 mvn clean install spring-boot:run
 ```
 
-## References
+## Resources
 
 <div align="center">
       <a title="MAINE COON – Characteristics, Character and Care" href="https://www.youtube.com/watch?v=weebcQPRGUE">

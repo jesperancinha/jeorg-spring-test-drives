@@ -76,7 +76,7 @@ curl -X POST -H "name: user" -H "password: user" -H "role: ADMIN" http://localho
 </dependency>
 ```
 
-## References
+## Resources
 
 ### Online
 

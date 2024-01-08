@@ -45,7 +45,7 @@ In order to test by keeping the session it's easier just to refresh the browser 
 curl -c cookies.txt -b cookies.txt -v http://localhost:8081
 ```
 
-## References
+## Resources
 
 ### Context
 

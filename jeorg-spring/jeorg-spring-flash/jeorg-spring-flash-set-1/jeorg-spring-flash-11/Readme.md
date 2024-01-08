@@ -18,7 +18,7 @@ Topics
 mvn clean spring-boot:run
 ```
 
-## References
+## Resources
 
 ### Context
 

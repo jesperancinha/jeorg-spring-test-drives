@@ -44,7 +44,7 @@ mvn clean install spring-boot:run
 </dependency>
 ```
 
-## References
+## Resources
 
 ### Online
 

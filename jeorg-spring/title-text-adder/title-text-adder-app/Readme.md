@@ -24,7 +24,7 @@ curl -X GET http://localhost:8080/addsTitle.htm
 ```
 
 
-## References
+## Resources
 
 * http://www.solrtutorial.com/solr-in-5-minutes.html
 * http://blog.comperiosearch.com/blog/2014/08/28/indexing-database-using-solr/
