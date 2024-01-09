@@ -4,6 +4,7 @@ import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash25.jpa.operators.configuration.BeanDataBaseProperties;
 import org.jesperancinha.std.flash25.jpa.operators.domain.Bean;
 import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
+import org.jesperancinha.std.flash25.jpa.operators.service.BeanNamedServiceImpl;
 import org.jesperancinha.std.flash25.jpa.operators.service.BeanService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -37,7 +38,7 @@ public class SpringFlash25Launcher implements CommandLineRunner {
 
     public SpringFlash25Launcher(BeanRepository beanRepository,
                                  @Named("that-other-bean-service")
-                                 BeanService beanService,
+                                 BeanNamedServiceImpl beanService,
                                  Environment environment,
                                  BeanDataBaseProperties beanDataBaseProperties, ApplicationEventPublisher publisher, ApplicationContext source) {
         this.beanRepository = beanRepository;
