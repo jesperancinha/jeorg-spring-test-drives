@@ -54,7 +54,7 @@ public class Flash29Controller {
     public
     @ResponseBody
     JewelDto jewel(
-            @PathVariable
+            @PathVariable("id")
                     Long id) {
         return jewelService.getJewelById(id);
     }
@@ -83,7 +83,7 @@ public class Flash29Controller {
     @DeleteMapping("/jewels/{id}")
     public @ResponseBody
     void removeJewel(
-            @PathVariable
+            @PathVariable("id")
                     Long id) {
         final JewelDto jewelDto = jewelService.getJewelById(id);
         ConsolerizerComposer.outSpace()
