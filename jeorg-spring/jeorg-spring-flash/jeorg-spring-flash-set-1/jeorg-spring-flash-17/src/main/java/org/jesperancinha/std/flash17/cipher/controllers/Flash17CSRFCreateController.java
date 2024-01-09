@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Profile("test")
 public class Flash17CSRFCreateController {
 
-    private JdbcUserDetailsManager jdbcUserDetailsManager;
+    private final JdbcUserDetailsManager jdbcUserDetailsManager;
 
     private final PasswordEncoder passwordEncoder;
 
@@ -26,11 +26,11 @@ public class Flash17CSRFCreateController {
 
     @GetMapping("/open/create/{name}/{password}/{role}")
     public void createUseViaGet(
-            @PathVariable
+            @PathVariable("name")
                     String name,
-            @PathVariable
+            @PathVariable("password")
                     String password,
-            @PathVariable
+            @PathVariable("role")
                     String role
     ) {
         jdbcUserDetailsManager.createUser(User.withUsername(name).password(passwordEncoder.encode(password)).roles(role).build());
