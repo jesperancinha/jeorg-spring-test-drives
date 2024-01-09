@@ -6,9 +6,9 @@ import org.jesperancinha.std.mastery2.portuguese.music.model.Artist
 import org.jesperancinha.std.mastery2.portuguese.music.repositories.ArtistRepository
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT
 import org.springframework.security.access.AccessDeniedException
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException
 import org.springframework.security.test.context.support.WithMockUser
@@ -17,15 +17,11 @@ import org.springframework.test.context.jdbc.Sql
 import org.springframework.test.context.jdbc.Sql.ExecutionPhase
 import org.springframework.test.context.jdbc.SqlConfig
 import org.springframework.test.context.jdbc.SqlGroup
-import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.transaction.annotation.Transactional
 
 @Transactional
-@SpringBootTest
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 @ContextConfiguration
-@ExtendWith(
-    SpringExtension::class
-)
 internal class ArtistServiceImplKotlinTest @Autowired constructor(
     private val artistService: ArtistService,
     private val artistRepository: ArtistRepository,

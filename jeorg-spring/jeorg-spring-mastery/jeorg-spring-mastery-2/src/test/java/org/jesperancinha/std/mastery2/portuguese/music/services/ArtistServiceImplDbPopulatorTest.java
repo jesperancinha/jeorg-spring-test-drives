@@ -18,9 +18,10 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @Transactional
-@SpringBootTest
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 @ContextConfiguration
 @Import(TestDatabaseConfiguration.class)
 @ExtendWith(SpringExtension.class)
