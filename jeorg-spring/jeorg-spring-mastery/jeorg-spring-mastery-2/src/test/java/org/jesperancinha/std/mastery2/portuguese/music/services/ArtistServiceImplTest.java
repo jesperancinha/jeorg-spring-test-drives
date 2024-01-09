@@ -20,10 +20,11 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.AFTER_TEST_METHOD;
 
 @Transactional
-@SpringBootTest
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 @ContextConfiguration
 @ExtendWith(SpringExtension.class)
 class ArtistServiceImplTest {
