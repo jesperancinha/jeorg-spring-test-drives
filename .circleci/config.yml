@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Install SDK 21
           command: wget https://download.java.net/java/GA/jdk21.0.1/415e3f918a1f4062a0074a2794853d0d/12/GPL/openjdk-21.0.1_linux-x64_bin.tar.gz &&
-            tar xvf openjdk-21.0.2_linux-x64_bin.tar.gz &&
+            tar xvf openjdk-21.0.1_linux-x64_bin.tar.gz &&
             sudo mv jdk-21*/ /opt/jdk21 &&
             export JAVA_HOME=/opt/jdk21 &&
             echo "export JAVA_HOME=/opt/jdk21" >> ~/.bashrc &&
