@@ -28,7 +28,7 @@ public class DetailService {
      * @return {@link DetailEntity}
      */
     @Cacheable(value = "detailCache",
-            key = "#p0")
+            key = "#id")
     public DetailEntity findDetailById(Integer id) {
         return detailRepository.findById(id).orElse(null);
     }
