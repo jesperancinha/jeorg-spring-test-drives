@@ -16,6 +16,7 @@ import org.springframework.cache.annotation.Cacheable;
 @Cache(usage = CacheConcurrencyStrategy.TRANSACTIONAL)
 @Table(name = "detail",
         schema = "public")
+@ToString
 public class DetailEntity {
 
     @Id

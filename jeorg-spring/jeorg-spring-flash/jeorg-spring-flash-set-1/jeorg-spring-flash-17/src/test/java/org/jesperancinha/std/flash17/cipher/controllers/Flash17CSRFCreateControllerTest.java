@@ -52,7 +52,7 @@ class Flash17CSRFCreateControllerTest {
 
     @Test
     @WithMockUser(roles = "ADMIN")
-    void testCreateUserViaGeWhenCreateUserViaGetThenOk() throws Exception {
+    void testCreateUserViaGetWhenCreateUserViaGetThenOk() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/open/create/admin/password/ADMIN"))
                 .andExpect(status().isOk());
 

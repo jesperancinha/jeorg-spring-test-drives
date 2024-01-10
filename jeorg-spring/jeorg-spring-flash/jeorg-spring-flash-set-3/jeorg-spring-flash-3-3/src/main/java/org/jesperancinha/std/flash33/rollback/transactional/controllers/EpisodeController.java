@@ -85,7 +85,7 @@ public class EpisodeController {
 
     @GetMapping("{id}")
     public EpisodeDto getEpisodeById(
-            @PathVariable
+            @PathVariable("id")
                     Long id) {
         return episodeService.getEpisodeById(id);
     }

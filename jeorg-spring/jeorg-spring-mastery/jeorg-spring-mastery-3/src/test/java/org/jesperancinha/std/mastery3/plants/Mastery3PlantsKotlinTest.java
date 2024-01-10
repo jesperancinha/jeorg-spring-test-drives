@@ -6,8 +6,9 @@ import org.junit.jupiter.api.Timeout;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 public class Mastery3PlantsKotlinTest {
 
     @Test

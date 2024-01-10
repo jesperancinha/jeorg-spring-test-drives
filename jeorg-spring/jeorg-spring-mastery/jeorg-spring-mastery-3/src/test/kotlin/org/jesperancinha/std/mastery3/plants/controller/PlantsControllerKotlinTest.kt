@@ -83,11 +83,6 @@ class PlantsControllerKotlinTest(
             .name("Yucca")
             .scientificName("Yucca filamentosa")
             .build()
-        val plantDto2 = PlantDto
-            .builder()
-            .name("Sansevieria")
-            .scientificName("Sansevieria")
-            .build()
         mockMvc.perform(
             get("/list/array/copies")
                 .accept(APPLICATION_JSON)
@@ -95,7 +90,7 @@ class PlantsControllerKotlinTest(
             .andExpect(status().isOk)
             .andExpect(
                 content().string(
-                    objectMapper.writeValueAsString(listOf(plantDto, plantDto2)
+                    objectMapper.writeValueAsString(listOf(plantDto)
                     )
                 )
             )

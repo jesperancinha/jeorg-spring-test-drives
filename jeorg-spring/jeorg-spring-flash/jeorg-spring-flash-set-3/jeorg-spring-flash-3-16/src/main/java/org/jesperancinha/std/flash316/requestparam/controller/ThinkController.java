@@ -22,7 +22,7 @@ public class ThinkController {
     public Think thinkRandom(
             @RequestBody
             final List<String> thinks,
-            @RequestParam(required = false)
+            @RequestParam(name = "artist", required = false)
             final String artist) {
         final List<Think> thinkList = thinks.stream().map(thinkString ->
                 Think.builder().artist(artist).thinkString(thinkString).build()).collect(Collectors.toList());

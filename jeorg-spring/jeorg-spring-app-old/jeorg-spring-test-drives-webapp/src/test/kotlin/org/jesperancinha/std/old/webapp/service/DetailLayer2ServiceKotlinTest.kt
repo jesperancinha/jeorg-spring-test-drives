@@ -15,10 +15,12 @@ import org.springframework.test.context.ActiveProfiles
 @SpringBootTest
 @ActiveProfiles("test")
 class DetailLayer2ServiceKotlinTest(
+
     @Autowired
-    private val detailController: DetailLayer2Service,
+    private val detailService: DetailService,
+
     @Autowired
-    private val detailRepository: DetailRepository,
+    private val detailRepository: DetailRepository
 ) {
     @BeforeEach
     fun setUp() {
@@ -33,7 +35,7 @@ class DetailLayer2ServiceKotlinTest(
 
     @Test
     fun `should ged details by id`() {
-        detailController.findDetailById(1)
+        detailService.findDetailById(1)
             .shouldNotBeNull()
             .apply {
                 name shouldBe NAME_1
@@ -42,7 +44,7 @@ class DetailLayer2ServiceKotlinTest(
         detailRepository.deleteAll()
         detailRepository.findByIdOrNull(1)
             .shouldBeNull()
-        detailController.findDetailById(1)
+        detailService.findDetailById(1)
             .shouldNotBeNull()
             .apply {
                 name shouldBe NAME_1
@@ -55,12 +57,12 @@ class DetailLayer2ServiceKotlinTest(
                 name shouldBe NAME_1
                 city.shouldBeNull()
             }
-         detailRepository.findByIdOrNull(1)
-             .shouldNotBeNull()
-             .apply {
-                 name shouldBe NAME_1
-                 city.shouldBeNull()
-             }
+        detailRepository.findByIdOrNull(1)
+            .shouldNotBeNull()
+            .apply {
+                name shouldBe NAME_1
+                city.shouldBeNull()
+            }
     }
 
     companion object {

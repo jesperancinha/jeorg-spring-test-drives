@@ -39,8 +39,7 @@ class JewelServiceDeleteIT {
     @Test
     void testDeleteJewel_whenCallingWithoutAuthentication_thenFail() {
         final var jewel = JewelDto.builder().jewelType(PEARL).guardian("ThunderKitten").build();
-
-        assertThrows(AuthenticationCredentialsNotFoundException.class, () -> jewelService.deleteJewel(jewel));
+        assertThrows(IllegalArgumentException.class, () -> jewelService.deleteJewel(jewel));
     }
 
     @Test

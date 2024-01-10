@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
 import org.jesperancinha.std.mastery3.plants.model.Plant;
+import org.jetbrains.annotations.NotNull;
 
 @Value
 @Builder
@@ -15,7 +16,7 @@ public class PlantDto {
 
     String scientificName;
 
-    public static PlantDto toDto(Plant plant) {
+    public static PlantDto toDto(@NotNull Plant plant) {
         return PlantDto
                 .builder()
                 .name(plant.getName())
