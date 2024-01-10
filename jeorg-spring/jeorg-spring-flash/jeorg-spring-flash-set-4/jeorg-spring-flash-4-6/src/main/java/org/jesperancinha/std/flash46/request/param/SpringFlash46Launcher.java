@@ -49,7 +49,7 @@ public class SpringFlash46Launcher {
 
     @GetMapping("/cats")
     public void showCat(
-            @RequestParam
+            @RequestParam("catType")
                     CatType catType, HttpServletResponse httpServletResponse) throws IOException {
         final var writer = httpServletResponse.getWriter();
         switch (catType) {
@@ -78,7 +78,7 @@ public class SpringFlash46Launcher {
 
     @GetMapping("/dogs")
     public void showDog(
-            @RequestParam
+            @RequestParam("dogType")
                     DogType dogType, HttpServletResponse httpServletResponse) throws IOException {
         final var writer = httpServletResponse.getWriter();
         switch (dogType) {

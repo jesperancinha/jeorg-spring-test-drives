@@ -33,7 +33,7 @@ public class Flash57Controller {
 
     @GetMapping("/thrones/{id}")
     public Throne jewel(
-            @PathVariable
+            @PathVariable("id")
                     Long id) {
         return throneService.getThrone(id);
     }
@@ -53,7 +53,7 @@ public class Flash57Controller {
 
     @DeleteMapping("/thrones/{id}")
     public void removeJewel(
-            @PathVariable
+            @PathVariable("id")
                     Long id) {
         final Throne throneById = throneService.getThrone(id);
         throneService.deleteThrone(throneById);
