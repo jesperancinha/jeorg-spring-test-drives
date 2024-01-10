@@ -21,7 +21,9 @@ public class SpringFlash320Launcher implements CommandLineRunner {
 
     public SpringFlash320Launcher(
             @Qualifier("people")
-                    People people, People peopleXml) {
+            People people,
+            @Qualifier("peopleXml")
+            People peopleXml) {
         this.people = people;
         this.peopleXml = peopleXml;
     }
