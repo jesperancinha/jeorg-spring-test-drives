@@ -3,6 +3,7 @@ package org.jesperancinha.std.action.ioc;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.action.ioc.interfaces.RestaurantInterface;
 import org.jesperancinha.std.action.ioc.model.Cutlery;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -19,7 +20,7 @@ public class JeorgActionIoCLauncher implements ApplicationRunner {
 
     private final Cutlery cutlery;
 
-    public JeorgActionIoCLauncher(Cutlery cutlery) {
+    public JeorgActionIoCLauncher(@Qualifier("cutlery") Cutlery cutlery) {
         this.cutlery = cutlery;
     }
 

@@ -29,7 +29,7 @@ class SpringFlash44LauncherTest {
                 .andExpect(content().string("[" +
                         "{\"name\":\"requestMappingHandlerMapping\",\"order\":0,\"type\":\"org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping\"}," +
                         "{\"name\":\"beanNameHandlerMapping\",\"order\":2,\"type\":\"org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping\"}," +
-                        "{\"name\":\"routerFunctionMapping\",\"order\":3,\"type\":\"org.springframework.web.servlet.function.support.RouterFunctionMapping\"}," +
+                        "{\"name\":\"routerFunctionMapping\",\"order\":-1,\"type\":\"org.springframework.web.servlet.function.support.RouterFunctionMapping\"}," +
                         "{\"name\":\"healthEndpointWebMvcHandlerMapping\",\"order\":-100,\"type\":\"org.springframework.boot.actuate.endpoint.web.servlet.AdditionalHealthEndpointPathsWebMvcHandlerMapping\"}," +
                         "{\"name\":\"webEndpointServletHandlerMapping\",\"order\":-100,\"type\":\"org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping\"}," +
                         "{\"name\":\"controllerEndpointHandlerMapping\",\"order\":-100,\"type\":\"org.springframework.boot.actuate.endpoint.web.servlet.ControllerEndpointHandlerMapping\"}]"))

@@ -46,7 +46,7 @@
         <assertj-core.version>3.13.2</assertj-core.version>
 
         <!-- Plugins -->
-        <java.version>19</java.version>
+        <java.version>21</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.release>${java.version}</maven.compiler.release>
@@ -70,7 +70,7 @@
 
         <!-- Spring -->
         <spring-security-oauth2.version>2.5.2.RELEASE</spring-security-oauth2.version>
-        <spring-boot.version>3.1.5</spring-boot.version>
+        <spring-boot.version>3.2.1</spring-boot.version>
 
         <!-- Other -->
         <jetty-maven-plugin.version>11.0.19</jetty-maven-plugin.version>

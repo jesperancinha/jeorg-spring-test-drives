@@ -1,6 +1,7 @@
 package org.jesperancinha.std.flash319.bean.staticbean;
 
 import org.jesperancinha.std.flash319.bean.staticbean.model.Harvest;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +16,11 @@ public class SpringFlash319Launcher implements CommandLineRunner {
 
     private final Harvest harvest2;
 
-    public SpringFlash319Launcher(Harvest harvest1, Harvest harvest2) {
+    public SpringFlash319Launcher(
+            @Qualifier("harvest1")
+            Harvest harvest1,
+            @Qualifier("harvest2")
+            Harvest harvest2) {
         this.harvest1 = harvest1;
         this.harvest2 = harvest2;
     }

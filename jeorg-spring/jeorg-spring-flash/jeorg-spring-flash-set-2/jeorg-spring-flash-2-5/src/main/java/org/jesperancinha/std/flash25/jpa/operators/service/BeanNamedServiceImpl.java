@@ -9,7 +9,7 @@ import java.util.List;
 @Named("that-other-bean-service")
 public class BeanNamedServiceImpl implements BeanService {
 
-    private BeanRepository beanRepository;
+    private final BeanRepository beanRepository;
 
     public BeanNamedServiceImpl(final BeanRepository beanRepository) {
         this.beanRepository = beanRepository;

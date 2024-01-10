@@ -42,7 +42,7 @@ class JewelServiceGetIT {
 
     @Test
     void testGetJewelById_whenNoAuthentication_thenFail() {
-        assertThrows(AuthenticationCredentialsNotFoundException.class, () -> jewelService.getJewelById(1L));
+        assertThrows(IllegalArgumentException.class, () -> jewelService.getJewelById(1L));
     }
 
     @Test

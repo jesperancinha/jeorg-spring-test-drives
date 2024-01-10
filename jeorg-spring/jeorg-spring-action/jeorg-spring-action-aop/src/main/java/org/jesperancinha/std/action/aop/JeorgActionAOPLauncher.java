@@ -2,6 +2,7 @@ package org.jesperancinha.std.action.aop;
 
 import org.jesperancinha.std.action.aop.catchers.*;
 import org.jesperancinha.std.action.aop.catchers.cod.CodCatcher;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,13 +23,21 @@ public class JeorgActionAOPLauncher implements ApplicationRunner {
     private final TunaCatcher tunaCatcher;
 
     public JeorgActionAOPLauncher(
+            @Qualifier("bonitoCatcher")
             final BonitoCatcher bonitoCatcher,
+            @Qualifier("codCatcher")
             final CodCatcher codCatcher,
+            @Qualifier("gambaFoodCatcher")
             final GambaFoodCatcher gambaFoodCatcher,
+            @Qualifier("mackerelCatcher")
             final MackerelCatcher mackerelCatcher,
+            @Qualifier("megaTunaCatcher")
             final MegaTunaCatcher megaTunaCatcher,
+            @Qualifier("sardineCatcher")
             final SardineCatcher sardineCatcher,
+            @Qualifier("shrimpCatcher")
             final ShrimpCatcher shrimpCatcher,
+            @Qualifier("tunaCatcher")
             final TunaCatcher tunaCatcher) {
         this.bonitoCatcher = bonitoCatcher;
         this.codCatcher = codCatcher;

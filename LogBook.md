@@ -1,5 +1,14 @@
 # JEOrg Spring Test Drives
 
+### 2023/12/20
+
+Lessons learned!
+
+```shell
+hostnamectl set-hostname '<NEW_HOSTNAME>'
+```
+
+
 ### 2022/11/27
 
 Due to Spring Boot update to 3.0.0 a lot of theory and practice does not match to Spring 5 anymore. Some exercises have

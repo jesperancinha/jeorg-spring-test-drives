@@ -23,7 +23,7 @@ public class PlantConfiguration {
         return propertySourcesPlaceholderConfigurer;
     }
 
-    @Bean(name = {"yucca","yohoo","yuppi"})
+    @Bean(name = {"yucca","yohoo","yuppi", "sansevieria"})
     public PlantDto plantDto(){
         return PlantDto
                 .builder()
@@ -32,12 +32,4 @@ public class PlantConfiguration {
                 .build();
     }
 
-    @Bean(name ="sansevieria")
-    public PlantDto plantDtoSansevieria(){
-        return PlantDto
-                .builder()
-                .name("Sansevieria")
-                .scientificName("Sansevieria")
-                .build();
-    }
 }

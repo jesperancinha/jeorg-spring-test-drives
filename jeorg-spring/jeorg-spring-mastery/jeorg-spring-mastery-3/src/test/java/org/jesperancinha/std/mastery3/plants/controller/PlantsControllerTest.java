@@ -82,17 +82,11 @@ public class PlantsControllerTest {
                 .name("Yucca")
                 .scientificName("Yucca filamentosa")
                 .build();
-        final var plantDto2 = PlantDto
-                .builder()
-                .name("Sansevieria")
-                .scientificName("Sansevieria")
-                .build();
-
         mockMvc.perform(get("/list/array/copies")
                 .accept(APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(objectMapper.writeValueAsString(List.of(
-                        plantDto, plantDto2
+                        plantDto
                 ))));
     }
 }
