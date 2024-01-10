@@ -19,19 +19,6 @@ curl -X POST -H "sin5: Wrath" -H "sin6: Envy" -H "sin7: Pride" "http://localhost
 
 ## Resources
 
-### Context
-
--   [Seven deadly sins](https://en.wikipedia.org/wiki/Seven_deadly_sins)
--   [Seven (1995 film)](https://en.wikipedia.org/wiki/Seven_(1995_film))
-
-<div align="center">
-      <a title="Se7en (1995) Official Trailer - Brad Pitt, Morgan Freeman Movie HD" href="https://www.youtube.com/watch?v=znmZoVkCjpI">
-     <img 
-          src="https://img.youtube.com/vi/znmZoVkCjpI/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring @MatrixVariable at specific position in a URL](https://roytuts.com/spring-matrixvariable-at-specific-position-in-a-url/)
