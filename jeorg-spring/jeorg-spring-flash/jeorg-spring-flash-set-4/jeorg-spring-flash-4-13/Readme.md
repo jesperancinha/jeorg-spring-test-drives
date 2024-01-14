@@ -36,16 +36,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Madonna - The Power Of Good-Bye" href="https://www.youtube.com/watch?v=NHydngA5C4E">
-     <img 
-          src="https://img.youtube.com/vi/NHydngA5C4E/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Security password hashing example](https://mkyong.com/spring-security/spring-security-password-hashing-example/)

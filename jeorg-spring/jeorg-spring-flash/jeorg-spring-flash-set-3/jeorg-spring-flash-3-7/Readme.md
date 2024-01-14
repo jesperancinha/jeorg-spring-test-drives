@@ -17,18 +17,6 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8081/no-around
 
 ## Resources
 
-### Context
-
--   [Miles Away (Madonna song)](https://en.wikipedia.org/wiki/Miles_Away_(Madonna_song))
-
-<div align="center">
-      <a title="Madonna - Miles Away (Live from the Sticky & Sweet Tour)" href="https://www.youtube.com/watch?v=ahaGFxOTx6A">
-     <img 
-          src="https://img.youtube.com/vi/ahaGFxOTx6A/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring AOP AspectJ @Around Annotation Example](https://howtodoinjava.com/spring-aop/aspectj-around-annotation-example/)
