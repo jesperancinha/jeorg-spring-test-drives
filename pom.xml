@@ -115,10 +115,28 @@
         <hibernate-core.version>6.1.3.Final</hibernate-core.version>
         <solr-solrj.version>9.6.1</solr-solrj.version>
         <mysql-connector-java.version>8.0.32</mysql-connector-java.version>
+        <rewrite-maven-plugin.version>5.33.0</rewrite-maven-plugin.version>
     </properties>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.openrewrite.maven</groupId>
+                <artifactId>rewrite-maven-plugin</artifactId>
+                <version>${rewrite-maven-plugin.version}</version>
+                <configuration>
+                    <activeRecipes>
+                        <recipe>org.openrewrite.java.spring.boot3.SpringBootProperties_3_3</recipe>
+                    </activeRecipes>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-spring</artifactId>
+                        <version>5.12.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

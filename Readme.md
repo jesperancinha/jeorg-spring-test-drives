@@ -132,6 +132,7 @@ mvn clean install
 ### Online
 
 -   [How to test the REST Clients of your Spring Boot Application with @RestClientTest](https://jschmitz.dev/posts/how_to_test_the_rest_clients_of_your_spring_boot_application_with_restclienttest/)
+-   [Introduction to OpenRewrite](https://docs.openrewrite.org/)
 
 ### Books
 
