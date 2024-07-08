@@ -14,3 +14,7 @@ updates:
       kotlin:
         patterns:
           - "*kotlin*"
+      jackson:
+        patterns:
+          - "jackson*"
+          - "*jackson*"
