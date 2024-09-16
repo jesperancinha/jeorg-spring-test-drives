@@ -12,7 +12,7 @@
     <artifactId>jeorg-spring-flash-5-12</artifactId>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <start-class>org.jesperancinha.std.flash512.runner.SpringFlash512CommandLineLauncher</start-class>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
