@@ -1,7 +1,5 @@
-SHELL := /bin/bash
-b: build
-build:
-	mvn clean install
+include Makefile.mk
+
 rewrite:
 	mvn rewrite:run
 deps-plugins-update:
