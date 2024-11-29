@@ -26,10 +26,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [MOST POPULAR PORTUGUESE CAKES](https://www.tasteatlas.com/most-popular-cakes-in-portugal)
-
 ### Online
 
 -   [Spring Boot @DataJpaTest tutorial](https://zetcode.com/springboot/datajpatest/)
