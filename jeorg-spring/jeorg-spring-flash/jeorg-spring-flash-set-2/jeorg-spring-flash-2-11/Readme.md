@@ -26,16 +26,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Liberty X - Just a little HD" href="https://www.youtube.com/watch?v=58O8SVBxLDQ">
-     <img 
-          src="https://img.youtube.com/vi/58O8SVBxLDQ/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring boot log4j2.xml example](https://howtodoinjava.com/spring-boot2/logging/spring-boot-log4j2-config/)
