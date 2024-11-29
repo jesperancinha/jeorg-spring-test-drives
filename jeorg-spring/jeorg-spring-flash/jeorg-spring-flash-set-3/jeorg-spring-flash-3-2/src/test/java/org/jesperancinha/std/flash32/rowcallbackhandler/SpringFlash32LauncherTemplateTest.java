@@ -6,7 +6,6 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
@@ -20,8 +19,8 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(MockitoExtension.class)
 class SpringFlash32LauncherTemplateTest {
 
-    @MockBean()
-//    @MockitoBean This doesn't work
+//    @MockBean()
+    @MockitoBean // This doesn't work
     private JdbcTemplate jdbcTemplate;
 
     @Captor
