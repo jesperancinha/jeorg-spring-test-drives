@@ -17,8 +17,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.UUID;
@@ -37,16 +37,16 @@ public class TicketServiceTest {
     @Autowired
     private TicketService ticketService;
 
-    @MockBean
+    @MockitoBean
     private TicketRepository ticketRepository;
 
-    @MockBean
+    @MockitoBean
     private TicketAfterBean ticketAfterBean;
 
-    @MockBean
+    @MockitoBean
     private TicketAroundBean ticketAroundBean;
 
-    @MockBean
+    @MockitoBean
     private TicketBeforeBean ticketBeforeBean;
 
     @Captor

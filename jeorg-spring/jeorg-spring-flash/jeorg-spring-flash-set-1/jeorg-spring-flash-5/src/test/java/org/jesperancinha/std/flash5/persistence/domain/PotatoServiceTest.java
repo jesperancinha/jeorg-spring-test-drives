@@ -6,8 +6,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Arrays;
@@ -20,13 +20,12 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = PotatoService.class)
-@MockBean(PotatoRepository.class)
 class PotatoServiceTest {
 
     @Autowired
     private PotatoService potatoService;
 
-    @Autowired
+    @MockitoBean
     private PotatoRepository potatoRepository;
 
     @Captor
@@ -40,6 +39,7 @@ class PotatoServiceTest {
         newPotato2.setForm("Kind");
         when(potatoRepository.findById(1L)).thenReturn(Optional.of(newPotato1));
         when(potatoRepository.findById(2L)).thenReturn(Optional.of(newPotato2));
+        assertThat(potatoRepository).isNotNull();
     }
 
     @Test

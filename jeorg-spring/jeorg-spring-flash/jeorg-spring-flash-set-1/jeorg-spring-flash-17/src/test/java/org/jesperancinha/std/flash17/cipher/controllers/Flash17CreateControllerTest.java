@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash17.cipher.controllers;
 
+import com.ninjasquad.springmockk.MockkBean;
 import org.jesperancinha.std.flash17.cipher.configuration.Flash17ConfigurationAdapter;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -7,7 +8,6 @@ import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -16,6 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
@@ -28,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ActiveProfiles("prod")
 @WebMvcTest({Flash17CreateController.class, Flash17Controller.class})
-@MockBean(classes = {DataSource.class})
+@MockkBean(classes = {DataSource.class})
 @Import(Flash17ConfigurationAdapter.class)
 @AutoConfigureMockMvc
 class Flash17CreateControllerTest {
@@ -36,7 +37,7 @@ class Flash17CreateControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
+    @MockitoBean
     private JdbcUserDetailsManager jdbcUserDetailsManager;
 
     @Captor

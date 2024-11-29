@@ -9,10 +9,9 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.jesperancinha.std.flash29.security.services.JewelType.PEARL;
@@ -25,7 +24,7 @@ class JewelServiceDeleteIT {
     @Autowired
     private JewelService jewelService;
 
-    @MockBean
+    @MockitoBean
     private JewelRepository jewelRepository;
 
     @Captor

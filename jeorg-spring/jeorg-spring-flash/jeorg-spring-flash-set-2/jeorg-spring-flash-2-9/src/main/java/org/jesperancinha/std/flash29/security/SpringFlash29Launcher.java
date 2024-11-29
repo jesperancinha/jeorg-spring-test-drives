@@ -1,5 +1,6 @@
 package org.jesperancinha.std.flash29.security;
 
+import jakarta.transaction.Transactional;
 import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.std.flash29.security.domain.Jewel;
 import org.jesperancinha.std.flash29.security.repository.JewelRepository;
@@ -9,7 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
-import org.springframework.transaction.annotation.Transactional;
 
 import static org.jesperancinha.std.flash29.security.services.JewelType.AMETHYST;
 

@@ -20,7 +20,7 @@ import org.springframework.test.context.ActiveProfiles
 import org.springframework.web.client.DefaultResponseErrorHandler
 import org.springframework.web.client.HttpServerErrorException
 import org.springframework.web.client.RestTemplate
-import java.io.IOException
+import java.net.URI
 import java.nio.charset.Charset
 
 @ActiveProfiles("prod")
@@ -39,15 +39,19 @@ internal class Flash14ProdHealthIndicatorKotlinTest @Autowired constructor(
         val headers = HttpHeaders()
         val request = HttpEntity<Any>(headers)
         restTemplate.errorHandler = object : DefaultResponseErrorHandler() {
-            @Throws(IOException::class)
-            override fun handleError(response: ClientHttpResponse, statusCode: HttpStatusCode) {
+            override fun handleError(
+                response: ClientHttpResponse,
+                statusCode: HttpStatusCode,
+                url: URI?,
+                method: HttpMethod?
+            ) {
                 IOUtils.toString(response.body, Charset.defaultCharset())
                     .shouldNotBeNull()
-                    .shouldContain("\"lyrics\":\"Without you what does my life amount to\"")
+                    .shouldContain("\"lyrics\":\"Everybody is awesome!\"")
                 ConsolerizerComposer.outSpace()
                     .green("All assertions complete!")
                     .reset()
-                super.handleError(response, statusCode)
+                super.handleError(response, statusCode, url, method)
             }
         }
         shouldThrow<HttpServerErrorException> {

@@ -11,7 +11,6 @@ import org.springframework.boot.actuate.data.mongo.MongoHealthIndicator;
 import org.springframework.boot.actuate.data.redis.RedisHealthIndicator;
 import org.springframework.boot.actuate.hazelcast.HazelcastHealthIndicator;
 import org.springframework.boot.actuate.health.PingHealthIndicator;
-import org.springframework.boot.actuate.influx.InfluxDbHealthIndicator;
 import org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator;
 import org.springframework.boot.actuate.jms.JmsHealthIndicator;
 import org.springframework.boot.actuate.ldap.LdapHealthIndicator;
@@ -39,7 +38,6 @@ public class JeorgActionActuatorLauncher implements ApplicationRunner {
                 .magenta(DataSourceHealthIndicator.class)
                 .magenta(DiskSpaceHealthIndicator.class)
                 .magenta(HazelcastHealthIndicator.class)
-                .magenta(InfluxDbHealthIndicator.class)
                 .magenta(JmsHealthIndicator.class)
                 .magenta(LdapHealthIndicator.class)
                 .magenta(MailHealthIndicator.class)

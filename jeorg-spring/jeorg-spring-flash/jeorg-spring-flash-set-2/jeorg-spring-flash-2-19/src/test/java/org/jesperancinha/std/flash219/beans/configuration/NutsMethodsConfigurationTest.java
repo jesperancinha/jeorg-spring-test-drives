@@ -7,12 +7,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BROWN;
@@ -27,7 +27,7 @@ class NutsMethodsConfigurationTest {
     @Autowired
     public Nut almond;
 
-    @MockBean
+    @MockitoSpyBean
     public static NutExtended nutExtended;
 
     @Autowired
@@ -39,7 +39,7 @@ class NutsMethodsConfigurationTest {
                 .orange(almond)
                 .orange(nutExtended)
                 .reset();
-
+        nutExtended.initiate();
         verify(nutExtended, times(1)).initiate();
     }
 
