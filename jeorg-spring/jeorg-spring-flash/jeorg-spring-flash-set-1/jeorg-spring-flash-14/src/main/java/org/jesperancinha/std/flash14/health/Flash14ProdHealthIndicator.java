@@ -43,7 +43,7 @@ public class Flash14ProdHealthIndicator implements HealthIndicator {
                         .withDetail("spaceUsed", fileStore.getTotalSpace() - fileStore.getUnallocatedSpace()).build();
             }
             return Health.down()
-                    .withDetail("lyrics", "Without you what does my life amount to")
+                    .withDetail("lyrics", "Everybody is awesome!")
                     .withDetail("spaceUsed", fileStore.getTotalSpace() - fileStore.getUnallocatedSpace()).build();
         } catch (IOException e) {
             RED.printThrowableAndExit(e);

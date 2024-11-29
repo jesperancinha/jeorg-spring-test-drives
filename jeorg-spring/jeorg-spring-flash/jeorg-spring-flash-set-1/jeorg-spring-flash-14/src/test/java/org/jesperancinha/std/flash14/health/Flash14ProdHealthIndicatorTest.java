@@ -2,6 +2,7 @@ package org.jesperancinha.std.flash14.health;
 
 import org.apache.commons.io.IOUtils;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +18,8 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.net.URI;
+import java.nio.charset.Charset;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -41,14 +44,14 @@ class Flash14ProdHealthIndicatorTest {
         final var request = new HttpEntity<>(headers);
         restTemplate.setErrorHandler(new DefaultResponseErrorHandler() {
             @Override
-            protected void handleError(ClientHttpResponse response, HttpStatusCode statusCode) throws IOException {
-                final String responseText = IOUtils.toString(response.getBody());
+            protected void handleError(@NotNull ClientHttpResponse response, @NotNull HttpStatusCode statusCode, URI url, HttpMethod method) throws IOException {
+                final String responseText = IOUtils.toString(response.getBody(), Charset.defaultCharset());
                 assertThat(responseText).isNotNull();
-                assertThat(responseText).contains("\"lyrics\":\"Without you what does my life amount to\"");
+                assertThat(responseText).contains("\"lyrics\":\"Everybody is awesome!\"");
                 ConsolerizerComposer.outSpace()
                         .green("All assertions complete!")
                         .reset();
-                super.handleError(response, statusCode);
+                super.handleError(response, statusCode, url, method);
             }
         });
 
