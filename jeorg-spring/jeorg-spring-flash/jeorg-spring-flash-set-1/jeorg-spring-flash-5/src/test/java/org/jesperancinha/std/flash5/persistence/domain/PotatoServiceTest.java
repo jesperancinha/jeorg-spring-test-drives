@@ -20,13 +20,12 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = PotatoService.class)
-@MockitoBean(PotatoRepository.class)
 class PotatoServiceTest {
 
     @Autowired
     private PotatoService potatoService;
 
-    @Autowired
+    @MockitoBean
     private PotatoRepository potatoRepository;
 
     @Captor
@@ -40,6 +39,7 @@ class PotatoServiceTest {
         newPotato2.setForm("Kind");
         when(potatoRepository.findById(1L)).thenReturn(Optional.of(newPotato1));
         when(potatoRepository.findById(2L)).thenReturn(Optional.of(newPotato2));
+        assertThat(potatoRepository).isNotNull();
     }
 
     @Test
