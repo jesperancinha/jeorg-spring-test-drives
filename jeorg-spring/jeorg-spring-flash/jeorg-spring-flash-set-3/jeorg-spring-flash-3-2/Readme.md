@@ -10,24 +10,6 @@ Topics:
 
 ## Resources
 
-### Context
-
--   [Green Day](https://en.wikipedia.org/wiki/Green_Day)
--   [The Doors](https://en.wikipedia.org/wiki/The_Doors)
-
-<div align="center">
-      <a title="Green Day - When I Come Around" href="https://www.youtube.com/watch?v=i8dh9gDzmz8">
-     <img 
-          src="https://img.youtube.com/vi/i8dh9gDzmz8/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="The Doors - When The Music's Over (Live At The Bowl '68)" href="https://www.youtube.com/watch?v=CKw9JA66H-A">
-     <img 
-          src="https://img.youtube.com/vi/CKw9JA66H-A/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring InitializingBean and DisposableBean example](https://mkyong.com/spring/spring-initializingbean-and-disposablebean-example/)
