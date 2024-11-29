@@ -1,9 +1,9 @@
 package org.jesperancinha.std.flash5.persistence.domain;
 
+import com.ninjasquad.springmockk.MockkBean;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
@@ -11,7 +11,7 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
-@MockBean(PotatoService.class)
+@MockkBean(PotatoService.class)
 class PotatoRepositoryTest {
 
     @Autowired

@@ -1,11 +1,11 @@
 package org.jesperancinha.std.flash25.jpa.operators.service;
 
+import com.ninjasquad.springmockk.MockkBean;
 import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {BeanServiceImpl.class})
-@MockBean(BeanRepository.class)
+@MockkBean(BeanRepository.class)
 @TestPropertySource("classpath:application.properties")
 class BeanServiceImplTest {
 

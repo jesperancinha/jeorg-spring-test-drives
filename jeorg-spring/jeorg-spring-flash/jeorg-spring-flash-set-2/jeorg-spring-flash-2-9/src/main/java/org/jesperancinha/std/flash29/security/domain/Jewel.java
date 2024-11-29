@@ -16,8 +16,6 @@ import org.jesperancinha.std.flash29.security.services.JewelType;
 @AllArgsConstructor
 public class Jewel {
     @Id
-    @Column
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column

@@ -1,18 +1,18 @@
- package org.jesperancinha.std.flash29.security.repository;
+package org.jesperancinha.std.flash29.security.repository;
 
- import jakarta.transaction.Transactional;
- import org.jesperancinha.std.flash29.security.domain.Jewel;
- import org.junit.jupiter.api.BeforeEach;
- import org.junit.jupiter.api.Test;
- import org.springframework.beans.factory.annotation.Autowired;
- import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
- import org.springframework.context.ApplicationEventPublisher;
- import org.springframework.context.ConfigurableApplicationContext;
- import org.springframework.context.event.ContextStartedEvent;
+import jakarta.transaction.Transactional;
+import org.jesperancinha.std.flash29.security.domain.Jewel;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.event.ContextStartedEvent;
 
- import static jakarta.transaction.Transactional.TxType.REQUIRED;
- import static org.assertj.core.api.Assertions.assertThat;
- import static org.jesperancinha.std.flash29.security.services.JewelType.*;
+import static jakarta.transaction.Transactional.TxType.REQUIRED;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.jesperancinha.std.flash29.security.services.JewelType.*;
 
 @DataJpaTest
 class JewelRepositoryTest {
@@ -30,6 +30,7 @@ class JewelRepositoryTest {
     public void setUp() {
         applicationEventPublisher.publishEvent(new ContextStartedEvent(applicationContext));
         final var jewel = jewelRepository.save(Jewel.builder()
+                .id(2L)
                 .jewelType(DIAMOND)
                 .guardian("sabino").build());
 
@@ -58,6 +59,7 @@ class JewelRepositoryTest {
     @Transactional(REQUIRED)
     public void testSaveJewelWhenCreatingThenGetId() {
         final Jewel jewel = jewelRepository.save(Jewel.builder()
+                .id(3L)
                 .jewelType(RUBY)
                 .guardian("joao").build());
 

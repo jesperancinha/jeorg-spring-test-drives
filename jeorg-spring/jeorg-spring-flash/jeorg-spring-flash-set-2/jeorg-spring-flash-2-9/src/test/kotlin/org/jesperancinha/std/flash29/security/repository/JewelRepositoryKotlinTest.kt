@@ -39,6 +39,7 @@ internal class JewelRepositoryKotlinTest @Autowired constructor(
         }.id
         val jewel = jewelRepository.save(
             Jewel.builder()
+                .id(2)
                 .jewelType(DIAMOND)
                 .guardian("sabino").build()
         )
@@ -71,6 +72,7 @@ internal class JewelRepositoryKotlinTest @Autowired constructor(
     fun testSaveJewelWhenCreatingThenGetId() {
         jewelRepository.save(
             Jewel.builder()
+                .id(3L)
                 .jewelType(RUBY)
                 .guardian("joao").build()
         ).shouldNotBeNull()
