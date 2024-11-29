@@ -1,6 +1,5 @@
 package org.jesperancinha.std.flash25.jpa.operators.service;
 
-import com.ninjasquad.springmockk.MockkBean;
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.jesperancinha.std.flash25.jpa.operators.repos.BeanRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,14 +10,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.title;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@MockkBean(BeanRepository.class)
 @TestPropertySource("classpath:beans.properties")
 class BeanServiceImplRandomPortSpringBootTest {
+
+    @MockitoBean
+    private BeanRepository beanRepository;
 
     @Autowired
     private BeanServiceImpl beanService;
@@ -33,7 +35,7 @@ class BeanServiceImplRandomPortSpringBootTest {
     private ConfigurableApplicationContext applicationContext;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         applicationContext.start();
     }
 

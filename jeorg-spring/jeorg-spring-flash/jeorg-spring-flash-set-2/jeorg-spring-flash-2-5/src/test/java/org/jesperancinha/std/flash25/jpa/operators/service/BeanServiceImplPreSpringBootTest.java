@@ -9,13 +9,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-@MockkBean(BeanRepository.class)
 @TestPropertySource("classpath:beans.properties")
 class BeanServiceImplPreSpringBootTest {
+
+    @MockitoBean
+    private BeanRepository beanRepository;
 
     @Autowired
     private BeanServiceImpl beanService;
