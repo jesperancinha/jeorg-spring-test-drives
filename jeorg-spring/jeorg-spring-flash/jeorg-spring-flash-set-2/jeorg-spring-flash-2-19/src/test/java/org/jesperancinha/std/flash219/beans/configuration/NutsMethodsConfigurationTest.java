@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BROWN;
@@ -27,7 +27,7 @@ class NutsMethodsConfigurationTest {
     @Autowired
     public Nut almond;
 
-    @MockitoBean
+    @MockitoSpyBean
     public static NutExtended nutExtended;
 
     @Autowired
@@ -39,7 +39,7 @@ class NutsMethodsConfigurationTest {
                 .orange(almond)
                 .orange(nutExtended)
                 .reset();
-
+        nutExtended.initiate();
         verify(nutExtended, times(1)).initiate();
     }
 
