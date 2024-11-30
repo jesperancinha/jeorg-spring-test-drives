@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -19,8 +20,8 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(MockitoExtension.class)
 class SpringFlash32LauncherTemplateTest {
 
-//    @MockitoBean // This doesn't work
-    @MockBean
+    //https://github.com/spring-projects/spring-framework/issues/33991
+    @MockitoBean
     private JdbcTemplate jdbcTemplate;
 
     @Captor
