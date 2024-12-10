@@ -16,6 +16,8 @@ class MyComponent {
     init {
         ConsolerizerComposer.outSpace().bgMagenta("Service started!")
     }
+// This will fail injection because bean test does not exist
+// @Autowired
     lateinit var test: String
 }
 
@@ -35,7 +37,7 @@ class LateinitComponentTest @Autowired constructor(
 ) {
 
     @Test
-    fun `should run and not initialize test`(){
+    fun `should run and not initialize test`() {
         val onFailure = runCatching {
             mycomponent.test
         }.onFailure {
