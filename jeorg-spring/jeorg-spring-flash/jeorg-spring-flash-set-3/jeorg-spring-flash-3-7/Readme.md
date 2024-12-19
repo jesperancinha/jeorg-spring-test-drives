@@ -11,8 +11,8 @@ Exploring AOP in Spring
 1.  [http://localhost:8081](http://localhost:8081)
 
 ```bash
-curl -X POST -H 'Content-Type: application/json' http://localhost:8081 --data '{"artist":"Madonna", "show":"Sticky & Sweet Tour in 2008", "localDateTime":"2008-12-04T18:00:00.000000000"}' 
-curl -X POST -H 'Content-Type: application/json' http://localhost:8081/no-around --data '{"artist":"Madonna", "show":"Sticky & Sweet Tour in 2008", "localDateTime":"2008-12-04T18:00:00.000000000"}' 
+curl -X POST -H 'Content-Type: application/json' http://localhost:8081 --data '{"artist":"Xenobenoleno", "show":"The Ambition Of The Robots 2008", "localDateTime":"2008-12-05T18:00:00.000000000"}' 
+curl -X POST -H 'Content-Type: application/json' http://localhost:8081/no-around --data '{"artist":"Xenobenoleno", "show":"The Ambition Of The Robots 2008", "localDateTime":"2008-12-05T18:00:00.000000000"}' 
 ```
 
 ## Resources
