@@ -20,7 +20,7 @@
 16. [jeorg-spring-flash-2-16](./jeorg-spring-flash-2-16) - 👩🏻‍🌾 PlatformTransactionManager
 17. [jeorg-spring-flash-2-17](./jeorg-spring-flash-2-17) - 🔮 JtaTransactionManager
 18. [jeorg-spring-flash-2-18](./jeorg-spring-flash-2-18) - 👥 Profile
-19. [jeorg-spring-flash-2-19](./jeorg-spring-flash-2-19) - 🍃 Bean
+19. [jeorg-spring-flash-2-19](./jeorg-spring-flash-2-19) - 🍃 Bean - Removed because of: https://github.com/spring-projects/spring-framework/issues/33922
 20. [jeorg-spring-flash-2-20](./jeorg-spring-flash-2-20) - 7️⃣ PathVariable, MatrixVariable, RequestHeader, RequestParam
 
 ## Resources
