@@ -7,7 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
 import org.springframework.context.ApplicationContext;
 
-import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import java.lang.annotation.Annotation;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+import static java.util.Arrays.stream;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.*;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_WHITE;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.out;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.outSpace;
 
 @SpringBootApplication
 public class SpringFlash52Launcher implements CommandLineRunner {
@@ -27,7 +35,7 @@ public class SpringFlash52Launcher implements CommandLineRunner {
     public void run(String... args) {
         final var securityFilterChainRegistration = applicationContext.getBean("securityFilterChainRegistration", DelegatingFilterProxyRegistrationBean.class);
         final var delegatingFilterProxy = securityFilterChainRegistration.getFilter();
-        ConsolerizerComposer.outSpace()
+        outSpace()
                 .none()
                 .orange("This is the DelegatingFilterProxy")
                 .magenta(delegatingFilterProxy)
@@ -43,6 +51,27 @@ public class SpringFlash52Launcher implements CommandLineRunner {
                 .newLine()
                 .orange("Isn't it beautiful?")
                 .reset();
+
+        out(" ")
+                .yellow("The @SpringBootAnnotation is composed of a lot of other annotations")
+                .newLine()
+                .green("These are:")
+                .newLine()
+                .brightGreen(stream(this.getClass().getAnnotations())
+                        .map(Annotation::annotationType)
+                        .map(Class::getAnnotations)
+                        .collect(Collectors.toList()))
+                .toConsoleLn();
+
+        stream(this.getClass().getAnnotations()).forEach(annotation -> {
+            BRIGHT_BLUE.printGenericLn(annotation);
+            stream(annotation.annotationType().getAnnotations())
+                    .forEach(annotation1 -> {
+                        BRIGHT_GREEN.printGenericLn(annotation1);
+                        stream(annotation1.annotationType().getAnnotations())
+                                .forEach(BRIGHT_WHITE::printGenericLn);
+                    });
+        });
     }
 
 }

@@ -12,6 +12,7 @@
     <artifactId>jeorg-spring-kotlin</artifactId>
     <modules>
         <module>jeorg-spring-kotlin-mastery</module>
+        <module>mix-service</module>
     </modules>
 
     <packaging>pom</packaging>

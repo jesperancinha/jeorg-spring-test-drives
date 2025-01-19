@@ -4,7 +4,8 @@
 
 Exploring DelegatingFilterProxy in Spring
 
-1.  `DelegatingFilterProxyRegistrationBean`, `DelegatingFilterProxy`
+1. `DelegatingFilterProxyRegistrationBean`, `DelegatingFilterProxy`
+2. `@SpringBootApplication`
 
 ## Endpoints
 
