@@ -3,7 +3,7 @@
 
     <parent>
         <artifactId>jeorg-spring</artifactId>
-        <groupId>org.jesperancinha.std</groupId>
+        <groupId>org.jesperancinha.sftd</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 

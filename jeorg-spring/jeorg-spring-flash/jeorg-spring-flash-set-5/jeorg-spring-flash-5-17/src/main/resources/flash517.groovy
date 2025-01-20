@@ -1,5 +1,5 @@
-import org.jesperancinha.std.flash517.context.Fish
-import org.jesperancinha.std.flash517.context.FishService
+import org.jesperancinha.sftd.flash517.context.Fish
+import org.jesperancinha.sftd.flash517.context.FishService
 
 beans {
     fish(Fish) {
