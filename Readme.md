@@ -45,7 +45,7 @@ See [Log Book](./LogBook.md) for further details.
 
 1.  [Spring](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
 2.  [Spring Kotlin](./jeorg-spring-kotlin-5) - Test drives for the Spring 5 Frawework in Kotlin (Bare minimum focus given to Spring Boot)
-3.  [Spring XML based serviced](./xml-based-services) - A collection of old services still based on way or the other on xml. 
+3.  [Spring XML based services](./xml-based-services) - A collection of old services still based on way or the other on xml. 
 
 ## Specs
 
