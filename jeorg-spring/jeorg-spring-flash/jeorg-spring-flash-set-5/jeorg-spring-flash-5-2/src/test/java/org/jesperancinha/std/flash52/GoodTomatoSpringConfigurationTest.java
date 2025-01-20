@@ -1,6 +1,8 @@
-package org.jesperancinha.std.flash54.bean;
+package org.jesperancinha.std.flash52;
 
 import jakarta.annotation.PreDestroy;
+import org.jesperancinha.std.flash52.config.GoodTomatoSpringConfiguration;
+import org.jesperancinha.std.flash52.domain.Tomato;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.mock.mockito.SpyBean;
@@ -14,10 +16,10 @@ import static org.mockito.Mockito.verify;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {
-        SpringFlash54ConfigurationTest.TestTomatoConfiguration.class,
-        SpringFlash54Configuration.class
+        GoodTomatoSpringConfigurationTest.TestTomatoConfiguration.class,
+        GoodTomatoSpringConfiguration.class
 })
-class SpringFlash54ConfigurationTest {
+class GoodTomatoSpringConfigurationTest {
 
     @SpyBean(TomatoExtended.class)
     private static TomatoExtended originalTomato;

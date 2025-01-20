@@ -1,4 +1,4 @@
-package org.jesperancinha.std.flash52.delegating;
+package org.jesperancinha.std.flash52;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 import org.springframework.boot.CommandLineRunner;
@@ -8,7 +8,6 @@ import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBea
 import org.springframework.context.ApplicationContext;
 
 import java.lang.annotation.Annotation;
-import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.stream;
@@ -18,17 +17,17 @@ import static org.jesperancinha.console.consolerizer.console.ConsolerizerCompose
 import static org.jesperancinha.console.consolerizer.console.ConsolerizerComposer.outSpace;
 
 @SpringBootApplication
-public class SpringFlash52Launcher implements CommandLineRunner {
+public class TomatoContextsSpringLauncher implements CommandLineRunner {
 
     private final ApplicationContext applicationContext;
 
-    public SpringFlash52Launcher(ApplicationContext applicationContext) {
+    public TomatoContextsSpringLauncher(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
 
     public static void main(String[] args) {
         GREEN.printGenericTitleLn("Service is starting");
-        SpringApplication.run(SpringFlash52Launcher.class, args);
+        SpringApplication.run(TomatoContextsSpringLauncher.class, args);
     }
 
     @Override
@@ -72,6 +71,15 @@ public class SpringFlash52Launcher implements CommandLineRunner {
                                 .forEach(BRIGHT_WHITE::printGenericLn);
                     });
         });
+
+        ConsolerizerComposer
+                .out(" ")
+                .red("Our tomato has grown 🍅")
+                .newLine()
+                .red("And now we eat it!")
+                .newLine()
+                .magenta("Please stop the server to see that in action")
+                .toConsoleLn();
     }
 
 }

@@ -1,10 +1,10 @@
-package org.jesperancinha.std.flash52.delegating;
+package org.jesperancinha.std.flash52;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringFlash52LauncherTest {
+class TomatoContextsSpringLauncherTest {
 
     @Test
     void testContext() {

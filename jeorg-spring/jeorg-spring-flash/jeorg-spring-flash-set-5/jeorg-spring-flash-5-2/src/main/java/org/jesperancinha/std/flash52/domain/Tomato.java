@@ -1,4 +1,4 @@
-package org.jesperancinha.std.flash54.bean;
+package org.jesperancinha.std.flash52.domain;
 
 import org.jesperancinha.console.consolerizer.console.ConsolerizerComposer;
 
