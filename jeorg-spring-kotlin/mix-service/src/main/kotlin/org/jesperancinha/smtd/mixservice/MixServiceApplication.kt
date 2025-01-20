@@ -1,5 +1,6 @@
 package org.jesperancinha.smtd.mixservice
 
+import org.jesperancinha.smtd.mixservice.configuration.InventoryProcessor
 import org.jesperancinha.smtd.mixservice.configuration.Notification
 import org.jesperancinha.smtd.mixservice.configuration.NotificationService
 import org.springframework.boot.ApplicationArguments
@@ -9,7 +10,8 @@ import org.springframework.boot.runApplication
 
 @SpringBootApplication
 class MixServiceApplication(
-    private val notificationService: NotificationService
+    private val notificationService: NotificationService,
+    private val inventoryProcessor: InventoryProcessor
 ): ApplicationRunner {
     override fun run(args: ApplicationArguments?) {
         notificationService.notifyByEmail()
@@ -17,6 +19,8 @@ class MixServiceApplication(
 
         process(notificationService.smsNotification)
         process(notificationService.emailNotification)
+
+        inventoryProcessor.performAll()
     }
 
     private fun process(notificationEmail: Notification) {
