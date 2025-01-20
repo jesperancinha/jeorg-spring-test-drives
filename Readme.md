@@ -45,11 +45,12 @@ See [Log Book](./LogBook.md) for further details.
 
 1.  [Spring](./jeorg-spring-5) - Test drives for the Spring 5 Frawework (Bare minimum focus given to Spring Boot)
 2.  [Spring Kotlin](./jeorg-spring-kotlin-5) - Test drives for the Spring 5 Frawework in Kotlin (Bare minimum focus given to Spring Boot)
+3.  [Spring XML based serviced](./xml-based-services) - A collection of old services still based on way or the other on xml. 
 
 ## Specs
 
-1.  Spring: [org.springframework](https://mvnrepository.com/artifact/org.springframework/) - 5.2.15.RELEASE
-2.  Spring Boot: [org.springframework.boot/spring-boot-starter-parent](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent) - 2.3.11.RELEASE
+1.  Spring: [org.springframework](https://mvnrepository.com/artifact/org.springframework/) - Latest version
+2.  Spring Boot: [org.springframework.boot/spring-boot-starter-parent](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent) - Latest version
 
 ## Build
 
