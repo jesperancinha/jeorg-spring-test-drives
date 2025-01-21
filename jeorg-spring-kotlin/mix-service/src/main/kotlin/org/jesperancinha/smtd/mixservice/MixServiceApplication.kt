@@ -25,6 +25,7 @@ class MixServiceApplication(
         inventoryProcessor.performAll()
 
         mySingletonComponent.sayHello()
+        MySingletonComponent.sayHello()
     }
 
     private fun process(notificationEmail: Notification) {

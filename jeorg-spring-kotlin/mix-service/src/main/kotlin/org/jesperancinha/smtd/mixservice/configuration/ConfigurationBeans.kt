@@ -11,8 +11,9 @@ sealed class Notification {
 
 @Component
 object MySingletonComponent {
-    fun sayHello() {
+    fun sayHello(): Boolean {
         println("Hello from MySingletonComponent!")
+        return true
     }
 }
 
