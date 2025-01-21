@@ -1,5 +1,12 @@
 package org.jesperancinha.smtd.mixservice.domain
 
+import org.springframework.boot.context.properties.ConfigurationProperties
+
+@ConfigurationProperties(prefix = "inventory2.management")
+data class Test(
+    val url: String,
+    val timeout: Long
+)
 
 class InventoryService {
     var url: String? = null
