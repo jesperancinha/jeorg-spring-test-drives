@@ -2,8 +2,8 @@ package org.jesperancinha.smtd.mixservice.domain
 
 
 class InventoryService {
-    private var url: String? = null
-    private var timeout: Long? = null
+    var url: String? = null
+    var timeout: Long? = null
 
     fun performOperation() {
         println("Connecting to $url with a timeout of $timeout ms")

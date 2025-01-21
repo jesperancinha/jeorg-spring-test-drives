@@ -1,6 +1,7 @@
 package org.jesperancinha.smtd.mixservice
 
 import org.jesperancinha.smtd.mixservice.configuration.InventoryProcessor
+import org.jesperancinha.smtd.mixservice.configuration.MySingletonComponent
 import org.jesperancinha.smtd.mixservice.configuration.Notification
 import org.jesperancinha.smtd.mixservice.configuration.NotificationService
 import org.springframework.boot.ApplicationArguments
@@ -11,7 +12,8 @@ import org.springframework.boot.runApplication
 @SpringBootApplication
 class MixServiceApplication(
     private val notificationService: NotificationService,
-    private val inventoryProcessor: InventoryProcessor
+    private val inventoryProcessor: InventoryProcessor,
+    private val mySingletonComponent: MySingletonComponent
 ): ApplicationRunner {
     override fun run(args: ApplicationArguments?) {
         notificationService.notifyByEmail()
@@ -21,6 +23,8 @@ class MixServiceApplication(
         process(notificationService.emailNotification)
 
         inventoryProcessor.performAll()
+
+        mySingletonComponent.sayHello()
     }
 
     private fun process(notificationEmail: Notification) {
