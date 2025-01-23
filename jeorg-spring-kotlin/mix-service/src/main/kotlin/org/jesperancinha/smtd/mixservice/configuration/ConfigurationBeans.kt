@@ -10,6 +10,14 @@ sealed class Notification {
 }
 
 @Component
+object MySingletonComponent {
+    fun sayHello(): Boolean {
+        println("Hello from MySingletonComponent!")
+        return true
+    }
+}
+
+@Component
 class EmailNotification : Notification.Email("example@example.com")
 
 @Component
