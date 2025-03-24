@@ -71,7 +71,7 @@
 
         <!-- Spring -->
         <spring-security-oauth2.version>2.5.2.RELEASE</spring-security-oauth2.version>
-        <spring-boot.version>3.4.3</spring-boot.version>
+        <spring-boot.version>3.4.4</spring-boot.version>
 
         <!-- Other -->
         <jetty-maven-plugin.version>11.0.25</jetty-maven-plugin.version>
