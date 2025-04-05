@@ -64,18 +64,18 @@ mvn clean install -Dconsolerizer.show=false
 
 ## Install JDK using [SDK-MAN](https://sdkman.io/)
 
-1. List all Java versions and select the appropriate on currently used in the project. Check the [pom.xml](pom.xml) file for details.
+1.  List all Java versions and select the appropriate on currently used in the project. Check the [pom.xml](pom.xml) file for details.
 ```shell
 sdk list java
 ```
 
-2. Install the java version
+2.  Install the java version
 
 ```shell
 sdk install java <JDK_VERSION>
 ```
 
-3. Use the JDK version
+3.  Use the JDK version
 
 ```shell
 sdk use java <JDK_VERSION>
