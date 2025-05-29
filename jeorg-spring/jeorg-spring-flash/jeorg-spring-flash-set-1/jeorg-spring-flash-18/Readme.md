@@ -32,18 +32,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [New Rules](https://en.wikipedia.org/wiki/New_Rules)
-
-<div align="center">
-      <a title="Dua Lipa - New Rules" href="https://www.youtube.com/watch?v=k2qgadSvNyU">
-     <img 
-          src="https://img.youtube.com/vi/k2qgadSvNyU/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring aop aspectJ pointcut expression examples](https://howtodoinjava.com/spring-aop/aspectj-pointcut-expressions/)
