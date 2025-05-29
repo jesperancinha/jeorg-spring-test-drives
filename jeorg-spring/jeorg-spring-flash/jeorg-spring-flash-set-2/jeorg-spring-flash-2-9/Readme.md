@@ -46,18 +46,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [When the Going Gets Tough, the Tough Get Going (song)](https://en.wikipedia.org/wiki/When_the_Going_Gets_Tough,_the_Tough_Get_Going_(song))
-
-<div align="center">
-      <a title="When the Going Gets Tough, The Tough Get Going (The Jewel of the Nile Version)" href="https://www.youtube.com/watch?v=1S89K49BeBU">
-     <img 
-          src="https://img.youtube.com/vi/1S89K49BeBU/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [@PreAuthorize and @PostAuthorize in Spring Security](https://www.concretepage.com/spring/spring-security/preauthorize-postauthorize-in-spring-security)
