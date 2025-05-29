@@ -10,41 +10,41 @@ public class LyricsServiceImpl implements LyricsService {
 
     @Override
     public void enumerateLyric1() {
-        throw new RuntimeException("One, don't pick up the phone");
+        throw new RuntimeException("Pick up the phone");
     }
 
     @Override
     public void resultLyric1() {
-        throw new RuntimeException("You know he's only calling 'cause he's drunk and alone");
+        throw new RuntimeException("Answer the phone");
 
     }
 
     @Override
     public void enumerateLyric2() {
-        throw new RuntimeException("Two, don't let him in");
+        throw new RuntimeException("Talk friendly");
 
     }
 
     @Override
     public void resultLyric2() {
-        throw new RuntimeException("You'll have to kick him out again");
+        throw new RuntimeException("Be nice");
 
     }
 
     @Override
     public void enumerateLyric3() {
-        throw new RuntimeException("Three, don't be his friend");
+        throw new RuntimeException("Ask how's it going");
 
     }
 
     @Override
     public void resultLyric3() {
-        throw new RuntimeException("You know you're gonna wake up in his bed in the morning");
+        throw new RuntimeException("Maybe arrange to travel");
 
     }
 
     @Override
     public void resultLyric4() {
-        throw new RuntimeException("And if you're under him, you ain't getting over him");
+        throw new RuntimeException("It is overbooked!");
     }
 }
