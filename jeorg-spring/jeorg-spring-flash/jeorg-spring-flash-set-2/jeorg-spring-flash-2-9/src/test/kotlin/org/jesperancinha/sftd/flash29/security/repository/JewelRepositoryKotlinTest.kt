@@ -53,13 +53,13 @@ internal class JewelRepositoryKotlinTest @Autowired constructor(
 
     @Test
     fun testGetJewelWhenReadingJewelThenResultInJewel() {
-        jewelRepository.findByIdOrNull(adminId)
+        jewelRepository.findByIdOrNull(adminId ?: throw NullPointerException())
             .shouldNotBeNull()
             .apply {
                 guardian shouldBe "admin"
                 jewelType shouldBe AMETHYST
             }
-        jewelRepository.findByIdOrNull(sabinoId)
+        jewelRepository.findByIdOrNull(sabinoId?: throw NullPointerException())
             .shouldNotBeNull()
             .apply {
                 guardian shouldBe "sabino"
