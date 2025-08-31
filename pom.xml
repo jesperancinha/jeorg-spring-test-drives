@@ -18,11 +18,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jackson-databind.version>2.20.0</jackson-databind.version>
-        <jackson-module-kotlin.version>2.20.0</jackson-module-kotlin.version>
         <jackson.mapper.asl.version>1.9.13</jackson.mapper.asl.version>
-        <jackson-annotations.version>2.20</jackson-annotations.version>
-        <jackson-core>2.20.0</jackson-core>
         <jaxb-api.version>2.3.1</jaxb-api.version>
 
         <!-- External -->
@@ -240,7 +236,6 @@
     </build>
     <dependencyManagement>
         <dependencies>
-            <!-- Spring Dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-parent</artifactId>
@@ -363,16 +358,6 @@
                 <groupId>org.jscience</groupId>
                 <artifactId>jscience</artifactId>
                 <version>${jscience}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson-core}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson-databind.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.kohsuke.args4j</groupId>
@@ -537,19 +522,9 @@
                 <version>${kotlin.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.fasterxml.jackson.module</groupId>
-                <artifactId>jackson-module-kotlin</artifactId>
-                <version>${jackson-module-kotlin.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.codehaus.jackson</groupId>
                 <artifactId>jackson-mapper-asl</artifactId>
                 <version>${jackson.mapper.asl.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>${jackson-annotations.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
