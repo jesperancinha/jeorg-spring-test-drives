@@ -40,18 +40,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ## Resources
 
-### Context
-
--   [Red House Painters (Rollercoaster)](https://en.wikipedia.org/wiki/Red_House_Painters_(Rollercoaster))
-
-<div align="center">
-      <a title="Red House Painters - Katy Song" href="https://www.youtube.com/watch?v=NFQ4nuUuwNo">
-     <img 
-          src="https://img.youtube.com/vi/NFQ4nuUuwNo/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Boot custom HealthIndicator](https://blog.jayway.com/2014/07/22/spring-boot-custom-healthindicator/)

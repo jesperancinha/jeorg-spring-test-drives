@@ -12,18 +12,6 @@ Exploring the ModelAttribute in Spring
 
 ## Resources
 
-### Context
-
--   [Blur (band)](https://en.wikipedia.org/wiki/Blur_(band))
-
-<div align="center">
-      <a title="Blur - Charmless Man" href="https://www.youtube.com/watch?v=j7gmoILDhHA">
-     <img 
-          src="https://img.youtube.com/vi/j7gmoILDhHA/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring @ModelAttribute Annotation Example](https://examples.javacodegeeks.com/enterprise-java/spring/spring-modelattribute-annotation-example/)

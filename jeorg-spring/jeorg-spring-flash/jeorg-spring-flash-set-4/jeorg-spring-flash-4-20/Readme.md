@@ -44,21 +44,6 @@ curl -X POST -H 'Content-Type: application/json' --data '{"name":"Madison Avenue
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="a-ha - The Sun Always Shines on T.V." href="https://www.youtube.com/watch?v=a3ir9HC9vYg">
-     <img 
-          src="https://img.youtube.com/vi/a3ir9HC9vYg/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="a-ha - Stay On These Roads" href="https://www.youtube.com/watch?v=nWey1DBAchM">
-     <img 
-          src="https://img.youtube.com/vi/nWey1DBAchM/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

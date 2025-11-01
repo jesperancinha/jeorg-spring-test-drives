@@ -41,18 +41,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [The X-Files](https://en.wikipedia.org/wiki/The_X-Files)
-
-<div align="center">
-      <a title="The X-Files Intro (1993)" href="https://www.youtube.com/watch?v=lIh8VPoPBhk">
-     <img 
-          src="https://img.youtube.com/vi/lIh8VPoPBhk/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Security JSP Tag Library](https://www.javatpoint.com/spring-security-jsp-tag-library)

@@ -25,24 +25,6 @@ mvn clean spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Rhythm Is a Dancer](https://en.wikipedia.org/wiki/Rhythm_Is_a_Dancer)
--   [The Sidewinder Sleeps Tonite](https://en.wikipedia.org/wiki/The_Sidewinder_Sleeps_Tonite)
-
-<div align="center">
-      <a title="Snap! - Rhythm is a Dancer" href="https://www.youtube.com/watch?v=KkhGkRahU6g">
-     <img 
-          src="https://img.youtube.com/vi/KkhGkRahU6g/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="R.E.M. - The Sidewinder Sleeps Tonite" href="https://www.youtube.com/watch?v=mgiCechWNCo">
-     <img   
-          src="https://img.youtube.com/vi/mgiCechWNCo/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Write Integration Tests For Your Spring WebSocket Endpoints](https://rieckpil.de/write-integration-tests-for-your-spring-websocket-endpoints/)

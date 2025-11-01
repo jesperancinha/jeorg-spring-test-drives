@@ -28,23 +28,6 @@ On the other hand, if running through an IDE, the root path must be specified. I
 
 ## Resources
 
-### Context
-
--   [The The](https://en.wikipedia.org/wiki/The_The)
-
-<div align="center">
-      <a title="The The - The Beat(en) Generation" href="https://www.youtube.com/watch?v=ustXRPke9lM">
-     <img 
-          src="https://img.youtube.com/vi/ustXRPke9lM/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="The The - Love Is Stronger Than Death" href="https://www.youtube.com/watch?v=lo0cZRaZs6c">
-     <img 
-          src="https://img.youtube.com/vi/lo0cZRaZs6c/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring MVC - Bean Name Url Handler Mapping Example](https://www.tutorialspoint.com/springmvc/springmvc_beannameurlhandlermapping.htm)

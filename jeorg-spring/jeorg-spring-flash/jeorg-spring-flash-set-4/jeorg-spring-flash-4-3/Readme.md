@@ -44,18 +44,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [The Secrets We Keep](https://en.wikipedia.org/wiki/The_Secrets_We_Keep)
-
-<div align="center">
-      <a title="The Secrets We Keep Trailer #1 (2020)" href="https://www.youtube.com/watch?v=8Jv6f59Z4Y8">
-     <img 
-          src="https://img.youtube.com/vi/8Jv6f59Z4Y8/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Simple Spring Security Webapp](https://www.springbyexample.org/examples/simple-spring-security-webapp-spring-config.html)

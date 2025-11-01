@@ -32,18 +32,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Disco](https://en.wikipedia.org/wiki/Disco_(Kylie_Minogue_album))
-
-<div align="center">
-      <a title="Kylie Minogue - Fine Wine" href="https://www.youtube.com/watch?v=JtyCDOmgCic">
-     <img 
-          src="https://img.youtube.com/vi/JtyCDOmgCic/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring MVC Interceptor Example – XML and Annotation Java Config](https://howtodoinjava.com/spring-core/spring-mvc-interceptor-example/)

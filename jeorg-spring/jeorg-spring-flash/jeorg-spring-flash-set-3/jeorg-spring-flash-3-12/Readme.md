@@ -20,18 +20,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Time Bomb (Rancid song)](https://en.wikipedia.org/wiki/Time_Bomb_(Rancid_song))
-
-<div align="center">
-      <a title="RANCID - Time Bomb" href="https://www.youtube.com/watch?v=GvIBOlyAViU">
-     <img 
-          src="https://img.youtube.com/vi/GvIBOlyAViU/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Security – Securing URLs By HTTP Method](https://www.naturalprogrammer.com/blog/16385/spring-security-urls-http-method)

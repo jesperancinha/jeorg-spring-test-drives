@@ -36,18 +36,6 @@ They are part, on the other hand, of spring-boot-test.
 
 ## Resources
 
-### Context
-
--   [The Carpenters](https://en.wikipedia.org/wiki/The_Carpenters)
-
-<div align="center">
-      <a title="Top Of The World" href="https://www.youtube.com/watch?v=dewlH6HSDzk">
-     <img 
-          src="https://img.youtube.com/vi/dewlH6HSDzk/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [tbeauvais/example-spring-mvc-app](https://github.com/tbeauvais/example-spring-mvc-app)

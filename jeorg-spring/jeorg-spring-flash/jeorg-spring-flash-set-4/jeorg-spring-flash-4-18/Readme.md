@@ -47,24 +47,6 @@ curl -X POST -H 'Content-Type: application/json' --data '{"name":"Madison Avenue
 
 ## Resources
 
-### Context
-
--   [You Keep Me Hangin' On](https://en.wikipedia.org/wiki/You_Keep_Me_Hangin%27_On)
--   [Don't Call Me Baby](https://en.wikipedia.org/wiki/Don%27t_Call_Me_Baby)
-
-<div align="center">
-      <a title="You Keep Me Hangin' On" href="https://www.youtube.com/watch?v=xJZF-skCY-M">
-     <img 
-          src="https://img.youtube.com/vi/xJZF-skCY-M/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Madison Avenue - Don't Call Me Baby" href="https://www.youtube.com/watch?v=M1kEjj3Ej68">
-     <img 
-          src="https://img.youtube.com/vi/M1kEjj3Ej68/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

@@ -44,18 +44,6 @@ curl http://localhost:8081/
 
 ## Resources
 
-### Context
-
--   [Ghost Town (Specials song)](https://en.wikipedia.org/wiki/Ghost_Town_(Specials_song))
-
-<div align="center">
-      <a title="The Specials - Ghost Town" href="https://www.youtube.com/watch?v=RZ2oXzrnti4">
-     <img 
-          src="https://img.youtube.com/vi/RZ2oXzrnti4/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

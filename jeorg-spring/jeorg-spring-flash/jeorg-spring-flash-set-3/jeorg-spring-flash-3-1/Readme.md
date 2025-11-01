@@ -11,18 +11,6 @@ Topics:
 
 ## Resources
 
-### Context
-
--   [Suzanne Vega](https://en.wikipedia.org/wiki/Suzanne_Vega)
-
-<div align="center">
-      <a title="Suzanne Vega - Book Of Dreams" href="https://www.youtube.com/watch?v=uAWGw8meEDE">
-     <img 
-          src="https://img.youtube.com/vi/uAWGw8meEDE/0.jpg" 
-          style="width:50%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring InitializingBean and DisposableBean example](https://mkyong.com/spring/spring-initializingbean-and-disposablebean-example/)

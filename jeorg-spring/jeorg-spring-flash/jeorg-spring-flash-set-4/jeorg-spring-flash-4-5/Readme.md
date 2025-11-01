@@ -34,18 +34,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Enjoy the Silence](https://en.wikipedia.org/wiki/Enjoy_the_Silence)
-
-<div align="center">
-      <a title="Depeche Mode - Enjoy The Silence" href="https://www.youtube.com/watch?v=aGSKrC7dGcY">
-     <img 
-          src="https://img.youtube.com/vi/aGSKrC7dGcY/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [What is the use of ContextLoaderListener in Spring MVC Framework?](https://www.java67.com/2019/05/contextloaderlistener-in-spring-mvc-10.html)

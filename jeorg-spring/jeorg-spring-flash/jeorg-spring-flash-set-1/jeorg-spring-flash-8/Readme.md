@@ -23,16 +23,6 @@ Or, using your IDE, configure your working directory.
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Mariah Carey - All I Want for Christmas Is You (Make My Wish Come True Edition)" href="https://www.youtube.com/watch?v=aAkMkVFwAoo">
-     <img 
-          src="https://img.youtube.com/vi/aAkMkVFwAoo/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Boot JSP View Resolver Example](https://howtodoinjava.com/spring-boot/spring-boot-jsp-view-example/)

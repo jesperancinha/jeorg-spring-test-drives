@@ -24,19 +24,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Stereotypes - Lyrics](https://genius.com/Blur-stereotypes-lyrics)
--   [Blur - Stereotypes](https://en.wikipedia.org/wiki/Stereotypes_(song))
-
-<div align="center">
-      <a title="Blur - Stereotypes" href="https://www.youtube.com/watch?v=JHH7krBwc0Q">
-     <img 
-          src="https://img.youtube.com/vi/JHH7krBwc0Q/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [MongoDB Indexes With Spring Data](https://dzone.com/articles/mongodb-indexes-with-spring-data)

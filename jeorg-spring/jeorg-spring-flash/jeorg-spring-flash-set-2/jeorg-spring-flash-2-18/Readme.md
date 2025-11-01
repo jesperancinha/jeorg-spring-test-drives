@@ -22,33 +22,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=garbage
 
 ## Resources
 
-### Context
-
--   [Milk - Garbage](https://en.wikipedia.org/wiki/Milk_(song))
--   [Bullet with Butterfly Wings](https://en.wikipedia.org/wiki/Bullet_with_Butterfly_Wings)
--   [Orange Crush](https://en.wikipedia.org/wiki/Orange_Crush_(song))
-
-<div align="center">
-      <a title="R.E.M. - Orange Crush" href="https://www.youtube.com/watch?v=_mSmOcmk7uQ">
-     <img 
-          src="https://img.youtube.com/vi/_mSmOcmk7uQ/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Garbage - Milk" href="https://www.youtube.com/watch?v=y14Kp1DitpE">
-     <img 
-          src="https://img.youtube.com/vi/y14Kp1DitpE/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="The Smashing Pumpkins - Bullet with Butterfly Wings" href="https://www.youtube.com/watch?v=8-r-V0uK4u0">
-     <img 
-          src="https://img.youtube.com/vi/8-r-V0uK4u0/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Atomikos — multi db transaction system](https://medium.com/swlh/atomikos-multi-db-transaction-system-c16168df22e5)

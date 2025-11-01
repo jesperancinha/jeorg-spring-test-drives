@@ -12,23 +12,6 @@ Topics:
 
 ## Resources
 
-### Context
-
--   [The NeverEnding Story](https://en.wikipedia.org/wiki/The_NeverEnding_Story_(film))
-
-<div align="center">
-      <a title="The NeverEnding Story (1984) Official Trailer - Childhood Fantasy Movie HD" href="https://www.youtube.com/watch?v=UeFni9dOv7c">
-     <img 
-          src="https://img.youtube.com/vi/UeFni9dOv7c/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="The Never Ending Story [ intro ]" href="https://www.youtube.com/watch?v=CCgfRC6gHtI">
-     <img 
-          src="https://img.youtube.com/vi/CCgfRC6gHtI/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Secure Your Method Using AOP](https://dzone.com/articles/secure-your-method-using-aop)

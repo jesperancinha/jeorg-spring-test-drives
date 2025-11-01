@@ -32,21 +32,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Lollapalooza 2012](https://www.stereogum.com/997972/lollapalooza-2012-lineup/)
--   [VH1 Divas](https://en.wikipedia.org/wiki/VH1_Divas)
--   [Róisín Murphy Concert List](https://www.songkick.com/artists/1168629-roisin-murphy)
--   [Lollapalooza](https://en.wikipedia.org/wiki/Lollapalooza)
-
-<div align="center">
-      <a title="Róisín Murphy - Murphy's Law" href="https://www.youtube.com/watch?v=_Khh8NB-qBo">
-     <img 
-          src="https://img.youtube.com/vi/_Khh8NB-qBo/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Accessing Relational Data using JDBC with Spring](https://spring.io/guides/gs/relational-data-access/)

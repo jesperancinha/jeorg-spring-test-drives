@@ -43,21 +43,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Space Elevator – Science Fiction or the Future of Mankind?" href="https://www.youtube.com/watch?v=qPQQwqGWktE">
-     <img 
-          src="https://img.youtube.com/vi/qPQQwqGWktE/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Fusion Power Explained – Future or Failure" href="https://www.youtube.com/watch?v=mZsaaturR6E">
-     <img 
-          src="https://img.youtube.com/vi/mZsaaturR6E/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Security password hashing example](https://mkyong.com/spring-security/spring-security-password-hashing-example/)

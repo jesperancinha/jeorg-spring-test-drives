@@ -14,18 +14,6 @@ Topics
 
 ## Resources
 
-### Context
-
--   [Mylène Farmer](https://en.wikipedia.org/wiki/Myl%C3%A8ne_Farmer)
-
-<div align="center">
-      <a title="Mylène Farmer - Désenchantée" href="https://www.youtube.com/watch?v=vkiyW0vqat8">
-     <img 
-          src="https://img.youtube.com/vi/vkiyW0vqat8/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Programmatic Transaction Management](https://www.tutorialspoint.com/spring/programmatic_management.htm)

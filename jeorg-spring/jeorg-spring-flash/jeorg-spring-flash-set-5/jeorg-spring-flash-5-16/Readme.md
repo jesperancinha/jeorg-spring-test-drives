@@ -30,32 +30,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [The Terminator](https://en.wikipedia.org/wiki/The_Terminator)
--   [Terminator 2: Judgment Day](https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day)
--   [Terminator 3: Rise of the Machines](https://en.wikipedia.org/wiki/Terminator_3:_Rise_of_the_Machines)
-
-<div align="center">
-      <a title="The Terminator" href="https://www.youtube.com/watch?v=n87n9YELjB4">
-     <img 
-          src="https://img.youtube.com/vi/n87n9YELjB4/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Terminator 2: Judgment Day" href="https://www.youtube.com/watch?v=BbHU2X3k7tM">
-     <img 
-          src="https://img.youtube.com/vi/BbHU2X3k7tM/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Terminator 3: Rise of the Machines" href="https://www.youtube.com/watch?v=5UgPJhyJmlM">
-     <img 
-          src="https://img.youtube.com/vi/5UgPJhyJmlM/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

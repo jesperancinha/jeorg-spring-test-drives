@@ -22,18 +22,6 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8081/createEpi
 
 ## Resources
 
-### Context
-
--   [Il était une fois](https://en.wikipedia.org/wiki/Il_%C3%A9tait_une_fois)
-
-<div align="center">
-      <a title="Il était une fois… la Vie 🌱- La vaccination 💉" href="https://www.youtube.com/watch?v=xPm7zOFSJgk">
-     <img 
-          src="https://img.youtube.com/vi/xPm7zOFSJgk/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring InitializingBean and DisposableBean example](https://mkyong.com/spring/spring-initializingbean-and-disposablebean-example/)

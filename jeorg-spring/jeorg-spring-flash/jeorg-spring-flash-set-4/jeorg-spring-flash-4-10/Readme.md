@@ -54,21 +54,6 @@ mvn help:active-profiles
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Ava Max - My Head & My Heart" href="https://www.youtube.com/watch?v=w8mBplMtwJ8">
-     <img 
-          src="https://img.youtube.com/vi/w8mBplMtwJ8/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Ava Max - My Head & My Heart (Bimini Bon Boulash Performance Video)" href="https://www.youtube.com/watch?v=7kfe2tdb0go">
-     <img 
-          src="https://img.youtube.com/vi/7kfe2tdb0go/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Security password hashing example](https://mkyong.com/spring-security/spring-security-password-hashing-example/)

@@ -23,18 +23,6 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8081 --data '[
 
 ## Resources
 
-### Context
-
--   [Kelly Clarkson](https://en.wikipedia.org/wiki/Kelly_Clarkson)
-
-<div align="center">
-      <a title="Kelly Clarkson - Stronger (What Doesn't Kill You)" href="https://www.youtube.com/watch?v=Xn676-fLq7I">
-     <img 
-          src="https://img.youtube.com/vi/Xn676-fLq7I/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [JDK Dynamic Proxies](https://www.byteslounge.com/tutorials/jdk-dynamic-proxies)

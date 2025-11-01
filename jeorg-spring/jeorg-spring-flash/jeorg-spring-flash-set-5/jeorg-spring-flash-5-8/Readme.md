@@ -36,45 +36,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="StoneBridge ft Therese- Put 'Em High" href="https://www.youtube.com/watch?v=VCNtgMfnl8A">
-     <img 
-          src="https://img.youtube.com/vi/VCNtgMfnl8A/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Angel City feat. Lara McAllen - Love Me Right" href="https://www.youtube.com/watch?v=5xVeWBWrBDU">
-     <img 
-          src="https://img.youtube.com/vi/5xVeWBWrBDU/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Tomcraft - Loneliness" href="https://www.youtube.com/watch?v=3QV8cOmsTdI">
-     <img 
-          src="https://img.youtube.com/vi/3QV8cOmsTdI/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Armin van Buuren feat. Sharon den Adel - In And Out Of Love" href="https://www.youtube.com/watch?v=TxvpctgU_s8">
-     <img 
-          src="https://img.youtube.com/vi/TxvpctgU_s8/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Spencer & Hill and Nadia Ali - Believe It" href="https://www.youtube.com/watch?v=ohuswoaF8LY">
-     <img 
-          src="https://img.youtube.com/vi/ohuswoaF8LY/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Armin van Buuren ft. Nadia Ali - Feels So Good" href="https://www.youtube.com/watch?v=_WOwRVTKJUw">
-     <img 
-          src="https://img.youtube.com/vi/_WOwRVTKJUw/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

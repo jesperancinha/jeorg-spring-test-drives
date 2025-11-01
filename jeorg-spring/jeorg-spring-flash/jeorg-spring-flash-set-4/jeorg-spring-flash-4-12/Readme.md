@@ -37,16 +37,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Weezer - Pork And Beans" href="https://www.youtube.com/watch?v=PQHPYelqr0E">
-     <img 
-          src="https://img.youtube.com/vi/PQHPYelqr0E/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Security password hashing example](https://mkyong.com/spring-security/spring-security-password-hashing-example/)

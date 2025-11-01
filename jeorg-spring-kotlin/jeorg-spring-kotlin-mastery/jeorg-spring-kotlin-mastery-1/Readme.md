@@ -43,22 +43,6 @@ Topics covered:
 -   Cosmina, I. Harrop, R. Schaefer, C. Ho, C. (October 2017). <i>Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools</i>. (Fifth Edition). Apress
 -   Winch, R. Mularien, P. (December 2012). <i>Spring Security 3.1</i>. (Second Edition). Packt Publishing
 
-### Context
-
--   [The Sound of Music (film)](https://en.wikipedia.org/wiki/The_Sound_of_Music_(film))
-
-<div align="center">
-      <a title="The Sound Of Music" href="https://www.youtube.com/watch?v=LhIfV67Fnc8">
-     <img 
-          src="https://img.youtube.com/vi/LhIfV67Fnc8/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
--   https://kb.objectrocket.com/postgresql/how-to-import-a-json-file-into-postgresql-database-cluster-1437
--   https://stackoverflow.com/questions/39224382/how-can-i-import-a-json-file-into-postgresql
--   https://stackoverflow.com/questions/58623291/how-to-restore-database-from-dump-or-sql-file-in-docker-using-volume
-
 ### Online
 
 -   [Codecov Kotlin Setup Exammple](https://github.com/codecov/example-kotlin/blob/master/pom.xml)

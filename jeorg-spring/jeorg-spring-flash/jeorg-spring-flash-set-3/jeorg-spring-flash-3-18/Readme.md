@@ -22,19 +22,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [The recording of “Bohemian Rhapsody” took three weeks and featured 180 overdubs of vocals and instruments, including a Chinese gong](https://www.thevintagenews.com/2017/07/21/the-recording-of-bohemian-rhapsody-took-three-weeks-and-featured-180-overdubs-of-vocals-and-instruments-including-a-chinese-gong-2/#:~:text=It%20would%20take%20three%20weeks,to%20forget%20the%20Chinese%20gong.)
--   [Bohemian Rhapsody](https://en.wikipedia.org/wiki/Bohemian_Rhapsody)
-
-<div align="center">
-      <a title="Queen – Bohemian Rhapsody" href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ">
-     <img 
-          src="https://img.youtube.com/vi/fJ9rUzIMcZQ/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring - Bean Post Processors](https://www.tutorialspoint.com/spring/spring_bean_post_processors.htm)

@@ -26,18 +26,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=outside
 
 ## Resources
 
-### Context
-
--   [Adele](https://en.wikipedia.org/wiki/Adele)
-
-<div align="center">
-      <a title="Adele - Hello" href="https://www.youtube.com/watch?v=YQHsXMglC9A">
-     <img 
-          src="https://img.youtube.com/vi/YQHsXMglC9A/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [JDK Dynamic Proxies](https://www.byteslounge.com/tutorials/jdk-dynamic-proxies)

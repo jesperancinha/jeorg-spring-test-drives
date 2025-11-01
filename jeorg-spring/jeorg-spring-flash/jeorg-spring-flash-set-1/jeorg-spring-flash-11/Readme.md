@@ -20,18 +20,6 @@ mvn clean spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Talkin' 'bout a Revolution](https://en.wikipedia.org/wiki/Talkin%27_%27bout_a_Revolution)
-
-<div align="center">
-      <a title="Tracy Chapman - Talkin' About A Revolution" href="https://www.youtube.com/watch?v=Xv8FBjo1Y8I">
-     <img 
-          src="https://img.youtube.com/vi/Xv8FBjo1Y8I/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring form tag : ModelAttribute VS CommandName](http://mwakram.blogspot.com/2014/05/spring-form-tag-modelattribute-vs.html)

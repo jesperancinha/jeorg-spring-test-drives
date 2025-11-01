@@ -44,18 +44,6 @@ curl http://localhost:8081/body
 
 ## Resources
 
-### Context
-
--   [Love Song for a Vampire](https://en.wikipedia.org/wiki/Love_Song_for_a_Vampire)
-
-<div align="center">
-      <a title="Love Song For A Vampire" href="https://www.youtube.com/watch?v=vhG8zC4npsE">
-     <img 
-          src="https://img.youtube.com/vi/vhG8zC4npsE/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

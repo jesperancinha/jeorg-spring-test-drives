@@ -44,16 +44,6 @@ curl -X POST -H 'Content-Type: application/json' --data '{"name":"Madison Avenue
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="House Mix 2015 - Freemasons Tribute - HouseHistory" href="https://www.youtube.com/watch?v=1WC8hiC1OnA">
-     <img 
-          src="https://img.youtube.com/vi/1WC8hiC1OnA/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress
