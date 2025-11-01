@@ -33,16 +33,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Robyn - Dancing On My Own" href="https://www.youtube.com/watch?v=CcNo07Xp8aQ">
-     <img 
-          src="https://img.youtube.com/vi/CcNo07Xp8aQ/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Custom Container Configuration in Spring Boot 2](https://www.javaprogramto.com/2020/04/spring-boot-embeddedservletcontainercustomizer-configurableembeddedservletcontainer.html)

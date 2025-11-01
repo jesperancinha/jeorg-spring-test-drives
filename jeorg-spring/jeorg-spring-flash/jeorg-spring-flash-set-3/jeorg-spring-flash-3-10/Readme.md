@@ -17,21 +17,6 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8081/ --data '
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="The Fender Stratocaster: A Short History" href="https://www.youtube.com/watch?v=mWFw23PLr-Y">
-     <img 
-          src="https://img.youtube.com/vi/mWFw23PLr-Y/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="HISTORY of Charvel / Jackson Guitars! Enjoy these PRE-FMIC Charvels from my personal collection!" href="https://www.youtube.com/watch?v=733ioo1hGmM">
-     <img 
-          src="https://img.youtube.com/vi/733ioo1hGmM/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring boot custom JSON Serialize – Deserialize Example](http://www.dailycodebuffer.com/spring-boot-custom-json-serialize-deserialize-example/)

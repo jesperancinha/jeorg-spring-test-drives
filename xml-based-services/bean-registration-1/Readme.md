@@ -11,10 +11,6 @@ Topics covered:
 
 ## Resources
 
-### Context
-
--  [Celine Dion - On ne change pas](https://www.youtube.com/watch?v=3tOsUgwBgko)
-
 ### Online
 
 -   [1.1. Introduction to the Spring IoC Container and Bean](https://docs.spring.io/spring-framework/docs/5.3.3/reference/html/core.html#beans)

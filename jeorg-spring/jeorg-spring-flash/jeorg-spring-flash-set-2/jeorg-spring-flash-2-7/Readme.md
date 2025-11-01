@@ -34,18 +34,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Nick Cave](https://en.wikipedia.org/wiki/Nick_Cave)
-
-<div align="center">
-      <a title="Nick Cave & The Bad Seeds - Into My Arms" href="https://www.youtube.com/watch?v=LnHoqHscTKE">
-     <img 
-          src="https://img.youtube.com/vi/LnHoqHscTKE/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring JDBC - ResultSetExtractor Interface](https://www.tutorialspoint.com/springjdbc/springjdbc_resultsetextractor.htm)

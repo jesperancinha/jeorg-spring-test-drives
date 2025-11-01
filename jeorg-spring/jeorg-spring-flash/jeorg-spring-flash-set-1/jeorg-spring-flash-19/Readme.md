@@ -60,18 +60,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Anna Domino](https://en.wikipedia.org/wiki/Anna_Domino)
-
-<div align="center">
-      <a title="Anna Domino - Bonds Of Love" href="https://www.youtube.com/watch?v=sFOQxushaEo">
-     <img 
-          src="https://img.youtube.com/vi/sFOQxushaEo/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [JUnit 5 Cucumber example](https://github.com/bonigarcia/mastering-junit5/tree/master/junit5-cucumber)

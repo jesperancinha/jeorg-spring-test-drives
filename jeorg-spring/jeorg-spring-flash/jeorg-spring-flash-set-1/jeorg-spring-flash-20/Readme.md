@@ -32,16 +32,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="The Corrs - Breathless" href="https://www.youtube.com/watch?v=vzerbXFwGCE">
-     <img 
-          src="https://img.youtube.com/vi/vzerbXFwGCE/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring 4 REST + CORS Integration using @CrossOrigin Annotation + XML + Filter Example](https://www.concretepage.com/spring-4/spring-4-rest-cors-integration-using-crossorigin-annotation-xml-filter-example)

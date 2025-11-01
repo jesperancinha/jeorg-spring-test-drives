@@ -24,18 +24,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Like the Deserts Miss the Rain](https://en.wikipedia.org/wiki/Like_the_Deserts_Miss_the_Rain)
-
-<div align="center">
-      <a title="Everything But The Girl - Missing" href="https://www.youtube.com/watch?v=U56Ns66Qrb8">
-     <img 
-          src="https://img.youtube.com/vi/U56Ns66Qrb8/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Prototype scope bean](https://zetcode.com/spring/prototypescope/)

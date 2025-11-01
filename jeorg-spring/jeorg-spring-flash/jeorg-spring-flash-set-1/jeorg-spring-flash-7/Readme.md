@@ -47,16 +47,6 @@ curl -c cookies.txt -b cookies.txt -v http://localhost:8081
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Knight Rider - Original Show Intro | NBC Classics" href="https://www.youtube.com/watch?v=oNyXYPhnUIs">
-     <img 
-          src="https://img.youtube.com/vi/oNyXYPhnUIs/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring @ExceptionHandler – Multiple exceptions and global handler](https://howtodoinjava.com/spring-core/spring-exceptionhandler-annotation/)

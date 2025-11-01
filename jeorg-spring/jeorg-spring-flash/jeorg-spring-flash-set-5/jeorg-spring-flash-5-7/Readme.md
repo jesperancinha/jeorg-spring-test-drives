@@ -121,16 +121,6 @@ curl -v -sL -b cookies.txt http://localhost:8081/thrones/2
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Ava Max - Kings & Queens" href="https://www.youtube.com/watch?v=jH1RNk8954Q">
-     <img 
-          src="https://img.youtube.com/vi/jH1RNk8954Q/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

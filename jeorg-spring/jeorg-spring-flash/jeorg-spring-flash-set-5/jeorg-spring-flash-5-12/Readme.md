@@ -32,16 +32,6 @@ mvn clean install -Papplication spring-boot:run -Dspring-boot.run.profiles=appli
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Beyoncé - Single Ladies" href="https://www.youtube.com/watch?v=4m1EFMoRFvY">
-     <img 
-          src="https://img.youtube.com/vi/4m1EFMoRFvY/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

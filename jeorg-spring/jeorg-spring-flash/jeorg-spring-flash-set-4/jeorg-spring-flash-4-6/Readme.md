@@ -51,21 +51,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-<div align="center">
-      <a title="MAINE COON – Characteristics, Character and Care" href="https://www.youtube.com/watch?v=weebcQPRGUE">
-     <img 
-          src="https://img.youtube.com/vi/weebcQPRGUE/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="All about the German Shepherd - History, care & training" href="https://www.youtube.com/watch?v=MxaJb-fYR4M">
-     <img 
-          src="https://img.youtube.com/vi/MxaJb-fYR4M/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-Check the webservice for more...
-
 ### Online
 
 -   [What is the use of ContextLoaderListener in Spring MVC Framework?](https://www.java67.com/2019/05/contextloaderlistener-in-spring-mvc-10.html)

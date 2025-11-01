@@ -26,20 +26,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Videos
-
-<div align="center">
-      <a title="O ANO DA MORTE DE RICARDO REIS / Trailer Oficial PT" href="https://www.youtube.com/watch?v=NaJeDEqve2Y">
-     <img 
-          src="https://img.youtube.com/vi/NaJeDEqve2Y/0.jpg" 
-          style="width:30%;">
-      </a>
-</div>
-
-### Context
-
--   [José Saramago](https://en.wikipedia.org/wiki/Jos%C3%A9_Saramago)
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

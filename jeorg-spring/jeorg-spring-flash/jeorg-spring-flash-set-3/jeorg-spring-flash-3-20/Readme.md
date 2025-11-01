@@ -30,18 +30,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=incomplete
 
 ## Resources
 
-### Context
-
--   [People Help the People](https://nl.wikipedia.org/wiki/People_Help_the_People)
-
-<div align="center">
-      <a title="Birdy - People Help The People" href="https://www.youtube.com/watch?v=OmLNs6zQIHo">
-     <img 
-          src="https://img.youtube.com/vi/OmLNs6zQIHo/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring @Required Annotation](https://www.tutorialspoint.com/spring/spring_required_annotation.htm)

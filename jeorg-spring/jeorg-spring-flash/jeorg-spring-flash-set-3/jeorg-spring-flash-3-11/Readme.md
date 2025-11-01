@@ -33,19 +33,6 @@ You have two users:
 
 ## Resources
 
-### Context
-
--   [Neil deGrasse Tyson](https://en.wikipedia.org/wiki/Neil_deGrasse_Tyson)
--   [The Matrix](https://en.wikipedia.org/wiki/The_Matrix)
-
-<div align="center">
-      <a title="Blue Pill or Red Pill - The Matrix (2/9) Movie CLIP (1999) HD" href="https://www.youtube.com/watch?v=zE7PKRjrid4">
-     <img 
-          src="https://img.youtube.com/vi/zE7PKRjrid4/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Security – Securing URLs By HTTP Method](https://www.naturalprogrammer.com/blog/16385/spring-security-urls-http-method)

@@ -44,16 +44,6 @@ curl -X POST -H 'Content-Type: application/json' --data '{"totalCount":150,"aver
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="Massive Attack - Teardrop" href="https://www.youtube.com/watch?v=u7K72X4eo_s">
-     <img 
-          src="https://img.youtube.com/vi/u7K72X4eo_s/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

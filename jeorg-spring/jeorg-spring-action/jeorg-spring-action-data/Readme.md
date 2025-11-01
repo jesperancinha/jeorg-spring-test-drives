@@ -19,18 +19,6 @@ Topics:
 
 ## Resources
 
-### Context
-
--   [Animalogic](https://animalogic.ca/)
-
-<div align="center">
-      <a title="These Parasites make Real World Zombies" href="https://www.youtube.com/watch?v=IucX8XimGKQ">
-     <img 
-          src="https://img.youtube.com/vi/IucX8XimGKQ/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Books
 
 -   Cosmina, I. (11th December 2019). <i>Pivotal Certified Professional Core Spring 5 Developer Exam: A Study Guide Using Spring Framework 5</i>. (Second Edition). Apress

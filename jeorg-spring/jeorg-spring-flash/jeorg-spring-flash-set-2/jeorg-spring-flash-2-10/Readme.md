@@ -26,18 +26,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [The World Is Not Enough (song)](https://en.wikipedia.org/wiki/The_World_Is_Not_Enough_(song))
-
-<div align="center">
-      <a title="Shirley Manson - The World Is Not Enough" href="https://www.youtube.com/watch?v=VpK2Wn-1jMQ">
-     <img 
-          src="https://img.youtube.com/vi/VpK2Wn-1jMQ/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [SPRING BOOT AUTO CONFIGURATION](https://jaxlondon.com/blog/spring-boot-auto-configuration/)

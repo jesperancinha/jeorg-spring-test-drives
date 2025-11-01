@@ -9,18 +9,6 @@ Exploring @Autowired in Spring
 
 ## Resources
 
-### Context
-
--   [One Republic](https://en.wikipedia.org/wiki/OneRepublic)
-
-<div align="center">
-      <a title="OneRepublic - Something I Need " href="https://www.youtube.com/watch?v=qKCGBgOgp08">
-     <img 
-          src="https://img.youtube.com/vi/qKCGBgOgp08/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [JDK Dynamic Proxies](https://www.byteslounge.com/tutorials/jdk-dynamic-proxies)

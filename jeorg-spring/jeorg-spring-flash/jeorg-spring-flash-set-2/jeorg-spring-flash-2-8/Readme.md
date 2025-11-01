@@ -38,19 +38,6 @@ mvn clean install spring-boot:run -Dspring-boot.run.profiles=prod
 
 ## Resources
 
-### Context
-
--   [PJ Harvey](https://en.wikipedia.org/wiki/PJ_Harvey)
--   [Nick Cave](https://en.wikipedia.org/wiki/Nick_Cave)
-
-<div align="center">
-      <a title="Nick Cave & The Bad Seeds - Henry Lee" href="https://www.youtube.com/watch?v=QzmMB8dTwGs">
-     <img 
-          src="https://img.youtube.com/vi/QzmMB8dTwGs/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [9.5. Security Filters](https://docs.spring.io/spring-security/site/docs/5.3.3.BUILD-SNAPSHOT/reference/html5/#servlet-security-filters)

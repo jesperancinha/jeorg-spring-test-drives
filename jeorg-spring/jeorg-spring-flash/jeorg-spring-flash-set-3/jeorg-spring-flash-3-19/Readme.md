@@ -22,18 +22,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [The Isley Brothers](https://en.wikipedia.org/wiki/The_Isley_Brothers)
-
-<div align="center">
-      <a title="The Isley Brothers - Harvest for the World" href="https://www.youtube.com/watch?v=dUxiKQXxGR8">
-     <img 
-          src="https://img.youtube.com/vi/dUxiKQXxGR8/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring - Bean Post Processors](https://www.tutorialspoint.com/spring/spring_bean_post_processors.htm)

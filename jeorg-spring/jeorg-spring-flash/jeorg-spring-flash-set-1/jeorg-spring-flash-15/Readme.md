@@ -32,18 +32,6 @@ mvn clean install spring-boot:run
 
 ## Resources
 
-### Context
-
--   [Everything I Wanted](https://en.wikipedia.org/wiki/Everything_I_Wanted)
-
-<div align="center">
-      <a title="Billie Eilish - everything i wanted" href="https://www.youtube.com/watch?v=EgBJmlPo8Xw">
-     <img 
-          src="https://img.youtube.com/vi/EgBJmlPo8Xw/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring Boot @ConfigurationProperties example](https://mkyong.com/spring-boot/spring-boot-configurationproperties-example/)

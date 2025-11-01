@@ -20,16 +20,6 @@ mvn clean spring-boot:run
 
 ## Resources
 
-### Context
-
-<div align="center">
-      <a title="The Corrs - Irresistible" href="https://www.youtube.com/watch?v=pM_Q-G_CZ74">
-     <img 
-          src="https://img.youtube.com/vi/pM_Q-G_CZ74/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
 ### Online
 
 -   [Spring form tag : ModelAttribute VS CommandName](http://mwakram.blogspot.com/2014/05/spring-form-tag-modelattribute-vs.html)
