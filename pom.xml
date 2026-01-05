@@ -77,7 +77,7 @@
         <cucumber.version>7.23.0</cucumber.version>
         <mariadb-java-client.version>3.5.7</mariadb-java-client.version>
         <embedded-mariadb.version>3.1.18</embedded-mariadb.version>
-        <mariaDB4j-springboot.version>3.3.0</mariaDB4j-springboot.version>
+        <mariaDB4j-springboot.version>3.3.1</mariaDB4j-springboot.version>
         <postgresql-embedded.version>2.10</postgresql-embedded.version>
         <atomikos.transactions.version>6.0.0</atomikos.transactions.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
